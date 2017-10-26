@@ -1,0 +1,584 @@
+# List of all Naval Doctrine techs
+	#battlegroup_strikeoperations						( 1 level )
+	#battlegroup_missilebattlegroup						( 1 level )
+	#battlegroup_closeescort							( 1 level )
+	#battlegroup_systemcoordination						( 1 level )
+	#battlegroup_optimalcoveragepositioning				( 1 level )
+	#carriergroup_carrierstrikegroup					( 1 level )
+	#carriergroup_constantairbornesurveillance			( 1 level )
+	#carriergroup_extendedfleetsupply					( 1 level )
+	#carriergroup_aircraftpatrolpatterns				( 1 level )
+	#carriergroup_scramble_drill						( 1 level )
+	#aircommand_simplicityprinciple						( 1 level )
+	
+	#escort_submarinehunting							( 1 level )
+	#escort_swiftpatrolswarm							( 1 level )
+	#missileboatcoastalfleet							( 1 level )
+	#escort_responsereadygroup							( 1 level )
+	#escort-battlegroup_surfaceengagementpositioning	( 1 level )
+	#escort-battlegroup_denyenemyfreedomofaction		( 1 level )
+	#escort-battlegroup_acceptablerisk					( 1 level )
+	
+	#amphibious_amphibiousoperations					( 1 level )
+	
+
+#########################################################################
+# Surface vessels
+#########################################################################
+## 21 techs
+battlegroup_strikeoperations = {	# exclusive with carriergroup_carrierstrikegroup
+	# warfare type
+    change = no
+    doctrine = yes
+	
+	multilevel = yes
+	level = 3
+	
+    allow = { }
+	traits = {}	
+	battleship ={ 
+		default_organisation = 15
+		shore_bombardment = 2.00
+	}
+	cruiser = {
+		default_organisation = 15
+		shore_bombardment = 1.00		
+	}
+	nuclear_battlecruiser = {
+		default_organisation = 25
+		shore_bombardment = 2.00	
+	}
+	nuclear_missile_cruiser = {
+		default_organisation = 15
+		shore_bombardment = 1.00	
+	}
+	targeting_choice = 0.05
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+battlegroup_missilebattlegroup = {	# exclusive with battlegroup_closeescort
+	# warfare type
+    change = no
+    doctrine = yes
+
+    allow = {
+		battlegroup_strikeoperations = 1
+		battlegroup_strikeoperations = 2
+	}
+	traits = {
+		surface_theory		
+	}	
+	missile_cruiser = {
+		default_organisation = 15
+		shore_bombardment = 1.00		
+	}
+	missile_frigate = {
+		default_organisation = 10
+		shore_bombardment = 1.00	
+	}
+	missile_destroyer = {
+		default_organisation = 10
+		shore_bombardment = 1.00	
+	}
+	targeting_choice = 0.1
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+battlegroup_closeescort = {	# exclusive with battlegroup_strikeoperations
+	# warfare type
+    change = no
+    doctrine = yes
+	
+    allow = {}
+	traits = {}	
+	destroyer = {
+		default_organisation = 10	
+	}
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+
+battlegroup_systemcoordination = {
+	# command type
+    change = no
+    doctrine = yes
+	
+    allow = {}
+	traits = {}
+	battleship = { 
+		shore_bombardment = 1
+	}
+	nuclear_battlecruiser  = {
+		shore_bombardment = 1	
+	}
+	nuclear_missile_cruiser = {
+		shore_bombardment = 1		
+	}
+#	cag_mltr = {
+#		soft_attack = 0.1		
+#		range = 100		
+#	}	
+#	cag_attack = {
+#		soft_attack = 0.1
+#		range = 100
+#	}
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+battlegroup_optimalcoveragepositioning = {
+	# warfare type
+    change = no
+    doctrine = yes
+	
+    allow = {
+		battlegroup_closeescort = 1
+    }
+	traits = {
+		surface_theory		
+	}	
+	missile_destroyer = {
+		surface_detection = 0.5
+	}
+	destroyer = {
+		surface_detection = 0.5
+	}
+	missile_frigate = {
+		surface_detection = 0.5
+	}
+	can_upgrade = yes
+	change = no 
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+# supercarrier activation moved here as unit_supercarrier have be multilevel tech.
+# exclusivity removed and allow SOV supercarriers more later
+carriergroup_carrierstrikegroup = {	# exclusive with battlegroup_strikeoperations
+	# warfare type
+    change = no
+    doctrine = yes
+	
+    allow = {}
+	traits = {} 
+	carrier = {
+		default_organisation = 20
+		sub_detection = 1
+	}
+	escort_carrier = {
+		default_organisation = 20
+		sub_detection = 1		
+	}
+	supercarrier = {
+		default_organisation = 20	
+	}
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+carriergroup_constantairbornesurveillance = {
+	# intel type
+    change = no
+    doctrine = yes
+	
+    allow = { 
+		carriergroup_carrierstrikegroup = 1
+    }
+	traits = {
+		surface_theory		
+	}	
+	helicopter_carrier = { 
+		air_detection = 1.00
+		sub_detection = 0.25
+		surface_detection = 1
+	}	
+	escort_carrier = { 
+		air_detection = 1.00
+		sub_detection = 0.25
+		surface_detection = 1
+	}
+	carrier = { 
+		air_detection = 1.00
+		sub_detection = 0.25
+		surface_detection = 1
+	}
+	supercarrier = { 
+		air_detection = 1.00
+		sub_detection = 0.25
+		surface_detection = 1
+	}
+	cag_fighter = {
+		air_detection = 1.00
+		sub_detection = 0.25
+		surface_detection = 1
+	}		
+	cag_mltr = {
+		air_detection = 1.00
+		sub_detection = 0.25
+		surface_detection = 1
+	}
+	cag_attack = {
+		air_detection = 1.00
+		sub_detection = 0.25
+		surface_detection = 1
+	}
+	cag_vtol = {
+		air_detection = 1.00
+		sub_detection = 0.25
+		surface_detection = 1
+	}
+	targeting_choice = 0.15	
+	can_upgrade = yes
+	change = no 	
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+carriergroup_extendedfleetsupply = {
+	# logistics type
+    change = no
+    doctrine = yes
+	
+    allow = { 
+		battlegroup_systemcoordination = 1
+    }
+	traits = {
+		surface_theory		
+	}	
+	missile_destroyer = {
+		range = 500
+	}
+	destroyer = {
+		range = 500
+	}
+	can_upgrade = yes
+	change = no 
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+carriergroup_aircraftpatrolpatterns = {
+	# planning type
+    change = no
+    doctrine = yes
+	
+    allow = { 
+		carriergroup_constantairbornesurveillance = 1
+    }
+	traits = {
+		surface_theory		
+	}	
+	cag_fighter = {
+		default_organisation = 5
+	}
+	cag_mltr = {
+		default_organisation = 5
+	}
+	cag_attack = {
+		default_organisation = 5
+	}
+	cag_vtol = {
+		default_organisation = 5
+	}
+	can_upgrade = yes
+	change = no 
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+carriergroup_scramble_drill = {
+	# planning type
+    change = no
+    doctrine = yes
+	
+    allow = { 
+		carriergroup_aircraftpatrolpatterns = 1
+    }
+	traits = {
+		surface_theory		
+	}	
+	cag_fighter = {
+		default_morale = 0.05
+	}
+	cag_mltr = {
+		default_morale = 0.05
+	}
+	cag_attack = {
+		default_morale = 0.05
+	}
+	cag_vtol = {
+		default_morale = 0.05
+	}
+	can_upgrade = yes
+	change = no 
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+aircommand_simplicityprinciple = {
+	# command type
+    doctrine = yes
+	allow = { 
+		radar_general = 2
+		torpedoes = 1
+		industry_physics = 3
+		carriergroup_scramble_drill = 1
+	}
+	traits = {
+		surface_theory	
+		science_theory		
+		intel_theory
+		armament_theory		
+	}
+	helicopter_carrier = {
+		default_organisation = 20	
+	}
+	activate_unit = { 
+		helo_maritime 	
+		ship_heli_complex
+		cag_vtol # May be moved later.
+	}
+	
+    folder =  naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+escort_submarinehunting = {
+	# warfare type
+    change = no
+    doctrine = yes
+	
+    allow = {
+		battlegroup_optimalcoveragepositioning = 1
+    }
+	traits = {
+		surface_theory			
+	}	
+	missile_boat = {
+		sub_detection = 0.5
+	}
+	missile_frigate = {
+		sub_detection = 0.5
+	}	
+	destroyer = {
+		sub_detection = 0.5
+	}			
+	missile_destroyer = {
+		sub_detection = 0.5
+	}
+	can_upgrade = yes
+	change = no 
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+escort_swiftpatrolswarm = {
+	# planning type
+    change = no
+    doctrine = yes
+	
+    allow = {
+		escort_submarinehunting = 1
+    }
+	traits = {
+		surface_theory		
+	}	
+	missile_boat = {
+		default_organisation = 10
+	}
+	missile_frigate = {
+		default_organisation = 5
+	}	
+	destroyer = {
+		default_organisation = 5
+	}
+	missile_destroyer = {
+		default_organisation = 5
+	}
+	can_upgrade = yes
+	change = no 
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+missileboatcoastalfleet = {
+	# planning type
+    change = no
+    doctrine = yes
+	
+    allow = {
+		battlegroup_systemcoordination = 1
+		battlegroup_systemcoordination = 2
+    }
+	traits = {
+		surface_theory		
+	}	
+	missile_boat = {
+		default_organisation = 10
+		shore_bombardment = 1
+	}
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+escort_responsereadygroup = {
+	# command type
+    change = no
+    doctrine = yes
+	
+    allow = {
+		escort_swiftpatrolswarm = 1
+    }
+	traits = {
+		surface_theory		
+	}	
+	missile_boat = {
+		default_organisation = 5
+	}
+	missile_frigate = {
+		default_organisation = 5
+	}	
+	destroyer = {
+		default_organisation = 5
+	}
+	missile_destroyer = {
+		default_organisation = 5
+	}	
+	can_upgrade = yes
+	change = no 
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+escort-battlegroup_surfaceengagementpositioning = {
+	# planning type
+    change = no
+    doctrine = yes
+	
+    allow = {
+		battlegroup_strikeoperations = 1
+    }
+	traits = {
+		surface_theory		
+	}
+	cruiser = {
+		visibility = -5
+	}
+	battleship = {
+		visibility = -5
+	}
+	nuclear_battlecruiser = {
+		visibility = -5
+	}
+	nuclear_missile_cruiser = {
+		visibility = -5
+	}	
+	can_upgrade = yes
+	change = no 
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+escort-battlegroup_denyenemyfreedomofaction = {
+	# warfare type
+    change = no
+    doctrine = yes
+	
+    allow = {
+		battlegroup_strikeoperations = 1
+    }
+	traits = {
+		surface_theory		
+	}
+	cruiser = {
+		surface_detection = 1
+	}
+	battleship = {
+		surface_detection = 1
+	}
+	nuclear_battlecruiser = {
+		surface_detection = 1
+	}
+	nuclear_missile_cruiser = {
+		surface_detection = 1
+	}	
+	can_upgrade = yes
+	change = no 
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+escort-battlegroup_acceptablerisk = {
+	# command type
+    change = no
+    doctrine = yes
+	
+    allow = {
+		OR = { 
+			escort-battlegroup_surfaceengagementpositioning = 1 
+			escort-battlegroup_denyenemyfreedomofaction = 1 
+		}
+	}
+	traits = {
+		surface_theory		
+	}
+	cruiser = {
+		default_morale = 0.05
+	}
+	battleship = {
+		default_morale = 0.05
+	}
+	nuclear_battlecruiser = {
+		default_morale = 0.05
+	}
+	nuclear_missile_cruiser = {
+		default_morale = 0.05
+	}	
+	can_upgrade = yes
+	change = no 
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+amphibious_amphibiousoperations = {
+	# warfare type
+    change = no
+    doctrine = yes
+	
+    allow = {
+		battlegroup_systemcoordination = 1
+    }
+	traits = {
+		surface_theory
+	}
+	transport_ship = {
+		default_organisation = 10	
+	}
+	
+    folder = naval_doctrine1_folder
+	time = 100
+	cost = 100
+}
+
+
