@@ -1,0 +1,904 @@
+diplomatic_decisions = {	
+	
+	LIB_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = LIB
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = LIB_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+	LIT_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = LIT
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = LIT_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	LST_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = LST
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = LST_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	LUX_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = LUX
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = LUX_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	MAD_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = MAD
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = MAD_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	MAL_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = MAL
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = MAL_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	MCD_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = MCD
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = MCD_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	MEX_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = MEX
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = MEX_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	MLT_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = MLT
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = MLT_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	MLW_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = MLW
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = MLW_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	MLY_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = MLY
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = MLY_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	MON_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = MON
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = MON_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	MOR_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = MOR
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = MOR_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	MOZ_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = MOZ
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = MOZ_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	MRA_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = MRA
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = MRA_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	NAM_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = NAM
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = NAM_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	NEA_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = NEA
+		  year = 1975
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = NEA_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }  
+  	NEP_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = NEP
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = NEP_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	NGR_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = NGR
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = NGR_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	NIC_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = NIC
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = NIC_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	NIG_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = NIG
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = NIG_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	NOR_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = NOR
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = NOR_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	NRU_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = NRU
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = NRU_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }  
+  	NYE_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = NYE
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = NYE_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	NZL_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = NZL
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = NZL_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	OMN_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = OMN
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = OMN_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+    PAC_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = PAC
+		  year = 1975
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = PAC_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  } 
+  	PAG_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = PAG
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = PAG_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	PAK_1979 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = PAK
+		  year = 1979
+		  not = { year = 1991 }
+		  not = { has_country_modifier = tropas_1979 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = PAK_1979.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1979"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  
+  
+ }  

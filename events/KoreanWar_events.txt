@@ -1,0 +1,1252 @@
+#KoreanWar_events.txt
+#1946 Korean Independence & Korean War
+
+#SOV:
+	#326010 - Joint Commission on Korea - SOV
+	#326011 - Establishing the North Korean Provisional People's Committee
+	#326012 - Joint Commission fails to reach agreement - SOV
+	#326016 - UN supervised elections
+	#326017 - Establish the Democatic People's Republic of Korea
+	#326000 - PRK asks for support for the invasion of KOR
+
+#USA:
+	#354040 - Joint Commission on Korea - USA
+	#354041 - North Korea declares its independence - how shall we respond?
+	#354042 - Joint Commission fails to reach agreement - USA
+	#354045 - Leftists in southern Korea
+	#354046 - UN decides on supervised elections in Korea
+	#354047 - USSR boycotts Korean elections
+	#354048 - Jeju Rebellion
+	#354049 - Election in South Korea
+	#354000 - intervene_koreanwar_USA follow-up event
+
+#PRK:
+	#291000 - invade_south_SOV_PRK follow-up event
+	#291001 - invade_south_CHC_PRK follow-up event
+	#291002 - USSR sends support for the war against KOR
+	#291003 - SOV does not give support
+	#291004 - China sends support for the war against KOR
+	#291005 - China joins PRK for the war against KOR
+	#291006 - China does not give support
+	#291007 - KOR asks for an armistice
+	#291008 - armistice_koreanwar_KOR follow-up event
+	#291009 - The Korean War - Victory! - PRK did it alone
+	#291010 - The Korean War - Victory! - PRK had Soviet or Chinese help
+	#291011 - CHC jumps in to help PRK in the Korean War
+
+#KOR:
+	#233000 - The war with PRK gets worse: KOR digs in
+	#233001 - The USA intervene in favour of KOR
+	#233002 - armistice_koreanwar_KOR follow-up event
+	#233003 - PRK asks for an armistice
+	#233004 - The Korean War - Victory!
+
+#CHC:
+	#151050 - PRK asks for support for the invasion of KOR
+	#151051 - intervene_koreanwar_CHC follow-up event
+
+
+## SOV ##
+#326010 - Joint Commission on Korea - SOV
+country_event = {
+	
+	id = 326010
+
+	trigger = {
+		tag = SOV
+		owns = 13422
+		NOT = { exists = PRK }
+		year = 1946
+		NOT = { has_global_flag = gflag_korea_joint_commission }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	title = "EVTNAME326010"
+	desc = "EVTDESC326010"
+	picture = "1947_Joint_Commission_Korea"
+	
+	option = {
+		name = "EVTOPTA326010"			    			#Very well
+		add_country_modifier = {
+			name = mod_SOV_korea_joint_commission
+			duration = 1826
+		}
+		set_global_flag = gflag_korea_joint_commission
+	}
+}
+#326011 - Establishing the North Korean Provisional People's Committee
+country_event = {
+	
+	id = 326011
+
+	trigger = {
+		tag = SOV
+		year = 1946
+		owns = 13422
+		has_global_flag = gflag_korea_joint_commission
+		NOT = { 
+			has_global_flag = gflag_north_korean_provisional_government 
+			has_global_flag = gflag_north_korean_self_governance 
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	title = "EVTNAME326011"
+	desc = "EVTDESC326011"
+	picture = "1946_NK_Prov_Peoples_Committee"
+	
+	option = {
+		name = "EVTOPTA326011"		#Grant them internal self-governance, under our supervision		#Historical option
+		ai_chance = { factor = 90 }
+		release_vassal = PRK
+		set_global_flag = gflag_north_korean_provisional_government
+	}
+	
+	option = {
+		name = "EVTOPTB326011"		#They are not yet ready for it
+		ai_chance = { factor = 9 }
+	}
+	
+	option = {
+		name = "EVTOPTC326011"		#They are on their own
+		ai_chance = { factor = 1 }
+		release = PRK
+		set_global_flag = gflag_north_korean_self_governance
+		USA = { country_event = 354041 }
+	}
+}
+#326012 - Joint Commission on Korea fails to build consensus for a unified provisional government
+country_event = {
+	
+	id = 326012
+
+	trigger = {
+		tag = SOV
+		NOT = { has_global_flag = gflag_korea_joint_commission_failure }
+		OR = {
+			AND = {
+				owns = 13422
+				NOT = { exists = PRK }
+			}
+			PRK = { vassal_of = SOV }
+		}
+		year = 1947
+		OR = {
+			month = 5
+			year = 1948
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	title = "EVTNAME326012"
+	desc = "EVTDESC326012"
+	picture = "1947_Joint_Commission_Korea"
+	
+	option = {
+		name = "EVTOPTA326012"			    			#Oh well
+		prestige_change = -2
+		set_global_flag = gflag_korea_joint_commission_failure
+		USA = { country_event = 354042 }
+	}
+}
+
+#326016 - UN supervised elections for Korea
+country_event = {
+	
+	id = 326016
+
+	is_triggered_only = yes
+	
+	title = "EVTNAME326016"
+	desc = "EVTDESC326016"
+	picture = "1948_Korean_elections"
+	
+	option = {
+		name = "EVTOPTA326016"			    			#Boycott elections
+		ai_chance = { factor = 95 }
+		prestige_change = -5
+		set_global_flag = gflag_korea_ussr_boycotts_elections
+		USA = { country_event = 354047 }
+	}
+	
+	option = {
+		name = "EVTOPTB326016"			    			#Proceed with elections
+		ai_chance = { factor = 5 }
+	}
+}
+
+#326017 - Establish the Democratic People's Republic of Korea
+country_event = {
+	
+	id = 326017
+
+	is_triggered_only = yes
+	
+	title = "EVTNAME326017"
+	desc = "EVTDESC326017"
+	picture = "1948_DPRK_established"
+	
+	option = {
+		name = "EVTOPTA326017"			    			#Very well
+		release = PRK
+		military_access = PRK
+	}
+}
+
+#326000 - PRK asks for support for the invasion of KOR
+country_event = {
+	
+	id = 326000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME326000"
+	desc = "EVTDESC326000"
+	picture = "1947_Russians_Pyongyang"
+
+	option = {
+		name = "EVTOPTA326000"			    			#Send supplies and expeditionary planes
+		ai_chance = { factor = 70 }						#Historically, the USSR referred PRK to China
+		money = -100									#Weapons and supplies for the Koreans
+		manpower = -10									#Manpower for Soviet air wing
+		supplies = -2000
+		fuel = -500
+		relation = { who = PRK value = 50 }
+		set_global_flag = PRK_SOV_support
+		PRK = { country_event = 291002 }
+	}
+	
+	option = {
+		name = "EVTOPTB326000"							#No, that's too risky
+		ai_chance = { factor = 30 }
+		relation = { who = PRK value = -25 }	
+		PRK = { country_event = 291003 }
+	}
+}
+
+## USA ##
+#354040 - Joint Commission on Korea - USA
+country_event = {
+	
+	id = 354040
+
+	trigger = {
+		tag = USA
+		owns = 13546
+		NOT = { exists = KOR }
+		year = 1946
+		NOT = { has_global_flag = gflag_korea_joint_commission }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	title = "EVTNAME354040"
+	desc = "EVTDESC354040"
+	picture = "1947_Joint_Commission_Korea"
+	
+	option = {
+		name = "EVTOPTA354040"			    			#Very well
+		add_country_modifier = {
+			name = mod_USA_korea_joint_commission
+			duration = 1826
+		}
+		set_global_flag = gflag_korea_joint_commission
+	}
+}
+#354041 - North Korea declares its independence - how shall we respond?
+country_event = {
+	
+	id = 354041
+
+	trigger = {
+		tag = USA
+		owns = 13546
+		NOT = { exists = KOR }
+		exists = PRK
+		PRK = { is_subject = no }
+		NOT = {
+			has_global_flag = gflag_korea_republic_of_korea_declared 
+			has_global_flag = gflag_korea_republic_of_korea_denied 
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	title = "EVTNAME354041"
+	desc = "EVTDESC354041"
+	picture = "1948_South_Korea_established"
+	
+	option = {
+		name = "EVTOPTA354041"			    			#Declare the Republic of Korea in the south
+		ai_chance = { factor = 99 }						#Historical choice
+		release = KOR
+		military_access = KOR
+		#KOR = { country_event =  }
+		set_global_flag = gflag_korea_republic_of_korea_declared
+	}
+	
+	option = {
+		name = "EVTOPTB354041"			    			#Maintain our supervision of the south
+		ai_chance = { factor = 1 }
+		prestige_change = -5
+		set_global_flag = gflag_korea_republic_of_korea_denied
+	}
+}
+#354042 - Joint Commission on Korea fails to build consensus for a unified provisional government
+country_event = {
+	
+	id = 354042
+
+	is_triggered_only = yes
+	
+	title = "EVTNAME354042"
+	desc = "EVTDESC354042"
+	picture = "1947_Joint_Commission_Korea"
+	
+	option = {
+		name = "EVTOPTA354042"			    			#Oh well
+		prestige_change = -2
+	}
+}
+#354045 - Leftists in southern Korea
+country_event = {
+	
+	id = 354045
+
+	trigger = {
+		tag = USA
+		owns = 13546
+		NOT = { exists = KOR }
+		year = 1946
+		NOT = { has_global_flag = gflag_korea_leftists_in_southern_korea }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	title = "EVTNAME354045"
+	desc = "EVTDESC354045"
+	picture = "1948_national_security_law_korea"
+	
+	option = {
+		name = "EVTOPTB354045"			    			#Ban communist-aligned organisations
+		ai_chance = { factor = 80 }						#
+		any_owned = {
+			limit = {
+				is_core = KOR
+			}
+			revolt_risk = 3
+		}
+		#Decrease popularity of communists in korea
+		set_global_flag = gflag_korea_leftists_in_southern_korea
+	}
+	
+	option = {
+		name = "EVTOPTA354045"			    			#Crackdown on all leftists
+		ai_chance = { factor = 10 }
+		any_owned = {
+			limit = {
+				is_core = KOR
+			}
+			revolt_risk = 4
+		}
+		#Decrease popularity of left-wing in korea
+		set_global_flag = gflag_korea_leftists_in_southern_korea
+	}
+	
+	option = {
+		name = "EVTOPTC354045"			    			#Do nothing
+		ai_chance = { factor = 10 }
+		any_owned = {
+			limit = {
+				is_core = KOR
+			}
+			revolt_risk = 2
+		}
+		national_unity = -1
+		set_global_flag = gflag_korea_leftists_in_southern_korea
+	}
+}
+#354046 - UN supervised elections for Korea
+country_event = {
+	
+	id = 354046
+
+	trigger = {
+		tag = USA
+		owns = 13546
+		NOT = { exists = KOR }
+		has_global_flag = gflag_UN_supervised_korean_elections_raised
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	title = "EVTNAME354046"
+	desc = "EVTDESC354046"
+	picture = "1948_Korean_elections"
+	
+	option = {
+		name = "EVTOPTA354046"			    			#Very well
+		prestige_change = 2
+		set_global_flag = gflag_UN_supervised_korean_elections_passed
+		SOV = { country_event = 326016 }
+	}
+}
+#354047 - USSR boycotts Korean elections
+country_event = {
+	
+	id = 354047
+
+	is_triggered_only = yes
+	
+	title = "EVTNAME354047"
+	desc = "EVTDESC354047"
+	picture = "1948_Korean_elections"
+	
+	option = {
+		name = "EVTOPTA354047"			    			#Oh well
+		relation = { who = SOV value = -5 }
+	}
+}
+#354048 - Jeju Rebellion
+country_event = {
+	
+	id = 354048
+
+	trigger = {
+		owns = 13489
+		NOT = {
+			ideology = left_wing_radical_idolg
+			ideology_group = comintern
+		}
+		has_global_flag = gflag_korea_leftists_in_southern_korea
+		13489 = { revolt_risk = 3 }
+		#year = 1947
+	}
+	
+	mean_time_to_happen = {
+		days = 730
+		modifier = {
+			factor = 0.5
+			has_global_flag = gflag_south_korea_election_1948
+		}
+		modifier = {
+			factor = 0.5
+			year = 1948
+		}
+		modifier = {
+			factor = 0.5
+			13489 = { revolt_risk = 8 }
+		}
+		modifier = {
+			factor = 0.5
+			13489 = { revolt_risk = 12 }
+		}
+	}
+	
+	title = "EVTNAME354048"
+	desc = "EVTDESC354048"
+	picture = "1948_Jeju_uprising"
+	
+	option = {
+		name = "EVTOPTA354048"			    			#Unfortunate
+		prestige_change = -5
+		relation = { who = PRK value = -25 }
+		13489 = {
+			#create_revolt = 2
+			revolt_risk = 4
+			population_change = { age_from = 20 age_to = 70 percent = -0.15 }
+		}
+	}
+}
+#354049 - Election in South Korea
+country_event = {
+	
+	id = 354049
+
+	trigger = {
+		tag = USA
+		owns = 13489
+		has_global_flag = gflag_UN_supervised_korean_elections_passed
+		year = 1948
+		OR = {
+			year = 1949
+			month = 5
+		}
+		NOT = { has_global_flag = gflag_south_korea_self_governance }
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	major = yes
+	
+	title = "EVTNAME354049"
+	desc = "EVTDESC354049"
+	picture = "1948_Korean_elections"
+	
+	option = {
+		name = "EVTOPTA354049"			    			#Good news
+		release = KOR
+		start_election = KOR
+		military_access = KOR
+		set_global_flag = gflag_south_korea_self_governance
+	}
+}
+
+#354000 - intervene_koreanwar_USA follow-up event
+country_event = {
+	
+	id = 354000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME354000"
+	desc = "EVTDESC354000"
+	picture = "1950_korea_refugees"
+
+	option = {
+		name = "EVTOPTA354000"			    			#Help the South Koreans
+		ai_chance = { factor = 90 }						#Historical choice
+		relation = { who = CHC value = -25 }			#Chairman Mao is not amused	
+		relation = { who = SOV value = -25 }
+		relation = { who = PRK value = -50 }
+		relation = { who = CHI value = 25 }				#Because they also wanted to fight		
+		relation = { who = KOR value = 50 }			
+		create_alliance = KOR
+		join_war = KOR
+		KOR = { country_event = 233001 }				#The USA jump in
+	}
+	
+	option = {
+		name = "EVTOPTB354000"							#Don't intervene
+		ai_chance = { factor = 10 }					
+		relation = { who = PRK value = 15 }
+		relation = { who = KOR value = -30 }
+		prestige_change = -5							#Only little prestige loss,	as Korea was not part of US strategic plan for East Asia	
+	}
+}
+
+
+## PRK ##
+#291000 - invade_south_SOV_PRK follow-up event
+country_event = {
+	
+	id = 291000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME291000"
+	desc = "EVTDESC291000"
+	picture = "1950_korean_war_begins"
+
+	option = {
+		name = "EVTOPTA291000"						#Ask USSR for help
+		ai_chance = { factor = 95 }					#Historical choice		
+		SOV = { country_event = 326000 }			#SOV gets request
+	}
+	
+	option = {
+		name = "EVTOPTB291000"						#We don't need their help - attack straight away!
+		ai_chance = { factor = 5 }
+		war = KOR
+		add_country_modifier = {					#War counter is ticking 
+			name = "koreanwar_start"
+			duration = 700
+		}
+		KOR = {
+			add_country_modifier = {					#War counter is ticking 
+				name = "koreanwar_start"
+				duration = 700
+			}
+		}
+		set_global_flag = PRK_invades_KOR_alone
+	}
+}
+
+#291001 - invade_south_CHC_PRK follow-up event
+country_event = {
+	
+	id = 291001
+
+	is_triggered_only = yes
+
+	title = "EVTNAME291001"
+	desc = "EVTDESC291001"
+	picture = "1950_korean_war_begins"
+
+	option = {
+		name = "EVTOPTA291001"						#Ask China for help
+		ai_chance = { factor = 95 }					#Historical choice		
+		CHC = { country_event = 151050 }			#CHC gets request
+	}
+	
+	option = {
+		name = "EVTOPTB291001"						#We don't need their help - attack straight away!
+		ai_chance = { factor = 5 }
+		war = KOR
+		relation = { who = SOV value = -50 }		#The Koreans are risking a world war!
+		relation = { who = CHC value = -25 }
+		set_global_flag = PRK_invades_KOR_alone
+		add_country_modifier = {					#War counter is ticking 
+			name = "koreanwar_start"
+			duration = 700
+		}
+		KOR = {
+			add_country_modifier = {					#War counter is ticking 
+				name = "koreanwar_start"
+				duration = 700
+			}
+		}
+	}
+}
+
+#291002 - USSR sends support for the war against KOR
+country_event = {
+	
+	id = 291002
+
+	is_triggered_only = yes
+
+	title = "EVTNAME291002"
+	desc = "EVTDESC291002"
+	picture = "1950_korean_war_begins"
+
+	option = {
+		name = "EVTOPTA291002"
+		ai_chance = { factor = 10 }
+		supplies = 2000
+		fuel = 500
+		#load_oob = XXXXXX.txt						#Soviet expeditionary air wing OOB is loaded @
+		war = KOR
+		add_country_modifier = {					#War counter is ticking 
+			name = "koreanwar_start"
+			duration = 700
+		}
+		KOR = {
+			add_country_modifier = {					#War counter is ticking 
+				name = "koreanwar_start"
+				duration = 700
+			}
+		}
+	}
+}
+
+#291003 - SOV does not give support
+country_event = {
+	
+	id = 291003
+
+	is_triggered_only = yes
+
+	title = "EVTNAME291003"
+	desc = "EVTDESC291003"
+	picture = "1950_korean_war_begins"
+
+	option = {
+		name = "EVTOPTA291003"						#Don't go to war then
+		ai_chance = { factor = 50 }		
+	}
+	
+	option = {
+		name = "EVTOPTB291003"						#Declare war nevertheless - we can do it alone!
+		ai_chance = { factor = 50 }
+		war = KOR
+		set_global_flag = PRK_invades_KOR_alone
+		add_country_modifier = {					#War counter is ticking 
+			name = "koreanwar_start"
+			duration = 700
+		}	
+		KOR = {
+			add_country_modifier = {					#War counter is ticking 
+				name = "koreanwar_start"
+				duration = 700
+			}
+		}
+	}
+}
+
+#291004 - China sends support for the war against KOR
+country_event = {
+	
+	id = 291004
+
+	is_triggered_only = yes
+
+	title = "EVTNAME291004"
+	desc = "EVTDESC291004"
+	picture = "1950_korean_war_begins"
+
+	option = {
+		name = "EVTOPTA291004"
+		supplies = 1500
+		fuel = 300
+		manpower = 20
+		war = KOR
+		add_country_modifier = {					#War counter is ticking 
+			name = "koreanwar_start"
+			duration = 700
+		}			
+	}
+}
+
+#291005 - China joins PRK for the war against KOR
+country_event = {
+	
+	id = 291005
+
+	is_triggered_only = yes
+
+	title = "EVTNAME291005"
+	desc = "EVTDESC291005"
+	picture = "1950_korean_war_begins"
+
+	option = {
+		name = "EVTOPTA291005"
+		create_alliance = CHC
+		war = KOR
+		add_country_modifier = {					#War counter is ticking 
+			name = "koreanwar_start"
+			duration = 700
+		}
+		KOR = {
+			add_country_modifier = {					#War counter is ticking 
+				name = "koreanwar_start"
+				duration = 700
+			}
+		}		
+	}
+}
+
+#291006 - China does not give support
+country_event = {
+	
+	id = 291006
+
+	is_triggered_only = yes
+
+	title = "EVTNAME291006"
+	desc = "EVTDESC291006"
+	picture = "1950_korean_war_begins"
+
+	option = {
+		name = "EVTOPTA291006"						#Don't go to war then
+		ai_chance = { factor = 50 }		
+	}
+	
+	option = {
+		name = "EVTOPTB291006"						#Declare war nevertheless - we can do it alone!
+		ai_chance = { factor = 50 }
+		war = KOR
+		set_global_flag = PRK_invades_KOR_alone
+		add_country_modifier = {					#War counter is ticking 
+			name = "koreanwar_start"
+			duration = 700
+		}	
+		KOR = {
+			add_country_modifier = {					#War counter is ticking 
+				name = "koreanwar_start"
+				duration = 700
+			}
+		}
+	}
+}
+
+#291007 - KOR asks for an armistice
+country_event = {
+	
+	id = 291007
+
+	is_triggered_only = yes
+
+	title = "EVTNAME291007"
+	desc = "EVTDESC291007"
+	picture = "1951_armistice_talks"
+
+	option = {
+		name = "EVTOPTA291007"					#Accept the proposal
+		ai_chance = { factor = 98 }				#Historical choice; should also prevent and endless war
+		prestige_change = -2					#Because North Korea failed to unite the Koreas - unless it asks for peace itself
+		end_war = KOR
+		end_war = USA
+		end_war = ENG
+		KOR = { end_war = CHC }
+		set_global_flag = armistice_koreanwar_KOR_done
+	}
+	
+	option = {
+		name = "EVTOPTB291007"					#Fight on
+		ai_chance = { factor = 2 }
+		add_country_modifier = {				#A hundred more days till the next chance for peace
+			name = "koreanwar_peace"					
+			duration = 100
+		}
+		KOR = {
+			add_country_modifier = {					#War counter is ticking 
+				name = "koreanwar_peace"
+				duration = 700
+			}
+		}
+	}
+}
+#291008 - armistice_koreanwar_KOR follow-up event
+country_event = {
+	
+	id = 291008
+
+	is_triggered_only = yes
+
+	title = "EVTNAME291008"
+	desc = "EVTDESC291008"
+	picture = "1953_korean_armistice"
+
+	option = {
+		name = "EVTOPTA291008"						#Ask for a ceasefire
+		ai_chance = { factor = 99 }					#Historical choice
+		prestige_change = 2							#Reward for peaceful behaviour
+		KOR = { country_event = 233003 }			#KOR gets the event to avoid fiddling around with USA/CHC/CHI/SOV involved
+	}
+	
+	option = {
+		name = "EVTOPTB291008"						#Fight on
+		ai_chance = { factor = 1 }					#Ahistorical choice and unlikely - the war went on long enough
+		add_country_modifier = {						#A hundred more days till the next chance for peace
+			name = "koreanwar_peace"					
+			duration = 100
+		}
+		KOR = {
+			add_country_modifier = {					#War counter is ticking 
+				name = "koreanwar_peace"
+				duration = 700
+			}
+		}
+	}
+}
+#291009 - The Korean War - Victory! - PRK did it alone
+country_event = {
+	
+	id = 291009
+
+	trigger = {
+		tag = PRK
+		NOT = { total_defensives = 1 }
+		NOT = {
+			OR = {
+				has_global_flag = PRK_SOV_support
+				has_global_flag = PRK_CHC_join
+				has_global_flag = PRK_CHC_support
+				PRK = { alliance_with = CHC }
+				PRK = { alliance_with = SOV }
+			}
+		}
+		NOT = { has_global_flag = koreanwar_PRK_victory }
+		NOT = { PRK = { lost_national = 0.30 } }	#No victory if PRK itself gets overrun
+		OR = {
+			AND = {
+				NOT = { exists = KOR }
+				owns = 13546 								#Seoul
+			}
+			AND = {
+				13546 = { 									#Seoul
+					controller = {
+						OR = {
+							tag = PRK
+							alliance_with = PRK
+						}
+					}
+				}
+				NOT = {										#Mainland South Korea
+					KOR = { 
+						OR = {
+							any_owned_province = {
+								NOT = { province_id = 13489 }	#Jeju
+								controlled_by = KOR 
+							}
+							any_owned_province = {
+								NOT = { province_id = 13489 }	#Jeju
+								controller = {
+									alliance_with = KOR
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	title = "EVTNAME291009"
+	desc = "EVTDESC291009"
+	picture = "1948_DPRK_established"
+
+	option = {
+		name = "EVTOPTA291009"
+		prestige_change = 25						#Reward for unifying Korea alone
+		national_unity = 10							#Huge boost - PRK has proven itself to the Eastern Bloc and the rest of the world
+		dissent = -10
+		inherit = KOR								#Necessary; otherwise, KOR will retreat to Jeju and the war will go on forever
+		set_global_flag = koreanwar_PRK_victory
+	}
+}
+
+#291010 - The Korean War - Victory! - PRK had Soviet or Chinese help
+country_event = {
+	
+	id = 291010
+
+	trigger = {
+		tag = PRK
+		NOT = { total_defensives = 1 }
+		OR = {
+			has_global_flag = PRK_SOV_support
+			has_global_flag = PRK_CHC_join
+			has_global_flag = PRK_CHC_support
+			PRK = { alliance_with = CHC }
+			PRK = { alliance_with = SOV }
+		}
+		NOT = { has_global_flag = koreanwar_PRK_victory }
+		NOT = { PRK = { lost_national = 0.30 } }	#No victory if PRK itself gets overrun
+		OR = {
+			AND = {
+				NOT = { exists = KOR }
+				owns = 13546 								#Seoul
+			}
+			AND = {
+				13546 = { 									#Seoul
+					controller = {
+						OR = {
+							tag = PRK
+							alliance_with = PRK
+						}
+					}
+				}
+				NOT = {										#Mainland South Korea
+					KOR = { 
+						OR = {
+							any_owned_province = {
+								NOT = { province_id = 13489 }	#Jeju
+								controlled_by = KOR 
+							}
+							any_owned_province = {
+								NOT = { province_id = 13489 }	#Jeju
+								controller = {
+									alliance_with = KOR
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	title = "EVTNAME291010"
+	desc = "EVTDESC291010"
+	picture = "1948_DPRK_established"
+
+	option = {
+		name = "EVTOPTA291010"
+		prestige_change = 15						#Reward for unifying Korea with help
+		national_unity = 10							#Huge boost - PRK has proven itself to the Eastern Bloc and the rest of the world
+		dissent = -10
+		inherit = KOR								#Necessary; otherwise, KOR will retreat to Jeju and the war will go on forever
+		set_global_flag = koreanwar_PRK_victory
+	}
+}
+
+#291011 - CHC jumps in to help PRK in the Korean War
+country_event = {
+	
+	id = 291011
+
+	is_triggered_only = yes
+
+	title = "EVTNAME291011"
+	desc = "EVTDESC291011"
+	picture = "1950_korean_war_begins"
+
+	option = {
+		name = "EVTOPTA291011"
+		#load_oob = XXXXXX.txt						#Chinese People's Volunteer Army OOB
+		relation = { who = CHC value = 75 }
+	}
+}
+
+## KOR ##
+#233000 - The war with PRK gets worse: KOR digs in
+country_event = {
+	
+	id = 233000
+	
+	trigger = {
+		tag = KOR
+		lost_national = 0.75								#To avoid human players simply driving around Seoul
+		13546 = { controlled_by = PRK }
+		NOT = { has_country_flag = KOR233000_done }
+	}
+
+	title = "EVTNAME233000"
+	desc = "EVTDESC233000"
+	picture = "1950_korea_refugees"
+
+	option = {
+		name = "EVTOPTA233000"
+		national_unity = -3													#The people aren't happy
+		dissent = 3
+		set_country_flag = KOR233000_done
+	}
+}
+
+#233001 - The USA intervene in favour of KOR
+country_event = {
+	
+	id = 233001
+
+	is_triggered_only = yes
+
+	title = "EVTNAME233001"
+	desc = "EVTDESC233001"
+	picture = "1950_korea_task_force_arrives"
+
+	option = {
+		name = "EVTOPTA233001"
+		relation = { who = USA value = 50 }
+		national_unity = 5								#New hope for the Koreans
+		dissent = -5
+	}
+}
+
+#233002 - armistice_koreanwar_KOR follow-up event
+country_event = {
+	
+	id = 233002
+
+	is_triggered_only = yes
+
+	title = "EVTNAME233002"
+	desc = "EVTDESC233002"
+	picture = "1951_armistice_talks"
+
+	option = {
+		name = "EVTOPTA233002"						#Ask for a ceasefire
+		ai_chance = { factor = 99 }					#Historical choice
+		prestige_change = 2							#Reward for peaceful behaviour
+		PRK = { country_event = 291007 }			#PRK gets the event to avoid fiddling around with USA/CHC/CHI/SOV involved
+	}
+	
+	option = {
+		name = "EVTOPTB233002"						#Fight on
+		ai_chance = { factor = 1 }					#Ahistorical choice and unlikly - the war went on long enough
+		add_country_modifier = {						#A hundred more days till the next chance for peace
+			name = "koreanwar_peace"					
+			duration = 100
+		}
+		PRK = {
+			add_country_modifier = {					#War counter is ticking 
+				name = "koreanwar_peace"
+				duration = 700
+			}
+		}
+	}
+}
+
+#233003 - PRK asks for an armistice
+country_event = {
+	
+	id = 233003
+
+	is_triggered_only = yes
+
+	title = "EVTNAME233003"
+	desc = "EVTDESC233003"
+	picture = "1951_armistice_talks"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA233003"					#Accept the proposal
+		ai_chance = { factor = 98 }				#Historical choice; should also prevent and endless war
+		prestige_change = -1					#Because North Korea failed to unite the Koreas - unless it asks for peace itself
+		end_war = PRK
+		end_war = CHC
+		random_owned = {
+			limit = {
+				owner = { controls = 14891 }
+			}
+			owner = { secede_province = 14891 }
+		}
+		random_owned = {
+			limit = {
+				PRK = { controls = 14891 }
+			}
+			PRK = { secede_province = 13486 }
+		}
+		set_global_flag = armistice_koreanwar_PRK_done
+	}
+	
+	option = {
+		name = "EVTOPTB233003"					#Fight on
+		ai_chance = { factor = 2 }
+		add_country_modifier = {				#A hundred more days till the next chance for peace
+			name = "koreanwar_peace"					
+			duration = 100
+		}
+		PRK = {
+			add_country_modifier = {					#War counter is ticking 
+				name = "koreanwar_peace"
+				duration = 700
+			}
+		}
+	}
+}
+
+#233004 - The Korean War - Victory!
+country_event = {
+	
+	id = 233004
+
+	trigger = {
+		tag = KOR
+		NOT = { total_defensives = 1 }
+		NOT = { has_global_flag = koreanwar_KOR_victory }
+		NOT = { KOR = { lost_national = 0.30 } }	#No victory if KOR itself gets overrun
+		OR = {
+			AND = {
+				NOT = { exists = PRK }
+				owns = 13422 					#Pyongyang
+			}
+			AND = {
+				13422 = { 						#Pyongyang
+					controller = {
+						OR = {
+							tag = KOR
+							alliance_with = KOR
+						}
+					}
+				}
+				NOT = {
+					PRK = { 
+						OR = {
+							any_owned_province = { controlled_by = PRK }
+							any_owned_province = {
+								controller = {
+									alliance_with = PRK
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+		modifier = {
+			factor = 0.1
+			NOT = { exists = PRK }
+		}
+		modifier = {
+			factor = 10
+			war_with = CHC
+		}
+	}
+
+	title = "EVTNAME233004"
+	desc = "EVTDESC233004"
+	picture = "1948_South_Korea_established"
+
+	option = {
+		name = "EVTOPTA233004"
+		prestige_change = 15						#Reward for unifying Korea
+		national_unity = 10							
+		dissent = -10
+		inherit = PRK
+		set_global_flag = koreanwar_KOR_victory
+	}
+}
+
+
+## CHC ##
+#151050 - PRK asks for support for the invasion of KOR
+country_event = {
+	
+	id = 151050
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151050"
+	desc = "EVTDESC151050"
+	picture = "1950_korean_war_begins"
+
+	option = {
+		name = "EVTOPTA151050"			    			#Send supplies and volunteers
+		ai_chance = { factor = 75 }
+		money = -30										#Weapons and supplies for the Koreans
+		supplies = -1500
+		manpower = -20									#The Chinese have a lot of guys to spare
+		fuel = -200
+		relation = { who = PRK value = 50 }
+		set_global_flag = PRK_CHC_support
+		PRK = { country_event = 291004 }
+	}
+	
+	option = {
+		name = "EVTOPTB151050"							#Join the war directly
+		ai_chance = { factor = 20 }
+		relation = { who = PRK value = 100 }
+		set_global_flag = PRK_CHC_join		
+		PRK = { country_event = 291005 }
+	}
+	
+	option = {
+		name = "EVTOPTC151050"							#No, that's too risky
+		ai_chance = { factor = 5 }
+		relation = { who = PRK value = -25 }
+		PRK = { country_event = 291006 }
+	}
+}
+
+#151051 - intervene_koreanwar_CHC follow-up event
+country_event = {
+	
+	id = 151051
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151051"
+	desc = "EVTDESC151051"
+	picture = "1951_china_capture_seoul"
+
+	option = {
+		name = "EVTOPTA151051"
+		ai_chance = { factor = 80 }
+		relation = { who = PRK value = 50 }
+		PRK = { country_event = 291011 }				#Chinese People's Volunteer Army OOB is loaded
+		set_global_flag = PRK_CHC_join
+	}
+	
+	option = {
+		name = "EVTOPTB151051"
+		ai_chance = { factor = 20 }
+														#UN relation goes up @
+		relation = { who = PRK value = -25 }														
+	}
+}

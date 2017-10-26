@@ -1,0 +1,251 @@
+#170980	- The Rise of Zieschang - We are the world event 
+#170981	- A Friendly Visit - We are the world event 
+#170982	- Establish the Guards - We are the world event 
+#170983	- Monument in your honor - We are the world event 
+#170984	- The Rise of Fredrick Holst - We are the world event 
+#170985	- New Prussia - We are the world event 
+#170986	- Establish the Guards - We are the world event 
+#170987	- Monument in your honor - We are the world event 
+
+#170980	- The Rise of Zieschang - We are the world event 
+country_event = {
+	
+	id = 170980
+
+	trigger = {
+		tag = DDR
+		NOT = { has_country_flag = event_rise_to_power_HZ_watw_DDR_done }
+		OR = {
+			DDR = { head_of_state = 1170026} 
+			DDR = { head_of_government = 1170026}
+		}			
+	}
+
+	title = "EVTNAME170980"
+	desc = "EVTDESC170980"
+	picture = ""
+
+	option = {
+		name = "EVTOPTA170980"		#Establish the guards
+		ai_chance = { factor = 100 }						
+		country_event = 170982
+		set_country_flag = event_rise_to_power_HZ_watw_DDR_done
+
+	}
+	
+	option = {						#OK
+		name = "EVTOPTB170980" 
+		ai_chance = { factor = 0 }
+		set_country_flag = event_rise_to_power_HZ_watw_DDR_done		
+	}
+}
+
+#170981	- A friendly visit - We are the world event 
+country_event = {
+	
+	id = 170981
+
+	trigger = {
+		ideology = maoist_idolg
+		NOT = { tag = DDR }
+		OR = {
+			DDR = { head_of_state = 1170026 } 
+			DDR = { head_of_government = 1170026 }
+		}
+		NOT = { has_country_flag = event_rise_to_power_HZ_watw_DDR_done }
+	}
+
+	title = "EVTNAME170981"
+	desc = "EVTDESC170981"
+	picture = ""
+
+	option = {
+		name = "EVTOPTA170981"		#Secretly support them
+		ai_chance = { factor = 85 }
+		relation = { who = DDR value = 25 }
+		neutrality = -5
+		set_country_flag = event_rise_to_power_HZ_watw_DDR_done	
+	}
+	
+	option = {
+		name = "EVTOPTB170981"		#Publicly support them
+		ai_chance = { factor = 10 }
+		relation = { who = DDR value = 75 }
+		neutrality = -15
+		set_country_flag = event_rise_to_power_HZ_watw_DDR_done	
+	}
+
+	option = {
+		name = "EVTOPTC170981"		#Reject their offer
+		ai_chance = { factor = 5 }
+		relation = { who = DDR value = -25 }
+		neutrality = 5
+		set_country_flag = event_rise_to_power_HZ_watw_DDR_done	
+	}	
+}
+
+#170982	- Establish the Guards - We are the world event 
+country_event = {
+	
+	id = 170982
+
+	is_triggered_only = yes
+
+	title = "EVTNAME170982"
+	desc = "EVTDESC170982"
+	picture = "1980_Wachregiment"
+
+	option = {
+		name = "EVTOPTA170982"		#Establish the guards
+		load_oob = DDR_Wachregiment-HZ.txt
+	}
+}
+
+#170983	- Monument in your honor - We are the world event 
+country_event = {
+	
+	id = 170983
+
+	trigger = {
+		tag = DDR
+		has_country_flag = event_rise_to_power_HZ_watw_DDR_done
+		NOT = {has_country_flag = event_monument_built_HZ_watw_DDR_done}	
+		#national monument not yet built
+		capital_scope = { NOT = { has_special_building = national_monument } }
+	}
+
+	title = "EVTNAME170983"
+	desc = "EVTDESC170983"
+	picture = ""
+
+	option = {
+		name = "EVTOPTA170983"		#Excellent
+		capital_scope = {
+			national_monument = yes
+		}
+		set_country_flag = event_monument_built_HZ_watw_DDR_done			
+	}
+}
+
+#170984	- The Rise of Fredrick Holst - We are the world event 
+country_event = {
+	
+	id = 170984
+
+	trigger = {
+		tag = DDR
+		NOT = { has_country_flag = event_rise_to_power_FH_watw_DDR_done }
+		DDR = { head_of_state = 1170016} 		
+	}
+
+	title = "EVTNAME170984"
+	desc = "EVTDESC170984"
+	picture = ""
+
+	option = {
+		name = "EVTOPTA170984"		#Establish the guards
+		ai_chance = { factor = 100 }						
+		country_event = 170986
+		set_country_flag = event_rise_to_power_FH_watw_DDR_done
+
+	}
+	
+	option = {						#OK
+		name = "EVTOPTB170984" 
+		ai_chance = { factor = 0 }
+		set_country_flag = event_rise_to_power_FH_watw_DDR_done		
+	}
+}
+
+#170985	- New Prussia - We are the world event 
+country_event = {
+	
+	id = 170985
+
+	trigger = {
+		OR = {
+			ideology = paternal_auto_idolg
+			ideology = social_cons_idolg 
+			ideology = market_liberal_idolg  						
+		}
+		OR = {
+			tag = AUS
+			tag = DEN
+			tag = SCH
+			tag = POL
+			tag = USA
+		}
+		DDR = { head_of_state = 1170016} 
+		NOT = { has_country_flag = event_rise_to_power_FH_watw_DDR_done }
+	}
+
+	title = "EVTNAME170985"
+	desc = "EVTDESC170985"
+	picture = ""
+
+	option = {
+		name = "EVTOPTA170985"		#Publicly support them
+		ai_chance = { factor = 85 }
+		relation = { who = DDR value = 75 }
+		neutrality = -15
+		set_country_flag = event_rise_to_power_FH_watw_DDR_done	
+	}
+	
+	option = {
+		name = "EVTOPTB170985"		#Secretly support them
+		ai_chance = { factor = 10 }
+		relation = { who = DDR value = 25 }
+		neutrality = -5
+		set_country_flag = event_rise_to_power_FH_watw_DDR_done	
+	}
+	
+	option = {
+		name = "EVTOPTC170985"		#Reject their offer
+		ai_chance = { factor = 5 }
+		relation = { who = DDR value = -25 }
+		neutrality = 5
+		set_country_flag = event_rise_to_power_FH_watw_DDR_done	
+	}	
+}
+
+#170986	- Establish the Guards - We are the world event 
+country_event = {
+	
+	id = 170986
+
+	is_triggered_only = yes
+
+	title = "EVTNAME170986"
+	desc = "EVTDESC170986"
+	picture = "1918_Prussian_Guards"
+
+	option = {
+		name = "EVTOPTA170986"		#Establish the guards
+		load_oob = DDR_Prussian-Guards.txt
+	}
+}
+
+#170987	- Monument in your honor - We are the world event 
+country_event = {
+	
+	id = 170987
+
+	trigger = {
+		tag = DDR
+		has_country_flag = event_rise_to_power_FH_watw_DDR_done
+		NOT = {has_country_flag = event_monument_built_FH_watw_DDR_done}	
+		#national monument not yet built
+		capital_scope = { NOT = { has_special_building = national_monument } }
+	}
+
+	title = "EVTNAME170987"
+	desc = "EVTDESC170987"
+	picture = ""
+
+	option = {
+		capital_scope = {
+			national_monument = yes
+		}
+		set_country_flag = event_monument_built_FH_watw_DDR_done			
+	}
+}

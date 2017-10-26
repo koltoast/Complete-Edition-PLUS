@@ -1,0 +1,42 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#ETH;;;;;;;;;;;;;;x
+release_eritrea_ETH_title;The Destiny of Eritrea;;;;;;;;;;;;;x
+release_eritrea_ETH_desc;The area comprising Eritrea had been ruled by various regional and foreign powers until its current borders were established by the Italian colonial government in the late 19th century. After Italy conquered Ethiopia in 1935, Eritrea and Ethiopia were united as Italian East Africa. Italy's colonial empire shattered with its defeat in the Second World War and Eritrea subsequently fell under Ethiopian control. Eritreans do not consider themselves to be part of Ethiopia, however, and are beginning to demand independence. For now, the destiny of Eritrea lies in Ethiopian hands.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ; REMOVE HASH FOR ACTIVE EVENTS AND OPTIONS;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#ETH;;;;;;;;;;;;;;x
+EVTNAME186000;The Eritrean Question;;;;;;;;;;;;;x
+EVTDESC186000;The end of the Second World War was a lucky one for Ethiopia: the emperor returned to Addis Ababa and Ethiopia not only regained control over its territory, but also convinced Britain to turn over Eritrea to Ethiopian control – and with it access to the Red Sea. The Eritreans are not so keen on the arrangement, however, and demand full independence. Is it time to grant them this wish? Or would limited autonomy be the better way to keep Eritrea under Ethiopian influence?;;;;;;;;;;;;;x
+EVTOPTA186000;It is time to let them rule themselves;;;;;;;;;;;;;x
+EVTOPTB186000;Grant them limited autonomy;;;;;;;;;;;;;x
+EVTOPTC186000;Eritrea is – and will remain – part of Ethiopia;;;;;;;;;;;;;x
+EVTNAME186001;Eritrea Demands Autonomy;;;;;;;;;;;;;x
+EVTDESC186001;After the conclusion of the Second World War, Eritrea became part of Ethiopia despite most Eritreans’ opinion of themselves as a distinct and independent people. Now they are demanding autonomy and claim that they are willing to fight for it if necessary. Giving in at this stage will result not only in the loss of Eritrea, but also our access to the Red Sea. Can Ethiopia afford the price of a sovereign Eritrea?;;;;;;;;;;;;;x
+EVTOPTA186001;They deserve independence;;;;;;;;;;;;;x
+EVTOPTB186001;Grant them limited autonomy;;;;;;;;;;;;;x
+EVTOPTC186001;Never!;;;;;;;;;;;;;x
+EVTNAME186002;Eritrea Demands Autonomy;;;;;;;;;;;;;x
+EVTDESC186002;After the conclusion of the Second World War, Eritrea became part of Ethiopia despite most Eritreans' opinion of themselves as a distinct and independent people. Now they are demanding autonomy and claim that they are willing to fight for it if necessary. Giving in at this stage will result not only in the loss of Eritrea, but also our access to the Red Sea. Can Ethiopia afford the price of a sovereign Eritrea?;;;;;;;;;;;;;x
+EVTOPTA186002;They deserve independence;;;;;;;;;;;;;x
+EVTOPTB186002;Grant them limited autonomy;;;;;;;;;;;;;x
+EVTOPTC186002;Never!;;;;;;;;;;;;;x
+EVTNAME186003;Uprising in Eritrea;;;;;;;;;;;;;x
+EVTDESC186003;Nationalist rebels have risen up in Eritrea demanding independence for their people. They proclaim that they are ready to die for their cause.;;;;;;;;;;;;;x
+EVTOPTA186003;Crush them!;;;;;;;;;;;;;x
+EVTNAME186004;Uprising in Eritrea;;;;;;;;;;;;;x
+EVTDESC186004;Nationalist rebels have risen up in Eritrea demanding independence for their people. They proclaim that they are ready to die for their cause.;;;;;;;;;;;;;x
+EVTOPTA186004;Crush them!;;;;;;;;;;;;;x
+EVTNAME186005;The Eritreans Rise Up!;;;;;;;;;;;;;x
+EVTDESC186005;The Eritreans have risen up en masse and are seizing control over the entire region! We must strike quickly and decisively now or we will lose Eritrea forever. Or, on the other hand, perhaps it is time to finally rid ourselves of this rebel-ridden strip of dirt.;;;;;;;;;;;;;x
+EVTOPTA186005;To arms!;;;;;;;;;;;;;x
+EVTOPTB186005;We should solve the problem a different way this time...;;;;;;;;;;;;;x
+EVTNAME186006;The Eritreans Rise Up!;;;;;;;;;;;;;x
+EVTDESC186006;The Eritreans have risen up en masse and are seizing control over the entire region! We must strike quickly and decisively now or we will lose Eritrea forever. Or, on the other hand, perhaps it is time to finally rid ourselves of this rebel-ridden strip of dirt.;;;;;;;;;;;;;x
+EVTOPTA186006;To arms!;;;;;;;;;;;;;x
+EVTOPTB186006;We should solve the problem a different way this time...;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

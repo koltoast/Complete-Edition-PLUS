@@ -1,0 +1,164 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Global #;;;;;;;;;;;;;;x
+conscripts_politician_son_inquiry;Inquiry Ordered for Politician's Son;;;;;;;;;;;;;x
+conscripts_champagne_unit_disbanded;Champagne Unit Disbanded;;;;;;;;;;;;;x
+conscripts_research_setback;Setback on Conscript Research;;;;;;;;;;;;;x
+conscripts_peaceful_demonstration;Peaceful Protests Against Draft;;;;;;;;;;;;;x
+conscripts_widespread_demonstrations;Widespread Protests Against Draft;;;;;;;;;;;;;x
+conscripts_poor_condition;Condition of Conscripts is Poor;;;;;;;;;;;;;x
+conscripts_callup_falls_short;Draft Fails to Meet Quota;;;;;;;;;;;;;x
+conscripts_callup_felons;Draft Expanded to Felons;;;;;;;;;;;;;x
+conscripts_callup_extended;Service Tours Extended;;;;;;;;;;;;;x
+conscripts_labour_experience;Employers Praise Draftee Veterans;;;;;;;;;;;;;x
+conscripts_callup_above_target_military;Surplus Draftees Expand Military;;;;;;;;;;;;;x
+conscripts_callup_above_target_returned;Surplus Draftees Return Home;;;;;;;;;;;;;x
+conscripts_callup_above_target_construction;Draftees Build the Nation;;;;;;;;;;;;;x
+draft_dodgers_minor;Harsh Penalties for Draft Dodgers;;;;;;;;;;;;;x
+draft_dodgers_moderate;Moderation for Draft Dodgers;;;;;;;;;;;;;x
+conscription_memoirs_published;Draftee Memoirs Published;;;;;;;;;;;;;x
+conscription_memoirs_distributed;Draftee Memoirs Distributed;;;;;;;;;;;;;x
+conscription_lampooning_film;Film Lampoons Draft;;;;;;;;;;;;;x
+conscription_critical_editorial;Editorial Criticises Draft;;;;;;;;;;;;;x
+conscription_religious_opposition;Church Leaders Protest Draft;;;;;;;;;;;;;x
+conscription_union_strike;Union Strikes to Protest Draft;;;;;;;;;;;;;x
+emasculated_military;Strict Regulations for Military;;;;;;;;;;;;;x
+ambitious_military;Military Given Latitude;;;;;;;;;;;;;x
+mod_draft_delay_1;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_2;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_3;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_4;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_5;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_6;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_7;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_8;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_9;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_10;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_11;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_12;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_13;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_14;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_15;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_16;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_17;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_18;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_19;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_20;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_21;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_22;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_23;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_24;Military Service Event Delay;;;;;;;;;;;;;x
+mod_draft_delay_general;Military Service Event Delay;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Global #;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Global #;;;;;;;;;;;;;x;
+EVTNAME50200;Politician's Son Dodges Draft;;;;;;;;;;;;;x
+EVTDESC50200;News agencies are reporting on rumors that the son of one of our closest political allies was drafted but has since disappeared from the mandatory reporting list. We need to get out in front of this quickly and have three realistic options at the moment – we let our political ally take the fall and be done with it, we order a government-wide inquiry to get to the bottom of this, or we put forth a plausible counter-story and hope for the best.;;;;;;;;;;;;;x
+EVTOPTA50200;Let im take the fall;;;;;;;;;;;;;x
+EVTOPTB50200;Order a government-wide inquiry;;;;;;;;;;;;;x
+EVTOPTC50200;Organize a cover-up;;;;;;;;;;;;;x
+EVTNAME50201;Champagne Units Criticised;;;;;;;;;;;;;x
+EVTDESC50201;In the news today, various media outlets reported on the state of the $COUNTRY_ADJ$ draft, calling it 'separate and unequal' and noting several 'champagne units' across $COUNTRY$ allow the 'connected elite' to avoid any real dangers of the war while the less-connected risk their lives. How shall we respond to this?;;;;;;;;;;;;;x
+EVTOPTA50201;Disband the champagne units;;;;;;;;;;;;;x
+EVTOPTB50201;There's nothing wrong with that;;;;;;;;;;;;;x
+EVTOPTC50201;Expand the draft so no unit is excluded;;;;;;;;;;;;;x
+EVTNAME50202;Draft Interferes with Research;;;;;;;;;;;;;x
+EVTDESC50202;Today in the news, various media outlets reported on the impact of the $COUNTRY_ADJ$ draft on the private sector. Of particular note was a report detailing how the latest round of call-ups has set back prominent research.;;;;;;;;;;;;;x
+EVTOPTA50202;This is unfortunate;;;;;;;;;;;;;x
+EVTNAME50203;Draft Interferes with Research;;;;;;;;;;;;;x
+EVTDESC50203;Today in the news, various media outlets reported on the impact of the $COUNTRY_ADJ$ draft on the private sector. Of particular note was a report detailing how the latest round of call-ups has taken a toll on industrial output.;;;;;;;;;;;;;x
+EVTOPTA50203;This is unfortunate;;;;;;;;;;;;;x
+EVTNAME50204;Peaceful Draft Protests;;;;;;;;;;;;;x
+EVTDESC50204;A few press outlets noted a lone protest rally that was held today. It was a small, peaceful demonstration against the draft, but it is the first sign that some public sentiment is not in favor of our policy.;;;;;;;;;;;;;x
+EVTOPTA50204;That is unfortunate;;;;;;;;;;;;;x
+EVTNAME50205;Series of Peaceful Draft Protests;;;;;;;;;;;;;x
+EVTDESC50205;All major press outlets reported on a series of well-orchestrated, peaceful demonstrations against the draft. These anti-draft protests were staged across the nation, including a highly-publicized rally held in our nation's capital.;;;;;;;;;;;;;x
+EVTOPTA50205;Send in the riot police;;;;;;;;;;;;;x
+EVTOPTB50205;The protests will burn themselves out in time;;;;;;;;;;;;;x
+EVTNAME50206;Condition of Conscripts is Poor;;;;;;;;;;;;;x
+EVTDESC50206;A report issued by top brass details a high level concern by our training officers regarding the poor physical health of those reporting for the draft. The overall physical quality of draftees is so poor that our generals are concerned about the physical competency of draftees and question their ability to effectively carry out missions in the field.;;;;;;;;;;;;;x
+EVTOPTA50206;That is most unfortunate;;;;;;;;;;;;;x
+EVTNAME50207;Draft Fails to Meet Quota;;;;;;;;;;;;;x
+EVTDESC50207;Status briefings with top military officials have revealed a disturbing trend concerning our draft call-ups – each round of the draft results in numbers much lower than originally projected. Current conscriptions totals are significantly lower than planned. $MONARCHTITLE$, we can either temper our expectations accordingly, or perhaps remedy the matter by extending the draft to felons or extending the enlistments of current draftees.;;;;;;;;;;;;;x
+EVTOPTA50207;Continue as we have;;;;;;;;;;;;;x
+EVTOPTB50207;Accept felons for this round;;;;;;;;;;;;;x
+EVTOPTC50207;Extend enlistment of current draftees;;;;;;;;;;;;;x
+EVTNAME50208;Employers Praise Draftee Veterans;;;;;;;;;;;;;x
+EVTDESC50208;An editorial piece regarding former draftees re-entering the workplace was released today. $MONARCHTITLE$, it was an unexpected windfall of good press! The overwhelming opinion of nearly all employers is that the draftees returning from service are among the best employees they have. Among other things, employers praised the work skills, life skills, and maturity of these veterans.;;;;;;;;;;;;;x
+EVTOPTA50208;Great news for our policy!;;;;;;;;;;;;;x
+EVTNAME50209;Draft Helps Unite Our Nation;;;;;;;;;;;;;x
+EVTDESC50209;We have inspiring news! Today a top press outlet reported that the draft is responsible for a new wave of cooperation and acceptance among the $COUNTRY_ADJ$ people. This new trend was traced back to the draft and its ability to unite all walks of life in a common purpose.;;;;;;;;;;;;;x
+EVTOPTA50209;The draft brings our people together;;;;;;;;;;;;;x
+EVTNAME50210;Draft Turns Boys into Men;;;;;;;;;;;;;x
+EVTDESC50210;We have received excellent press regarding an effect of the draft! Today, some prominent journals reported on the strong family values and work ethic of the former draftees that have returned from service. One report noted, 'The draft makes men out of boys.';;;;;;;;;;;;;x
+EVTOPTA50210;This is great news!;;;;;;;;;;;;;x
+EVTNAME50211;Draft Round Results in Surplus;;;;;;;;;;;;;x
+EVTDESC50211;A report from our military advisors reveals that the most recent round of call-ups in our draft has resulted in significantly more conscripts than originally projected. $MONARCHTITLE$, we have several options you can choose – you could integrate the surplus into additional military units, relieve them of duty and send them home, or put them to work on some public works projects. What shall we do?;;;;;;;;;;;;;x
+EVTOPTA50211;The war effort needs more good men;;;;;;;;;;;;;x
+EVTOPTB50211;Relieve them of duty and send them home;;;;;;;;;;;;;x
+EVTOPTC50211;Put them to work on key public projects;;;;;;;;;;;;;x
+EVTNAME50212;Spate of Draft Dodgers;;;;;;;;;;;;;x
+EVTDESC50212;The most recent report from the military shows that we are encountering an unrelenting trend of an ever-increasing number of call-ups dodging the draft. This sort of passive-aggressive insurgency can have a demoralizing effect.\n\n$MONARCHTITLE$, you have three ways to respond to this. You could make such actions as this punishable by lengthy imprisonment, we could maintain our existing modest remedies for this behavior, or we could consider loosening our conscription policies. What shall we do?;;;;;;;;;;;;;x
+EVTOPTA50212;Harsh punishment is needed for draft dodgers;;;;;;;;;;;;;x
+EVTOPTB50212;Harsh punishment would only create martyrs;;;;;;;;;;;;;x
+EVTOPTC50212;It's time to relax our conscription Policies;;;;;;;;;;;;;x
+EVTNAME50213;Draft Dodgers Leave the Country;;;;;;;;;;;;;x
+EVTDESC50213;News outlets are reporting on the large numbers of draft dodgers, particularly noting how many draft dodgers are taking refuge in neighboring countries. Some pundits are calling this behavior unacceptable, suggesting we should take a hard stand against any nation harboring anyone dodging our draft. \n\n$MONARCHTITLE$, should we put pressure on the neighboring countries that are allowing this?;;;;;;;;;;;;;x
+EVTOPTA50213;Pressure the countries harboring draft dodgers;;;;;;;;;;;;;x
+EVTOPTB50213;There is no need to create an international incident;;;;;;;;;;;;;x
+EVTNAME50214;Draftee Memoirs Published;;;;;;;;;;;;;x
+EVTDESC50214;Sensationalized in the news today is a report concerning the recently published memoirs of a criminal imprisoned for various illegal activity conducted in protest of the draft. Initial public sentiment suggests this will definitely contribute to feelings of war exhaustion among our people. This is unfortunate, but what can we do?;;;;;;;;;;;;;x
+EVTOPTA50214;It's unfortunate and unavoidable;;;;;;;;;;;;;x
+EVTOPTB50214;Take measures to curtail its distribution;;;;;;;;;;;;;x
+EVTNAME50215;Draftee Memoirs Distributed;;;;;;;;;;;;;x
+EVTDESC50215;In covert circles, we have reports from our agents in the field of a subversive document being distributed by elements that are opposed to the draft. The document is the unofficial memoirs of a criminal imprisoned for a number of illegal activities conducted in protest of the draft. This is definitely hurting our public image.;;;;;;;;;;;;x;
+EVTOPTA50215;It's an unfortunate part of war;;;;;;;;;;;;;x
+EVTOPTB50215;It's unacceptable, enact a crackdown;;;;;;;;;;;;;x
+EVTNAME50216;Public Burning of Draft Cards;;;;;;;;;;;;;x
+EVTDESC50216;A number of international news outlets are reporting on demonstrations against the draft. The most disturbing reports involve the public burning of draft cards. This may not be illegal, but it's highly unpatriotic and severely undermines our draft efforts. \n\n$MONARCHTITLE$, should we take measures to curb these subversive public displays?;;;;;;;;;;;;;x
+EVTOPTA50216;No, they have not broken any laws;;;;;;;;;;;;;x
+EVTOPTB50216;Yes, have all card-burners arrested;;;;;;;;;;;;;x
+EVTNAME50217;Draftees Protest Being Used;;;;;;;;;;;;;x
+EVTDESC50217;In a widely publicized event, a notable group of draftees organized a high-profile protest, refusing to participate as 'cogs in the war machine' in a war against 'fellow members of the proletariat.' A tribunal has been convened to handle the matter. This sort of dissent can create many ripples that will hamper our draft efforts. Shall we let matters take their own course, or intervene?;;;;;;;;;;;;;x
+EVTOPTA50217;Intervene to ensure their imprisonment;;;;;;;;;;;;;x
+EVTOPTB50217;Let the tribunal decide on its own;;;;;;;;;;;;;x
+EVTNAME50218;Film Lampoons Draft;;;;;;;;;;;;;x
+EVTDESC50218;Over the weekend a new film lampooning the $COUNTRY_ADJ$ peace-time draft was released. The film opened to modest public acclaim, but seems to be drawing bigger and bigger audiences. This will surely not help our public image.;;;;;;;;;;;;;x
+EVTOPTA50218;Unfortunate but unavoidable;;;;;;;;;;;;;x
+EVTNAME50219;Editorial Criticises Draft;;;;;;;;;;;;;x
+EVTDESC50219;An op-ed piece in a prominent newspaper criticized our conscription policies. The article went to great lengths to paint a completely negative picture, calling our policy a 'Grievous breach of $COUNTRY_ADJ$ civil liberty.' \n\n$MONARCHTITLE$, this sort of journalism is out of line. Should we investigate this editor and take measures to deal with this matter?;;;;;;;;;;;;;x
+EVTOPTA50219;No, it's not illegal;;;;;;;;;;;;;x
+EVTOPTB50219;Yes, find a way to make the editor resign;;;;;;;;;;;;;x
+EVTNAME50220;Church Leaders Protest Draft;;;;;;;;;;;;;x
+EVTDESC50220;In the news today, several media outlets are reporting on church leaders who are protesting our draft measures. The church leaders are petitioning our government to end our conscription policy. It isn't prudent to take a stand against them, but this will affect the unity of the nation. ;;;;;;;;;;;;;x
+EVTOPTA50220;It's unfortunate that we didn't preempt this;;;;;;;;;;;;;x
+EVTNAME50221;Union Strikes to Protest Draft;;;;;;;;;;;;;x
+EVTDESC50221;Various news outlets are reporting on a series of strikes across the nation in protest of the draft. In public statements issues today, representatives of the trade unions have declared that the strikes are being conducted to demonstrate union solidarity with imprisoned draft objectors. \n\n$MONARCHTITLE$, this anti-government display will undermine our administration and hamper national production. How should we react to this?;;;;;;;;;;;;;x
+EVTOPTA50221;It's unfortunate but not illegal;;;;;;;;;;;;;x
+EVTOPTB50221;It's unacceptable, enact a crackdown;;;;;;;;;;;;;x
+EVTNAME50222;Generals Praise Volunteers;;;;;;;;;;;;;x
+EVTDESC50222;In a planned press release, the top generals reviewing the performance of our military have 'top marks' for our volunteer army. They note the morale and initiative of our volunteers shows in the effectiveness of $COUNTRY_ADJ$ military maneuvers.;;;;;;;;;;;;;x
+EVTOPTA50222;Our volunteers are impressive!;;;;;;;;;;;;;x
+EVTNAME50223;Political Concern About Army;;;;;;;;;;;;;x
+EVTDESC50223;A report from our top military analysts outlines several reasons for concern about our military. The report concludes that there is reason to be concerned that the $COUNTRY_ADJ$ volunteer army is becoming too independent and quite possibly becoming a political force of its own. \n\n$MONARCHTITLE$, shall we intervene to preempt this possible 'threat from within?';;;;;;;;;;;;;x
+EVTOPTA50223;Yes, we must preempt this threat;;;;;;;;;;;;;x
+EVTOPTB50223;No, there is no reason for alarm;;;;;;;;;;;;;x
+EVTNAME50224;Neighbor Demands Return of Draft Dodgers;;;;;;;;;;;;;x
+EVTDESC50224;A neighboring nation is demanding the return of draft dodgers who they claim are illegally residing in our country. How shall we respond?;;;;;;;;;;;;;x
+EVTOPTA50224;Return them;;;;;;;;;;;;;x
+EVTOPTB50224;Let them stay;;;;;;;;;;;;;x
+EVTNAME50225;Objectors Sentenced by Tribunal;;;;;;;;;;;;;x
+EVTDESC50225;A military tribunal has unsurprisingly found a prominent group of objectors to the draft guilty of draft law violations and sentenced them to varying terms of imprisonment for their actions.;;;;;;;;;;;;;x
+EVTOPTA50225;The rule of law;;;;;;;;;;;;;x
+EVTNAME50226;Objectors Cleared by Tribunal;;;;;;;;;;;;;x
+EVTDESC50226;In a surprising development, a military tribunal has found a group of prominent objectors to the draft innocent of any crime and ordered their release.;;;;;;;;;;;;;x
+EVTOPTA50226;Unfortunate;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

@@ -1,0 +1,265 @@
+
+country_event = {
+
+	id = 700124
+	is_triggered_only = yes
+
+
+	
+	title = "Enemy Invasion operation attempt is launched in our territory"
+	desc = "Be aware if success for the selection of a site for invasion operations is obtained"
+	picture = "ANARKIA-2"
+
+ option = {
+	name = "OK"
+	ai_chance = { factor = 100 }			
+				random_list = {	
+					10 = { 
+		this = {                                              ###this = any_country	                                                         
+			random_owned = { 
+				limit = { 
+					is_capital = no
+					is_core = this
+					units_in_province = 0
+					controlled_by = this
+					owned_by = this	
+                    has_building = naval_base					
+				}
+             change_controller = from
+			 from = { money = -10000 }                   ###from = ai  ( event principal )     	
+			 from = { supplies = -1000 }
+			 from = { fuel = -1000 }
+							 
+			}
+			 
+			}	
+          }	
+		  
+					10 = { 
+		this = {
+			random_owned = { 
+				limit = { 
+					is_capital = no
+					controlled_by = this
+					owned_by = this	
+                    has_building = naval_base					
+				}
+             change_controller  = from
+			 from = { money = -10000 }
+			 from = { supplies = -1000 }
+			 from = { fuel = -1000 }
+							 
+			}
+			 
+			}	
+          }			  
+			
+					10 = { 
+		this = {
+			random_owned = { 
+				limit = { 
+					is_capital = no
+					is_core = this
+					units_in_province = 0
+					controlled_by = this
+					owned_by = this
+                    has_building = air_base					
+				}
+             change_controller  = from
+			 from = { money = -10000 }
+			 from = { supplies = -1000 }
+			 from = { fuel = -1000 }							 
+			}	
+			}
+          }
+		  
+					10 = { 
+		this = {
+			random_owned = { 
+				limit = { 
+					is_capital = no
+					controlled_by = this
+					owned_by = this
+                    has_building = air_base					
+				}
+             change_controller  = from
+			 from = { money = -10000 }
+			 from = { supplies = -1000 }
+			 from = { fuel = -1000 }							 
+			}	
+			}
+          }		  
+					
+					5 = { 
+		this = {
+			random_owned = { 
+				limit = { 
+					controlled_by = this
+					owned_by = this						
+				}
+			
+             change_controller  = from
+			 from = { money = -10000 }
+			 from = { supplies = -1000 }
+			 from = { fuel = -1000 }							 
+			 }
+			}	
+          }
+					5 = { 
+		this = {
+			random_owned = { 
+				limit = { 
+					controlled_by = this
+				}
+			
+             change_controller  = from
+			 from = { money = -10000 }
+			 from = { supplies = -1000 }
+			 from = { fuel = -1000 }							 
+			 }
+			}	
+          }		  
+							   
+   50 = {
+           clr_global_flag = invtriggermajh  
+   
+        }   
+	}
+          clr_global_flag = invtriggermajh	
+ }
+ 
+ }
+ 
+
+country_event = {
+
+	id = 700136
+	is_triggered_only = yes
+
+
+	
+	title = "Human player Invasion operation attempt is launched in enemy territory"
+	desc = "Be aware if success for the selection of a site for invasion operations is obtained"
+	picture = "ANARKIA-2"
+
+ option = {
+	name = "OK"
+	ai_chance = { factor = 100 }			
+				random_list = {
+				
+					10 = { 
+		from = {                                                           ###from = ai  ( event principal )
+			random_owned = { 
+				limit = { 
+					is_capital = no
+					is_core = from
+					units_in_province = 0
+					controlled_by = from
+					owned_by = from	
+                    has_building = naval_base					
+				}
+             change_controller  = this                                      ###this = any_country
+			 this = { money = -10000 }
+			 this = { supplies = -1000 }
+			 this = { fuel = -1000 }				
+			 
+			}	
+          }	
+		}				
+				
+					10 = { 
+		from = {
+			random_owned = { 
+				limit = { 
+					is_capital = no
+					controlled_by = from
+					owned_by = from	
+                    has_building = naval_base					
+				}
+             change_controller  = this
+			 this = { money = -10000 }
+			 this = { supplies = -1000 }
+			 this = { fuel = -1000 }				
+			 
+			}	
+          }	
+		}	
+					10 = { 
+		from = {
+			random_owned = { 
+				limit = { 
+					is_capital = no
+					is_core = from
+					units_in_province = 0
+					controlled_by = from
+					owned_by = from
+                    has_building = air_base					
+				}
+             change_controller  = this
+			 this = { money = -10000 }
+			 this = { supplies = -1000 }
+			 this = { fuel = -1000 }							 
+			}	
+			}
+          }
+		  
+					10 = { 
+		from = {
+			random_owned = { 
+				limit = { 
+					is_capital = no
+					controlled_by = from
+					owned_by = from
+                    has_building = air_base					
+				}
+             change_controller  = this
+			 this = { money = -10000 }
+			 this = { supplies = -1000 }
+			 this = { fuel = -1000 }							 
+			}	
+			}
+          }		  
+					
+					5 = { 
+		from = {
+			random_owned = { 
+				limit = { 
+					controlled_by = from
+					owned_by = from						
+				}
+			
+             change_controller  = this
+			 this = { money = -10000 }
+			 this = { supplies = -1000 }
+			 this = { fuel = -1000 }						 
+			 }
+			}	
+          }	
+					5 = { 
+		from = {
+			random_owned = { 
+				limit = { 
+					controlled_by = from						
+				}
+			
+             change_controller  = this
+			 this = { money = -10000 }
+			 this = { supplies = -1000 }
+			 this = { fuel = -1000 }						 
+			 }
+			}	
+          }		  
+   50 = {
+           clr_global_flag = invtrigger 
+   
+        }   
+	}
+          clr_global_flag = invtrigger	
+   }
+ 
+  }
+ 
+ 
+ 
+
+

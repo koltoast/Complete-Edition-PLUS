@@ -1,0 +1,248 @@
+diplomatic_decisions = {
+	
+	dec_suspend_elections = {
+		category = national
+		picture = "1960_Turkish_coup"
+		potential = {
+			NOT = {	has_country_flag = signed_suspended_elections }	
+			NOT = { popularity = 67 }	
+			NOT = { government = totalitarian_gov }
+			NOT = { government = authoritarian_gov }		
+			NOT = { government = absolute_monarchy_gov }	
+			NOT = { has_country_flag = suspend_elections_revolts}
+			NOT = {	has_country_modifier = suspended_elections_timer }	
+			NOT = {	has_country_modifier = event_reinforce_the_police }
+			NOT = {	has_country_modifier = event_send_in_the_army_internal }					
+		}
+		
+		allow = {	
+			OR = { 
+				ideology = fascistic_idolg
+				ideology = paternal_auto_idolg 
+				ideology = maoist_idolg 
+				ideology = communist_idolg
+			}				
+			total_amount_of_divisions = 2	
+		}
+		
+		ai_will_do = { 
+			factor = 0
+		}
+		
+		effect = {	
+				random_list = {
+					20 = { 
+						election = no 
+						elections_and_voting = single_party_system
+						dissent = 5
+						set_country_flag = signed_suspended_elections
+					}					
+					50 = { 	
+						country_event = 1970
+						dissent = 5
+					}
+					20 = { 
+						country_event = 1970
+						dissent = 7 					
+					}
+					10 = { 
+						country_event = 1970
+						dissent = 10 					
+					}	
+				}	
+			}			
+			
+		}
+}
+
+diplomatic_decisions = {
+	
+	dec_suspend_elections_majority = {
+		category = national
+		picture = "1960_Turkish_coup"
+		potential = {
+			NOT = {	has_country_flag = signed_suspended_elections }
+			NOT = {	has_country_modifier = suspended_elections_timer }	
+			popularity = 67	
+			NOT = { government = totalitarian_gov }
+			NOT = { government = authoritarian_gov }		
+			NOT = { government = absolute_monarchy_gov }			
+		}
+		
+		allow = {	
+			OR = { 
+				ideology = fascistic_idolg
+				ideology = paternal_auto_idolg 
+				ideology = maoist_idolg 
+				ideology = communist_idolg
+			}		
+		}
+		
+		ai_will_do = { 
+			factor = 0
+		}
+		
+		effect = {	
+			random_list = {
+				95 = { 
+					dissent = 5
+					election = no 
+					elections_and_voting = single_party_system
+				}					
+				5 = { 	
+					dissent = 7
+					election = no
+					elections_and_voting = single_party_system					
+				}
+			}
+			set_country_flag = signed_suspended_elections
+		}
+	}	
+	
+}
+
+diplomatic_decisions = {
+	
+	ai_dec_suspend_elections = {
+		category = national
+		picture = "1960_Turkish_coup"
+		potential = {
+			ai = yes
+			NOT = {	has_country_flag = signed_suspended_elections }	
+			NOT = { popularity = 67 }	
+			NOT = { government = totalitarian_gov }
+			NOT = { government = authoritarian_gov }		
+			NOT = { government = absolute_monarchy_gov }			
+		}
+		
+		allow = {	
+			OR = { 
+				ideology = fascistic_idolg
+				ideology = maoist_idolg 
+				ideology = communist_idolg
+			}				
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {	
+			dissent = 5
+			election = no 
+			government = totalitarian_gov 
+			elections_and_voting = single_party_system	
+			civil_liberties = suspended_indefinitely
+			set_country_flag = signed_suspended_elections
+		}					
+			
+	}
+}
+
+diplomatic_decisions = {
+	
+	ai_dec_suspend_elections_majority = {
+		category = national
+		picture = "1960_Turkish_coup"
+		potential = {
+			ai = yes
+			NOT = {	has_country_flag = signed_suspended_elections }
+			popularity = 67	
+			NOT = { government = totalitarian_gov }
+			NOT = { government = authoritarian_gov }		
+			NOT = { government = absolute_monarchy_gov }			
+		}
+		
+		allow = {	
+			OR = { 
+				ideology = fascistic_idolg
+				ideology = maoist_idolg 
+				ideology = communist_idolg
+			}		
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {	
+			election = no 
+			government = totalitarian_gov 
+			elections_and_voting = single_party_system	
+			civil_liberties = suspended_indefinitely			
+			set_country_flag = signed_suspended_elections
+		}
+	}	
+	
+}
+
+diplomatic_decisions = {
+	
+	ai_dec_suspend_elections_authoritarian = {
+		category = national
+		picture = "1960_Turkish_coup"
+		potential = {
+			ai = yes
+			NOT = {	has_country_flag = signed_suspended_elections }	
+			NOT = { popularity = 67 }	
+			NOT = { government = totalitarian_gov }
+			NOT = { government = authoritarian_gov }		
+			NOT = { government = absolute_monarchy_gov }			
+		}
+		
+		allow = {	
+			OR = { 
+				ideology = paternal_auto_idolg 
+			}				
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {	
+			dissent = 5
+			election = no 
+			government = authoritarian_gov 
+			elections_and_voting = single_party_system	
+			civil_liberties = suspended_indefinitely
+			set_country_flag = signed_suspended_elections
+		}					
+			
+	}
+}
+
+diplomatic_decisions = {
+	
+	ai_dec_suspend_elections_majority_authoritarian = {
+		category = national
+		picture = "1960_Turkish_coup"
+		potential = {
+			ai = yes
+			NOT = {	has_country_flag = signed_suspended_elections }
+			popularity = 67	
+			NOT = { government = totalitarian_gov }
+			NOT = { government = authoritarian_gov }		
+			NOT = { government = absolute_monarchy_gov }			
+		}
+		
+		allow = {	
+			OR = { 
+				ideology = paternal_auto_idolg 
+			}		
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {	
+			election = no 
+			government = authoritarian_gov 
+			elections_and_voting = single_party_system	
+			civil_liberties = suspended_indefinitely			
+			set_country_flag = signed_suspended_elections
+		}
+	}	
+	
+}

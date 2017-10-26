@@ -1,0 +1,1451 @@
+##################################################################################################################
+# DESTROZO NACIONAL ###########################################################################################
+##################################################################################################################
+
+###################################
+#   LA NACION SE HUNDE #
+###################################
+country_event = {
+
+	trigger = {
+		revolt_percentage = 0.5	 
+
+			}		 
+
+	id = 700044
+	
+	title = "Que la historia nos juzgue con benevolencia"
+	desc = ""
+	picture = "ANARKIA-2"
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+	name = "OK"
+	ai_chance = { factor = 100 }
+    	    any_core = { 
+			    limit = { 					
+					controlled_by = REB
+					not = { owned_by = this }
+                }
+             change_controller  = this				
+			}		
+			any_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}				
+            supplies = 1000000
+			fuel = 1000000			
+			this = { leave_faction = allies }
+			this = { leave_faction = comintern }
+			any_country = { leave_alliance = THIS }
+			any_country = { end_war = THIS }
+        random_list={
+		85 = { 
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+				}
+		10 = { 
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+				}
+		5 = { 
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+				}
+		}
+		
+		any_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			}
+			any_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+					
+				}
+				militia_brigade = current
+				militia_brigade = current
+			}
+			any_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+					
+				}
+				militia_brigade = current
+			}
+			any_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+					
+				}
+				militia_brigade = current
+			}			
+			any_owned = {  
+				limit = {
+					owned_by = THIS
+				}				
+			    add_province_modifier = {
+				    name = del_risk
+				    duration = 365
+			    }
+		                }
+            
+		
+		random_list = {
+
+					5 = { 
+						country_event = 700046
+					}
+					5 = { 
+						country_event = 700047
+					}
+					10 = { 
+						country_event = 700048
+					}
+					10 = { 
+						country_event = 700049
+					}
+					10 = { 
+						country_event = 700050
+					}
+					10 = { 
+						country_event = 700051
+					}
+					10 = { 
+						country_event = 700052
+					}
+					10 = { 
+						country_event = 700053
+					}
+					10 = { 
+						country_event = 700054
+					}
+					5 = { 
+						country_event = 700081
+					}
+					5 = { 
+						country_event = 700082
+					}
+					5 = { 
+						country_event = 700083
+					}
+					5 = { 
+						country_event = 700084
+					}
+				}
+		 
+	}
+ }
+ 
+country_event = {
+
+
+	id = 700046
+	
+	title = "Que la historia nos juzgue con benevolencia"
+	desc = ""
+	picture = "ANARKIA-2"
+
+	is_triggered_only = yes
+
+	option = {
+    name = "Republica fascista"	
+	ai_chance = { factor = 100 }	
+	add_country_modifier = {
+		name = "capital2"				
+		duration = 30
+			}					
+		dissent = -50
+		national_unity = 25
+
+			fascistic_idolg = {
+				organisation = 40
+				popularity = 40
+			}
+			paternal_autocrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			communist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			maoist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			left_wing_radical_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_cons_idolg_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			market_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_democrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			government = totalitarian_gov			
+			do_election = THIS
+			start_election = this
+			random = {
+				chance = 25
+				organisation = +5
+				popularity = +5
+				any_owned = { revolt_risk = -3 }
+				national_unity = +25
+				dissent = -25
+			}
+			random = {
+				chance = 25
+				organisation = +15
+				popularity = +15
+				any_owned = { revolt_risk = -5 }
+				national_unity = +50
+				dissent = -50
+			}
+			random = {
+				chance = 25
+				organisation = +25
+				popularity = +25
+				any_owned = { revolt_risk = -10 }
+				national_unity = +75
+				dissent = -75
+			}
+			random = {
+				chance = 25
+				organisation = +35
+				popularity = +35
+				any_owned = { revolt_risk = -15 }
+				national_unity = +100
+				dissent = -100
+			}
+			
+		 }
+		}
+	
+  country_event = {
+
+
+	id = 700047
+	
+	title = "Que la historia nos juzgue con benevolencia"
+	desc = ""
+	picture = "ANARKIA-2"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Maoismo"	
+		ai_chance = { factor = 100 }
+	add_country_modifier = {
+		name = "capital2"				
+		duration = 30
+			}			
+		dissent = -50
+		national_unity = 25
+		
+			fascistic_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			paternal_autocrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			communist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			maoist_idolg = {
+				organisation = 40
+				popularity = 40
+			}
+			left_wing_radical_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_cons_idolg_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			market_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_democrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			government = totalitarian_gov		
+			do_election = THIS
+			start_election = this
+
+			random = {
+				chance = 25
+				organisation = +5
+				popularity = +5
+				any_owned = { revolt_risk = -3 }
+				national_unity = +25
+				dissent = -25
+			}
+			random = {
+				chance = 25
+				organisation = +15
+				popularity = +15
+				any_owned = { revolt_risk = -5 }
+				national_unity = +50
+				dissent = -50
+			}
+			random = {
+				chance = 25
+				organisation = +25
+				popularity = +25
+				any_owned = { revolt_risk = -10 }
+				national_unity = +75
+				dissent = -75
+			}
+			random = {
+				chance = 25
+				organisation = +35
+				popularity = +35
+				any_owned = { revolt_risk = -15 }
+				national_unity = +100
+				dissent = -100
+			}
+			
+		}
+	}
+	
+ country_event = {
+
+	id = 700048
+	
+	title = "Que la historia nos juzgue con benevolencia"
+	desc = ""
+	picture = "ANARKIA-2"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Izquierda radical"	
+		ai_chance = { factor = 100 }		
+	add_country_modifier = {
+		name = "capital2"				
+		duration = 30
+			}
+		dissent = -50
+		national_unity = 25
+		
+			fascistic_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			paternal_autocrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			communist_idolg = {
+				organisation = 40
+				popularity = 40
+			}
+			maoist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			left_wing_radical_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_cons_idolg_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			market_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_democrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			government = totalitarian_gov			
+			do_election = THIS
+			start_election = this
+
+			random = {
+				chance = 25
+				organisation = +5
+				popularity = +5
+				any_owned = { revolt_risk = -3 }
+				national_unity = +25
+				dissent = -25
+			}
+			random = {
+				chance = 25
+				organisation = +15
+				popularity = +15
+				any_owned = { revolt_risk = -5 }
+				national_unity = +50
+				dissent = -50
+			}
+			random = {
+				chance = 25
+				organisation = +25
+				popularity = +25
+				any_owned = { revolt_risk = -10 }
+				national_unity = +75
+				dissent = -75
+			}
+			random = {
+				chance = 25
+				organisation = +35
+				popularity = +35
+				any_owned = { revolt_risk = -15 }
+				national_unity = +100
+				dissent = -100
+			}
+
+		 
+		}
+	}
+	
+ country_event = {
+
+
+	id = 700049
+	
+	title = "Que la historia nos juzgue con benevolencia"
+	desc = ""
+	picture = "ANARKIA-2"
+
+	is_triggered_only = yes
+
+	option = {
+			name = "Social liberal"	
+		ai_chance = { factor = 100 }	
+	add_country_modifier = {
+		name = "capital2"				
+		duration = 30
+			}		
+		dissent = -50
+		national_unity = 25
+		
+			fascistic_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			paternal_autocrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			communist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			maoist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			left_wing_radical_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_liberal_idolg = {
+				organisation = 40
+				popularity = 40
+			}
+			social_cons_idolg_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			market_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_democrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			government = republic_gov			
+			do_election = THIS
+			start_election = this
+
+			random = {
+				chance = 25
+				organisation = +5
+				popularity = +5
+				any_owned = { revolt_risk = -3 }
+				national_unity = +25
+				dissent = -25
+			}
+			random = {
+				chance = 25
+				organisation = +15
+				popularity = +15
+				any_owned = { revolt_risk = -5 }
+				national_unity = +50
+				dissent = -50
+			}
+			random = {
+				chance = 25
+				organisation = +25
+				popularity = +25
+				any_owned = { revolt_risk = -10 }
+				national_unity = +75
+				dissent = -75
+			}
+			random = {
+				chance = 25
+				organisation = +35
+				popularity = +35
+				any_owned = { revolt_risk = -15 }
+				national_unity = +100
+				dissent = -100
+			}
+		
+	  }
+	}
+	
+country_event = {
+
+
+	id = 700050
+	
+	title = "Que la historia nos juzgue con benevolencia"
+	desc = ""
+	picture = "ANARKIA-2"
+
+	is_triggered_only = yes
+
+	option = {
+    name = "Autocracia"	
+	ai_chance = { factor = 100 }	
+	add_country_modifier = {
+		name = "capital2"				
+		duration = 30
+			}					
+		dissent = -50
+		national_unity = 25
+
+			fascistic_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			paternal_autocrat_idolg = {
+				organisation = 40
+				popularity = 40
+			}
+			communist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			maoist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			left_wing_radical_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_cons_idolg_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			market_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_democrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			government = authoritarian_gov			
+			do_election = THIS
+			start_election = this
+
+			random = {
+				chance = 25
+				organisation = +5
+				popularity = +5
+				any_owned = { revolt_risk = -3 }
+				national_unity = +25
+				dissent = -25
+			}
+			random = {
+				chance = 25
+				organisation = +15
+				popularity = +15
+				any_owned = { revolt_risk = -5 }
+				national_unity = +50
+				dissent = -50
+			}
+			random = {
+				chance = 25
+				organisation = +25
+				popularity = +25
+				any_owned = { revolt_risk = -10 }
+				national_unity = +75
+				dissent = -75
+			}
+			random = {
+				chance = 25
+				organisation = +35
+				popularity = +35
+				any_owned = { revolt_risk = -15 }
+				national_unity = +100
+				dissent = -100
+			}
+			
+		
+	}
+}
+
+country_event = {
+
+
+	id = 700051
+	
+	title = "Que la historia nos juzgue con benevolencia"
+	desc = ""
+	picture = "ANARKIA-2"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Comunismo"	
+		ai_chance = { factor = 100 }	
+	add_country_modifier = {
+		name = "capital2"				
+		duration = 30
+			}		
+		dissent = -50
+		national_unity = 25
+		
+			fascistic_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			paternal_autocrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			communist_idolg = {
+				organisation = 40
+				popularity = 40
+			}
+			maoist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			left_wing_radical_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_cons_idolg_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			market_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_democrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			government = totalitarian_gov			
+			do_election = THIS
+			start_election = this
+
+			random = {
+				chance = 25
+				organisation = +5
+				popularity = +5
+				any_owned = { revolt_risk = -3 }
+				national_unity = +25
+				dissent = -25
+			}
+			random = {
+				chance = 25
+				organisation = +15
+				popularity = +15
+				any_owned = { revolt_risk = -5 }
+				national_unity = +50
+				dissent = -50
+			}
+			random = {
+				chance = 25
+				organisation = +25
+				popularity = +25
+				any_owned = { revolt_risk = -10 }
+				national_unity = +75
+				dissent = -75
+			}
+			random = {
+				chance = 25
+				organisation = +35
+				popularity = +35
+				any_owned = { revolt_risk = -15 }
+				national_unity = +100
+				dissent = -100
+			}
+       
+		 
+		}
+	}
+ 	
+ country_event = {
+	
+	id = 700052
+	
+	title = "Que la historia nos juzgue con benevolencia"
+	desc = ""
+	picture = "ANARKIA-2"
+
+	is_triggered_only = yes
+
+	option = {	
+			name = "Social Conservador"	
+		ai_chance = { factor = 100 }
+	add_country_modifier = {
+		name = "capital2"				
+		duration = 30
+			}		
+		dissent = -50
+		national_unity = 25
+		
+			fascistic = {
+				organisation = -20
+				popularity = -20
+			}
+			paternal_autocrat = {
+				organisation = -20
+				popularity = -20
+			}
+			communist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			maoist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			left_wing_radical = {
+				organisation = -20
+				popularity = -20
+			}
+			social_liberal = {
+				organisation = -20
+				popularity = -20
+			}
+			social_cons_idolg = {
+				organisation = 40
+				popularity = 40
+			}
+			market_liberal = {
+				organisation = -20
+				popularity = -20
+			}
+			social_democrat= {
+				organisation = -20
+				popularity = -20
+			}
+			government = republic_gov			
+			do_election = THIS
+			start_election = this
+			
+			random = {
+				chance = 25
+				organisation = +5
+				popularity = +5
+				any_owned = { revolt_risk = -3 }
+				national_unity = +25
+				dissent = -25
+			}
+			random = {
+				chance = 25
+				organisation = +15
+				popularity = +15
+				any_owned = { revolt_risk = -5 }
+				national_unity = +50
+				dissent = -50
+			}
+			random = {
+				chance = 25
+				organisation = +25
+				popularity = +25
+				any_owned = { revolt_risk = -10 }
+				national_unity = +75
+				dissent = -75
+			}
+			random = {
+				chance = 25
+				organisation = +35
+				popularity = +35
+				any_owned = { revolt_risk = -15 }
+				national_unity = +100
+				dissent = -100
+			}
+		
+		
+	}
+}
+
+ country_event = {
+
+
+
+	id = 700053
+	
+	title = "Que la historia nos juzgue con benevolencia"
+	desc = ""
+	picture = "ANARKIA-2"
+
+	is_triggered_only = yes
+
+	option = {	
+		name = "Anarcocapitalismo"	
+		ai_chance = { factor = 100 }	
+	add_country_modifier = {
+		name = "capital2"				
+		duration = 30
+			}		
+		dissent = -50
+		national_unity = 25
+		
+			fascistic_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			paternal_autocrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			communist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			maoist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			left_wing_radical_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_cons_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			market_liberal_idolg = {
+				organisation = 40
+				popularity = 40
+			}
+			social_democrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			government = republic_gov		
+			do_election = THIS
+			start_election = this
+
+			random = {
+				chance = 25
+				organisation = +5
+				popularity = +5
+				any_owned = { revolt_risk = -3 }
+				national_unity = +25
+				dissent = -25
+			}
+			random = {
+				chance = 25
+				organisation = +15
+				popularity = +15
+				any_owned = { revolt_risk = -5 }
+				national_unity = +50
+				dissent = -50
+			}
+			random = {
+				chance = 25
+				organisation = +25
+				popularity = +25
+				any_owned = { revolt_risk = -10 }
+				national_unity = +75
+				dissent = -75
+			}
+			random = {
+				chance = 25
+				organisation = +35
+				popularity = +35
+				any_owned = { revolt_risk = -15 }
+				national_unity = +100
+				dissent = -100
+			}
+		
+		
+	 }
+	}
+	
+ country_event = {
+
+
+	id = 700054
+	
+	title = "Que la historia nos juzgue con benevolencia"
+	desc = ""
+	picture = "ANARKIA-2"
+
+	is_triggered_only = yes
+
+	option = {	
+		name = "Socialdemocracia"	
+		ai_chance = { factor = 100 }	
+	add_country_modifier = {
+		name = "capital2"				
+		duration = 30
+			}		
+		dissent = -50
+		national_unity = 25
+		
+			fascistic_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			paternal_autocrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			communist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			maoist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			left_wing_radical_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_cons_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			market_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_democrat_idolg = {
+				organisation = 40
+				popularity = 40
+			}
+			government = republic_gov			
+			do_election = THIS
+			start_election = this
+
+			random = {
+				chance = 25
+				organisation = +5
+				popularity = +5
+				any_owned = { revolt_risk = -3 }
+				national_unity = +25
+				dissent = -25
+			}
+			random = {
+				chance = 25
+				organisation = +15
+				popularity = +15
+				any_owned = { revolt_risk = -5 }
+				national_unity = +50
+				dissent = -50
+			}
+			random = {
+				chance = 25
+				organisation = +25
+				popularity = +25
+				any_owned = { revolt_risk = -10 }
+				national_unity = +75
+				dissent = -75
+			}
+			random = {
+				chance = 25
+				organisation = +35
+				popularity = +35
+				any_owned = { revolt_risk = -15 }
+				national_unity = +100
+				dissent = -100
+			}
+
+		
+
+    }
+  }
+
+	
+ country_event = {
+
+
+	id = 700081
+	
+	title = "Que la historia nos juzgue con benevolencia"
+	desc = ""
+	picture = "ANARKIA-2"
+
+	is_triggered_only = yes
+
+	option = {	
+		name = "Teocracia"	
+		ai_chance = { factor = 100 }	
+	add_country_modifier = {
+		name = "capital2"				
+		duration = 30
+			}		
+		dissent = -50
+		national_unity = 25
+		
+			fascistic_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			paternal_autocrat_idolg = {
+				organisation = 40
+				popularity = 40
+			}
+			communist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			maoist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			left_wing_radical_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_cons_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			market_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_democrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			government = theocracy_gov			
+			do_election = THIS
+			start_election = this
+
+			random = {
+				chance = 25
+				organisation = +5
+				popularity = +5
+				any_owned = { revolt_risk = -3 }
+				national_unity = +25
+				dissent = -25
+			}
+			random = {
+				chance = 25
+				organisation = +15
+				popularity = +15
+				any_owned = { revolt_risk = -5 }
+				national_unity = +50
+				dissent = -50
+			}
+			random = {
+				chance = 25
+				organisation = +25
+				popularity = +25
+				any_owned = { revolt_risk = -10 }
+				national_unity = +75
+				dissent = -75
+			}
+			random = {
+				chance = 25
+				organisation = +35
+				popularity = +35
+				any_owned = { revolt_risk = -15 }
+				national_unity = +100
+				dissent = -100
+			}
+
+		
+
+    }
+  }
+
+ 	
+ country_event = {
+
+
+	id = 700082
+	
+	title = "Que la historia nos juzgue con benevolencia"
+	desc = ""
+	picture = "ANARKIA-2"
+
+	is_triggered_only = yes
+
+	option = {	
+		name = "Monarquía absoluta"	
+		ai_chance = { factor = 100 }	
+	add_country_modifier = {
+		name = "capital2"				
+		duration = 30
+			}		
+		dissent = -50
+		national_unity = 25
+		
+			fascistic_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			paternal_autocrat_idolg = {
+				organisation = 40
+				popularity = 40
+			}
+			communist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			maoist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			left_wing_radical_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_cons_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			market_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_democrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			government = absolute_monarchy_gov			
+			do_election = THIS
+			start_election = this
+
+			random = {
+				chance = 25
+				organisation = +5
+				popularity = +5
+				any_owned = { revolt_risk = -3 }
+				national_unity = +25
+				dissent = -25
+			}
+			random = {
+				chance = 25
+				organisation = +15
+				popularity = +15
+				any_owned = { revolt_risk = -5 }
+				national_unity = +50
+				dissent = -50
+			}
+			random = {
+				chance = 25
+				organisation = +25
+				popularity = +25
+				any_owned = { revolt_risk = -10 }
+				national_unity = +75
+				dissent = -75
+			}
+			random = {
+				chance = 25
+				organisation = +35
+				popularity = +35
+				any_owned = { revolt_risk = -15 }
+				national_unity = +100
+				dissent = -100
+			}
+
+	
+
+    }
+  }
+
+ 	
+ country_event = {
+
+
+	id = 700083
+	
+	title = "Que la historia nos juzgue con benevolencia"
+	desc = ""
+	picture = "ANARKIA-2"
+
+	is_triggered_only = yes
+
+	option = {	
+		name = "Monarquia Constitucional"	
+		ai_chance = { factor = 100 }	
+	add_country_modifier = {
+		name = "capital2"				
+		duration = 30
+			}		
+		dissent = -50
+		national_unity = 25
+		
+			fascistic_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			paternal_autocrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			communist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			maoist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			left_wing_radical_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_cons_idolg_idolg = {
+				organisation = 40
+				popularity = 40
+			}
+			market_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_democrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			government = constitutional_monarchy_gov			
+			do_election = THIS
+			start_election = this
+
+			random = {
+				chance = 25
+				organisation = +5
+				popularity = +5
+				any_owned = { revolt_risk = -3 }
+				national_unity = +25
+				dissent = -25
+			}
+			random = {
+				chance = 25
+				organisation = +15
+				popularity = +15
+				any_owned = { revolt_risk = -5 }
+				national_unity = +50
+				dissent = -50
+			}
+			random = {
+				chance = 25
+				organisation = +25
+				popularity = +25
+				any_owned = { revolt_risk = -10 }
+				national_unity = +75
+				dissent = -75
+			}
+			random = {
+				chance = 25
+				organisation = +35
+				popularity = +35
+				any_owned = { revolt_risk = -15 }
+				national_unity = +100
+				dissent = -100
+			}
+
+		
+
+    }
+  }
+
+  	
+ country_event = {
+
+
+	id = 700084
+	
+	title = "Que la historia nos juzgue con benevolencia"
+	desc = ""
+	picture = "ANARKIA-2"
+
+	is_triggered_only = yes
+
+	option = {	
+		name = "Republica Constitucional"	
+		ai_chance = { factor = 100 }	
+	add_country_modifier = {
+		name = "capital2"				
+		duration = 30
+			}		
+		dissent = -50
+		national_unity = 25
+		
+			fascistic_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			paternal_autocrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			communist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			maoist_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			left_wing_radical_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_liberal_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			social_cons_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			market_liberal_idolg = {
+				organisation = 40
+				popularity = 40
+			}
+			social_democrat_idolg = {
+				organisation = -20
+				popularity = -20
+			}
+			government = constitutional_republic_gov			
+			do_election = THIS
+			start_election = this
+
+			random = {
+				chance = 25
+				organisation = +5
+				popularity = +5
+				any_owned = { revolt_risk = -3 }
+				national_unity = +25
+				dissent = -25
+			}
+			random = {
+				chance = 25
+				organisation = +15
+				popularity = +15
+				any_owned = { revolt_risk = -5 }
+				national_unity = +50
+				dissent = -50
+			}
+			random = {
+				chance = 25
+				organisation = +25
+				popularity = +25
+				any_owned = { revolt_risk = -10 }
+				national_unity = +75
+				dissent = -75
+			}
+			random = {
+				chance = 25
+				organisation = +35
+				popularity = +35
+				any_owned = { revolt_risk = -15 }
+				national_unity = +100
+				dissent = -100
+			}
+
+
+	
+
+    }
+  }
+
+
+

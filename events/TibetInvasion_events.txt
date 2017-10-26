@@ -1,0 +1,1116 @@
+#TibetInvasion_events.txt
+#1950 Tibet Invasion
+
+#CHC:
+	#151101 - demand_tibet_CHC follow-up event - Whether to demand Tibet or not
+	#151102 - 338001 follow-up event - Tibet gave in to our demands
+	#151103 - 338001 follow-up event - Tibet refused our demands
+	#151104 - 338002 follow-up event - Tibet accepted the 17 point agreement - annex them.
+	#151105 - 338002 follow-up event - Tibet rejected the 17 point agreement - fight on!
+	#151106 - tibet_land_reform_CHC follow-up event - whether to go ahead with land reform
+	#151107 - intervene_tibet_CHI_CHC follow-up event - decide whether to intervene in rebellion in nationalist held Tibet
+	#151108 - Dalai Lama flees in response to fighting near Lhasa
+	#151109 - 151108 follow-up event - Dalai Lama flees to exile
+	#151110 - 151108 follow-up event - Dalai Lama dies while fleeing
+
+#CHI:
+	#152101 - demand_tibet_CHI follow-up event - Whether to demand Tibet or not
+	#152102 - 338003 follow-up event - Tibet gave in to our demands
+	#152103 - 338003 follow-up event - Tibet refused our demands
+	#152104 - 338004 follow-up event - Tibet accepted the 17 point agreement - annex them.
+	#152105 - 338004 follow-up event - Tibet rejected the 17 point agreement - fight on!
+	#152106 - tibet_land_reform_CHI follow-up event - whether to go ahead with land reform
+	#152107 - intervene_tibet_CHI_CHC follow-up event - decide whether to intervene in rebellion in communist held Tibet
+	#152108 - Dalai Lama flees in response to fighting near Lhasa
+	#152109 - 152108 follow-up event - Dalai Lama flees to exile
+	#152110 - 152108 follow-up event - Dalai Lama dies while fleeing
+#IND:
+	#218001 - intervene_tibet_CHC_IND follow-up event - decide whether to intervene in rebellion in communist held Tibet
+	#218002 - intervene_tibet_CHI_IND follow-up event - decide whether to intervene in rebellion in nationalist held Tibet
+	#218003 - 151109 follow-up event - decide whether to allow Dalai Lama to for GIE from communists in India
+	#218004 - 152109 follow-up event - decide whether to allow Dalai Lama to for GIE from nationalists in India
+#SOV:
+	#326101 - intervene_tibet_CHC_SOV follow-up event - decide whether to intervene in rebellion in communist held Tibet
+	#326102 - intervene_tibet_CHI_SOV follow-up event - decide whether to intervene in rebellion in nationalist held Tibet
+#TIB:
+	#338001 - 151101 follow-up event - Whether to give in to CHC demand
+	#338002 - seventeen_point_CHC follow-up event - Whether to sign the agreement and be annexed
+	#338003 - 152101 follow-up event - Whether to give in to CHI demand
+	#338004 - seventeen_point_CHI follow-up event - Whether to sign the agreement and be annexed
+#USA:
+	#354001 - intervene_tibet_CHC_USA follow-up event - decide whether to intervene in rebellion in communist held Tibet
+	#354002 - intervene_tibet_CHI_USA follow-up event - decide whether to intervene in rebellion in nationalist held Tibet
+	
+
+## CHC ##
+country_event = {
+	
+	id = 151101			#demand_tibet_CHC follow-up event - Whether to demand Tibet or not
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151101"
+	desc = "EVTDESC151101"
+	picture = "1950_Tibet"
+
+	option = {
+		name = "EVTOPTA151101"			    				
+		ai_chance = { factor = 100 }
+		dissent = 2			
+		relation = { who = XUN value = -10 }
+		TIB = { country_event = 338001 }
+	}
+	
+	option = {
+		name = "EVTOPTB151101"								
+		ai_chance = { factor = 0 }
+		any_owned = { limit = { is_core = TIB } remove_core = CHC }
+	}
+}
+country_event = {
+	
+	id = 151102			#338001 follow-up event - Tibet gave in to our demands
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151102"
+	desc = "EVTDESC151102"
+	picture = "1951_Tibet_17_point_agreement"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA151102"			    				
+		ai_chance = { factor = 100 }
+		set_country_flag = seventeen_point
+		any_owned = { limit = { is_core = TIB } add_province_modifier = { name = pmod_tibetan_local_customs duration = -1 } }
+		any_owned = { limit = { is_core = TIB } revolt_risk = 7 }
+	}
+}
+country_event = {
+	
+	id = 151103			#338001 follow-up event - Tibet refused our demands
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151103"
+	desc = "EVTDESC151103"
+	picture = "1950_Tibet"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA151103"			    				
+		ai_chance = { factor = 90 }		
+		limited_war = TIB #temporary until proper war goal system in place
+		#war = {
+		#	target = TIB
+		#	attacker_goal = { casus_belli = conquer }	# War goal of annexation 
+		#} 
+	}
+	option = {
+		name = "EVTOPTB151103"			    				
+		ai_chance = { factor = 10 }
+		dissent = 5
+	}
+}
+country_event = {
+	
+	id = 151104			#338002 follow-up event - Tibet accepted 17 points
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151104"
+	desc = "EVTDESC151104"
+	picture = "1951_Tibet_17_point_agreement"
+
+	option = {
+		name = "EVTOPTA151104"			    				
+		ai_chance = { factor = 100 }
+		any_owned = { limit = { is_core = TIB } add_province_modifier = { name = pmod_tibetan_local_customs duration = -1 } }
+		any_owned = { limit = { is_core = TIB } revolt_risk = 5 }
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		dissent = 5
+	}
+}
+country_event = {
+	
+	id = 151105			#338002 follow-up event - Tibet rejected 17 points
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151105"
+	desc = "EVTDESC151105"
+	picture = "1950_Tibet"
+
+	option = {
+		name = "EVTOPTA151105"			    				
+		ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	
+	id = 151106			#tibet_land_reform_CHC follow-up event - whether to go ahead with land reform
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151106"
+	desc = "EVTDESC151106"
+	picture = "1959_Tibet_Land_reform"
+
+	option = {
+		name = "EVTOPTA151106"			    				
+		ai_chance = { factor = 90 }
+		any_owned = { limit = { is_core = TIB } remove_province_modifier = pmod_tibetan_local_customs  }
+		any_owned = { limit = { is_core = TIB } revolt_risk = 3 }
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		dissent = 5
+	}
+	option = {
+		name = "EVTOPTB151106"			    				
+		ai_chance = { factor = 10 }
+		any_owned = { limit = { is_core = TIB } remove_province_modifier = pmod_tibetan_local_customs  }
+		any_owned = { limit = { is_core = TIB } revolt_risk = 3 }
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		dissent = 5
+	}
+}
+country_event = {
+	
+	id = 151107			#intervene_tibet_CHI_CHC follow-up event - decide whether to intervene in rebellion in nationalist held Tibet
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151107"
+	desc = "EVTDESC151107"
+	picture = "1958_Chushi_Defend_Tibet_Volunteer"
+
+	option = {
+		name = "EVTOPTA151107"			    				
+		ai_chance = { factor = 90 }
+		CHI = { any_owned = { limit = { is_core = TIB } revolt_risk = 2 } }
+		CHI = {
+			random_owned = {
+				limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+				add_province_modifier = { name = tibetan_rebels duration = 800 } 
+			}
+		}
+		supplies = -200
+		relation = { who = CHI value = -50 }
+	}
+	
+	option = {
+		name = "EVTOPTB151107"								
+		ai_chance = { factor = 10 }
+		relation = { who = CHI value = 10 }
+	}
+}
+country_event = {
+	
+	id = 151108			#Flight of the Dalai Lama in response to rebellion close to Lhasa
+
+	trigger = {
+		tag = CHC
+		has_country_flag = seventeen_point
+		not = { has_global_flag = dalai_lama_exile }
+		11313 = { controlled_by = REB }
+		11314 = { controlled_by = REB }
+		11366 = { controlled_by = REB }
+		11365 = { controlled_by = REB }
+		11312 = { controlled_by = REB }
+		11258 = { controlled_by = REB }
+		11259 = { controlled_by = REB }
+		11260 = { controlled_by = REB }
+		11261 = { controlled_by = REB }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	title = "EVTNAME151108"
+	desc = "EVTDESC151108"
+	picture = "1959_Dalailama_flees"
+
+	option = {
+		name = "EVTOPTA151108"			    				
+		ai_chance = { factor = 100 }
+		set_global_flag = dalai_lama_exile
+		random_list = { 60 = { country_event = 151109 } 40 = { country_event = 151110 } }
+	}
+}
+country_event = {
+	
+	id = 151109			#151108 follow-up event - Dalai Lama escapes
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151109"
+	desc = "EVTDESC151109"
+	picture = "1959_Dalailama_flees"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA151109"			    				
+		ai_chance = { factor = 100 }
+		any_owned = { limit = { is_core = TIB } revolt_risk = 5 }
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		IND = { country_event = 218003 }
+	}
+}
+country_event = {
+	
+	id = 151110			#151108 follow-up event - Dalai Lama dies
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151110"
+	desc = "EVTDESC151110"
+	picture = "1959_Tibet_cremation"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA151110"			    				
+		ai_chance = { factor = 100 }
+		any_owned = { limit = { is_core = TIB } revolt_risk = 15 }
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		TIB = { kill_leader = 1338000 }
+	}
+}
+
+
+
+## CHI ##
+country_event = {
+	
+	id = 152101			#demand_tibet_CHI follow-up event - Whether to demand Tibet or not
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152101"
+	desc = "EVTDESC152101"
+	picture = "1950_Tibet"
+
+	option = {
+		name = "EVTOPTA152101"			    				
+		ai_chance = { factor = 100 }
+		dissent = 2			
+		relation = { who = XUN value = -10 }
+		TIB = { country_event = 338003 }
+	}
+	
+	option = {
+		name = "EVTOPTB152101"								
+		ai_chance = { factor = 0 }
+		any_owned = { limit = { is_core = TIB } remove_core = CHC }
+	}
+}
+country_event = {
+	
+	id = 152102			#338003 follow-up event - Tibet gave in to our demands
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152102"
+	desc = "EVTDESC152102"
+	picture = "1951_Tibet_17_point_agreement"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA152102"			    				
+		ai_chance = { factor = 100 }
+		set_country_flag = seventeen_point
+		any_owned = { limit = { is_core = TIB } add_province_modifier = { name = pmod_tibetan_local_customs duration = -1 } }
+		any_owned = { limit = { is_core = TIB } revolt_risk = 7 }
+	}
+}
+country_event = {
+	
+	id = 152103			#338003 follow-up event - Tibet refused our demands
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152103"
+	desc = "EVTDESC152103"
+	picture = "1950_Tibet"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA152103"			    				
+		ai_chance = { factor = 90 }		
+		limited_war = TIB #temporary until proper war goal system in place
+		#war = {
+		#	target = TIB
+		#	attacker_goal = { casus_belli = conquer }	# War goal of annexation 
+		#} 
+	}
+	option = {
+		name = "EVTOPTB152103"			    				
+		ai_chance = { factor = 10 }
+		dissent = 5
+	}
+}
+country_event = {
+	
+	id = 152104			#338004 follow-up event - Tibet accepted 17 points
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152104"
+	desc = "EVTDESC152104"
+	picture = "1951_Tibet_17_point_agreement"
+
+	option = {
+		name = "EVTOPTA152104"			    				
+		ai_chance = { factor = 100 }
+		any_owned = { limit = { is_core = TIB } add_province_modifier = { name = pmod_tibetan_local_customs duration = -1 } }
+		any_owned = { limit = { is_core = TIB } revolt_risk = 5 }
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		dissent = 5
+	}
+}
+country_event = {
+	
+	id = 152105			#338004 follow-up event - Tibet rejected 17 points
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152105"
+	desc = "EVTDESC152105"
+	picture = "1950_Tibet"
+
+	option = {
+		name = "EVTOPTA152105"			    				
+		ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	
+	id = 152106			#tibet_land_reform_CHI follow-up event - whether to go ahead with land reform
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152106"
+	desc = "EVTDESC152106"
+	picture = "1959_Tibet_Land_reform"
+
+	option = {
+		name = "EVTOPTA152106"			    				
+		ai_chance = { factor = 90 }
+		any_owned = { limit = { is_core = TIB } remove_province_modifier = pmod_tibetan_local_customs  }
+		any_owned = { limit = { is_core = TIB } revolt_risk = 3 }
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		dissent = 5
+	}
+	option = {
+		name = "EVTOPTB152106"			    				
+		ai_chance = { factor = 10 }
+		any_owned = { limit = { is_core = TIB } remove_province_modifier = pmod_tibetan_local_customs  }
+		any_owned = { limit = { is_core = TIB } revolt_risk = 3 }
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		dissent = 5
+	}
+}
+country_event = {
+	
+	id = 152107			#intervene_tibet_CHC_CHI follow-up event - decide whether to intervene in rebellion in nationalist held Tibet
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152107"
+	desc = "EVTDESC152107"
+	picture = "1959_Tibetan_uprising_9thmay"
+
+	option = {
+		name = "EVTOPTA152107"			    				
+		ai_chance = { factor = 90 }
+		CHC = { any_owned = { limit = { is_core = TIB } revolt_risk = 2 } }
+		CHC = {
+			random_owned = {
+				limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+				add_province_modifier = { name = tibetan_rebels duration = 800 } 
+			}
+		}
+		supplies = -200
+		relation = { who = CHC value = -50 }
+	}
+	
+	option = {
+		name = "EVTOPTB152107"								
+		ai_chance = { factor = 10 }
+		relation = { who = CHC value = 10 }
+	}
+}
+country_event = {
+	
+	id = 152108			#Flight of the Dalai Lama in response to rebellion close to Lhasa
+
+	trigger = {
+		tag = CHI
+		has_country_flag = seventeen_point
+		not = { has_global_flag = dalai_lama_exile }
+		11313 = { controlled_by = REB }
+		11314 = { controlled_by = REB }
+		11366 = { controlled_by = REB }
+		11365 = { controlled_by = REB }
+		11312 = { controlled_by = REB }
+		11258 = { controlled_by = REB }
+		11259 = { controlled_by = REB }
+		11260 = { controlled_by = REB }
+		11261 = { controlled_by = REB }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	title = "EVTNAME152108"
+	desc = "EVTDESC152108"
+	picture = "1959_Dalailama_flees"
+
+	option = {
+		name = "EVTOPTA152108"			    				
+		ai_chance = { factor = 100 }
+		set_global_flag = dalai_lama_exile
+		random_list = { 60 = { country_event = 152109 } 40 = { country_event = 152110 } }
+	}
+}
+country_event = {
+	
+	id = 152109			#152108 follow-up event - Dalai Lama escapes
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152109"
+	desc = "EVTDESC152109"
+	picture = "1959_Dalailama_flees"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA152109"			    				
+		ai_chance = { factor = 100 }
+		any_owned = { limit = { is_core = TIB } revolt_risk = 5 }
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		IND = { country_event = 218004 }
+	}
+}
+country_event = {
+	
+	id = 152110			#152108 follow-up event - Dalai Lama dies
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152110"
+	desc = "EVTDESC152110"
+	picture = "1959_Tibet_cremation"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA152110"			    				
+		ai_chance = { factor = 100 }
+		any_owned = { limit = { is_core = TIB } revolt_risk = 15 }
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		random_owned = {
+			limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+			add_province_modifier = { name = tibetan_rebels duration = 800 } 
+		}
+		TIB = { kill_leader = 1338000 }
+	}
+}
+## IND ##
+country_event = {
+	
+	id = 218001			#intervene_tibet_CHC_IND follow-up event - decide whether to intervene in rebellion in communist held Tibet
+
+	is_triggered_only = yes
+
+	title = "EVTNAME218001"
+	desc = "EVTDESC218001"
+	picture = "1950_Tibet"
+
+	option = {
+		name = "EVTOPTA218001"			    				
+		ai_chance = { factor = 10 }
+		CHC = { any_owned = { limit = { is_core = TIB } revolt_risk = 2 } }
+		CHC = {
+			random_owned = {
+				limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+				add_province_modifier = { name = tibetan_rebels duration = 800 } 
+			}
+		}
+		supplies = -200
+		relation = { who = CHC value = -50 }
+	}
+	
+	option = {
+		name = "EVTOPTB218001"								
+		ai_chance = { factor = 90 }
+		relation = { who = CHC value = 20 }
+	}
+}
+country_event = {
+	
+	id = 218002			#intervene_tibet_CHI_IND follow-up event - decide whether to intervene in rebellion in communist held Tibet
+
+	is_triggered_only = yes
+
+	title = "EVTNAME218002"
+	desc = "EVTDESC218002"
+	picture = "1950_Tibet"
+
+	option = {
+		name = "EVTOPTA218002"			    				
+		ai_chance = { factor = 10 }
+		CHI = { any_owned = { limit = { is_core = TIB } revolt_risk = 2 } }
+		CHI = {
+			random_owned = {
+				limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+				add_province_modifier = { name = tibetan_rebels duration = 800 } 
+			}
+		}
+		supplies = -200
+		relation = { who = CHI value = -50 }
+	}
+	
+	option = {
+		name = "EVTOPTB218002"								
+		ai_chance = { factor = 90 }
+		relation = { who = CHI value = 20 }
+	}
+}
+country_event = {
+	
+	id = 218003			#151109 follow-up event - decide whether to allow Dalai Lama to for GIE from communists in India
+
+	is_triggered_only = yes
+
+	title = "EVTNAME218003"
+	desc = "EVTDESC218003"
+	picture = "1959_Dalailama_flees"
+
+	option = {
+		name = "EVTOPTA218003"			    				
+		ai_chance = { factor = 90 }
+		relation = { who = CHC value = -50 }
+		relation = { who = USA value = 30 }
+		relation = { who = XUN value = 30 }
+	}
+	
+	option = {
+		name = "EVTOPTB218003"								
+		ai_chance = { factor = 90 }
+		relation = { who = CHC value = 20 }
+		relation = { who = USA value = -20 }
+		relation = { who = XUN value = -20 }
+	}
+}
+country_event = {
+	
+	id = 218004			#152109 follow-up event - decide whether to allow Dalai Lama to for GIE from nationalists in India
+
+	is_triggered_only = yes
+
+	title = "EVTNAME218004"
+	desc = "EVTDESC218004"
+	picture = "1959_Dalailama_flees"
+
+	option = {
+		name = "EVTOPTA218004"			    				
+		ai_chance = { factor = 90 }
+		relation = { who = CHI value = -50 }
+		relation = { who = USA value = 30 }
+		relation = { who = XUN value = 30 }
+	}
+	
+	option = {
+		name = "EVTOPTB218003"								
+		ai_chance = { factor = 90 }
+		relation = { who = CHI value = 20 }
+		relation = { who = USA value = -20 }
+		relation = { who = XUN value = -20 }
+	}
+}
+
+## SOV ##
+country_event = {
+	
+	id = 326101			#intervene_tibet_CHC_SOV follow-up event - decide whether to intervene in rebellion in communist held Tibet
+
+	is_triggered_only = yes
+
+	title = "EVTNAME326101"
+	desc = "EVTDESC326101"
+	picture = "1950_Tibet"
+
+	option = {
+		name = "EVTOPTA326101"			    				
+		ai_chance = { factor = 30 }
+		CHC = { any_owned = { limit = { is_core = TIB } revolt_risk = 2 } }
+		CHC = {
+			random_owned = {
+				limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+				add_province_modifier = { name = tibetan_rebels duration = 800 } 
+			}
+		}
+		supplies = -200
+		relation = { who = CHC value = -50 }
+	}
+	
+	option = {
+		name = "EVTOPTB326101"								
+		ai_chance = { factor = 70 }
+		relation = { who = CHC value = 20 }
+	}
+}
+country_event = {
+	
+	id = 326102			#intervene_tibet_CHI_SOV follow-up event - decide whether to intervene in rebellion in nationalist held Tibet
+
+	is_triggered_only = yes
+
+	title = "EVTNAME326102"
+	desc = "EVTDESC326102"
+	picture = "1950_Tibet"
+
+	option = {
+		name = "EVTOPTA326102"			    				
+		ai_chance = { factor = 80 }
+		CHI = { any_owned = { limit = { is_core = TIB } revolt_risk = 2 } }
+		CHI = {
+			random_owned = {
+				limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+				add_province_modifier = { name = tibetan_rebels duration = 800 } 
+			}
+		}
+		supplies = -200
+		relation = { who = CHI value = -50 }
+	}
+	
+	option = {
+		name = "EVTOPTB326102"								
+		ai_chance = { factor = 20 }
+		relation = { who = CHI value = 20 }
+	}
+}
+## TIB ##
+country_event = {
+	
+	id = 338001			#151101 follow-up event - Whether to give in to CHC demand of annexation
+
+	is_triggered_only = yes
+
+	title = "EVTNAME338001"
+	desc = "EVTDESC338001"
+	picture = "1950_Tibet_Qamdo_surrender"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA338001"			    				
+		ai_chance = { factor = 2 }
+		CHC = { inherit = TIB }
+		CHC = { country_event = 151102 }
+	}
+	
+	option = {
+		name = "EVTOPTB338001"								
+		ai_chance = { factor = 98 }
+		CHC = { country_event = 151103 }
+	}
+}
+country_event = {
+	
+	id = 338002			#seventeen_point_CHC follow-up event - Whether to sign the agreement and be annexed
+
+	is_triggered_only = yes
+
+	title = "EVTNAME338002"
+	desc = "EVTDESC338002"
+	picture = "1951_Tibet_17_point_agreement"
+
+	option = {
+		name = "EVTOPTA338002"			    				
+		ai_chance = { 
+			factor = 90
+			modifier = {
+				factor = 1.33
+				war_exhaustion = 5
+			}
+			modifier = {
+				factor = 1.33
+				war_exhaustion = 10
+			}
+			modifier = {
+				factor = 1.33
+				war_exhaustion = 15
+			}
+			modifier = {
+				factor = 1.33
+				war_exhaustion = 20
+			}
+			modifier = {
+				factor = 1.33
+				war_exhaustion = 25
+			}
+			modifier = {
+				factor = 1.33
+				lost_national = 0.3
+			}
+			modifier = {
+				factor = 1.33
+				lost_national = 0.4
+			}
+			modifier = {
+				factor = 1.5
+				lost_national = 0.5
+			}
+			modifier = {
+				factor = 3
+				lost_national = 0.75
+			}
+		}
+		CHC = { inherit = TIB }
+		CHC = { country_event = 151104 }
+	}
+	
+	option = {
+		name = "EVTOPTB338002"								
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 1.33
+				CHC = { war_exhaustion = 5 }
+			}
+			modifier = {
+				factor = 1.33
+				CHC = { war_exhaustion = 10 }
+			}
+			modifier = {
+				factor = 1.33
+				CHC = { war_exhaustion = 15 }
+			}
+			modifier = {
+				factor = 1.33
+				CHC = { war_exhaustion = 20 }
+			}
+			modifier = {
+				factor = 1.33
+				CHC = { war_exhaustion = 25 }
+			}
+			modifier = {
+				factor = 1.33
+				CHC = { lost_national = 0.05 }
+			}
+			modifier = {
+				factor = 1.33
+				CHC = { lost_national = 0.10 }
+			}
+			modifier = {
+				factor = 1.33
+				CHC = { lost_national = 0.15 }
+			}
+			modifier = {
+				factor = 1.5
+				any_neighbor_country = {
+					war_with = FROM
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					USA = { war_with = FROM }
+					FRA = { war_with = FROM }
+					SOV = { war_with = FROM }
+					ENG = { war_with = FROM }
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					CHI = { war_with = FROM }
+					IND = { war_with = FROM }
+					JAP = { war_with = FROM }
+				}
+			}
+		}
+		CHC = { country_event = 151105 }
+	}
+}
+country_event = {
+	
+	id = 338003			#152101 follow-up event - Whether to give in to CHI demand of annexation
+
+	is_triggered_only = yes
+
+	title = "EVTNAME338003"
+	desc = "EVTDESC338003"
+	picture = "1950_Tibet_Qamdo_surrender"
+
+	option = {
+		name = "EVTOPTA338003"			    				
+		ai_chance = { factor = 2 }
+		CHI = { inherit = TIB }
+		CHI = { country_event = 152102 }
+	}
+	
+	option = {
+		name = "EVTOPTB338003"								
+		ai_chance = { factor = 98 }
+		CHI = { country_event = 152103 }
+	}
+}
+country_event = {
+	
+	id = 338004			#seventeen_point_CHI follow-up event - Whether to sign the agreement and be annexed
+
+	is_triggered_only = yes
+
+	title = "EVTNAME338004"
+	desc = "EVTDESC338004"
+	picture = "1951_Tibet_17_point_agreement"
+
+	option = {
+		name = "EVTOPTA338004"				    				
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 1.33
+				war_exhaustion = 5
+			}
+			modifier = {
+				factor = 1.33
+				war_exhaustion = 10
+			}
+			modifier = {
+				factor = 1.33
+				war_exhaustion = 15
+			}
+			modifier = {
+				factor = 1.33
+				war_exhaustion = 20
+			}
+			modifier = {
+				factor = 1.33
+				war_exhaustion = 25
+			}
+			modifier = {
+				factor = 1.33
+				lost_national = 0.3
+			}
+			modifier = {
+				factor = 1.33
+				lost_national = 0.4
+			}
+			modifier = {
+				factor = 1.5
+				lost_national = 0.5
+			}
+			modifier = {
+				factor = 3
+				lost_national = 0.75
+			}
+		}
+		CHI = { inherit = TIB }
+		CHI = { country_event = 152104 }
+	}
+	
+	option = {
+		name = "EVTOPTB338004"						
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 1.33
+				CHI = { war_exhaustion = 5 }
+			}
+			modifier = {
+				factor = 1.33
+				CHI = { war_exhaustion = 10 }
+			}
+			modifier = {
+				factor = 1.33
+				CHI = { war_exhaustion = 15 }
+			}
+			modifier = {
+				factor = 1.33
+				CHI = { war_exhaustion = 20 }
+			}
+			modifier = {
+				factor = 1.33
+				CHI = { war_exhaustion = 25 }
+			}
+			modifier = {
+				factor = 1.33
+				CHI = { lost_national = 0.05 }
+			}
+			modifier = {
+				factor = 1.33
+				CHI = { lost_national = 0.10 }
+			}
+			modifier = {
+				factor = 1.33
+				CHI = { lost_national = 0.15 }
+			}
+			modifier = {
+				factor = 1.5
+				any_neighbor_country = {
+					war_with = FROM
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					USA = { war_with = FROM }
+					FRA = { war_with = FROM }
+					SOV = { war_with = FROM }
+					ENG = { war_with = FROM }
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					CHC = { war_with = FROM }
+					IND = { war_with = FROM }
+					JAP = { war_with = FROM }
+				}
+			}
+		}
+		CHI = { country_event = 152105 }
+	}
+}
+## USA ##
+country_event = {
+	
+	id = 354001			#intervene_tibet_CHC_USA follow-up event - decide whether to intervene in rebellion in communist held Tibet
+
+	is_triggered_only = yes
+
+	title = "EVTNAME354001"
+	desc = "EVTDESC354001"
+	picture = "1950_Tibet"
+
+	option = {
+		name = "EVTOPTA354001"			    				
+		ai_chance = { factor = 90 }
+		CHC = { any_owned = { limit = { is_core = TIB } revolt_risk = 2 } }
+		CHC = {
+			random_owned = {
+				limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+				add_province_modifier = { name = tibetan_rebels duration = 800 } 
+			}
+		}
+		supplies = -200
+		relation = { who = CHC value = -50 }
+	}
+	
+	option = {
+		name = "EVTOPTB354001"								
+		ai_chance = { factor = 10 }
+		relation = { who = CHC value = 20 }
+	}
+}
+country_event = {
+	
+	id = 354002			#intervene_tibet_CHI_USA follow-up event - decide whether to intervene in rebellion in nationalist held Tibet
+
+	is_triggered_only = yes
+
+	title = "EVTNAME354002"
+	desc = "EVTDESC354002"
+	picture = "1950_Tibet"
+
+	option = {
+		name = "EVTOPTA354002"			    				
+		ai_chance = { factor = 30 }
+		CHI = { any_owned = { limit = { is_core = TIB } revolt_risk = 2 } }
+		CHI = {
+			random_owned = {
+				limit = { is_core = TIB NOT = { has_province_modifier = tibetan_rebels } }
+				add_province_modifier = { name = tibetan_rebels duration = 800 } 
+			}
+		}
+		supplies = -200
+		relation = { who = CHI value = -50 }
+	}
+	
+	option = {
+		name = "EVTOPTB354002"								
+		ai_chance = { factor = 70 }
+		relation = { who = CHI value = 20 }
+	}
+}

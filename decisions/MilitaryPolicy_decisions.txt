@@ -1,0 +1,55 @@
+#GI Bill
+diplomatic_decisions = {
+	dec_Global_veterans_education = {
+	
+		category = national
+		picture = "military_training_results"
+		
+		potential = {
+			NOT = { has_country_modifier = mod_Global_veterans_education }
+			war_exhaustion = 3
+			national_unity = 25
+			OR = {
+				education_policy = high_funding_edu_pol
+				education_policy = medium_funding_edu_pol
+			}
+			NOT = {
+				military_policy = basic_combat_training_pol
+				military_policy = sustained_military_service_pol
+			}
+			NOT = { military_service = expanded_drafted_army }
+			NOT = { human_rights = not_recognized }
+		}
+		
+		allow = {
+			NOT = { lost_national = 0.25 }
+			national_unity = 60
+			popularity = 50
+			money = 1000
+			any_owned_province = {
+				has_special_building = university
+			}
+			any_owned_province = {
+				has_special_building = military_academy
+			}
+		}
+		
+		ai_will_do = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				economy_unbalanced = yes
+				NOT = { money = 10000 }
+			}
+		}
+		
+		effect = {	
+			war_exhaustion = -2
+			national_unity = 1
+			add_country_modifier = {
+				name = mod_Global_veterans_education
+				duration = -1
+			}
+		}
+	}
+}

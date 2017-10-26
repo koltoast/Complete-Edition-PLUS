@@ -1,0 +1,81 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+human_rights_agitation_timer;Human rights agitation;;;;;;;;;;;;;x
+human_rights_dissent;Human rights protests;;;;;;;;;;;;;x
+human_rights_reform_happiness;Reforms granted;;;;;;;;;;;;;x
+human_rights_trust;Trust in the state;;;;;;;;;;;;;x
+defecting_general_intel;Defected general;;;;;;;;;;;;;x
+preventing_migration;Exodus prevented;;;;;;;;;;;;;x
+brain_drain;Brain drain;;;;;;;;;;;;;x
+educated_immigrants;Educated immigrants;;;;;;;;;;;;;x
+migration_hotspot;Migration hotspot;;;;;;;;;;;;;x
+people_are_leaving;People are leaving;;;;;;;;;;;;;x
+border_migration_hr;Border exodus;;;;;;;;;;;;;x
+asylum_seekers;Asylum seekers;;;;;;;;;;;;;x
+forced_to_stay;Exodus prevented;;;;;;;;;;;;;x
+educated_immigrants;Educated immigrants;;;;;;;;;;;;;x
+EVTNAME52100;Human Rights Protests;;;;;;;;;;;;;
+EVTDESC52100;Due to heightened public awareness and press coverage, groups of human rights activists are have staged protests. They claim our government has an extended record of trampling the human rights of the $COUNTRY_ADJ$ people and are calling for reforms. For now, they have garnered only limited publicity, but the issue could grow into a major problem for us if left unattended.;;;;;;;;;;;;;x
+EVTOPTA52100;OK;;;;;;;;;;;;;
+EVTNAME52101;Protesters Getting Restless;;;;;;;;;;;;;
+EVTDESC52101;The human rights protests against our government are growing in number. People are getting angry about our ongoing track record of abuses and our government's seeming disinterest to implement reforms. Some extreme elements are now openly calling for a violent protests.;;;;;;;;;;;;;x
+EVTOPTA52101;This is getting out of hand...;;;;;;;;;;;;;
+EVTNAME52102;Human Rights Protesters Happy;;;;;;;;;;;;;
+EVTDESC52102;Various public statements were issued today concerning our efforts to curb human rights abuse. The $COUNTRY_ADJ$ people are happy about our efforts to recognize and support human rights in our nation. It seems our efforts have placated the people. Amidst widespread approval for our reforms, the protest movement is dissolving.;;;;;;;;;;;;;
+EVTOPTA52102;OK;;;;;;;;;;;;;
+EVTNAME52103;Excellent Human Rights Record;;;;;;;;;;;;;
+EVTDESC52103;Despite any substantive oversight, a number of civic organizations have noted our superior concern for the human rights of the $COUNTRY_ADJ$ people. Our excellent human rights record, without any need for extensive oversight, has helped us garner the good faith and trust of our people.;;;;;;;;;;;;;
+EVTOPTA52103;Great;;;;;;;;;;;;;
+EVTNAME52104;One Of Our Generals Defects;;;;;;;;;;;;;
+EVTDESC52104;One of our generals has gone missing. His disappearance coincides with the theft of highly sensitive dossier of classified military documents. It is believed he defected to a neighbouring country, apparently in protest against our poor human rights record.;;;;;;;;;;;;;
+EVTOPTA52104;Curses!;;;;;;;;;;;;;
+EVTNAME52105;General From $FROMCOUNTRY$ Defects To Us;;;;;;;;;;;;;
+EVTDESC52105;A general from $FROMCOUNTRY$ has defected to us and wants us to denounce $FROMCOUNTRY$ for their tyranny and human rights violations against their people. We can facilitate a press conference and allow him speak out against his former nation, or we could quietly debrief him to learn key intelligence then grant him asylum, Alternatively, we can send him back to $FROMCOUNTRY$ to avoid trouble.;;;;;;;;;;;;;
+EVTOPTA52105;Call the press and let him speak;;;;;;;;;;;;;
+EVTOPTB52105;Grant him asylum if he becomes our informant;;;;;;;;;;;;;
+EVTOPTC52105;Send him back to $FROMCOUNTRY$;;;;;;;;;;;;;
+EVTNAME52106;Our Defecting General Denounces Us;;;;;;;;;;;;;
+EVTDESC52106;A low-ranking general has denounced our administration for human rights abuses and defected to $FROMCOUNTRY$. Adding insult to injury, $FROMCOUNTRY$ has granted him media access and allowed him to speak against us. In interviews with their most prominent newspapers and broadcast channels, he is denouncing our 'tyranny' and claiming that our government is backwards and corrupt.;;;;;;;;;;;;;
+EVTOPTA52106;Damn them all!;;;;;;;;;;;;;
+EVTNAME52107;Defected General Is In $FROMCOUNTRY$;;;;;;;;;;;;;
+EVTDESC52107;After some inter-agency enquiries by our intelligence service, we are now reasonably certain our defected general is in $FROMCOUNTRY$. Key agencies suspect he is most likely working for $FROMCOUNTRY$ assisting their intelligence agencies in their work against us. If he is, it would seriously undermine our counter-espionage efforts. Should we demand his extradition?;;;;;;;;;;;;;
+EVTOPTA52107;Demand his extradition;;;;;;;;;;;;;
+EVTOPTB52107;Let them have him;;;;;;;;;;;;;
+EVTNAME52108;$FROMCOUNTRY$ Demands Extradition;;;;;;;;;;;;;
+EVTDESC52108;A diplomatic attache from $FROMCOUNTRY$ has contacted our embassy demanding we extradite their general who defected to us. It would be a death sentence for him, but could put us on better terms with $FROMCOUNTRY$ and pre-empty any repercussions with them in the future.;;;;;;;;;;;;;
+EVTOPTA52108;Extradite him;;;;;;;;;;;;;
+EVTOPTB52108;Decline;;;;;;;;;;;;;
+EVTNAME52109;$FROMCOUNTRY$ Agrees To Return Our General;;;;;;;;;;;;;
+EVTDESC52109;In a communique received today from the ambassador of $FROMCOUNTRY$, the government of $FROMCOUNTRY$ has agreed to return our defecting general. Now we can deal with the traitor in our own way...;;;;;;;;;;;;;
+EVTOPTA52109;Thank you;;;;;;;;;;;;;
+EVTNAME52110;$FROMCOUNTRY$ Refuses To Return Our General;;;;;;;;;;;;;
+EVTDESC52110;In a communique received today from the ambassador of $FROMCOUNTRY$, the government of $FROMCOUNTRY$ refuses to return our defecting general. Their ambassador pontificated about moral responsibility and our alleged disregard for human rights...;;;;;;;;;;;;;
+EVTOPTA52110;Damn them!;;;;;;;;;;;;;
+EVTNAME52111;Unable To Locate Defected General;;;;;;;;;;;;;
+EVTDESC52111;Despite the best efforts of our intelligence services, we are unable to locate our missing general. Despite our highest suspicions, our field agents have turned up no evidence that he is anywhere in $FROMCOUNTRY$. We are quite positive that he defected, but no solid lead has panned out as to where. It is as if he has disappeared from the face of the Earth.;;;;;;;;;;;;;
+EVTOPTA52111;Incompetent fools;;;;;;;;;;;;;
+EVTNAME52112;$FROMCOUNTRY$ Has Returned Our General;;;;;;;;;;;;;
+EVTDESC52112;Our field operatives have informed us that our missing general that attempted to defect to $FROMCOUNTRY$ has now been returned to our custody. The general foolishly miscalculated his own value, as $FROMCOUNTRY$ refused to grant him asylum, preferring to return him to us instead, perhaps in an effort to improve relations. Now we can deal with the traitor in our own way...;;;;;;;;;;;;;
+EVTOPTA52112;Thank you;;;;;;;;;;;;;
+EVTNAME52113;People In A Border Province Are Leaving Us;;;;;;;;;;;;;
+EVTDESC52113;Civil unrest in one of our border provinces has manifested itself in an exodus of our people. The malcontents are leaving us for a bordering state due to our government's disregard for human rights. Some advisors say we should consider ourselves fortunate to be rid of these traitors, while others urge us to take steps to fortify the border.;;;;;;;;;;;;;
+EVTOPTA52113;They are someone else's problem now;;;;;;;;;;;;;
+EVTOPTB52113;Prevent them from leaving;;;;;;;;;;;;;
+EVTNAME52114;Refugees From $FROMCOUNTRY$ Seek Asylum;;;;;;;;;;;;;
+EVTDESC52114;In the wake of civil unrest in a border province of $FROMCOUNTRY$, there has been a substantial influx of refugees seeking asylum. The refugees have fled from $FROMCOUNTRY$ because of the poor human rights situation there and wish to escape this tyranny by seeking asylum in our country.;;;;;;;;;;;;;
+EVTOPTA52114;Welcome them;;;;;;;;;;;;;
+EVTOPTB52114;Send them back;;;;;;;;;;;;;
+EVTNAME52115;Brain Drain;;;;;;;;;;;;;
+EVTDESC52115;"A recent field report notes that a significant portion of the $COUNTRY_ADJ$ educated elite are choosing to emigrate from our homeland. This ""Brain Drain"" seems to be a passive protest against our administration's poor track record when it comes to human rights.";;;;;;;;;;;;;
+EVTOPTA52115;Fine, we don't need them;;;;;;;;;;;;;
+EVTOPTB52115;No one gets out alive!;;;;;;;;;;;;;
+EVTNAME52116;The Educated Leave $FROMCOUNTRY$;;;;;;;;;;;;;
+EVTDESC52116;"A recent field report notes that a significant portion of the educated elite of $FROMCOUNTRY$ are choosing to emigrate from their homeland and many are arriving at our key international gateway cities. This ""Brain Drain"" seems to be a passive protest against the track record of $FROMCOUNTRY$ when it comes to human rights abuses and repression.";;;;;;;;;;;;;
+EVTOPTA52116;We can put them to good use here;;;;;;;;;;;;;
+EVTNAME52117;People Leaving For Humanitarian State;;;;;;;;;;;;;
+EVTDESC52117;A recent report from our census bureau indicates a significant portion of the $COUNTRY_ADJ$ populace are choosing to leave the country. The investigation cites our government's disregard for human rights is the impetus, as these people are leaving $COUNTRY$ for states that place a greater value on humanitarian concerns.;;;;;;;;;;;;;
+EVTOPTA52117;They are someone else's problem now;;;;;;;;;;;;;
+EVTOPTB52117;Prevent them from leaving;;;;;;;;;;;;;
+EVTNAME52118;Asylum Seekers From $FROMCOUNTRY$;;;;;;;;;;;;;
+EVTDESC52118;A recent report from our immigration bureau indicates a significant influx of refugees from the repressive regime of $FROMCOUNTRY$. These refugees are seeking asylum in our country because they are looking to live in a state that values human rights.;;;;;;;;;;;;;
+EVTOPTA52118;Welcome them;;;;;;;;;;;;;
+;;;;;;;;;;;;;;x

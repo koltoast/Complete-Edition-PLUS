@@ -1,0 +1,338 @@
+
+
+
+country_event = {               ###Principios de desestabilización por crisis interna
+	id = 700231
+
+	trigger = {	
+	        ai = yes
+            has_global_flag = CONTROLAL			
+			money = 1000
+           			            			               		
+	}
+	   
+   mean_time_to_happen = {
+		months = 2
+			modifier = {
+				factor = 1.1
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 1.1
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 1.1
+				domestic_policy = industrial_focus_pol
+			}
+			modifier = {
+				factor = 1.1
+				economic_policy = industrial_policy_pol
+			}
+			modifier = {
+				factor = 1.4
+				has_country_modifier = mod_Global_SP_funding_minimum  
+			}
+			modifier = {
+				factor = 0.4
+				has_country_modifier = mod_Global_SP_funding_moderate  
+			}
+			modifier = {
+				factor = 0.2
+				has_country_modifier = mod_Global_SP_funding_high 
+			}
+			modifier = {
+				factor = 1.8
+				has_country_modifier = no_mod_Global_SP_funding  
+			}
+		}
+
+	title = "EVTNAME700212"
+	desc = "EVTDESC700212"
+	picture = " "
+
+	option = {
+			name = "EVTOPTA700212"
+			ai_chance = { factor = 30 }
+     			
+		random = {
+				chance = 30
+			modifier = {
+				factor = 1.2							#
+				this = { is_org_member = XNA }
+				economy_rating_greater = 4
+				not = { money = 10000 }
+			 }	
+			 modifier = {
+				factor = 1.2							#
+				this = { is_org_member = XNA }
+
+			 }
+			modifier = {
+				factor = 1.1
+				this = { is_major = yes }
+			 }			 
+			modifier = {
+					factor = 0.5
+					economy_unbalanced = yes
+				}
+				modifier = {
+					factor = 0.25
+					NOT = { national_unity = 45 }
+				}
+				modifier = {
+					factor = 0.25
+					NOT = { national_unity = 35 }
+				}
+				modifier = {
+					factor = 0.25
+					NOT = { national_unity = 25 }
+				}
+				modifier = {
+					factor = 0.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.1
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 0.1
+					OR = {
+						national_identity = territorial_focus
+						national_identity = cultural_bias_focus
+					}
+				}
+				modifier = {
+					factor = 1.25
+					national_attitude = imperialism
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_attitude = colonialism
+						national_attitude = hegemony
+					}
+				}
+				 modifier = {
+					 factor = 1.25
+					 NOT = { relation = { who = XUN value = -50 } }
+				 }
+				 modifier = {
+					 factor = 1.25
+					 NOT = { relation = { who = XUN value = -150 } }
+				 }
+				modifier = {
+					factor = 0.8
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 0.1
+					NOT = { money = 10000 }
+				}
+				modifier = {
+					factor = 0.25
+					NOT = { money = 0 }
+				}	
+                modifier = {
+					factor = 1.25
+					economy_unbalanced = no
+				}
+				modifier = {
+					factor = 1.1
+					national_unity = 65
+				}
+				modifier = {
+					factor = 1.1
+					national_unity = 75
+				}
+				modifier = {
+					factor = 1.1
+					national_unity = 85
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						foreign_policy = dove_policy_pol
+						foreign_policy = detente_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.5
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = equality_focus
+						national_identity = civic_focus
+					}
+				}
+				 modifier = {
+					 factor = 1.25
+					 relation = { who = XUN value = 50 }
+				 }
+				 modifier = {
+					 factor = 1.25
+					 relation = { who = XUN value = 150 }
+				 }
+				modifier = {
+					factor = 1.25
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.25
+					is_org_leader = XAN
+				}
+				modifier = {
+					factor = 1.25
+					is_org_leader = XWP
+				}
+				modifier = {
+					factor = 1.5
+					money = 50000
+				}
+				modifier = {
+					factor = 1.5
+					money = 250000
+				}
+                 modifier = {
+					factor = 1.5
+					has_country_modifier = mod_Global_SP_funding_high
+				}	
+                modifier = {
+					factor = 1.3
+					has_country_modifier = mod_Global_SP_funding_moderate
+				}	
+				modifier = {
+					factor = 1.1
+					has_country_modifier = mod_Global_SP_funding_minimum
+				}
+				modifier = {
+					factor = 0.1
+					has_country_modifier = no_mod_Global_SP_funding
+				}
+				modifier = {
+					factor = 0.1
+					relation = { who = this value = 150 }
+				}
+		    random_country = { limit = { relation = { who = this value = 100 } money = 1000 }
+		        random_list = {
+					10 = { 
+						create_alliance = this
+						
+					}
+					20 = { 
+						relation = { who = this value = 10 }
+						
+					}
+					20 = { 
+						relation = { who = this value = -10 }
+						
+					}
+					10 = { 
+						guarantee = this
+						
+					}
+					10 = { military_access = this
+						
+					}
+					10 = { non_aggression_pact = this
+						
+					}
+					
+					10 = { recognize = this
+						
+					}
+					10 = { 
+						
+					}
+		        }
+							
+			}
+			
+		    any_neighbor_country = { limit = { relation = { who = this value = 100 } money = 1000 }
+		        random_list = {
+					10 = { 
+						create_alliance = this
+						
+					}
+					20 = { 
+						relation = { who = this value = 10 }
+						
+					}
+					20 = { 
+						relation = { who = this value = -10 }
+						
+					}
+					10 = { 
+						guarantee = this
+						
+					}
+					10 = { military_access = this
+						
+					}
+					10 = { non_aggression_pact = this
+						
+					}
+					
+					10 = { recognize = this
+						
+					}
+					10 = { 
+						
+					}					
+		        }
+							
+			} 
+						
+           			   
+		}	
+    		
+	    clr_global_flag = CONTROLAL					
+      }
+
+			
+    }				
+    
+
+country_event = {
+	id = 700232
+
+	trigger = {
+			ai = yes
+			not = { has_global_flag = CONTROLALIANZA }
+			not = { has_global_flag = CONTROLAL }			
+		}
+
+	mean_time_to_happen = { months = -1 }
+	option = {
+		set_global_flag = CONTROLALIANZA
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = 700233
+	trigger = {
+			ai = yes
+			has_global_flag = CONTROLALIANZA
+		}
+
+	mean_time_to_happen = { months = -1 }
+	option = {
+	ai_chance = { factor = 100 }
+		clr_global_flag = CONTROLALIANZA
+		set_global_flag = CONTROLAL		
+	}
+}
+
+

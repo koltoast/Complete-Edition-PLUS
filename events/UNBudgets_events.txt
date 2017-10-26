@@ -1,0 +1,932 @@
+#UNBudgets_events.txt
+#United Nations Budgets
+
+#UN Secretary General:
+	#9100 - UN Funding Round
+	#9102 - Disappointing Funding Result
+	#9103 - Satisfying Funding Result
+	#9104 - Impressive Funding Result
+	
+#UN Member States:
+	#9101 - UN Funding Decision - Triggered by event #9100
+
+
+## UN Secretary General ##
+	#9100 - UN Funding Round
+	country_event = {
+		
+		id = 9100
+		
+		trigger = {
+			is_org_leader = XUN
+			NOT = { has_global_flag = gflag_UN_setup_done }
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_funding_duration
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		title = "UN Funding Round"
+		desc = "The time has come once again to organise new funding commitments from the United Nations member states towards the organisation's ongoing operations. 
+		Let us hope they decide upon their commitments with knowledge of the UN's crucial role in mind."
+		picture = "1946_United_Nations_flag"
+		
+		option = {
+			name = "OK"
+			set_global_var = {
+				name = gvar_UN_funding_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = gvar_UN_funding_not_funded_count
+				value = 0
+			}
+			set_global_var = {
+				name = gvar_UN_funding_not_funded_count_all
+				value = 0
+			}
+			set_global_var = {
+				name = gvar_UN_funding_value
+				value = 0
+			}
+			set_global_var = {
+				name = gvar_UN_funding_minimum_funding_count
+				value = 0
+			}
+			set_global_var = {
+				name = gvar_UN_funding_moderate_funding_count
+				value = 0
+			}
+			set_global_var = {
+				name = gvar_UN_funding_high_funding_count
+				value = 0
+			}
+			set_global_var = {
+				name = gvar_UN_funding_overall_funding_balance
+				value = 0
+			}
+			any_country = {
+				limit = { is_org_member = XUN }
+				chg_global_var = {
+					name = gvar_UN_funding_not_funded_count_all
+					value = 1
+				}
+			}
+			any_country = {
+				limit = {
+					is_org_member = XUN 
+					NOT = { has_country_flag = "UN_EMBARGO" }
+					national_unity = 15
+				}
+				chg_global_var = {
+					name = gvar_UN_funding_member_count
+					value = 1
+				}
+				chg_global_var = {
+					name = gvar_UN_funding_not_funded_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_setup_done
+			any_country = {
+				limit = { 
+					is_org_member = XUN 
+					NOT = { has_country_flag = "UN_EMBARGO" }
+					national_unity = 15
+				}
+				country_event = 9101
+			}
+		}
+	}
+	
+	
+country_event = {
+		
+		id = 9101
+		
+		is_triggered_only = yes
+		
+		title = "UN Funding Decision"
+		desc = "The time has come once again to set our relative funding level towards the United Nations and the programmes it runs."
+		picture = "1946_United_Nations_flag"
+
+		option = {
+			name = "Minimal Funding"							#Minimum funding
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 1.5
+					economy_unbalanced = yes
+				}
+				modifier = {
+					factor = 1.25
+					NOT = { national_unity = 45 }
+				}
+				modifier = {
+					factor = 1.25
+					NOT = { national_unity = 35 }
+				}
+				modifier = {
+					factor = 1.25
+					NOT = { national_unity = 25 }
+				}
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.1
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = territorial_focus
+						national_identity = cultural_bias_focus
+					}
+				}
+				modifier = {
+					factor = 1.25
+					national_attitude = imperialism
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_attitude = colonialism
+						national_attitude = hegemony
+					}
+				}
+				 modifier = {
+					 factor = 1.25
+					 NOT = { relation = { who = XUN value = -50 } }
+				 }
+				 modifier = {
+					 factor = 1.25
+					 NOT = { relation = { who = XUN value = -150 } }
+				 }
+				modifier = {
+					factor = 0.8
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					NOT = { money = 10000 }
+				}
+				modifier = {
+					factor = 1.25
+					NOT = { money = 0 }
+				}
+			}
+			remove_country_modifier = mod_Global_UN_funding_minimum
+			remove_country_modifier = mod_Global_UN_funding_moderate
+			remove_country_modifier = mod_Global_UN_funding_high
+			add_country_modifier = {
+				name = mod_Global_UN_funding_minimum
+				duration = -1
+			}
+			chg_global_var = {
+				name = gvar_UN_funding_not_funded_count
+				value = -1
+			}
+			set_global_var = {
+				name = gvar_UN_funding_minimum_funding_count
+				value = 1
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 0
+						NOT = { economy_rating_greater = 1 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 7
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = -1
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 1
+						NOT = { economy_rating_greater = 2 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 17
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = -2.5
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 2
+						NOT = { economy_rating_greater = 3 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 30
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = -4.75
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 3
+						NOT = { economy_rating_greater = 4 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 55
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = -8.125
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 4
+						NOT = { economy_rating_greater = 5 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 90
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = -13
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 5
+						NOT = { economy_rating_greater = 6 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 140
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = -21
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 6
+						NOT = { economy_rating_greater = 7 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 215
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = -32
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 7
+						NOT = { economy_rating_greater = 8 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 330
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = -49
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 8
+						NOT = { economy_rating_greater = 9 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 500
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = -75
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 9
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 755
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = -113
+					}
+				}
+			}
+			relation = { who = XUN value = -10 }
+		}
+
+		option = {
+			name = "Moderate Funding"							#Moderate funding
+			ai_chance = {
+				factor = 70
+			}
+			add_country_modifier = {
+				name = mod_Global_UN_funding_moderate
+				duration = -1
+			}
+			chg_global_var = {
+				name = gvar_UN_funding_moderate_funding_count
+				value = 1
+			}
+			chg_global_var = {
+				name = gvar_UN_funding_not_funded_count
+				value = -1
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 0
+						NOT = { economy_rating_greater = 1 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 10
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 1
+						NOT = { economy_rating_greater = 2 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 25
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 2
+						NOT = { economy_rating_greater = 3 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 47.5
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 3
+						NOT = { economy_rating_greater = 4 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 81.25
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 4
+						NOT = { economy_rating_greater = 5 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 131.875
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 5
+						NOT = { economy_rating_greater = 6 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 207.813
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 6
+						NOT = { economy_rating_greater = 7 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 321.719
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 7
+						NOT = { economy_rating_greater = 8 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 492.578
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 8
+						NOT = { economy_rating_greater = 9 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 748.867
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 9
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 1133.301
+					}
+				}
+			}
+		}
+
+		option = {
+			name = "Elevated Funding"							#High funding
+			ai_chance = {
+				factor = 20
+				modifier = {
+					factor = 1.25
+					economy_unbalanced = no
+				}
+				modifier = {
+					factor = 1.1
+					national_unity = 65
+				}
+				modifier = {
+					factor = 1.1
+					national_unity = 75
+				}
+				modifier = {
+					factor = 1.1
+					national_unity = 85
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						foreign_policy = dove_policy_pol
+						foreign_policy = detente_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.5
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = equality_focus
+						national_identity = civic_focus
+					}
+				}
+				 modifier = {
+					 factor = 1.25
+					 relation = { who = XUN value = 50 }
+				 }
+				 modifier = {
+					 factor = 1.25
+					 relation = { who = XUN value = 150 }
+				 }
+				modifier = {
+					factor = 1.25
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					money = 50000
+				}
+				modifier = {
+					factor = 1.1
+					money = 250000
+				}
+			}
+			add_country_modifier = {
+				name = mod_Global_UN_funding_high
+				duration = -1
+			}
+			chg_global_var = {
+				name = gvar_UN_funding_not_funded_count
+				value = -1
+			}
+			set_global_var = {
+				name = gvar_UN_funding_high_funding_count
+				value = 1
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 0
+						NOT = { economy_rating_greater = 1 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 15
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = 1
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 1
+						NOT = { economy_rating_greater = 2 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 40
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = 2.5
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 2
+						NOT = { economy_rating_greater = 3 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 70
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = 4.75
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 3
+						NOT = { economy_rating_greater = 4 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 120
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = 8.125
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 4
+						NOT = { economy_rating_greater = 5 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 200
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = 13
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 5
+						NOT = { economy_rating_greater = 6 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 310
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = 21
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 6
+						NOT = { economy_rating_greater = 7 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 480
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = 32
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 7
+						NOT = { economy_rating_greater = 8 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 740
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = 49
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 8
+						NOT = { economy_rating_greater = 9 }
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 1125
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = 75
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						economy_rating_greater = 9
+					}
+				}
+				owner = {
+					chg_global_var = {
+						name = gvar_UN_funding_value
+						value = 1700
+					}
+					chg_global_var = {
+						name = gvar_UN_funding_overall_funding_balance
+						value = 113
+					}
+				}
+			}
+			relation = { who = XUN value = 10 }
+		}
+	}
+	
+	#9102 - Disappointing Funding Result
+	country_event = {
+		
+		id = 9102
+		
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_setup_done
+			 NOT = {
+				 has_global_var_gt = {
+					 name = gvar_UN_funding_not_funded_count
+					 value = 0
+				 }
+			 }
+			NOT = {
+				has_global_var_gt = {
+					name = gvar_UN_funding_overall_funding_balance
+					value = -29
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		title = "Disappointing Funding Result"
+		desc = "The results of our recent UN funding negotiations have been disappointing."
+		picture = "1946_United_Nations_flag"
+		
+		option = {
+			name = "Unfortunate"
+			clr_global_flag = gflag_UN_setup_done
+			USA = {
+				add_country_modifier = {
+					name = mod_UN_funding_duration
+					duration = 1095
+				}
+			}
+			XUN = { prestige_change = -50 }
+		}
+	}
+	
+	#9103 - Satisfying Funding Result
+	country_event = {
+		
+		id = 9103
+		
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_setup_done
+			 NOT = {
+				 has_global_var_gt = {
+					 name = gvar_UN_funding_not_funded_count
+					 value = 0
+				 }
+			 }
+			has_global_var_gt = {
+				name = gvar_UN_funding_overall_funding_balance
+				value = -10
+			}
+			NOT = {
+				has_global_var_gt = {
+					name = gvar_UN_funding_overall_funding_balance
+					value = 10
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		title = "Satisfying Funding Result"
+		desc = "The results of our recent UN funding negotiations have been satisfying."
+		picture = "1946_United_Nations_flag"
+		
+		option = {
+			name = "OK"
+			clr_global_flag = gflag_UN_setup_done
+			USA = {
+				add_country_modifier = {
+					name = mod_UN_funding_duration
+					duration = 1095
+				}
+			}
+			XUN = { prestige_change = 10 }
+		}
+	}
+	
+	#9104 - Impressive Funding Result
+	country_event = {
+		
+		id = 9104
+		
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_setup_done
+			 NOT = {
+				 has_global_var_gt = {
+					 name = gvar_UN_funding_not_funded_count
+					 value = 0
+				 }
+			 }
+			has_global_var_gt = {
+				name = gvar_UN_funding_overall_funding_balance
+				value = 29
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		title = "Impressive Funding Result"
+		desc = "The results of our recent UN funding negotiations have been impressive."
+		picture = "Excellent"
+		
+		option = {
+			name = "EVTOPTA9104"
+			clr_global_flag = gflag_UN_setup_done
+			USA = {
+				add_country_modifier = {
+					name = mod_UN_funding_duration
+					duration = 1095
+				}
+			}
+			XUN = { prestige_change = 75 }
+		}
+	}
+	

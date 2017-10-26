@@ -1,0 +1,1067 @@
+#IranIraqWar_events.txt
+#1980 Iran-Iraq War
+
+#IRQ - Iraq:
+	#221100 - Iran-Iraq Begins
+	#221101 - Financial Support for Iraq from Kuwait
+	#221102 - Financial Support for Iraq from Saudi Arabia	
+	#221103 - Support for Iraq from USA	
+	#221104 - Support for Iraq from France
+	#221106 - Support for Iraq from USSR
+	#221105 - Support for Iraq from West Germany
+	#221107 - Iraq Informed to Iranian Naval Blockade decision
+	#221108 - Iraqi Military Crisis Event - Saddam purges his generals for losing battles
+	#221109 - Iraqi political event
+	#221110 - Iraqi oil crisis
+	
+#PER - Iran:
+	#286107 - Iranian Kurd revolts
+	#286108 - Support for Iran from China
+	#286109 - Iran responds to Iraqi ceasefire Proposal
+	#286110 - Iran Informed to Iraqi Tanker war decision
+	#286111 - Iranian Political Crisis Event 
+	#286112 - Iranian airforce purge Event
+	#286113 - Iranian Military Crisis Event
+	#286114 - Iran Responds to Op Earnest Will event
+	#286115 - Iran Responds to Op Nimble Archer event
+	#286116 - Iran Responds to Op Praying Mantis event
+	#286117 - Iranian Military Crisis II Event
+	#286118 - War End event
+	
+#USA - USA:
+	#354400 - USS Stark event
+	#354401 - Operation Earnest Will event
+	#354402 - Operation Nimble Archer event
+	#354403 - Operation Praying Mantis event
+
+
+## IRQ ##
+	#0 - Iran-Iraq Begins
+	country_event = {
+
+		id = 221100
+
+		trigger = {
+			ai = yes
+			tag = IRQ
+			NOT = { has_global_flag = IraqIran_war }
+			#has_country_flag = algiers_agreement  #needs scripting       ### Algiers agreement flag - Iraq wants its land back
+			exists = PER
+			neighbour = PER
+		
+			NOT = {
+				war = yes
+				war_exhaustion = 5
+				revolt_percentage = 0.25
+				alliance_with = PER
+				truce_with = PER
+				relation = { who = PER value = 100 }
+				PER = {
+					alliance_with = SOV
+					alliance_with = USA
+					alliance_with = FRA
+					alliance_with = ENG
+				}
+			}
+			
+			money = 500
+			supplies = 2000
+			total_amount_of_brigades = 20
+			national_unity = 40
+		
+			OR = {
+				PER = { dissent = 8 }
+				PER = { NOT = { national_unity = 60 } }
+				PER = { war = yes }
+				NOT = { relation = { who = PER value = -100 } }
+			}
+			OR = {
+				AND = {
+					total_amount_of_brigades = 40
+					PER = { NOT = { total_amount_of_brigades = 50 } }
+				}
+				AND = {
+					total_amount_of_brigades = 80
+					PER = { NOT = { total_amount_of_brigades = 100 } }
+				}
+				AND = {
+					total_amount_of_brigades = 120
+					PER = { NOT = { total_amount_of_brigades = 150 } }
+				}
+				AND = {
+					total_amount_of_brigades = 160
+					PER = { NOT = { total_amount_of_brigades = 200 } }
+				}
+				PER = {
+					dissent = 15
+					NOT = { national_unity = 50 }
+				}
+				PER = {
+					war = yes
+					war_exhaustion = 10
+					NOT = { national_unity = 75 }
+				}
+			}
+		}
+
+		mean_time_to_happen = {
+			months = 36
+			modifier = {
+				factor = 1.5
+				relation = { who = PER value = 50 }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { relation = { who = PER value = -50 } }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { relation = { who = PER value = -100 } }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { relation = { who = PER value = -150 } }
+			}
+			
+			modifier = {
+				factor = 0.1
+				PER = { 
+					war = yes 
+					war_exhaustion = 5 
+				}
+			}
+			modifier = {
+				factor = 0.75
+				PER = { war_exhaustion = 10 }
+			}
+			modifier = {
+				factor = 0.75
+				PER = { war_exhaustion = 15 }
+			}
+			modifier = {
+				factor = 0.75
+				PER = { war_exhaustion = 20 }
+			}
+			
+			modifier = {
+				factor = 0.75
+				PER = { NOT = { national_unity = 50 } }
+			}
+			modifier = {
+				factor = 0.75
+				PER = { NOT = { national_unity = 30 } }
+			}
+			modifier = {
+				factor = 1.33
+				PER = { NOT = { national_unity = 70 } }
+			}
+			modifier = {
+				factor = 1.33
+				PER = { NOT = { national_unity = 90 } }
+			}
+			
+			modifier = {
+				factor = 0.75
+				PER = { dissent = 7 }
+			}
+			modifier = {
+				factor = 0.75
+				PER = { dissent = 15 }
+			}
+			modifier = {
+				factor = 0.75
+				PER = { dissent = 25 }
+			}
+			modifier = {
+				factor = 0.75
+				PER = { dissent = 40 }
+			}
+			modifier = {
+				factor = 0.75
+				PER = { dissent = 60 }
+			}
+			
+			modifier = {
+				factor = 0.67
+				PER = { revolt_percentage = 0.05 }
+			}
+			modifier = {
+				factor = 0.67
+				PER = { revolt_percentage = 0.10 }
+			}
+			modifier = {
+				factor = 0.67
+				PER = { revolt_percentage = 0.15 }
+			}
+			modifier = {
+				factor = 0.67
+				PER = { revolt_percentage = 0.20 }
+			}
+			modifier = {
+				factor = 0.60
+				PER = { revolt_percentage = 0.30 }
+			}
+			modifier = {
+				factor = 0.60
+				PER = { revolt_percentage = 0.40 }
+			}
+			modifier = {
+				factor = 0.50
+				PER = { revolt_percentage = 0.50 }
+			}
+			
+			modifier = {
+				factor = 1.5
+				revolt_percentage = 0.10
+			}
+			modifier = {
+				factor = 1.5
+				revolt_percentage = 0.15
+			}
+			modifier = {
+				factor = 1.5
+				revolt_percentage = 0.20
+			}
+			
+			modifier = {
+				factor = 0.75
+				total_amount_of_brigades = 40
+			}
+			modifier = {
+				factor = 0.75
+				total_amount_of_brigades = 80
+			}
+			modifier = {
+				factor = 0.75
+				total_amount_of_brigades = 120
+			}
+			modifier = {
+				factor = 0.75
+				total_amount_of_brigades = 160
+			}
+			modifier = {
+				factor = 0.75
+				total_amount_of_brigades = 200
+			}
+			modifier = {
+				factor = 1.33
+				PER = { total_amount_of_brigades = 40 }
+			}
+			modifier = {
+				factor = 1.33
+				PER = { total_amount_of_brigades = 80 }
+			}
+			modifier = {
+				factor = 1.33
+				PER = { total_amount_of_brigades = 120 }
+			}
+			modifier = {
+				factor = 1.33
+				PER = { total_amount_of_brigades = 160 }
+			}
+			modifier = {
+				factor = 1.33
+				PER = { total_amount_of_brigades = 200 }
+			}
+			
+			modifier = {
+				factor = 0.75
+				relation = { who = USA value = 100 }
+			}
+			modifier = {
+				factor = 0.75
+				relation = { who = SOV value = 100 }
+			}
+			modifier = {
+				factor = 1.33
+				PER = { relation = { who = USA value = 100 } }
+			}
+			modifier = {
+				factor = 1.33
+				PER = { relation = { who = SOV value = 100 } }
+			}
+			
+			modifier = {
+				factor = 0.75
+				NOT = { PER = { relation = { who = USA value = -75 } } }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { PER = { relation = { who = SOV value = -75 } } }
+			}
+			modifier = {
+				factor = 1.33
+				NOT = { relation = { who = USA value = -75 } }
+			}
+			modifier = {
+				factor = 1.33
+				NOT = { relation = { who = SOV value = -75 } }
+			}
+			
+			modifier = {
+				factor = 1.5
+				guarantee = PER
+			}
+			
+			modifier = {
+				factor = 0.67
+				same_party = PER
+			}
+			
+			modifier = {
+				factor = 0.67
+				same_faction  = PER
+			}
+			
+			modifier = {
+				factor = 0.67
+				embargoed_by = PER
+			}
+		}
+		
+		title = "EVTNAME221101"
+		desc = "EVTDESC221101"
+		picture = "1980_Battle_of_Khorramshahr"
+
+		option = {
+			name = "EVTOPTA221101"
+			war = PER                                               ## war with Iran
+			IRQ = { revolt_risk = 2 }                                ## small Revolts risk increase across Iraq - Shia riots/ assassinations
+					
+			## Triigers Iran event - The above ^ Iran-Kurd revolts may occur every 12 months unless action is taken	
+						
+			set_global_flag = IraqIran_war
+						
+		}
+	}
+
+	#221101 - Financial Support for Iraq from Kuwait
+	country_event = {
+
+		id = 221101
+
+		is_triggered_only = yes
+
+		title = "EVTNAME221101"
+		desc = "EVTDESC221101"
+		picture = "1981_Kuweiti_banknote"
+
+		option = {
+			name = "EVTOPTA221101" 	
+			add_country_modifier = {
+				name = "KWT_Iraq_money"
+				duration = -1
+			}                    		##Financial support from KWTait - 				
+		}
+	}
+	
+	#221102 - Financial Support for Iraq from Saudi Arabia	
+	country_event = {
+
+		id = 221102
+
+		is_triggered_only = yes
+
+		title = "EVTNAME221102"
+		desc = "EVTDESC221102"
+		picture = "1984_Saudi_banknote"
+
+		option = {
+			name = "EVTOPTA221102" 
+			add_country_modifier = {
+				name = "Sau_Iraq_money"
+				duration = -1
+			}                    ##Financial support from Saudi Arabia					
+		}
+	}
+	
+	#221103 - Support for Iraq from USA	
+	country_event = {
+
+		id = 221103
+
+		is_triggered_only = yes
+
+		title = "EVTNAME221103"
+		desc = "EVTDESC221103"
+		picture = "1983_Rumsfeld_meets_Saddam"
+
+		option = {
+			name = "EVTOPTA221103"
+			add_country_modifier = {
+				name = "USA_Iraq_support"
+				duration = -1
+			}                    	##USA support - supplies/ weapons/ intelligence	
+		}
+	}
+	
+	#221104 - Support for Iraq from France	
+	country_event = {
+	
+		id = 221104
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME221104"
+		desc = "EVTDESC221104"
+		picture = "1980_Iraqi_Mirage"
+
+		option = {
+			name = "EVTOPTA221104" 
+			add_country_modifier = {
+				name = "FRA_Iraq_support"
+				duration = -1
+			}                    	##France support - supplies/ weapons/ intelligence	
+		}
+	}
+	
+	#221106 - Support for Iraq from USSR
+	country_event = {
+
+		id = 221106
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME221106"
+		desc = "EVTDESC221106"
+		picture = "1980_Iraqi_Mig-29"
+
+		option = {
+			name = "EVTOPTA221106" 	
+			add_country_modifier = {
+				name = "SOV_Iraq_support"
+				duration = -1
+			}                    	##Soviet support - supplies/ weapons/ intelligence	
+		}
+	}
+
+	#221105 - Support for Iraq from West Germany
+	country_event = {
+	
+		id = 221105
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME221105"
+		desc = "EVTDESC221105"
+		picture = "1980_Iranian_soldier_gas_mask"
+
+		option = {
+			name = "EVTOPTA221105" 
+			add_country_modifier = {
+				name = "GER_Iraq_support"
+				duration = -1
+			}                    	##France support - supplies/ weapons/ intelligence	
+		}
+	}
+	
+	#221107 - Iraq Informed to Iranian Naval Blockade decision
+	country_event = {
+	
+		id = 221107
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME221107"
+		desc = "EVTDESC221107"
+		picture = "1984_Tanker_War"
+		
+		option = {
+			name = "EVTOPTA221107" 																    				
+			#Iran is attacking our shipping ! We will attack them as well	
+			add_country_modifier = {
+				name = "Tanker_losses"				#small financial losses
+				duration = -1
+			}  
+			USA = { set_country_flag = US_Iran_navalBlockade }  
+			set_country_flag = Iran_navalBlockade
+		}
+	}
+
+	#221108 - Iraqi Military Crisis Event - Saddam purges his generals for losing battles
+	country_event = {
+
+		id = 221108
+
+		trigger = {
+			tag = IRQ
+			exists = PER
+			war_with = PER
+			lost_national = 0.30
+			NOT = { has_country_modifier = Iraq_militaryCrisis }
+		}
+			
+		title = "EVTNAME221108"
+		desc = "EVTDESC221108"
+		picture = "1980_Iraqi_generals"
+
+		option = {
+			name = "EVTOPTA221108"
+			add_country_modifier = {						# Army/air loses 10% org
+				name = "Iraq_militaryCrisis"
+				duration = 360
+			} 
+		set_country_flag = Iranairpurge					
+		}
+	}
+
+	#221109 - Iraqi political event 
+	country_event = {
+	
+		id = 221109
+
+		trigger = {
+			tag = IRQ
+			PER = { has_country_flag = No_Iraqi_peace }
+			NOT = { has_country_flag = Iraqi_shot }
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+			
+		title = "EVTNAME221109" # Iraqi Minister is shot for suggesting Saddam step down during ceasefire talks
+		desc = "EVTDESC221109"
+		picture = "1982_Saddam_Hussein"
+
+		option = {
+			name = "EVTOPTA221109" 																    				
+			national_unity = 2
+			dissent = 1
+			set_country_flag = Iraqi_shot
+		}
+	}
+	
+	#221110 - Iraqi oil crisis
+	country_event = {
+	
+		id = 221110
+		
+		is_triggered_only = yes
+			
+		title = "EVTNAME221110"		#Syria has closed our major oil pipeline
+		desc = "EVTDESC221110"
+		picture = "1980_Kirkuk_pipeline"
+		
+		option = {
+			name = "EVTOPTA221110" 	
+			add_country_modifier = {
+				name = "Syrian_oilpipeline"
+				duration = -1
+			}                    			## syria closes oil pipeline trade route costs Iraqi $60billion a year !
+			relation = { who = SYR value = -50 }			## Iraqi anger at Syria						
+			set_country_flag = Iraq_oilCrisis
+		}
+	}
+	
+## PER ##
+	#286107 - Iranian Kurd revolts
+	country_event = {
+
+		id = 286107
+
+		trigger = { 
+			tag = PER
+			has_global_flag = IraqIran_war
+			NOT = { has_country_modifier = fight_kurds }
+			NOT = { has_country_modifier = ignore_kurds }
+			NOT = { has_country_modifier = placate_kurds }
+		}
+		
+		mean_time_to_happen = {
+			days = 365
+		}
+			
+		title = "EVTNAME286107"
+		desc = "EVTDESC286107"
+		picture = "1979_Kurdish_rebellion_Iran"
+
+		option = {
+			name = "EVTOPTA286107" 			  #	 Crush revolts														    				
+			ai_chance = { factor = 90 } 
+			8715 =  { create_revolt = 2	}					     #Revolts on border with Iran -Eslamabad Gharb
+			8799 =  { create_revolt = 2	}    					 ## Revolt risk in Kurdistan-Iran
+			add_country_modifier = {
+				name = "fight_kurds"
+				duration = 360
+			}      
+			set_country_flag =	crush_revolt			
+		}
+		option = {
+			name = "EVTOPTB286107"			   #  ignore revolts										
+			ai_chance = { factor = 10 } 
+			8715 =  { create_revolt = 6	}					     #Revolts on border with Iran -Eslamabad Gharb
+			8799 =  { create_revolt = 6	}    					 ## Revolt risk in Kurdistan-Iran
+			add_country_modifier = {
+				name = "ignore_kurds"
+				duration = 360
+			}      
+			set_country_flag =	con_revolt							
+		}
+		option = {
+			name = "EVTOPTC286107"	           #  placate them															
+			ai_chance = { factor = 0 } 
+			8715 =  { create_revolt = 2	}					     #Revolts on border with Iran -Eslamabad Gharb
+			8799 =  { create_revolt = 2	}    					 ## Revolt risk in Kurdistan-Iran
+			add_country_modifier = {
+				name = "placate_kurds"
+				duration = 360
+			}      
+			set_country_flag =	plac_revolt
+		}
+	}
+	
+	#286108 - Support for Iran from China
+	country_event = {
+
+		id = 286108
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME286108"
+		desc = "EVTDESC286108"
+		picture = "1986_J-7_Iran"
+
+		option = {
+			name = "EVTOPTA286108" 
+			add_country_modifier = {
+				name = "China_Iran_support"
+				duration = -1
+			}                    	##China support - supplies/ weapons/ intelligence	
+		}
+	}
+
+	#286109 - Iran responds to Iraqi ceasefire Proposal
+	country_event = {
+
+		id = 286109
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME286109"
+		desc = "EVTDESC286109"
+		picture = "1982_Khomeini"
+		
+		option = {
+			name = "EVTOPTA286109" 																    				
+			ai_chance = { factor = 98 }  # No way								
+			relation = { who = ALL value = -10 }
+			set_country_flag = No_Iraqi_peace
+		}
+		
+		option = {
+			name = "EVTOPTB286109"											
+			ai_chance = { factor = 2 } 	 # Agree									
+			end_war = IRQ
+			IRQ = { end_war = PER}
+			dissent = 15
+			national_unity = -10
+			relation = { who = ALL value = 50 }
+			set_country_flag = Iraqi_peace
+		}	
+	}
+	
+	#286110 - Iran Informed to Iraqi Tanker war decision
+	country_event = {
+
+		id = 286110
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME286110"
+		desc = "EVTDESC286110"
+		picture = "1984_Iraqi_attack_Kharg_Island"
+		
+		option = {
+			name = "EVTOPTA286110" 																    				
+			#Iraq is attacking our shipping ! We will attack them as well	
+			add_country_modifier = {
+				name = "Tanker_losses"				#small financial losses
+				duration = -1
+			}
+			USA = { set_country_flag = US_Iraqi_tankerWar }       
+			set_country_flag = Iraqi_tankerWar
+		}
+	}
+
+	#286111 - Iranian Political Crisis Event 
+	country_event = {
+
+		id = 286111
+
+		trigger = {
+			tag = PER
+			exists = IRQ
+			war_with = IRQ
+			lost_national = 0.25
+			NOT = { has_country_modifier = Iranian_crisis }
+		}
+		
+		mean_time_to_happen = {
+			days = 14
+		}
+			
+		title = "EVTNAME286111"
+		desc = "EVTDESC286111"
+		picture = "1982_Iranian_volunteers"
+
+		option = {
+			name = "EVTOPTA286111" 																    				
+			8954 =  { create_revolt = 3 }					#main Iranian cities revolts by MEK rebels				     
+			8799 =  { create_revolt = 3 } 
+			9072 =  { create_revolt = 3 }
+			8884 =  { create_revolt = 3 }
+			add_country_modifier = {
+				name = "Iranian_crisis"				#cooldown between revolt risk
+				duration = 360
+			}
+		}
+		set_country_flag = IranCrisis
+	}
+
+	#286112 - Iranian airforce purge Event 
+	country_event = {
+
+		id = 286112
+
+		trigger = {
+			tag = PER
+			has_country_flag = IranCrisis
+			exists = IRQ
+			war_with = IRQ
+			NOT = {	has_country_flag = Iranairpurge }
+		}
+		
+		mean_time_to_happen = {
+			days = 30
+		}
+			
+		title = "EVTNAME286112"
+		desc = "EVTDESC286112"
+		picture = "1980_Fakori_Khomeini"
+
+		option = {
+			name = "EVTOPTA286112" 																    				
+			add_country_modifier = {						# Airforce loses 10% org
+				name = "Iran_Airforce_purge"
+				duration = -1
+			} 
+			set_country_flag = Iranairpurge
+		}
+	}
+
+	#286113 - Iranian Military Crisis Event
+	country_event = {
+
+		id = 286113
+
+		trigger = {
+			tag = PER
+			exists = IRQ
+			war_with = IRQ
+			IRQ = { has_country_flag = Iraqrallies }
+			NOT = { has_country_flag = Iran_MilitaryCrisis	}
+		}
+		
+		mean_time_to_happen = {
+			days = 30
+		}
+			
+		title = "EVTNAME286113"							## Iran is facing a military Crisis
+		desc = "EVTDESC286113"
+		picture = "1988_Sayad_Shirazi_Rafsanjani"
+
+		option = {
+			name = "EVTOPTA286113"
+			add_country_modifier = {						# Army/air loses 10% org
+				name = "Iran_militaryCrisis"
+				duration = 360
+			} 
+			dissent = 2
+			revolt_risk = 2
+			set_country_flag = Iran_MilitaryCrisis				
+		}
+	}
+
+	#286114 - Iran Responds to Op Earnest Will event
+	country_event = {
+		
+		id = 286114
+
+		is_triggered_only = yes
+			
+		title = "EVTNAME286114"				##
+		desc = "EVTDESC286114"
+		picture = "1987_Earnest_Will"
+
+		option = {
+			name = "EVTOPTA286114" 
+			dissent = 1
+			relation = { who = USA value = -10 }
+		}
+	}
+	
+	#286115 - Iran Responds to Op Nimble Archer event
+	country_event = {
+	
+		id = 286115
+
+		is_triggered_only = yes
+			
+		title = "EVTNAME286115"				## 
+		desc = "EVTDESC286115"
+		picture = "1987_Nimble_Archer"
+
+		option = {
+			name = "EVTOPTA286115" 	
+			dissent = 1
+			relation = { who = USA value = -10 }
+			add_country_modifier = {						# oil loses 10% 
+				name = "Iran_oilrig_losses"
+				duration = 365
+			}		
+		}
+	}
+	
+	#286116 - Iran Responds to Op Praying Mantis event
+	country_event = {
+
+		id = 286116
+
+		is_triggered_only = yes
+			
+		title = "EVTNAME286116"				## 
+		desc = "EVTDESC286116"
+		picture = "1988_Praying_Mantis"
+
+		option = {
+			name = "EVTOPTA286116" 	
+			dissent = 2
+			war_exhaustion = 1
+			relation = { who = USA value = -25 }
+			add_country_modifier = {						# Navy loses 10% org
+				name = "Iran_Navy_losses"
+				duration = 365
+			}
+			add_country_modifier = {						# oil loses 10% 
+				name = "Iran_oilrig_losses"
+				duration = 365
+			}		
+		}
+	}
+
+	#286117 - Iranian Military Crisis II Event
+	country_event = {
+
+		id = 286117
+
+		trigger = {
+			tag = PER
+			exists = IRQ
+			war_with = IRQ
+			has_country_modifier = Iran_oilrig_losses 
+			NOT = { has_country_flag = Iran_MilitaryCrisisII }
+			NOT = { has_country_modifier = Iran_militaryCrisis }
+		}
+		
+		mean_time_to_happen = {
+			days = 92
+		}
+			
+		title = "EVTNAME286117"							## Iran is facing another military Crisis
+		desc = "EVTDESC286117"
+		picture = "1988_Sayad_Shirazi_Rafsanjani"
+
+		option = {
+			name = "EVTOPTA286117"
+			add_country_modifier = {						# Army/air loses 10% org
+				name = "Iran_militaryCrisis_II"
+				duration = 360
+			}
+			dissent = 2
+			revolt_risk = 2
+			set_country_flag = Iran_MilitaryCrisisII			
+		}
+	}
+	
+	#286118 - War End event
+	country_event = {
+	
+		id = 286118
+
+		trigger = {
+			tag = PER
+			has_global_flag = Praying_Mantis
+			exists = PER
+			exists = IRQ
+			war_with = IRQ
+			IRQ = { has_country_flag = Iraq_endwar }
+			has_country_flag = Iran_endwar
+			NOT = { has_country_flag = endwar }
+		}
+		
+		mean_time_to_happen = {
+			days = 30
+		}
+		
+		major = yes
+
+		title = "EVTNAME286118"
+		desc = "EVTDESC286118"
+		picture = "1988_Peace_delegation_Iran-Iraq"
+
+		option = {
+			name = "EVTOPTA286118" 				#### War is over!																    				
+			end_war = IRQ
+			IRQ = { end_war = PER}		
+			set_country_flag = endwar				
+		}
+	}
+	
+## USA ##
+	#354400 - USS Stark event
+	country_event = {
+
+		id = 354400
+
+		trigger = {
+			tag = USA
+			IRQ = { has_country_flag = tanker_war }
+			PER = { has_country_flag = Iran_blockade }
+			NOT = { has_country_flag = USS_Stark }
+		}
+		
+		mean_time_to_happen = {
+			days = 183
+		}
+			
+		title = "EVTNAME354400"			##USS Stark hit by two missiles fired from Iraqi aircraft
+		desc = "EVTDESC354400"
+		picture = "1987_USS_Stark_2"
+
+		option = {
+			name = "EVTOPTA354400"
+			ai_chance = { factor = 90 }
+			dissent = 2
+			popularity = -2
+			relation = { who = IRQ value = -5 }
+			set_country_flag = USS_Stark
+		}
+
+		option = {
+			name = "EVTOPTB354400" 
+			ai_chance = { factor = 10 }																    				
+			dissent = 1
+			relation = { who = IRQ value = -50 }
+			set_country_flag = USS_Stark
+		}
+	}
+
+	#354401 - Operation Earnest Will event
+	country_event = {
+	
+		id = 354401
+
+		trigger = {
+			tag = USA
+			has_country_flag = USS_Stark
+			has_country_flag = US_Iraqi_tankerWar
+			has_country_flag = US_Iran_navalBlockade
+			NOT = { has_country_flag = Earnest_Will	}
+		}
+		
+		mean_time_to_happen =  {
+			days = 30
+		}
+		
+		title = "EVTNAME354401"
+		desc = "EVTDESC354401"
+		picture = "1987_Earnest_Will"
+
+		option = {
+			name = "EVTOPTA354401" 																    				
+			ai_chance = { factor = 90 } 		#protect shipping
+			supplies = -50
+			neutrality = -2
+			PER = { country_event = 286114 }	# US are involved								
+			set_country_flag = Earnest_Will				
+		}
+
+		option = {
+			name = "EVTOPTB354401"			# No need								
+			ai_chance = { factor = 10 }
+			dissent = 1
+			set_country_flag = Earnest_Will							
+		}
+	}
+
+	#354402 - Operation Nimble Archer event
+	country_event = {
+
+		id = 354402
+
+		trigger = {
+			tag = USA
+			has_country_flag = Earnest_Will
+			NOT = { has_country_flag = Nimble_Archer }
+		}
+		
+		mean_time_to_happen =  {
+			days = 30
+		}
+		
+		title = "EVTNAME354402"
+		desc = "EVTDESC354402"
+		picture = "1987_Nimble_Archer"
+
+		option = {
+			name = "EVTOPTA354402" 																    				
+			ai_chance = { factor = 90 }   		#Destroy Iranian Oil Rigs
+			supplies = -50
+			neutrality = -2
+			PER = { country_event = 286115 }	# US attacks oil rigs							
+			set_country_flag = Nimble_Archer				
+		}
+		option = {
+			name = "EVTOPTB354402"			# No need								
+			ai_chance = { factor = 10 } 
+			dissent = 1
+			set_country_flag = Nimble_Archer							
+		}
+	}
+	
+	#354403 - Operation Praying Mantis event
+	country_event = {
+
+		id = 354403
+
+		trigger = {
+			tag = USA
+			has_country_flag = Nimble_Archer
+			NOT = { has_global_flag = Praying_Mantis }
+		}
+		
+		mean_time_to_happen =  {
+			days = 92
+		}
+		
+		title = "EVTNAME354403"
+		desc = "EVTDESC354403"
+		picture = "1988_Praying_Mantis"
+
+		option = {
+			name = "EVTOPTA354403" 																    				
+			ai_chance = { factor = 90 } 		#Attack Iranian Navy and Oil Platforms	
+			supplies = -150
+			neutrality = -5
+			PER = { country_event = 286116 }	# US attacks ships and oil rigs					
+			set_global_flag = Praying_Mantis				
+		}
+
+		option = {
+			name = "EVTOPTB354403"			# No need	
+			dissent = 1
+			ai_chance = { factor = 10 } 										
+			set_global_flag = Praying_Mantis							
+		}
+	}

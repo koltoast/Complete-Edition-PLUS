@@ -1,0 +1,52 @@
+
+
+diplomatic_decisions = {
+
+	crushing_rebels = {
+		category = national
+		potential = {
+         ai = yes
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 10			
+		}
+		
+		effect = {
+		     random_country = { 
+              limit = { 
+				NOT = { has_country_modifier = crushreb }
+                revolt_percentage = 0.01
+                money = 1000
+		        fuel = 1
+		        supplies = 1				
+					 }			 			  
+				random_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+
+			}
+				money = -1000			
+            add_country_modifier = {
+				name = "crushreb"				
+				duration = 30
+			}
+		}			
+		}
+	}
+	
+}

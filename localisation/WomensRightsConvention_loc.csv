@@ -1,0 +1,61 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+mod_UN_womens_rights_convention_failure_delay;UN Women's Rights Convention Delay;;;;;;;;;;;;;x
+mod_UN_womens_rights_convention_ratifier_delay;UN Women's Rights Convention Ratifier Delay;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+mod_UN_womens_rights_convention_revoked_recently;UN Women's Rights Convention Revoked Recently;;;;;;;;;;;;;x
+mod_UN_womens_rights_convention_ratified;UN Women's Rights Convention;;;;;;;;;;;;;x
+mod_UN_womens_rights_convention_ratified_recently;UN Women's Rights Convention Ratified Recently;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+dec_UN_raise_womens_rights_convention_title;The UN Women's Rights Convention;;;;;;;;;;;;;x
+dec_UN_raise_womens_rights_convention_desc;United Nations General Assembly Resolution 34/180, The Convention on the Elimination of all Forms of Discrimination against Women.;;;;;;;;;;;;;x
+dec_UN_womens_rights_convention_disable_voting_notifications_title;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+dec_UN_womens_rights_convention_disable_voting_notifications_desc;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+dec_UN_ratify_womens_rights_convention_title;Ratify UN Women's Rights Convention;;;;;;;;;;;;;x
+dec_UN_ratify_womens_rights_convention_desc;Ratify The Convention on the Elimination of all Forms of Discrimination against Women.;;;;;;;;;;;;;x
+dec_UN_withdraw_from_womens_rights_convention_title;Withdraw from UN Women's Rights Convention;;;;;;;;;;;;;x
+dec_UN_withdraw_from_womens_rights_convention_desc;Withdraw from The Convention on the Elimination of all Forms of Discrimination against Women.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+EVTNAME11600;The UN Women's Rights Convention;;;;;;;;;;;;;x
+EVTDESC11600;United Nations General Assembly Resolution 34/180, The Convention on the Elimination of all Forms of Discrimination against Women has been opened for voting.;;;;;;;;;;;;;x
+EVTOPTA11600;Large Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTB11600;Small Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTC11600;No Diplomatic Investment.;;;;;;;;;;;;;x
+EVTNAME11601;UN Voting Notifications;;;;;;;;;;;;;x
+EVTDESC11601;Shall we receive notifications when nations decide their vote on the current UN Resolution undergoing a vote?\nThese can be turned off at any time by an international decision.;;;;;;;;;;;;;x
+EVTOPTA11601;Receive Notifications.;;;;;;;;;;;;;x
+EVTOPTB11601;No Notifications.;;;;;;;;;;;;;x
+EVTNAME11602;UN Women's Rights Convention Fails Vote;;;;;;;;;;;;;x
+EVTDESC11602;United Nations General Assembly Resolution 34/180, The Convention on the Elimination of all Forms of Discrimination against Women, has been defeated by vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA11602;Unfortunate;;;;;;;;;;;;;x
+EVTNAME11603;UN Women's Rights Convention Passes Vote;;;;;;;;;;;;;x
+EVTDESC11603;United Nations General Assembly Resolution 34/180, The Convention on the Elimination of all Forms of Discrimination against Women, has passed its vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA11603;Excellent;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+EVTNAME11610;Women's Rights Convention UN Vote;;;;;;;;;;;;;x
+EVTDESC11610;We have the opportunity to vote on United Nations General Assembly Resolution 34/180, The Convention on the Elimination of all Forms of Discrimination against Women, at the UN General Assembly.\nWe can either vote For it, Abstain, or vote Against it.;;;;;;;;;;;;;x
+EVTOPTA11610;§GVote For;;;;;;;;;;;;;x
+EVTOPTB11610;Abstain;;;;;;;;;;;;;x
+EVTOPTC11610;§RVote Against;;;;;;;;;;;;;x
+EVTNAME11612;Ratified the Women's Rights Convention;;;;;;;;;;;;;x
+EVTDESC11612;We have ratified the UN Women's Rights Convention.;;;;;;;;;;;;;x
+EVTOPTA11612;Progress and civility will prevail.;;;;;;;;;;;;;x
+EVTNAME11614;Withdrawal from the Women's Rights Convention;;;;;;;;;;;;;x
+EVTDESC11614;We have withdrawn from the UN Women's Rights Convention.;;;;;;;;;;;;;x
+EVTOPTA11614;Good riddance.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

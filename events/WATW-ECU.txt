@@ -1,0 +1,25 @@
+#179980	- The Rise of Tejada - We are the world event 
+
+#179980	- The Rise of Tejada - We are the world event  
+country_event = {
+	
+	id = 179980
+
+	trigger = {
+		OR = {
+			ECU = { head_of_state = 1179017 } 
+			ECU = { head_of_government = 1179017 }		
+		}
+		tag = ECU		
+		NOT = { has_country_flag = event_rise_to_power_watw_ECU_done }
+	}
+
+	title = "EVTNAME179980"
+	desc = "EVTDESC179980"
+	picture = ""
+
+	option = {
+		name = "EVTOPTA179980"		#OK						
+		set_country_flag = event_rise_to_power_watw_ECU_done
+	}
+}

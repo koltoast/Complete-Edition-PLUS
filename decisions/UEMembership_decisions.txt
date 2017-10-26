@@ -1,0 +1,183 @@
+diplomatic_decisions = {
+
+	#Seek admission to the United Nations
+	dec_join_UE = {
+		category = international
+		picture = "1945_UN_charter"
+		potential = {
+		    ai = yes
+			not = { neutrality = 25 }
+			##NOT = { has_country_modifier = waiting_WP }   ## esto pone un tope cronológico  para nuevas incorporaciones de paises a las organizaciones
+			alignment = {
+			   faction = allies
+			   value = 90
+		     }
+			 
+			NOT = { is_org_member = XUE }
+			NOT = { is_org_member = XWP }
+			NOT = { has_country_flag = UE_membership_process }						
+			not = {
+				tag = SVI
+			}
+		}
+		
+		allow = {
+			not = { has_country_modifier = UE_vetoed_delay }
+			not = { has_country_flag = "UE_EMBARGO" }
+			not = {
+				and = {
+					war_exhaustion = 10 
+					war = yes
+				}
+			}
+			national_unity = 90
+			#NOT = {
+				#AND = {
+					#tag = ITA
+					#NOT = { has_country_flag = flag_ITA_1947_peace_treaty }
+				#}
+			#}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				not = {
+					OR = {
+						SOV = {
+							is_major = yes
+							recognized = THIS 
+						}
+						#ENG = { 
+							#is_major = yes
+							#recognized = THIS 
+						#}
+						#FRA = { 
+							#is_major = yes
+							#recognized = THIS 
+						#}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				LUX = { has_country_modifier = UE_memberD }
+			}
+			modifier = {
+				factor = 0
+				any_core  = { limit = { not = { tag = TUK } }				                 
+								NOT = { continent = europe }							}
+			}
+			modifier = {
+				factor = 50
+				this = { is_major = yes }
+			}			
+			
+		}
+		
+		effect = {
+			set_country_flag = UE_membership_process       
+			country_event = 700238
+			
+			hidden_effects = {
+				LUX = {
+					add_country_modifier = {
+						name = UE_memberD
+						duration = 91
+					}
+				}
+			}
+		}
+	}
+	
+
+	
+	#Seek admission to the United Nations
+	dec_join_UE_2 = {
+		category = international
+		picture = "1945_UN_charter"
+		potential = {
+		    ai = no
+			is_major = yes
+			NOT = { is_org_member = XNA }
+			NOT = { is_org_member = XWP }
+            NOT = { is_org_member = XUE }			
+			not = { neutrality = 25 }
+			alignment = {
+			   faction = allies
+			   value = 90
+		     }			
+			NOT = { has_country_flag = UE_membership_process }
+			NOT = {
+				tag = SVI
+			}
+		}
+		
+		allow = {
+			NOT = { has_country_modifier = UE_memberD }
+			NOT = { has_country_flag = "UE_EMBARGO" }
+			NOT = {
+				AND = {
+					war_exhaustion = 10 
+					war = yes
+				}
+			}
+			national_unity = 90
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						LUX = {
+							is_major = yes
+							recognized = THIS 
+						}
+						ENG = { 
+							is_major = yes
+							recognized = THIS 
+						}
+						FRA = { 
+							is_major = yes
+							recognized = THIS 
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				LUX = { has_country_modifier = LUX_memberD }
+			}
+			modifier = {
+				factor = 0
+				any_core  = { limit = { not = { tag = TUK } }				                 
+								NOT = { continent = europe }							}
+			}			
+			modifier = {
+				factor = 50
+				this = { is_major = yes }
+			}			
+			
+		}		
+		
+		effect = {
+			set_country_flag = WP_membership_process
+			country_event = 700238
+			
+			hidden_effects = {
+				LUX = {
+					add_country_modifier = {
+						name = LUX_memberD
+						duration = 91
+					}
+				}
+			}
+		}
+	}
+	
+ }
+	

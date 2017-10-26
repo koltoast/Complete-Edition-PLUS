@@ -1,0 +1,225 @@
+diplomatic_decisions = {
+
+	#Seek admission to the United Nations
+	dec_join_united_nations = {
+		category = international
+		picture = "1945_UN_charter"
+		potential = {
+		    ai = yes
+			num_of_cities = 2
+			NOT = { is_org_member = XUN }
+			NOT = { has_country_flag = flag_UN_membership_process }
+			NOT = {
+				AND = {
+					OR = {
+						vassal_of = CHI
+						vassal_of = CHC
+					}
+					OR = {
+						tag = CXB
+						tag = CSX
+						tag = CXB
+						tag = CYN
+						tag = TIB
+						tag = SIK
+					}
+				}
+			}
+			NOT = {
+				tag = FRG
+				tag = DDR
+			}
+			NOT = {
+				AND = {
+					tag = PRK
+					exists = KOR
+				}
+				AND = {
+					tag = KOR
+					exists = PRK
+				}
+			}
+			NOT = {
+				tag = DRV
+				tag = SVI
+			}
+		}
+		
+		allow = {
+			NOT = { has_country_modifier = mod_UN_membership_vetoed_delay }
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			NOT = {
+				AND = {
+					war_exhaustion = 10 
+					war = yes
+				}
+			}
+			national_unity = 30
+			NOT = {
+				AND = {
+					tag = ITA
+					NOT = { has_country_flag = flag_ITA_1947_peace_treaty }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				AND = {
+					tag = SWI
+					OR = {
+						national_attitude = non-interventionism
+						foreign_policy = isolationism_pol
+						military_policy = sustained_military_service_pol
+						elections_and_voting = hereditary_rule
+						elections_and_voting = single_party_system
+						elections_and_voting = gerrymandering
+						elections_and_voting = winner_takes_it_all
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						USA = {
+							is_major = yes
+							recognized = THIS 
+						}
+						ENG = { 
+							is_major = yes
+							recognized = THIS 
+						}
+						FRA = { 
+							is_major = yes
+							recognized = THIS 
+						}
+						CHI = { 
+							is_major = yes
+							recognized = THIS 
+						}
+						CHC = { 
+							is_major = yes
+							recognized = THIS 
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				USA = { has_country_modifier = UN_memberD }
+			}
+		}
+		
+		effect = {
+			set_country_flag = flag_UN_membership_process
+			country_event = 9000
+			
+			hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = UN_memberD
+						duration = 91
+					}
+				}
+			}
+		}
+	}
+	
+
+	
+	#Seek admission to the United Nations
+	dec_join_un = {
+		category = international
+		picture = "1945_UN_charter"
+		potential = {
+		    ai = no
+			not = { AND = {
+					tag = SWI
+					OR = {
+						national_attitude = non-interventionism
+						foreign_policy = isolationism_pol
+						military_policy = sustained_military_service_pol
+						elections_and_voting = hereditary_rule
+						elections_and_voting = single_party_system
+						elections_and_voting = gerrymandering
+						elections_and_voting = winner_takes_it_all
+					}
+				}
+		    }
+			num_of_cities = 2
+			NOT = { is_org_member = XUN }
+			NOT = { has_country_flag = flag_UN_membership_process }
+			NOT = {
+				AND = {
+					OR = {
+						vassal_of = CHI
+						vassal_of = CHC
+					}
+					OR = {
+						tag = CXB
+						tag = CSX
+						tag = CXB
+						tag = CYN
+						tag = TIB
+						tag = SIK
+					}
+				}
+			}
+			NOT = {
+				tag = FRG
+				tag = DDR
+			}
+			NOT = {
+				AND = {
+					tag = PRK
+					exists = KOR
+				}
+				AND = {
+					tag = KOR
+					exists = PRK
+				}
+			}
+			NOT = {
+				tag = DRV
+				tag = SVI
+			}
+		}
+		
+		allow = {
+			NOT = { has_country_modifier = UN_memberD }
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			NOT = {
+				AND = {
+					war_exhaustion = 10 
+					war = yes
+				}
+			}
+			national_unity = 30
+			NOT = {
+				AND = {
+					tag = ITA
+					NOT = { has_country_flag = flag_ITA_1947_peace_treaty }
+				}
+			}
+		}
+		
+		effect = {
+			set_country_flag = flag_UN_membership_process
+			country_event = 9000
+			
+			hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = UN_memberD
+						duration = 91
+					}
+				}
+			}
+		}
+	}
+	
+ }
+	

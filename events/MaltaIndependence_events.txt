@@ -1,0 +1,1498 @@
+#MaltaIndependence_events.txt
+#1956 Malta Independence
+
+#ENG - United Kingdom:
+	#181110 - Constitution for Malta Drafted
+	#181111 - Malta Presents Referendum Results 		(Integration, majority)
+	#181112 - Malta Presents Referendum Results 	(Integration, unclear)
+	#181113 - Malta Promised Integration 				(Timer has run out)
+	#181114 - Malta Presents Referendum Results 	(Independence, majority)
+	#181115 - Malta Presents Referendum Results 		(Independence, unclear)
+	#181116 - Malta Promised Independence 			(Timer has run out)
+	#181117 - Malta Unilaterally Declares Independence
+	
+#MLT - Malta:
+	#253000 - [YEAR] UK Integration Referendum
+	#253001 - Church Lobbies against Integration
+	#253002 - Referendum Results Favour Integration
+	#253003 - Referendum Results Unclear
+	#253004 - Referendum Results Reject Integration
+	#253005 - United Kingdom Approves Integration
+	#253006 - United Kingdom Promises Integration
+	#253007 - United Kingdom Rejects Integration
+	#253008 - United Kingdom Reneges On Integration
+	
+	#253010 - [YEAR] Independence Referendum
+	#253012 - Referendum Results Favour Independence
+	#253013 - Referendum Results Unclear
+	#253014 - Referendum Results Reject Independence
+	#253015 - United Kingdom Approves Independence
+	#253016 - United Kingdom Promises Independence
+	#253017 - United Kingdom Rejects Independence
+	#253018 - United Kingdom Reneges On Independence
+	
+
+## ENG ##
+#181110 - Constitution for Malta Drafted
+country_event = {
+	
+	id = 181110
+
+	trigger = {
+		year = 1947
+		owns = 5819
+		NOT = { exists = MLT }
+		NOT = { has_global_flag = gflag_malta_constitution_dominion }
+		NOT = { has_global_flag = gflag_malta_constitution_independence }
+		NOT = { has_global_flag = gflag_malta_constitution_denied }
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+		modifier = {
+			factor = 0.1
+			year = 1948
+		}
+	}
+
+	title = "EVTNAME181110"								#Constitution for Malta Drafted
+	desc = "EVTDESC181110"
+	picture = "1947_Maltese_stamp"
+
+	option = {
+		name = "EVTOPTA181110"							#Limited self-government
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 1.5
+				OR = {
+					ideology = left_wing_radical_idolg
+					ideology = social_democrat_idolg
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					national_identity = territorial_focus
+					national_identity = state_building_focus
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					national_attitude = imperialism
+					national_attitude = colonialism
+				}
+			}
+		}
+		prestige_change = 2
+		release_vassal = MLT		#Release Malta as vassal
+		set_global_flag = gflag_malta_constitution_dominion
+	}
+
+	option = {
+		name = "EVTOPTB181110"							#Complete independence
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 2
+				OR = {
+					ideology_group = comintern
+					ideology = left_wing_radical_idolg
+				}
+			}
+			modifier = {
+				factor = 2
+				national_identity = equality_focus
+			}
+		}
+		prestige_change = 3
+		release = MLT
+		military_access = MLT
+		set_global_flag = gflag_malta_constitution_independence
+	}
+
+	option = {
+		name = "EVTOPTC181110"							#Maintain control
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 5
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 2
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 3
+				national_identity = territorial_focus
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					national_attitude = imperialism
+					national_attitude = colonialism
+				}
+			}
+		}
+		prestige_change = -5
+		5819 = {
+			random_list = {
+				50 = {
+					revolt_risk = 1
+				}
+				25 = {
+					revolt_risk = 2
+				}
+				25 = {
+					add_province_modifier = {
+						name = minor_revolt_risk
+						duration = 365
+					}
+				}
+			}
+		}
+		set_global_flag = gflag_malta_constitution_denied
+	}
+}
+
+#181111 - Malta Presents Referendum Results (Integration, majority)
+country_event = {
+	
+	id = 181111
+
+	is_triggered_only = yes
+
+	title = "EVTNAME181111"								#Malta Presents Referendum Results (Integration, majority)
+	desc = "EVTDESC181111"
+	picture = "1956_Dom_Mintoff"
+
+	option = {
+		name = "EVTOPTA181111"							#Accept it
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 1.5
+				national_identity = territorial_focus
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					national_attitude = imperialism
+					national_attitude = colonialism
+					national_attitude = hegemony
+				}
+			}
+		}
+		prestige_change = 5
+		set_global_flag = gflag_malta_integration_accepted
+		MLT = { country_event = 253005 }
+	}
+
+	option = {
+		name = "EVTOPTB181111"							#Promise it within two years
+		ai_chance = {
+			factor = 10
+		}
+		set_global_flag = gflag_malta_integration_promised
+		add_country_modifier = {
+			name = mod_ENG_malta_integration_promised_timer
+			duration = 730
+		}
+		MLT = { country_event = 253006 }
+	}
+
+	option = {
+		name = "EVTOPTC181111"							#Reject it
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 1.25
+				economy_unbalanced = yes
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					national_attitude = defensive
+					national_attitude = non-interventionism
+				}
+			}
+		}
+		prestige_change = -2
+		relation = { who = MLT value = -25 }
+		set_global_flag = gflag_malta_integration_rejected
+		MLT = { country_event = 253007 }
+	}
+}
+
+#181112 - Malta Presents Referendum Results (Integration, unclear)
+country_event = {
+	
+	id = 181112
+
+	is_triggered_only = yes
+
+	title = "EVTNAME181112"								#Malta Presents Referendum Results (Integration, unclear)
+	desc = "EVTDESC181112"
+	picture = "1956_Dom_Mintoff"
+
+	option = {
+		name = "EVTOPTA181112"							#Accept it
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 1.5
+				national_identity = territorial_focus
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					national_attitude = imperialism
+					national_attitude = colonialism
+					national_attitude = hegemony
+				}
+			}
+		}
+		set_global_flag = gflag_malta_integration_accepted
+		MLT = { country_event = 253005 }
+	}
+
+	option = {
+		name = "EVTOPTB181112"							#Promise it within two years
+		ai_chance = {
+			factor = 10
+		}
+		set_global_flag = gflag_malta_integration_promised
+		add_country_modifier = {
+			name = mod_ENG_malta_integration_promised_timer
+			duration = 730
+		}
+		MLT = { country_event = 253006 }
+	}
+
+	option = {
+		name = "EVTOPTC181112"							#Reject it
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 1.25
+				economy_unbalanced = yes
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					national_attitude = defensive
+					national_attitude = non-interventionism
+				}
+			}
+		}
+		relation = { who = MLT value = -15 }
+		set_global_flag = gflag_malta_integration_rejected
+		MLT = { country_event = 253007 }
+	}
+}
+
+#181113 - Malta Promised Integration (Timer has run out)
+country_event = {
+	
+	id = 181113
+
+	trigger = {
+		exists = MLT
+		MLT = { vassal_of = THIS }
+		has_global_flag = gflag_malta_integration_promised
+		NOT = { has_country_modifier = mod_ENG_malta_integration_promised_timer }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	title = "EVTNAME181113"								#Malta Promised Integration (Timer has run out)
+	desc = "EVTDESC181113"
+	picture = "1955_London_conference_Malta"
+
+	option = {
+		name = "EVTOPTA181113"							#Give them integration
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 1.5
+				national_identity = territorial_focus
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					national_attitude = imperialism
+					national_attitude = colonialism
+					national_attitude = hegemony
+				}
+			}
+		}
+		clr_global_flag = gflag_malta_integration_promised
+		set_global_flag = gflag_malta_integration_accepted
+		MLT = { country_event = 253005 }
+	}
+
+	option = {
+		name = "EVTOPTB181113"							#Renege on our promise
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1.25
+				economy_unbalanced = yes
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					national_attitude = defensive
+					national_attitude = non-interventionism
+				}
+			}
+		}
+		prestige_change = -5
+		relation = { who = MLT value = -30 }
+		clr_global_flag = gflag_malta_integration_promised
+		set_global_flag = gflag_malta_integration_rejected
+		MLT = { country_event = 253008 }
+	}
+}
+
+#181114 - Malta Presents Referendum Results (Independence, majority)
+country_event = {
+	
+	id = 181114
+
+	is_triggered_only = yes
+
+	title = "EVTNAME181114"								#Malta Presents Referendum Results (Independence, majority)
+	desc = "EVTDESC181114"
+	picture = "1956_Dom_Mintoff"
+
+	option = {
+		name = "EVTOPTA181114"							#Accept it
+		ai_chance = {
+			factor = 85
+			modifier = {
+				factor = 1.25
+				economy_unbalanced = yes
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					national_attitude = defensive
+					national_attitude = non-interventionism
+				}
+			}
+		}
+		prestige_change = 5
+		release_vassal = MLT			#Release Malta from Vassaldom
+		set_global_flag = gflag_malta_independence_accepted
+		MLT = { country_event = 253013 }
+	}
+
+	option = {
+		name = "EVTOPTB181114"							#Promise it within two years
+		ai_chance = {
+			factor = 10
+		}
+		set_global_flag = gflag_malta_independence_promised
+		add_country_modifier = {
+			name = mod_ENG_malta_independence_promised_timer
+			duration = 730
+		}
+		MLT = { country_event = 253014 }
+	}
+
+	option = {
+		name = "EVTOPTC181114"							#Reject it
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 2
+				national_identity = territorial_focus
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					national_attitude = imperialism
+					national_attitude = colonialism
+					national_attitude = hegemony
+				}
+			}
+			modifier = {
+				factor = 5
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 2
+				ideology = paternal_auto_idolg
+			}
+		}
+		prestige_change = -10
+		relation = { who = MLT value = -40 }
+		set_global_flag = gflag_malta_independence_rejected
+		MLT = { country_event = 253013 }
+	}
+}
+
+#181115 - Malta Presents Referendum Results (Independence, unclear)
+country_event = {
+	
+	id = 181115
+
+	is_triggered_only = yes
+
+	title = "EVTNAME181115"								#Malta Presents Referendum Results (Independence, unclear)
+	desc = "EVTDESC181115"
+	picture = "1956_Dom_Mintoff"
+
+	option = {
+		name = "EVTOPTA181115"							#Accept it
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 1.25
+				economy_unbalanced = yes
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					national_attitude = defensive
+					national_attitude = non-interventionism
+				}
+			}
+		}
+		prestige_change = 2
+		release_vassal = MLT			#Release Malta from Vassaldom
+		set_global_flag = gflag_malta_independence_accepted
+		MLT = { country_event = 253013 }
+	}
+
+	option = {
+		name = "EVTOPTB181114"							#Promise it within two years
+		ai_chance = {
+			factor = 10
+		}
+		set_global_flag = gflag_malta_independence_promised
+		add_country_modifier = {
+			name = mod_ENG_malta_independence_promised_timer
+			duration = 730
+		}
+		MLT = { country_event = 253014 }
+	}
+
+	option = {
+		name = "EVTOPTC181115"							#Reject it
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				national_identity = territorial_focus
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					national_attitude = imperialism
+					national_attitude = colonialism
+					national_attitude = hegemony
+				}
+			}
+			modifier = {
+				factor = 5
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 2
+				ideology = paternal_auto_idolg
+			}
+		}
+		prestige_change = -5
+		relation = { who = MLT value = -25 }
+		set_global_flag = gflag_malta_independence_rejected
+		MLT = { country_event = 253015 }
+	}
+}
+
+#181116 - Malta Promised Independence (Timer has run out)
+country_event = {
+	
+	id = 181116
+
+	trigger = {
+		exists = MLT
+		MLT = { vassal_of = THIS }
+		has_global_flag = gflag_malta_independence_promised
+		NOT = { has_country_modifier = mod_ENG_malta_independence_promised_timer }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	title = "EVTNAME181116"								#Malta Promised Independence (Timer has run out)
+	desc = "EVTDESC181116"
+	picture = "1955_London_conference_Malta"
+
+	option = {
+		name = "EVTOPTA181116"							#Give them integration
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 1.25
+				economy_unbalanced = yes
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					national_attitude = defensive
+					national_attitude = non-interventionism
+				}
+			}
+		}
+		clr_global_flag = gflag_malta_independence_promised
+		set_global_flag = gflag_malta_independence_accepted
+		MLT = { country_event = 253013 }
+	}
+
+	option = {
+		name = "EVTOPTB181116"							#Renege on our promise
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				national_identity = territorial_focus
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					national_attitude = imperialism
+					national_attitude = colonialism
+					national_attitude = hegemony
+				}
+			}
+			modifier = {
+				factor = 5
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 2
+				ideology = paternal_auto_idolg
+			}
+		}
+		prestige_change = -10
+		relation = { who = MLT value = -40 }
+		clr_global_flag = gflag_malta_independence_promised
+		set_global_flag = gflag_malta_independence_rejected
+		MLT = { country_event = 253016 }
+	}
+}
+
+#181117 - Malta Unilaterally Declares Independence
+country_event = {
+	
+	id = 181117
+
+	is_triggered_only = yes
+
+	title = "EVTNAME181117"								#Malta Unilaterally Declares Independence
+	desc = "EVTDESC181117"
+	picture = "1964_Maltese_Independence_rally"
+
+	option = {
+		name = "EVTOPTA181117"							#There is nothing we can do
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.25
+				economy_unbalanced = yes
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					national_attitude = defensive
+					national_attitude = non-interventionism
+				}
+			}
+		}
+		prestige_change = -5
+		release_vassal = MLT
+	}
+
+	option = {
+		name = "EVTOPTB181117"							#Send in the troops
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				national_identity = territorial_focus
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					national_attitude = imperialism
+					national_attitude = colonialism
+					national_attitude = hegemony
+				}
+			}
+			modifier = {
+				factor = 5
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 2
+				ideology = paternal_auto_idolg
+			}
+		}
+		release_vassal = MLT
+		limited_war = MLT
+	}
+}
+
+## MLT ##
+#253000 - [YEAR] UK Integration Referendum
+country_event = {
+	
+	id = 253000
+
+	trigger = {
+		tag = MLT
+		MLT = { vassal_of = ENG }
+		ai = yes
+		NOT = { has_country_modifier = mod_MLT_integration_referendum_delay }
+		NOT = { has_country_flag = flag_MLT_integration_referendum_in_progress }
+		NOT = { has_global_flag = gflag_malta_integration_promised }
+		NOT = { has_global_flag = gflag_malta_integration_rejected }
+		NOT = { has_country_flag = flag_MLT_independence_referendum_in_progress }
+		NOT = { has_global_flag = gflag_malta_independence_promised }
+		NOT = { num_of_cities = 6 }
+		is_major = no
+		relation = { who = ENG value = 75 }
+		ENG = {
+			is_major = yes
+			total_amount_of_ships = 12
+			national_unity = 70
+			NOT = {
+				AND = {
+					war = yes
+					war_exhaustion = 12
+				}
+				dissent = 20
+				revolt_percentage = 0.15
+			}
+		}
+		OR = {
+			AND = {
+				ideology = left_wing_radical_idolg
+				ENG = {
+					OR = {
+						ideology = social_democrat_idolg
+						ideology = left_wing_radical_idolg
+						ideology_group = comintern
+					}
+				}
+			}
+			AND = {
+				ideology_group = comintern
+				ENG = {
+					OR = {
+						ideology = left_wing_radical_idolg
+						ideology_group = comintern
+					}
+				}
+			}
+			AND = {
+				ideology = fascistic_idolg
+				ENG = { ideology = fascistic_idolg }
+			}
+			NOT = {
+				ideology = left_wing_radical_idolg
+				ideology_group = comintern
+				ideology = fascistic_idolg
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.75
+			economy_unbalanced = yes
+		}
+		modifier = {
+			factor = 0.75
+			relation = { who = ENG value = 150 }
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				same_faction = ENG
+				alliance_with = ENG
+			}
+		}
+		modifier = {
+			factor = 0.75
+			same_party  = ENG
+		}
+		modifier = {
+			factor = 0.9
+			biggest_naval = ENG
+		}
+		modifier = {
+			factor = 0.9
+			biggest_army = ENG
+		}
+		modifier = {
+			factor = 0.9
+			biggest_air = ENG
+		}
+		modifier = {
+			factor = 0.9
+			biggest_nuke = ENG
+		}
+	}
+
+	title = "EVTNAME253000"								#[YEAR] UK Integration Referendum
+	desc = "EVTDESC253000"
+	picture = "1955_London_conference_Malta"
+
+	option = {
+		name = "EVTOPTA253000"							#Okay
+		#hidden_effects = {
+			random_list = {
+				33 = { set_country_flag = flag_MLT_integration_referendum_results_favour }
+				33 = { set_country_flag = flag_MLT_integration_referendum_results_unclear }
+				33 = { set_country_flag = flag_MLT_integration_referendum_results_reject }
+			}
+		#}
+	}
+}
+
+#253001 - Church Lobbies Against Integration
+country_event = {
+	
+	id = 253001
+
+	trigger = {
+		has_country_flag = flag_MLT_integration_referendum_in_progress
+		organized_religions_law = state_religion
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	title = "EVTNAME253001"								#Church Lobbies Against Integration
+	desc = "EVTDESC253001"
+	picture = "1955_Maltese_church_protests"
+
+	option = {
+		name = "EVTOPTA253001"							#Okay
+		#hidden_effects = {
+			random_owned = {
+				limit = {
+					owner = { has_country_flag = flag_MLT_integration_referendum_results_favour }
+				}
+				owner = {
+					random = {
+						chance = 20
+						clr_country_flag = flag_MLT_integration_referendum_results_favour
+						set_country_flag = flag_MLT_integration_referendum_results_unclear
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { has_country_flag = flag_MLT_integration_referendum_results_unclear }
+				}
+				owner = {
+					random = {
+						chance = 20
+						clr_country_flag = flag_MLT_integration_referendum_results_unclear
+						set_country_flag = flag_MLT_integration_referendum_results_reject
+					}
+				}
+			}
+		#}
+	}
+}
+
+#253002 - Referendum Results Favour Integration
+country_event = {
+	
+	id = 253002
+
+	trigger = {
+		has_country_flag = flag_MLT_integration_referendum_in_progress
+		has_country_flag = flag_MLT_integration_referendum_results_favour
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	title = "EVTNAME253002"								#Referendum Results Favour Integration
+	desc = "EVTDESC253002"
+	picture = "1956_Dom_Mintoff"
+
+	option = {
+		name = "EVTOPTA253002"							#Present the results to London
+		ai_chance = {
+			factor = 80
+		}
+		prestige_change = 1
+		clr_country_flag = flag_MLT_integration_referendum_in_progress
+		clr_country_flag = flag_MLT_integration_referendum_results_favour
+		set_country_flag = flag_MLT_integration_referendum_awaiting_response
+		national_unity = 5
+		ENG = { country_event = 181111 }
+	}
+
+	option = {
+		name = "EVTOPTB253002"							#Abandon integration
+		ai_chance = {
+			factor = 20
+		}
+		prestige_change = -3
+		clr_country_flag = flag_MLT_integration_referendum_in_progress
+		clr_country_flag = flag_MLT_integration_referendum_results_favour
+		national_unity = -5
+		add_country_modifier = {
+			name = mod_MLT_integration_referendum_delay
+			duration = 1460
+		}
+	}
+}
+
+#253003 - Referendum Results Unclear
+country_event = {
+	
+	id = 253003
+
+	trigger = {
+		has_country_flag = flag_MLT_integration_referendum_in_progress
+		has_country_flag = flag_MLT_integration_referendum_results_unclear
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	title = "EVTNAME253003"								#Referendum Results Unclear
+	desc = "EVTDESC253003"
+	picture = "1956_Dom_Mintoff"
+
+	option = {
+		name = "EVTOPTA253003"							#Present the results to London
+		ai_chance = {
+			factor = 50
+		}
+		clr_country_flag = flag_MLT_integration_referendum_in_progress
+		clr_country_flag = flag_MLT_integration_referendum_results_unclear
+		set_country_flag = flag_MLT_integration_referendum_awaiting_response
+		national_unity = -2
+		ENG = { country_event = 181111 }
+	}
+
+	option = {
+		name = "EVTOPTB253003"							#Abandon integration
+		ai_chance = {
+			factor = 50
+		}
+		clr_country_flag = flag_MLT_integration_referendum_in_progress
+		clr_country_flag = flag_MLT_integration_referendum_results_unclear
+		national_unity = -2
+		add_country_modifier = {
+			name = mod_MLT_integration_referendum_delay
+			duration = 1460
+		}
+	}
+}
+
+#253004 - Referendum Results Reject Integration
+country_event = {
+	
+	id = 253004
+
+	trigger = {
+		has_country_flag = flag_MLT_integration_referendum_in_progress
+		has_country_flag = flag_MLT_integration_referendum_results_reject
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	title = "EVTNAME253004"								#Referendum Results Reject Integration
+	desc = "EVTDESC253004"
+	picture = "1956_Dom_Mintoff"
+
+	option = {
+		name = "EVTOPTA253004"							#Abandon integration
+		clr_country_flag = flag_MLT_integration_referendum_in_progress
+		clr_country_flag = flag_MLT_integration_referendum_results_reject
+		add_country_modifier = {
+			name = mod_MLT_integration_referendum_delay
+			duration = 1460
+		}
+	}
+}
+
+#253005 - United Kingdom Approves Integration
+country_event = {
+	
+	id = 253005
+
+	is_triggered_only = yes
+
+	title = "EVTNAME253005"								#United Kingdom Approves Integration
+	desc = "EVTDESC253005"
+	picture = "1956_Maltese_Integration_Year"
+
+	option = {
+		name = "EVTOPTA253005"							#Great news
+		clr_country_flag = flag_MLT_integration_referendum_awaiting_response
+		FROM = { inherit = THIS }
+	}
+}
+
+#253006 - United Kingdom Promises Integration
+country_event = {
+	
+	id = 253006
+
+	is_triggered_only = yes
+
+	title = "EVTNAME253006"								#United Kingdom Promises Integration
+	desc = "EVTDESC253006"
+	picture = "1955_London_conference_Malta"
+
+	option = {
+		name = "EVTOPTA253006"							#Okay
+		clr_country_flag = flag_MLT_integration_referendum_awaiting_response
+	}
+}
+
+#253007 - United Kingdom Rejects Integration
+country_event = {
+	
+	id = 253007
+
+	is_triggered_only = yes
+
+	title = "EVTNAME253007"								#United Kingdom Rejects Integration
+	desc = "EVTDESC253007"
+	picture = "1955_London_conference_Malta"
+
+	option = {
+		name = "EVTOPTA253007"							#Unfortunate
+		clr_country_flag = flag_MLT_integration_referendum_awaiting_response
+		set_global_flag = gflag_malta_integration_rejected
+	}
+}
+
+#253008 - United Kingdom Reneges on Integration
+country_event = {
+	
+	id = 253008
+
+	is_triggered_only = yes
+
+	title = "EVTNAME253008"								#United Kingdom Reneges on Integration
+	desc = "EVTDESC253008"
+	picture = "1955_London_conference_Malta"
+
+	option = {
+		name = "EVTOPTA253008"							#Unfortunate
+		clr_country_flag = flag_MLT_integration_referendum_awaiting_response
+	}
+}
+
+#253010 - [YEAR] UK Independence Referendum
+country_event = {
+	
+	id = 253010
+
+	trigger = {
+		tag = MLT
+		MLT = { vassal_of = ENG }
+		ai = yes
+		NOT = { has_country_modifier = mod_MLT_independence_referendum_delay }
+		NOT = { has_country_flag = flag_MLT_independence_referendum_in_progress }
+		NOT = { has_global_flag = gflag_malta_independence_promised }
+		NOT = { has_country_flag = flag_MLT_integration_referendum_in_progress }
+		NOT = { has_global_flag = gflag_malta_integration_promised }
+		ENG = {
+			OR = {
+				war = yes
+				war_exhaustion = 8
+				NOT = { national_unity = 60 }
+				economy_unbalanced = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.10
+			is_major = yes
+		}
+		modifier = {
+			factor = 0.50
+			ENG = { is_major = no }
+		}
+		modifier = {
+			factor = 0.85
+			ENG = { economy_unbalanced = yes }
+		}
+		modifier = {
+			factor = 0.85
+			ENG = { war = yes }
+		}
+		modifier = {
+			factor = 0.85
+			ENG = { war_exhaustion = 8 }
+		}
+		modifier = {
+			factor = 0.85
+			ENG = { war_exhaustion = 16 }
+		}
+		modifier = {
+			factor = 0.85
+			ENG = { dissent = 4 }
+		}
+		modifier = {
+			factor = 0.85
+			ENG = { dissent = 8 }
+		}
+		modifier = {
+			factor = 0.65
+			has_global_flag = gflag_malta_integration_rejected
+		}
+		modifier = {
+			factor = 0.75
+			exists = LBY
+			LBY = { is_subject = no }
+		}
+		modifier = {
+			factor = 0.80
+			exists = TUN
+		}
+		modifier = {
+			factor = 0.80
+			exists = ALG
+		}
+		modifier = {
+			factor = 0.85
+			exists = MOR
+		}
+		modifier = {
+			factor = 0.85
+			ideology = social_democrat_idolg
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				ideology = left_wing_radical_idolg
+				ideology = fascistic_idolg
+			}
+		}
+		modifier = {
+			factor = 0.65
+			ideology_group = comintern
+		}
+		modifier = {
+			factor = 1.33
+			economy_unbalanced = yes
+		}
+		modifier = {
+			factor = 1.33
+			relation = { who = ENG value = 75 }
+		}
+		modifier = {
+			factor = 1.33
+			relation = { who = ENG value = 150 }
+		}
+		modifier = {
+			factor = 1.33
+			OR = {
+				same_faction = ENG
+				alliance_with = ENG
+			}
+		}
+		modifier = {
+			factor = 1.33
+			same_party  = ENG
+		}
+		modifier = {
+			factor = 1.1
+			biggest_naval = ENG
+		}
+		modifier = {
+			factor = 1.1
+			biggest_army = ENG
+		}
+		modifier = {
+			factor = 1.1
+			biggest_air = ENG
+		}
+		modifier = {
+			factor = 1.1
+			biggest_nuke = ENG
+		}
+	}
+
+	title = "EVTNAME253010"								#[YEAR] UK Independence Referendum
+	desc = "EVTDESC253010"
+	picture = "1964_Maltese_Independence_signs"
+
+	option = {
+		name = "EVTOPTA253010"							#Okay
+		set_country_flag = flag_MLT_independence_referendum_in_progress
+		#hidden_effects = {
+			random_list = {
+				33 = { set_country_flag = flag_MLT_independence_referendum_results_favour }
+				33 = { set_country_flag = flag_MLT_independence_referendum_results_unclear }
+				33 = { set_country_flag = flag_MLT_independence_referendum_results_reject }
+			}
+		#}
+	}
+}
+
+#253012 - Referendum Results Favour Independence
+country_event = {
+	
+	id = 253012
+
+	trigger = {
+		has_country_flag = flag_MLT_independence_referendum_in_progress
+		has_country_flag = flag_MLT_independence_referendum_results_favour
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	title = "EVTNAME253012"								#Referendum Results Favour Independence
+	desc = "EVTDESC253012"
+	picture = "1964_Maltese_Independence_constitution"
+
+	option = {
+		name = "EVTOPTA253012"							#Present the results to London
+		ai_chance = {
+			factor = 90
+		}
+		prestige_change = 1
+		clr_country_flag = flag_MLT_independence_referendum_in_progress
+		clr_country_flag = flag_MLT_independence_referendum_results_favour
+		set_country_flag = flag_MLT_independence_referendum_awaiting_response
+		national_unity = 5
+		ENG = { country_event = 181114 }
+	}
+
+	option = {
+		name = "EVTOPTB253012"							#Abandon independence
+		ai_chance = {
+			factor = 10
+		}
+		prestige_change = -3
+		clr_country_flag = flag_MLT_independence_referendum_in_progress
+		clr_country_flag = flag_MLT_independence_referendum_results_favour
+		national_unity = -5
+		add_country_modifier = {
+			name = mod_MLT_independence_referendum_delay
+			duration = 1460
+		}
+	}
+}
+
+#253013 - Referendum Results Unclear
+country_event = {
+	
+	id = 253013
+
+	trigger = {
+		has_country_flag = flag_MLT_independence_referendum_in_progress
+		has_country_flag = flag_MLT_independence_referendum_results_unclear
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	title = "EVTNAME253013"								#Referendum Results Unclear
+	desc = "EVTDESC253013"
+	picture = "1964_Maltese_Independence_constitution"
+
+	option = {
+		name = "EVTOPTA253013"							#Present the results to London
+		ai_chance = {
+			factor = 65
+		}
+		clr_country_flag = flag_MLT_independence_referendum_in_progress
+		clr_country_flag = flag_MLT_independence_referendum_results_unclear
+		set_country_flag = flag_MLT_independence_referendum_awaiting_response
+		national_unity = -2
+		ENG = { country_event = 181115 }
+	}
+
+	option = {
+		name = "EVTOPTB253013"							#Abandon independence
+		ai_chance = {
+			factor = 35
+		}
+		clr_country_flag = flag_MLT_independence_referendum_in_progress
+		clr_country_flag = flag_MLT_independence_referendum_results_unclear
+		national_unity = -2
+		add_country_modifier = {
+			name = mod_MLT_independence_referendum_delay
+			duration = 1460
+		}
+	}
+}
+
+#253014 - Referendum Results Reject Independence
+country_event = {
+	
+	id = 253014
+
+	trigger = {
+		has_country_flag = flag_MLT_independence_referendum_in_progress
+		has_country_flag = flag_MLT_independence_referendum_results_reject
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	title = "EVTNAME253014"								#Referendum Results Reject Independence
+	desc = "EVTDESC253014"
+	picture = "1964_Maltese_Independence_constitution"
+
+	option = {
+		name = "EVTOPTA253014"							#Abandon independence
+		ai_chance = {
+			factor = 99
+		}
+		clr_country_flag = flag_MLT_independence_referendum_in_progress
+		clr_country_flag = flag_MLT_independence_referendum_results_reject
+		add_country_modifier = {
+			name = mod_MLT_independence_referendum_delay
+			duration = 1460
+		}
+	}
+
+	option = {
+		name = "EVTOPTB253014"							#Declare Independence
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					ENG = { is_major = no }
+					AND = {
+						ENG = { war = yes }
+						ENG = { war_exhaustion = 5 }
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				ENG = { is_major = no }
+			}
+			modifier = {
+				factor = 1.5
+				ENG = { war = yes }
+			}
+			modifier = {
+				factor = 1.5
+				ENG = { war_exhaustion = 12 }
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					ideology = fascistic_idolg
+					ideology = left_wing_radical_idolg
+					ideology_group = comintern
+				}
+			}
+		}
+		clr_country_flag = flag_MLT_independence_referendum_in_progress
+		clr_country_flag = flag_MLT_independence_referendum_results_reject
+		dissent = 10
+		national_unity = -15		
+		popularity = -15
+		ENG = { country_event = 181117 }
+	}
+}
+
+#253015 - United Kingdom Approves Independence
+country_event = {
+	
+	id = 253015
+
+	is_triggered_only = yes
+
+	title = "EVTNAME253015"								#United Kingdom Approves Independence
+	desc = "EVTDESC253015"
+	picture = "1964_Maltese_Independence"
+
+	option = {
+		name = "EVTOPTA253015"							#Great News
+		clr_country_flag = flag_MLT_independence_referendum_awaiting_response
+		ENG = { release_vassal = THIS }
+	}
+}
+
+#253016 - United Kingdom Promises Independence
+country_event = {
+	
+	id = 253016
+
+	is_triggered_only = yes
+
+	title = "EVTNAME253016"								#United Kingdom Promises Independence
+	desc = "EVTDESC253016"
+	picture = "1962_Malta_Independence_conference"
+
+	option = {
+		name = "EVTOPTA253016"							#Okay
+		ai_chance = {
+			factor = 100
+		}
+		clr_country_flag = flag_MLT_independence_referendum_awaiting_response
+	}
+
+	option = {
+		name = "EVTOPTB253016"							#Declare Independence
+		ai_chance = {
+			factor = 0
+		}
+		clr_country_flag = flag_MLT_independence_referendum_awaiting_response
+		national_unity = -8
+		dissent = 4
+		ENG = { country_event = 181117 }
+	}
+}
+
+#253017 - United Kingdom Rejects Independence
+country_event = {
+	
+	id = 253017
+
+	is_triggered_only = yes
+
+	title = "EVTNAME253017"								#United Kingdom Rejects Independence
+	desc = "EVTDESC253017"
+	picture = "1962_Malta_Independence_conference"
+
+	option = {
+		name = "EVTOPTA253017"							#Unfortunate
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 1.25
+				relation = { who = ENG value = 75 }
+			}
+			modifier = {
+				factor = 1.25
+				relation = { who = ENG value = 150 }
+			}
+		}
+		clr_country_flag = flag_MLT_independence_referendum_awaiting_response
+	}
+
+	option = {
+		name = "EVTOPTB253018"							#Declare Independence
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				ENG = { is_major = no }
+			}
+			modifier = {
+				factor = 1.5
+				ENG = { war = yes }
+			}
+			modifier = {
+				factor = 1.5
+				ENG = { war_exhaustion = 12 }
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					ideology = fascistic_idolg
+					ideology = left_wing_radical_idolg
+					ideology_group = comintern
+				}
+			}
+		}
+		clr_country_flag = flag_MLT_independence_referendum_awaiting_response
+		ENG = { country_event = 181117 }
+	}
+}
+
+#253018 - United Kingdom Reneges on Independence
+country_event = {
+	
+	id = 253018
+
+	is_triggered_only = yes
+
+	title = "EVTNAME253018"								#United Kingdom Reneges on Independence
+	desc = "EVTDESC253018"
+	picture = "1962_Malta_Independence_conference"
+
+	option = {
+		name = "EVTOPTA253018"							#Unfortunate
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 1.25
+				relation = { who = ENG value = 75 }
+			}
+			modifier = {
+				factor = 1.25
+				relation = { who = ENG value = 150 }
+			}
+		}
+		clr_country_flag = flag_MLT_independence_referendum_awaiting_response
+	}
+
+	option = {
+		name = "EVTOPTB253018"							#Declare Independence
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				ENG = { is_major = no }
+			}
+			modifier = {
+				factor = 1.5
+				ENG = { war = yes }
+			}
+			modifier = {
+				factor = 1.5
+				ENG = { war_exhaustion = 12 }
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					ideology = fascistic_idolg
+					ideology = left_wing_radical_idolg
+					ideology_group = comintern
+				}
+			}
+		}
+		clr_country_flag = flag_MLT_independence_referendum_awaiting_response
+		ENG = { country_event = 181117 }
+	}
+}

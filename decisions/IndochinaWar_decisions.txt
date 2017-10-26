@@ -1,0 +1,252 @@
+#IndochinaWar_decisions.txt
+#1946 Indochina War
+
+#FRA - France:
+	#rebellion_indochina_FRA 			- How to deal with the rebellions in Indochina
+	#DRV_hanoi_FRA 						- IDC took back Saigon and KMT occupied Hanoi - how to deal with DRV now?
+	#DRV_rebellion_FRA 					- IDC took back Saigon and KMT left - how to deal with DRV now?
+	#fate_indochina_FRA 				- IDC was victorious - what now?
+	#geneva_indochina_FRA 				- We are losing the war! What now?
+
+#CHI - Nationalist China:
+	#leave_indochina_CHI 				- Whether to leave Indochina after IDC took back Saigon from the rebels or not
+	#intervene_firstindochinawar_CHI 	- Whether the Kuomintang want to support IDC (anti-communist) or DRV (anti-colonialist)
+	
+#CHC - Communist China:
+	#intervene_firstindochinawar_CHC	- Whether to support DRV or not
+
+	
+diplomatic_decisions = {
+	## FRA ##
+	#rebellion_indochina_FRA - How to deal with the rebellions in Indochina
+	rebellion_indochina_FRA = {
+		category = international
+	    picture = "1945_august_revolution_hanoi"
+		
+		potential = {
+			tag = FRA
+			NOT = { has_country_flag =  rebellion_indochina_FRA_done }
+		}
+		
+		allow = {
+			exists = IDC
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			FRA = { country_event = 194000 } #Decision follow-up event
+			set_country_flag = rebellion_indochina_FRA_done
+		}
+	}
+
+	#DRV_hanoi_FRA - IDC took back Saigon and KMT occupied Hanoi - how to deal with DRV now?
+	DRV_hanoi_FRA = {
+		category = international
+	    picture = "1946_hanoi"
+		
+		potential = {
+			NOT = { has_country_flag =  DRV_hanoi_FRA_done }
+			has_global_flag = hanoi_seized_CHI							#KMT decided to take Hanoi
+			NOT = { IDC = { war_with = DRV } }							#No decision about war if it's already ongoing
+			NOT = { FRA = { war_with = DRV } }
+			tag = FRA
+		}
+		
+		allow = {
+			exists = IDC
+			exists = DRV
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			FRA = { country_event = 194002 } 							#Decision follow-up event
+			set_country_flag = DRV_hanoi_FRA_done
+		}
+	}
+
+	#DRV_rebellion_FRA - IDC took back Saigon and KMT left - how to deal with DRV now?
+	DRV_rebellion_FRA = {
+		category = international
+	    picture = "1946_hanoi"
+		
+		potential = {
+			tag = FRA
+			NOT = { has_country_flag =  DRV_rebellion_FRA_done }
+			has_global_flag = hanoi_not_seized_CHI						#KMT decided to leave Indochina
+			NOT = { IDC = { war_with = DRV } }							#No decision about war if it's already ongoing
+			NOT = { FRA = { war_with = DRV } }
+		}
+		
+		allow = {
+			exists = IDC
+			exists = DRV
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			FRA = { country_event = 194003 } #Decision follow-up event
+			set_country_flag = DRV_rebellion_FRA_done
+		}
+	}
+
+	#fate_indochina_FRA - IDC was victorious - what now?
+	fate_indochina_FRA = {
+		category = international
+	    picture = "1954_french_troops_vietnam"
+		
+		potential = {
+			tag = FRA
+			NOT = { has_country_flag = fate_indochina_FRA_done }
+			has_global_flag = indochina_french_victory					#IDC got the victory event IDC717003
+		}
+		
+		allow = {
+			exists = IDC
+			NOT = { exists = DRV }
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			CHI = { 11937 = { secede_province = IDC } }
+			FRA = { country_event = 194004 } #Decision follow-up event
+			set_country_flag = fate_indochina_FRA_done
+		}
+	}
+
+	#geneva_indochina_FRA - We are losing the war! What now?
+	geneva_indochina_FRA = {
+		category = international
+	    picture = "1954_victory_for_vietnamese"
+		
+		potential = {
+			tag = FRA
+			NOT = { has_global_flag = geneva_indochina_FRA_done }
+			OR = {
+				has_global_flag = indochina_french_victory				#IDC got the victory event IDC717003
+				IDC = { lost_national = 0.50 }							#IDC lost half of its VPs/Provinces.
+			
+				OR = {													#No peace conference if there's no war
+					IDC = { war_with = DRV }
+					FRA = { war_with = DRV }
+				}
+			}
+		}
+		
+		allow = {
+			exists = DRV
+			OR = {
+				IDC = { lost_national = 0.35 }								#Number lower than 50% prevents IDc from avoiding the event by taking back just one province
+				dissent = 25												#With massive unrest, France can't continue a far-away war
+				OR = {
+					ideology = left_wing_radical_idolg						#So either IDC is losing ground or FRA is communist
+					ideology = maoist_idolg
+					ideology = communist_idolg
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+		FRA = { country_event = 194005 } #Decision follow-up event
+		set_global_flag = geneva_indochina_FRA_done
+		}
+	}
+	
+	## CHI ##
+	#leave_indochina_CHI - Whether to leave Indochina after IDC took back Saigon from the rebels or not
+	leave_indochina_CHI = {
+		category = international
+	    picture = "1945_chinese_allied_talks"
+		
+		potential = {
+			tag = CHI
+			has_global_flag =  IDC_retook_saigon_done
+			NOT = { has_global_flag = leave_indochina_CHI_done}
+		}
+			
+		allow = {
+			exists = IDC
+			exists = DRV
+			NOT = { IDC = { war_with = DRV } }
+			NOT = { CHI = { war_with = DRV } }						#Just in case the player toyed around with DOWs
+			NOT = { CHI = { war_with = IDC } }
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			set_global_flag = leave_indochina_CHI_done
+			CHI = { country_event = 152000 }						#Decision follow-up event
+		}
+	}
+
+	#intervene_firstindochinawar_CHI - Whether the Kuomintang want to support IDC (anti-communist) or DRV (anti-colonialist)
+	intervene_firstindochinawar_CHI = {
+		category = international
+	    picture = "1946_vietminh"
+		
+		potential = {
+			tag = CHI
+			NOT = { has_country_flag = intervene_firstindochinawar_CHI_done }
+			NOT = { CHI = { lost_national = 0.25 } }									#CHI is not doing to bad in the Chinese Civil War
+			OR = {
+				FRA = { war_with = DRV }
+				IDC = { war_with = DRV }
+			}
+		}
+		
+		allow = {
+			NOT = { CHI = { war_with = DRV } }										#Why "intervene" if already a belligerent?
+			NOT = { CHI = { war_with = IDC } }
+			NOT = { CHI = { war_with = FRA } }
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			set_country_flag = intervene_firstindochinawar_CHI_done
+			CHI = { country_event = 152003 }										#Decision follow-up event
+		}
+	}
+	
+	## CHC ##
+	#intervene_firstindochinawar_CHC - Whether to support DRV or not
+	intervene_firstindochinawar_CHC = {
+		category = international
+	    picture = "1946_vietminh"
+		
+		potential = {
+			tag = CHC
+			NOT = { has_country_flag = intervene_firstindochinawar_CHC_done }
+			NOT = { CHC = { lost_national = 0.35 } }									#CHC is not doing to bad in the Chinese Civil War
+			OR = {
+				FRA = { war_with = DRV }
+				IDC = { war_with = DRV }
+			}
+		}
+		
+		allow = {
+			NOT = { CHC = { war_with = DRV } }										#Why "intervene" if already a belligerent?
+			NOT = { CHC = { war_with = IDC } }
+			NOT = { CHC = { war_with = FRA } }
+			
+			NOT = { ideology = fascistic_idolg }									#CHC is not rigth-wing or centre-right
+			NOT = { ideology = paternal_auto_idolg }
+			NOT = { ideology = social_cons_idolg }
+			NOT = { ideology = market_liberal_idolg }
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			set_country_flag = intervene_firstindochinawar_CHC_done
+			CHC = { country_event = 151000 }										#Decision follow-up event
+		}
+	}
+	
+}

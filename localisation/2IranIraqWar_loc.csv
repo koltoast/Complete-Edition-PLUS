@@ -1,0 +1,160 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+Syrian_oilpipeline;Syrian Oil Pipeline Closed;;;;;;;;;;;;;x
+KWT_Iraq_money;Financial Support from Kuwait;;;;;;;;;;;;;x
+Sau_Iraq_money;Financial Support from Saudi Arabia;;;;;;;;;;;;;x
+USA_Iraq_support;Military Support from the USA;;;;;;;;;;;;;x
+FRA_Iraq_support;Military Support from France;;;;;;;;;;;;;x
+SOV_Iraq_support;Military Support from the USSR;;;;;;;;;;;;;x
+KWT_Iraq_cost;Financial Support to Iraq;;;;;;;;;;;;;x
+GER_Iraq_support;Military Support from West Germany;;;;;;;;;;;;;x
+Iraq_Totalwar;Iran-Iraq Total War;;;;;;;;;;;;;x
+Iraqi_rally;Iraqi Religious Rally;;;;;;;;;;;;;x
+Iraq_militaryCrisis;Military Crisis;;;;;;;;;;;;;x
+revolutionary_disarry;Revolutionary Disarray;;;;;;;;;;;;;x
+airforce_topguns;Airforce Top Guns;;;;;;;;;;;;;x
+Iran_fights;Iran Fights On;;;;;;;;;;;;;x
+fight_kurds;Kurd Revolt Suppression;;;;;;;;;;;;;
+ignore_kurds;Kurd Revolt Ignored;;;;;;;;;;;;;x
+placate_kurds;Kurd Revolt Placation;;;;;;;;;;;;;
+China_Iran_support;Military Support from Communist China;;;;;;;;;;;;;
+Tanker_losses;Tanker Losses;;;;;;;;;;;;;x
+Fatwa_on_Iraq;Fatwa on Iraq;;;;;;;;;;;;;
+Iranian_crisis;Political Crisis;;;;;;;;;;;;;
+Iran_Airforce_purge;Airforce Purge;;;;;;;;;;;;;
+Iran_militaryCrisis;Military Crisis;;;;;;;;;;;;;
+Iran_militaryCrisis_II;Military Crisis;;;;;;;;;;;;;
+Iran_Navy_losses;Iran-Iraq War Naval Losses;;;;;;;;;;;;;
+Iran_oilrig_losses;Iran-Iraq War Oilrig Losses;;;;;;;;;;;;;
+Sau_Iraq_cost;Financial Support to Iraq;;;;;;;;;;;;;
+USA_Iraq_cost;Military Support to Iraq;;;;;;;;;;;;;
+FRA_Iraq_cost;Military Support to Iraq;;;;;;;;;;;;;
+SOV_Iraq_cost;Military Support to Iraq;;;;;;;;;;;;;
+GER_Iraq_cost;Military Support to Iraq;;;;;;;;;;;;;
+China_Iran_cost;Military Support to Iran;;;;;;;;;;;;;
+dec_IRQ_Iraq_declares_war_on_Iran_title;Invade Iran!;;;;;;;;;;;;;
+dec_IRQ_Iraq_declares_war_on_Iran_desc;The Iraqi military has been resupplied and reequipped and may well be in a position to attack. At the very least Iraq should be able to regain the lands taken via the Algiers Agreement a number of years ago. Strike now and strike hard!;;;;;;;;;;;;;
+dec_IRQ_Iraq_ceasefire_prop_title;Propose a ceasefire with Iran;;;;;;;;;;;;;
+dec_IRQ_Iraq_ceasefire_prop_desc;Having gained control of the disputed provinces, Iraq considered cutting its loses and asking for a ceasefire.;;;;;;;;;;;;;
+dec_IRQ_Iraq_total_war_title;Take Total War measures.;;;;;;;;;;;;;
+dec_IRQ_Iraq_total_war_desc;Saddam commenced a policy of total war, gearing most of his country towards defending against Iran.  Iraq was spending 40–75% of their GDP on military equipment. Saddam had also more than doubled the size of the Iraqi army, from 200,000 soldiers (12 divisions and 3 independent brigades) to 500,000.;;;;;;;;;;;;;
+dec_IRQ_Iraq_tanker_war_title;Attack Iranian Shipping;;;;;;;;;;;;;
+dec_IRQ_Iraq_tanker_war_desc;Iraq used their now expanded air force to carry out strategic bombing against Iranian shipping, economic targets, and cities in order to damage Iran's economy and morale. Iraq also wanted to provoke Iran into doing something that would cause the superpowers to be directly involved in the conflict on the Iraqi side.;;;;;;;;;;;;;
+dec_IRQ_Iraq_rally_title;Rally war effort;;;;;;;;;;;;;
+dec_IRQ_Iraq_rally_desc;The Iranian Fatwa combined with loss of Iraqi territory prompted a rallying of Iraqi fighting spirit. Volunteers surged to the armed forces, including many foreign fighters. Iraq also was able to rebuild its military hardware and expand the military significantly.;;;;;;;;;;;;;
+dec_IRQ_Iraq_warend_title;End the Iran-Iraq War;;;;;;;;;;;;;
+dec_IRQ_Iraq_warend_desc;UN Resolution 598 combined with international pressure forced the Iraqis to agree to a ceasefire.;;;;;;;;;;;;;
+dec_PER_Iranian_Revolutionary_Guards_Basij_title;Islamic Guard and Basji Militia;;;;;;;;;;;;;
+dec_PER_Iranian_Revolutionary_Guards_Basij_desc;The Islamic revolutionary Guard are Iran’s elite troops. Instilled with the best equipment and training, these troops are the fundamentalist vanguard of the Islamic revolution. The Basji Militia are composed of very young men and men too old for service. However these troops are endowed with a fanatical will to bleed for Islam. The main drawback with these religious soldiers is in the lack of coordination with the Regular army. This disarray of the land forces is compensated to some extent by Iran’s excellent air force pilots.;;;;;;;;;;;;;
+dec_PER_Iranian_people_fight_on_title;Iran will fight!;;;;;;;;;;;;;
+dec_PER_Iranian_people_fight_on_desc;The Iranian people rally to the cause! The army swells in numbers and many more Basji militia volunteer to die for the Islamic revolution.;;;;;;;;;;;;;
+dec_PER_Iran_naval_blockade_title;Blockade Iraqi shipping;;;;;;;;;;;;;
+dec_PER_Iran_naval_blockade_desc;The Iranian Navy imposed a naval blockade of Iraq, stopping and inspecting any ship thought to be trading with Iraq. They operated with virtual impunity, as Iraqi pilots had little training in hitting naval targets. Some Iranian warships attacked tankers with ship-to-ship missiles, while others used their radars to guide land-based anti-ship missiles to their targets. Iran began to rely on its new Revolutionary Guard's navy, which used Boghammar speedboats: fitted with rocket launchers, RPGs, and heavy machine guns, these speedboats would launch surprise attacks against tankers and cause substantial damage.;;;;;;;;;;;;;
+dec_PER_Iran_fatwa_Iraq_title;Declares a Fatwa on Iraq;;;;;;;;;;;;;
+dec_PER_Iran_fatwa_Iraq_desc;Ayatollah Khomeini issued a fatwa declaring that the war must be won within a year. The Iranians increased recruitment efforts, obtaining 650,000 volunteers. The animosity between the Army and the Revolutionary Guard arose again, with the Army wanting to use more refined, limited military attacks while the Revolutionary Guard wanted to carry out major offensives.;;;;;;;;;;;;;
+dec_PER_Iran_warend_title;End the Iran-Iraq War;;;;;;;;;;;;;
+dec_PER_Iran_warend_desc;Iran accepted Resolution 598, showing its willingness to accept a ceasefire. A statement from Khomeini was read out in a radio address, and he expressed deep displeasure and reluctance about accepting the ceasefire: “Happy are those who have departed through martyrdom. Happy are those who have lost their lives in this convoy of light. Unhappy am I that I still survive and have drunk the poisoned chalice...”;;;;;;;;;;;;;
+dec_SYR_Syrian_oil_pipe_closure_title;Close Syria-Iraq Oil pipeline;;;;;;;;;;;;;
+dec_SYR_Syrian_oil_pipe_closure_desc;Syria, one of the few nations that supported Iran, closed the Kirkuk–Banias pipeline that had allowed Iraqi oil to reach tankers on the Mediterranean, reducing the Iraqi budget by US$5 billion per month. Syria's closure of the Kirkuk-Banis pipeline left Iraq with the pipeline to Turkey as the only mean of exporting oil. However, that pipeline had a capacity of only 500,000 barrels per day (79,000 m3/d), which was insufficient to pay for the war. It appeared that Iraq’s war would be bled dry before it had begun.;;;;;;;;;;;;;
+dec_KWT_Kuwait_finance_Iraq_title;Finance the Iraqi war machine;;;;;;;;;;;;;
+dec_KWT_Kuwait_finance_Iraq_desc;Kuwait feared a powerful Iran enough to contribute financial aid to Iraq to counter the Oil pipeline strangle hold.;;;;;;;;;;;;;
+dec_SYR_Syrian_oil_pipe_closure_title;Close Syria-Iraq Oil pipeline;;;;;;;;;;;;;
+dec_SYR_Syrian_oil_pipe_closure_desc;Syria, one of the few nations that supported Iran, closed the Kirkuk–Banias pipeline that had allowed Iraqi oil to reach tankers on the Mediterranean, reducing the Iraqi budget by US$5 billion per month. Syria's closure of the Kirkuk-Banis pipeline left Iraq with the pipeline to Turkey as the only mean of exporting oil. However, that pipeline had a capacity of only 500,000 barrels per day (79,000 m3/d), which was insufficient to pay for the war. It appeared that Iraq’s war would be bled dry before it had begun.;;;;;;;;;;;;;
+dec_SAU_Saudi_finance_Iraq_title;Finance the Iraqi war machine;;;;;;;;;;;;;
+dec_SAU_Saudi_finance_Iraq_desc;Saudi Arabia, Kuwait and the other Gulf States provided Iraq with an average of $60 billion in subsidies per year. These nations greatly feared an Iranian victory especially after the Iranian leader Ayatollah Khomeini declared monarchies to be illegitimate and an un-Islamic form of government. Thanks to this financial aid Iraq could continue its war against Iran despite the Syrian Oil pipeline trade closure.;;;;;;;;;;;;;
+dec_USA_Iraq_support_title;Send military aid to Iraq;;;;;;;;;;;;;
+dec_USA_Iraq_support_desc;"The diplomatic, monetary, and military support by the U.S., including massive loans, political clout, and intelligence on Iranian deployments gathered using American spy satellites were crucial to the Iraqi war effort. The Iraqis relied heavily on American satellite footage and radar planes to detect Iranian troop movements, and they enabled Iraq to move troops to the site before the battle. The US President that the United States ""could not afford to allow Iraq to lose the war to Iran"", and that the United States ""would do whatever was necessary to prevent Iraq from losing the war with Iran"".";;;;;;;;;;;;;
+dec_USA_Resolution598_title;UN Resolution 598;;;;;;;;;;;;;
+dec_USA_Resolution598_desc;The UN Security Council passed the US-sponsored Resolution 598, which called for an end to the fighting and a return to pre-war boundaries.[ This resolution was noted by Iran for being the first resolution to call for a return to the pre-war borders, and setting up a commission to determine the aggressor and compensation. This was in contrast to previous settlements that only allowed a ceasefire (leaving Iraq in possession of disputed Iranian territories).;;;;;;;;;;;;;
+dec_FRA_Iraq_support_title;Send military aid to Iraq;;;;;;;;;;;;;
+dec_FRA_Iraq_support_desc;France sold Iraq millions of dollars worth of weapons, including Gazelle helicopters, Mirage F-1 fighters, and Exocet missiles.;;;;;;;;;;;;;
+dec_FRG_Iraq_support_title;Send military aid to Iraq;;;;;;;;;;;;;
+dec_FRG_Iraq_support_desc;West Germany supplied Iraq with military hardware including Roland missiles.;;;;;;;;;;;;;
+dec_SOV_Iraq_support_title;Send military aid to Iraq;;;;;;;;;;;;;
+dec_SOV_Iraq_support_desc;The Soviet Union, angered with Iran for purging and destroying the Tudeh Party (Iran's national communist party), sent large shipments of weapons to Iraq. The Iraqi Air Force was rearmed with Soviet and French fighter jets and helicopters. Iraq also bought weapons such as AK-47s and rocket-propelled grenades from the Chinese. The depleted tank forces were replenished with Soviet tanks, and the Iraqis were rearmed in the face of renewed Iranian attacks.;;;;;;;;;;;;;
+dec_CHC_Iran_support_title;Send military aid to Iran;;;;;;;;;;;;;
+dec_CHC_Iran_support_desc;Iran was unable to get very many new weapons, though they did gain some from China, North Korea, and Libya. There were also clandestine purchases from certain elements within Israel and the United States, who also bought small arms from China, via North Korea.;;;;;;;;;;;;;
+EVTNAME221100;War Between Iran and Iraq;;;;;;;;;;;;;
+EVTDESC221100;This is the AI only event which begins the war between Iran and Iraq. The player has a separate decision for this.;;;;;;;;;;;;;
+EVTOPTA221100;It is WAR!;;;;;;;;;;;;;
+EVTNAME221001;Kuwait lends a hand;;;;;;;;;;;;;
+EVTDESC221001;Kuwait is providing Iraq with money to help in the war with Iran.;;;;;;;;;;;;;
+EVTOPTA221001;Thank You Kuwait!;;;;;;;;;;;;;x
+EVTNAME221002;Saudi Arabia Helps;;;;;;;;;;;;;
+EVTDESC221002;Saudi Arabia is providing Iraq with money to help in the war with Iran.;;;;;;;;;;;;;
+EVTOPTA221002;Thank You Saudi Arabia!;;;;;;;;;;;;;
+EVTNAME221003;Support from the USA;;;;;;;;;;;;;
+EVTDESC221003;The USA is keen to support Iraq in the war with Iran;;;;;;;;;;;;;
+EVTOPTA221003;Thank You USA!;;;;;;;;;;;;;
+EVTNAME221004;Support from France;;;;;;;;;;;;;
+EVTDESC221004;France is supporting Iraq in the war with Iran.;;;;;;;;;;;;;
+EVTOPTA221004;Thank You France!;;;;;;;;;;;;;
+EVTNAME221005;Support from West Germany;;;;;;;;;;;;;
+EVTDESC221005;West Germany is supporting Iraq in the war with Iran.;;;;;;;;;;;;;
+EVTOPTA221005;Thank You West Germany!;;;;;;;;;;;;;
+EVTNAME221006;Suppport from the Soviets;;;;;;;;;;;;;
+EVTDESC221006;The Soviet Union is supporting Iraq in the war with Iran;;;;;;;;;;;;;
+EVTOPTA221006;Thank You USSR!;;;;;;;;;;;;;
+EVTNAME221007;Iran has blockaded our shipping lanes;;;;;;;;;;;;;
+EVTDESC221007;Iran has imposed a naval blockade and attacked Iraqi shipping. Hopefully the West will intervene to protect their oil trade. ;;;;;;;;;;;;;
+EVTOPTA221007;Bastards!;;;;;;;;;;;;;
+EVTNAME221008;Military Crisis;;;;;;;;;;;;;
+EVTDESC221008;Military defeats can no longer be ignored. The fault must surely lie with the Generals. Executing the generals who fail Iraq will set an example for the rest of the military.;;;;;;;;;;;;;
+EVTOPTA221008;Useless Fools!;;;;;;;;;;;;;
+EVTNAME221009;Minister is Shot;;;;;;;;;;;;;
+EVTDESC221009; At a cabinet meeting in Baghdad, Minister of Health Riyadh Ibrahim Hussein suggested that Saddam could step down temporarily as a way of easing Iran towards a ceasefire, and then afterwards would come back to power. Saddam, annoyed, asked if anyone else in the Cabinet agreed with the Health Minister's idea. When no one raised their hand in support, he escorted Riyadh Hussein to the next room, closed the door and shot him with his pistol. Saddam returned to the room and continued with his meeting.;;;;;;;;;;;;;
+EVTOPTA221009;Fool!;;;;;;;;;;;;;
+EVTNAME286107;Kurdish Revolts;;;;;;;;;;;;;
+EVTDESC286107;Iraq has helped to instigate riots among Iranian Arabs in Khuzestan province, supporting them in their labor disputes, and turning uprisings into armed battles between Iran's Revolutionary Guards and militants, killing over 100 on both sides.;;;;;;;;;;;;;
+EVTOPTA286107;Crush the Revolts;;;;;;;;;;;;;
+EVTOPTB286107;Ignore the Revolts;;;;;;;;;;;;;
+EVTOPTB286107;Placate the Rebels;;;;;;;;;;;;;
+EVTNAME286108;Support from China;;;;;;;;;;;;;
+EVTDESC286108;China is one of the few nations who Iran receives support from in the war with Iraq;;;;;;;;;;;;;
+EVTOPTA286108;Thank You China!;;;;;;;;;;;;;
+EVTNAME286109;Iraq requests peace;;;;;;;;;;;;;
+EVTDESC286109;The Iraqi Government wants a ceasefire. It would be wise to consider the way the war is unfolding before deciding. Allowing Iraq to control Iranian land might not be in Iran’s best interests. However if losses have been severe and the situation is about to get worse then a ceasefire would be acceptable. The Revolution must survive this conflict!;;;;;;;;;;;;;
+EVTOPTA286109;No Chance For Peace;;;;;;;;;;;;;
+EVTOPTB286109;Give Peace A Chance;;;;;;;;;;;;;
+EVTNAME286110;Iraq attacks our shipping;;;;;;;;;;;;;
+EVTDESC286110;Iraq has began attacking Iranian shipping and Oil Wells in the Gulf. Whilst these attacks are destructive, we should also retaliate and attack the Iraqi trade routes.;;;;;;;;;;;;;
+EVTOPTA286110;Bastards!;;;;;;;;;;;;;
+EVTNAME286111;Political Crisis;;;;;;;;;;;;;
+EVTDESC286111;The progress of the war is causing much tension between the moderate and hardliner leadership. The moderates support the regular army and less fanatical military tactics. However this is casuing some unrest with the Islamic revolutionary Guards who believe in victory at all costs as well as human wave attacks with Basji Militia. Lack of coordination in the armed forces highlights this political conflict.;;;;;;;;;;;;;
+EVTOPTA286111;Not Good News;;;;;;;;;;;;;
+EVTNAME286112;Purge the Air force Generals;;;;;;;;;;;;;
+EVTDESC286112;The Political Crisis has spilled over into the Iranian Airforce. Despite the Air force being highly trained and perhaps the most valuable part of the armed forces, it lacks Revolutionary zeal. Many of the pre revolution air force generals will need to be removed.;;;;;;;;;;;;;
+EVTOPTA286112;For the Revolution!;;;;;;;;;;;;;
+EVTNAME286113;Military Crisis;;;;;;;;;;;;;
+EVTDESC286113;The Iranian public had become increasingly war-weary and disillusioned with the fighting, and relatively few volunteers joined the fight. Because the Iranian war effort relied on popular mobilization, their military strength actually declined, and Iran was unable to launch any major offensives. As a result, the momentum of the fighting shifted towards the regular army. Since the regular army was conscription based, it made the war even less popular. Many Iranians began to try to escape the conflict. Anti-war demonstrations took place in 74 cities throughout Iran;;;;;;;;;;;;;
+EVTOPTA286113;Not Good News;;;;;;;;;;;;;
+EVTNAME286114;Operation Earnest Will;;;;;;;;;;;;;
+EVTDESC286114;The US Navy has begun to protect Kuwaiti oil tankers in the Persian Gulf. These US operations to protect shipping are proving to be very problematic for us. Iran dare not attack US forces in retaliation, however the US attacks are threatening to cripple Iran.;;;;;;;;;;;;;
+EVTOPTA286114;Problematic;;;;;;;;;;;;;
+EVTNAME286115;Operation Nimble Archer;;;;;;;;;;;;;
+EVTDESC286115;US destroyers shelled two oil platforms in the Rostam oil field. After the shelling, USS Thack (FFG-43) landed a SEAL platoon and a demolition unit that planted explosives on one of the platforms to destroy it. The SEALs next boarded and searched a third platform two miles away. Documents and radios were taken for intelligence.;;;;;;;;;;;;;
+EVTOPTA286115;Imperialists!;;;;;;;;;;;;;
+EVTNAME286116;Operation Praying Mantis;;;;;;;;;;;;;
+EVTDESC286116;U.S. forces launched Operation Praying Mantis, attacking the Iranian frigates Sabalan and Sahand and oil platforms in the Sirri and Sassan oil fields. After U.S. warships bombarded the Sirri platform and set it ablaze, a UH-60 with a SEAL platoon flew toward the platform but was unable to get close enough because of the roaring fire. Secondary explosions soon wrecked the platform.;;;;;;;;;;;;;
+EVTOPTA286116;Imperialists!;;;;;;;;;;;;;
+EVTNAME286117;Military Crisis;;;;;;;;;;;;;
+EVTDESC286117;The Iranian military was badly worn down by the war. This combined with the lack of new equipment. The population was also war weary and the fear of invasion and ulitmate defeat was growing.;;;;;;;;;;;;;
+EVTOPTA286117;Bad news!;;;;;;;;;;;;;
+EVTNAME286118;War is Over!;;;;;;;;;;;;;
+EVTDESC286118;An uneasy peace falls over the battlefields. Held together by the UN, it remains to be seen how long peace between these two bitter enemies will last.;;;;;;;;;;;;;
+EVTOPTA286118;Peace at last;;;;;;;;;;;;;
+EVTNAME354400;USS Stark Attacked;;;;;;;;;;;;;
+EVTDESC354400;A U.S. Navy ship, the Stark, was struck  by two Exocet anti-ship missiles fired from an Iraqi F-1 Mirage plane. The missiles had been at about the time the plane was given a routine radio warning by the Stark. The frigate did not detect the missiles with radar, and warning was given by the lookout only moments before they struck. Both missiles hit the ship, and one exploded in crew quarters, killing 37 sailors and wounding 21.;;;;;;;;;;;;;
+EVTOPTA354400;It must have been pilot error.;;;;;;;;;;;;;
+EVTOPTB354400;This is an outrage!;;;;;;;;;;;;;
+EVTNAME354401;Operation Earnest Will;;;;;;;;;;;;;
+EVTDESC354401;The US were increasingly concerned by Iranian attacks on shipping in the Persian Gulf. To this end the US Navy began an operation to protect Kuwait Oil Tankers and ultimately to end the Iranian attacks on shipping.;;;;;;;;;;;;;
+EVTOPTA354401;Launch the Operation;;;;;;;;;;;;;
+EVTOPTB354401;Call off the Operation;;;;;;;;;;;;;
+EVTNAME354402;Operation Nimble Archer;;;;;;;;;;;;;
+EVTDESC354402;Shall we launch Operation Nimble Archer, a limited attack on Iranian oil platforms in the Persian Gulf in order to punish them for their attacks on shipping in the Gulf.;;;;;;;;;;;;;
+EVTOPTA354402;Launch the Operation;;;;;;;;;;;;;
+EVTOPTB354402;Call off the Operation;;;;;;;;;;;;;
+EVTNAME354403;Operation Praying Mantis;;;;;;;;;;;;;
+EVTDESC354403;The Iranians have still not learned their lesson. Shall we launch Operation Praying Mantis, a limited attack on Iranian naval forces and oil platforms in the Persian Gulf in order to punish them for their minelaying in the Gulf.;;;;;;;;;;;;;
+EVTOPTA54403;Launch the Operation;;;;;;;;;;;;;
+EVTOPTB54403;Call off the Operation;;;;;;;;;;;;;

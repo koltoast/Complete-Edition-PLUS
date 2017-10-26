@@ -1,0 +1,643 @@
+#CodWars_events.txt
+#1958 Cod Wars
+
+#ENG:
+	#181002 - ICL extends its territorial water to 12 nm (the first time)
+	#181003 - ICL extends its territorial water to 50 nm (the first time)
+	#181004 - ICL extends its territorial water to 50 nm (the second time)
+	#181005 - ICL extends its territorial water to 200 nm (the second time)
+	#181006 - ICL extends its territorial water to 200 nm (the third time)
+
+#ICL:
+	#216000 - Iceland overfished its sea zone
+	#216001 - extend_zone_first_ICL follow-up event
+	#216002 - ENG accepts the new claims of ICL
+	#216003 - ENG accepts the new claims of ICL, but offers resistance
+	#216004 - ENG accepts the new claims of ICL, but offers a lot of resistance
+	#216005 - Iceland overfished its sea zone once more (already extended to 12nm)
+	#216006 - Iceland overfished its sea zone once more (already extended to 50nm)
+	#216007 - extend_zone_second_50nm_ICL follow-up event
+	#216008 - extend_zone_200nm_ICL follow-up event
+	#216009 - ENG accepts the new claims of ICL (Second Cod War)
+	#216010 - ENG accepts the new claims of ICL, but offers resistance (Second Cod War)
+	#216011 - ENG accepts the new claims of ICL, but offers a lot of resistance (Second Cod War)
+	#216012 - ENG accepts the new claims of ICL (Third Cod War)
+	#216013 - ENG accepts the new claims of ICL, but offers resistance (Third Cod War)
+	#216014 - ENG accepts the new claims of ICL, but offers a lot of resistance (Third Cod War)
+
+	
+## ENG ##
+country_event = {
+	
+	id = 181002		#ICL extends its territorial water to 12 nm (the first time)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME181002"
+	desc = "EVTDESC181002"
+	picture = "1958_First_Cod_War"
+
+	option = {
+		name = "EVTOPTA181002"								#Withdraw the ships, this is getting absurd
+		ai_chance = { factor = 10 }
+		dissent = 1											#A few British fishermen are angry
+		national_unity = -2
+		relation = { who = ICL value = 25 }
+		ICL = { country_event = 216002 }
+	}
+	
+	option = {
+		name = "EVTOPTB181002"								#Protect the ships for some more time to calm the fishers (hist.)
+		ai_chance = { factor = 80 }							#Historical choice
+		supplies = -750
+		money = -500										#The historical Cod War was very expensive
+		relation = { who = ICL value = -50 }
+		ICL = { country_event = 216003 }
+	}
+	
+	option = {
+		name = "EVTOPTC181002"								#They won't steal our fish! 
+		ai_chance = { factor = 10 }
+		supplies = -2500	
+		money = -2500
+		dissent = -1
+		national_unity = 2
+		relation = { who = ICL value = -100 }
+		ICL = { country_event = 216004 }
+	}
+}
+
+country_event = {
+	
+	id = 181003		#ICL extends its territorial water to 50 nm (the first time)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME181003"
+	desc = "EVTDESC181003"
+	picture = "1972_Second_Cod_War_2"
+
+	option = {
+		name = "EVTOPTA181003"
+		ai_chance = { factor = 5 }
+		dissent = 1											#A few British fishermen are angry
+		national_unity = -2
+		relation = { who = ICL value = 25 }
+		ICL = { country_event = 216002 }
+	}
+	
+	option = {
+		name = "EVTOPTB181003"
+		ai_chance = { factor = 55 }							#Historical choice
+		supplies = -7500
+		money = -500
+		relation = { who = ICL value = -50 }
+		ICL = { country_event = 216003 }
+	}
+	
+	option = {
+		name = "EVTOPTC181003"								#They won't steal our fish! 
+		ai_chance = { factor = 40 }							#Iceland was bold and pay the price
+		supplies = -2500	
+		money = -2500
+		dissent = -1
+		national_unity = 2
+		relation = { who = ICL value = -100 }
+		ICL = { country_event = 216004 }
+	}
+}
+
+country_event = {
+	
+	id = 181004		#ICL extends its territorial water to 50 nm (the second time)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME181004"
+	desc = "EVTDESC181004"
+	picture = "1972_Second_Cod_War"
+
+	option = {
+		name = "EVTOPTA181004"								#Retreat
+		ai_chance = { factor = 5 }
+		supplies = -250
+		dissent = 1											#A few British fishermen are angry
+		national_unity = -2
+		relation = { who = ICL value = 25 }
+		ICL = { country_event = 216009 }
+	}
+	
+	option = {
+		name = "EVTOPTB181004"								#Slow retreat
+		ai_chance = { factor = 80 }							#Historical choice
+		supplies = -1000
+		money = -1000
+		relation = { who = ICL value = -50 }
+		ICL = { country_event = 216010 }
+	}
+	
+	option = {
+		name = "EVTOPTC181004"								#Harrass the Icelandic vessels 
+		ai_chance = { factor = 15 }
+		supplies = -2000	
+		money = -2000
+		dissent = -1
+		national_unity = 2
+		relation = { who = ICL value = -100 }
+		ICL = { country_event = 216011 }
+	}
+}
+
+country_event = {
+	
+	id = 181005		#ICL extends its territorial water to 200 nm (the second time)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME181005"
+	desc = "EVTDESC181005"
+	picture = "1976_Third_Cod_War_2"
+
+	option = {
+		name = "EVTOPTA181005"								#Retreat
+		ai_chance = { factor = 5 }
+		supplies = -250
+		dissent = 1											#A few British fishermen are angry
+		national_unity = -2
+		relation = { who = ICL value = 25 }
+		ICL = { country_event = 216009 }
+	}
+	
+	option = {
+		name = "EVTOPTB181005"								#Slow retreat
+		ai_chance = { factor = 35 }							#Historical choice
+		supplies = -1000
+		money = -1000
+		relation = { who = ICL value = -50 }
+		ICL = { country_event = 216010 }
+	}
+	
+	option = {
+		name = "EVTOPTC181005"								#Harrass the Icelandic vessels 
+		ai_chance = { factor = 60 }
+		supplies = -2000	
+		money = -2000
+		dissent = -1
+		national_unity = 2
+		relation = { who = ICL value = -100 }
+		ICL = { country_event = 216011 }
+	}
+}
+
+country_event = {
+	
+	id = 181006		#ICL extends its territorial water to 200 nm (the third time)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME181006"
+	desc = "EVTDESC181006"
+	picture = "1976_Third_Cod_War"
+
+	option = {
+		name = "EVTOPTA181006"								#Retreat
+		ai_chance = { factor = 10 }
+		supplies = -250
+		dissent = 1											#A few British fishermen are angry
+		national_unity = -2
+		relation = { who = ICL value = 25 }
+		ICL = { country_event = 216012 }
+	}
+	
+	option = {
+		name = "EVTOPTB181006"								#Slow retreat
+		ai_chance = { factor = 80 }							#Historical choice
+		supplies = -2500
+		money = -1200
+		relation = { who = ICL value = -50 }
+		ICL = { country_event = 216013 }
+	}
+	
+	option = {
+		name = "EVTOPTC181006"								#Harrass the Icelandic vessels 
+		ai_chance = { factor = 10 }
+		supplies = -2500	
+		money = -2500
+		dissent = -1
+		national_unity = 2
+		relation = { who = ICL value = -100 }
+		ICL = { country_event = 216014 }
+	}
+}
+
+
+## ICL ##
+country_event = {
+	
+	id = 216000		#Iceland overfished its sea zone
+
+	trigger = {
+		year = 1950
+		tag = ICL
+		NOT = { has_country_flag = ICL216000_done }
+	}
+
+	mean_time_to_happen = { days = 1500 }				#Four years after 1950,as Icelandic overfishing is a hard factor
+
+	title = "EVTNAME216000"
+	desc = "EVTDESC216000"
+	picture = "1954_Overfishing_Iceland"
+
+	option = {
+		name = "EVTOPTA216000"
+		money = -100									#Short-term economic losses
+		set_country_flag = ICL216000_done
+	}
+}
+
+country_event = {
+	
+	id = 216001		#extend_zone_first_ICL follow-up event
+
+	is_triggered_only = yes
+
+	title = "EVTNAME216001"
+	desc = "EVTDESC216001"
+	picture = "1958_Iceland_12_mile_zone"
+
+	option = {
+		name = "EVTOPTA216001"								#Extend the sea zone to 12 nautical miles
+		ai_chance = { factor = 85 }
+		supplies = -500
+		relation = { who = ENG value = -25 }
+		set_global_flag = ICL_12mn_zone
+	}
+	
+	option = {
+		name = "EVTOPTB216001"								#Extend the sea zone to 50 nautical miles
+		ai_chance = { factor = 5 }
+		supplies = -750
+		any_owned = {
+			limit = {
+				region = region_Iceland_Iceland
+				port = yes
+			}
+			add_province_modifier = {							#get 50 nm fishing province modifier
+				name = pmod_50nm_fishing
+				duration = 7300
+			}
+		}
+		relation = { who = ENG value = -75 }
+		dissent = -5
+		set_global_flag = ICL_50mn_zone_early
+	}
+	
+	option = {
+		name = "EVTOPTC216001"								#That isn't necessary
+		ai_chance = { factor = 10 }
+		dissent = 1											#A few British fishermen are angry
+		national_unity = -2
+		any_owned = {
+			limit = {
+				region = region_Iceland_Iceland
+				port = yes
+			}
+			add_province_modifier = {							#get 50 nm fishing province modifier
+				name = pmod_6nm_fishing
+				duration = 7300
+			}
+		}
+		relation = { who = ENG value = 50 }
+	}
+}
+
+country_event = {
+	
+	id = 216002		#ENG accepts the new claims of ICL
+
+	is_triggered_only = yes
+
+	title = "EVTNAME216002"
+	desc = "EVTDESC216002"
+	picture = "1958_Iceland_12_mile_zone"
+
+	option = {
+		name = "EVTOPTA216002"								#Excellent!
+		prestige_change = 10
+		dissent = -5
+	}
+}
+
+country_event = {
+	
+	id = 216003		#ENG accepts the new claims of ICL, but offers resistance
+
+	is_triggered_only = yes
+
+	title = "EVTNAME216003"
+	desc = "EVTDESC216003"
+	picture = "1958_First_Cod_War"
+
+	option = {
+		name = "EVTOPTA216003"								#We expected that...
+		supplies = -750
+		money = -300
+		prestige_change = 5
+	}
+}
+
+country_event = {
+	
+	id = 216004		#ENG accepts the new claims of ICL, but offers a lot of resistance
+
+	is_triggered_only = yes
+
+	title = "EVTNAME216004"
+	desc = "EVTDESC216004"
+	picture = "1958_First_Cod_War"
+
+	option = {
+		name = "EVTOPTA216004"								#Damn the Brits!
+		supplies = -2500	
+		money = -1000
+		dissent = 1
+		national_unity = -2
+	}
+}
+
+country_event = {
+	
+	id = 216005		#Iceland overfished its sea zone once more (already extended to 12nm)
+
+	trigger = {
+		year = 1970
+		tag = ICL
+		NOT = {
+			has_country_flag = ICL216005_done				#Second overfishing event
+			has_country_flag = ICL216006_done				#Third overfishing event
+			has_global_flag = ICL_200mn_zone
+			OR = {
+				has_global_flag = ICL_50mn_zone_early
+				has_global_flag = ICL_50mn_zone
+			}
+		}
+		has_global_flag = ICL_12mn_zone				#Has extended sea zone to 12 nautical miles
+		has_country_flag = ICL216000_done				#First overfishing event
+	}
+
+	mean_time_to_happen = { days = 1500 }				#Four years after 1970,as Icelandic overfishing is a hard factor
+	is_triggered_only = no
+
+	title = "EVTNAME216005"
+	desc = "EVTDESC216005"
+	picture = "1954_Overfishing_Iceland"
+
+	option = {
+		name = "EVTOPTA216005"
+		money = -200									#Short-term economic losses
+		set_country_flag = ICL216005_done
+	}
+}
+
+country_event = {
+	
+	id = 216006		#Iceland overfished its sea zone once more (already extended to 50nm)
+
+	trigger = {
+		year = 1975
+		tag = ICL
+		NOT = {
+			has_country_flag = ICL216006_done				#Third overfishing event
+			has_global_flag = ICL_200mn_zone
+			has_global_flag = ICL_200mn_zone_early
+		}
+		OR = {
+			has_global_flag = ICL_50mn_zone_early
+			has_global_flag = ICL_50mn_zone
+		}
+	}
+
+	mean_time_to_happen = { days = 2500 }
+
+	title = "EVTNAME216006"
+	desc = "EVTDESC216006"
+	picture = "1954_Overfishing_Iceland"
+
+	option = {
+		name = "EVTOPTA216006"
+		money = -500									#Short-term economic losses
+		set_country_flag = ICL216006_done
+	}
+}
+
+country_event = {
+	
+	id = 216007		#extend_zone_second_50nm_ICL follow-up event
+
+	is_triggered_only = yes
+
+	title = "EVTNAME216007"
+	desc = "EVTDESC216007"
+	picture = "1972_Iceland_50_mile_zone"
+
+	option = {
+		name = "EVTOPTA216007"								#Extend the sea zone to 50 nautical miles
+		ai_chance = { factor = 85 }
+		supplies = -1000
+		any_owned = {
+			limit = {
+				region = region_Iceland_Iceland
+				port = yes
+			}
+			remove_province_modifier = pmod_200nm_fishing
+			remove_province_modifier = pmod_6nm_fishing
+			add_province_modifier = {							#get 50 nm fishing province modifier
+				name = pmod_50nm_fishing
+				duration = 7300
+			}
+		}
+		relation = { who = ENG value = -50 }
+		set_global_flag = ICL_50mn_zone
+	}
+	
+	option = {
+		name = "EVTOPTB216007"								#Extend the sea zone to 200 nautical miles
+		ai_chance = { factor = 5 }
+		supplies = -1500
+		any_owned = {
+			limit = {
+				region = region_Iceland_Iceland
+				port = yes
+			}
+			remove_province_modifier = pmod_50nm_fishing
+			remove_province_modifier = pmod_6nm_fishing
+			add_province_modifier = {							#get 200 nm fishing province modifier
+				name = pmod_200nm_fishing
+				duration = 7300
+			}
+		}
+		relation = { who = ENG value = -100 }
+		dissent = -2
+		national_unity = 3
+		set_global_flag = ICL_200mn_zone_early
+	}
+	
+	option = {
+		name = "EVTOPTC216007"								#That isn't necessary
+		ai_chance = { factor = 10 }
+		dissent = 1											#A few British fishermen are angry
+		national_unity = -2
+		relation = { who = ENG value = 50 }
+	}
+}
+
+country_event = {
+	
+	id = 216008		#extend_zone_200nm_ICL follow-up event
+
+	is_triggered_only = yes
+
+	title = "EVTNAME216008"
+	desc = "EVTDESC216008"
+	picture = "1976_Iceland_200_mile_zone"
+	
+	option = {
+		name = "EVTOPTA216008"								#Extend the sea zone to 200 nautical miles
+		ai_chance = { factor = 5 }
+		supplies = -2500
+		any_owned = {
+			limit = {
+				region = region_Iceland_Iceland
+				port = yes
+			}
+			remove_province_modifier = pmod_50nm_fishing
+			remove_province_modifier = pmod_6nm_fishing
+			add_province_modifier = {							#get 200 nm fishing province modifier
+				name = pmod_200nm_fishing
+				duration = 7300
+			}
+		}
+		relation = { who = ENG value = -75 }
+		dissent = -2
+		national_unity = 3
+		set_global_flag = ICL_200mn_zone
+	}
+	
+	option = {
+		name = "EVTOPTB216008"								#That isn't necessary
+		ai_chance = { factor = 10 }
+		dissent = 1
+		national_unity = -2									#A few fishermen are angry
+		relation = { who = ENG value = 50 }
+	}
+}
+
+country_event = {
+	
+	id = 216009		#ENG accepts the new claims of ICL (Second Cod War)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME216009"
+	desc = "EVTDESC216009"
+	picture = "1972_Iceland_50_mile_zone"
+
+	option = {
+		name = "EVTOPTA216009"
+		prestige_change = 10
+		dissent = -2
+		national_unity = 3
+	}
+}
+
+country_event = {
+	
+	id = 216010		#ENG accepts the new claims of ICL, but offers resistance (Second Cod War)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME216010"
+	desc = "EVTDESC216010"
+	picture = "1972_Second_Cod_War_2"
+
+	option = {
+		name = "EVTOPTA216010"
+		supplies = -1000
+		money = -500
+		prestige_change = 5
+	}
+}
+
+country_event = {
+	
+	id = 216011		#ENG accepts the new claims of ICL, but offers a lot of resistance (Second Cod War)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME216011"
+	desc = "EVTDESC216011"
+	picture = "1972_Second_Cod_War"
+
+	option = {
+		name = "EVTOPTA216011"
+		supplies = -3750	
+		money = -1200
+		dissent = 2											#A few British fishermen are angry
+		national_unity = -3
+	}
+}
+
+country_event = {
+	
+	id = 216012		#ENG accepts the new claims of ICL (Third Cod War)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME216012"
+	desc = "EVTDESC216012"
+	picture = "1976_Iceland_200_mile_zone"
+
+	option = {
+		name = "EVTOPTA216012"
+		prestige_change = 10
+		dissent = -2
+		national_unity = 3
+	}
+}
+
+country_event = {
+	
+	id = 216013		#ENG accepts the new claims of ICL, but offers resistance (Third Cod War)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME216013"
+	desc = "EVTDESC216013"
+	picture = "1976_Third_Cod_War"
+
+	option = {
+		name = "EVTOPTA216013"
+		supplies = -2000
+		money = -1000
+		prestige_change = 5
+	}
+}
+
+country_event = {
+	
+	id = 216014		#ENG accepts the new claims of ICL, but offers a lot of resistance (Third Cod War)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME216014"
+	desc = "EVTDESC216014"
+	picture = "1976_Third_Cod_War_2"
+
+	option = {
+		name = "EVTOPTA216014"
+		supplies = -4000	
+		money = -1500
+		dissent = 2											#A few British fishermen are angry
+		national_unity = -3
+	}
+}

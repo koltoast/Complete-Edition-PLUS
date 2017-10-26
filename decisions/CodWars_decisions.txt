@@ -1,0 +1,273 @@
+#CodWars_decisions.txt
+#1958 Cod Wars
+
+#ENG:
+	#iceland_12nm_zone_reaction_ENG
+	#iceland_50nm_zone_early_reaction_ENG
+	#iceland_50nm_zone_reaction_ENG
+	#iceland_200nm_zone_early_reaction_ENG
+	#iceland_200nm_zone_reaction_ENG
+
+#ICL:
+	#extend_zone_first_ICL
+	#extend_zone_second_50nm_ICL
+	#extend_zone_second_200nm_ICL
+	
+
+diplomatic_decisions = {	
+## ENG ##
+	iceland_12nm_zone_reaction_ENG = {
+		category = international
+		picture = "1958_Iceland_12_mile_zone"
+		
+		potential = {
+			tag = ENG
+			has_global_flag = ICL_12mn_zone
+			NOT = { has_global_flag = iceland_12nm_zone_reaction_ENG_done }
+		}
+			
+		allow = {
+			NOT = {
+				war_with = ICL												#When at war with someone with a navy, ENG has better things to do
+				war_with = CAN
+				war_with = USA
+				war_with = SOV
+				war_with = FRA
+			}
+			is_subject = no
+		}
+			
+		ai_will_do = { factor = 10 }
+			
+		effect = {
+			ENG = { country_event = 181002 } 								#Decision follow-up event
+			set_global_flag = iceland_12nm_zone_reaction_ENG_done
+		}
+	}
+
+	iceland_50nm_zone_early_reaction_ENG = {
+		category = international
+		picture = "1972_Iceland_50_mile_zone"
+			
+		potential = {
+			tag = ENG
+			has_global_flag = ICL_50mn_zone_early
+			NOT = { has_global_flag = iceland_50nm_zone_early_reaction_ENG_done }
+		}
+			
+		allow = {
+			NOT = { war_with = ICL }
+			is_subject = no
+		}
+			
+		ai_will_do = { factor = 10 }
+			
+		effect = {
+			ENG = { country_event = 181003 } 								#Decision follow-up event
+			set_global_flag = iceland_50nm_zone_early_reaction_ENG_done
+		}
+	}
+	
+	iceland_50nm_zone_reaction_ENG = {
+		category = international
+		picture = "1972_Iceland_50_mile_zone"
+		
+		potential = {
+			tag = ENG
+			has_global_flag = ICL_50mn_zone
+			NOT = { has_global_flag = iceland_50nm_zone_reaction_ENG_done }
+		}
+		
+		allow = {
+			NOT = {
+				war_with = ICL												#When at war with someone with a navy, ENG has better things to do
+				war_with = CAN
+				war_with = USA
+				war_with = SOV
+				war_with = FRA
+			}
+			is_subject = no
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			ENG = { country_event = 181004 } 								#Decision follow-up event
+			set_global_flag = iceland_50nm_zone_reaction_ENG_done
+		}		
+	}
+	
+	iceland_200nm_zone_early_reaction_ENG = {
+		category = international
+		picture = "1976_Iceland_200_mile_zone"
+		
+		potential = {
+			tag = ENG
+			has_global_flag = ICL_50mn_zone
+			NOT = { has_global_flag = iceland_200nm_zone_early_reaction_ENG_done }
+		}
+		
+		allow = {
+			NOT = {
+				war_with = ICL												#When at war with someone with a navy, ENG has better things to do
+				war_with = CAN
+				war_with = USA
+				war_with = SOV
+				war_with = FRA
+			}
+			is_subject = no
+		}
+
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			ENG = { country_event = 181005 } 								#Decision follow-up event
+			set_global_flag = iceland_200nm_zone_early_reaction_ENG_done
+		}
+	}
+	
+	iceland_200nm_zone_reaction_ENG = {
+		category = international
+		picture = "1976_Iceland_200_mile_zone"
+		
+		potential = {
+			tag = ENG
+			has_global_flag = ICL_50mn_zone
+			NOT = { has_global_flag = iceland_200nm_zone_reaction_ENG_done }
+		}
+		
+		allow = {
+			NOT = {
+				war_with = ICL													#When at war with someone with a navy, ENG has better things to do
+				war_with = CAN
+				war_with = USA
+				war_with = SOV
+				war_with = FRA
+			}
+			is_subject = no
+		}
+
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			ENG = { country_event = 181006 } 								#Decision follow-up event
+			set_global_flag = iceland_200nm_zone_reaction_ENG_done
+		}
+	}
+	
+## ICL ##
+	extend_zone_first_ICL = {
+		category = international
+		picture = "1958_Iceland_12_mile_zone"
+		
+		potential = {
+			tag = ICL
+			NOT = { has_global_flag = extend_zone_first_ICL_done }
+			has_country_flag = ICL216000_done
+		}
+		
+		allow = {
+			OR = {
+				ICL = { owns = 2211 }										#Icelandic fishing provinces
+				ICL = { owns = 2316 }
+				ICL = { owns = 2606 }
+				ICL = { owns = 2936 }
+				ICL = { owns = 3548 }
+				ICL = { owns = 3594 }
+				ICL = { owns = 3906 }
+				ICL = { owns = 3934 }
+			}
+			NOT = {
+				war_with = ENG												#No war with a local power with a fleet
+				war_with = CAN
+				war_with = USA
+				war_with = NOR
+			}
+			is_subject = no													#Puppet Iceland can't do that
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			ICL = { country_event = 216001 } 								#Decision follow-up event
+			set_global_flag = extend_zone_first_ICL_done
+		}		
+	}
+	
+	extend_zone_second_50nm_ICL = {
+		category = international
+		picture = "1972_Iceland_50_mile_zone"
+		
+		potential = {
+			tag = ICL
+			NOT = { has_global_flag = extend_zone_second_50nm_ICL_done }
+			has_country_flag = ICL216005_done								#Iceland overfished its seas once more
+		}
+		
+		allow = {
+			OR = {
+				ICL = { owns = 2211 }										#Icelandic fishing provinces
+				ICL = { owns = 2316 }
+				ICL = { owns = 2606 }
+				ICL = { owns = 2936 }
+				ICL = { owns = 3548 }
+				ICL = { owns = 3594 }
+				ICL = { owns = 3906 }
+				ICL = { owns = 3934 }
+			}
+			NOT = {
+				war_with = ENG												#No war with a local power with a fleet
+				war_with = CAN
+				war_with = USA
+				war_with = NOR
+			}
+			is_subject = no													#Puppet Iceland can't do that
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			ICL = { country_event = 216007 } 								#Decision follow-up event
+			set_global_flag = extend_zone_second_50nm_ICL_done
+		}		
+	}
+
+	extend_zone_second_200nm_ICL = {
+		category = international
+		picture = "1976_Iceland_200_mile_zone"
+		
+		potential = {
+			tag = ICL
+			NOT = { has_global_flag = extend_zone_second_200nm_ICL_done }
+			has_country_flag = ICL216006_done								#Iceland overfished its seas once more
+		}
+		
+		allow = {
+			OR = {
+				ICL = { owns = 2211 }										#Icelandic fishing provinces
+				ICL = { owns = 2316 }
+				ICL = { owns = 2606 }
+				ICL = { owns = 2936 }
+				ICL = { owns = 3548 }
+				ICL = { owns = 3594 }
+				ICL = { owns = 3906 }
+				ICL = { owns = 3934 }
+			}
+			NOT = {
+				war_with = ENG												#No war with a local power with a fleet
+				war_with = CAN
+				war_with = USA
+				war_with = NOR
+			}
+			is_subject = no													#Puppet Iceland can't do that
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			ICL = { country_event = 216008 } 								#Decision follow-up event
+			set_global_flag = extend_zone_second_200nm_ICL_done
+		}		
+	}
+
+}

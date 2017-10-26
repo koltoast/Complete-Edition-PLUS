@@ -1,0 +1,467 @@
+diplomatic_decisions = {
+
+	starting_core_changes-B = {
+		potential = {
+			ai = yes
+			not = { has_global_flag = core_assignations-B }
+			year = 1975
+		}
+		allow = {
+
+		}
+		effect = {
+			set_global_flag = core_assignations-B
+
+			#COMUNIDADES ESPAÑA
+			4737 = { add_core = EUS }
+			region_Spain_Cataluna = { add_core = CAT}
+
+		}			
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	starting_core_changes-C = {
+		potential = {
+			ai = yes
+			not = { has_global_flag = core_assignations-C }
+			year = 1975
+		}
+		allow = {
+
+
+		}
+		effect = {
+			set_global_flag = core_assignations-C
+			# Pacifica
+			region_USA_Washington = { add_core = PAC }
+			region_USA_Oregon = { add_core = PAC }
+			region_USA_Idaho = { add_core = PAC }
+			region_USA_Montana = { add_core = PAC }
+			region_USA_Wyoming = { add_core = PAC }
+			region_USA_Colorado = { add_core = PAC }
+			region_USA_East_Montana = { add_core = PAC }
+			
+			# California Commonwealth
+			region_USA_Utah = { add_core = CAL }
+			region_USA_Arizona = { add_core = CAL }
+			region_USA_Nevada = { add_core = CAL }
+			region_USA_North_California = { add_core = CAL }
+			region_USA_South_California = { add_core = CAL }
+			region_Mexico_Baja_California = { add_core = CAL }
+			region_Mexico_Baja_California_Sur = { add_core = CAL }
+			
+			# Great Plains Federation
+			region_USA_North_Dakota = { add_core = GPF }
+			region_USA_South_Dakota = { add_core = GPF }
+			region_USA_Kansas = { add_core = GPF }
+			region_USA_Missouri = { add_core = GPF }
+			region_USA_Nebraska = { add_core = GPF }
+			region_USA_Iowa = { add_core = GPF }
+			region_USA_Minnesota = { add_core = GPF }
+			region_USA_Wisconsin = { add_core = GPF }
+			region_USA_Michigan = { add_core = GPF }
+			region_USA_Illinois = { add_core = GPF }
+			region_USA_Indiana = { add_core = GPF }
+			
+			# New England Alliance
+			region_USA_Ohio = { add_core = NEA }
+			region_USA_Pennsylvania = { add_core = NEA }
+			region_USA_New_York = { add_core = NEA }
+			region_USA_Vermont = { add_core = NEA }
+			region_USA_Maine = { add_core = NEA }
+			rhode_island_region = { add_core = NEA }
+			region_USA_New_Hampshire = { add_core = NEA }
+			region_USA_Massachusetts = { add_core = NEA }
+			
+			# CSA
+			region_USA_South_Carolina = { add_core = CSA }
+			region_USA_Mississippi = { add_core = CSA }
+			region_USA_Florida  = { add_core = CSA }
+			region_USA_Alabama = { add_core = CSA }
+			region_USA_Louisiana  = { add_core = CSA }
+			region_USA_Georgia  = { add_core = CSA }
+			region_USA_South_Texas = { add_core = CSA }
+			region_USA_North_Texas = { add_core = CSA }
+			region_USA_West_Texas = { add_core = CSA }
+			region_USA_Virginia = { add_core = CSA }
+			region_USA_Arkansas = { add_core = CSA }
+			region_USA_North_Carolina = { add_core = CSA }
+			region_USA_South_Carolina = { add_core = CSA }
+			region_USA_Tennessee = { add_core = CSA }
+			region_USA_Oklahoma = { add_core = CSA }
+			region_USA_West_Virginia  = { add_core = CSA }
+			region_USA_Missouri = { add_core = CSA }
+			region_USA_Kentucky = { add_core = CSA }
+
+			# TEXAS
+			region_USA_South_Texas = { add_core = TEX }
+			region_USA_New_Mexico = { add_core = TEX }
+			region_USA_Oklahoma = { add_core = TEX }
+			region_USA_Arkansas = { add_core = TEX }	
+
+			# ESCOCIA
+			region_UK_Highlands = { add_core = SCO }
+			region_UK_Lothian = { add_core = SCO }
+			
+			# INGLATERRA
+			region_UK_North_England = { add_core = EGD }
+			region_UK_South_England = { add_core = EGD }
+			region_UK_Midlands = { add_core = EGD }
+			
+			# GALES
+			region_UK_Wales = { add_core = WLS }			
+
+		}			
+
+		ai_will_do = { factor = 1 }
+	}
+
+	starting_core_changes-D = {
+		potential = {
+			ai = yes
+			not = { has_global_flag = core_assignations-D }
+			not = { year = 1975 }
+			exists = SOV
+			exists = BEL
+			exists = YUG		 			
+		}
+		allow = {
+
+		}
+		effect = {
+			set_global_flag = core_assignations-D
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = RUS
+					}
+					remove_core = RUS
+					set_province_flag = Rusia
+				}
+			}
+			
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = ARM
+					}
+					remove_core = ARM
+					set_province_flag = Armenia
+				}
+			}
+
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = AZB
+					}
+					remove_core = AZB
+					set_province_flag = Azerbaijan
+				}
+			}
+
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = GEO
+					}
+					remove_core = GEO
+					set_province_flag = Georgia
+				}
+			}
+
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = KAZ
+					}
+					remove_core = KAZ
+					set_province_flag = Kazakhstan
+				}
+			}
+
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = KUR
+					}
+					remove_core = KUR
+					set_province_flag = Kurdistan
+				}
+			}
+
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = KYG
+					}
+					remove_core = KYG
+					set_province_flag = Kyrgyzstan
+				}
+			}
+
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = BLR
+					}
+					remove_core = BLR
+					set_province_flag = Belarus
+				}
+			}
+
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = TAJ
+					}
+					remove_core = TAJ
+					set_province_flag = Tajikistan
+				}
+			}
+
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = TRK
+					}
+					remove_core = TRK
+					set_province_flag = Turkmenistan
+				}
+			}
+
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = TSN
+					}
+					remove_core = TSN
+					set_province_flag = Transnistria
+				}
+			}
+
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = UKR
+					}
+					remove_core = UKR
+					set_province_flag = Ukraine
+				}
+			}
+			
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = UZB
+					}
+					remove_core = UZB
+					set_province_flag = Uzbekistan
+				}
+			}
+
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = LIT
+					}
+					remove_core = LIT
+					set_province_flag = Lithuania
+				}
+			}
+
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = LAT
+					}
+					remove_core = LAT
+					set_province_flag = Latvia
+				}
+			}
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = MOL
+					}
+					remove_core = MOL
+					set_province_flag = Moldova
+				}
+			}			
+
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = EST
+					}
+					remove_core = EST
+					set_province_flag = Estonia
+				}
+			}
+			
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						is_core = NGK
+					}
+					remove_core = NGK
+					set_province_flag = Nagorno_Karabakh
+				}
+			}
+
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						is_core = BOS
+					}
+					remove_core = BOS
+					set_province_flag = Bosnia_Herzegovina
+				}
+			}			
+			
+			any_country = {
+				any_owned = {
+					limit = {
+						is_core = CRO
+					}
+					remove_core = CRO
+					set_province_flag = Croatia
+				}
+			}			
+			
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						is_core = KOS
+					}
+					remove_core = KOS
+					set_province_flag = Kosovo
+				}
+			}
+
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						is_core = KRJ
+					}
+					remove_core = KRJ
+					set_province_flag = Oblast_Krajina
+				}
+			}			
+
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						is_core = MTN
+					}
+					remove_core = MTN
+					set_province_flag = Montenegro
+				}
+			}
+
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						is_core = RSK
+					}
+					remove_core = RSK
+					set_province_flag = Serbian_Krajina
+				}
+			}
+
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						is_core = SER
+					}
+					remove_core = SER
+					set_province_flag = Serbia
+				}
+			}
+			
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						is_core = SLV
+					}
+					remove_core = SLV
+					set_province_flag = Slovenia
+				}
+			}	
+
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						is_core = MCD
+					}
+					remove_core = MCD
+					set_province_flag = Macedonia
+				}
+			}			
+
+			BEL = {
+				any_owned = {
+					limit = {
+						is_core = BEL
+						is_core = WLL
+					}
+					remove_core = WLL
+					set_province_flag = Wallonia
+				}
+			}
+
+			BEL = {
+				any_owned = {
+					limit = {
+						is_core = BEL
+						is_core = FLA
+					}
+					remove_core = FLA
+					set_province_flag = Flanders
+				}
+			}			
+
+			
+			
+
+		}			
+
+		ai_will_do = { factor = 100 }
+	}	
+	
+	
+
+}
+
+
+
+
+
+

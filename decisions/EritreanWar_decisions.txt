@@ -1,0 +1,40 @@
+#EritreanWar_decisions.txt
+#1961 Eritrean War of Independence
+
+#ETH:
+	#release_eritrea_ETH
+
+
+diplomatic_decisions = {	
+## ETH ##
+	release_eritrea_ETH = {
+		category = international
+		picture = "Eritrea"
+		
+		potential = {
+			tag = ETH
+			owns = 7989								#Eritrean coastal provinces
+			owns = 7990
+			owns = 7991
+			owns = 8072
+			owns = 8073
+			NOT = { has_country_flag = release_eritrea_ETH_done }
+		}
+		
+		allow = {
+			NOT = {
+				exists = ERI
+				government = totalitarian_gov						#Autocratic Ethopia can't go the easy route	
+				government = authoritarian_gov
+				government = absolute_monarchy_gov
+			}
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			ETH = { country_event = 186000 } 						#Decision follow-up event
+			set_country_flag = release_eritrea_ETH_done				#ETH can't just do this over and over again
+		}
+	}
+}

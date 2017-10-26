@@ -1,0 +1,129 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+intervene_firstindochinawar_CHC_title;The War in Indochina;;;;;;;;;;;;;x
+intervene_firstindochinawar_CHC_desc;After the Japanese forces in French Indochina surrendered to Kuomintang troops, they did not set the French officials free. Instead, they allowed the Viet Minh, the major Vietnamese nationalist movement, to take over arsenals and public buildings. This triggered the August Revolution, an uprising to free Vietnam and the rest of Indochina from imperialist rule. The French, however, were not willing to give up their crumbling empire and re-established control over large parts of Indochina. Now, open war has broken out between the Viet Minh and the French troops. The Viet Minh share many ideological similarities with China. Our support will help them shake off the bonds of foreign rule. We have problems of our own as well, though, as reactionary forces are still a threat within our own borders. How shall we proceed?;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+leave_indochina_CHI_title;The Fate of Indochina;;;;;;;;;;;;;x
+leave_indochina_CHI_desc;After the Japanese forces in French Indochina surrendered to our troops, they did not set the French officials free. Instead, they allowed the Viet Minh, the major Vietnamese nationalist movement, to take over arsenals and public buildings. This triggered the August Revolution, an uprising to free Vietnam and the rest of Indochina from foreign rule. The French, however, were not willing to give up their crumbling empire and re-established control over large parts of Indochina. After having accepted the surrender of the Japanese in Indochina, our own troops are still present as well. The French do not welcome our presence and want to avoid other countries taking influence in the region. We can remain in Vietnam, but any resources spend there will not be available for the war with the Communists in China. What choice shall we make?;;;;;;;;;;;;;x
+intervene_firstindochinawar_CHI_title;The War in Indochina;;;;;;;;;;;;;x
+intervene_firstindochinawar_CHI_desc;The French have re-established their presence in Indochina and Vietnamese nationalist forces were ousted from key cities. The Viet Minh nationalists managed to keep strongholds in north Vietnam, however. Now, open war has broken out between the Viet Minh and the French. In contrast to the French, the Viet Minh share many ideological similarities with our enemies in China, the communists. The French, on the other hands, stand for foreign imperialist rule over the nations of Asia. Nevertheless, helping either party will steady our influence in the region. How shall we proceed?;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+rebellion_indochina_FRA_title;The Indochinese Rebellion;;;;;;;;;;;;;x
+rebellion_indochina_FRA_desc;In August of 1945, Vietnamese nationalists started an uprising against the Japanese, who occupied Indochina at that point. Shortly afterwards, Japan surrendered to Kuomintang troops entering Indochina. However, the sly Japanese did not set the French officials still in custody free, but allowed Vietnamese nationalist groups to secure weapons and take over public buildings. Shortly afterwards, Ho Chi Minh, leader of the communist Viet Minh, proclaimed the so-called Democratic Republic of Vietnam and took control over North Vietnam. Taking back Indochina now may be a costly undertaking. Not intervening would be a sign of weakness, though, and might encourage rebels in other parts of the French Empire. What should we do about the situation?;;;;;;;;;;;;;x
+DRV_hanoi_FRA_title;The Viet Minh Insurgence;;;;;;;;;;;;;x
+DRV_hanoi_FRA_desc;French troops have retaken the initiative in Indochina and managed to take back Saigon from the rebels. However, significant parts of northern Vietnam are still under the control of the self-proclaimed Democratic Republic of Vietnam. Despite the Japanese being in captivity, the Kuomintang have remained in the region as well and currently occupy Hanoi. We cannot afford other powers meddling in our colony, but it is unlikely that the Chinese will withdraw without us making an concessions. Giving up our privileges in Shanghai and the rest of China might persuade them to leave Indochina to us, though. Also, Laotian nationalists have signalled that they are willing to support us if we grand them limited autonomy. This would mean partly giving up power, but may put an end to the rebellions at least in one part of Indochina. Should we try to negotiate with the Chinese or the Laotians?;;;;;;;;;;;;;x
+DRV_rebellion_FRA_title;The Viet Minh Insurgence;;;;;;;;;;;;;x
+DRV_rebellion_FRA_desc;French troops have retaken the initiative in Indochina and managed to take back Saigon from the rebels. However, significant parts of northern Vietnam are still under the control of the self-proclaimed Democratic Republic of Vietnam. The Kuomintang, on the other hand, finally left the region - they have their own rebellion to concentrate on. They left Hanoi and Haiphong behind, both key cities in northern Vietnam. This might be a good opportunity to take back those cities and push to the north. Also, Laotian nationalists have signalled that they are willing to support us if we grant them limited autonomy. This would mean partly giving up power, but may put an end to the rebellions at least in one part of Indochina. Should we try to negotiate with the Laotians or make a push for Hanoi?;;;;;;;;;;;;;x
+fate_indochina_FRA_title;The Future of Indochina;;;;;;;;;;;;;x
+fate_indochina_FRA_desc;Finally, the insurrection in Indochina has been put down. The colony has been secured and France has proven that it can defend against a threat to the integrity of the French Empire. Now, we have to decide how we want to deal with Indochina. It is possible to re-establish the former administrative system which grants the natives minimal privileges. This would make another rebellion rather likely, though. We can also integrate Indochina directly into France, but the French citizens will not be happy with this. The war to retake Indochina was already unpopular enough, and it will be hard to explain why the region should be ruled directly by Paris. So, should Indochina be administered as a colony or put under more strict control?;;;;;;;;;;;;;x
+geneva_indochina_FRA_title;The Geneva Conference;;;;;;;;;;;;;x
+geneva_indochina_FRA_desc;The war in Indochina does not go in our favour. Our troops have suffered unacceptable losses and public opinion is turning against us. To continue the fight now is politically impossible. We still have diplomatic options, though. It has been suggested that a Vietnamese delegation, our own diplomats and emissaries from the world's major powers meet in Geneva in Switzerland to discuss the future of Indochina and specifically Vietnam. It is possible to leave the north to the Viet Minh for now and establish a government friendly to the West in the south. While the Viet Minh will demand a popular vote regarding the future of Vietnam, at least some time can be gained with the partition. But maybe it is just time to abandon the region once and for all.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#CHC;;;;;;;;;;;;;;x
+EVTNAME151000;Intervention in Indochina?;;;;;;;;;;;;;x
+EVTDESC151000;We can support the Viet Minh in their struggle against the French with equipment and supplies. All the resources we send them will not be available for our own war against the Nationalist reactionaries, however.;;;;;;;;;;;;;x
+EVTOPTA151000;Support the Viet Minh;;;;;;;;;;;;;x
+EVTOPTB151000;We have to concentrate on our own problems;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#CHI;;;;;;;;;;;;;;x
+EVTNAME152000;How to Deal with Indochina;;;;;;;;;;;;;x
+EVTDESC152000;If we withdraw from Indochina now, our influence in the region will be diminished. It would on the other hand allow us to fully concentrate on the fight against the communists. The French may even give us some support.;;;;;;;;;;;;;x
+EVTOPTA152000;We will stay in Indochina;;;;;;;;;;;;;x
+EVTOPTB152000;Indochina is not important for us;;;;;;;;;;;;;x
+EVTNAME152001;The French Retake Hanoi;;;;;;;;;;;;;x
+EVTDESC152001;The French decided to set an end to the communist rebellion in northern Vietnam. Now that the control of the region is no longer in doubt, all Chinese troops have been withdrawn. We did, however, get a financial compensation from the French government.;;;;;;;;;;;;;x
+EVTOPTA152001;OK;;;;;;;;;;;;;x
+EVTNAME152002;Return Hanoi to the Vietnamese;;;;;;;;;;;;;x
+EVTDESC152002;The Vietnamese stood their ground against the French forces and shattered the vision of a swift reoccupation of Indochina. The public support for the war has reached a low in metropolitan France and forced the French government to negotiate with the Vietnamese. Now that the Viet Minh have the north under firm control and discussions about the future of Vietnam and Indochina have begun, we have to hand over Hanoi to the Vietnamese and withdraw our troops from the area.;;;;;;;;;;;;;x
+EVTOPTA152002;OK;;;;;;;;;;;;;x
+EVTNAME152003;Intervention in Indochina?;;;;;;;;;;;;;x
+EVTDESC152003;We can support the Viet Minh in their struggle against foreign domination with equipment and supplies, but we may as well support the French and their nationalist Vietnamese allies, as their political ideals are closer to ours. All the resources we send them will not be available for our own war against the communists, however.;;;;;;;;;;;;;x
+EVTOPTA152003;Support the Viet Minh;;;;;;;;;;;;;x
+EVTOPTB152003;Support the nationalist Vietnamese;;;;;;;;;;;;;x
+EVTOPTC152003;We have to concentrate on our own problems;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#DRV;;;;;;;;;;;;;;x
+EVTNAME177000;The Kuomintang Seize Hanoi;;;;;;;;;;;;;x
+EVTDESC177000;After the Japanese lost the war, Chinese troops entered Indochina and accepted their surrender. Currently, the French returned and have begun to put down the rebellions spreading all over the region. That promted the Chinese to occupy Hanoi. Right now, we lack the possibilities to face them in open battle and have to tolerate their presence. However, it is questionable whether the French will accept Chinese soldiers in Indochina in the long run.;;;;;;;;;;;;;x
+EVTOPTA177000;OK;;;;;;;;;;;;;x
+EVTNAME177001;Haiphong has been Captured!;;;;;;;;;;;;;x
+EVTDESC177001;The French have made a deal with the Kuomintang. The Chinese troops retreat from Indochina and in return, France gives up its concessions in China. Now, French troops have seized Hanoi and Haiphong. We will have to fight if Vietnam shall retain its independence!;;;;;;;;;;;;;x
+EVTOPTA177001;OK;;;;;;;;;;;;;x
+EVTNAME177002;Hanoi & Haiphong have been Captured!;;;;;;;;;;;;;x
+EVTDESC177002;The Kuomintang have abandoned Indochina and France is willing to regain control over its colony by any means. French troops have seized Hanoi and Haiphong - we will have to fight if Vietnam shall retain its independence.;;;;;;;;;;;;;x
+EVTOPTA177002;OK;;;;;;;;;;;;;x
+EVTNAME177003;The Tide has Turned;;;;;;;;;;;;;x
+EVTDESC177003;After the World War, things were not in our favour. The Japanese had been ousted from Indochina, yes, but instead, the Chinese had marched in and the French returned. Yet our troops won the upper hand in our struggle for independence from foreign rule and we managed to push back the French forces. Soon, negotiations will be only the option left for France.;;;;;;;;;;;;;x
+EVTOPTA177003;Forward to victory!;;;;;;;;;;;;;x
+EVTNAME177004;The Partition of Vietnam;;;;;;;;;;;;;x
+EVTDESC177004;We have met with the world's major powers in Switzerland to discuss the future of French Indochina. It was proposed that Laos and Cambodia become independent and Vietnam will be divided in two parts for the time being. The north will fall under our control, whereas the south will be ruled by a government friendly to the West. Later, a plebiscite shall determine the future of our country.;;;;;;;;;;;;;x
+EVTOPTA177004;A partition is acceptable – for now;;;;;;;;;;;;;x
+EVTOPTB177004;This is unacceptable – fight on!;;;;;;;;;;;;;x
+EVTNAME177005;Victory for the Viet Minh;;;;;;;;;;;;;x
+EVTDESC177005;We have met with the world's major powers in Switzerland to discuss the future of French Indochina. It was decided that Laos, Cambodia and Vietnam will become independent states. France has withdrawn all troops from Indochina and all of Vietnam will fall under our control. A group of Vietnamese involved in collaboration with France and in fear of loosing its privileges then demanded that Vietnam should be partitioned and its future determined via popular vote. However, the conference decided in our favour: France will break its last bonds to Indochina and Vietnam will be ruled by the party workers and peasants.;;;;;;;;;;;;;x
+EVTOPTA177005;Independence at last!;;;;;;;;;;;;;x
+EVTNAME177006;Support from the KMT;;;;;;;;;;;;;x
+EVTDESC177006;Despite having to deal with a lot of trouble themselves, the Chinese have sent us financial and material aid for our fight against the imperialists. We can use any help we can get - let us hope our relations with China stay positive.;;;;;;;;;;;;;x
+EVTOPTA177006;Great!;;;;;;;;;;;;;x
+EVTNAME177007;Support from the PRC;;;;;;;;;;;;;x
+EVTDESC177007;Despite having to deal with a lot of trouble themselves, the communist faction in China has sent us financial and material aid for our fight against the imperialists. We can use any help we can get - let us hope our relations with China stay positive.;;;;;;;;;;;;;x
+EVTOPTA177007;Great!;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#FRA;;;;;;;;;;;;;;x
+EVTNAME194000;The Rebellion in Indochina;;;;;;;;;;;;;x
+EVTDESC194000;The majority of the French people would support sending expeditionary troops to Indochina. Regular soldiers would be more efficient, but such a step will have little public support. We can also completely abandon the colony, which will save short term expenses, but may destabilise our other colonies in the long run.;;;;;;;;;;;;;x
+EVTOPTA194000;Send an expeditionary force;;;;;;;;;;;;;x
+EVTOPTB194000;Send regular troops;;;;;;;;;;;;;x
+EVTOPTC194000;Abandon Indochina;;;;;;;;;;;;;x
+EVTNAME194001;The End of French Indochina;;;;;;;;;;;;;x
+EVTDESC194001;The Indochinese Union is a thing of the past. It would be too costly to try to hold this colony, so we have to grant independence to Cambodia, Laos and Vietnam.;;;;;;;;;;;;;x
+EVTOPTA194001;We can't afford another war;;;;;;;;;;;;;x
+EVTNAME194002;The War against the Viet Minh;;;;;;;;;;;;;x
+EVTDESC194002;We have to decide on our next step in the war against the Viet Minh. We can either try negotiate with the Chinese holding on to parts of the north of the country, who demand all French concessions in China to be surrendered in exchange for their leave, or look for new allies - namely the Laotians, who will support us if we grant them a certain level of independence.;;;;;;;;;;;;;x
+EVTOPTA194002;Negotiate with the Kuomintang;;;;;;;;;;;;;x
+EVTOPTB194002;Negotiate with the Laotians;;;;;;;;;;;;;x
+EVTNAME194003;The War against the Viet Minh;;;;;;;;;;;;;x
+EVTDESC194003;We have to decide on our next step in the war against the Viet Minh.  We can either try to put down the rebellion alone or look for new allies - namely the Laotians, who will support us if we grant them a certain level of independence.;;;;;;;;;;;;;x
+EVTOPTA194003;We can win this war alone!;;;;;;;;;;;;;x
+EVTOPTB194003;Negotiate with the Laotians;;;;;;;;;;;;;x
+EVTNAME194004;Re-establishing French Indochina;;;;;;;;;;;;;x
+EVTDESC194004;Now that Indochina is back in our hands, it has to be decided how the colony shall be ruled in the future. It would be possible to stick with the old system of indirect rule. We may also put Indochina under direct control of Paris, though many citizens will not be pleased with that.;;;;;;;;;;;;;x
+EVTOPTA194004;Reintroduce the established administrative system;;;;;;;;;;;;;x
+EVTOPTB194004;Take direct control;;;;;;;;;;;;;x
+EVTNAME194005;The Geneva Conference;;;;;;;;;;;;;x
+EVTDESC194005;At the conference in Geneva, it has been decided that Laos and Cambodia should become independent states. It was also proposed that Vietnam is partitioned into a northern zone ruled by the Viet Minh and a southern zone ruled by a government more friendly to us. It is either this or leaving Indochina forever.;;;;;;;;;;;;;x
+EVTOPTA194005;Partition Vietnam;;;;;;;;;;;;;x
+EVTOPTB194005;Abandon the whole region;;;;;;;;;;;;;x
+EVTNAME194006;Anti-Colonial Demonstrations;;;;;;;;;;;;;x
+EVTDESC194006;Currently, a large number of French soldiers are stationed overseas and the people don't feel safe. Many gathered in cities all over the country to protest against the absence of troops in Metropolitan France and demand the return of their husbands, sons and fathers.;;;;;;;;;;;;;x
+EVTOPTA194006;OK;;;;;;;;;;;;;x
+EVTNAME194007;Anti-War Demonstrations;;;;;;;;;;;;;x
+EVTDESC194007;The situation in Indochina is dire. The Viet Minh have managed to score a number of victories against our troops and the people in France are unhappy with the way things are going. They have gathered all over the country and protest against a continuation of the war. In the long run, it may be less costly for us to negotiate with the Vietnamese now, although this will diminish our influence in the region.;;;;;;;;;;;;;x
+EVTOPTA194007;OK;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#IDC;;;;;;;;;;;;;;x
+EVTNAME717000;France Sends Support;;;;;;;;;;;;;x
+EVTDESC717000;The French government has chosen to send an expeditionary corps to assist us in our fight against the rebels. Not everybody in France agrees with that, but we must not show weakness now. Otherwise, the existence of the French Empire will be endangered.;;;;;;;;;;;;;x
+EVTOPTA717000;We will hold Indochina!;;;;;;;;;;;;;x
+EVTNAME717001;France Joins the Fight;;;;;;;;;;;;;x
+EVTDESC717001;The French government has chosen to send regular troops to help us in our fight against the rebels. This drastic step is very unpopular in Metropolitan France, but we must not show weakness now. Otherwise, the exitance of the French Empire will be endangered.;;;;;;;;;;;;;x
+EVTOPTA717001;We will hold Indochina!;;;;;;;;;;;;;x
+EVTNAME717002;Saigon has been Recaptured;;;;;;;;;;;;;x
+EVTDESC717002;We have managed to take back Saigon from the rebels! This is an important step on the way to victory. With Saigon back in our hands, we have shown that the French presence in this area is anything but over.;;;;;;;;;;;;;x
+EVTOPTA717002;OK;;;;;;;;;;;;;x
+EVTNAME717003;The Indochina War – Victory!;;;;;;;;;;;;;x
+EVTDESC717003;The communist threat in Vietnam has been eliminated. The so-called Democratic Republic of Vietnam is no more and once again, Indochina is under control of its rightful owner. Time will tell how the colony will be ruled in the future, but for now, we remain unchallenged masters of the region.;;;;;;;;;;;;;x
+EVTOPTA717003;Great!;;;;;;;;;;;;;x
+EVTNAME717004;War with the Viet Minh;;;;;;;;;;;;;x
+EVTDESC717004;After the rebellions in the south have been put down, it is time to eliminate the communist threat. France has brought additional troops to ensure our victory.;;;;;;;;;;;;;x
+EVTOPTA717004;OK;;;;;;;;;;;;;x
+EVTNAME717005;Support from the KMT;;;;;;;;;;;;;x
+EVTDESC717005;Despite having to deal with a lot of trouble themselves, the Chinese have sent us financial and material aid for our fight against the Vietnamese rebels. We can use any help we can get - let us hope our relations with China stay positive.;;;;;;;;;;;;;x
+EVTOPTA717005;Great!;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

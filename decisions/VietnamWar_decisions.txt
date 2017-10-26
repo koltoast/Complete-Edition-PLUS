@@ -1,0 +1,433 @@
+#VietnamWar_decisions.txt
+#1959 Vietnam War
+
+#USA - USA:
+	#1959_US_vietnam_support_no_tonkin 	- Decision for joining the Vietnam war without the Tonkin Incident
+	#1959_US_vietnam_support_tonkin 	- Decision for joining the Vietnam war with the Tonkin Incident
+	#vietnam_USA_leave_war 				- Surrender event where USA leaves vietnam due to high dissent
+	#vietnam_USA_leave_war_DRV_victory 	- Surrender event where USA leaves vietnam because DRV has won
+
+#SVI - South Vietnam:
+	#1955_referendum_SVI 				- SVI referendum between Monarchy and 'Democracy';
+	
+#DRV - North Vietnam:
+	#1959_vietnam_war 					- Decision for declaring war on SVI;
+
+#CHC - Communist China:
+	#1959_vietnam_war_CHC_DRV 			- CHC joins the vietnam war
+	
+#CHI - Nationalist China:
+	#1959_vietnam_war_CHI_SVI 			- CHI joins the vietnam war
+	
+#SOV - Soviet Union:
+	#1959_vietnam_war_SOV_DRV 			- SOV joins the vietnam war
+	
+#ENG - United Kingdom:
+	#1959_vietnam_war_ENG_SVI 			- ENG joins the vietnam war
+	
+#FRA - France:
+	#1959_vietnam_war_FRA_SVI 			- FRA joins the vietnam war
+
+
+diplomatic_decisions = {
+	## USA ##
+	#1959_US_vietnam_support_no_tonkin - Decision for joining the Vietnam war without the Tonkin Incident
+	1959_US_vietnam_support_no_tonkin = {
+	
+		categoty = national
+		picture = "1965_ARVN_operations_Vietnam"
+		
+		potential = {
+			tag = USA
+			has_global_flag = 1959_vietnam_war_active
+			NOT = { has_country_flag = gulf_of_tonkin_incident }
+			NOT = { has_country_flag = 1959_US_vietnam_support_no_tonkin_done }
+		}
+		
+		allow = {
+			SVI = { war_with = DRV }
+			OR = {
+				DRV = { ideology = "maoist_idolg" }
+				DRV = { ideology = "communist_idolg" }
+			}
+			OR = {
+				ideology = "social_cons_idolg"
+				ideology = "market_liberal_idolg"
+				ideology = "social_liberal_idolg"
+				ideology = "social_democrat_idolg"
+				ideology = "left_wing_radical_idolg"
+				ideology = "paternal_auto_idolg"
+				ideology = "fascistic_idolg"
+			}
+		}
+		
+		effect = {
+			set_country_flag = 1959_US_vietnam_support_no_tonkin_done
+			country_event = 354006 #Decision follow-up event
+		}
+	}
+	
+	#1959_US_vietnam_support_tonkin - Decision for joining the Vietnam war with the Tonkin Incident
+	1959_US_vietnam_support_tonkin = {
+	
+		categoty = national
+		picture = "1964_Pierce_Arrow"
+		
+		potential = {
+			tag = USA
+			has_global_flag = 1959_vietnam_war_active
+			has_country_flag = gulf_of_tonkin_incident
+			NOT = { has_country_flag = 1959_US_vietnam_support_tonkin_done }
+		}
+		
+		allow = {
+			SVI = { war_with = DRV }
+			OR = {
+				DRV = { ideology = "maoist_idolg" }
+				DRV = { ideology = "communist_idolg" }
+			}
+			OR = {
+				ideology_group = social_cons_idolg
+				ideology_group = market_liberal_idolg
+				ideology_group = social_liberal_idolg
+				ideology_group = social_democrat_idolg
+				ideology_group = left_wing_radical_idolg
+				ideology_group = paternal_auto_idolg
+				ideology_group = fascistic_idolg
+			}
+		}
+		
+		effect = {
+			set_country_flag = 1959_US_vietnam_support_tonkin_done
+			country_event = 354007 #Decision follow-up event
+		}
+	}
+	
+	#vietnam_USA_leave_war - Surrender event where USA leaves vietnam due to high dissent
+	vietnam_USA_leave_war = {
+	
+		category = national
+		picture = "1967_Anti-Vietnam_demonstrations"
+		
+		potential = {
+			tag = USA
+			has_global_flag = 1959_vietnam_war_active
+			has_country_flag = 1959_vietUSA
+			OR = {
+				ideology = "social_cons_idolg"
+				ideology = "market_liberal_idolg"
+				ideology = "social_liberal_idolg"
+				ideology = "social_democrat_idolg"
+			}
+		}
+		allow = {
+			SVI = { war_with = DRV }
+			dissent = 25
+		}
+		effect = {
+			set_country_flag = vietnam_USA_leave_war_done
+			country_event = 354014 #Decisions follow-up event
+		}
+	}
+	
+	#vietnam_USA_leave_war_DRV_victory - Surrender event where USA leaves vietnam because DRV has won
+	vietnam_USA_leave_war_DRV_victory = {
+	
+		category = national
+		picture = "1975_Fall_of_Saigon"
+		
+		potential = {
+			tag = USA
+			NOT = { has_global_flag = 1959_vietnam_war_active } #Vietnam war between SVI and DRV is not ongoing
+			has_country_flag = 1959_vietUSA
+			has_country_flag = 1959_vietnam_war_DRV_victory
+		}
+		allow = {
+			NOT = { SVI = { war_with = DRV } }
+			NOT = { exists = SVI } 
+		}
+		effect = {
+			set_country_flag = vietnam_USA_leave_DRV_victory_war_done
+			country_event = 354014 #Decisions follow-up event
+		}
+	}
+	
+	## SVI ##
+	#1955_referendum_SVI - SVI referendum between Monarchy and 'Democracy';
+	1955_referendum_SVI = {
+		category = national
+	#	picture = "1955_referendum_SVI"
+		potential = {
+			tag = SVI
+			NOT = { has_country_flag = 1955_referendum_SVI_done }
+			NOT = { has_global_flag = 1959_vietnam_war_active }
+		}
+		allow = {
+			NOT = { ideology = "maoist_idolg" }
+			NOT = { ideology = "communist_idolg" }
+			NOT = { ideology = "fascistic_idolg" }
+			DRV = { is_subject = no }
+			war = no
+			NOT = { alliance_with = DRV }
+			NOT = { exists = VIE }
+			is_subject = no
+		}
+		effect = {
+			country_event = 333000 #Decision follow-up event
+			set_country_flag = 1955_referendum_SVI_done
+		}
+	}
+	
+	#SVI_surrender_DRV_vietnam_war - SVI looses Vietnam War
+	SVI_surrender_DRV_vietnam_war = {
+	
+		category = national
+		picture = "1975_Fall_of_Saigon"
+		
+		potential = {
+			tag = SVI
+			has_country_flag = 1959_vietnam_war_active
+		}
+		allow = {
+			war_with = DRV
+			lost_national = 10
+			war_exhaustion = 80
+		}
+		effect = {
+			SVI = { country_event = 333006 }
+			set_country_flag = SVI_surrender_DRV_vietnam_war_done
+		}
+	}
+	
+	## DRV ##
+	#1959_vietnam_war - Decision for declaring war on SVI;
+	1959_vietnam_war = {
+		category = national
+	#	picture = "1972_North_Vietnam_prepares_Easter_Offensive"
+		potential = {
+			tag = DRV
+			exists = SVI
+			NOT = { has_country_flag = 1959_vietnam_war_done }
+		}
+		allow = {
+			NOT = { dissent = 20 }
+			war = no
+			OR = {
+				DRV = { ideology = "maoist_idolg" }
+				DRV = { ideology = "communist_idolg" }
+			}
+			AND = {
+				SVI = { NOT = { ideology = "maoist_idolg" } }
+				SVI = { NOT = { ideology = "communist_idolg" } }
+			}
+		}
+		effect = {
+			country_event = 177009 #Decision follow-up event
+			set_country_flag = 1959_vietnam_war_done
+		}
+	}
+	
+	#DRV_surrender_SVI_vietnam_war - DRV looses Vietnam War
+	DRV_surrender_SVI_vietnam_war = {
+	
+		category = national
+		picture = "1975_South_Vietnam_victory"
+		
+		potential = {
+			tag = DRV
+			has_country_flag = 1959_vietnam_war_active
+		}
+		allow = {
+			war_with = SVI
+			lost_national = 10
+			war_exhaustion = 80
+		}
+		effect = {
+			DRV = { country_event = 177012 }
+			set_country_flag = DRV_surrender_SVI_vietnam_war_done
+		}
+	}
+	
+	## CHC ##
+	#1959_vietnam_war_CHC_DRV - CHC joins the vietnam war
+	1959_vietnam_war_CHC_DRV  = {
+	
+		category = national
+		picture = "1956_Mao_and_Ho_Chi_Minh"
+		
+		potential = {
+			tag = CHC
+			has_global_flag = 1959_vietnam_war_active
+			NOT = { has_country_flag = CHI_won_civil_war }
+			NOT = { has_country_flag = 1959_vietnam_war_CHC_DRV_done }
+		}
+		
+		allow = {
+			SVI = { war_with = DRV }
+			DRV = { ideology = "maoist_idolg" }
+			DRV = { ideology = "communist_idolg" }
+			NOT = { 
+				OR = {
+					ideology = "social_cons_idolg"
+					ideology = "market_liberal_idolg"
+					ideology = "social_liberal_idolg"
+					ideology = "social_democrat_idolg"
+					ideology = "left_wing_radical_idolg"
+					ideology = "paternal_auto_idolg"
+					ideology = "fascistic_idolg"
+				}
+			}
+			NOT = { dissent = 15 }
+		}
+		
+		effect = {
+			set_country_flag = 1959_vietnam_war_CHC_DRV_done
+			country_event = 151018 #Decision follow-up event
+		}
+	}
+	
+	## CHI ##
+	#1959_vietnam_war_CHI_SVI - CHI joins the vietnam war
+	1959_vietnam_war_CHI_SVI  = {
+	
+		category = national
+		picture = "1965_ARVN_operations_Vietnam"
+		
+		potential = {
+			tag = CHI
+			has_global_flag = 1959_vietnam_war_active
+			#has_country_flag = CHI_won_civil_war
+			NOT = { has_country_flag = 1959_vietnam_war_CHI_SVI_done }
+		}
+		
+		allow = {
+			SVI = { war_with = DRV }
+			DRV = { ideology = "maoist_idolg" }
+			DRV = { ideology = "communist_idolg" }
+			OR = {
+				ideology = "social_cons_idolg"
+				ideology = "market_liberal_idolg"
+				ideology = "social_liberal_idolg"
+				ideology = "social_democrat_idolg"
+				ideology = "left_wing_radical_idolg"
+				ideology = "paternal_auto_idolg"
+				ideology = "fascistic_idolg"
+			}
+			NOT = { dissent = 15 }
+		}
+		
+		effect = {
+			set_country_flag = 1959_vietnam_war_CHI_SVI_done
+			country_event = 152011 #Decision follow-up event
+		}
+	}
+	
+	## SOV ##
+	#1959_vietnam_war_SOV_DRV - SOV joins the vietnam war
+	1959_vietnam_war_SOV_DRV  = {
+	
+		category = national
+		picture = "1955_Ho_Chi_Minh_visits_USSR"
+		
+		potential = {
+			tag = SOV
+			has_global_flag = 1959_vietnam_war_active
+			NOT = { has_country_flag = 1959_vietnam_war_SOV_DRV_done }
+		}
+		
+		allow = {
+			SVI = { war_with = DRV }
+			DRV = { ideology = "maoist_idolg" }
+			DRV = { ideology = "communist_idolg" }
+			NOT = { 
+				OR = {
+					ideology = "social_cons_idolg"
+					ideology = "market_liberal_idolg"
+					ideology = "social_liberal_idolg"
+					ideology = "social_democrat_idolg"
+					ideology = "left_wing_radical_idolg"
+					ideology = "paternal_auto_idolg"
+					ideology = "fascistic_idolg"
+				}
+			}
+			NOT = { dissent = 15 }
+		}
+		
+		effect = {
+			set_country_flag = 1959_vietnam_war_SOV_DRV_done
+			country_event = 326005 #Decision follow-up event
+		}
+	}
+	
+	## ENG ##
+	#1959_vietnam_war_ENG_SVI - ENG joins the vietnam war
+	1959_vietnam_war_ENG_SVI  = {
+	
+		category = national
+		picture = "1965_ARVN_operations_Vietnam"
+		
+		potential = {
+			tag = ENG
+			has_global_flag = 1959_vietnam_war_active
+			NOT = { has_country_flag = 1959_vietnam_war_ENG_SVI_done }
+		}
+		
+		allow = {
+			SVI = { war_with = DRV }
+			DRV = { ideology = "maoist_idolg" }
+			DRV = { ideology = "communist_idolg" }
+			OR = {
+				ideology = "social_cons_idolg"
+				ideology = "market_liberal_idolg"
+				ideology = "social_liberal_idolg"
+				ideology = "social_democrat_idolg"
+				ideology = "left_wing_radical_idolg"
+				ideology = "paternal_auto_idolg"
+				ideology = "fascistic_idolg"
+			}
+			NOT = { dissent = 15 }
+		}
+		
+		effect = {
+			set_country_flag = 1959_vietnam_war_ENG_SVI_done
+			country_event = 181007 #Decision follow-up event
+		}
+	}
+	
+	## FRA ##
+	#1959_vietnam_war_FRA_SVI - FRA joins the vietnam war
+	1959_vietnam_war_FRA_SVI  = {
+	
+		category = national
+		picture = "1965_ARVN_operations_Vietnam"
+		
+		potential = {
+			tag = FRA
+			has_global_flag = 1959_vietnam_war_active
+			NOT = { has_country_flag = 1959_vietnam_war_FRA_SVI_done }
+		}
+		
+		allow = {
+			SVI = { war_with = DRV }
+			DRV = { ideology = "maoist_idolg" }
+			DRV = { ideology = "communist_idolg" }
+			OR = {
+				ideology = "social_cons_idolg"
+				ideology = "market_liberal_idolg"
+				ideology = "social_liberal_idolg"
+				ideology = "social_democrat_idolg"
+				ideology = "left_wing_radical_idolg"
+				ideology = "paternal_auto_idolg"
+				ideology = "fascistic_idolg"
+			}
+			NOT = { dissent = 15 }
+		}
+		
+		effect = {
+			set_country_flag = 1959_vietnam_war_FRA_SVI_done
+			country_event = 194030 #Decision follow-up event
+		}
+	}
+	
+}
+		

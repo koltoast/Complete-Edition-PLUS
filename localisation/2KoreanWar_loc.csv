@@ -1,0 +1,173 @@
+CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+EVTNAME354000;Intervention in the Korean War;;;;;;;;;;;;;x
+EVTDESC354000;North Korea has invaded the South, and it does not look like the South could throw them back. A military intervention in Korea will worsen our relations with China and the Soviets even more, but it will also show that we do not look away when our help is needed.;;;;;;;;;;;;;x
+EVTOPTA354000;We won't leave the Koreans alone;;;;;;;;;;;;;x
+EVTOPTB354000;This is too risky;;;;;;;;;;;;;x
+EVTNAME354040;Joint Commission on Korea;;;;;;;;;;;;;x
+EVTDESC354040;From the Russo-Japanese War in 1905 to the conclusion of World War II forty years later, Korea was ruled by the Empire of Japan. Since the Japanese surrender in September last year, Soviet forces have been occupying the northern half of the peninsula north of the 38th parallel while we have taken over the south. The victorious Allied powers are now faced with the task of setting up a new, independent Korean state. At a conference in Moscow last month, it was agreed that a joint commission made up of representatives of the United States and the Soviet Union should be established to work out recommendations for the formation of a provisional Korean government.;;;;;;;;;;;;;x
+EVTOPTA354040;Very well.;;;;;;;;;;;;;x
+EVTNAME354041;North Korea declares independence;;;;;;;;;;;;;x
+EVTDESC354041;Korean Communists in the Soviet-occupied northern half of the peninsula have declared themselves a sovereign nation, the 'People's Republic of Korea'. We do not know what to make of this yet, whether it is a Russian design or an initiative by the Korean 'people's committees' in the area. In any case, it is not a good development, as the likelihood of establishing a united and democratic Korean state has decreased dramatically. Some of our foreign policy experts suggest that we should create a 'Republic of Korea' in our occupation zone in the south, while others would prefer to maintain our direct supervision for now.;;;;;;;;;;;;;x
+EVTOPTA354041;Declare the Republic of Korea.;;;;;;;;;;;;;x
+EVTOPTB354041;Maintain military governance.;;;;;;;;;;;;;x
+EVTNAME354042;Joint Commission on Korea admits failure;;;;;;;;;;;;;x
+EVTDESC354042;The joint US-Soviet commission on the future of Korea has been working for over a year with no tangible results. Due to the ideological differences between our two nations and with the Soviets making many unreasonable demands, the representatives on the commission have not been able to agree on much of anything. It is time to resign ourselves to the fact that the commission has failed.;;;;;;;;;;;;;x
+EVTOPTA354042;The communists are to blame.;;;;;;;;;;;;;x
+EVTNAME354045;Leftists in southern Korea;;;;;;;;;;;;;x
+EVTDESC354045;Ever since moving their troops into Korea in August 1945, the Soviets have been instigating the formation of 'people's committees' in their occupation zone in the north. Recently, such left-wing groups have been popping up in our half of the peninsula as well. Our foreign policy advisors are concerned that this could lead to an eventual Communist takeover of all of Korea. They urge for a firm crackdown on all left-wing groups in south Korea, or at least for a ban of openly Communist organizations. However, such actions could lead to revolts among the peasantry and are not without risk.;;;;;;;;;;;;;x
+EVTOPTA354045;Widespread crackdown.;;;;;;;;;;;;;x
+EVTOPTB354045;Ban communist-aligned organisations.;;;;;;;;;;;;;x
+EVTOPTC354045;Do nothing.;;;;;;;;;;;;;x
+EVTNAME354046;UN-supervised elections in Korea;;;;;;;;;;;;;x
+EVTDESC354046;After the failure of the joint US-Soviet commission to agree on suggestions for the formation of a Korean government, we have used our influence at the United Nations to bring a fresh impulse into the process. The UN have called for elections to be held in Korea under their supervision. It remains to be seen how the Soviets will react to this.;;;;;;;;;;;;;x
+EVTOPTA354046;Very well.;;;;;;;;;;;;;x
+EVTNAME354047;USSR boycotts UN Korean Elections;;;;;;;;;;;;;x
+EVTDESC354047;The USSR has declared that it will boycott the UN-supervised elections in its occupation zone in Korea. It is currently unclear whether there will be any elections held in the northern half of the peninsula, and if elections are held, they will not be supervised by the United Nations.;;;;;;;;;;;;;x
+EVTOPTA354047;This was to be expected.;;;;;;;;;;;;;x
+EVTNAME354048;Jeju rebellion;;;;;;;;;;;;;x
+EVTDESC354048;The people of the south Korean island of Jeju have long had a strained relationship with the mainlanders. After a recent government crackdown against left-wing groups, the tensions once again escalated into open violence. Left-wing rebels were attacking police stations and fighting with right-wing paramilitary groups in the streets. Eventually, with some reinforcements from the mainland, local police and military forces managed to quell the rebellion. It is being reported that they proceeded with vicious brutality.;;;;;;;;;;;;;x
+EVTOPTA354048;Unfortunate.;;;;;;;;;;;;;x
+EVTNAME354049;Elections in South Korea;;;;;;;;;;;;;x
+EVTDESC354049;Our United Nations initiative has come to fruition. After careful preparations, elections for a constitutional assembly will be held in Korea under the supervision of the UN. It is hoped that this will pave the way for the transition of power to a free and independent Korean government.;;;;;;;;;;;;;x
+EVTOPTA354049;Good news.;;;;;;;;;;;;;x
+EVTNAME326000;Support for the Unification of Korea;;;;;;;;;;;;;x
+EVTDESC326000;Japan's rise to power at the beginning of the 20th century began with the Japanese victory over Russia in 1905. Shortly afterwards, Japan invaded Korea and annexed it 1910. Korea was a part of Japan until its defeat in World War II, when the annexation treaty was declared void and the country was divided in a Soviet and an American occupation zone and later into two different states. Now, the North Koreans want to take over the South by force and ask for our help. We can send supplies and maybe some planes, but any open warfare in the region bears the risk of Western intervention. If Korea is unified under a friendly government, however, we will be one big step closer to bringing the revolution to all of Asia.;;;;;;;;;;;;;x
+EVTOPTA326000;Send supplies and an expeditionary force;;;;;;;;;;;;;x
+EVTOPTB326000;No, this is too risky;;;;;;;;;;;;;x
+EVTNAME326010;Joint Commission on Korea;;;;;;;;;;;;;x
+EVTDESC326010;From the Russo-Japanese War in 1905 to the conclusion of World War II forty years later, Korea was ruled by the Empire of Japan. Since the Japanese surrender in September last year, our armed forces have been occupying the northern half of the peninsula north of the 38th parallel while the Americans have taken over the south. The victorious Allied powers are now faced with the task of setting up a new, independent Korean state. At a conference in Moscow last month, it was agreed that a joint commission made up of representatives of the United States and the Soviet Union should be established to work out recommendations for the formation of a provisional Korean government.;;;;;;;;;;;;;x
+EVTOPTA326010;Very well.;;;;;;;;;;;;;x
+EVTNAME326011;North Korean Provisional People's Committee;;;;;;;;;;;;;x
+EVTDESC326011;After the decades-long Japanese occupation and the devastation brought on by the world war, Korea faces enormous challenges. However, the work of the joint US-Soviet commission on the future of Korea has been frustratingly slow due to the ideological differences between our two countries. There are some of our advisors who suggest that we should speed things up by creating a fait accompli. We could establish a North Korean Provisional People's Committee, modeled after the Soviet example, to govern the northern half of the peninsula under our supervision. Others in the Party argue that the Koreans are not yet ready for self-governance, while still others would leave the Koreans to their own devices altogether.;;;;;;;;;;;;;x
+EVTOPTA326011;Grant them internal self-governance.;;;;;;;;;;;;;x
+EVTOPTB326011;They are not yet ready.;;;;;;;;;;;;;x
+EVTOPTC326011;They are on their own.;;;;;;;;;;;;;x
+EVTNAME326012;Joint Commission on Korea admits failure;;;;;;;;;;;;;x
+EVTDESC326012;The joint US-Soviet commission on the future of Korea has been working for over a year with no tangible results. Due to the ideological differences between our two nations and with the Americans making many unreasonable demands, the representatives on the commission have not been able to agree on much of anything. It is time to resign ourselves to the fact that the commission has failed.;;;;;;;;;;;;;x
+EVTOPTA326012;The capitalists are to blame.;;;;;;;;;;;;;x
+EVTNAME326016;UN-supervised elections in Korea;;;;;;;;;;;;;x
+EVTDESC326016;After the failure of the joint US-Soviet commission to agree on suggestions for the formation of a Korean government, there have been calls (instigated by the Americans, no doubt) to hold elections in Korea supervised by the United Nations. Our foreign policy advisors urge us to boycott the elections, as they fear that letting the United Nations in will weaken our position on the peninsula.;;;;;;;;;;;;;x
+EVTOPTA326016;Boycott the elections.;;;;;;;;;;;;;x
+EVTNAME326017;Establish the DPRK;;;;;;;;;;;;;x
+EVTDESC326017;The Americans have made clear their aim to establish a south Korean state that is closely allied to them and grants them military access. In response, we have decided to create the Democratic People's Republic of Korea in the north. This Communist Korean state will serve as a bulwark against capitalist expansion.;;;;;;;;;;;;;x
+EVTOPTA326017;Very well.;;;;;;;;;;;;;x
+EVTNAME151050;Support for the Unification of Korea;;;;;;;;;;;;;x
+EVTDESC151050;Japan's rise to power at the beginning of the 20th century began with the Japanese victory over Russia in 1905. Shortly afterwards, Japan invaded Korea and annexed it 1910. Korea was a part of Japan until its defeat in World War II, when the annexation treaty was declared void and the country was divided in a Soviet and an American occupation zone and later into two different states. Now, the North Koreans want to take over the South by force and ask for our help. We can send weapons, supplies and maybe volunteers, but any open warfare in the region bears the risk of Western intervention. If Korea is unified under a friendly government, however, we will be one big step closer to bringing the revolution to all of Asia. And if we join the Koreans, we may end the war before anybody can react.;;;;;;;;;;;;;x
+EVTOPTA151050;Send weapons and volunteers;;;;;;;;;;;;;x
+EVTOPTB151050;Join the Koreans directly;;;;;;;;;;;;;x
+EVTOPTC151050;No, this is too risky;;;;;;;;;;;;;x
+EVTNAME151051;Intervention in the War in Korea;;;;;;;;;;;;;x
+EVTDESC151051;The North Koreans' attempt to take over the South has come to a halt for the time being. If we send in troops now (as volunteers, of course), we can help them to be victorious. However, if we are too bold, we will make ourselves a target.;;;;;;;;;;;;;x
+EVTOPTA151051;Send volunteers;;;;;;;;;;;;;x
+EVTOPTB151051;This is not our concern;;;;;;;;;;;;;x
+EVTNAME291000;Ask for Soviet Support;;;;;;;;;;;;;x
+EVTDESC291000;With the Soviets backing us, nobody would dare to intervene while we liberate all of Korea. They might even send us weapons or air support. Alternatively, we could plan the invasion in secret and not inform any of our brother states. If we succeed then, the prestige will be ours alone.;;;;;;;;;;;;;x
+EVTOPTA291000;Ask the Soviets to back us;;;;;;;;;;;;;x
+EVTOPTB291000;We don't need their help – to war!;;;;;;;;;;;;;x
+EVTNAME291001;Ask for Chinese Support;;;;;;;;;;;;;x
+EVTDESC291001;With the Chinese backing us, nobody would dare to intervene while we liberate all of Korea. They might even send us weapons or air support. Alternatively, we could plan the invasion in secret and not inform any of our brother states. If we succeed then, the prestige will be ours alone.;;;;;;;;;;;;;x
+EVTOPTA291001;Ask the Chinese to back us;;;;;;;;;;;;;x
+EVTOPTB291001;We don't need their help – to war!;;;;;;;;;;;;;x
+EVTNAME291002;The Soviets Send Support;;;;;;;;;;;;;x
+EVTDESC291002;The Soviets have decided to send veteran pilots to make up for our disadvantage in the air. With their backing, nobody will dare to step in for the South!;;;;;;;;;;;;;x
+EVTOPTA291002;OK;;;;;;;;;;;;;x
+EVTNAME291003;No Support from the USSR;;;;;;;;;;;;;x
+EVTDESC291003;The Soviets consider an open war to be too risky at the moment and refuse to give us military or diplomatic support. Shall we invade the South nevertheless?;;;;;;;;;;;;;x
+EVTOPTA291003;It's too risky to do it on our own;;;;;;;;;;;;;x
+EVTOPTB291003;We don't need any help – to war!;;;;;;;;;;;;;x
+EVTNAME291004;China Sends Support;;;;;;;;;;;;;x
+EVTDESC291004;The Chinese have decided to send weapons and volunteers for a swift and decisive strike against the South. With their backing, nobody will dare to interfere in Korea's affairs.;;;;;;;;;;;;;x
+EVTOPTA291004;OK;;;;;;;;;;;;;x
+EVTNAME291005;China Offers a Military Alliance;;;;;;;;;;;;;x
+EVTDESC291005;China decided to to join us directly and ensure a quick victory over the South. With the countless soldiers of China behind us, nobody can stop us now!;;;;;;;;;;;;;x
+EVTOPTA291005;Excellent!;;;;;;;;;;;;;x
+EVTNAME291006;No Support from China;;;;;;;;;;;;;x
+EVTDESC291006;The Chinese consider an open war to be too risky at the moment and refuse to give us military or diplomatic support. Shall we invade the South nevertheless?;;;;;;;;;;;;;x
+EVTOPTA291006;It's too risky to do it on our own;;;;;;;;;;;;;x
+EVTOPTB291006;We don't need any help – to war!;;;;;;;;;;;;;x
+EVTNAME291007;The South Asks for an Armistice;;;;;;;;;;;;;x
+EVTDESC291007;The Korean War has gone on for months and no end is in sight. A continuation of the war might result in all of Korea going to ruin. The South has offered a cease-fire, which might be a good opportunity to get out of this without loss of face – or would this mean that we miss the one opportunity to unify Korea under our rule?;;;;;;;;;;;;;x
+EVTOPTA291007;Let's end this... for now;;;;;;;;;;;;;x
+EVTOPTB291007;Never!;;;;;;;;;;;;;x
+EVTNAME291008;Armistice Negotiations with the South;;;;;;;;;;;;;x
+EVTDESC291008;A continuation of the war might result in all of Korea going to ruin. We can offer the South a cease-fire and concentrate on rebuilding our country – or would this mean that we miss the one opportunity to unify Korea under our rule?;;;;;;;;;;;;;x
+EVTOPTA291008;Propose to go back to pre-war borders;;;;;;;;;;;;;x
+EVTOPTB291008;Never! We will fight till the end!;;;;;;;;;;;;;x
+EVTNAME291009;Victory!;;;;;;;;;;;;;x
+EVTDESC291009;Our armed forces have achieved a stunning and glorious victory over the reactionaries in the South. We have occupied Seoul and most of the mainland, leaving the enemy government no choice but to seek shelter across the sea. Even more impressively, we did it without Soviet or Chinese help. Korea is now united under our leadership, and we have proven our might to our fellow Communist nations and the world at large.;;;;;;;;;;;;;x
+EVTOPTA291009;This is a great day!;;;;;;;;;;;;;x
+EVTNAME291010;Victory!;;;;;;;;;;;;;x
+EVTDESC291010;Our armed forces have achieved a stunning and glorious victory over the reactionaries in the South. We have occupied Seoul and most of the mainland, leaving the enemy government no choice but to seek shelter across the sea. Korea is now united under our leadership.;;;;;;;;;;;;;x
+EVTOPTA291010;This is a great day!;;;;;;;;;;;;;x
+EVTNAME291011;China comes to our aid;;;;;;;;;;;;;x
+EVTDESC291011;Our fellow Communists in China have come to our aid in our struggle against the South. They have sent a volunteer army that could help us achieve total victory.;;;;;;;;;;;;;x
+EVTOPTA291011;Excellent;;;;;;;;;;;;;x
+EVTNAME233000;The Situation Gets Worse;;;;;;;;;;;;;x
+EVTDESC233000;With every day, the North takes more of our territory and we have almost nothing to stop them. Our only hope now is to hold out as long a possible – maybe the international community will cease being idle and do something to help us.;;;;;;;;;;;;;x
+EVTOPTA233000;OK;;;;;;;;;;;;;x
+EVTNAME233001;The United States Join the War!;;;;;;;;;;;;;x
+EVTDESC233001;Our situation gets worse by the hour, but there is still hope: The US have decided to intervene on our side and American troops are on their way to Korea. This will not only save us - it might end the war in our favor. Once the North is beaten, we can assume control over all of Korea and nobody will question our authority.;;;;;;;;;;;;;x
+EVTOPTA233001;We will win this!;;;;;;;;;;;;;x
+EVTNAME233002;Armistice Negotiations with the North;;;;;;;;;;;;;x
+EVTDESC233002;A continuation of the war might result in all of Korea going to ruin. We can offer the North a cease-fire and concentrate on rebuilding our country – or would this mean that we miss the one opportunity to unify Korea under our rule?;;;;;;;;;;;;;x
+EVTOPTA233002;Propose to go back to pre-war borders;;;;;;;;;;;;;x
+EVTOPTB233002;Never! We will fight till the end!;;;;;;;;;;;;;x
+EVTNAME233003;The North Asks for an Armistice;;;;;;;;;;;;;x
+EVTDESC233003;The war went on for months and no end is in sight. A continuation of the war might result in all of Korea going to ruin. The North has offered a cease-fire, which might be a good opportunity to get out of this without being crushed – or would this mean that we miss the one opportunity to unify Korea under our rule?;;;;;;;;;;;;;x
+EVTOPTA233003;Let's end this... for now;;;;;;;;;;;;;x
+EVTOPTB233003;Never!;;;;;;;;;;;;;x
+EVTNAME233004;Victory!;;;;;;;;;;;;;x
+EVTDESC233004;Our armed forces have achieved a stunning and glorious victory over the reactionaries in the South. Korea is now united under our leadership.;;;;;;;;;;;;;x
+EVTOPTA233004;This is a great day!;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#KOR;;;;;;;;;;;;;;x
+EVTNAME233000;The Situation Gets Worse;;;;;;;;;;;;;x
+EVTDESC233000;With every day, the North takes more of our territory and we have almost nothing to stop them. Our only hope now is to hold out as long a possible – maybe the international community will cease being idle and do something to help us.;;;;;;;;;;;;;x
+EVTOPTA233000;OK;;;;;;;;;;;;;x
+EVTNAME233001;The United States Join the War!;;;;;;;;;;;;;x
+EVTDESC233001;Our situation gets worse by the hour, but there is still hope: The US have decided to intervene on our side and American troops are on their way to Korea. This will not only save us - it might end the war in our favor. Once the North is beaten, we can assume control over all of Korea and nobody will question our authority.;;;;;;;;;;;;;x
+EVTOPTA233001;We will win this!;;;;;;;;;;;;;x
+EVTNAME233002;Armistice Negotiations with the North;;;;;;;;;;;;;x
+EVTDESC233002;A continuation of the war might result in all of Korea going to ruin. We can offer the North a cease-fire and concentrate on rebuilding our country – or would this mean that we miss the one opportunity to unify Korea under our rule?;;;;;;;;;;;;;x
+EVTOPTA233002;Propose to go back to pre-war borders;;;;;;;;;;;;;x
+EVTOPTB233002;Never! We will fight till the end!;;;;;;;;;;;;;x
+EVTNAME233003;The North Asks for an Armistice;;;;;;;;;;;;;
+EVTDESC233003;The war went on for months and no end is in sight. A continuation of the war might result in all of Korea going to ruin. The North has offered a cease-fire, which might be a good opportunity to get out of this without being crushed – or would this mean that we miss the one opportunity to unify Korea under our rule?;;;;;;;;;;;;;
+EVTOPTA233003;Let's end this... for now;;;;;;;;;;;;;
+EVTOPTB233003;Never!;;;;;;;;;;;;;
+EVTNAME233004;Victory!;;;;;;;;;;;;;
+EVTDESC233004;Our armed forces have achieved a stunning and glorious victory over the reactionaries in the South. Korea is now united under our leadership.;;;;;;;;;;;;;
+EVTOPTA233004;This is a great day!;;;;;;;;;;;;;

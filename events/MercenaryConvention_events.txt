@@ -1,0 +1,896 @@
+#MercenaryConvention_events.txt
+#UN Mercenary Convention
+
+#UN Secretary General:
+	#11500 - Raise the UN Mercenary Convention for Voting - Triggered by dec_UN_raise_mercenary_convention
+	#11501 - Should We Have Voting Notifications Or Not?
+	#11502 - UN Mercenary Convention Resolution Fails in the General Assembly
+	#11503 - UN Mercenary Convention Resolution Passes in the General Assembly
+	
+#Global:
+	#11510 - Vote on the UN Mercenary Convention - Notifications Off
+	#11511 - Vote on the UN Mercenary Convention - Notifications On (Major Event)
+	#11512 - We have ratified the UN Mercenary Convention - Triggered
+	#11513 - We have ratified the UN Mercenary Convention - Non-triggered
+	#11514 - We have revoked the UN Mercenary Convention
+	
+	
+## UN Secretary General ##
+	#11500 - Raise the UN Mercenary Convention for Voting
+	country_event = {
+	
+		id = 11500
+
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME11500"
+		desc = "EVTDESC11500"
+		picture = "1989_UN_mercenary_convention"
+
+		option = {
+			name = "EVTOPTA11500" 					#Large diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 40 }
+			#}
+			#XUN  = { prestige_change = -40 }
+			
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			country_event = 11501
+		}
+
+		option = {
+			name = "EVTOPTB11500" 					#Small diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 15 }
+			#}
+			#XUN  = { prestige_change = -15 }
+			
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			country_event = 11501
+		}
+
+		option = {
+			name = "EVTOPTC11500"					#No diplomatic investment
+			
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			country_event = 11501
+		}
+	}
+	
+	#11501 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 11501
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME11501"
+		desc = "EVTDESC11501"
+		picture = "1989_UN_mercenary_convention"
+		
+		option = {
+			name = "EVTOPTA11501"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_mercenary_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_mercenary_convention_voting
+		}
+		
+		option = {
+			name = "EVTOPTB11501"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_mercenary_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_mercenary_convention_voting
+		}
+	}
+	
+	#11502 - UN Mercenary Convention Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 11502
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_mercenary_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME11502"
+		desc = "EVTDESC11502"
+		picture = "1989_UN_mercenary_convention"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_mercenary_convention_voting
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_mercenary_convention_fails
+		}
+
+		option = {
+			name = "EVTOPTA11502"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			#XUN  = { prestige_change = -50 }
+			
+			#hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_mercenary_convention_failure_delay
+						duration = 1460
+					}
+				}
+			#}
+			clr_global_flag = gflag_UN_mercenary_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#11503 - UN Mercenary Convention Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 11503
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_mercenary_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME11503"
+		desc = "EVTDESC11503"
+		picture = "1989_UN_mercenary_convention"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_mercenary_convention_voting
+			clr_global_flag = gflag_UN_mercenary_convention_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_mercenary_convention_passes
+		}
+
+		option = {
+			name = "EVTOPTA11503"					#Excellent
+			clr_global_var = var_UN_votes_For
+			
+			#XUN  = { prestige_change = 50 }
+			
+			any_country = {
+				limit = {
+					has_country_flag = flag_UN_mercenary_convention_supporter
+				}
+				set_country_flag = flag_UN_mercenary_convention_ratified
+				country_event = 11512
+			}
+			clr_global_flag = gflag_UN_mercenary_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+
+## Global ##
+	#11510 - Vote on the UN Mercenary Convention - Notifications Off
+	country_event = {
+	
+		id = 11510
+		
+		trigger = {
+			has_country_flag = flag_UN_mercenary_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_mercenary_convention_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME11510"
+		desc = "EVTDESC11510"
+		picture = "1973_General_Assembly_voting"
+		
+		immediate = {
+			clr_country_flag = flag_UN_mercenary_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_mercenary_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA11510"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_mercenary_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						rule_of_law = substantively_defined
+						rule_of_law = well_defined
+					}
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						military_service = expanded_drafted_army
+						military_service = conventional_drafted_army
+					}
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.25
+					national_attitude = non-interventionism
+				}
+				modifier = {
+					factor = 1.25
+					national_culture = cul_sub_saharan_africa
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_mercenary_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB11510"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+			clr_country_flag = flag_UN_mercenary_convention_supporter
+		}
+
+		option = {
+			name = "EVTOPTC11510"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					rule_of_law = thinly_defined
+				}
+				modifier = {
+					factor = 1.5
+					intelligence_policy = wet_operations_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						intelligence_policy = false_flag_operations_pol
+						intelligence_policy = coup_facilitating_ops_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = containment_pol
+				}
+				modifier = {
+					factor = 1.25
+					armaments_policy = assymetric_warfare_focus_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						military_service = abbreviated_volunteer_army
+						military_service = conventional_volunteer_army
+					}
+				}
+				modifier = {
+					factor = 1.1
+					national_identity = corporate_focus
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_attitude = imperialism
+						national_attitude = colonialism
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			clr_country_flag = flag_UN_mercenary_convention_supporter
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_mercenary_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#11511 - Vote on the UN Mercenary Convention - Notifications On
+	country_event = {
+	
+		id = 11511
+		
+		trigger = {
+			has_country_flag = flag_UN_mercenary_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_mercenary_convention_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME11510"
+		desc = "EVTDESC11510"
+		picture = "1973_General_Assembly_voting"
+		
+		immediate = {
+			clr_country_flag = flag_UN_mercenary_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_mercenary_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA11510"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_mercenary_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						rule_of_law = substantively_defined
+						rule_of_law = well_defined
+					}
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						military_service = expanded_drafted_army
+						military_service = conventional_drafted_army
+					}
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.25
+					national_attitude = non-interventionism
+				}
+				modifier = {
+					factor = 1.25
+					national_culture = cul_sub_saharan_africa
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_mercenary_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB11510"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC11510"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					rule_of_law = thinly_defined
+				}
+				modifier = {
+					factor = 1.5
+					intelligence_policy = wet_operations_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						intelligence_policy = false_flag_operations_pol
+						intelligence_policy = coup_facilitating_ops_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = containment_pol
+				}
+				modifier = {
+					factor = 1.25
+					armaments_policy = assymetric_warfare_focus_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						military_service = abbreviated_volunteer_army
+						military_service = conventional_volunteer_army
+					}
+				}
+				modifier = {
+					factor = 1.1
+					national_identity = corporate_focus
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_attitude = imperialism
+						national_attitude = colonialism
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_mercenary_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#11512 - We have ratified the UN Mercenary Convention - Triggered
+	country_event = {
+	
+		id = 11512
+
+		is_triggered_only = yes
+
+		title = "EVTNAME11512"
+		desc = "EVTDESC11512"
+		picture = "1989_UN_mercenary_convention"
+
+		option = {
+			name = "EVTOPTA11512"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_mercenary_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_mercenary_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_mercenary_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#11513 - We have ratified the UN Mercenary Convention (Non-triggered)
+	country_event = {
+	
+		id = 11513
+
+		trigger = {
+			ai = yes
+			has_global_flag = gflag_UN_mercenary_convention_passes
+			NOT = { has_country_modifier = mod_UN_mercenary_convention_ratified }
+			NOT = { USA = { has_country_modifier = mod_UN_mercenary_convention_ratifier_delay } }
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			NOT = { intelligence_policy = wet_operations_pol }
+			#Add more
+		}
+		
+		mean_time_to_happen = {
+			months = 40
+			modifier = {
+				factor = 0.6
+				is_org_leader = XUN
+			}
+			modifier = {
+				factor = 0.7
+				OR = {
+					rule_of_law = substantively_defined
+					rule_of_law = well_defined
+				}
+			}
+			modifier = {
+				factor = 0.8
+				foreign_policy = dove_policy_pol
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					military_service = expanded_drafted_army
+					military_service = conventional_drafted_army
+				}
+			}
+			modifier = {
+				factor = 0.7
+				national_identity = humanitarian_focus
+			}
+			modifier = {
+				factor = 0.7
+				national_attitude = non-interventionism
+			}
+			modifier = {
+				factor = 0.7
+				national_culture = cul_sub_saharan_africa
+			}
+			modifier = {
+				factor = 0.6
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 0.8
+				national_attitude = non-interventionism
+			}
+			modifier = {
+				factor = 1.25
+				rule_of_law = thinly_defined
+			}
+			modifier = {
+				factor = 1.75
+				intelligence_policy = wet_operations_pol
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					intelligence_policy = false_flag_operations_pol
+					intelligence_policy = coup_facilitating_ops_pol
+				}
+			}
+			modifier = {
+				factor = 1.5
+				foreign_policy = hardline_pol
+			}
+			modifier = {
+				factor = 1.2
+				foreign_policy = containment_pol
+			}
+			modifier = {
+				factor = 1.5
+				armaments_policy = assymetric_warfare_focus_pol
+			}
+			modifier = {
+				factor = 1.2
+				OR = {
+					military_service = abbreviated_volunteer_army
+					military_service = conventional_volunteer_army
+				}
+			}
+			modifier = {
+				factor = 1.2
+				national_identity = corporate_focus
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					national_attitude = imperialism
+					national_attitude = colonialism
+				}
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME11512"
+		desc = "EVTDESC11512"
+		picture = "1989_UN_mercenary_convention"
+
+		option = {
+			name = "EVTOPTA11512"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_mercenary_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_mercenary_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_mercenary_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#11514 - We have revoked the UN Mercenary Convention
+	country_event = {
+	
+		id = 11514
+
+		trigger = {
+			ai = yes
+			has_country_modifier = mod_UN_mercenary_convention_ratified
+			NOT = { has_country_modifier = mod_UN_mercenary_convention_ratified_recently }
+			NOT = { has_country_flag = flag_UN_mercenary_convention_supporter }
+			OR = {
+				intelligence_policy = wet_operations_pol
+				AND = {
+					foreign_policy = hardline_pol
+					OR = {
+						intelligence_policy = false_flag_operations_pol
+						intelligence_policy = coup_facilitating_ops_pol
+					}
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			months = 9
+			modifier = {
+				factor = 0.8
+				intelligence_policy = wet_operations_pol
+			}
+			modifier = {
+				factor = 0.9
+				intelligence_policy = hardline_pol
+			}
+			modifier = {
+				factor = 0.25
+				has_country_flag = "UN_EMBARGO"
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME11514"
+		desc = "EVTDESC11514"
+		picture = "1989_UN_mercenary_convention"
+
+		option = {
+			name = "EVTOPTA11514"					#Good riddance
+			prestige_change = -8
+			remove_country_modifier = mod_UN_mercenary_convention_ratified
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_mercenary_convention_revoked_recently
+					duration = 365
+				}
+			#}
+			
+			#XUN = { prestige_change = -3 }
+		}
+	}

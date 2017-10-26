@@ -1,0 +1,44 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+mod_UN_minority_rights_declaration_failure_delay;UN Minority Rights Declaration Delay;;;;;;;;;;;;;x
+mod_UN_minority_rights_declaration;UN Minority Rights Declaration;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+dec_UN_raise_minority_rights_declaration_title;The UN Minority Rights Declaration;;;;;;;;;;;;;x
+dec_UN_raise_minority_rights_declaration_desc;United Nations General Assembly Resolution 47/135, The Declaration on the Rights of Persons Belonging to National or Ethnic, Religious and Linguistic Minorities.;;;;;;;;;;;;;x
+dec_UN_minority_rights_declaration_disable_voting_notifications_title;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+dec_UN_minority_rights_declaration_disable_voting_notifications_desc;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+EVTNAME13300;The UN Minority Rights Declaration;;;;;;;;;;;;;x
+EVTDESC13300;United Nations General Assembly Resolution 47/135, The Declaration on the Rights of Persons Belonging to National or Ethnic, Religious and Linguistic Minorities, has been opened for voting.;;;;;;;;;;;;;x
+EVTOPTA13300;Large Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTB13300;Small Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTC13300;No Diplomatic Investment.;;;;;;;;;;;;;x
+EVTNAME13301;UN Voting Notifications;;;;;;;;;;;;;x
+EVTDESC13301;Shall we receive notifications when nations decide their vote on the current UN Resolution undergoing a vote?\nThese can be turned off at any time by an international decision.;;;;;;;;;;;;;x
+EVTOPTA13301;Receive Notifications.;;;;;;;;;;;;;x
+EVTOPTB13301;No Notifications.;;;;;;;;;;;;;x
+EVTNAME13302;Minority Rights Declaration Fails Vote;;;;;;;;;;;;;x
+EVTDESC13302;United Nations General Assembly Resolution 47/135, The Declaration on the Rights of Persons Belonging to National or Ethnic, Religious and Linguistic Minorities, has been defeated by vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA13302;Unfortunate;;;;;;;;;;;;;x
+EVTNAME13303;Minority Rights Declaration Passes Vote;;;;;;;;;;;;;x
+EVTDESC13303;United Nations General Assembly Resolution 47/135, The Declaration on the Rights of Persons Belonging to National or Ethnic, Religious and Linguistic Minorities, has passed its vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA13303;Excellent;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+EVTNAME13310;UN Vote on Minority Rights Declaration;;;;;;;;;;;;;x
+EVTDESC13310;We have the opportunity to vote on United Nations General Assembly Resolution 47/135, The Declaration on the Rights of Persons Belonging to National or Ethnic, Religious and Linguistic Minorities.\nWe can either vote For it, Abstain, or vote Against it.;;;;;;;;;;;;;x
+EVTOPTA13310;§GVote For;;;;;;;;;;;;;x
+EVTOPTB13310;Abstain;;;;;;;;;;;;;x
+EVTOPTC13310;§RVote Against;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

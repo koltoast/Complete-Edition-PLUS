@@ -1,0 +1,767 @@
+﻿
+#################################################################
+##################  COnstitución de la ONU  #####################
+#################################################################
+
+country_event = {               ###Se constituye la estructura de la ONU
+	id = 700019
+
+	trigger = {
+	   not = { has_global_flag = CSJSE }
+	   year = 1946
+	   exists = ENG
+	   exists = FRA
+	   exists = USA
+		
+	}
+	   
+	mean_time_to_happen = { months = 6 }
+
+	title = "Constitucion de la ONU"
+	desc = "CSJSE_desc"
+	picture = "ONU"
+
+	option = {
+			name = "OK"
+	    ai_chance = { factor = 100 }
+         set_global_flag = CSJSE
+
+	}
+}
+
+country_event = {               ###Se constituye la estructura de la ONU repetición
+	id = 700019
+
+	trigger = {
+	   not = { has_global_flag = CSJSE }
+	   year = 1946
+	   exists = ENG
+	   exists = FRA
+	   exists = USA
+		
+	}
+	   
+	mean_time_to_happen = { months = 6 }
+
+	title = "Constitucion de la ONU"
+	desc = "CSJSE_desc"
+	picture = "ONU"
+
+	option = {
+			name = "OK"
+	    ai_chance = { factor = 100 }
+         set_global_flag = CSJSE
+
+	}
+}
+
+
+########################################################################
+################## INTERVENCIÓN MIEMBROS DE LA ONU #####################
+########################################################################
+
+country_event = {               ###intervencion deL Consejo de Seguridad (USA,GER,FRA,ENG)
+	id = 700009
+
+	trigger = {
+		not = { tag = USA }
+		not = { tag = SOV }
+		not = { tag = FRA }
+		not = { tag = ENG }
+        or = { war = yes
+		       revolt_percentage = 0.5
+              }			   
+        NOT = { is_org_member = XNA }
+        NOT = { is_org_member = XWP }		
+		USA = { war = no }
+		SOV = { war = no }
+		ENG = { war = no }
+		FRA = { war = no }
+		not = { has_global_flag = NATO_war }
+		not = { has_country_flag = falklands_war } 
+		not = { has_global_flag = WP_war }		
+		not = { has_global_flag = INTCSJSE }
+		not = { has_country_flag = INTMI }
+		not = { has_country_flag = ONU_contra }
+		has_global_flag = CSJSE
+       not = { this = { relation = { who = USA value = 100 } } }
+	   not = { this = { relation = { who = SOV value = 100 } } }
+	   not = { this = { relation = { who = ENG value = 100 } } }
+	   not = { this = { relation = { who = FRA value = 100 } } }
+	   
+	   }
+	   
+	mean_time_to_happen = { months = 1 }
+
+	title = "Resolucion de la ONU en contra de la guerra"
+	desc = "intervencion_onu_desc"
+	picture = "ONU"
+
+	option = {
+			name = "Acatemos la Resolucion"
+	    ai_chance = { factor = 20 }
+         any_country = { end_war = THIS }
+
+	}
+	option = {
+			name = "No, sigamos con la guerra"
+		    ai_chance = { factor = 80 }
+			
+			random = {
+				chance = 10
+				modifier = { factor = 0 
+				     not = { USA = { is_org_member = XUN } }
+				}	
+				modifier = { factor = 0 
+				     not = { USA = { is_major = yes } } 
+				}				
+				USA = { limited_war = THIS }
+			    country_event = 700170 
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			random = {
+				chance = 10
+				modifier = { factor = 0 
+				     not = { SOV = { is_org_member = XUN } }
+				}	
+				modifier = { factor = 0 
+				     not = { SOV = { is_major = yes } } 
+				}				
+				SOV = { limited_war = THIS }
+				 country_event = 700170
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			} 
+			random = {
+				chance = 10
+				modifier = { factor = 0 
+				     not = { ENG = { is_org_member = XUN } }
+				}	
+				modifier = { factor = 0 
+				     not = { ENG = { is_major = yes } } 
+				}
+				ENG = { limited_war = THIS }
+				 country_event = 700170
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			random = {
+				chance = 10
+				modifier = { factor = 0 
+				     not = { FRA = { is_org_member = XUN } }
+				}	
+				modifier = { factor = 0 
+				     not = { FRA = { is_major = yes } } 
+				}				
+				FRA = { limited_war = THIS }
+				 country_event = 700170
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			this = { relation = { who = USA value = -50 } }
+			this = { relation = { who = SOV value = -50 } }
+			this = { relation = { who = ENG value = -50 } }
+			this = { relation = { who = FRA value = -50 } }
+			
+  }
+}
+
+country_event = {               ###intervención de USA y/o SOV
+	id = 700010
+
+	trigger = {
+		not = { tag = USA }
+		not = { tag = SOV }
+		not = { tag = FRA }
+		not = { tag = ENG }
+        or = { war = yes
+		       revolt_percentage = 0.5
+              }	 
+		USA = { war = no }
+		SOV = { war = no }
+		not = { has_global_flag = INTCSJSE }
+		not = { has_country_flag = INTMI }
+		not = { has_country_flag = ONU_contra }
+		not = { has_global_flag = NATO_war }
+		not = { has_country_flag = falklands_war } 
+		not = { has_global_flag = WP_war }	
+        NOT = { is_org_member = XNA }
+        NOT = { is_org_member = XWP }		
+		has_global_flag = CSJSE
+       not = { this = { relation = { who = USA value = 100 } } }
+	   not = { this = { relation = { who = SOV value = 100 } } }
+	   
+	   }
+	   
+	mean_time_to_happen = { months = 1 }
+
+	title = "Resolucion de la ONU en contra de la guerra"
+	desc = "intervencion_onu_desc"
+	picture = "ONU"
+
+	option = {
+			name = "Acatemos la Resolucion"
+	    ai_chance = { factor = 20 }
+         any_country = { end_war = THIS }
+
+	}
+	option = {
+			name = "No, sigamos con la guerra"
+		    ai_chance = { factor = 80 }
+			
+			random = {
+				chance = 10
+				modifier = { factor = 0 
+				     not = { USA = { is_org_member = XUN } }
+				}	
+				modifier = { factor = 0 
+				     not = { USA = { is_major = yes } } 
+				}				
+				USA = { limited_war = THIS }
+				 country_event = 700170
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			random = {
+				chance = 10
+				modifier = { factor = 0 
+				     not = { SOV = { is_org_member = XUN } }
+				}	
+				modifier = { factor = 0 
+				     not = { SOV = { is_major = yes } } 
+				}				
+				SOV = { limited_war = THIS }
+				 country_event = 700170				
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			this = { relation = { who = USA value = -50 }}
+			this = { relation = { who = SOV value = -50 }}
+  }
+}
+
+country_event = {               ###intervención de USA
+	id = 700011
+
+	trigger = {
+		not = { tag = USA }
+		not = { tag = SOV }
+		not = { tag = FRA }
+		not = { tag = ENG }
+        or = { war = yes
+		       revolt_percentage = 0.5
+              }	
+		not = { has_global_flag = INTCSJSE }
+		not = { has_country_flag = INTMI }
+		not = { has_country_flag = ONU_contra }
+		not = { has_global_flag = NATO_war }
+		not = { has_country_flag = falklands_war } 
+		not = { has_global_flag = WP_war }
+        NOT = { is_org_member = XNA }
+        NOT = { is_org_member = XWP }		
+		has_global_flag = CSJSE
+        war = yes        
+		USA = { war = no }
+		USA = { is_major = yes }
+        not = { this = { relation = { who = USA value = 100 } } }
+	    this = { relation = { who = SOV value = 100 } } 
+		}
+	   
+	mean_time_to_happen = { months = 1 }
+
+	title = "Resolucion de la ONU en contra de la guerra"
+	desc = "intervencion_onu_desc"
+	picture = "ONU"
+
+	option = {
+			name = "Acatemos la Resolucion"
+	    ai_chance = { factor = 20 }
+         any_country = { end_war = THIS }
+
+	}
+	option = {
+			name = "No, sigamos con la guerra"
+		    ai_chance = { factor = 80 }
+			
+			random = {
+				chance = 10
+				modifier = { factor = 0 
+				     not = { USA = { is_org_member = XUN } }
+				}	
+				modifier = { factor = 0 
+				     not = { USA = { is_major = yes } } 
+				}				
+				USA = { limited_war = THIS }
+				 country_event = 700170				
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			
+			this = { relation = { who = USA value = -50 } }
+  }
+}
+
+country_event = {               ###intervención de SOV
+	id = 700012
+
+	trigger = {
+		not = { tag = USA }
+		not = { tag = SOV }
+		not = { tag = FRA }
+		not = { tag = ENG }
+        or = { war = yes
+		       revolt_percentage = 0.5
+              }	  
+		not = { has_global_flag = INTCSJSE }
+		not = { has_country_flag = INTMI }
+		not = { has_country_flag = ONU_contra }
+		not = { has_global_flag = NATO_war }
+		not = { has_country_flag = falklands_war } 
+		not = { has_global_flag = WP_war }	
+        NOT = { is_org_member = XNA }
+        NOT = { is_org_member = XWP }		
+        has_global_flag = CSJSE		
+		SOV = { war = no }
+		SOV = { is_major = yes }
+        not = { this = { relation = { who = SOV value = 100 } } }
+	    this = { relation = { who = USA value = 100 } } 
+		}
+	   
+	mean_time_to_happen = { months = 1 }
+
+	title = "Resolucion de la ONU en contra de la guerra"
+	desc = "intervencion_onu_desc"
+	picture = "ONU"
+
+	option = {
+			name = "Acatemos la Resolucion"
+	     ai_chance = { factor = 20 }
+         any_country = { end_war = THIS }
+
+	}
+	option = {
+			name = "No, sigamos con la guerra"
+		    ai_chance = { factor = 80 }
+			
+			random = {
+				chance = 10
+				modifier = { factor = 0 
+				     not = { SOV = { is_org_member = XUN } }
+				}	
+				modifier = { factor = 0 
+				     not = { SOV = { is_major = yes } } 
+				}				
+				SOV = { limited_war = THIS }
+				 country_event = 700170				
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			
+			this = { relation = { who = SOV value = -50 } }
+  }
+}
+
+country_event = {               ###intervención de ENG y/o FRA
+	id = 700013
+
+	trigger = {
+		not = { tag = USA }
+		not = { tag = SOV }
+		not = { tag = FRA }
+		not = { tag = ENG }
+        or = { war = yes
+		       revolt_percentage = 0.5
+              }	 
+		ENG = { war = no }
+		ENG = { is_major = yes }
+		FRA = { war = no }
+		FRA = { is_major = yes }
+	    this = { relation = { who = USA value = 100 } } 
+		not = { has_global_flag = INTCSJSE }
+		not = { has_country_flag = INTMI }
+		not = { has_country_flag = ONU_contra }
+		not = { has_global_flag = NATO_war }
+		not = { has_country_flag = falklands_war } 
+		not = { has_global_flag = WP_war }	
+        NOT = { is_org_member = XNA }
+        NOT = { is_org_member = XWP }		
+		has_global_flag = CSJSE
+	    this = { relation = { who = SOV value = 100 } } 
+		not = { this = { relation = { who = FRA value = 100 } } }
+		not = { this = { relation = { who = ENG value = 100 } } }
+		}
+	   
+	mean_time_to_happen = { months = 1 }
+
+	title = "Resolucion de la ONU en contra de la guerra"
+	desc = "intervencion_onu_desc"
+	picture = "ONU"
+
+	option = {
+			name = "Acatemos la Resolucion"
+	    ai_chance = { factor = 20 }
+         any_country = { end_war = THIS }
+
+	}
+	option = {
+			name = "No, sigamos con la guerra"
+		    ai_chance = { factor = 80 }
+			
+			random = {
+				chance = 10
+				modifier = { factor = 0 
+				     not = { ENG = { is_org_member = XUN } }
+				}	
+				modifier = { factor = 0 
+				     not = { ENG = { is_major = yes } } 
+				}				
+				ENG = { limited_war = THIS }
+				 country_event = 700170				
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			random = {
+				chance = 10
+				modifier = { factor = 0 
+				     not = { FRA = { is_org_member = XUN } }
+				}	
+				modifier = { factor = 0 
+				     not = { FRA = { is_major = yes } } 
+				}				
+				FRA = { limited_war = THIS }
+				 country_event = 700170				
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			
+			this = { relation = { who = ENG value = -50 } }
+			this = { relation = { who = FRA value = -50 } }
+    }
+}
+
+country_event = {               ###intervención de ENG
+	id = 700014
+
+	trigger = {
+		not = { tag = USA }
+		not = { tag = SOV }
+		not = { tag = FRA }
+		not = { tag = ENG }
+        or = { war = yes
+		       revolt_percentage = 0.5
+              }	 
+		ENG = { is_major = yes }
+		ENG = { war = no }
+        not = { this = { relation = { who = ENG value = 100 } } }
+	    this = { relation = { who = USA value = 100 } } 
+		not = { has_global_flag = INTCSJSE }
+		not = { has_country_flag = INTMI }
+		not = { has_country_flag = ONU_contra }
+		not = { has_global_flag = NATO_war }
+		not = { has_country_flag = falklands_war } 
+		not = { has_global_flag = WP_war }
+        NOT = { is_org_member = XNA }
+        NOT = { is_org_member = XWP }		
+		has_global_flag = CSJSE
+	    this = { relation = { who = SOV value = 100 } } 
+	    this = { relation = { who = FRA value = 100 } } 
+		}
+	   
+	mean_time_to_happen = { months = 1 }
+
+	title = "Resolucion de la ONU en contra de la guerra"
+	desc = "intervencion_onu_desc"
+	picture = "ONU"
+
+	option = {
+			name = "Acatemos la Resolucion"
+	    ai_chance = { factor = 20 }
+         any_country = { end_war = THIS }
+
+	}
+	option = {
+			name = "No, sigamos con la guerra"
+		    ai_chance = { factor = 80 }
+			
+			random = {
+				chance = 10
+				modifier = { factor = 0 
+				     not = { ENG = { is_org_member = XUN } }
+				}	
+				modifier = { factor = 0 
+				     not = { ENG = { is_major = yes } } 
+				}				
+				ENG = { limited_war = THIS }
+				country_event = 700170					
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			
+			this = { relation = { who = ENG value = -50 } }
+    }
+ }
+ 
+ country_event = {               ###intervención de FRA
+	id = 700015
+
+	trigger = {
+		not = { tag = USA }
+		not = { tag = SOV }
+		not = { tag = FRA }
+		not = { tag = ENG }
+        or = { war = yes
+		       revolt_percentage = 0.5
+              }	  
+		FRA = { war = no }
+		FRA = { is_major = yes }
+		not = { has_global_flag = INTCSJSE }
+		not = { has_country_flag = INTMI }
+		not = { has_country_flag = ONU_contra }
+		not = { has_global_flag = NATO_war }
+		not = { has_country_flag = falklands_war } 
+		not = { has_global_flag = WP_war }
+        NOT = { is_org_member = XNA }
+        NOT = { is_org_member = XWP }		
+        not = { this = { relation = { who = FRA value = 100 } } }
+		has_global_flag = CSJSE
+	    this = { relation = { who = USA value = 100 } } 
+	    this = { relation = { who = SOV value = 100 } } 
+	    this = { relation = { who = ENG value = 100 } } 
+		}
+	   
+	mean_time_to_happen = { months = 1 }
+
+	title = "Resolucion de la ONU en contra de la guerra"
+	desc = "intervencion_onu_desc"
+	picture = "ONU"
+
+	option = {
+			name = "Acatemos la Resolucion"
+	    ai_chance = { factor = 20 }
+         any_country = { end_war = THIS }
+
+	}
+	option = {
+			name = "No, sigamos con la guerra"
+		    ai_chance = { factor = 80 }
+			
+			random = {
+				chance = 10
+				modifier = { factor = 0 
+				     not = { FRA = { is_org_member = XUN } }
+				}	
+				modifier = { factor = 0 
+				     not = { FRA = { is_major = yes } } 
+				}				
+				FRA = { limited_war = THIS }
+			    country_event 700170 					
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			
+			this = { relation = { who = FRA value = -50 } }
+    }
+ }
+ 
+  country_event = {               ###intervención deL RESTO DE PAISES MIEMBROS DE LA ONU
+	id = 700016
+
+	trigger = {
+		not = { tag = USA }
+		not = { tag = SOV }
+		not = { tag = FRA }
+		not = { tag = ENG }
+        or = { war = yes
+		       revolt_percentage = 0.5
+              }	  
+		not = { has_global_flag = INTCSJSE }
+		not = { has_country_flag = INTMI }
+		not = { has_global_flag = NATO_war }
+		not = { has_country_flag = falklands_war } 
+		not = { has_country_flag = ONU_contra }
+		not = { has_global_flag = WP_war }
+        NOT = { is_org_member = XNA }
+        NOT = { is_org_member = XWP }		
+		has_global_flag = CSJSE
+        this = { relation = { who = FRA value = 100 } } 
+	    this = { relation = { who = USA value = 100 } } 
+	    this = { relation = { who = SOV value = 100 } } 
+	    this = { relation = { who = ENG value = 100 } } 
+	    not = { alignment = {
+			faction = allies
+			value = 30 }
+			 }
+		}
+	   
+	mean_time_to_happen = { months = 1 }
+
+	title = "EVTNAME700016"
+	desc = "EVTDESC700016"
+	picture = "ONU"
+
+	option = {
+			name = "EVTOPTA700016"
+	    ai_chance = { factor = 20 }
+         any_country = { end_war = THIS }
+
+	}
+	option = {
+			name = "EVTOPTB700016"
+		    ai_chance = { factor = 80 }
+			
+			random = {
+				chance = 10
+				random_country = { limit = { is_org_member = XUN is_major = yes money = 10000 fuel = 1000 supplies = 1000  war = no not = { has_country_flag = INTMI } not = { relation = { who = this value = 100 } } } 
+				                   limited_war = THIS set_country_flag = INTMI set_global_flag = INTCSJSE }
+				 country_event = 700170	
+                 set_country_flag = ONU_contra				 
+				
+			}			
+			
+			random = {
+				chance = 10
+				random_country = { limit = { is_org_member = XUN money = 1000 fuel = 100 supplies = 100  war = no  not = { has_country_flag = INTMI } not = { relation = { who = this value = 100 } } } 
+				                   limited_war = THIS set_country_flag = INTMI set_global_flag = INTCSJSE }
+				 country_event = 700170
+			}
+			
+    }
+ }
+ 
+country_event = {               ### el Consejo de Seguridad consigue pacificar la zona por mandato de la ONU
+	id = 700017
+
+	trigger = {
+		USA = { war = no }
+		SOV = { war = no }
+		ENG = { war = no }
+		FRA = { war = no }	
+        has_country_flag = ONU_contra		
+	   }
+	   
+	mean_time_to_happen = { months = 1 }
+	title = "La ONU pacifica la zona"
+	desc = "intervencion_onu_desc"
+	picture = "ONU"
+
+	option = {
+			name = "OK"
+	    ai_chance = { factor = 100 }
+		clr_country_flag = ONU_contra
+	    country_event = 700171 		
+
+	}
+} 
+
+country_event = {               ### el pais encargado consigue pacificar la zona por mandato de la ONU
+	id = 700018
+
+	trigger = {
+       or = {
+        	   has_country_flag = INTMI 
+			   has_country_flag = INTCSJSE
+			   }
+        war = no		
+	   }
+	   
+	mean_time_to_happen = { months = 1 }
+
+	title = "La ONU pacifica la zona"
+	desc = "intervencion_onu_desc"
+	picture = "ONU"
+
+	option = {
+			name = "OK"
+	    ai_chance = { factor = 100 }
+        clr_country_flag = INTMI
+	    clr_global_flag = INTCSJSE	
+	    country_event = 700246 
+
+	}
+}
+		
+	country_event = {
+		
+		id = 700170
+
+		is_triggered_only = yes
+
+	title = "EVTNAME700170"
+	desc = "EVTDESC700170"
+	picture = "ONU"
+
+	option = {
+        name = "EVTOPTA700170"	
+	    ai_chance = { factor = 100 }
+		country_event = 700244
+	}
+ }
+ 
+ 	country_event = {
+		
+		id = 700244
+
+		is_triggered_only = yes
+
+	title = "EVTNAME700244"
+	desc = "EVTDESC700244"
+	picture = "ONU"
+
+	option = {
+        name = "EVTOPTA700244"	
+	    ai_chance = { factor = 100 }
+		country_event = 700245
+	}
+ }
+
+	country_event = {
+		
+		id = 700171
+
+		is_triggered_only = yes
+
+	title = "EVTNAME700171"
+	desc = "EVTDESC700171"
+	picture = "ONU"
+
+	option = {
+        name = "EVTOPTA700171"	
+	    ai_chance = { factor = 100 }
+		country_event = 700245
+	}
+  }
+	
+ 	country_event = {
+		
+		id = 700245
+
+		is_triggered_only = yes
+
+	title = "EVTNAME700245"
+	desc = "EVTDESC700245"
+	picture = "ONU"
+
+	option = {
+        name = "EVTOPTA700245"	
+	    ai_chance = { factor = 100 }
+	}
+ }
+ 
+ 	country_event = {
+		
+		id = 700246
+
+		is_triggered_only = yes
+
+	title = "EVTNAME700246"
+	desc = "EVTDESC700246"
+	picture = "ONU"
+
+	option = {
+        name = "EVTOPTA700246"	
+	    ai_chance = { factor = 100 }
+	}
+ }
+
+	

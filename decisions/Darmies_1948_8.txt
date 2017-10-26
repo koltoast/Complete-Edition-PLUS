@@ -1,0 +1,841 @@
+diplomatic_decisions = {	
+	ZIM_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ZIM
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ZIM_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+	ZMB_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ZMB
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ZMB_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+ 	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1948 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1948
+		  not = { year = 1950 }
+		  not = { has_country_modifier = tropas_1948 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1948_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1948"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  
+  
+ }  

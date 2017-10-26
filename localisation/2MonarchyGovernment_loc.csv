@@ -1,0 +1,122 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+flag_monarchyGovernment_royalBonds_immediate;Royal Bonds;;;;;;;;;;;;;x
+flag_monarchyGovernment_royalBlackmail;Royal Blackmail;;;;;;;;;;;;;x
+flag_monarchyGovernment_royalCharity;Royal Charity;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalBaby;Royal Baby;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalMarriage_delay;Royal Marriage Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalBonds_delay;Royal Bonds Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalNegotiation_delay;Royal Negotiation Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalStability_delay;Royal Stability Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalCelebration_delay;Royal Celebration Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalTourism;Royal Tourism Boost;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalActivism;Royal Activism;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalStrategy_delay;Royal Strategy Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalEditorial_delay;Royal Editorial Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalNepotism_delay;Royal Nepotism Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalTitles;Sale of Royal Titles;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalTitles_delay;Royal Titles Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalTax_delay;Royal Tax Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalTax;Royal Tax Loopholes;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalEmbarressment_delay;Royal Embarressment Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalGaffe_delay;Royal Gaffe Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalDivorce_delay;Royal Divorce Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalWealth_delay;Royal Wealth Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalBlackmail_delay;Royal Blackmail Delay;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalFued;Royal Fued;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalHealth_delay;Royal Health Delays;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalHealth;Royal Health Concerns;;;;;;;;;;;;;x
+mod_monarchyGovernment_royalCharity_delay;Royal Charity Delay;;;;;;;;;;;;;x
+dec_MonarchyGovernment_monarchAbdicates_title;Abdication of Monarch;;;;;;;;;;;;;x
+dec_MonarchyGovernment_monarchAbdicates_desc;Abdication of Monarch.;;;;;;;;;;;;;x
+EVTNAME53000;Royal Baby Born;;;;;;;;;;;;;x
+EVTDESC53000;Joyous news, a royal baby has been born to our royal family! This child further ensures the continuity of our nation’s royal lineage, and therefore is a cause for national celebration.;;;;;;;;;;;;;x
+EVTOPTA53000;A reason for celebrations.;;;;;;;;;;;;;x
+EVTNAME53001;Extravagant Royal Marriage;;;;;;;;;;;;;x
+EVTDESC53001;"Royal marriages are a cause for celebration – and an opportunity for aggrandizement of the royal family. The plans for the royal marriage are truly grand, sparing absolutely no expense. The state treasury has been significantly depleted to pay for it all, but our people would have it no other way when it comes to their beloved royals. We have the chance to spin the extravaganza to benefit our government; the only question is how.";;;;;;;;;;;;;x
+EVTOPTA53001;This shall boost our royal family's prestige.;;;;;;;;;;;;;x
+EVTOPTB53001;This shall boost our neighborly relations.;;;;;;;;;;;;;x
+EVTNAME53002;Royal Bonds Unite Our Nations;;;;;;;;;;;;;x
+EVTDESC53002;The monarchy is a dying breed, and monarchs understand that birds of a feather must stick together. Therefore, neighboring monarchies tend to have much in common with one another, translating into good relations between the two nations.;;;;;;;;;;;;;x
+EVTOPTA53002;This shall boost our neighborly relations.;;;;;;;;;;;;;x
+EVTNAME53003;Monarch Asked to Arbitrate Political Crisis;;;;;;;;;;;;;x
+EVTDESC53003;Although the glorious days of direct monarchial rule are over in most lands, the monarchy still commands a great deal of respect and is seen as an impartial actor that keeps the best interest of its people at heart. Therefore, from time to time, political impasses are submitted for arbitration by the monarch. Such a political question has arisen now, and the monarch is asked to decide the matter. What shall we decide?;;;;;;;;;;;;;x
+EVTOPTA53003;We should stay out of political questions;;;;;;;;;;;;;x
+EVTOPTB53003;Rule for the government.;;;;;;;;;;;;;x
+EVTOPTC53003;Rule for the opposition.;;;;;;;;;;;;;x
+EVTNAME53004;Monarch Viewed as Moral Rock in Changing Times;;;;;;;;;;;;;
+EVTDESC53004;Although the glorious days of direct monarchial rule are over in most lands, the monarchy still commands a great deal of respect and is viewed as the anchor of our most traditional values. In these turbulent times, our nation’s monarchy has in fact become even dearer to our people as a source of stability and guidance. Let us aspire to justify the popular image of us with resolute action.;;;;;;;;;;;;;
+EVTOPTA53004;Good news.;;;;;;;;;;;;;
+EVTNAME53005;Celebration of Monarch's Reign Draws Huge Crowds;;;;;;;;;;;;;
+EVTDESC53005;A grand jubilee for our reigning monarch has drawn gigantic crowds and proven an absolute coup for the image of our monarchy. Long live the monarch!;;;;;;;;;;;;;
+EVTOPTA53005;Great!;;;;;;;;;;;;;
+EVTNAME53006;Living Royal Heritage is Tourist Draw;;;;;;;;;;;;;
+EVTDESC53006;Most monarchies have disappeared into the sands of time over the past two centuries, but ours remains a vibrant national institution relevant in the modern day. Tourists from all over the world are enraptured with the institution and personalities of our royal family, and are equally willing to spend very much money to feel more connected to them.;;;;;;;;;;;;;
+EVTOPTA53006;Great!;;;;;;;;;;;;;
+EVTNAME53007;Royal Family Member Champions Humanitarian and Social Issues;;;;;;;;;;;;;
+EVTDESC53007;A member of our royal family has become a champion of humanitarian and social issues abroad, drawing huge crowds and media attention to speeches on the issues. Not only is the world bettered by our activist royal, but our nation’s standing is bettered in the eyes of the world as well.;;;;;;;;;;;;;
+EVTOPTA53007;Great!;;;;;;;;;;;;;
+EVTNAME53008;Dynastic Marriages Unite Feuding Factions;;;;;;;;;;;;;
+EVTDESC53008;Various factions within our government are at odds and their feud has become very public – and embarrassing – because of the involvement of some high society aristocrats. Because of the aristocratic nature of the actors, our monarchy has been able to mend fences with strategically-placed marriages, calming hot heads and restoring some dignity to our traditional institutions.;;;;;;;;;;;;;
+EVTOPTA53008;Good news.;;;;;;;;;;;;;
+EVTNAME53020;Newspaper Editorial Insults Monarch;;;;;;;;;;;;;
+EVTDESC53020;Not all our citizens are enthralled with the monarchy, as evidenced by a recent editorial in a widely-read newspaper that insults our monarch for being out of touch with reality and sundry other failings. This might not be a problem for our image normally, but this newspaper’s circulation is wide and it is highly-regarded, so failing to respond may damage our reputation among the people. How shall we proceed?;;;;;;;;;;;;;
+EVTOPTA53020;Jail the editor.;;;;;;;;;;;;;
+EVTOPTB53020;Discourage future such publications.;;;;;;;;;;;;;
+EVTOPTC53020;Do not intervene.;;;;;;;;;;;;;
+EVTNAME53021;Royal Nepotism Alleged;;;;;;;;;;;;;
+EVTDESC53021;The privileges of birth run with the monarchy, and from time to time royal favors can be very useful to secure allies in government through discretionary appointment to high office. However, in the modern day, such favors often come across as nepotistic corruption, especially when revealed in a sensational manner by an ‘investigative journalist,’ as has happened today. Now that the issue of royal nepotism has been made public, how shall we react?;;;;;;;;;;;;;
+EVTOPTA53021;Nothing wrong with a few favors.;;;;;;;;;;;;;
+EVTOPTB53021;Crack down on such activities.;;;;;;;;;;;;;
+EVTNAME53022;Royal Titles Being Sold;;;;;;;;;;;;;
+EVTDESC53022;The privileges of rank run with the monarchy, and royal favors can be a very valuable commodity because of the privileges associated with them. However, in the modern day, selling royal titles comes across as nepotistic corruption, especially when revealed in a sensational manner by an ‘investigative journalist,’ as has happened today. Now that the issue of selling royal titles has been made public, how shall we react?;;;;;;;;;;;;;
+EVTOPTA53022;It is a lucrative business!;;;;;;;;;;;;;
+EVTOPTB53022;Crack down on such activities.;;;;;;;;;;;;;
+EVTNAME53023;Royal Tax Loopholes Criticized;;;;;;;;;;;;;
+EVTDESC53023;Traditionally, taxes are paid to the monarchy, not by it. However, in the present day when notions of non-personal statehood predominate, society may come to expect its royals to pay taxes as any ordinary citizen might. Consequently, when the public learns that the monarchy does not, in fact, pay taxes, the result is often rather unfavorable press for the monarchical system generally. How shall the current situation be addressed?;;;;;;;;;;;;;
+EVTOPTA53023;Tradition must remain unchanged.;;;;;;;;;;;;;
+EVTOPTB53023;Crack down on such activities.;;;;;;;;;;;;;
+EVTNAME53024;Monarch's Younger Son Embarrasses Court;;;;;;;;;;;;;
+EVTDESC53024;The youngest son of the monarch is quite daft at times and is prone to making unfortunate comments at sensitive times. This time he managed to insult a very important baroness in front of the entirety of our nation’s court, an event well-covered by the press. There isn’t much to be done now but contain the damage as much as we can.;;;;;;;;;;;;;
+EVTOPTA53024;Unfortunate.;;;;;;;;;;;;;
+EVTNAME53025;Royal Gaffe at Public Function;;;;;;;;;;;;;
+EVTDESC53025;The monarch is dear to the nation’s heart, but damned if he doesn’t put his foot in his mouth sometimes. This time he managed to insult the children of a very important dignitary at a very public event. There isn’t much to be done now but contain the damage as much as we can.;;;;;;;;;;;;;
+EVTOPTA53025;Unfortunate.;;;;;;;;;;;;;
+EVTNAME53026;Royal Marriage Collapses Publically;;;;;;;;;;;;;
+EVTDESC53026;A much anticipated and very public royal marriage lies in ruins after the prince ran away with a household servant less than a week before the ceremony. Although he returned, the former betrothed understandably wanted nothing more to do with him, and the entire event has been called off. The press couldn’t have wished for a better seller of papers than this and shows no signs of abating with its coverage of the scandal.;;;;;;;;;;;;;
+EVTOPTA53026;Unfortunate.;;;;;;;;;;;;;
+EVTNAME53027;Royal Family's Wealth Draws Controversy;;;;;;;;;;;;;
+EVTDESC53027;Our glorious royal family is among the wealthiest of all monarchical families in the world. Normally this could only be a boon to the royal prestige, but in this time of austerity when so many have so little, it has instead become a symbol for the vast economic inequality of our nation. Shall we donate a portion of the royal wealth to charity in order to improve our public image?;;;;;;;;;;;;;
+EVTOPTA53027;Donate a portion to charity.;;;;;;;;;;;;;
+EVTOPTB53027;They are merely envious.;;;;;;;;;;;;;
+EVTNAME53028;Alleged Illegitimate Child Attempts Blackmail;;;;;;;;;;;;;
+EVTDESC53028;An individual who claims to be the illegitimate child of a member of our royal family has privately contacted us, threatening to make the matter public if we do not pay up. Our investigations have revealed nothing corroborating this story, but also nothing that would disprove it. How shall we proceed with this delicate matter?;;;;;;;;;;;;;
+EVTOPTA53028;Pay them off.;;;;;;;;;;;;;
+EVTOPTB53028;Call their bluff.;;;;;;;;;;;;;
+EVTNAME53029;News of Illegitimate Royal Child Reaches Tabloids;;;;;;;;;;;;;
+EVTDESC53029;The blackmailing illegitimate child has taken their story to the usual tabloids who have blasted it across their front pages. We can only hope that nothing else comes to light that would make this story actually newsworthy.;;;;;;;;;;;;;
+EVTOPTA53029;Best ignore it.;;;;;;;;;;;;;
+EVTOPTB53029;Seek public forgiveness.;;;;;;;;;;;;;
+EVTNAME53030;Royal Family Feud;;;;;;;;;;;;;
+EVTDESC53030;A royal family feud regarding who is to succeed the reigning monarch has erupted onto the public stage after an unfortunate exchange between members of the royal family at a public dinner. Needless to say, the press has flown into action covering this imminently newsworthy situation, and our royal family’s affairs have come under the newspaperman’s microscope.;;;;;;;;;;;;;
+EVTOPTA53030;A messy affair.;;;;;;;;;;;;;
+EVTNAME53031;Rumors of Poor Health within Royal Family;;;;;;;;;;;;;
+EVTDESC53031;Rumors that the monarch and other members of the royal family suffer from a debilitating genetic disease are circulating among the national press, giving rise to fears that the royal family may not be secure. This is very bad for our public image because it tends to discredit the monarchy as a legitimate institution. However, nothing more than rumors are currently public, so we may still deny them outright.;;;;;;;;;;;;;
+EVTOPTA53031;Publically deny the rumors.;;;;;;;;;;;;;
+EVTOPTB53031;Best not to fan the flames.;;;;;;;;;;;;;
+EVTNAME53032;Embezzlement Alleged at Royal Charity;;;;;;;;;;;;;
+EVTDESC53032;It has been uncovered that funds meant for charitable purposes have in fact been systematically embezzled by the persons in charge of the beneficiary charities. This is a very embarrassing scandal for the royal family because it shows a lack of basic oversight of its charitable activities. We have a choice in how to deal with this problem.;;;;;;;;;;;;;
+EVTOPTA53032;Order an independent investigation.;;;;;;;;;;;;;
+EVTOPTB53032;It is a private matter.;;;;;;;;;;;;;
+EVTNAME53033;Draft Report Reveals Widespread Royal Corruption;;;;;;;;;;;;;
+EVTDESC53033;An investigation into the royal family’s business dealings has revealed widespread corruption among royals in which appointments to high offices are routinely traded for business advantages, and other such corrupt practices. The draft of this report has been made available to us and has not yet gone public, and we may still be able to suppress it. How shall we proceed?;;;;;;;;;;;;;
+EVTOPTA53033;Try to suppress the report.;;;;;;;;;;;;;
+EVTOPTB53033;The public will make up their minds.;;;;;;;;;;;;;
+EVTNAME53034;Report Inconclusive;;;;;;;;;;;;;
+EVTDESC53034;Fortunately, public scrutiny of the report on public corruption has come to the conclusion that the instances of corruption cannot be conclusively tied to royal business dealings. It seems that we have dodged a PR bullet this time.;;;;;;;;;;;;;
+EVTOPTA53034;It could certainly have been worse.;;;;;;;;;;;;;
+EVTNAME53035;Report Absolves Royal Family of Blame;;;;;;;;;;;;;
+EVTDESC53035;Fortunately, public scrutiny of the report on public corruption has concluded that the instances of corruption cannot possibly be tied to the royal family. It seems that we have dodged a PR bullet this time.;;;;;;;;;;;;;
+EVTOPTA53035;Good news!;;;;;;;;;;;;;
+EVTNAME53036;Monarch Abdicates;;;;;;;;;;;;;
+EVTDESC53036;The reigning monarch of $FROMCOUNTRY$ has decided, after long study and introspective contemplation, that his continued rule would not be in the best interest of the people and that his only choice is abdication. Although no nation welcomes the abdication of their monarch, $FROMCOUNTRY$ must bear this burden as best they can.;;;;;;;;;;;;;
+EVTOPTA53036;OK;;;;;;;;;;;;;

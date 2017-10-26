@@ -1,0 +1,787 @@
+#IranIraqWar_decisions.txt
+#1980 Iran-Iraq War
+
+#IRQ - Iraq:
+	#dec_IRQ_Iraq_declares_war_on_Iran 			- IRAQ DOWS IRAN Decision
+	#dec_IRQ_Iraq_ceasefire_prop 				- Iraqi Ceasefire Proposal decision
+	#dec_IRQ_Iraq_total_war						- Iraqi Total war decision
+	#dec_IRQ_Iraq_tanker_war					- Iraqi Tanker war decision 
+	#dec_IRQ_Iraq_rally							- Iraqi religious rally + foreign fighters and patriotism decision
+	#dec_IRQ_Iraq_warend						- Iraq Ceasefire Decision
+
+#PER - Iran:
+	#dec_PER_Iranian_Revolutionary_Guards_Basij	- Islamic Revoltuionary Guards and Basij decision
+	#dec_PER_Iranian_people_fight_on			- Iranian People will Fight! decision
+	#dec_PER_Iran_naval_blockade				- Iranian Naval blockade of Iraq decision
+	#dec_PER_Iran_fatwa_Iraq					- Iranian Fatwa decision
+	#dec_PER_Iran_warend						- Iran Ceasefire Decision
+
+#SYR - Syria:
+	#dec_SYR_Syrian_oil_pipe_closure			- Syrian Oil pipeline closure Decision
+	
+#KWT - Kuwait:
+	#dec_KWT_Kuwait_finance_Iraq				- Kuwait - Gulf states Financial Boost to Iraq Decisions
+	
+#SAU - Saudi Arabia:
+	#dec_SAU_Saudi_finance_Iraq					- Saudi Arabia - Gulf states Financial Boost to Iraq Decisions 
+	
+#USA - USA:
+	#dec_USA_Iraq_support						- USA and the West gives support to Iraq Decisions
+	#dec_USA_Resolution598						- UN Resolution 598 - instigated by the US
+	
+#FRA - France:
+	#dec_FRA_Iraq_support						- France gives support to Iraq Decisions
+	
+#FRG - West Germany:
+	#dec_FRG_Iraq_support						- West Germany gives support to Iraq Decisions
+	
+#SOV - Soviet Union:
+	#dec_SOV_Iraq_support						- Soviets Support Iraq Decision 
+	
+#CHC - Communist China:
+	#dec_CHC_Iran_support						- China Supports Iran Decision
+
+
+diplomatic_decisions = {
+## IRQ ##
+	#IRAQ DOWS IRAN Decision
+	dec_IRQ_Iraq_declares_war_on_Iran = {
+	
+		category = international
+	    picture = "1980_Battle_of_Khorramshahr"
+		
+		potential = {
+			tag = IRQ
+			NOT = { has_global_flag = IraqIran_war }
+			#has_country_flag = algiers_agreement  #needs scripting       ### Algiers agreement flag - Iraq wants its land back
+			exists = PER
+			neighbour = PER
+		}
+  
+		allow = {
+			NOT = {
+				war_with = PER
+				war_with = SOV
+				war_with = USA
+				alliance_with = PER
+				truce_with = PER
+				revolt_percentage = 0.40
+			}
+			money = 500
+			supplies = 2000
+			total_amount_of_brigades = 20
+			national_unity = 30
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			war = PER                                               ## war with Iran
+			IRQ = { revolt_risk = 2}                                ## small Revolts risk increase across Iraq - Shia riots/ assassinations
+			## Triggers Iran event - The above ^ Iran-Kurd revolts may occur every 12 months unless action is taken	
+			set_global_flag = IraqIran_war
+		}
+	}
+
+	#Iraqi Ceasefire Proposal decision
+	dec_IRQ_Iraq_ceasefire_prop = {
+	
+		category = international
+	    picture = "1982_Saddam_Hussein"
+		
+		potential = {
+			NOT = { has_country_flag = Iraq_cease_prop }
+			tag = IRQ
+			exists = PER
+		}
+		
+		allow = {
+			war_with = PER
+			PER = {lost_national = 0.30 }				### Iran Loss of some territory	
+			controls = 8886 							#abadan
+			controls = 8804 							# Basra
+			controls = 8716 							#Llam
+			or = {
+				controls = 8800
+				controls = 8883 							# nast Shahr Oil field
+			}
+		}
+		
+		ai_will_do = { 
+			factor = 10
+		}
+		
+		effect = {
+			PER = {country_event = 286109 }					#### Iran responds						
+			set_country_flag = Iraq_cease_prop
+		}
+	}
+
+	#Iraqi Total war decision 
+	dec_IRQ_Iraq_total_war = {
+	
+		category = national
+	    picture = "1982_Iran_Iraq_war"
+		
+		potential = {
+			NOT = { has_country_flag = Iraq_totalwar }
+			tag = IRQ
+			PER = { has_country_flag = No_Iraqi_peace }                 ##### Iran refuses ceasefire
+			lost_national = 0.10                           ## some loss in the war
+			war_exhaustion = 4
+			exists = PER
+		}
+		
+		allow = {
+			war_with = PER
+			lost_national = 0.25                           ## some loss in the war						
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		effect = {
+			national_unity = 2
+			manpower = 150
+			add_country_modifier = {                    ##Iraqi Total war effects - some resources, supplies, MP boost
+				name = "Iraq_Totalwar"
+				duration = -1
+			}
+			dissent = 2
+			war_exhaustion = 2 					 # Total war takes its toll
+			set_country_flag = Iraq_totalwar
+		}
+	}
+	#Iraqi Tanker war decision 
+	dec_IRQ_Iraq_tanker_war = {
+	
+		category = international
+	    picture = "1984_Iraqi_attack_Kharg_Island"
+		
+		potential = {
+			NOT = { has_country_flag = tanker_war }
+			tag = IRQ
+			PER = { has_country_flag = No_Iraqi_peace }                                        ##### Iran refuses ceasefire
+			exists = PER
+		}
+		
+		allow = {
+			war_with = PER											
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		effect = {
+			PER = { country_event = 286110 } 								### effects for Iran- slight penalty to money
+			prestige_change = -10
+			neutrality = -5													# the world is annoyed as shipping is in danger		
+			any_country = {
+				limit = { is_major = yes }
+				relation = { who = THIS value = -10 }
+			}
+			set_country_flag = tanker_war
+		}
+	}
+
+	#Iraqi religious rally + foreign fighters and patriotism decision
+	dec_IRQ_Iraq_rally = {
+	
+		category = national
+	    picture = "1990_Iraqi_propaganda"
+		
+		potential = {
+			NOT = { has_country_flag = Iraqrallies }
+			tag = IRQ
+			PER = { has_country_flag = IranFatwa_iraq }       ##### Iran Fatwa decision taken
+			exists = PER
+			lost_national = 0.10                           ## some loss in the war
+		}
+		allow = {
+			OR = {
+				lost_national = 0.20                           ## some loss in the war
+				war_exhaustion = 12
+			}
+			war_with = PER								
+		}
+		
+		ai_will_do = { 
+			factor = 10 
+		}
+		
+		effect = {
+			manpower = 150
+			supplies = -1000                  ### equipping new troops 
+			add_country_modifier = {
+				name = "Iraqi_rally"
+				duration = -1
+			}                    ##Terriortial pride/slight org boost	
+			dissent = -2									
+			national_unity = 5				
+			set_country_flag = Iraqrallies
+		}
+	}
+
+	#Iraq Ceasefire Decision
+	dec_IRQ_Iraq_warend = {
+	
+		category = international
+	    picture = "1988_Peace_delegation_Iran-Iraq"
+		
+		potential = {
+			NOT = { has_country_flag = Iraq_endwar }
+			tag = IRQ
+			lost_national = 0.4
+			has_global_flag = res598 						 ## Resolution 598
+			exists = PER
+		}
+		
+		allow = {
+			war_with = PER								
+		}
+		
+		ai_will_do = { 
+			factor = 10 
+		}
+		
+		effect = {
+			## ceasefire event may be activated	 if Iran has accepted resolution					
+			set_country_flag = Iraq_endwar
+		}
+	}
+
+## PER ##
+	#Islamic Revoltuionary Guards and Basij decision
+	dec_PER_Iranian_Revolutionary_Guards_Basij = {
+	
+		category = national
+	    picture = "1982_Iran_Basij"
+		
+		potential = {
+			NOT = { has_country_flag = Rev_Guard }
+			tag = PER
+			exists = IRQ
+			OR = {
+				ideology = fascistic_idolg
+				ideology = left_wing_radical_idolg
+				ideology_group = comintern
+				government = theocracy_gov
+			}
+		}
+		
+		allow = {
+			war_with = IRQ
+			war_exhaustion = 3
+		}
+		
+		ai_will_do = { 
+			factor = 10
+		}
+		
+		effect = {
+			load_oob = IRG.txt                          ## Islamic Revolutionary Guard OOB -  2 x mech divisions ?
+			load_oob = basji.txt                        ## Basji militia OOB - 5 x  militia divisions ?	
+			add_country_modifier = { 					## -20% land forces org loss - land forces lacked coordination
+				name = "revolutionary_disarry"
+				duration = -1
+			}
+			add_country_modifier = {                    ## 20% airforce org boost -Iranian pilots were good
+					name = "airforce_topguns"
+					duration = -1
+			}				
+			set_country_flag = Rev_Guard
+		}
+	}
+
+	#Iranian People will Fight! decision
+	dec_PER_Iranian_people_fight_on = {
+	
+		category = national
+	    picture = "1982_Iran_Basij_2"
+		
+		potential = {
+			NOT = { has_country_flag = Iranfights }
+			tag = PER
+			exists = IRQ
+		}
+		
+		allow = {
+			lost_national = 0.05                              # some land lost
+			war_exhaustion = 8
+			war_with = IRQ 										
+		}
+		
+		ai_will_do = { 
+			factor = 10
+		}
+		
+		effect = {
+			manpower = 200 					     				#200,000 manpower boost
+			9072 = { infantry_brigade = current }				#Military expands
+			9072 = { infantry_brigade = current }
+			9072 = { militia_brigade = current }
+			9072 = { militia_brigade = current }				#Basji volunteers
+			9072 = { militia_brigade = current }
+			dissent = -5
+			national_unity = 10									#Nation rallies behinf war effort
+			add_country_modifier = {                   		 	##territorial pride
+				name = "Iran_fights"
+				duration = -1
+			}
+			set_country_flag = Iranfights
+		}
+	}
+
+	#Iranian Naval blockade of Iraq decision
+	dec_PER_Iran_naval_blockade = {
+	
+		category = international
+	    picture = "1984_Tanker_War"
+		
+		potential = {
+			NOT = { has_country_flag = Iran_blockade }
+			tag = PER
+			IRQ = { has_country_flag = tanker_war }                 #### Iraqi Tanker war decision
+			exists = IRQ
+		}
+		
+		allow = {
+			war_with = IRQ
+			total_amount_of_ships = 8
+			IRQ = {
+				NOT = { total_amount_of_ships = 10 }
+				NOT = { num_of_capital_ships = 2 }
+			}
+		}
+		
+		ai_will_do = { 
+			factor = 10
+		}
+		
+		effect = {
+			IRQ = { country_event = 221107 } 								### effects for Iraq- slight penalty to money						
+			set_country_flag = Iran_blockade
+		}
+	}
+
+	#Iranian Fatwa decision
+	dec_PER_Iran_fatwa_Iraq = {
+	
+		category = national
+	    picture = "1982_Iran_Basij_3"
+		
+		potential = {
+			NOT = { has_country_flag = IranFatwa_iraq }
+			tag = PER
+			IRQ = { has_country_flag = tanker_war }          ##### Iraqi Tanker war 
+			exists = IRQ
+			lost_national = 0.10                           ## some loss in the war
+		}
+			
+		allow = {
+			OR = {
+				lost_national = 0.20                           ## some loss in the war
+				war_exhaustion = 12
+			}
+			war_with = IRQ								
+		}
+		
+		ai_will_do = { 
+			factor = 10
+		}
+		
+		effect = {
+			manpower = 200
+			supplies = -1000					# equipping new troops
+			add_country_modifier = {
+				name = "Fatwa_on_Iraq"
+				duration = -1
+			}                    ##Manpower boost + slight land units org boost	
+			dissent = 2										# Creates unrest
+			national_unity = 5								# Religious zeal						
+			set_country_flag = IranFatwa_iraq
+		}
+	}
+
+	#Iran Ceasefire Decision
+	dec_PER_Iran_warend = {
+	
+		category = international
+	    picture = "1988_Peace_delegation_Iran-Iraq"
+		
+		potential = {
+			NOT = { has_country_flag = Iran_endwar }
+			tag = PER
+			lost_national = 0.5
+			has_global_flag = res598						 ## Resolution 598
+			exists = IRQ
+		}
+		
+		allow = {
+			war_with = IRQ								
+		}
+		
+		ai_will_do = {
+			factor = 10 
+		}
+		
+		effect = {
+			## ceasefire event may be activated	if Iraq has accepted resolution				
+			set_country_flag = Iran_endwar
+		}
+	}
+	
+## SYR ##
+	#Syrian Oil pipeline closure Decision
+	dec_SYR_Syrian_oil_pipe_closure = {
+	
+		category = international
+	    picture = "1980_Kirkuk_pipeline"
+		
+		potential = {
+			NOT = { has_country_flag = Syrian_oilpipes }
+			tag = SYR
+			exists = IRQ
+		}
+		
+		allow = {
+			IRQ = { war_with = PER }
+			NOT = { war_with = PER }
+			NOT = { alliance_with = IRQ }
+			PER = { has_country_flag =  IranCrisis }                   # Iranian Political crisis flag
+			IRQ = { has_country_flag = Iran_MilitaryCrisis }                  # Iraqi Military crisis flag
+			IRQ = { war_exhaustion = 4 }
+			OR = {
+				IRQ = { lost_national = 0.10 }  						# Iraq Loss of territory
+				IRQ = { war_exhaustion = 12 }
+			}
+		}
+		
+		ai_will_do = { 
+			factor = 10
+			modifier = {
+				factor = 0
+				relation = { who = IRQ value = 50 }
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					relation = { who = IRQ value = -25 }
+					military_access = IRQ
+				}
+			}
+		}
+		
+		effect = {
+			relation = { who = IRQ value = -75 } 				# Syria is anti-Iraq
+			any_country = {										# Syrias actions is wdiely condemned
+				limit = { relation = { who = IRQ value = 75 } }
+				relation = { who = all value = -20 }
+			}
+			#relation = { who = XUN value = -10 }
+			set_country_flag = Syrian_oilpipes
+			IRQ = { country_event = 221110 }
+		}
+	}
+	
+## KWT ##	
+	#Kuwait - Gulf states Financial Boost to Iraq Decisions
+	dec_KWT_Kuwait_finance_Iraq = {
+	
+		category = international
+	    picture = "1981_Kuweiti_banknote"
+		
+		potential = {
+			NOT = { has_country_flag = KWTait_iraqsupport }
+			tag = KWT
+			IRQ = { has_country_flag = Iraq_oilCrisis } ### Iraq has oil pipeline closure
+			exists = IRQ
+			exists = PER
+			#money = 250
+		}
+		
+		allow = {
+			NOT =  { war_with = IRQ } 
+			IRQ = { war_with = PER } 											
+		}
+		
+		ai_will_do = { 
+			factor = 10 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "KWT_Iraq_cost"
+				duration = -1
+			}                    								##Financial support from KWTait - 
+			IRQ = { country_event = 221101 }            		# Kuwait is supporting Iraq !
+			relation = { who = IRQ value = 50 }					
+			set_country_flag = KWTait_iraqsupport
+		}
+	}
+
+## SAU ##	
+	#Saudi Arabia - Gulf states Financial Boost to Iraq Decisions 
+	dec_SAU_Saudi_finance_Iraq = {
+	
+		category = international
+	    picture = "1984_Saudi_banknote"
+		
+		potential = {
+			NOT = { has_country_flag = Saudi_iraqsupport }
+			tag = SAU
+			IRQ = { has_country_flag = Iraq_oilCrisis } ### Iraq has oil pipeline closure
+			exists = IRQ
+			exists = PER
+			#money = 500
+		}
+		allow = {
+			NOT =  { war_with = IRQ } 
+			IRQ = { war_with = PER } 											
+		}
+		
+		ai_will_do = { 
+			factor = 10 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "Sau_Iraq_cost"
+				duration = -1
+			}                   						 ##Financial support from Saudi Arabia	
+			IRQ = { country_event = 221102 }			 # Saudi Arabia is supporting Iraq !
+			relation = { who = IRQ value = 50 }						
+			set_country_flag = Saudi_iraqsupport
+		}
+	}
+
+## USA ##	
+	#USA and the West gives support to Iraq Decisions
+	dec_USA_Iraq_support = {
+	
+		category = international
+	    picture = "1983_Rumsfeld_meets_Saddam"
+		
+		potential = {
+			NOT = { has_country_flag = USA_iraqsupport }
+			tag = USA
+			exists = IRQ
+			exists = PER
+			exists = USA
+			IRQ = { has_country_flag = Iraq_oilCrisis } ### Iraq has oil pipeline closure
+		}
+		
+		allow = {
+			NOT = { war_with = IRQ } 
+			IRQ = { war_with = PER } 
+			IRQ = { lost_national = 0.25 }		### Loss of territory											
+		}
+		
+		ai_will_do = { 
+			factor = 10
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "USA_Iraq_cost"
+				duration = -1
+			}                    	##USA support - supplies/ weapons/ intelligence		
+			IRQ = { country_event = 221103 }				# USA is supporting Iraq
+			relation = { who = IRQ value = 50 }						
+			set_country_flag = USA_iraqsupport 
+		}
+	}
+
+	#UN Resolution 598 - instigated by the US
+	dec_USA_Resolution598 = {
+	
+		category = international
+	    picture = "1987_Resolution_598"
+		
+		potential = {
+			NOT = { has_country_flag = res598 }
+			tag = USA
+			PER = { has_country_flag = IranFatwa_iraq }       ##### Iran Fatwa decision taken
+			IRQ = { has_country_flag = Iraq_totalwar }       ##### Iraqi Total decision taken
+			exists = PER
+			exists = IRQ
+			OR = {
+				PER = { lost_national = 0.50 } # war is going badly for either side
+				IRQ = { lost_national = 0.40 }
+			}
+		}
+		
+		allow = {							
+		}
+		
+		ai_will_do = { 
+			factor = 10 
+		}
+		
+		effect = {
+			# Iraq and Iran ceasefire decisions are activated					
+			set_global_flag = res598
+		}
+	}
+
+## FRA ##	
+	#France gives support to Iraq Decisions
+	dec_FRA_Iraq_support = {
+	
+		category = international
+	    picture = "1980_Iraqi_Mirage"
+		
+		potential = {
+			NOT = { has_country_flag = FRA_iraqsupport }
+			tag = FRA
+			exists = IRQ
+			exists = PER
+			exists = FRA
+			IRQ = { has_country_flag = Iraq_oilCrisis } ### Iraq has oil pipeline closure
+		}
+		
+		allow = {
+			NOT =  { war_with = IRQ } 
+			IRQ = { war_with = PER } 
+			IRQ = {lost_national = 0.25 }### Loss of territory											
+		}
+		
+		ai_will_do = { 
+			factor = 10 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "Fra_Iraq_cost"
+				duration = -1
+			}                    							##French support - supplies/ weapons					
+			IRQ = { country_event = 221104 }				# France is supporting Iraq		
+			relation = { who = IRQ value = 50 }						
+			set_country_flag = FRA_iraqsupport 
+		}
+	}
+
+## FRG ##	
+	#West Germany gives support to Iraq Decisions
+	dec_FRG_Iraq_support = {
+	
+		category = international
+	    picture = "1980_Iranian_soldier_gas_mask"
+		
+		potential = {
+			NOT = { has_country_flag = _iraqsupport }
+			OR = {
+				tag = GER
+				tag = FRG
+			}
+			exists = IRQ
+			exists = PER
+			IRQ = { has_country_flag = Iraq_oilCrisis } ### Iraq has oil pipeline closure
+		}
+		
+		allow = {
+			NOT = { war_with = IRQ } 
+			IRQ = { war_with = PER } 
+			IRQ = { lost_national = 0.25 }### Loss of territory										
+		}
+		
+		ai_will_do = { 
+			factor = 10 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "GER_Iraq_cost"
+				duration = -1
+			}                    ##W-Germany support - supplies/ weapons			
+			IRQ = { country_event = 221105 }			# West Germany is supporting Iraq
+			relation = { who = IRQ value = 50 }									
+			set_country_flag = Germany_iraqsupport 
+		}
+	}
+
+## SOV ##
+	#Soviets Support Iraq Decision 
+	dec_SOV_Iraq_support = {
+	
+		category = international
+	    picture = "1980_Iraqi_Mig-29"
+		
+		potential = {
+			NOT = { has_country_flag = SOV_iraqsupport }
+			tag = SOV
+			exists = IRQ
+			exists = PER
+			IRQ = { has_country_flag = Iraq_oilCrisis } ### Iraq has oil pipeline closure
+		}
+		
+		allow = {
+			NOT = { war_with = IRQ } 
+			IRQ = { war_with = PER } 
+			IRQ = { lost_national = 0.25 }### Loss of territory											
+		}
+		
+		ai_will_do = { 
+			factor = 10 
+		}
+		
+		effect = {
+			add_country_modifier = {				##Soviet support - supplies/ weapons
+				name = "SOV_Iraq_cost"
+				duration = -1
+			}				
+			IRQ = { country_event = 221106 }					# USSR is supporting Iraq		
+			relation = { who = IRQ value = 50 }						
+			set_country_flag = SOV_iraqsupport 
+		}
+	}
+
+## CHC ##
+	#China Supports Iran Decision
+	dec_CHC_Iran_support = {
+	
+		category = international
+	    picture = "1986_J-7_Iran"
+		
+		potential = {
+			NOT = { has_country_flag = China_iransupport }
+			tag = CHI
+			exists = IRQ
+			exists = PER
+			exists = CHI
+		}
+		
+		allow = {
+			PER = { has_country_flag = IranCrisis }                # Iranian Political crisis flag
+			NOT =  { war_with = PER } 
+			IRQ = { war_with = PER } 
+			PER = { lost_national = 0.25 }					### Loss of territory									
+		}
+		
+		ai_will_do = { 
+			factor = 10
+			modifier = {
+				factor = 0
+				AND = {
+					NOT = { SOV = { has_country_flag = SOV_iraqsupport } }
+					NOT = { relation = { who = SOV value = 0 } }
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {                   	##Chinese support - supplies/ weapons
+				name = "China_Iran_cost"
+				duration = -1
+			}					
+			PER = { country_event = 286108 }				# China is supporting Iran		
+			relation = { who = PER value = 50 }						
+			set_country_flag = China_iransupport
+		}
+	}
+
+}

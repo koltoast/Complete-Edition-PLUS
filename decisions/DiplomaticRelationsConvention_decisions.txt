@@ -1,0 +1,89 @@
+#FourthGenevaConvention_decisions.txt
+#Fourth Geneva Convention
+
+#Global:
+	#dec_ratify_diplomatic_relations_convention 			- Ratify the Vienna Convention on Diplomatic Relations
+
+
+diplomatic_decisions = {
+## Global ##
+	#dec_ratify_diplomatic_relations_convention - Ratify the Vienna Convention on Diplomatic Relations
+	dec_ratify_diplomatic_relations_convention = {
+		category = international
+#		picture = "xxxx"
+		potential = {
+			NOT = {
+				has_country_modifier = ratified_the_diplomatic_relations_convention
+			}
+			has_global_flag = diplomatic_relations_convention_held
+		}
+		
+		allow = {
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			national_unity = 25
+			NOT = {
+				AND = {
+					war = yes
+					OR = {
+						war_exhaustion = 15
+						lost_national = 0.1
+					}
+				}
+			}
+			NOT = { war_with = AUS }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.50
+				OR = {
+					foreign_policy = isolationism_pol
+					foreign_policy = hardline_pol
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					rule_of_law = thinly_defined
+					AND = {
+						rule_of_law = narrowly_defined
+						foreign_policy = isolationism_pol
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				war = yes
+			}
+			modifier = {
+				factor = 2
+				intelligence_policy = counter_intelligence_focus_pol
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					internal_policy = state_controlled_aff_pol
+					internal_policy = repressive_aff_pol
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { neutrality = 30 }
+			}
+			modifier = {
+				factor = 0
+				AUS = { has_country_modifier = diplomatic_relations_convention_delay }
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = ratified_the_diplomatic_relations_convention
+				duration = -1
+			}
+			country_event = 10100
+		}
+	}
+
+}

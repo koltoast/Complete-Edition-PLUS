@@ -1,0 +1,87 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## INO ##;;;;;;;;;;;;;;x
+demand_WPA_from_HOL_INO_title;The West Papua Question;;;;;;;;;;;;;x
+demand_WPA_from_HOL_INO_desc;After more than a century of foreign rule, Indonesia is finally free and independent. Sadly, this is not true for every Indonesian because the people of West Papua still labor under the Dutch colonial yoke. Has the time has come to claim what is rightfully ours and demand that the Dutch hand over West Papua?;;;;;;;;;;;;;x
+demand_WPA_INO_title;The West Papua Question;;;;;;;;;;;;;x
+demand_WPA_INO_desc;After more than a century of foreign rule, Indonesia is finally free and independent. Sadly, our nation is not yet unified. Rather than handing over West Papua to us, the Dutch turned it into a state of its own. Has the time has come to claim what is rightfully ours and demand that West Papua joins Indonesia?;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## USA ##;;;;;;;;;;;;;;x
+pressure_HOL_westpapua_USA_title;The Dutch, Indonesia, and the West Papuan Question;;;;;;;;;;;;;x
+pressure_HOL_westpapua_USA_desc;Indonesia, a potential regional power in South-East Asia, is currently trying to obtain West Papua from the Netherlands. However, the Dutch, former Indonesian colonial overlords, have so far refused to give in and have maintained their authority over West Papua. Indonesia would be a valuable ally in the region, and alienating them by refusing to hand over West Papua could cause Indonesia to become an enemy of the United States. Perhaps we can put a little pressure on the Netherlands on behalf of Indonesia.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## HOL ##;;;;;;;;;;;;;;x
+EVTNAME213000;Indonesia Demands Control Over West Papua;;;;;;;;;;;;;x
+EVTDESC213000;When Indonesia became independent, not all of the Dutch East Indies was lost. West Papua, culturally distinct from Indonesia, remained under our control and continues to receive significant financial support. However, Indonesia considers West Papua to be part of its territory and demands that we hand it over. Doing so will save us some money but cost us influence in the region. Refusing to cede control will chill our relations with Indonesia, a potential ally. We could also take a different route and insist that West Papua become an autonomous region within Indonesia.;;;;;;;;;;;;;x
+EVTOPTA213000;Hand it over;;;;;;;;;;;;;x
+EVTOPTB213000;They can have it – but West Papua will be autonomous;;;;;;;;;;;;;x
+EVTOPTC213000;West Papua will become an independent state instead;;;;;;;;;;;;;x
+EVTOPTD213000;No, we will keep it;;;;;;;;;;;;;x
+EVTNAME213001;West Papua – Pressure from the United States;;;;;;;;;;;;;x
+EVTDESC213001;After the unsuccessful attempt by Indonesia to get their hands on West Papua, the United States has decided to intervene: the terms of its deal are that Indonesia will gain control of West Papua in exchange for military cooperation with the USA. If we agree to this deal, however, we will gain nothing but the goodwill of the Americans – but is that enough?;;;;;;;;;;;;;x
+EVTOPTA213001;Alright, they can have it;;;;;;;;;;;;;x
+EVTOPTB213001;Nooit!;;;;;;;;;;;;;x
+EVTNAME213002;West Papua – Indoenisa Rejects the US Offer;;;;;;;;;;;;;x
+EVTDESC213002;Despite our generous offer to hand over West Papua, Indonesia shows no interest in future cooperation with the Americans. The American diplomatic offensive has failed and their reputation has suffered as a result. We, on the other hand, walk away from this debacle without a scratch.;;;;;;;;;;;;;x
+EVTOPTA213002;Uitstekend!;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## INO ##;;;;;;;;;;;;;;x
+EVTNAME219000;Reclaiming West Papua;;;;;;;;;;;;;x
+EVTDESC219000;Despite the independence of Indonesia, the Dutch still cling to West Papua. They support the region financially and try to cultivate local nationalism. If we don't act now, West Papua will be lost and the Netherlands will turn it into a puppet state.;;;;;;;;;;;;;x
+EVTOPTA219000;It shall be ours;;;;;;;;;;;;;x
+EVTOPTB219000;That's not necessary;;;;;;;;;;;;;x
+EVTNAME219001;The Dutch Hand Over West Papua;;;;;;;;;;;;;x
+EVTDESC219001;The Netherlands has given in and will hand over West Papua to us. It will become a province of Indonesian under our full control.;;;;;;;;;;;;;x
+EVTOPTA219001;A great day for Indonesia;;;;;;;;;;;;;x
+EVTNAME219002;The Dutch Hand Over West Papua;;;;;;;;;;;;;x
+EVTDESC219002;The Netherlands have given in and will hand over West Papua to us. However, they insist that it becomes an autonomous province rather than integrate fully into Indonesia. If we want to possess West Papua, we have to agree to that for now.;;;;;;;;;;;;;x
+EVTOPTA219002;Time will tell...;;;;;;;;;;;;;x
+EVTNAME219003;The Dutch Release West Papua into Independence;;;;;;;;;;;;;x
+EVTDESC219003;This is outrageous! Instead of handing over West Papua – which is rightfully part of Indonesia – the Netherlands has turned it into an independent state with the crass objective of retaining some influence in the region. If we accept this and let Papuan nationalism spread, we will lose West Papua forever.;;;;;;;;;;;;;x
+EVTOPTA219003;Prepare for an invasion!;;;;;;;;;;;;;x
+EVTOPTB219003;We have to find a different way;;;;;;;;;;;;;x
+EVTNAME219004;Reclaiming West Papua;;;;;;;;;;;;;x
+EVTDESC219004;Despite the independence of Indonesia, the Dutch decided to turn West Papua into a state of its own. They supported the region financially and have tried to support local nationalists there. If we don't act now, West Papua will be lost and the international community will not accept any future claim on the region.;;;;;;;;;;;;;x
+EVTOPTA219004;It shall be ours;;;;;;;;;;;;;x
+EVTOPTB219004;That's not necessary;;;;;;;;;;;;;x
+EVTNAME219005;West Papua Will Join Indonesia;;;;;;;;;;;;;x
+EVTDESC219005;The Papuans have realized that their proper place is under the banner of Indonesia. They have decided to join our nation and become an Indonesian province.;;;;;;;;;;;;;x
+EVTOPTA219005;OK;;;;;;;;;;;;;x
+EVTNAME219006;The Papuans Refuse to Join Indonesia;;;;;;;;;;;;;x
+EVTDESC219006;The Papuans have apparently failed to realize that their proper place is under the banner of Indonesia and have refused to join us. If we allow them to remain independent, their national consciousness will grow and we may lose control over them. If we try to take over West Papua by force, however, we will certainly provoke the international community.;;;;;;;;;;;;;x
+EVTOPTA219006;This means war!;;;;;;;;;;;;;x
+EVTOPTB219006;We have to respect their decision;;;;;;;;;;;;;x
+EVTNAME219007;The Dutch Refuse to Hand Over West Papua;;;;;;;;;;;;;x
+EVTDESC219007;Despite the independence of Indonesia, the Dutch have decided keep West Papua under their control. They have supported the region financially and still try to foster nationalism there. If we sit idle now, West Papua will be lost and the international community will not accept any future claim on the region.;;;;;;;;;;;;;x
+EVTOPTA219007;OK;;;;;;;;;;;;;x
+EVTNAME219008;The Dutch Hand Over West Papua;;;;;;;;;;;;;x
+EVTDESC219008;Under pressure from the United States, the Netherlands has given in and will hand over West Papua to us. It will become a province under full Indonesian control – but only if we are willing to align ourselves with the USA.;;;;;;;;;;;;;x
+EVTOPTA219008;That's an excellent proposal;;;;;;;;;;;;;x
+EVTOPTB219008;No, it's not worth it;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## USA ##;;;;;;;;;;;;;;x
+EVTNAME354230;;;;;;;;;;;;;;x
+EVTDESC354230;;;;;;;;;;;;;;x
+EVTOPTA354230;;;;;;;;;;;;;;x
+EVTOPTB354230;;;;;;;;;;;;;;x
+EVTNAME354231;;;;;;;;;;;;;;x
+EVTDESC354231;;;;;;;;;;;;;;x
+EVTOPTA354231;;;;;;;;;;;;;;x
+EVTNAME354232;;;;;;;;;;;;;;x
+EVTDESC354232;;;;;;;;;;;;;;x
+EVTOPTA354232;;;;;;;;;;;;;;x
+EVTNAME354233;;;;;;;;;;;;;;x
+EVTDESC354233;;;;;;;;;;;;;;x
+EVTOPTA354233;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## WPA ##;;;;;;;;;;;;;;x
+EVTNAME362000;Indonesia Demands Authority Over West Papua;;;;;;;;;;;;;x
+EVTDESC362000;Our neighbor Indonesia is on a quest to unite all of what they claim to belong to Indonesia under their banner, under which, apparently, is our small country. If we give in to the Indonesian demands it will be the end of our nation and we will become an Indonesian province. If we refuse, however, Indonesia will most likely try persuade us by force.;;;;;;;;;;;;;x
+EVTOPTA362000;We shall join them;;;;;;;;;;;;;x
+EVTOPTB362000;No way!;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

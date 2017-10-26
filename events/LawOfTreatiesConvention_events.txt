@@ -1,0 +1,85 @@
+#LawOfTreatiesConvention_events.txt
+#Vienna Convention on the Law of Treaties
+
+#AUS - Austria:
+	#119010 - Establishing the Vienna Convention on the Law of Treaties
+
+#Global:
+	#10200 - We have ratified the Vienna Convention on the Law of Treaties
+
+
+## AUS ##
+	#119010 - Establishing the Vienna Convention on the Law of Treaties
+	country_event = {
+
+		id = 119010
+		
+		major = yes
+
+		trigger = {
+			tag = AUS
+			war = no
+			year = 1967
+			NOT = { has_global_flag = law_of_treaties_convention_held }
+			NOT = {
+				ideology = fascistic_idolg
+				civil_liberties = martial_law
+				civil_liberties = suspended_indefinitely
+				human_rights = not_recognized
+			}
+		}
+		
+		fire_only_once = yes
+	 
+		mean_time_to_happen =  {
+			months = 30
+			modifier = {
+				factor = 0.5 #increase likelihood to happen
+				year = 1971
+			}
+		}
+
+		title = "EVTNAME119000"
+		desc = "EVTDESC119000"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA119000" 
+			prestige_change = 20
+			set_global_flag = law_of_treaties_convention_held
+			add_country_modifier = {
+				name = ratified_the_law_of_treaties_convention
+				duration = -1
+			}
+		}
+	}
+
+## Global ##
+	#10200 - We have ratified the Vienna Convention on the Law of Treaties
+	country_event = {
+		
+		id = 10200
+		
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME10200"
+		desc = "EVTDESC10200"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA10200"			    			# OK
+			prestige_change = 8
+			relation = { who = AUS value = 5 }
+			relation = { who = XUN value = 20 }
+			hidden_effects = {
+				AUS = {
+					add_country_modifier = {
+						name = law_of_treaties_convention_delay
+						duration = 30
+					}
+				}
+			}
+		}
+	}

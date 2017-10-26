@@ -1,0 +1,248 @@
+
+ country_event = {               ###inyeccion de capital
+	id = 700120
+
+	trigger = {	 
+	            not = { money = 10000 }
+				has_global_flag = cap
+                or = { this = { faction = allies }
+				       this = { faction = comintern }
+					   is_major = yes
+					   economy_rating_greater = 4
+					  }	
+		OR = {
+			 national_unity = 80 
+			 popularity = 35 
+		}
+	    not = { dissent = 20 }
+        NOT = { has_country_modifier = loan }		
+                    				
+				
+	}
+	   
+	mean_time_to_happen = { months = -1 }
+
+	title = "EVTNAME700120"
+	desc = "EVTDESC700120"
+	picture = "destabilization"
+
+	option = {
+			name = "OK"
+			ai_chance = { factor = 100 }			
+            money = 500000			
+			add_country_modifier = {
+				name = "emergency"				
+				duration = 30
+			}
+			add_country_modifier = {
+				name = "capital"				
+				duration = 30
+			}	
+			add_country_modifier = {
+				name = "loan"				
+				duration = 90
+			}			
+            clr_global_flag = cap		
+			
+   }
+ }
+ 
+ country_event = {
+	id = 700121
+
+	trigger = {
+			ai = yes
+			not = { has_global_flag = cap }
+		}
+
+	mean_time_to_happen = { months = -1 }
+	option = {
+		set_global_flag = cap
+		ai_chance = { factor = 100 }
+	}
+}
+
+  country_event = {               ###inyeccion de capital2
+	id = 700122
+
+	trigger = {	 
+	            not = { money = 1000 }
+				is_major = no
+				not = {  or = { this = { faction = allies }
+				                this = { faction = comintern }	
+                         }						 
+					     economy_rating_greater = 4
+					  }			
+ 		OR = {
+			 national_unity = 80 
+			 popularity = 35 
+		}
+	    not = { dissent = 20 }
+	    NOT = { has_country_modifier = loan }	
+        has_global_flag = cap2					
+	}
+	   
+	mean_time_to_happen = { months = -1 }
+
+	title = "EVTNAME700122"
+	desc = "EVTDESC700122"
+	picture = "destabilization"
+
+	option = {
+			name = "OK"
+			ai_chance = { factor = 100 }			
+            money = 180000			
+			add_country_modifier = {
+				name = "emergency"				
+				duration = 30
+			}			
+			add_country_modifier = {
+				name = "capital"				
+				duration = 30
+			}	
+			add_country_modifier = {
+				name = "loan2"				
+				duration = 90
+			}			
+            clr_global_flag = cap2			
+   }
+ }
+ 
+ country_event = {
+	id = 700123
+
+	trigger = {
+			ai = yes
+			not = { has_global_flag = cap2 }
+		}
+
+	mean_time_to_happen = { months = -1 }
+	option = {
+		set_global_flag = cap2
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+  country_event = {              ## miembro de la OTAN INYECTA CAPITAL
+	   id = 700184
+	
+		is_triggered_only = yes
+
+	title = "EVTNAME700184"
+	desc = "EVTDESC700184"
+	picture = "destabilization"
+
+	option = {
+			name = "OK"
+			ai_chance = { factor = 100 }
+            random_country = { limit = { not = { tag = from } is_org_member = XNA 
+		     money = 100000 NOT = { has_country_modifier = Gcap_Nato } } money = -10000 from = { money = 10000 }						
+			 add_country_modifier = {
+				name = "Gcap_Nato"				
+				duration = 60 }			 
+             country_event 700185			 
+			}			
+					
+   }
+ }
+ 
+ 	country_event = {
+		
+		id = 700185
+
+		is_triggered_only = yes
+
+	title = "EVTNAME700185"
+	desc = "EVTDESC700185"
+	picture = "ONU"
+
+	option = {
+        name = "OK"	
+	    ai_chance = { factor = 100 }
+	}
+ }
+ 
+  country_event = {              ## miembro del WP INYECTA CAPITAL
+	id = 700186
+    is_triggered_only = yes
+
+	title = "EVTNAME700186"
+	desc = "EVTDESC700186"
+	picture = "destabilization"
+
+	option = {
+			name = "OK"
+			ai_chance = { factor = 100 }
+            random_country = { limit = { not = { tag = from } is_org_member = XWP 
+		     money = 100000 NOT = { has_country_modifier = Gcap_WP2 } } money = -10000 from = { money = 10000 }						
+			 add_country_modifier = {
+				name = "Gcap_WP2"				
+				duration = 60 }			 
+             country_event 700187			 
+			}			
+					
+   }
+ } 
+ 
+	country_event = {
+		
+		id = 700187
+
+		is_triggered_only = yes
+
+	title = "EVTNAME700187"
+	desc = "EVTDESC700187"
+	picture = "ONU"
+
+	option = {
+        name = "OK"	
+	    ai_chance = { factor = 100 }
+	}
+ } 
+
+   country_event = {              ## miembro de la OTAN INYECTA CAPITAL2
+	    id = 700188
+
+		is_triggered_only = yes
+
+	title = "EVTNAME700188"
+	desc = "EVTDESC700188"
+	picture = "destabilization"
+
+	option = {
+			name = "OK"
+			ai_chance = { factor = 100 }
+            random_country = { limit = { not = { tag = from } is_org_member = XNA 
+		     money = 10000 NOT = { has_country_modifier = Gcap_Nato2 } } money = -1000 from = { money = 1000 }						
+			 add_country_modifier = {
+				name = "Gcap_Nato2"				
+				duration = 60 }			 
+            country_event 700185			 
+			}			
+					
+   }
+ }
+ 
+  country_event = {              ## miembro del WP INYECTA CAPITAL2
+	id = 700189
+
+	is_triggered_only = yes
+
+	title = "EVTNAME700189"
+	desc = "EVTDESC700189"
+	picture = "destabilization"
+
+	option = {
+			name = "OK"
+			ai_chance = { factor = 100 }
+            random_country = { limit = { not = { tag = from } is_org_member = XWP 
+		     money = 10000 NOT = { has_country_modifier = Gcap_WP2 } } money = -1000 from = { money = 1000 }						
+			 add_country_modifier = {
+				name = "Gcap_WP2"				
+				duration = 60 }			 
+            country_event 700187			 
+			}						
+					
+   }
+ } 

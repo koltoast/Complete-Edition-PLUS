@@ -1,0 +1,667 @@
+#MinorityRightsDeclaration_events.txt
+#UN Minority Rights Declaration
+
+#UN Secretary General:
+	#13300 - Raise the UN Minority Rights Declaration for Voting - Triggered by dec_UN_raise_minority_rights_declaration
+	#13301 - Should We Have Voting Notifications Or Not?
+	#13302 - UN Minority Rights Declaration Resolution Fails in the General Assembly
+	#13303 - UN Minority Rights Declaration Resolution Passes in the General Assembly
+	
+#Global:
+	#13310 - Vote on the UN Minority Rights Declaration - Notifications Off
+	#13311 - Vote on the UN Minority Rights Declaration - Notifications On (Major Event)
+	
+	
+## UN Secretary General ##
+	#13300 - Raise the UN Minority Rights Declaration for Voting
+	country_event = {
+	
+		id = 13300
+		
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME13300"
+		desc = "EVTDESC13300"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA13300" 					#Large diplomatic investment
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			
+			#trigger = {
+			#	XUN = { prestige = 40 }
+			#}
+			#XUN  = { prestige_change = -40 }
+			
+			country_event = 13301
+		}
+
+		option = {
+			name = "EVTOPTB13300" 					#Small diplomatic investment
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			
+			#trigger = {
+			#	XUN = { prestige = 15 }
+			#}
+			#XUN  = { prestige_change = -15 }
+			
+			country_event = 13301
+		}
+
+		option = {
+			name = "EVTOPTC13300"					#No diplomatic investment
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			
+			country_event = 13301
+		}
+	}
+	
+	#13301 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 13301
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME13301"
+		desc = "EVTDESC13301"
+		picture = "xxxx"
+		
+		option = {
+			name = "EVTOPTA13301"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_minority_rights_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_minority_rights_declaration_voting
+		}
+		
+		option = {
+			name = "EVTOPTB13301"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_minority_rights_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_minority_rights_declaration_voting
+		}
+	
+	}
+	
+	#13302 - UN Minority Rights Declaration Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 13302
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_minority_rights_declaration_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME13302"
+		desc = "EVTDESC13302"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_minority_rights_declaration_voting
+			set_global_flag = gflag_UN_minority_rights_declaration_fails
+		}
+
+		option = {
+			name = "EVTOPTA13302"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			#XUN  = { prestige_change = -50 }
+			
+			#hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_minority_rights_declaration_failure_delay
+						duration = 1460
+					}
+				}
+			#}
+			clr_global_flag = gflag_UN_minority_rights_declaration_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#13303 - UN Minority Rights Declaration Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 13303
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_minority_rights_declaration_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME13303"
+		desc = "EVTDESC13303"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_minority_rights_declaration_voting
+			clr_global_flag = gflag_UN_minority_rights_declaration_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_minority_rights_declaration_passes
+		}
+
+		option = {
+			name = "EVTOPTA13303"					#Excellent
+			clr_global_var = var_UN_votes_Total
+			
+			any_country = {
+				limit = {
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				add_country_modifier = {
+					name = mod_UN_minority_rights_declaration
+					duration = -1
+				}
+			}
+			
+			#XUN  = { prestige_change = 50 }
+			
+			clr_global_flag = gflag_UN_minority_rights_declaration_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+
+## Global ##
+	#13310 - Vote on the UN Minority Rights Declaration - Notifications Off
+	country_event = {
+	
+		id = 13310
+		
+		trigger = {
+			has_country_flag = flag_UN_minority_rights_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_minority_rights_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME13310"
+		desc = "EVTDESC13310"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_minority_rights_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_minority_rights_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA13310"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 2
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						national_identity = humanitarian_focus
+						national_identity = equality_focus
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						internal_policy = democratic_aff_pol
+						internal_policy = liberal_aff_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						ideology_group = comintern
+						ideology = left_wing_radical_idolg
+					}
+				}
+				modifier = {
+					factor = 1.25
+					ideology = social_democrat_idolg
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB13310"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC13310"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 2
+					OR = {
+						human_rights = not_recognized
+						human_rights = cultural_relativism
+					}
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_identity = territorial_focus
+						national_identity = cultural_bias_focus
+					}
+				}
+				modifier = {
+					factor = 1.5
+					national_attitude = imperialism
+					OR = {
+						AND = {
+							national_culture = cul_western_europe
+							any_owned_province = {
+								NOT = { continent = europe }
+							}
+						}
+						AND = {
+							national_culture = cul_north_america
+							any_owned_province = {
+								NOT = { 
+									continent = north_america
+									region = region_USA_Hawaii
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.25
+					any_owned_province = {
+						NOT = { is_core = THIS }
+					}
+				}
+				modifier = {
+					factor = 5
+					ideology = fascistic_idolg
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						ideology = fascistic_idolg
+						ideology = paternal_auto_idolg
+					}
+				}
+				modifier = {
+					factor = 1.1
+					ideology = social_cons_idolg
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+	
+	#13311 - Vote on the UN Minority Rights Declaration - Notifications On
+	country_event = {
+	
+		id = 13311
+		
+		trigger = {
+			has_country_flag = flag_UN_minority_rights_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_minority_rights_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME13310"
+		desc = "EVTDESC13310"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_minority_rights_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_minority_rights_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA13310"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 2
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						national_identity = humanitarian_focus
+						national_identity = equality_focus
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						internal_policy = democratic_aff_pol
+						internal_policy = liberal_aff_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						ideology_group = comintern
+						ideology = left_wing_radical_idolg
+					}
+				}
+				modifier = {
+					factor = 1.25
+					ideology = social_democrat_idolg
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB13310"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC13310"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 2
+					OR = {
+						human_rights = not_recognized
+						human_rights = cultural_relativism
+					}
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_identity = territorial_focus
+						national_identity = cultural_bias_focus
+					}
+				}
+				modifier = {
+					factor = 1.5
+					national_attitude = imperialism
+					OR = {
+						AND = {
+							national_culture = cul_western_europe
+							any_owned_province = {
+								NOT = { continent = europe }
+							}
+						}
+						AND = {
+							national_culture = cul_north_america
+							any_owned_province = {
+								NOT = { 
+									continent = north_america
+									region = region_USA_Hawaii
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.25
+					any_owned_province = {
+						NOT = { is_core = THIS }
+					}
+				}
+				modifier = {
+					factor = 5
+					ideology = fascistic_idolg
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						ideology = fascistic_idolg
+						ideology = paternal_auto_idolg
+					}
+				}
+				modifier = {
+					factor = 1.1
+					ideology = social_cons_idolg
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}	

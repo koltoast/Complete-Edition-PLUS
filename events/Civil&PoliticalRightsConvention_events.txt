@@ -1,0 +1,1000 @@
+#Civil&PoliticalRightsConvention_events.txt
+#UN Civil & Political Rights Convention
+
+#UN Secretary General:
+	#12400 - Raise the UN Civil & Political Rights Convention for Voting - Triggered by dec_UN_raise_civil_and_political_rights_convention
+	#12401 - Should We Have Voting Notifications Or Not?
+	#12402 - UN Civil & Political Rights Convention Resolution Fails in the General Assembly
+	#12403 - UN Civil & Political Rights Convention Resolution Passes in the General Assembly
+	
+#Global:
+	#12410 - Vote on the UN Civil & Political Rights Convention - Notifications Off
+	#12411 - Vote on the UN Civil & Political Rights Convention - Notifications On (Major Event)
+	#12412 - We have ratified the UN Civil & Political Rights Convention - Triggered
+	#12413 - We have ratified the UN Civil & Political Rights Convention - Non-triggered
+	#12414 - We have revoked the UN Civil & Political Rights Convention
+	
+	
+## UN Secretary General ##
+	#12400 - Raise the UN Civil & Political Rights Convention for Voting
+	country_event = {
+	
+		id = 12400
+
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME12400"
+		desc = "EVTDESC12400"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12400" 					#Large diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 40 }
+			#}
+			#XUN  = { prestige_change = -40 }
+			
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			country_event = 12401
+		}
+
+		option = {
+			name = "EVTOPTB12400" 					#Small diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 15 }
+			#}
+			#XUN  = { prestige_change = -15 }
+			
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			country_event = 12401
+		}
+
+		option = {
+			name = "EVTOPTC12400"					#No diplomatic investment
+			
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			country_event = 12401
+		}
+	}
+	
+	#12401 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 12401
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME12401"
+		desc = "EVTDESC12401"
+		picture = "xxxx"
+		
+		option = {
+			name = "EVTOPTA12401"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_civil_and_political_rights_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_civil_and_political_rights_convention_voting
+		}
+		
+		option = {
+			name = "EVTOPTB12401"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_civil_and_political_rights_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_civil_and_political_rights_convention_voting
+		}
+	}
+	
+	#12402 - UN Civil & Political Rights Convention Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 12402
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_civil_and_political_rights_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME12402"
+		desc = "EVTDESC12402"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_civil_and_political_rights_convention_voting
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_civil_and_political_rights_convention_fails
+		}
+
+		option = {
+			name = "EVTOPTA12402"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			#XUN  = { prestige_change = -50 }
+			
+			#hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_civil_and_political_rights_convention_failure_delay
+						duration = 1460
+					}
+				}
+			#}
+			clr_global_flag = gflag_UN_civil_and_political_rights_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#12403 - UN Civil & Political Rights Convention Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 12403
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_civil_and_political_rights_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME12403"
+		desc = "EVTDESC12403"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_civil_and_political_rights_convention_voting
+			clr_global_flag = gflag_UN_civil_and_political_rights_convention_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_civil_and_political_rights_convention_passes
+		}
+
+		option = {
+			name = "EVTOPTA12403"					#Excellent
+			clr_global_var = var_UN_votes_For
+			
+			#XUN  = { prestige_change = 50 }
+			
+			any_country = {
+				limit = {
+					has_country_flag = flag_UN_civil_and_political_rights_convention_supporter
+				}
+				set_country_flag = flag_UN_civil_and_political_rights_convention_ratified
+				country_event = 12412
+			}
+			clr_global_flag = gflag_UN_civil_and_political_rights_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+
+## Global ##
+	#12410 - Vote on the UN Civil & Political Rights Convention - Notifications Off
+	country_event = {
+	
+		id = 12410
+		
+		trigger = {
+			has_country_flag = flag_UN_civil_and_political_rights_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_civil_and_political_rights_convention_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME12410"
+		desc = "EVTDESC12410"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_civil_and_political_rights_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_civil_and_political_rights_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA12410"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_civil_and_political_rights_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.25
+					civil_liberties = fully_granted_liberties
+				}
+				modifier = {
+					factor = 2
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 2
+					internal_policy = democratic_aff_pol
+				}
+				modifier = {
+					factor = 1.5
+					internal_policy = liberal_aff_pol
+				}
+				modifier = {
+					factor = 3
+					OR = {
+						elections_and_voting = proportional
+						elections_and_voting = semi-proportional
+					}
+				}
+				modifier = {
+					factor = 2
+					elections_and_voting = winner_takes_it_all
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_identity = equality_focus
+						national_identity = civic_focus
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						ideology = social_democrat_idolg
+						ideology = social_liberal_idolg
+						ideology = market_liberal_idolg
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						ideology = left_wing_radical_idolg
+						ideology = social_cons_idolg
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_civil_and_political_rights_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB12410"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+			clr_country_flag = flag_UN_civil_and_political_rights_convention_supporter
+		}
+
+		option = {
+			name = "EVTOPTC12410"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = narrowly_defined
+						rule_of_law = thinly_defined
+					}
+				}
+				modifier = {
+					factor = 2
+					civil_liberties = suspended_indefinitely
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						civil_liberties = emergency_law
+						civil_liberties = martial_law
+					}
+				}
+				modifier = {
+					factor = 3
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.5
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 2
+					internal_policy = state_controlled_aff_pol
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						internal_policy = repressive_aff_pol
+						internal_policy = oppressive_aff_pol
+					}
+				}
+				modifier = {
+					factor = 5
+					elections_and_voting = hereditary_rule
+				}
+				modifier = {
+					factor = 3
+					elections_and_voting = single_party_system
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_attitude = imperialism
+						national_attitude = colonialism
+					}
+				}
+				modifier = {
+					factor = 2
+					ideology = fascistic_idolg
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						ideology = paternal_auto_idolg
+						ideology_group = comintern
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			clr_country_flag = flag_UN_civil_and_political_rights_convention_supporter
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_civil_and_political_rights_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#12411 - Vote on the UN Civil & Political Rights Convention - Notifications On
+	country_event = {
+	
+		id = 12411
+		
+		trigger = {
+			has_country_flag = flag_UN_civil_and_political_rights_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_civil_and_political_rights_convention_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME12410"
+		desc = "EVTDESC12410"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_civil_and_political_rights_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_civil_and_political_rights_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA12410"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_civil_and_political_rights_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.25
+					civil_liberties = fully_granted_liberties
+				}
+				modifier = {
+					factor = 2
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 2
+					internal_policy = democratic_aff_pol
+				}
+				modifier = {
+					factor = 1.5
+					internal_policy = liberal_aff_pol
+				}
+				modifier = {
+					factor = 3
+					OR = {
+						elections_and_voting = proportional
+						elections_and_voting = semi-proportional
+					}
+				}
+				modifier = {
+					factor = 2
+					elections_and_voting = winner_takes_it_all
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_identity = equality_focus
+						national_identity = civic_focus
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						ideology = social_democrat_idolg
+						ideology = social_liberal_idolg
+						ideology = market_liberal_idolg
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						ideology = left_wing_radical_idolg
+						ideology = social_cons_idolg
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_civil_and_political_rights_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB12410"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC12410"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = narrowly_defined
+						rule_of_law = thinly_defined
+					}
+				}
+				modifier = {
+					factor = 2
+					civil_liberties = suspended_indefinitely
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						civil_liberties = emergency_law
+						civil_liberties = martial_law
+					}
+				}
+				modifier = {
+					factor = 3
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.5
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 2
+					internal_policy = state_controlled_aff_pol
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						internal_policy = repressive_aff_pol
+						internal_policy = oppressive_aff_pol
+					}
+				}
+				modifier = {
+					factor = 5
+					elections_and_voting = hereditary_rule
+				}
+				modifier = {
+					factor = 3
+					elections_and_voting = single_party_system
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_attitude = imperialism
+						national_attitude = colonialism
+					}
+				}
+				modifier = {
+					factor = 2
+					ideology = fascistic_idolg
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						ideology = paternal_auto_idolg
+						ideology_group = comintern
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_civil_and_political_rights_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#12412 - We have ratified the UN Civil & Political Rights Convention - Triggered
+	country_event = {
+	
+		id = 12412
+
+		is_triggered_only = yes
+
+		title = "EVTNAME12412"
+		desc = "EVTDESC12412"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12412"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_civil_and_political_rights_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_civil_and_political_rights_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_civil_and_political_rights_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#12413 - We have ratified the UN Civil & Political Rights Convention (Non-triggered)
+	country_event = {
+	
+		id = 12413
+
+		trigger = {
+			ai = yes
+			has_global_flag = gflag_UN_civil_and_political_rights_convention_passes
+			NOT = { has_country_modifier = mod_UN_civil_and_political_rights_convention_ratified }
+			NOT = { USA = { has_country_modifier = mod_UN_civil_and_political_rights_convention_ratifier_delay } }
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			NOT = { human_rights = not_recognized }
+			NOT = { elections_and_voting = hereditary_rule }
+			NOT = {
+				AND = {
+					ideology = fascistic_idolg
+					elections_and_voting = single_party_system
+				}
+			}
+			#Add more
+		}
+		
+		mean_time_to_happen = {
+			months = 40
+			modifier = {
+				factor = 0.6
+				is_org_leader = XUN
+			}
+			modifier = {
+				factor = 0.7
+				civil_liberties = fully_granted_liberties
+			}
+			modifier = {
+				factor = 0.4
+				human_rights = universal_rights
+			}
+			modifier = {
+				factor = 0.4
+				internal_policy = democratic_aff_pol
+			}
+			modifier = {
+				factor = 0.6
+				internal_policy = liberal_aff_pol
+			}
+			modifier = {
+				factor = 0.3
+				OR = {
+					elections_and_voting = proportional
+					elections_and_voting = semi-proportional
+				}
+			}
+			modifier = {
+				factor = 0.4
+				elections_and_voting = winner_takes_it_all
+			}
+			modifier = {
+				factor = 0.7
+				OR = {
+					national_identity = equality_focus
+					national_identity = civic_focus
+				}
+			}
+			modifier = {
+				factor = 0.6
+				OR = {
+					ideology = social_democrat_idolg
+					ideology = social_liberal_idolg
+					ideology = market_liberal_idolg
+				}
+			}
+			modifier = {
+				factor = 0.7
+				OR = {
+					ideology = left_wing_radical_idolg
+					ideology = social_cons_idolg
+				}
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					rule_of_law = narrowly_defined
+					rule_of_law = thinly_defined
+				}
+			}
+			modifier = {
+				factor = 3
+				civil_liberties = suspended_indefinitely
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					civil_liberties = emergency_law
+					civil_liberties = martial_law
+				}
+			}
+			modifier = {
+				factor = 2
+				human_rights = cultural_relativism
+			}
+			modifier = {
+				factor = 3
+				internal_policy = state_controlled_aff_pol
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					internal_policy = repressive_aff_pol
+					internal_policy = oppressive_aff_pol
+				}
+			}
+			modifier = {
+				factor = 3
+				elections_and_voting = single_party_system
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					national_attitude = imperialism
+					national_attitude = colonialism
+				}
+			}
+			modifier = {
+				factor = 3
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					ideology = paternal_auto_idolg
+					ideology_group = comintern
+				}
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME12412"
+		desc = "EVTDESC12412"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12412"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_civil_and_political_rights_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_civil_and_political_rights_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_civil_and_political_rights_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#12414 - We have revoked the UN Civil & Political Rights Convention
+	country_event = {
+	
+		id = 12414
+
+		trigger = {
+			ai = yes
+			has_country_modifier = mod_UN_civil_and_political_rights_convention_ratified
+			NOT = { has_country_modifier = mod_UN_civil_and_political_rights_convention_ratified_recently }
+			NOT = { has_country_flag = flag_UN_civil_and_political_rights_convention_supporter }
+			NOT = { human_rights = universal_rights }
+			OR = {
+				human_rights = not_recognized
+				elections_and_voting = hereditary_rule
+				AND = {
+					civil_liberties = suspended_indefinitely
+					OR = {
+						internal_policy = repressive_aff_pol
+						internal_policy = state_controlled_aff_pol
+					}
+				}
+				AND = {
+					ideology = fascistic_idolg
+					elections_and_voting = single_party_system
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			months = 9
+			modifier = {
+				factor = 0.5
+				has_country_flag = "UN_EMBARGO"
+			}
+			modifier = {
+				factor = 0.75
+				human_rights = not_recognized
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME12414"
+		desc = "EVTDESC12414"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12414"					#Good riddance
+			prestige_change = -8
+			remove_country_modifier = mod_UN_civil_and_political_rights_convention_ratified
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_civil_and_political_rights_convention_revoked_recently
+					duration = 365
+				}
+			#}
+			
+			#XUN = { prestige_change = -3 }
+		}
+	}

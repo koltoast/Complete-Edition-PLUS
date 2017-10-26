@@ -1,0 +1,634 @@
+diplomatic_decisions = {
+
+	establish_moral_police = {
+		category = national
+		picture = "religious_police"
+		potential = {
+			OR = {
+				government = theocracy_gov
+				organized_religions_law = state_religion
+			}
+			NOT = { has_country_modifier = moral_police }
+		}
+		
+		allow = {
+			organized_religions_law = state_religion
+			OR = {
+				government = theocracy_gov
+				government = absolute_monarchy_gov
+				ideology = paternal_auto_idolg
+				ideology = fascistic_idolg
+			}
+			war = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { national_religion = islam }
+				NOT = { government = theocracy_gov }
+			}
+		}
+		
+		effect = {
+			add_country_modifier = { 
+				name = moral_police
+				duration = -1
+			}
+			add_country_modifier = { 
+				name = moral_police_recruitment
+				duration = 183
+			}
+		}
+	}
+	demobilize_moral_police = {
+		category = national
+		picture = ""
+		potential = {
+			has_country_modifier = moral_police
+			OR = {
+				organized_religions_law = secular_state
+				ideology = social_liberal_idolg
+				ideology = social_democrat_idolg
+				ideology = left_wing_radical_idolg
+				ideology = maoist_idolg
+				ideology = communist_idolg
+			}
+		}
+		
+		allow = {
+			organized_religions_law = secular_state
+			NOT = { government = theocracy_gov }
+			NOT = { ideology = paternal_auto_idolg }
+			NOT = { ideology = social_cons_idolg }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { government = theocracy_gov }
+			}
+		}
+		
+		effect = {
+			remove_country_modifier = moral_police
+			remove_country_modifier = moral_police_recruitment #if it exists
+			add_country_modifier = { 
+				name = moral_police_demobilize
+				duration = 90
+			}
+		}
+	}
+	establish_theocracy_dissent = { #Establish theocracy during crisis
+		category = national
+		picture = ""
+		potential = {
+			dissent = 50
+			government = theocracy_gov
+			organized_religions_law = state_religion
+		}
+		
+		allow = {
+			national_unity = 70
+			dissent = 50
+			OR = {
+				ideology = social_cons_idolg
+				ideology = paternal_auto_idolg
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { national_religion = islam }
+				NOT = { ideology = paternal_auto_idolg }
+			}
+			modifier = {
+				factor = 0
+				government = absolute_monarchy_gov
+				NOT = { national_religion = islam }
+			}
+		}
+		
+		effect = {
+			government = theocracy_gov
+			country_event = 52203
+		}
+	}	
+	establish_theocracy_popular = { #Establish theocracy with support
+		category = national
+		picture = ""
+		potential = {
+			NOT = { dissent = 50 }
+			NOT = { government = theocracy_gov }
+			OR = {
+				AND = {
+					NOT = { government = republic_gov }
+					NOT = { government = constitutional_republic_gov }
+					NOT = { government = constitutional_monarchy_gov }
+				}
+				ideology = paternal_auto_idolg
+			}
+			organized_religions_law = state_religion
+		}
+		
+		allow = {
+			national_unity = 70
+			popularity = 65
+			NOT = { dissent = 10 }
+			OR = {
+				ideology = social_cons_idolg
+				ideology = paternal_auto_idolg
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { national_religion = islam }
+			}
+			modifier = {
+				factor = 0
+				government = absolute_monarchy_gov
+			}
+		}
+		
+		effect = {
+			government = theocracy_gov
+			country_event = 52207
+		}
+	}
+	ban_alcohol = {
+		category = national
+		picture = ""
+		potential = {
+			NOT = { national_religion = islam }
+			organized_religions_law = state_religion
+			NOT = { has_country_modifier = alcohol_ban }
+		}
+		
+		allow = {
+			OR = {
+				government = theocracy_gov
+				ideology = paternal_auto_gov
+			}
+			NOT = { dissent = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { tag = ICL }
+			}
+		}
+		
+		effect = {
+			add_country_modifier = { 
+				name = alcohol_ban
+				duration = -1
+			}
+		}
+	}
+	lift_alcohol_ban = {
+		category = national
+		picture = ""
+		potential = {
+			has_country_modifier = alcohol_ban
+		}
+		
+		allow = {
+			dissent = 10
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		effect = {
+			remove_country_modifier = alcohol_ban
+		}
+	}
+	ban_other_religions = {
+		category = national
+		picture = "religion_banned"
+		potential = {
+			government = theocracy_gov
+			NOT = { has_country_modifier = state_atheism }
+			NOT = { has_country_modifier = banned_other_religions }
+		}
+		
+		allow = {
+			organized_religions_law = state_religion
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			add_country_modifier = { 
+				name = banned_other_religions
+				duration = -1
+			}
+			any_country = {
+				limit = {
+					NOT = { same_religion = THIS }
+					organized_religions_law = state_religion
+				}
+				country_event = 52211
+			}
+			any_owned = {
+				limit = {
+					is_core = THIS
+				}
+				add_province_modifier = {
+					name = converted_populace
+					duration = -1
+				}
+			}
+			any_owned = {
+				limit = {
+					NOT = { is_core = THIS }
+				}
+				add_province_modifier = {
+					name = local_religions_banned
+					duration = -1
+				}
+			}
+		}
+	}
+	unban_other_religions = {
+		category = national
+		picture = "religion_ban_lifted"
+		potential = {
+			has_country_modifier = banned_other_religions
+		}
+		
+		allow = {
+			OR = {
+				NOT = { government = theocracy_gov }
+				organized_religions_law = secular_state
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		effect = {
+			remove_country_modifier = banned_other_religions
+			any_country = {
+				limit = {
+					NOT = { same_religion = THIS }
+					organized_religions_law = state_religion
+				}
+				country_event = 52212
+			}
+			any_owned = {
+				limit = {
+					has_province_modifier = converted_populace
+				}
+				remove_province_modifier = converted_populace
+			}
+			any_owned = {
+				limit = {
+					has_province_modifier = local_religions_banned
+				}
+				remove_province_modifier = local_religions_banned
+			}
+		}
+	}
+	ban_religion = { #State Atheism
+		category = national
+		picture = "religion_banned"
+		potential = {
+			OR = {
+				government = authoritarian_gov
+				government = totalitarian_gov
+			}
+			OR = {
+				ideology = left_wing_radical_idolg
+				ideology = maoist_idolg
+				ideology = communist_idolg
+				ideology = fascistic_idolg
+			}
+			NOT = { has_country_modifier = state_atheism }
+			NOT = { has_country_modifier = banned_other_religions }
+		}
+		
+		allow = {
+			organized_religions_law = secular_state
+			NOT = { civil_liberties = fully_granted_liberties }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		effect = {
+			add_country_modifier = { 
+				name = state_atheism
+				duration = -1
+			}
+		}
+	}
+	unban_religion = {
+		category = national
+		picture = "religion_ban_lifted"
+		potential = {
+			has_country_modifier = state_atheism
+		}
+		
+		allow = {
+			OR = {
+				civil_liberties = fully_granted_liberties
+				organized_religions_law = state_religion
+				dissent = 10
+				AND = {
+					NOT = { ideology = maoist_idolg}
+					NOT = { ideology = left_wing_radical_idolg }
+					NOT = { ideology = communist_idolg }
+				}
+				AND = {
+					NOT = { government = authoritarian_gov }
+					NOT = { government = totalitarian_gov }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		effect = {
+			remove_country_modifier = state_atheism
+		}
+	}
+	ban_contraceptives = { #Ban Contraceptives/Abortion
+		category = national
+		picture = ""
+		potential = {
+			NOT = { has_country_modifier = banned_contraceptives }
+			NOT = { has_country_modifier = one_child_law }
+			OR = {
+				NOT = { ideology = communist_idolg }
+				tag = SOV
+			}
+			NOT = { ideology = maoist_idolg }
+			NOT = { ideology = left_wing_radical_idolg }
+			NOT = { ideology = social_liberal_idolg }
+			NOT = { ideology = market_liberal_idolg }
+			NOT = { ideology = social_democrat_idolg }
+
+		}
+		
+		allow = {
+			OR = {
+				popularity = 55
+				government = totalitarian_gov
+				government = theocracy_gov
+				AND = {
+					organized_religions_law = state_religion
+					OR = {
+						government = authoritarian_gov
+						government = absolute_monarchy_gov
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = banned_contraceptives
+				duration = -1
+			}
+		}
+	}
+	unban_contraceptives = { #Ban Contraceptives/Abortion
+		category = national
+		picture = ""
+		potential = {
+			has_country_modifier = banned_contraceptives
+		}
+		
+		allow = {
+			NOT = { government = theocracy_gov }
+			NOT = { ideology = social_cons_idolg }
+			NOT = { ideology = paternal_auto_idolg }
+			NOT = { ideology = fascistic_idolg }
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ideology = communist_idolg
+			}
+		}
+		
+		effect = {
+			remove_country_modifier = banned_contraceptives
+		}
+	}
+	one_child_law = {
+		category = national
+		picture = ""
+		potential = {
+			NOT = { has_country_modifier = banned_contraceptives }
+			NOT = { has_country_modifier = one_child_law }
+			OR = {
+				tag = CHC
+				tag = CGX
+				#tag = HNK
+				tag = CHI
+				tag = CSX
+				tag = CXB
+				tag = SIK
+				tag = IND
+				AND = {
+					government = totalitarian_gov
+					OR = {
+						ideology = maoist_idolg
+						ideology = communist_idolg
+					}
+				}
+			}
+
+		}
+		
+		allow = {
+			popularity = 55
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { tag = CHI }
+				NOT = { tag = IND }
+			}
+			modifier = {
+				factor = 0
+				tag = IND
+				NOT = { year = 1966 }
+				year = 1984
+				NOT = { ideology = social_democrat_idolg }
+				NOT = { ideology = maoist_idolg }
+				NOT = { ideology = communist_idolg }
+				NOT = { ideology = left_wing_radical_idolg }
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = one_child_law
+				duration = -1
+			}
+		}
+	}
+	revoke_one_child_law = {
+		category = national
+		picture = ""
+		potential = {
+			has_country_modifier = one_child_law
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag = CHI
+			}
+			modifier = {
+				factor = 0
+				tag = IND
+				OR = {
+					AND = {
+						NOT = { ideology = social_cons_idolg }
+						NOT = { ideology = market_liberal_idolg }
+						NOT = { ideology = fascist_idolg }
+						NOT = { ideology = paternal_autocrat_idolg }
+						NOT = { ideology = social_liberal_idolg }
+					}
+					NOT = { year = 1984 }
+				}
+			}
+		}
+		
+		effect = {
+			remove_country_modifier = one_child_law
+		}
+	}
+	reform_theoc_to_republic = {
+		category = national
+		picture = ""
+		potential = {
+			has_country_modifier = secular_plans_theoc
+			government = theocracy_gov
+			OR = {
+				NOT = { elections_and_voting = hereditary_rule }
+				NOT = { elections_and_voting = single_party_system }
+				ideology = social_cons_idolg
+				ideology = social_democrat_idolg 
+				ideology = social_liberal_idolg 
+				ideology = market_liberal_idolg 
+				ideology = left_wing_radical_idolg 
+				ideology = maoist_idolg 
+				ideology = communist_idolg
+			}
+		}
+		
+		allow = {
+			popularity = 55
+			NOT = { dissent = 5 }
+			national_unity = 80
+			NOT = { elections_and_voting = hereditary_rule }
+			NOT = { elections_and_voting = single_party_system }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		effect = {
+			government = republic_gov
+			remove_country_modifier = secular_plans_theoc
+			country_event = 52224
+		}
+	}
+	reform_theoc_to_cons_monarchy = {
+		category = national
+		picture = ""
+		potential = {
+			always = no #Allow only for ex-monarchies under some circumstances.
+			has_country_modifier = secular_plans_theoc
+			government = theocracy_gov
+			NOT = { ideology = maoist_idolg } #shouldn't be possible, but this is a safe measure...
+			NOT = { ideology = communist_idolg }
+		}
+		
+		allow = {
+			popularity = 55
+			NOT = { dissent = 5 }
+			national_unity = 80
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		effect = {
+			government = constitutional_monarchy_gov
+			remove_country_modifier = secular_plans_theoc
+			country_event = 52227
+		}
+	}
+	reform_theoc_to_authoritarian_gov = {
+		category = national
+		picture = ""
+		potential = {
+			has_country_modifier = secular_plans_theoc
+			government = theocracy_gov
+			OR = {
+				elections_and_voting = hereditary_rule
+				elections_and_voting = single_party_system
+			}
+		}
+		
+		allow = {
+			popularity = 55
+			NOT = { dissent = 5 }
+			national_unity = 80
+			OR = {
+				ideology = paternal_auto_idolg
+				ideology = fascistic_idolg
+				ideology = maoist_idolg
+				ideology = communist_idolg
+				ideology = left_wing_radical_idolg
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		effect = {
+			government = authoritarian_gov
+			remove_country_modifier = secular_plans_theoc
+			country_event = 52228
+		}
+	}
+}

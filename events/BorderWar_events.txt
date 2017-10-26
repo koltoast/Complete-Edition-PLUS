@@ -1,0 +1,1500 @@
+
+#####  Independence Events #####
+
+country_event = {
+	
+	id = 289010		#Event 01 for POR – Angolan uprising – Guerrillas engage Police
+
+	trigger = {
+		tag = POR
+		dissent = 10
+		NOT = {
+			exists = ANG
+			national_unity = 70
+		}
+		owns = 5773
+		owns = 5775
+		owns = 5954
+		NOT = {
+			has_country_flag = POR_angolan_uprising
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	title = "EVTNAME289010"
+	desc = "EVTDESC289010"
+	picture = "1961_Angolan_uprising"
+
+	option = {
+		name = "EVTOPTA289010"			    			# Unfortunate
+		REB = {
+			load_oob = 289010-OPT1-REB.txt #1 unit of rebels (3000 4000 men) spawn on Luanda (Prov ID 5773)
+		}
+		any_owned = {
+			limit = {
+				is_core = ANG
+			}
+			remove_core = POR
+			#revolt_risk = 10
+			add_province_modifier = {
+				name = moderate_revolt_risk
+				duration = 1825
+			}
+		}
+		set_country_flag = POR_angolan_uprising
+	}
+}
+
+country_event = {
+	
+	id = 289011		#Event 02 for POR – ANG independence war. Rebels cross border from Zaire
+
+	trigger = {
+		tag = POR
+		dissent = 15
+		NOT = {
+			national_unity = 60
+		}
+		OR = {
+			NOT = {
+				exists = ANG
+			}
+			ANG = {
+				vassal_of = POR
+			}
+		}
+		OR = {
+			AND = {
+				5773 = { controlled_by = REB }
+				5954 = { controlled_by = REB }
+			}
+			AND = {
+				5773 = { controlled_by = REB }
+				5775 = { controlled_by = REB }
+			}
+			AND = {
+				5954 = { controlled_by = REB }
+				5775 = { controlled_by = REB }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	title = "EVTNAME289011"
+	desc = "EVTDESC289011"
+	picture = "1961_UPA_invade_Angola_from_Zaire"
+
+	major = yes
+
+	option = {
+		name = "EVTOPTA289011"			    			# Then War it is!
+		ai_chance = { factor = 90 }
+		any_owned = {
+			limit = {
+				is_core = ANG
+				OR = {
+					controlled_by = REB
+					AND = {
+						revolt_risk = 15
+						NOT = { country_units_in_province = 1 }
+					}
+				}
+			}
+			secede_province = ANG
+		}
+		ANG = {
+			relation = { who = POR value = -300 }
+			limited_war = POR
+			load_oob = 289011-OPT1-ANG.txt #2x 1 unit Militia (3000 4000 ea) belonging to Angola spawn in northern Angola, plus main OOB
+		}
+	}
+
+	option = {
+		name = "EVTOPTB289011"			    			# Let them have their independence
+		ai_chance = { factor = 10 }
+		release = ANG
+		prestige_change = 15
+	}
+}
+
+country_event = {
+	
+	id = 289012		#Event 03 for POR – ANG Independence cleanup event
+
+	trigger = {
+		tag = POR
+		exists = ANG
+		ANG = {
+			war_with = POR
+			NOT = {
+				lost_national = 0.1
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	title = "EVTNAME289012"
+	desc = "EVTDESC289012"
+	picture = "1975_Alvor_agreement_Angola_independent"
+
+	major = yes
+
+	option = {
+		name = "EVTOPTA289012"					#Unfortunate
+		end_war = POR
+		any_owned = {
+			limit = {
+				is_core = ANG
+			}
+			secede_province = ANG
+		}
+		any_country = {
+			limit = {
+				tag = ANG
+				vassal_of = POR
+			}
+			POR = {
+				release_vassal = ANG
+			}
+		}
+		ANG = {
+			#ideology = left_wing_radical_idolg #Check - Not a valid effect
+			#Fascist party (UNITA) has high popularity #Check
+			end_war = POR
+			national_unity = -100
+			national_unity = 25
+			dissent = 10
+			any_owned = {
+				limit = {
+					region = region_Angola_Cuando_Cubango
+				}
+				#revolt_risk = 15
+				add_province_modifier = {
+					name = major_revolt_risk
+					duration = 1825
+				}
+			}
+			any_owned = {
+				limit = {
+					region = region_Angola_Moxico
+				}
+				#revolt_risk = 10
+				add_province_modifier = {
+					name = moderate_revolt_risk
+					duration = 1825
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 302000		#Event 01 for SAF – SAF loses cores on NAM – International Court deems occupation illegal
+
+	trigger = {
+		tag = SAF
+		NOT = {
+			national_unity = 90
+			exists = NAM
+			has_country_flag = SAF_keep_namibia
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.75
+			exists = ANG
+		}
+		modifier = {
+			factor = 0.75
+			exists = ZMB
+		}
+		modifier = {
+			factor = 0.75
+			exists = BOT
+		}
+	}
+
+	title = "EVTNAME302000"
+	desc = "EVTDESC302000"
+	picture = "1966_Namibia_ICJ_ruling_alternate"
+
+	major = yes
+
+	option = {
+		name = "EVTOPTA302000"					#Namibia is ours, won by conquest!
+		ai_chance = { factor = 80 }
+		any_owned = {
+			limit = {
+				is_core = NAM
+			}
+			remove_core = SAF
+			#revolt_risk = 15
+			add_province_modifier = {
+				name = major_revolt_risk
+				duration = 1825
+			}
+		}
+		REB = {
+			load_oob = 302000-OPT1-REB.txt #1 unit of rebels spawn in prov 5959. (SWAPO guerrillas attack SADF at Omugulugwombashe)
+		}
+		set_country_flag = SAF_keep_namibia
+	}
+
+	option = {
+		name = "EVTOPTB302000"					#We shall accept this ruling.
+		ai_chance = { factor = 20 }
+		any_owned = {
+			limit = {
+				is_core = NAM
+			}
+			remove_core = SAF
+		}
+		release = NAM
+		national_unity = 10
+		military_access = NAM
+		non_aggression_pact = NAM
+		prestige_change = 30
+	}
+}
+
+country_event = {
+	
+	id = 302001		#Event 02 for SAF – NAM war of Independence – Namibian TAG created
+
+	trigger = {
+		tag = SAF
+		OR = {
+			NOT = {
+				exists = NAM
+			}
+			NAM = {
+				vassal_of = SAF
+			}
+		}
+		OR = {
+			6061 = { controlled_by = REB }
+			6331 = { controlled_by = REB }
+			5965 = { controlled_by = REB }
+			6239 = { controlled_by = REB }
+			6059 = { controlled_by = REB }
+			6060 = { controlled_by = REB }
+			6063 = { controlled_by = REB }
+		}
+		OR = {
+			6061 = { controlled_by = REB }
+			6331 = { controlled_by = REB }
+			5965 = { controlled_by = REB }
+			6239 = { controlled_by = REB }
+			6059 = { controlled_by = REB }
+			6060 = { controlled_by = REB }
+			6063 = { controlled_by = REB }
+		}
+		war_with = ANG
+		dissent = 7.5
+		has_country_flag = SAF_keep_namibia
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.75
+			exists = ANG
+		}
+		modifier = {
+			factor = 0.75
+			exists = ZMB
+		}
+		modifier = {
+			factor = 0.75
+			exists = BOT
+		}
+		modifier = {
+			factor = 0.5
+			war_with = ANG
+		}
+	}
+
+	title = "EVTNAME302001"
+	desc = "EVTDESC302001"
+	picture = "1966_Namibian_war_for_independence"
+
+	major = yes
+
+	option = {
+		name = "EVTOPTA302001"					#There shall be no quarter
+		ai_chance = { factor = 90 }
+		any_owned = {
+			limit = {
+				is_core = NAM
+				OR = {
+					controlled_by = REB
+					AND = {
+						revolt_risk = 15
+						NOT = { country_units_in_province = 1 }
+					}
+				}
+			}
+			secede_province = NAM
+		}
+		NAM = {
+			relation = { who = SAF value = -300 }
+			war = SAF
+			load_oob = 302001-OPT1-NAM.txt
+		}
+	}
+
+	option = {
+		name = "EVTOPTB302001"					#There are more pressing concerns.
+		ai_chance = { factor = 10 }
+		release = NAM
+		national_unity = 5
+		military_access = NAM
+		non_aggression_pact = NAM
+	}
+}
+
+
+
+#####  The Border War #####
+
+country_event = {
+	
+	id = 113000		#Event 01 for ANG – Civil War!
+
+	trigger = {
+		tag = ANG
+		is_subject = no
+		ideology = left_wing_radical_idolg
+		NOT = {
+			has_country_flag = ANG_civil_war
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			war_with = SAF
+		}
+		modifier = {
+			factor = 0.75
+			any_neighbor_country = {
+				NOT = {
+					ideology = left_wing_radical_idolg
+					ideology_group = comintern
+				}
+				war_with = ANG
+			}
+		}
+		modifier = {
+			factor = 0.75
+			KON = {
+				NOT = {
+					ideology = left_wing_radical_idolg
+					ideology_group = comintern
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				national_unity = 50
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				national_unity = 25
+			}
+		}
+		modifier = {
+			factor = 0.75
+			dissent = 10
+		}
+		modifier = {
+			factor = 0.75
+			dissent = 25
+		}
+	}
+
+	title = "EVTNAME113000"
+	desc = "EVTDESC113000"
+	picture = "1975_Civil_war_in_Angola"
+
+	major = yes
+
+	option = {
+		name = "EVTOPTA113000"			    			# Unfortunate
+		REB = {
+			load_oob = 113000-OPT1-REB.txt #Fascist rebel Partisan army spawns in the south (aligned with SAF) along SAF border – Full OOB
+		}
+		ANG = {
+			load_oob = 113000-OPT1-ANG.txt #LWR Partisan army (tag ANG) spawn in north
+		}
+		set_country_flag = ANG_civil_war
+	}
+}
+
+
+
+#####  Intervention Events for Border War #####	
+	
+country_event = {
+	
+	id = 326020		#Event 01 for SOV – Support ANG (Major)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME326020"
+	desc = "EVTDESC326020"
+	picture = "1981_Angola_Soviet_advisors"
+
+	option = {
+		name = "EVTOPTA326020"			    			#Send an Expeditionary force
+		ai_chance = { factor = 35 }
+		ANG = {
+			relation = { who = THIS value = 50 }
+			country_event = 113001
+		}
+		supplies = -500
+	}
+	
+	option = {
+		name = "EVTOPTB326020"			    			#Send aid
+		ai_chance = { factor = 45 }
+		money = -10000
+		supplies = -1000
+		fuel = -200
+		ANG = {
+			relation = { who = THIS value = 20 }
+			country_event = 113007
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC326020"			    			#Do not get involved
+		ai_chance = { factor = 20 }
+		ANG = {
+			relation = { who = THIS value = -50 }
+		}
+		prestige_change = -25
+	}
+}
+	
+country_event = {
+	
+	id = 170000		#Event 01 for DDR – Support ANG (Major)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME170000"
+	desc = "EVTDESC170000"
+	picture = "1981_Angola_DDR_support"
+
+	option = {
+		name = "EVTOPTA170000"			    			#Send an Expeditionary force
+		ai_chance = { factor = 60 }
+		ANG = {
+			relation = { who = THIS value = 50 }
+			country_event = 113006
+		}
+		supplies = -500
+	}
+	
+	option = {
+		name = "EVTOPTB170000"			    			#Send aid
+		ai_chance = { factor = 30 }
+		money = -10000
+		supplies = -1000
+		fuel = -200
+		ANG = {
+			relation = { who = THIS value = 20 }
+			country_event = 113008
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC170000"			    			#Do not get involved
+		ai_chance = { factor = 10 }
+		ANG = {
+			relation = { who = THIS value = -50 }
+		}
+		prestige_change = -25
+	}
+}
+	
+country_event = {
+	
+	id = 354020		#Event 01 for USA – Support SAF (Major)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME354020"
+	desc = "EVTDESC354020"
+	picture = "1981_Angola_USA_support"
+
+	option = {
+		name = "EVTOPTA354020"			    			#Send an Expeditionary force
+		ai_chance = { factor = 30 }
+		SAF = {
+			relation = { who = THIS value = 50 }
+			country_event = 302010
+		}
+		supplies = -500
+	}
+	
+	option = {
+		name = "EVTOPTB354020"			    			#Send aid
+		ai_chance = { factor = 50 }
+			money = -10000
+			supplies = -1000
+			fuel = -200
+		SAF = {
+			relation = { who = THIS value = 20 }
+			country_event = 302014
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC354020"			    			#Do not get involved
+		ai_chance = { factor = 20 }
+		SAF = {
+			relation = { who = THIS value = -50 }
+		}
+		prestige_change = -25
+	}
+}
+	
+country_event = {
+	
+	id = 151040	#Event 01 for CHC – Pick a side! (Major)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151040"
+	desc = "EVTDESC151040"
+	picture = "1975_Civil_war_in_Angola"
+
+	option = {
+		name = "EVTOPTA151040"			    			#Support the Angolans!
+		ai_chance = { 
+			factor = 45 
+			modifier = {
+				factor = 1.5
+				relation = { who = ANG value = 100 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = ANG value = 0 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = ANG value = -100 }
+				}
+			}
+			modifier = {
+				factor = 10
+				war_with = SAF
+			}
+			modifier = {
+				factor = 0
+				war_with = ANG
+			}
+		}
+		money = -10000
+		supplies = -1000
+		fuel = -200
+		ANG = {
+			relation = { who = THIS value = 20 }
+			country_event = 113009
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB151040"			    			#Support the South Africans!
+		ai_chance = { 
+			factor = 50 
+			modifier = {
+				factor = 1.5
+				relation = { who = SAF value = 100 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = SAF value = 0 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = SAF value = -100 }
+				}
+			}
+			modifier = {
+				factor = 10
+				war_with = ANG
+			}
+			modifier = {
+				factor = 0
+				war_with = SAF
+			}
+		}
+		money = -10000
+		supplies = -1000
+		fuel = -200
+		SAF = {
+			relation = { who = THIS value = 20 }
+			country_event = 302021
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC151040"			    			#Do not get involved
+		ai_chance = { 
+			factor = 5 
+			modifier = {
+				factor = 4
+				war = yes
+			}
+			modifier = {
+				factor = 3
+				NOT = {
+					national_unity = 50
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 164000		#Multi-Event 01 for CUB/MOZ/ZMB/NAM – Support ANG (Minor)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME164000"
+	desc = "EVTDESC164000"
+	picture = "1975_Civil_war_in_Angola"
+
+	option = {
+		name = "EVTOPTA164000"			    			#To war!
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 0.2
+				war = yes
+			}
+			modifier = {
+				factor = 1.5
+				relation = { who = ANG value = 100 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = ANG value = 0 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = ANG value = -100 }
+				}
+			}
+			modifier = {
+				factor = 10
+				war_with = SAF
+			}
+			modifier = {
+				factor = 0
+				war_with = ANG
+			} 
+		}
+		create_alliance = ANG
+		ANG = {
+			relation = { who = THIS value = 100 }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = CUB
+				}
+			}
+			ANG = {
+				country_event = 113014
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = MOZ
+				}
+			}
+			ANG = {
+				country_event = 113015
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = ZMB
+				}
+			}
+			ANG = {
+				country_event = 113016
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = NAM
+				}
+			}
+			ANG = {
+				country_event = 113017
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB164000"			    			#Send an Expeditionary force
+		ai_chance = { factor = 40 }
+		ANG = {
+			relation = { who = THIS value = 50 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC164000"			    			#Send aid
+		ai_chance = { factor = 10 }
+		money = -5000
+		supplies = -500
+		fuel = -100
+		ANG = {
+			relation = { who = THIS value = 20 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTD164000"			    			#Do not get involved
+		ai_chance = { factor = 10 }
+		ANG = {
+			relation = { who = THIS value = -50 }
+		}
+		prestige_change = -15
+	}
+}
+
+country_event = {
+	
+	id = 232000		#Multi-Event 02 for KON/MOZ/RHO – Support SAF (Minor)
+
+	is_triggered_only = yes
+
+	title = "EVTNAME232000"
+	desc = "EVTDESC232000"
+	picture = "1975_Civil_war_in_Angola"
+
+	option = {
+		name = "EVTOPTA232000"			    			#To war!
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 0.2
+				war = yes
+			}
+			modifier = {
+				factor = 1.5
+				relation = { who = SAF value = 100 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = SAF value = 0 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = SAF value = -100 }
+				}
+			}
+			modifier = {
+				factor = 10
+				war_with = ANG
+			}
+			modifier = {
+				factor = 0
+				war_with = SAF
+			}
+		}
+		create_alliance = SAF
+		SAF = {
+			relation = { who = THIS value = 100 }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = RHO
+				}
+			}
+			SAF = {
+				country_event = 302018
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = MOZ
+				}
+			}
+			SAF = {
+				country_event = 302019
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = KON
+				}
+			}
+			SAF = {
+				country_event = 302020
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB232000"			    			#Send an Expeditionary force
+		ai_chance = { factor = 40 }
+		SAF = {
+			relation = { who = THIS value = 50 }
+		}
+		supplies = -500
+	}
+	
+	option = {
+		name = "EVTOPTC232000"			    			#Send aid
+		ai_chance = { factor = 10 }
+		money = -5000
+		supplies = -500
+		fuel = -100
+		SAF = {
+			relation = { who = THIS value = 20 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTD232000"			    			#Do not get involved
+		ai_chance = { factor = 10 }
+		SAF = {
+			relation = { who = THIS value = -50 }
+		}
+		prestige_change = -15
+	}
+}
+
+country_event = {
+	
+	id = 113001	#SOV-ANG Follow up event 02 – Country sends force – received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113001"
+	desc = "EVTDESC113001"
+	picture = "1981_Angola_Soviet_advisors"
+
+	option = {
+		name = "EVTOPTA113001"			    			#Great!
+		national_unity = 5
+		war_exhaustion = -3
+		load_oob = BorderWar-SOVexp.txt
+		supplies = 500
+	}
+}
+
+country_event = {
+	
+	id = 113006	#DDR-ANG Follow up event 02 – Country sends force – received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113006"
+	desc = "EVTDESC113006"
+	picture = "1981_Angola_DDR_support"
+
+	option = {
+		name = "EVTOPTA113006"			    			#Great!
+		national_unity = 5
+		war_exhaustion = -3
+		load_oob = BorderWar-DDRexp.txt
+		supplies = 500
+	}
+}
+
+country_event = {
+	
+	id = 113002	#CUB-ANG Follow up event 02 – Country sends force – received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113002"
+	desc = "EVTDESC113002"
+	picture = "1981_Angola_Cuban_support"
+
+	option = {
+		name = "EVTOPTA113002"			    			#Great!
+		national_unity = 5
+		war_exhaustion = -3
+		load_oob = BorderWar-CUBexp.txt
+		supplies = 500
+	}
+}
+
+country_event = {
+	
+	id = 113003	#MOZ-ANG Follow up event 02 – Country sends force – received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113003"
+	desc = "EVTDESC113003"
+	picture = "1981_Angola_minors_support"
+
+	option = {
+		name = "EVTOPTA113003"			    			#Great!
+		national_unity = 5
+		war_exhaustion = -3
+		load_oob = BorderWar-MOZexp.txt
+		supplies = 500
+	}
+}
+
+country_event = {
+	
+	id = 113004	#ZMB-ANG Follow up event 02 – Country sends force – received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113004"
+	desc = "EVTDESC113004"
+	picture = "1981_Angola_minors_support"
+
+	option = {
+		name = "EVTOPTA113004"			    			#Great!
+		national_unity = 5
+		war_exhaustion = -3
+		load_oob = BorderWar-ZMBexp.txt
+		supplies = 500
+	}
+}
+
+country_event = {
+	
+	id = 113005	#NAM-ANG Follow up event 02 – Country sends force – received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113005"
+	desc = "EVTDESC113005"
+	picture = "1981_Angola_minors_support"
+
+	option = {
+		name = "EVTOPTA113005"			    			#Great!
+		national_unity = 5
+		war_exhaustion = -3
+		load_oob = BorderWar-NAMexp.txt
+		supplies = 500
+	}
+}
+
+
+
+
+country_event = {
+	
+	id = 302010	#USA-SAF Follow up event 02 – Country sends force – received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME302010"
+	desc = "EVTDESC302010"
+	picture = "1981_Angola_SAF_receives_volunteers"
+
+	option = {
+		name = "EVTOPTA302010"			    			#Great!
+		national_unity = 5
+		war_exhaustion = -3
+		load_oob = BorderWar-USAexp.txt
+		supplies = 500
+	}
+}
+
+country_event = {
+	
+	id = 302011	#RHO-SAF Follow up event 02 – Country sends force – received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME302011"
+	desc = "EVTDESC302011"
+	picture = "1981_Angola_SAF_receives_volunteers"
+
+	option = {
+		name = "EVTOPTA302011"			    			#Great!
+		national_unity = 5
+		war_exhaustion = -3
+		load_oob = BorderWar-USAexp.txt
+		supplies = 500
+	}
+}
+
+country_event = {
+	
+	id = 302012	#MOZ-SAF Follow up event 02 – Country sends force – received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME302012"
+	desc = "EVTDESC302012"
+	picture = "1981_Angola_SAF_receives_volunteers"
+
+	option = {
+		name = "EVTOPTA302012"			    			#Great!
+		national_unity = 5
+		war_exhaustion = -3
+		load_oob = BorderWar-MOZexp.txt
+		supplies = 500
+	}
+}
+
+country_event = {
+	
+	id = 302013	#KON-SAF Follow up event 02 – Country sends force – received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME302013"
+	desc = "EVTDESC302013"
+	picture = "1981_Angola_SAF_receives_volunteers"
+
+	option = {
+		name = "EVTOPTA302013"			    			#Great!
+		national_unity = 5
+		war_exhaustion = -3
+		load_oob = BorderWar-KONexp.txt
+		supplies = 500
+	}
+}
+
+
+
+country_event = {
+	
+	id = 113007	#SOV-ANG Follow up event 03 – Country sends supplies - received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113007"
+	desc = "EVTDESC113007"
+	picture = "1981_Angola_Soviet_advisors"
+
+	option = {
+		name = "EVTOPTA113007"			    			#Great!
+		national_unity = 2
+		war_exhaustion = -1
+		money = 5000
+		supplies = 500
+		fuel = 100
+	}
+}
+
+country_event = {
+	
+	id = 113008	#DDR-ANG Follow up event 03 – Country sends supplies - received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113008"
+	desc = "EVTDESC113008"
+	picture = "1981_Angola_DDR_support"
+
+	option = {
+		name = "EVTOPTA113008"			    			#Great!
+		national_unity = 2
+		war_exhaustion = -1
+		money = 5000
+		supplies = 500
+		fuel = 100
+	}
+}
+
+country_event = {
+	
+	id = 113009	#CHC-ANG Follow up event 03 – Country sends supplies - received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113009"
+	desc = "EVTDESC113009"
+	picture = "1981_Angola_minors_support"
+
+	option = {
+		name = "EVTOPTA113009"			    			#Great!
+		national_unity = 2
+		war_exhaustion = -1
+		money = 5000
+		supplies = 500
+		fuel = 100
+	}
+}
+
+country_event = {
+	
+	id = 113010	#CUB-ANG Follow up event 03 – Country sends supplies - received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113010"
+	desc = "EVTDESC113010"
+	picture = "1981_Angola_minors_support"
+
+	option = {
+		name = "EVTOPTA113010"			    			#Great!
+		national_unity = 2
+		war_exhaustion = -1
+		money = 5000
+		supplies = 500
+		fuel = 100
+	}
+}
+
+country_event = {
+	
+	id = 113011	#MOZ-ANG Follow up event 03 – Country sends supplies - received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113011"
+	desc = "EVTDESC113011"
+	picture = "1981_Angola_minors_support"
+
+	option = {
+		name = "EVTOPTA113011"			    			#Great!
+		national_unity = 2
+		war_exhaustion = -1
+		money = 5000
+		supplies = 500
+		fuel = 100
+	}
+}
+
+country_event = {
+	
+	id = 113012	#ZMB-ANG Follow up event 03 – Country sends supplies - received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113012"
+	desc = "EVTDESC113012"
+	picture = "1981_Angola_minors_support"
+
+	option = {
+		name = "EVTOPTA113012"			    			#Great!
+		national_unity = 2
+		war_exhaustion = -1
+		money = 5000
+		supplies = 500
+		fuel = 100
+	}
+}
+
+country_event = {
+	
+	id = 113013	#NAM-ANG Follow up event 03 – Country sends supplies - received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113013"
+	desc = "EVTDESC113013"
+	picture = "1981_Angola_minors_support"
+
+	option = {
+		name = "EVTOPTA113013"			    			#Great!
+		national_unity = 2
+		war_exhaustion = -1
+		money = 5000
+		supplies = 500
+		fuel = 100
+	}
+}
+
+country_event = {
+	
+	id = 113014	#CUB-ANG Follow up event 01 – Country joins War – received by joined country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113014"
+	desc = "EVTDESC113014"
+	picture = "1981_Angola_Cuban_support"
+
+	major = yes
+
+	option = {
+		name = "EVTOPTA113014"			    			#Great!
+		national_unity = 3
+		war_exhaustion = -5
+		CUB = {
+			join_war = ANG
+		}
+	}
+}
+
+country_event = {
+	
+	id = 113015	#MOZ-ANG Follow up event 01 – Country joins War – received by joined country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113015"
+	desc = "EVTDESC113015"
+	picture = "1981_Angola_minors_support"
+
+	major = yes
+
+	option = {
+		name = "EVTOPTA113015"			    			#Great!
+		national_unity = 3
+		war_exhaustion = -5
+		MOZ = {
+			join_war = ANG
+		}
+	}
+}
+
+country_event = {
+	
+	id = 113016	#ZMB-ANG Follow up event 01 – Country joins War – received by joined country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113016"
+	desc = "EVTDESC113016"
+	picture = "1981_Angola_minors_support"
+
+	option = {
+		name = "EVTOPTA113016"			    			#Great!
+		national_unity = 3
+		war_exhaustion = -5
+		ZMB = {
+			join_war = ANG
+		}		
+	}
+}
+
+country_event = {
+	
+	id = 113017	#NAM-ANG Follow up event 01 – Country joins War – received by joined country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME113017"
+	desc = "EVTDESC113017"
+	picture = "1981_Angola_minors_support"
+
+	major = yes
+
+	option = {
+		name = "EVTOPTA113017"			    			#Great!
+		national_unity = 3
+		war_exhaustion = -5
+		NAM = {
+			join_war = ANG
+		}		
+	}
+}
+
+country_event = {
+	
+	id = 302014	#USA-SAF Follow up event 03 – Country sends supplies - received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME302014"
+	desc = "EVTDESC302014"
+	picture = "1981_Angola_USA_support"
+
+	option = {
+		name = "EVTOPTA302014"			    			#Great!
+		national_unity = 2
+		war_exhaustion = -1
+		money = 5000
+		supplies = 500
+		fuel = 100
+	}
+}
+
+country_event = {
+	
+	id = 302015	#RHO-SAF Follow up event 03 – Country sends supplies - received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME302015"
+	desc = "EVTDESC302015"
+	picture = "1981_Angola_SAF_country_joins_war"
+
+	option = {
+		name = "EVTOPTA302015"			    			#Great!
+		national_unity = 2
+		war_exhaustion = -1
+		money = 5000
+		supplies = 500
+		fuel = 100
+	}
+}
+
+country_event = {
+	
+	id = 302016	#MOZ-SAF Follow up event 03 – Country sends supplies - received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME302016"
+	desc = "EVTDESC302016"
+	picture = "1981_Angola_SAF_country_joins_war"
+
+	option = {
+		name = "EVTOPTA302016"			    			#Great!
+		national_unity = 2
+		war_exhaustion = -1
+		money = 5000
+		supplies = 500
+		fuel = 100
+	}
+}
+
+country_event = {
+	
+	id = 302017	#KON-SAF Follow up event 03 – Country sends supplies - received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME302017"
+	desc = "EVTDESC302017"
+	picture = "1981_Angola_SAF_country_joins_war"
+
+	option = {
+		name = "EVTOPTA302017"			    			#Great!
+		national_unity = 2
+		war_exhaustion = -1
+		money = 5000
+		supplies = 500
+		fuel = 100
+	}
+}
+
+country_event = {
+	
+	id = 302018	#RHO-SAF Follow up event 01 – Country joins War – received by joined country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME302018"
+	desc = "EVTDESC302018"
+	picture = "1981_Angola_SAF_country_joins_war"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA302018"			    			#Great!
+		national_unity = 3
+		war_exhaustion = -5
+		RHO = {
+			join_war = SAF
+		}		
+	}
+}
+
+country_event = {
+	
+	id = 302019	#MOZ-SAF Follow up event 01 – Country joins War – received by joined country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME302019"
+	desc = "EVTDESC302019"
+	picture = "1981_Angola_SAF_country_joins_war"
+
+	major = yes
+
+	option = {
+		name = "EVTOPTA302019"			    			#Great!
+		national_unity = 3
+		war_exhaustion = -5
+		MOZ = {
+			join_war = SAF
+		}			
+	}
+}
+
+country_event = {
+	
+	id = 302020	#KON-SAF Follow up event 01 – Country joins War – received by joined country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME302020"
+	desc = "EVTDESC302020"
+	picture = "1981_Angola_SAF_country_joins_war"
+
+	major = yes
+
+	option = {
+		name = "EVTOPTA302020"			    			#Great!
+		national_unity = 3
+		war_exhaustion = -5
+		KON = {
+			join_war = SAF
+		}			
+	}
+}
+
+country_event = {
+	
+	id = 302021	#CHC-SAF Follow up event 03 – Country sends supplies - received by receiving country
+
+	is_triggered_only = yes
+
+	title = "EVTNAME302021"
+	desc = "EVTDESC302021"
+	picture = "1981_Angola_SAF_country_joins_war"
+
+	option = {
+		name = "EVTOPTA302021"			    			#Great!
+		national_unity = 2
+		war_exhaustion = -1
+		money = 5000
+		supplies = 500
+		fuel = 100
+	}
+}
+
+
+
+

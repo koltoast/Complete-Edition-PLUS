@@ -1,0 +1,79 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x,,,,,,,,,
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#ENG;;;;;;;;;;;;;;x
+dec_ENG_biafran_issue_title;The Biafran Issue;;;;;;;;;;;;;x
+dec_ENG_biafran_issue_desc;Endemic ethnic and cultural tensions in Nigeria have degenerated into electoral fraud and violence across the region, and now a new crisis is unfolding: the southeastern region of Nigeria has declared its independence as the Republic of Biafra and is enforcing its decree with force. Already, local and regional powers are taking sides in this new conflict.;;;;;;;;;;;;;;x,,,,,,,
+#NIG;;;;;;;;;;;;;;x
+NIG_demand_independence_title;Demand Independence;;;;;;;;;;;;;x
+NIG_demand_independence_desc;After decades of hard work laying the foundations of the Nigerian nation, political leaders from across our country have come together and signed a joint petition for an independent Nigeria for submission to the British government. For now, Nigeria stands united in her petition for independence, and we sincerely hope that Britain will allow us to go our separate way. If not, we will be forced to take drastic action.;;;;;;;;;;;;;;x,,,,,
+NIG_UDI_title;Nigerian Unilateral Declaration of Independence;;;;;;;;;;;;;x
+NIG_UDI_desc;The British rejection of our petition for independence has forced us to seize it without their permission. With our Unilateral Declaration Independence, we have severed all historic ties with Britain and established a provisional government across the country. The armed forces we could raise have expelled all British authorities from Nigeria, and our flag now flies over the land! Long live Nigeria!;;;;;;;;;;;;;;x,,,,,,,
+NIG_hold_elections_title;Hold elections;;;;;;;;;;;;;x
+NIG_hold_elections_desc;The population – whipped up by politicians who stand to profit from their fervor – is demanding that their voice be heard in democratic elections. We cannot delay any longer: to do so would provoke riots in the streets that would bring down the government. For better or worse, Nigeria will go to the ballot box.;;;;;;;;;;;;;;x,,,,,,,,
+#EGY/UAR;;;;;;;;;;;;;;x
+dec_EGY_biafran_issue_title;The Biafran Issue;;;;;;;;;;;;;x
+dec_EGY_biafran_issue_desc;Endemic ethnic and cultural tensions in Nigeria have degenerated into electoral fraud and violence across the region, and now a new crisis is unfolding: the southeastern region of Nigeria has declared its independence as the Republic of Biafra and is enforcing its decree with force. Already, local and regional powers are taking sides in this new conflict.;;;;;;;;;;;;;;x,,,,,,,
+#BIF;;;;;;;;;;;;;;x
+#dec_A_title;Hire Foreign Mercenaries!;;;;;;;;;;;;;x
+#dec_A_desc;Although we lack the large manpower and weapon reserves of Nigeria, we have just enough cash on hand to hire skilled foreigners to help us in our struggle for freedom. If we authorize it, our government is ready to transfer funds to a number of these fighters who have agreed to fight in our armed forces. We can certainly use all the help we can get.;;;;;;;;;;;;;;x,,,,,,,
+##################################################;;;;;;;;;;;;;;x
+# Events ; REMOVE HASH FOR ACTIVE EVENTS AND OPTIONS;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#ENG;;;;;;;;;;;;;;x
+EVTNAME181020;The Nigerian Question;;;;;;;;;;;;;x;,,,,,,,,,
+EVTDESC181020;Nationalism in Nigeria is an entrenched political force in that country, and with the release of our other African colonies, separatist Nigerian nationalism has gained even more traction. Experience has show that clinging to the colonial system brings bloodshed and strife, particularly when public opinion is against the Government. We have a chance to address this issue: a bill to release Nigeria as a free and independent state is now before Parliament. We are in a position to either push this bill through or to amend it so that Nigeria is retained as a Dominion. Alternatively, we could shoot down the legislation altogether.;;;;;;;;;;;;;x;,,,
+EVTOPTA181020;Nigeria shall have its independence!;;;;;;;;;;;;;x;,,,,,,,,,
+EVTOPTB181020;Nigeria shall be an Autonomous Dominion;;;;;;;;;;;;;x;,,,,,,,,,
+EVTOPTC181020;Enough of this Nonsense!;;;;;;;;;;;;;x;,,,,,,,,,
+EVTNAME181021;Nigeria demands independence;;;;;;;;;;;;;x;,,,,,,,,,
+EVTDESCX181021;We have received a petition, signed by various political leaders of Nigeria, for our unconditional release of Nigeria as an independent state. We must decide how to act on this: there is no guarantee that an independent Nigeria will be amenable to Britain’s interests, but similarly there is certainly no guarantee that we can remain in control of the country. However, there is no room for compromise at this stage: either we accede to Nigeria’s demands or dig in our heels.;;;;;;;;;;;;;x;,,,,,
+EVTOPTA181021;Nigeria shall have its independence;;;;;;;;;;;;;x;,,,,,,,,,
+EVTOPTB181021;This is not the desire of the masses!;;;;;;;;;;;;;x;,,,,,,,,,
+EVTNAME181022;Nigeria unilaterally declares its independence;;;;;;;;;;;;;x;,,,,,,,,,
+EVTDESC181022;Unrest in Nigeria has reached a boiling point, despite our best efforts to tamp down local opposition to our rule. A number of affiliated political groups have unilaterally issued a joint declaration of Nigerian independence, seizing key facilities in regions all over the country and imprisoning or expelling our authorities. The Nigerian flag now flies over all government buildings as the new Nigerian government consolidates its power. We have two options at this point: accept the independence of Nigeria, or go to war to reclaim the territory.;;;;;;;;;;;;;x;,,,,,,
+EVTOPTA181022;Let’s forget Nigeria;;;;;;;;;;;;;x;,,,,,,,,,
+EVTOPTB181022;We shall protect the interest of the Nigerian people;;;;;;;;;;;;;x;,,,,,,,,,
+EVTNAME181023;Support Nigeria!;;;;;;;;;;;;;x;,,,,,,,,,
+EVTDESC181023;Biafran separatists have cropped up in southern Nigeria, but the Nigerian government is ill-equipped to restore law and order. However, we are in a position aid the Nigeria to swiftly bring the situation back under control. We can either send a group of volunteers to aid the Nigerians directly, or send military and economic aid to the Nigerian government. Alternatively, we could do nothing and let the Nigerians fight their own battles.;;;;;;;;;;;;;x;,,,,,
+#EVTOPTAXXXXXX;Send in the X;;;;;;;;;;;;;x;,,,,,,,,,
+EVTOPTA181023;Send aid;;;;;;;;;;;;;x;,,,,,,,,,
+EVTOPTB181023;Do not get involved;;;;;;;;;;;;;x;,,,,,,,,,
+;;;;;;;;;;;;;;x
+#NIG;;;;;;;;;;;;;;x
+EVTNAME274000;The First Republic;;;;;;;;;;;;;x;,,,,,,,,,
+EVTDESC274000;At long last, Nigeria is free of British domination. Now begins the hard work of governing the disparate ethnicities and tribes that make up the country. There is great clamor for popular elections to form a republican government, but given the propensity for ethnic strife in our country, immediate elections may do more harm than good. We must decide to continue with the provisional government despite our lack of a popular mandate, or submit to elections and learn to live with the results.;;;;;;;;;;;;;x;,,,,,
+EVTOPTA274000;Let the elections begin!;;;;;;;;;;;;;x;,,,,,,,,,
+EVTOPTB274000;We are not yet ready;;;;;;;;;;;;;x;,,,,,,,,,
+EVTNAME274001;Authoritarian Coup d’etat!;;;;;;;;;;;;;x;,,,,,,,,,
+EVTDESC274001;With the elected government torn by ethnic divisions and bitter rivalries among Nigeria’s various tribes and ethnicities, a group of army Majors attempted a coup by assassinating the top political leaders from the Northern part of the country in a single bloody night. The head of the Army, Johnson Aguiyi-Ironsi, managed to fight off the revolutionaries, but has claimed the presidency of Nigeria for himself by subverting the legal constitutional succession. The only way to undo this development now is with another round of elections. Otherwise, Nigeria will be ruled by Ironsi.;;;;;;;;;;;;;x;,,,,
+EVTOPTA274001;Appoint Johnson Aguiyi-Ironsi;;;;;;;;;;;;;x;,,,,,,,,,
+EVTOPTB274001;Hold new elections;;;;;;;;;;;;;x;,,,,,,,,,
+EVTNAME274002;Counter Coup!;;;;;;;;;;;;;x;,,,,,,,,,
+EVTDESC274002;Feeling aggrieved by Ironsi’s coup and favors given to members of his own tribe, Northern politicians and leaders have been pressuring the army to avenge Ironsi’s seizure of power. Their efforts have borne fruit: Lt. Gen. Murtala Mohammed has used a mutiny in a local army barracks to assassinate Ironsi. However, Mohammed is too vociferous an advocate for Northern independence and had overplayed his hand. Instead, his superior, Yakubu Gowon, a moderate northerner, is the favored ‘candidate’ for the presidency. At this point, another round of divisive elections is the only other option to forming a government for Nigeria. The choice is either strongman rule or divisive majoritarian politics.;;;;;;;;;;;;;x;
+EVTOPTA274002;Appoint Yakubu Gowon;;;;;;;;;;;;;x;,,,,,,,,,
+EVTOPTB274002;Hold new elections;;;;;;;;;;;;;x;,,,,,,,,,
+EVTNAME274003;Biafran Declaration of Independence!;;;;;;;;;;;;;x;,,,,,,,,,
+EVTDESC274003;Angered at the massacres of Southeasterners in the North following the latest transfer of political power, the southeastern region of Nigeria has declared through its federal legislature that it is now independent. They are calling themselves the ‘Republic of Biafra’ and have cut all ties to the rest of our country while attempting to scrounge an army to resist our legal authority. Our military commands believe that a police action to reassert our rule over the region would meet with too much trouble.;;;;;;;;;;;;;x;,,,,,,,,
+EVTOPTA274003;Traitors!;;;;;;;;;;;;;x;,,,,,,,,,
+EVTOPTB274003;Let them go.;;;;;;;;;;;;;x;,,,,,,,,,
+EVTNAME274004;Offer peace to Biafra?;;;;;;;;;;;;;x;,,,,,,,,,
+EVTDESC274004;With the Civil War still raging, it has become apparent that the conflict will become exceedingly bloody if we allow it to continue. Is it really worth so many Nigerian lives to bring such a small part of our country to heel?;;;;;;;;;;;;;x;,,,,,,,,
+EVTOPTA274004;Offer peace to Biafra;;;;;;;;;;;;;x;,,,,,,,,,
+EVTOPTB274004;Of course it is!;;;;;;;;;;;;;x;,,,,,,,,,
+;;;;;;;;;;;;;;x
+#EGY/UAR;;;;;;;;;;;;;;x
+EVTNAME180010;Support Nigeria!;;;;;;;;;;;;;x;,,,,,,,,,
+EVTDESC180010;Biafran separatists have cropped up in southern Nigeria, but the Nigerian government is ill-equipped to restore law and order. However, we are in a position aid the Nigeria to swiftly bring the situation back under control. We can either send a small volunteer air wing to aid the Nigerians directly, or send military and economic aid to the Nigerian government. Alternatively, we could do nothing and let the Nigerians fight their own battles.;;;;;;;;;;;;;x;,,,,,
+EVTOPTA180010;Send in the Air Force!;;;;;;;;;;;;;x;,,,,,,,,,
+EVTOPTB180010;Send aid;;;;;;;;;;;;;x;,,,,,,,,,
+EVTOPTC180010;Let's not get involved;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#BIF;;;;;;;;;;;;;;x
+EVTNAME128000;Foreign Aid arrives!;;;;;;;;;;;;;x;,,,,,,,,,
+EVTDESC128000;Today, aid from countries sympathetic to our plight has arrived to assist our struggle for independence. It is obvious that the international community supports our cause!;;;;;;;;;;;;;x;,,,,,,,,
+EVTOPTA128000;Not a moment too soon!;;;;;;;;;;;;;x;,,,,,,,,,
+EVTNAME128001;Nigerian peace offer;;;;;;;;;;;;;x;,,,,,,,,,
+EVTDESC128001;The Nigerian oppressors have at last decided that the meager result of their war against us does not justify the expense and loss of life, and have offered us white peace! It is a great day for the Republic of Biafra!;;;;;;;;;;;;;x;,,,,,,,,
+EVTOPTA128001;Quite a feat for small Biafra!;;;;;;;;;;;;;x;,,,,,,,,,

@@ -1,0 +1,516 @@
+#ENG:
+	#ENG_establish_rhodesia - ENG establishes the Rhodesian Dominion
+	
+#MLW:
+	#MLW_demand_independence	- MLW demands independece
+	#MLW_support_zapu			- MLW aids ZAPU rebels 	
+
+#MOZ:
+	#MOZ_support_zapu - MOZ aids ZAPU rebels 	
+	
+#RHO:
+	#RHO_independence_referendum 	- RHO Demands Independence
+	#RHO_UDI						- RHO unilaterally declares independece			
+	#RHO_white_supremacy_ends		- RHO ends white supremacy 	
+	
+#ZMB:
+	#ZMB_demand_independence	- ZMB demands independence
+	#ZMB_support_zapu			- ZMB aids ZAPU rebels 	
+
+diplomatic_decisions = {
+
+	ENG_establish_rhodesia = {
+		category = national
+		picture = "1953_Referendum_for_Rhodesian_Federation"
+		potential = {
+			#Decolonisation has started
+			year = 1964 #temporary
+			NOT = {
+				has_country_flag = rhodesia_referendum_1
+				has_country_flag = rhodesia_referendum_2
+				has_country_flag = rhodesia_referendum_3
+				has_country_flag = establish_rhodesia_decision
+				exists = ZMB
+				exists = ZIM
+				exists = RHO
+			}
+			
+			owns = 7265	#Major Zambian cities
+			owns = 7263
+			owns = 7264
+				
+			owns = 7466 #Major Zimbabwean cities
+			owns = 7467
+			owns = 7269
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = { 
+			factor = 10
+			modifier = {
+				factor = 8
+				AND = {
+					NOT = {
+						national_unity = 65
+					}
+					dissent = 5
+				}
+			}
+			modifier = {
+				factor = 8
+				dissent = 15
+			}
+		}
+		
+		effect = {
+			set_country_flag = establish_rhodesia_decision
+			release_vassal = RHO
+			dissent = -2.5
+			fuel = 200
+			national_unity = 5
+		}
+	}
+
+	ZMB_demand_independence = {
+		category = national
+		picture = "1964_Zambian_Referendum"
+		potential = {
+			vassal_of = ENG
+			tag = ZMB
+			NOT = {
+				has_country_flag = demand_independence
+			}
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = { 
+			factor = 100
+			modifier = {
+				factor = 10
+				ENG = {
+					dissent = 10
+				}
+				OR = {
+					NOT = {
+						dissent = 5
+					}
+					economy_unbalanced = no
+				}
+			}
+			modifier = {
+				factor = 10
+				ENG = {
+					dissent = 10
+				}
+				OR = {
+					MLW = {
+						is_subject = no
+					}
+					RHO = {
+						is_subject = no
+					}
+				}
+			}
+		}
+		
+		effect = {
+			ENG = {
+				country_event = 181013
+			}
+			set_country_flag = demand_independence
+		}
+	}
+
+	
+	MLW_demand_independence = {
+		category = national
+		picture = "1960_Nyasaland_Conference"
+		potential = {
+			vassal_of = ENG
+			tag = MLW
+			NOT = {
+				has_country_flag = demand_independence
+			}
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 10
+				ENG = {
+					dissent = 10
+				}
+				OR = {
+					NOT = {
+						dissent = 5
+					}
+					economy_unbalanced = no
+				}
+			}
+			modifier = {
+				factor = 10
+				ENG = {
+					dissent = 10
+				}
+				OR = {
+					ZMB = {
+						is_subject = no
+					}
+					RHO = {
+						is_subject = no
+					}
+				}
+			}
+		}
+		
+		effect = {
+			ENG = {
+				country_event = 181014
+			}
+			set_country_flag = demand_independence
+		}
+	}
+
+	
+	RHO_independence_referendum = {
+		category = national
+		picture = "1964_Rhodesian_Independence_non-historical"
+		potential = {
+			vassal_of = ENG
+			tag = RHO
+			OR = {
+				has_global_flag = zambia_independence_global
+				exists = ZMB
+			}
+			OR = {
+				has_global_flag = malawi_independence_global
+				exists = MLW
+			}
+			NOT = {
+				has_country_flag = independence_referendum
+			}
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 10
+				ENG = {
+					dissent = 12.5
+				}
+				OR = {
+					NOT = {
+						dissent = 5
+					}
+					economy_unbalanced = no
+				}
+			}
+			modifier = {
+				factor = 10
+				ENG = {
+					dissent = 10
+				}
+				OR = {
+					ZMB = {
+						is_subject = no
+					}
+					MLW = {
+						is_subject = no
+					}
+				}
+			}
+		}
+		
+		effect = {
+			ENG = {
+				country_event = 181015
+			}
+			set_country_flag = independence_referendum
+		}
+	}
+
+	
+	RHO_UDI = {
+		category = national
+		picture = "1964_Rhodesian_Independence"
+		potential = {
+			tag = RHO
+			ENG = {
+					has_country_flag = rhodesia_referendum_2_2
+			}
+			NOT = {
+				has_country_flag = form_udi
+			}
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 1
+				AND = {
+					NOT = {
+						dissent = 5
+					}
+					economy_unbalanced = no
+				}
+			}
+		}
+		
+		effect = {
+			ENG = {
+				country_event = 181016
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = ZMB
+						is_core = MLW
+					}
+				}
+				remove_core = RHO
+			}
+			set_country_flag = form_udi
+		}
+	}
+
+	
+	RHO_white_supremacy_ends = {
+		category = national
+		picture = "1976_Rhodesia_Majority_Rule_Talks"
+		potential = {
+			tag = RHO
+			NOT = {
+				has_global_flag = collapse_of_rhodesia
+			}
+		}
+		
+		allow = {
+			NOT = { popularity = 50 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			change_tag = ZIM
+			government = republic_gov
+			popularity = 5
+			start_election = yes
+			ZIM = {
+				any_owned = {
+					remove_core = RHO
+				}
+			}
+		}
+	}
+
+	
+	ZMB_support_zapu = {
+		category = national
+		picture = "1964_Civil_War_in_Mozambique"
+		potential = {
+			tag = ZMB
+			exists = RHO
+			NOT = {
+				has_country_flag = support_zapu
+			}
+			NOT = {
+				war_with = RHO
+			}
+		}
+		
+		allow = {
+			supplies = 50
+			money = 1000
+			manpower = 10
+		}
+		
+		ai_will_do = {
+			factor = 70
+			modifier = {
+				factor = 2
+				OR = {
+					ideology = left_wing_radical_idolg
+					ideology = social_democrat_idolg
+				}
+			}
+			modifier = {
+				factor = 3
+				ideology_group = comintern
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					dissent = 2
+				}
+			}
+			modifier = {
+				factor = 2
+				economy_unbalanced = no
+			}
+		}
+		
+		effect = {
+			supplies = -50
+			money = -1000
+			manpower = -5
+			REB = {
+				load_oob = ZMB_support_ZAPU_rebels.txt
+				}
+			RHO = {
+				add_country_modifier = {
+					name = g_rebel_support
+					duration = 3650
+				}
+				dissent = 1
+			}
+			set_country_flag = support_zapu
+		}
+	}
+
+	
+	MOZ_support_zapu = {
+		category = national
+		picture = "1964_Civil_War_in_Mozambique"
+		potential = {
+			tag = MOZ
+			exists = RHO
+			NOT = {
+				has_country_flag = support_zapu
+			}
+			NOT = {
+				war_with = RHO
+			}
+		}
+		
+		allow = {
+			supplies = 50
+			money = 1000
+			manpower = 10
+		}
+		
+		ai_will_do = {
+			factor = 90
+			modifier = {
+				factor = 2
+				OR = {
+					ideology = left_wing_radical_idolg
+					ideology = social_democrat_idolg
+				}
+			}
+			modifier = {
+				factor = 3
+				ideology_group = comintern
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					dissent = 2
+				}
+			}
+			modifier = {
+				factor = 2
+				economy_unbalanced = no
+			}
+		}
+		
+		effect = {
+			supplies = -50
+			money = -1000
+			manpower = -5
+			REB = {
+				load_oob = MOZ_support_ZANU_rebels.txt
+				}			
+			RHO = {
+				add_country_modifier = {
+					name = g_rebel_support
+					duration = 3650
+				}
+				dissent = 1
+			}
+			set_country_flag = support_zapu
+		}
+	}
+
+	
+	MLW_support_zapu = {
+		category = national
+		picture = "1964_Civil_War_in_Mozambique"
+		potential = {
+			tag = MLW
+			exists = RHO
+			NOT = {
+				has_country_flag = support_zapu
+			}
+			NOT = {
+				war_with = RHO
+			}
+		}
+		
+		allow = {
+			supplies = 50
+			money = 1000
+			manpower = 10
+		}
+		
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				OR = {
+					ideology = left_wing_radical_idolg
+					ideology = social_democrat_idolg
+				}
+			}
+			modifier = {
+				factor = 3
+				ideology_group = comintern
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					dissent = 2
+				}
+			}
+			modifier = {
+				factor = 2
+				economy_unbalanced = no
+			}
+		}
+		
+		effect = {
+			supplies = -50
+			money = -1000
+			manpower = -5
+			REB = {
+				load_oob = MLW_support_ZANU_rebels.txt
+				}			
+			RHO = {
+				add_country_modifier = {
+				name = g_rebel_support
+				duration = 3650
+				}
+				dissent = 1
+			}
+			set_country_flag = support_zapu
+		}
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,61 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+mod_UN_prevention_of_torture_convention_failure_delay;UN Prevention of Torture Convention Delay;;;;;;;;;;;;;x
+mod_UN_prevention_of_torture_convention_ratifier_delay;UN Prevention of Torture Convention Ratifier Delay;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+mod_UN_prevention_of_torture_convention_revoked_recently;UN Prevention of Torture Convention Revoked Recently;;;;;;;;;;;;;x
+mod_UN_prevention_of_torture_convention_ratified;UN Prevention of Torture Convention;;;;;;;;;;;;;x
+mod_UN_prevention_of_torture_convention_ratified_recently;UN Prevention of Torture Convention Ratified Recently;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+dec_UN_raise_prevention_of_torture_convention_title;The UN Prevention of Torture Convention;;;;;;;;;;;;;x
+dec_UN_raise_prevention_of_torture_convention_desc;United Nations General Assembly Resolution 39/46, The Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment.;;;;;;;;;;;;;x
+dec_UN_prevention_of_torture_convention_disable_voting_notifications_title;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+dec_UN_prevention_of_torture_convention_disable_voting_notifications_desc;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+dec_UN_ratify_prevention_of_torture_convention_title;Ratify UN Prevention of Torture Convention;;;;;;;;;;;;;x
+dec_UN_ratify_prevention_of_torture_convention_desc;Ratify The Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment.;;;;;;;;;;;;;x
+dec_UN_withdraw_from_prevention_of_torture_convention_title;Withdraw from UN Prevention of Torture Convention;;;;;;;;;;;;;x
+dec_UN_withdraw_from_prevention_of_torture_convention_desc;Withdraw from The Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+EVTNAME12000;The UN Prevention of Torture Convention;;;;;;;;;;;;;x
+EVTDESC12000;United Nations General Assembly Resolution 39/46, The Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment has been opened for voting.;;;;;;;;;;;;;x
+EVTOPTA12000;Large Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTB12000;Small Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTC12000;No Diplomatic Investment.;;;;;;;;;;;;;x
+EVTNAME12001;UN Voting Notifications;;;;;;;;;;;;;x
+EVTDESC12001;Shall we receive notifications when nations decide their vote on the current UN Resolution undergoing a vote?\nThese can be turned off at any time by an international decision.;;;;;;;;;;;;;x
+EVTOPTA12001;Receive Notifications.;;;;;;;;;;;;;x
+EVTOPTB12001;No Notifications.;;;;;;;;;;;;;x
+EVTNAME12002;UN Prevention of Torture Convention Fails Vote;;;;;;;;;;;;;x
+EVTDESC12002;United Nations General Assembly Resolution 39/46, The Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment, has been defeated by vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA12002;Unfortunate;;;;;;;;;;;;;x
+EVTNAME12003;UN Prevention of Torture Convention Passes Vote;;;;;;;;;;;;;x
+EVTDESC12003;United Nations General Assembly Resolution 39/46, The Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment, has passed its vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA12003;Excellent;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+EVTNAME12010;Prevention of Torture Convention UN Vote;;;;;;;;;;;;;x
+EVTDESC12010;We have the opportunity to vote on United Nations General Assembly Resolution 39/46, The Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment, at the UN General Assembly.\nWe can either vote For it, Abstain, or vote Against it.;;;;;;;;;;;;;x
+EVTOPTA12010;§GVote For;;;;;;;;;;;;;x
+EVTOPTB12010;Abstain;;;;;;;;;;;;;x
+EVTOPTC12010;§RVote Against;;;;;;;;;;;;;x
+EVTNAME12012;Ratified the Prevention of Torture Convention;;;;;;;;;;;;;x
+EVTDESC12012;We have ratified the UN Prevention of Torture Convention.;;;;;;;;;;;;;x
+EVTOPTA12012;Progress and civility will prevail.;;;;;;;;;;;;;x
+EVTNAME12014;Withdrawal from the Prevention of Torture Convention;;;;;;;;;;;;;x
+EVTDESC12014;We have withdrawn from the UN Prevention of Torture Convention.;;;;;;;;;;;;;x
+EVTOPTA12014;Good riddance.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

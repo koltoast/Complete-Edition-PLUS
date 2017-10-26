@@ -1,0 +1,61 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+mod_UN_protection_of_diplomats_convention_failure_delay;UN Protection of Diplomats Convention Delay;;;;;;;;;;;;;x
+mod_UN_protection_of_diplomats_convention_ratifier_delay;UN Protection of Diplomats Convention Ratifier Delay;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+mod_UN_protection_of_diplomats_convention_revoked_recently;UN Protection of Diplomats Convention Revoked Recently;;;;;;;;;;;;;x
+mod_UN_protection_of_diplomats_convention_ratified;UN Protection of Diplomats Convention;;;;;;;;;;;;;x
+mod_UN_protection_of_diplomats_convention_ratified_recently;UN Protection of Diplomats Convention Ratified Recently;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+dec_UN_raise_protection_of_diplomats_convention_title;The UN Protection of Diplomats Convention;;;;;;;;;;;;;x
+dec_UN_raise_protection_of_diplomats_convention_desc;United Nations General Assembly Resolution 3166, The Convention on the Prevention and Punishment of Crimes against Internationally Protected Persons, including Diplomatic Agents.;;;;;;;;;;;;;x
+dec_UN_protection_of_diplomats_convention_disable_voting_notifications_title;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+dec_UN_protection_of_diplomats_convention_disable_voting_notifications_desc;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+dec_UN_ratify_protection_of_diplomats_convention_title;Ratify UN Protection of Diplomats Convention;;;;;;;;;;;;;x
+dec_UN_ratify_protection_of_diplomats_convention_desc;Ratify The Convention on the Prevention and Punishment of Crimes against Internationally Protected Persons, including Diplomatic Agents.;;;;;;;;;;;;;x
+dec_UN_withdraw_from_protection_of_diplomats_convention_title;Withdraw from UN Protection of Diplomats Convention;;;;;;;;;;;;;x
+dec_UN_withdraw_from_protection_of_diplomats_convention_desc;Withdraw from The Convention on the Prevention and Punishment of Crimes against Internationally Protected Persons, including Diplomatic Agents.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+EVTNAME12200;The UN Protection of Diplomats Convention;;;;;;;;;;;;;x
+EVTDESC12200;United Nations General Assembly Resolution 3166, The Convention on the Prevention and Punishment of Crimes against Internationally Protected Persons, including Diplomatic Agents has been opened for voting.;;;;;;;;;;;;;x
+EVTOPTA12200;Large Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTB12200;Small Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTC12200;No Diplomatic Investment.;;;;;;;;;;;;;x
+EVTNAME12201;UN Voting Notifications;;;;;;;;;;;;;x
+EVTDESC12201;Shall we receive notifications when nations decide their vote on the current UN Resolution undergoing a vote?\nThese can be turned off at any time by an international decision.;;;;;;;;;;;;;x
+EVTOPTA12201;Receive Notifications.;;;;;;;;;;;;;x
+EVTOPTB12201;No Notifications.;;;;;;;;;;;;;x
+EVTNAME12202;UN Protection of Diplomats Convention Fails Vote;;;;;;;;;;;;;x
+EVTDESC12202;United Nations General Assembly Resolution 3166, The Convention on the Prevention and Punishment of Crimes against Internationally Protected Persons, including Diplomatic Agents, has been defeated by vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA12202;Unfortunate;;;;;;;;;;;;;x
+EVTNAME12203;UN Protection of Diplomats Convention Passes Vote;;;;;;;;;;;;;x
+EVTDESC12203;United Nations General Assembly Resolution 3166, The Convention on the Prevention and Punishment of Crimes against Internationally Protected Persons, including Diplomatic Agents, has passed its vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA12203;Excellent;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+EVTNAME12210;Protection of Diplomats Convention UN Vote;;;;;;;;;;;;;x
+EVTDESC12210;We have the opportunity to vote on United Nations General Assembly Resolution 3166, The Convention on the Prevention and Punishment of Crimes against Internationally Protected Persons, including Diplomatic Agents, at the UN General Assembly.\nWe can either vote For it, Abstain, or vote Against it.;;;;;;;;;;;;;x
+EVTOPTA12210;§GVote For;;;;;;;;;;;;;x
+EVTOPTB12210;Abstain;;;;;;;;;;;;;x
+EVTOPTC12210;§RVote Against;;;;;;;;;;;;;x
+EVTNAME12212;Ratified the Protection of Diplomats Convention;;;;;;;;;;;;;x
+EVTDESC12212;We have ratified the UN Protection of Diplomats Convention.;;;;;;;;;;;;;x
+EVTOPTA12212;Progress and civility will prevail.;;;;;;;;;;;;;x
+EVTNAME12214;Withdrawal from the Protection of Diplomats Convention;;;;;;;;;;;;;x
+EVTDESC12214;We have withdrawn from the UN Protection of Diplomats Convention.;;;;;;;;;;;;;x
+EVTOPTA12214;Good riddance.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

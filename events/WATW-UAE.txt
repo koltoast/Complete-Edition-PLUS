@@ -1,0 +1,103 @@
+#349980	- The Rise of Ibrahim - We are the world event 
+#349981	- Horrible news - We are the world event 
+#349982	- Establish the Guards - We are the world event 
+
+#349980	- Rise to power - We are the world event 
+country_event = {
+	
+	id = 349980
+
+	trigger = {
+		OR = {
+			UAE = { head_of_state = 1349008 } 
+			UAE = { head_of_government = 1349008 }		
+		}
+		tag = UAE		
+		NOT = { has_country_flag = event_rise_to_power_watw_UAE_done }
+	}
+
+	title = "EVTNAME349980"
+	desc = "EVTDESC349980"
+	picture = ""
+
+	option = {
+		name = "EVTOPTA349980"		#Establish the guards
+		ai_chance = { factor = 100 }						
+		country_event = 349982
+		set_country_flag = event_rise_to_power_watw_UAE_done
+	}
+	
+	option = {						#OK
+		name = "EVTOPTB349980" 
+		ai_chance = { factor = 0 }
+		set_country_flag = event_rise_to_power_watw_UAE_done		
+	}
+}
+
+#349981	- Horrible news - event for SAU, QTR, PER, OMN, BAH
+country_event = {
+	
+	id = 349981
+
+	trigger = {
+		OR = {
+			tag = SAU
+			tag = QTR
+			tag = PER
+			tag = OMN
+			tag = BAH
+		}
+		OR = {
+			UAE = { head_of_state = 1349008 } 
+			UAE = { head_of_government = 1349008 }		
+		}
+		OR = {
+			government = absolute_monarchy_gov
+			government = theocracy_gov
+		}
+		NOT = { has_country_flag = event_rise_to_power_watw_UAE_done }		
+	}
+
+	mean_time_to_happen = {
+		days = 15
+	}	
+	
+	title = "EVTNAME349981"
+	desc = "EVTDESC349981"
+	picture = ""
+
+	option = {
+		name = "EVTOPTA349981"		#send a warning
+		ai_chance = { factor = 65 }
+		relation = { who = UAE value = -50 }
+		neutrality = -5	
+		dissent = 1
+		set_country_flag = event_rise_to_power_watw_UAE_done
+	}
+	
+	option = {
+		name = "EVTOPTB349981"		#Do nothing
+		ai_chance = { factor = 35 }
+		relation = { who = UAE value = -15 }
+		neutrality = 5		
+		dissent = 3
+		set_country_flag = event_rise_to_power_watw_UAE_done		
+	}
+}
+
+#349982	- Establish the Guards - We are the world event 
+country_event = {
+	
+	id = 349982
+
+	is_triggered_only = yes
+
+	title = "EVTNAME349982"
+	desc = "EVTDESC349982"
+	picture = ""
+
+	option = {
+		name = "EVTOPTA349982"		#Establish the guards
+		load_oob = UAE_Desert-Vanguard.txt
+	}
+}

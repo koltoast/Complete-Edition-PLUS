@@ -1,0 +1,172 @@
+diplomatic_decisions = {
+
+	#Seek admission to the United Nations
+	dec_join_WP = {
+		category = international
+		picture = "1945_UN_charter"
+		potential = {
+		    ai = yes
+			not = { neutrality = 25 }
+			##NOT = { has_country_modifier = waiting_WP }   ## esto pone un tope cronológico  para nuevas incorporaciones de paises a las organizaciones
+			alignment = {
+			   faction = comintern
+			   value = 90
+		     }
+			 
+			NOT = { is_org_member = XNA }
+			NOT = { is_org_member = XWP }
+			NOT = { has_country_flag = WP_membership_process }						
+			not = {
+				tag = SVI
+			}
+		}
+		
+		allow = {
+			not = { has_country_modifier = WP_vetoed_delay }
+			not = { has_country_flag = "WP_EMBARGO" }
+			not = {
+				and = {
+					war_exhaustion = 10 
+					war = yes
+				}
+			}
+			national_unity = 90
+			#NOT = {
+				#AND = {
+					#tag = ITA
+					#NOT = { has_country_flag = flag_ITA_1947_peace_treaty }
+				#}
+			#}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				not = {
+					OR = {
+						SOV = {
+							is_major = yes
+							recognized = THIS 
+						}
+						#ENG = { 
+							#is_major = yes
+							#recognized = THIS 
+						#}
+						#FRA = { 
+							#is_major = yes
+							#recognized = THIS 
+						#}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				SOV = { has_country_modifier = WP_memberD }
+			}
+			modifier = {
+				factor = 50
+				this = { is_major = yes }
+			}			
+			
+		}
+		
+		effect = {
+			set_country_flag = WP_membership_process       
+			country_event = 700151
+			
+			hidden_effects = {
+				SOV = {
+					add_country_modifier = {
+						name = WP_memberD
+						duration = 91
+					}
+				}
+			}
+		}
+	}
+	
+
+	
+	#Seek admission to the United Nations
+	dec_join_WP_2 = {
+		category = international
+		picture = "1945_UN_charter"
+		potential = {
+		    ai = no
+			is_major = yes
+			NOT = { is_org_member = XNA }
+			NOT = { is_org_member = XWP }			
+			not = { neutrality = 25 }
+			alignment = {
+			   faction = comintern
+			   value = 90
+		     }			
+			NOT = { has_country_flag = WP_membership_process }
+			NOT = {
+				tag = SVI
+			}
+		}
+		
+		allow = {
+			NOT = { has_country_modifier = WP_memberD }
+			NOT = { has_country_flag = "WP_EMBARGO" }
+			NOT = {
+				AND = {
+					war_exhaustion = 10 
+					war = yes
+				}
+			}
+			national_unity = 90
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						SOV = {
+							is_major = yes
+							recognized = THIS 
+						}
+						#ENG = { 
+							#is_major = yes
+							#recognized = THIS 
+						#}
+						#FRA = { 
+							#is_major = yes
+							#recognized = THIS 
+						#}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				SOV = { has_country_modifier = WP_memberD }
+			}
+			modifier = {
+				factor = 50
+				this = { is_major = yes }
+			}			
+			
+		}		
+		
+		effect = {
+			set_country_flag = WP_membership_process
+			country_event = 700151
+			
+			hidden_effects = {
+				SOV = {
+					add_country_modifier = {
+						name = WP_memberD
+						duration = 91
+					}
+				}
+			}
+		}
+	}
+	
+ }
+	

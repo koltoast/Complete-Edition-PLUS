@@ -1,0 +1,497 @@
+#WestIrian_events.txt
+#1962 Indonesia moves into West Irian
+	
+#HOL - Netherlands:
+	#213000 - INO demands control over West Papua
+	#213001 - INO demands control over West Papua with U.S. support
+	#213002 - Indonesia declines the U.S. offer - HOL keeps West Papua
+	
+#INO - Indonesia:
+	#219000 - demand_WPA_from_HOL_INO follow-up event
+	#219001 - HOL hands over West Papua
+	#219002 - HOL hands over West Papua but insists on West Papuan autonomy
+	#219003 - HOL turns West Papua into and independent state
+	#219004 - demand_WPA_INO follow-up event
+	#219005 - WPA gives up
+	#219006 - WPA refuses to join Indonesia
+	#219007 - The Dutch refuse to hand over WPA
+	#219008 - HOL hands over West Papua - if INO joins the USA
+
+#USA - United States of America:
+	#354230 - pressure_HOL_westpapua_USA follow-up event
+	#354231 - The Dutch refuse to hand over WPA
+	#354232 - Indonesia accepts WPA and joins the USA
+	#354233 - Indonesia rejects our offer
+
+#WPA - West Papua:
+	#362000 - INO demands authority over West Papua
+
+	
+## HOL ##
+	#213000 - INO demands control over West Papua
+	country_event = {
+		
+		id = 213000
+
+		is_triggered_only = yes
+
+		title = "EVTNAME213000"
+		desc = "EVTDESC213000"
+		picture = "1960_Sukarno"
+		
+		major = yes
+
+		option = {
+			name = "EVTOPTA213000"			    			#They can have it (hist.)
+			ai_chance = { factor = 70 }
+			
+			region_Indonesia_Irian_Jaya_Barat = {			
+				secede_province = INO						#HOL hands over West Papua
+				remove_core = HOL							#HOL renouces claims on West Papua
+			}
+			
+			prestige_change = -5							#Dutch East Indies are finally lost
+			dissent = 5
+			money = 1500									#Short-term surplus from no longer supporting WPA
+			relation = { who = XUN value = 50 }				#The UN likes that
+			relation = { who = INO value = 100 }
+			INO = { country_event = 219001 }
+		}
+		
+		option = {
+			name = "EVTOPTB213000"			    			#INO can have it, but WPA shall be autonomous
+			ai_chance = { factor = 5 }
+			
+			region_Indonesia_Irian_Jaya_Barat = {
+				add_core = WPA								#WPA gets claims in case it doesn't exist
+				remove_core = HOL							#HOL renouces claims on West Papua
+				secede_province = INO						#HOL hands over West Papua
+			}		
+			
+			dissent = 10
+			national_unity = -10
+			popularity = -15
+			
+			#WPA = { load_oob = xxxx.txt }					#WPA militias @
+			#WPA = { capital = 13880 }						#Capital is moved to Manokwari (historical capital of the West Papue province)
+			relation = { who = XUN value = 75}				#The UN likes that
+			relation = { who = INO value = -50 }
+			INO = { country_event = 219002 }
+		}
+		
+		option = {
+			name = "EVTOPTC213000"			    			#No, they deserve full independence
+			ai_chance = { factor = 15 }						#Not too unlikely - the Dutch planned to do that in the long run
+			
+			region_Indonesia_Irian_Jaya_Barat = {			
+				add_core = WPA								#WPA gets claims in case it doesn't exist
+				remove_core = HOL							#HOL renouces claims on West Papua
+			}
+			
+			release = WPA
+			WPA = { load_oob = xxxx.txt	}					#WPA militias @
+			relation = { who = XUN value = 100 }			#The UN likes that a lot
+			relation = { who = INO value = -150 }
+			INO = { country_event = 219003 }
+		}
+		
+		option = {
+			name = "EVTOPTD213000"			    			#Never, West Papua belongs to us!
+			ai_chance = { factor = 10 }
+			prestige_change = 3
+			relation = { who = XUN value = -50 }			#The UN does not like that at all
+			relation = { who = INO value = -150 }			#That's our island!
+			INO = { country_event = 219007 }
+			set_global_flag = HOL_keep_WPA					#For the USA chain to put pressure on HOL
+		}
+	}
+
+	#213001 - INO demands control over West Papua with U.S. support
+	country_event = {
+		
+		id = 213001
+
+		is_triggered_only = yes
+
+		title = "EVTNAME213001"
+		desc = "EVTDESC213001"
+		picture = "1962_New_York_Accords"
+
+		option = {
+			name = "EVTOPTA213001"			    			#They can have it
+			ai_chance = { factor = 50 }
+			
+			region_Indonesia_Irian_Jaya_Barat = {			
+				secede_province = INO						#HOL hands over West Papua
+				remove_core = HOL							#HOL renouces claims on West Papua
+			}
+			
+			prestige_change = -5							#Dutch East Indies are finally lost
+			dissent = 5
+			supplies = 1200
+			money = 500										#Short-term surplus from no longer supporting WPA
+			relation = { who = USA value = 75 }				#The UN likes that
+			relation = { who = INO value = 100 }
+			INO = { country_event = 219008 }
+		}
+		
+		option = {
+			name = "EVTOPTB213001"			    			#Nooit!
+			ai_chance = { factor = 50 }
+			relation = { who = INO value = -50 }
+			USA = { country_event = 354231 }
+		}
+	}
+
+	#213002 - Indonesia declines the U.S. offer - HOL keeps West Papua
+	country_event = {
+		
+		id = 213002
+
+		is_triggered_only = yes
+
+		title = "EVTNAME213002"
+		desc = "EVTDESC213002"
+		picture = "1969_Dutch_Western_Papua"
+
+		option = {
+			name = "EVTOPTA213002"
+			dissent = -5
+			popularity = 10
+			prestige_change = 8								#Strong HOL							
+		}
+	}
+	
+## INO ##	
+	#219000 - demand_WPA_from_HOL_INO follow-up event
+	country_event = {
+		
+		id = 219000
+
+		is_triggered_only = yes
+
+		title = "EVTNAME219000"
+		desc = "EVTDESC219000"
+		picture = "1960_Sukarno"
+
+		option = {
+			name = "EVTOPTA219000"			    			#Demand control over West Papua (hist.)
+			ai_chance = { factor = 98 }
+			HOL = { country_event = 213000 }				#The Dutch get the message
+		}
+		
+		option = {
+			name = "EVTOPTB219000"			    			#It's not necessary
+			ai_chance = { factor = 2 }
+			
+			region_Indonesia_Irian_Jaya_Barat = {			#INO renouces claims on West Papua
+				remove_core = INO
+			}
+
+			
+			dissent = 10
+			national_unity = -10
+			popularity = -15
+		}
+	}
+
+	#219001 - HOL hands over West Papua
+	country_event = {
+		
+		id = 219001
+
+		is_triggered_only = yes
+
+		title = "EVTNAME219001"
+		desc = "EVTDESC219001"
+		picture = "1962_Western_Papua"
+
+		option = {
+			name = "EVTOPTA219001"			    			#OK
+			dissent = -10									#A great day for Indonesia
+			popularity = 10
+			prestige_change = 5
+			inherit = WPA									#In case it was a Dutch puppet
+		}
+	}
+
+	#219002 - HOL hands over West Papua but insists on West Papuan autonomy
+	country_event = {
+		
+		id = 219002
+
+		is_triggered_only = yes
+
+		title = "EVTNAME219002"
+		desc = "EVTDESC219002"
+		picture = "1969_Western_Papua_Flag"
+
+		option = {
+			name = "EVTOPTA219002"			    			#Fine, we will annex them later
+			dissent = -5
+			prestige_change = 1
+			create_vassal = WPA								#WPA becomes an INO puppet
+			create_alliance = WPA							#INO forms an alliance with WPA
+		}
+	}
+
+	#219003 - HOL turns West Papua into and independent state
+	country_event = {
+		
+		id = 219003
+
+		is_triggered_only = yes
+
+		title = "EVTNAME219003"
+		desc = "EVTDESC219003"
+		picture = "1969_Western_Papua_Flag"
+
+		option = {
+			name = "EVTOPTA219003"			    			#Declare war!
+			dissent = -5
+			war = WPA										#WPA is conquered by force
+			prestige_change = 1
+		}
+		
+		option = {
+			name = "EVTOPTB219003"
+			dissent = 10									#The government failed
+			popularity = -15
+			prestige_change = -5
+		}
+	}
+
+	#219004 - demand_WPA_INO follow-up event
+	country_event = {
+		
+		id = 219004
+
+		is_triggered_only = yes
+
+		title = "EVTNAME219004"
+		desc = "EVTDESC219004"
+		picture = "1960_Sukarno"
+
+		option = {
+			name = "EVTOPTA219004"			    			#Demand control over West Papua
+			ai_chance = { factor = 95 }
+			WPA = { country_event = 362000 }				#WPA gets informed
+		}
+			
+		option = {
+			name = "EVTOPTB219004"			    			#It's not necessary
+			ai_chance = { factor = 5 }						#Unlikely is WPA stands all alone
+			
+			region_Indonesia_Irian_Jaya_Barat = {			#INO renouces claims on West Papua
+				remove_core = INO
+			}
+			
+			dissent = 15									#High penalty, as West Papua is rather small
+			national_unity = -15
+			popularity = -15
+		}
+	}
+
+	#219005 - WPA gives up
+	country_event = {
+		
+		id = 219005
+
+		is_triggered_only = yes
+
+		title = "EVTNAME219005"
+		desc = "EVTDESC219005"
+		picture = "1962_Western_Papua"
+
+		option = {
+			name = "EVTOPTA219005"			    			#OK
+			dissent = -10									#A great day for Indonesia
+			popularity = 10
+			inherit = WPA
+		}
+	}
+
+	#219006 - WPA refuses to join Indonesia
+	country_event = {
+		
+		id = 219006
+
+		is_triggered_only = yes
+
+		title = "EVTNAME219006"
+		desc = "EVTDESC219006"
+		picture = "1969_Western_Papua_Flag"
+
+		option = {
+			name = "EVTOPTA219006"			    			#OK
+			relation = { who = XUN value = -100 }			#The UN doesn't like that
+			war = WPA										#In case it was a Dutch puppet
+		}
+		
+		option = {
+			name = "EVTOPTB219006"			    			#OK
+			dissent = 10									#A great day for Indonesia
+			popularity = -15
+			relation = { who = WPA value = 100 }			#Thanks for not eating us, Indonesia!
+		}
+	}
+
+	#219007 - The Dutch refuse to hand over WPA
+	country_event = {
+		
+		id = 219007
+
+		is_triggered_only = yes
+
+		title = "EVTNAME219007"
+		desc = "EVTDESC219007"
+		picture = "1969_Dutch_Western_Papua"
+
+		option = {
+			name = "EVTOPTA219007"			    			#Damn you, Netherlands!
+			dissent = 10									#A great day for Indonesia
+			popularity = -15
+			prestige_change = -10
+		}
+	}
+
+	#219008 - HOL hands over West Papua - if INO joins the USA
+	country_event = {
+		
+		id = 219008
+
+		is_triggered_only = yes
+
+		title = "EVTNAME219008"
+		desc = "EVTDESC219008"
+		picture = "1962_Western_Papua"
+
+		option = {
+			name = "EVTOPTA219008"			    			#An excellent proposal!
+			dissent = -10									#A great day for Indonesia
+			popularity = 10
+			prestige_change = 5
+			inherit = WPA									#In case it was a Dutch puppet
+			create_alliance = USA
+			USA = { country_event = 354232 } 
+		}
+		
+		option = {
+			name = "EVTOPTB219008"			    			#No, it's not worth it
+			dissent = 5
+			relation = { who = HOL value = 50 }
+			relation = { who = USA value = -75 }
+			USA = { country_event = 354233 }
+			HOL = { country_event = 213002 } 
+		}
+	}
+	
+## USA ##
+	#354230 - pressure_HOL_westpapua_USA follow-up event
+	country_event = {
+		
+		id = 354230
+
+		is_triggered_only = yes
+
+		title = "EVTNAME354230"
+		desc = "EVTDESC354230"
+		picture = "1962_New_York_Accords"
+
+		option = {
+			name = "EVTOPTA354230"			    			#Put pressure on the Dutch
+			ai_chance = { factor = 90 }						#Semi-historical choice
+			relation = { who = HOL value = -75 }		
+			HOL = { country_event = 213000 }
+		}
+		
+		option = {
+			name = "EVTOPTB354230"							#Don't do it
+			ai_chance = { factor = 10 }					
+			relation = { who = HOL value = 50 }
+			relation = { who = INO value = -25 }
+			prestige_change = -1	
+		}
+	}
+
+	#354231 - The Dutch refuse to hand over WPA
+	country_event = {
+		
+		id = 354231
+
+		is_triggered_only = yes
+
+		title = "EVTNAME354231"
+		desc = "EVTDESC354231"
+		picture = "1969_Dutch_Western_Papua"
+
+		option = {
+			name = "EVTOPTA354231"
+			prestige_change = -5							#Well, that didn't went well!
+		}
+	}
+
+	#354232 - Indonesia accepts WPA and joins the USA
+	country_event = {
+		
+		id = 354232
+
+		is_triggered_only = yes
+
+		title = "EVTNAME354232"
+		desc = "EVTDESC354232"
+		picture = "1962_Western_Papua"
+
+		option = {
+			name = "EVTOPTA354232"
+			prestige_change = 10							#Well, that didn't went well!
+			relation = { who = USA value = 120 }
+		}
+	}
+
+	#354233 - Indonesia rejects our offer
+	country_event = {
+		
+		id = 354233
+
+		is_triggered_only = yes
+
+		title = "EVTNAME354233"
+		desc = "EVTDESC354233"
+		picture = "1969_Dutch_Western_Papua"
+
+		option = {
+			name = "EVTOPTA354233"
+			prestige_change = -5							#Well, that didn't went well!
+		}
+	}
+	
+## WPA ##
+	#362000 - INO demands authority over West Papua
+	country_event = {
+		
+		id = 362000
+
+		is_triggered_only = yes
+
+		title = "EVTNAME362000"
+		desc = "EVTDESC362000"
+		picture = "1960_Sukarno"
+		
+		major = yes
+
+		option = {
+			name = "EVTOPTA362000"			    			#We will join Indonesia
+			ai_chance = { factor = 50 }
+			INO = { country_event = 219005 }
+		}
+			
+		option = {
+			name = "EVTOPTB362000"			    			#No, we stay independent
+			ai_chance = { factor = 50 }
+			dissent = 5										#Some people are afraid
+			national_unity = 20								#The war unifies the country
+			popularity = 10
+			INO = { country_event = 219006 }
+		}
+	}

@@ -1,0 +1,389 @@
+#German Reunification_decisions.txt
+#19xx German Reunification
+
+#DDR - East Germany:
+	#dec_DDR_form_germany - East Germany forms united Germany
+	#dec_DDR_demand_west_german_integration - East Germany demands West German integration
+
+#FRG - West Germany:
+	#dec_FRG_form_germany - West Germany forms united Germany
+	#dec_FRG_demand_east_german_integration - West Germany demands East German integration
+
+#GER - Germany:
+	#dec_GER_move_capital_to_berlin - Move capital to Berlin
+	
+#SOV - Soviet Union:
+	#dec_SOV_reunite_germany - Soviet Union reunites East and West Germany when both are in the Warsaw Pact
+	
+#USA - United States:
+	#dec_USA_reunite_germany - United States reunites East and West Germany when both are in NATO
+
+
+diplomatic_decisions = {
+## DDR ##
+	#dec_DDR_form_germany - East Germany forms united Germany
+	dec_DDR_form_germany = {
+		category = national
+	    picture = "1990_German_Unification_treaty"
+		
+		potential = {
+			tag = DDR
+			NOT = { exists = GER }
+			NOT = { has_global_flag = gflag_DDR_forms_united_germany }
+			owns = 5570
+			owns = 5423
+			owns = 5355
+			owns = 5292
+			owns = 5229
+			owns = 5351
+			owns = 5490
+			owns = 5633
+			owns = 5718
+			owns = 14867
+			owns = 14876
+			owns = 5719
+			owns = 5565
+			owns = 5493
+		}
+		
+		allow = {
+			national_unity = 40
+			NOT = { war_with = FRG }
+		}
+
+		ai_will_do = { 
+			factor = 10
+		}
+		
+		effect = {
+			set_global_flag = gflag_DDR_forms_united_germany
+			country_event = 170103									#Decision follow-up event
+		}
+	}
+	
+	#dec_DDR_demand_west_german_integration - East Germany demands West German integration
+	dec_DDR_form_germany = {
+		category = international
+	    picture = "1986_Honecker_at_SED_parteitag"
+		
+		potential = {
+			tag = DDR
+			exists = FRG
+			NOT = { exists = GER }
+			NOT = { has_country_modifier = mod_DDR_demand_west_german_integration_delay }
+			is_subject = no
+			FRG = { is_subject = no }
+		}
+		
+		allow = {
+			national_unity = 60
+			NOT = { war_with = FRG }
+			is_major = yes
+			FRG = { is_major = no }
+			relation = { who = FRG value = -150 }
+			compare_total_amount_of_brigades = {
+				first = DDR
+				second = FRG
+				value = 0.8
+			}
+			#compare_gdp = {		#To be implemented
+			#	first = DDR
+			#	second = FRG
+			#	value = 1.25
+			#}
+			OR = {
+				compare_total_amount_of_brigades = {
+					first = DDR
+					second = FRG
+					value = 1.25
+				}
+				#compare_gdp = {		#To be implemented
+				#	first = DDR
+				#	second = FRG
+				#	value = 1.75
+				#}
+			}
+			FRG = {
+				OR = {
+					dissent = 20
+					NOT = { national_unity = 50 }
+					revolt_percentage = 20
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 10
+			modifier = {
+				factor = 0
+				war_exhaustion = 10
+			}
+			modifier = {
+				factor = 0
+				FRG = { national_unity = 75 }
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = mod_DDR_demand_west_german_integration_delay
+				duration = 365
+			}
+			FRG = {
+				random_owned = {
+					limit = {
+						owner = { NOT = { faction = allies } }
+					}
+					owner = { country_event = 172105 }							#Decision follow-up event
+				}
+				random_owned = {
+					limit = {
+						owner = { faction = allies }
+					}
+					random_country = {
+						limit = { is_org_leader = XNA }
+						country_event = 354140									#Decision follow-up event
+					}
+				}
+			}
+			change_doomsday_clock = 1
+		}
+	}
+	
+## FRG ##
+	#dec_FRG_form_germany - West Germany forms united Germany
+	dec_FRG_form_germany = {
+		category = national
+	    picture = "1990_German_Unification_treaty"
+		
+		potential = {
+			tag = FRG
+			NOT = { exists = GER }
+			NOT = { has_global_flag = gflag_FRG_forms_united_germany }
+			owns = 5570
+			owns = 5423
+			owns = 5355
+			owns = 5292
+			owns = 5229
+			owns = 5351
+			owns = 5490
+			owns = 5633
+			owns = 5718
+			owns = 14867
+			owns = 14876
+			owns = 5719
+			owns = 5565
+			owns = 5493
+		}
+		
+		allow = {
+			national_unity = 40
+			NOT = { war_with = DDR }
+		}
+
+		ai_will_do = { 
+			factor = 10
+		}
+		
+		effect = {
+			set_global_flag = gflag_FRG_forms_united_germany
+			country_event = 172103									#Decision follow-up event
+		}
+	}
+	
+	#dec_FRG_demand_east_german_integration - West Germany demands East German integration
+	dec_FRG_demand_east_german_integration = {
+		category = international
+	    picture = "1989_Helmut_Kohl_Brandenburger_Tor"
+		
+		potential = {
+			tag = FRG
+			exists = DDR
+			NOT = { exists = GER }
+			NOT = { has_country_modifier = mod_FRG_demand_east_german_integration_delay }
+			is_subject = no
+			DDR = { is_subject = no }
+		}
+		
+		allow = {
+			national_unity = 60
+			NOT = { war_with = DDR }
+			is_major = yes
+			DDR = { is_major = no }
+			relation = { who = DDR value = -150 }
+			compare_total_amount_of_brigades = {
+				first = FRG
+				second = DDR
+				value = 0.8
+			}
+			#compare_gdp = {		#To be implemented
+			#	first = FRG
+			#	second = DDR
+			#	value = 1.25
+			#}
+			OR = {
+				compare_total_amount_of_brigades = {
+					first = FRG
+					second = DDR
+					value = 1.25
+				}
+				#compare_gdp = {		#To be implemented
+				#	first = FRG
+				#	second = DDR
+				#	value = 1.75
+				#}
+			}
+			FRG = {
+				OR = {
+					dissent = 20
+					NOT = { national_unity = 50 }
+					revolt_percentage = 20
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 10
+			modifier = {
+				factor = 0
+				war_exhaustion = 10
+			}
+			modifier = {
+				factor = 0
+				DDR = { national_unity = 75 }
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = mod_FRG_demand_east_german_integration_delay
+				duration = 365
+			}
+			DDR = {
+				random_owned = {
+					limit = {
+						owner = { NOT = { faction = comintern } }
+					}
+					owner = { country_event = 170105 }							#Decision follow-up event
+				}
+				random_owned = {
+					limit = {
+						owner = { faction = comintern }
+					}
+					random_country = {
+						limit = { is_org_leader = XWP }
+						country_event = 326140									#Decision follow-up event
+					}
+				}
+			}
+		}
+	}
+	
+	#dec_GER_move_capital_to_berlin - Move capital to Berlin
+	dec_GER_move_capital_to_berlin = {
+		category = national
+	    picture = "1990_Capital_moved_to_Berlin"
+		
+		potential = {
+			war = no	#Not possible during war time - GFK
+			owns = 14867
+			owns = 14876
+			NOT = {
+				14867 = { is_capital = yes }
+				14876 = { is_capital = yes }
+				has_country_flag = flag_GER_capital_moved_to_berlin
+			}
+		}
+		
+		allow = {
+			national_unity = 30
+			money = 500
+		}
+
+		ai_will_do = { 
+			factor = 10
+		}
+		
+		effect = {
+			set_country_flag = flag_GER_capital_moved_to_berlin
+			money = -250
+			prestige_change = 15
+			national_unity = 3
+			capital = 14867
+		}
+	}
+	
+## SOV ##
+	#dec_SOV_reunite_germany - Soviet Union reunites East and West Germany when both are in the Warsaw Pact
+	dec_SOV_reunite_germany = {
+		category = international
+	    picture = "1990_German_Unification_treaty"
+		
+		potential = {
+			is_org_leader = XWP
+			same_faction = FRG
+			same_faction = DDR
+		}
+		
+		allow = {
+			relation = { who = FRG value = 150 }
+			relation = { who = DDR value = 150 }
+			FRG = { national_unity = 40 }
+			DDR = { national_unity = 40 }
+			NOT = {
+				AND = {
+					war = yes
+					war_exhaustion = 8
+				}
+				war_with = USA
+			}
+		}
+
+		ai_will_do = { 
+			factor = 10
+		}
+		
+		effect = {
+			prestige_change = 25
+			country_event = 326144
+		}
+	}
+	
+## USA ##
+	#dec_USA_reunite_germany - United States reunites East and West Germany when both are in NATO
+	dec_USA_reunite_germany = {
+		category = international
+	    picture = "1990_German_Unification_treaty"
+		
+		potential = {
+			is_org_leader = XNA
+			same_faction = FRG
+			same_faction = DDR
+		}
+		
+		allow = {
+			relation = { who = FRG value = 150 }
+			relation = { who = DDR value = 150 }
+			FRG = { national_unity = 40 }
+			DDR = { national_unity = 40 }
+			NOT = {
+				AND = {
+					war = yes
+					war_exhaustion = 8
+				}
+				war_with = SOV
+			}
+		}
+
+		ai_will_do = { 
+			factor = 10
+		}
+		
+		effect = {
+			prestige_change = 25
+			country_event = 354144
+		}
+	}
+		
+
+}

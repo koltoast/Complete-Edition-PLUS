@@ -1,0 +1,490 @@
+#ArmsSaleScandal_events.txt
+#Arms Sale Scandal
+
+#Global:
+	#50020 - Arms being on-sold to foreign terrorist organisations
+	#50021 - Arms being on-sold to embargoed nations
+	#50022 - Arms contracts linked to humanitarian aid
+
+	#50023 - Arms sales enquiry absolves government of blame
+	#50024 - Arms sales enquiry ends inconclusively
+	#50025 - Arms sales enquiry lays systematic blame directly on government
+	#50026 - Arms sales enquiry lays blame on high-ranking minister
+
+
+## Global ##
+	#50020 - Arms being on-sold to foreign terrorist organisations 
+	country_event = {		#Arms being on-sold to foreign terrorist organisations 
+
+		id = 50020
+
+		trigger = {
+			NOT = { has_country_modifier = arms_sales_enquiry }
+		}
+
+		mean_time_to_happen =  {
+			months = 144
+			modifier = {
+				factor = 1.25
+				domestic_policy = social_focus_pol
+			}
+			modifier = {
+				factor = 0.6
+				domestic_policy = defence_focus_pol
+			}
+			modifier = {
+				factor = 1.25
+				internal_policy = democratic_aff_pol
+			}
+			
+			modifier = {
+				factor = 0.9
+				military_service = conventional_drafted_army
+			}
+			modifier = {
+				factor = 0.8
+				military_service = expanded_drafted_army
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_brigades = 100
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_brigades = 500
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_planes = 25
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_planes = 125
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_ships = 50
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_ships = 250
+			}
+		}
+
+		title = "EVTNAME50020"
+		desc = "EVTDESC50020"
+		picture = "1962_unloading_Nike"
+
+		option = {
+			name = "EVTOPTA50020"			# None of our business
+			dissent = 1
+			prestige_change = -10
+		}
+
+		option = {
+			name = "EVTOPTB50020"			# Organise an enquiry
+			add_country_modifier = {
+				name = arms_sales_enquiry
+				duration = -1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC50020"			# We must put a stop to this immediately
+			add_country_modifier = {
+				name = arm_sales_1
+				duration = 180
+			}
+		}
+	}
+	
+	#50021 - Arms being on-sold to embargoed nations
+	country_event = {		#Arms being on-sold to embargoed nations
+
+		id = 50021
+
+		trigger = {
+			NOT = { has_country_modifier = arms_sales_enquiry }
+			#is_embargoed = THIS	#is_embargoing = yes
+		}
+
+		mean_time_to_happen =  {
+			months = 144
+			modifier = {
+				factor = 1.25
+				domestic_policy = social_focus_pol
+			}
+			modifier = {
+				factor = 0.6
+				domestic_policy = defence_focus_pol
+			}
+			modifier = {
+				factor = 1.25
+				internal_policy = democratic_aff_pol
+			}
+			
+			modifier = {
+				factor = 0.9
+				military_service = conventional_drafted_army
+			}
+			modifier = {
+				factor = 0.8
+				military_service = expanded_drafted_army
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_brigades = 100
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_brigades = 500
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_planes = 25
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_planes = 125
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_ships = 50
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_ships = 250
+			}
+			
+		}
+
+		title = "EVTNAME50021"
+		desc = "EVTDESC50021"
+		picture = "1962_unloading_Nike"
+
+		option = {
+			name = "EVTOPTA50021"			# None of our business
+			dissent = 1
+			random_list = {
+				50 = {
+					random_country = {
+						limit = {
+							embargoed_by = THIS
+						}
+						random_list = {
+							40 = {
+								#military_goods = 10					
+							}
+							20 = {
+								#high_tech = 10
+							}
+							20 = {
+								#aviation_industry = 10
+							}
+							20 = {
+								#naval_yards = 10
+							}
+						}
+					}
+				}
+				50 = {
+					
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTB50021"			# Organise an enquiry
+			add_country_modifier = {
+				name = arms_sales_enquiry
+				duration = -1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC50021"			# We must put a stop to this immediately
+			add_country_modifier = {
+				name = arm_sales_1
+				duration = 180
+			}
+		}
+	}
+
+	#50022 - Arms contracts linked to humanitarian aid
+	country_event = {		#Arms contracts linked to humanitarian aid
+
+		id = 50022
+
+		trigger = {
+			NOT = {
+				has_country_modifier = arms_sales_enquiry
+				foreign_policy = isolationism_pol
+			}
+			#is_embargoed = THIS	#is_embargoing = yes
+		}
+
+		mean_time_to_happen =  {
+			months = 144
+			modifier = {
+				factor = 1.25
+				domestic_policy = social_focus_pol
+			}
+			modifier = {
+				factor = 0.6
+				domestic_policy = defence_focus_pol
+			}
+			modifier = {
+				factor = 1.25
+				internal_policy = democratic_aff_pol
+			}
+			
+			modifier = {
+				factor = 0.9
+				military_service = conventional_drafted_army
+			}
+			modifier = {
+				factor = 0.8
+				military_service = expanded_drafted_army
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_brigades = 100
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_brigades = 500
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_planes = 25
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_planes = 125
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_ships = 50
+			}
+			
+			modifier = {
+				factor = 0.8
+				total_amount_of_ships = 250
+			}
+			
+		}
+
+		title = "EVTNAME50022"
+		desc = "EVTDESC50022"
+		picture = "1962_unloading_Nike"
+
+		option = {
+			name = "EVTOPTA50022"			# Cover up the affair
+			dissent = 1
+			random_list = {
+				50 = {
+					random_country = {
+						limit = {
+							embargoed_by = THIS
+						}
+						random_list = {
+							40 = {
+								#military_goods = 10					
+							}
+							20 = {
+								#high_tech = 10
+							}
+							20 = {
+								#aviation_industry = 10
+							}
+							20 = {
+								#naval_yards = 10
+							}
+						}
+					}
+				}
+				50 = {
+					
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTB50022"			# Organise an enquiry
+			add_country_modifier = {
+				name = arms_sales_enquiry
+				duration = -1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC50022"			# We must put a stop to this immediately
+			add_country_modifier = {
+				name = arm_sales_1
+				duration = 180
+			}
+		}
+	}
+
+	#50023 - Arms sales enquiry absolves government of blame
+	country_event = {		#Arms sales enquiry absolves government of blame
+
+		id = 50023
+
+		trigger = { has_country_modifier = arms_sales_enquiry }
+
+		mean_time_to_happen =  {
+			days = 365
+			modifier = {
+				factor = 0.9
+				national_unity = 0.75
+			}
+			modifier = {
+				factor = 0.9
+				national_unity = 0.9
+			}
+		}
+
+		title = "EVTNAME50023"
+		desc = "EVTDESC50023"
+		picture = "1962_unloading_Nike"
+
+		option = {
+			name = "EVTOPTA50023"			# Excellent news
+			remove_country_modifier = arms_sales_enquiry
+		}
+	}
+
+	#50024 - Arms sales enquiry ends inconclusively
+	country_event = {		#Arms sales enquiry ends inconclusively
+
+		id = 50024
+
+		trigger = {
+			has_country_modifier = arms_sales_enquiry
+		}
+
+		mean_time_to_happen =  {
+			days = 335
+		}
+
+		title = "EVTNAME50024"
+		desc = "EVTDESC50024"
+		picture = "1962_unloading_Nike"
+
+		option = {
+			name = "EVTOPTA50024"			# Could have been worse
+			national_unity = -1
+			popularity = -1
+			remove_country_modifier = arms_sales_enquiry
+		}	
+	}
+
+	#50025 - Arms sales enquiry lays systematic blame directly on government
+	country_event = {		#Arms sales enquiry lays systematic blame directly on government
+
+		id = 50025
+
+		trigger = {
+			has_country_modifier = arms_sales_enquiry
+		}
+
+		mean_time_to_happen =  {
+			days = 365
+			modifier = {
+				factor = 0.9
+				NOT = {
+					national_unity = 50
+				}
+			}
+			modifier = {
+				factor = 0.9
+				NOT = {
+					national_unity = 25
+				}
+			}
+		}
+
+		title = "EVTNAME50025"
+		desc = "EVTDESC50025"
+		picture = "1962_unloading_Nike"
+
+		option = {
+			name = "EVTOPTA50025"			# Cover the result up
+			dissent = 1
+			popularity = -1
+			national_unity = -3
+			remove_country_modifier = arms_sales_enquiry
+		}
+
+		option = {
+			name = "EVTOPTB50025"			# Let it be released
+			dissent = 2
+			popularity = -5
+			remove_country_modifier = arms_sales_enquiry
+		}
+	}
+
+	#50026 - Arms sales enquiry lays blame on high-ranking minister
+	country_event = {		#Arms sales enquiry lays blame on high-ranking minister
+
+		id = 50026
+
+		trigger = {
+			has_country_modifier = arms_sales_enquiry
+		}
+
+		mean_time_to_happen =  {
+			days = 365
+			modifier = {
+				factor = 0.9
+				head_of_government = autocrat_type
+			}
+			modifier = {
+				factor = 0.95
+				NOT = {
+					national_unity = 50
+				}
+			}
+		}
+
+		title = "EVTNAME50026"
+		desc = "EVTDESC50026"
+		picture = "1962_unloading_Nike"
+
+		option = {
+			name = "EVTOPTA50026"			# Cover the result up
+			dissent = 1
+			popularity = -1
+			national_unity = -3
+			remove_country_modifier = arms_sales_enquiry
+		}
+
+		option = {
+			name = "EVTOPTB50026"			# Sack the minister
+			dissent = 1
+			popularity = -2
+			add_country_modifier = {
+				name = cabinet_reorganisation
+				duration = 61
+			}
+			remove_country_modifier = arms_sales_enquiry
+		}
+	}

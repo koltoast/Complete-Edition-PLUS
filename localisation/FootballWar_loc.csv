@@ -1,0 +1,56 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;;x
+#HON;;;;;;;;;;;;;;;x
+dec_HON_land_reform_title;Enact Land Reform;;;;;;;;;;;;;;x
+dec_HON_land_reform_desc;Since the beginning of the twentieth century, Salvadorans have been emigrating from their small, overcrowded nation to our spacious country. These migrants are largely illegal and unskilled peasants, and when they arrive here they squat on a piece of land and attempt to scratch out a living for themselves. Our government has ignored this problem for far too long, and now Salvadoran peasants make up a large percentage of our country’s poorest classes and are illegally occupying valuable farmland. Honduras relies on fruit exports to sustain its economy: without growth in this sector our economy will certainly stagnate. Therefore, we must take decisive action and right the historical status quo with aggressive land reform. No longer will we allow Salvadoran squatters to take wild advantage of our Honduran graciousness.;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;;x
+# Events;;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;;x
+#HON;;;;;;;;;;;;;;x
+EVTNAME214000;Salvadoran Immigration;;;;;;;;;;;;;x
+EVTDESC214000;El Salvador is a small and desperately poor country on our southwestern border whose citizens are overwhelmingly subsistence farmers. Despite its tiny size, El Salvador’s population is far greater than ours. Naturally, many Salvadorans see Honduras as a land of opportunity with its rich soil and open spaces and decide to pick up and relocate to Honduras in search of a better life. We have historically turned a blind eye to these illegal immigrants because they are largely honest, hardworking farmers who bother no one and are happy to sell their produce in our markets. However, we could choose crack down and expel these people from our borders.;;;;;;;;;;;;;x
+EVTOPTA214000;Let them stay.;;;;;;;;;;;;;x
+EVTOPTB214000;Send them packing!;;;;;;;;;;;;;x
+EVTNAME214001;Honduran Land Reform;;;;;;;;;;;;;x
+EVTDESC214001;The time has come to put all our fertile farmland to good use by kicking the Salvadoran squatters off of it and turning it over to entrepreneurial Hondurans for cultivation. Finally, we can take full advantage of our beautiful country’s natural gifts. The Salvadoran squatters will be able to find work on the Honduran commercial farms that are to be established in place of their subsistence operations. This is a good deal for them: the Salvadorans have never had a right to farm this land and therefore will have to make room for progress.;;;;;;;;;;;;;x
+EVTOPTA214001;To future prosperity!;;;;;;;;;;;;;x
+EVTNAME214002;El Salvador Mobilizes;;;;;;;;;;;;;x
+EVTDESC214002;El Salvador appears ready to go to war over our use of illegal Salvadoran immigrants as farm laborers. Of all things, they are claiming that hooliganism at the FIFA world cup constitutes genocide against Salvadorans in Honduras. However, the military threat appears to be real. Currently El Salvador is demanding the end of our land reforms and the issuance of apologetic statements for the recent football hooliganism. However, doing so would hurt our agricultural productivity and incense many Hondurans who rely on Salvadoran labor.;;;;;;;;;;;;;x
+EVTOPTA214002;This time, we have gone too far.;;;;;;;;;;;;;x
+EVTOPTB214002;Our country, our rules.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;;x
+#SAL;;;;;;;;;;;;;;;x
+EVTNAME303000;Honduran Crackdown;;;;;;;;;;;;;x;
+EVTDESC303000;Claiming that Salvadoran farmers have no right the land that many have cultivated for generations, the Honduran government has begun expelling Salvadorans in their country from their land! We have received reports of horror stories: families turned out of their own homes with only what they could carry with them, proud Salvadoran farmers forced to beg for scraps outside their own homes! Many are calling for an official denunciation to these provocative acts, but such an action would certainly anger the Honduran government.;;;;;;;;;;;;;x;
+EVTOPTA303000;Their country, their rules.;;;;;;;;;;;;;x;
+EVTOPTB303000;This is an outrage!;;;;;;;;;;;;;x;
+EVTNAME303001;World Cup Violence!;;;;;;;;;;;;;x;
+EVTDESC303001;At the latest FIFA world cup matches between Salvador and Honduras, Honduran supports have rabidly attacked and killed our fans and not a word has been uttered from the Honduran government in denunciation. We will not stand for this slap in the face! El Salvador is a proud nation and has been trampled under the Honduran boot for long enough. Our patriotic people are demanding action in response to these Honduran provocations, and to rebuke them now after all the humiliation from Honduras would certainly mean rioting in the streets.;;;;;;;;;;;;;x;
+EVTOPTA303001;Demand justice for our citizens!;;;;;;;;;;;;;x;
+EVTOPTB303001;It's football: violence is expected.;;;;;;;;;;;;;x;
+EVTNAME303002;Honduran Rebuke!;;;;;;;;;;;;;x;
+EVTDESC303002;Honduras has responded to our demands for the end of Salvadoran persecution by sneering in our face! The public mood is clear: they demand war to enforce the rights of Salvadorans in Honduras. If we blink now, our government will suffer a huge loss of support among our population.;;;;;;;;;;;;;x;
+EVTOPTA303002;This means war!;;;;;;;;;;;;;x;
+EVTOPTB303002;Back down.;;;;;;;;;;;;;x;
+EVTNAME303003;OAS Peace Brokerage;;;;;;;;;;;;;x;
+EVTDESC303003;The Organization of American States (OAS), in an emergency meeting, has summoned us and the Hondurans to the bargaining table to negotiate an end to the war. The best deal we can get at the moment is this: in exchange for a ceasefire and withdrawal of Salvadoran troops from Honduran territory, Honduras agrees to repatriate its Salvadoran population back to El Salvador. Rejecting these terms means risking OAS sanctions and alienating the less bellicose segments of our population.;;;;;;;;;;;;;x;
+EVTOPTA303003;Sign on the dotted line;;;;;;;;;;;;;x;
+EVTOPTB303003;These terms are unacceptable!;;;;;;;;;;;;;x;
+;;;;;;;;;;;;;;;x
+#OAS;;;;;;;;;;;;;;;x
+#EVTNAMEXXXXXX;OAS Votes to Stop the War;;;;;;;;;;;;;;x
+#EVTDESCXXXXXX;;;;;;;;;;;;;;;x
+#EVTOPTAXXXXXX;The OAS has spoken.;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;;x
+#HON;;;;;;;;;;;;;;;x
+pmod_salvadoran_immigration;Immigration from El Salvador;;;;;;;;;;;;;;x
+mod_salvadoran_immigration_delay;Salvadoran Immigration Delay;;;;;;;;;;;;;;x
+pmod_land_reform;Honduran Land Reform;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;;x

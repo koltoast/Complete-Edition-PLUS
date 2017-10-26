@@ -1,0 +1,173 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+demand_tibet_CHC_title;Push claims on Tibet;;;;;;;;;;;;;x
+demand_tibet_CHC_desc;Should we seek to bring the people of Tibet back into the big Chinese family?;;;;;;;;;;;;;x
+seventeen_point_CHC_title;Seventeen Point Agreement;;;;;;;;;;;;;x
+seventeen_point_CHC_desc;Should we seek to bring about a diplomatic solution to the Tibetan situation?;;;;;;;;;;;;;x
+tibet_land_reform_CHC_title;Tibetan Land Reform;;;;;;;;;;;;;x
+tibet_land_reform_CHC_desc;We have given the Tibetans some degree of economic autonomy. We could choose to revoke this in favor of comprehensive land reform.;;;;;;;;;;;;;x
+intervene_tibet_CHI_CHC_title;Intervention in Tibet;;;;;;;;;;;;;x
+intervene_tibet_CHI_CHC_desc;We could provide support to rebels in Tibet to help bring down the Nationalist government.;;;;;;;;;;;;;x
+demand_tibet_CHI_title;Push claims on Tibet;;;;;;;;;;;;;x
+demand_tibet_CHI_desc;Should we seek to bring the people of Tibet back into the big Chinese family?;;;;;;;;;;;;;x
+seventeen_point_CHI_title;Seventeen Point Agreement;;;;;;;;;;;;;x
+seventeen_point_CHI_desc;Should we seek to bring about a diplomatic solution to the Tibetan situation?;;;;;;;;;;;;;x
+tibet_land_reform_CHI_title;Tibetan Land Reform;;;;;;;;;;;;;x
+tibet_land_reform_CHI_desc;We have given the Tibetans some degree of economic autonomy. We could choose to revoke this in favor of comprehensive land reform.;;;;;;;;;;;;;x
+intervene_tibet_CHC_CHI_title;Intervention in Tibet;;;;;;;;;;;;;x
+intervene_tibet_CHC_CHI_desc;We could provide support to rebels in Tibet to help bring down the Communist government.;;;;;;;;;;;;;x
+intervene_tibet_CHC_IND_title;Intervention in Tibet;;;;;;;;;;;;;x
+intervene_tibet_CHC_IND_desc;We could provide support to rebels in Tibet to help bring down the Communist government.;;;;;;;;;;;;;x
+intervene_tibet_CHI_IND_title;Intervention in Tibet;;;;;;;;;;;;;x
+intervene_tibet_CHI_IND_desc;We could provide support to rebels in Tibet to help bring down the Nationalist government.;;;;;;;;;;;;;x
+intervene_tibet_CHC_SOV_title;Intervention in Tibet;;;;;;;;;;;;;x
+intervene_tibet_CHC_SOV_desc;We could provide support to rebels in Tibet to help bring down the Communist government.;;;;;;;;;;;;;x
+intervene_tibet_CHI_SOV_title;Intervention in Tibet;;;;;;;;;;;;;x
+intervene_tibet_CHI_SOV_desc;We could provide support to rebels in Tibet to help bring down the Nationalist government.;;;;;;;;;;;;;x
+intervene_tibet_CHC_USA_title;Intervention in Tibet;;;;;;;;;;;;;x
+intervene_tibet_CHC_USA_desc;We could provide support to rebels in Tibet to help bring down the Communist government.;;;;;;;;;;;;;x
+intervene_tibet_CHI_USA_title;Intervention in Tibet;;;;;;;;;;;;;x
+intervene_tibet_CHI_USA_desc;We could provide support to rebels in Tibet to help bring down the Nationalist government.;;;;;;;;;;;;;x
+EVTNAME151101;Claims on Tibet;;;;;;;;;;;;;x
+EVTDESC151101;We have long maintained our demand that the people of Tibet rejoin the big Chinese family that they once belonged to. Now is the time to pursue this issue, with force if necessary.;;;;;;;;;;;;;x
+EVTOPTA151101;Demand authority over Tibet!;;;;;;;;;;;;;x
+EVTOPTB151101;Abandon our claims.;;;;;;;;;;;;;x
+EVTNAME151102;Tibet Agrees;;;;;;;;;;;;;x
+EVTDESC151102;Tibet have agreed to join us, provided that we allow them some degree of autonomy on economic matters.;;;;;;;;;;;;;x
+EVTOPTA151102;Excellent!;;;;;;;;;;;;;x
+EVTNAME151103;Tibet Refuses!;;;;;;;;;;;;;x
+EVTDESC151103;Tibet have refused to join us peacefully, should we pursue this by force?;;;;;;;;;;;;;x
+EVTOPTA151103;To arms!;;;;;;;;;;;;;x
+EVTOPTB151103;Back down.;;;;;;;;;;;;;x
+EVTNAME151104;Tibet Agrees;;;;;;;;;;;;;x
+EVTDESC151104;Tibet have agreed to join us and have signed the seventeen point agreement which allows them some economic autonomy.;;;;;;;;;;;;;x
+EVTOPTA151104;Excellent!;;;;;;;;;;;;;x
+EVTNAME151105;Tibet Refuses;;;;;;;;;;;;;x
+EVTDESC151105;Tibet have refused our generous offer to sign the seventeen point agreement. It is clear that only a total military occupation will force them to listen to reason.;;;;;;;;;;;;;x
+EVTOPTA151105;Crush Them!;;;;;;;;;;;;;x
+EVTNAME151106;Land Reform;;;;;;;;;;;;;x
+EVTDESC151106;Tibet have been allowed some degree of economic autonomy. Should we revoke this in favor of land reform and a more centralised system of government?;;;;;;;;;;;;;x
+EVTOPTA151106;Push ahead with land reform;;;;;;;;;;;;;x
+EVTOPTB151106;Let them retain autonomy;;;;;;;;;;;;;x
+EVTNAME151107;Intervention in Tibet;;;;;;;;;;;;;x
+EVTDESC151107;The people of Tibet have risen up against the Nationalist oppression. Should we support this movement?;;;;;;;;;;;;;x
+EVTOPTA151107;Support the rebels;;;;;;;;;;;;;x
+EVTOPTB151107;This is not our fight;;;;;;;;;;;;;x
+EVTNAME151108;Dalai Lama Flees;;;;;;;;;;;;;x
+EVTDESC151108;The Dalai Lama has been caught up in fighting in Tibet and has decided to renege on the seventeen point agreement and seek exile.;;;;;;;;;;;;;x
+EVTOPTA151108;OK;;;;;;;;;;;;;x
+EVTNAME151109;Dalai Lama Escapes;;;;;;;;;;;;;x
+EVTDESC151109;The Dalai Lama has reached India and is seeking to form a govenment in exile there.;;;;;;;;;;;;;x
+EVTOPTA151109;He is someone else's problem now;;;;;;;;;;;;;x
+EVTNAME151110;Dalai Lama is Killed in Fighting;;;;;;;;;;;;;x
+EVTDESC151110;The Dalai Lama has been killed trying to reach India.;;;;;;;;;;;;;x
+EVTOPTA151110;One less troublemaker to deal with;;;;;;;;;;;;;x
+EVTNAME152101;Claims on Tibet;;;;;;;;;;;;;x
+EVTDESC152101;We have long maintained our demand that the people of Tibet rejoin the big Chinese family that they once belonged to. Now is the time to pursue this issue, with force if necessary.;;;;;;;;;;;;;x
+EVTOPTA152101;Demand authority over Tibet!;;;;;;;;;;;;;x
+EVTOPTB152101;Abandon our claims.;;;;;;;;;;;;;x
+EVTNAME152102;Tibet Agrees;;;;;;;;;;;;;x
+EVTDESC152102;Tibet have agreed to join us, provided that we allow them some degree of autonomy on economic matters.;;;;;;;;;;;;;x
+EVTOPTA152102;Excellent!;;;;;;;;;;;;;x
+EVTNAME152103;Tibet Refuses!;;;;;;;;;;;;;x
+EVTDESC152103;Tibet have refused to join us peacefully, should we pursue this by force?;;;;;;;;;;;;;x
+EVTOPTA152103;To arms!;;;;;;;;;;;;;x
+EVTOPTB152103;Back down.;;;;;;;;;;;;;x
+EVTNAME152104;Tibet Agrees;;;;;;;;;;;;;x
+EVTDESC152104;Tibet have agreed to join us and have signed the seventeen point agreement which allows them some economic autonomy.;;;;;;;;;;;;;x
+EVTOPTA152104;Excellent!;;;;;;;;;;;;;x
+EVTNAME152105;Tibet Refuses;;;;;;;;;;;;;x
+EVTDESC152105;Tibet have refused our generous offer to sign the seventeen point agreement. It is clear that only a total military occupation will force them to listen to reason.;;;;;;;;;;;;;x
+EVTOPTA152105;Crush Them!;;;;;;;;;;;;;x
+EVTNAME152106;Land Reform;;;;;;;;;;;;;x
+EVTDESC152106;Tibet have been allowed some degree of economic autonomy. Should we revoke this in favor of a more centralised system of government?;;;;;;;;;;;;;x
+EVTOPTA152106;Push ahead with land reform;;;;;;;;;;;;;x
+EVTOPTB152106;Let them retain autonomy;;;;;;;;;;;;;x
+EVTNAME152107;Intervention in Tibet;;;;;;;;;;;;;x
+EVTDESC152107;The people of Tibet have risen up against the Communist oppression. Should we support this movement?;;;;;;;;;;;;;x
+EVTOPTA152107;Support the rebels;;;;;;;;;;;;;x
+EVTOPTB152107;This is not our fight;;;;;;;;;;;;;x
+EVTNAME152108;Dalai Lama Flees;;;;;;;;;;;;;x
+EVTDESC152108;The Dalai Lama has been caught up in fighting in Tibet and has decided to renege on the seventeen point agreement and seek exile.;;;;;;;;;;;;;x
+EVTOPTA152108;OK;;;;;;;;;;;;;x
+EVTNAME152109;Dalai Lama Escapes;;;;;;;;;;;;;x
+EVTDESC152109;The Dalai Lama has reached India and is seeking to form a govenment in exile there.;;;;;;;;;;;;;x
+EVTOPTA152109;He is someone else's problem now;;;;;;;;;;;;;x
+EVTNAME152110;Dalai Lama is Killed in Fighting;;;;;;;;;;;;;x
+EVTDESC152110;The Dalai Lama has been killed trying to reach India.;;;;;;;;;;;;;x
+EVTOPTA152110;One less troublemaker to deal with;;;;;;;;;;;;;x
+EVTNAME218001;Intervention in Tibet;;;;;;;;;;;;;x
+EVTDESC218001;The people of Tibet have risen up against the Communist oppression. Should we support this movement?;;;;;;;;;;;;;x
+EVTOPTA218001;Support the rebels;;;;;;;;;;;;;x
+EVTOPTB218001;This is not our fight;;;;;;;;;;;;;x
+EVTNAME218002;Intervention in Tibet;;;;;;;;;;;;;x
+EVTDESC218002;The people of Tibet have risen up against the Nationalist oppression. Should we support this movement?;;;;;;;;;;;;;x
+EVTOPTA218002;Support the rebels;;;;;;;;;;;;;x
+EVTOPTB218002;This is not our fight;;;;;;;;;;;;;x
+EVTNAME218003;Dalai Lama Seeks Exile;;;;;;;;;;;;;x
+EVTDESC218003;The Dalai Lama has reached our borders and is seeking to form a government in exile in India. Should we agree to this?;;;;;;;;;;;;;x
+EVTOPTA218003;Allow him to stay;;;;;;;;;;;;;x
+EVTOPTB218003;Refuse his request;;;;;;;;;;;;;x
+EVTNAME218004;Dalai Lama Seeks Exile;;;;;;;;;;;;;x
+EVTDESC218004;The Dalai Lama has reached our borders and is seeking to form a government in exile in India. Should we agree to this?;;;;;;;;;;;;;x
+EVTOPTA218004;Allow him to stay;;;;;;;;;;;;;x
+EVTOPTB218004;Refuse his request;;;;;;;;;;;;;x
+EVTNAME326101;Intervention in Tibet;;;;;;;;;;;;;x
+EVTDESC326101;The people of Tibet have risen up against the Communist oppression. Should we support this movement?;;;;;;;;;;;;;x
+EVTOPTA326101;Support the rebels;;;;;;;;;;;;;x
+EVTOPTB326101;This is not our fight;;;;;;;;;;;;;x
+EVTNAME326102;Intervention in Tibet;;;;;;;;;;;;;x
+EVTDESC326102;The people of Tibet have risen up against the Nationalist oppression. Should we support this movement?;;;;;;;;;;;;;x
+EVTOPTA326102;Support the rebels;;;;;;;;;;;;;x
+EVTOPTB326102;This is not our fight;;;;;;;;;;;;;x
+EVTNAME338001;China Demands Authority Over Tibet;;;;;;;;;;;;;x
+EVTDESC338001;The Chinese government has demanded authority over us. Should we comply?;;;;;;;;;;;;;x
+EVTOPTA338001;Comply with ther demands;;;;;;;;;;;;;x
+EVTOPTB338001;Resist with arms!;;;;;;;;;;;;;x
+EVTNAME338002;Seventeen Point Agreement;;;;;;;;;;;;;x
+EVTDESC338002;The Chinese government has demanded that we sign an agreement which gives them authority over Tibet while allowing us some economic autonomy. Should we agree?;;;;;;;;;;;;;x
+EVTOPTA338002;Comply with demands;;;;;;;;;;;;;x
+EVTOPTB338002;Resist with arms!;;;;;;;;;;;;;x
+EVTNAME338003;China Demands Authority Over Tibet;;;;;;;;;;;;;x
+EVTDESC338003;The Chinese government has demanded authority over us. Should we comply?;;;;;;;;;;;;;x
+EVTOPTA338003;Comply with ther demands;;;;;;;;;;;;;x
+EVTOPTB338003;Resist with arms!;;;;;;;;;;;;;x
+EVTNAME338004;Seventeen Point Agreement;;;;;;;;;;;;;x
+EVTDESC338004;The Chinese government has demanded the we sign an agreement which gives them authority over Tibet while allowing us some economic autonomy. Should we agree?;;;;;;;;;;;;;x
+EVTOPTA338004;Comply with demands;;;;;;;;;;;;;x
+EVTOPTB338004;Resist with arms!;;;;;;;;;;;;;x
+EVTNAME354001;Intervention in Tibet;;;;;;;;;;;;;x
+EVTDESC354001;The people of Tibet have risen up against the Communist oppression. Should we support this movement?;;;;;;;;;;;;;x
+EVTOPTA354001;Support the rebels;;;;;;;;;;;;;x
+EVTOPTB354001;This is not our fight;;;;;;;;;;;;;x
+EVTNAME354002;Intervention in Tibet;;;;;;;;;;;;;x
+EVTDESC354002;The people of Tibet have risen up against the Nationalist oppression. Should we support this movement?;;;;;;;;;;;;;x
+EVTOPTA354002;Support the rebels;;;;;;;;;;;;;x
+EVTOPTB354002;This is not our fight;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

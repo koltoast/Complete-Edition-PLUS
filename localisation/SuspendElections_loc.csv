@@ -1,0 +1,62 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Global modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+suspended_elections_timer;Political Turmoil;;;;;;;;;;;;;x
+event_civil_disorder;Civil Disorder;;;;;;;;;;;;;x
+event_reinforce_the_police;Political Turmoil;;;;;;;;;;;;;x
+event_send_in_the_army_internal;Political Turmoil;;;;;;;;;;;;;x
+event_opposition_rallies;Opposition Rallies;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+#Player;;;;;;;;;;;;;;x
+dec_suspend_elections_title;Suspend Elections;;;;;;;;;;;;;x
+dec_suspend_elections_desc;Attempt to suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. This action might heavily destabilize our nation because we lack the two thirds party popularity majority required for our party to unilaterally make such a decision.;;;;;;;;;;;;;x
+dec_suspend_elections_majority_title;Suspend Elections;;;;;;;;;;;;;x
+dec_suspend_elections_majority_desc;Attempt to suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. The legitimacy of our decision is bolstered by our two thirds majority in the legislature, and consequently we do not expect to face a great deal of resistance or dissent.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#AI;;;;;;;;;;;;;;x
+ai_dec_suspend_elections_title;Suspend Elections;;;;;;;;;;;;;x
+ai_dec_suspend_elections_desc;Attempt to suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. This action might heavily destabilize our nation because we lack the two thirds party popularity majority required for our party to unilaterally make such a decision.;;;;;;;;;;;;;x
+ai_dec_suspend_elections_majority_title;Suspend Elections;;;;;;;;;;;;;x
+ai_dec_suspend_elections_majority_desc;Attempt to suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. The legitimacy of our decision is bolstered by our two thirds majority in the legislature, and consequently we do not expect to face a great deal of resistance or dissent.;;;;;;;;;;;;;x
+ai_dec_suspend_elections_authoritarian_title;Suspend Elections;;;;;;;;;;;;;x
+ai_dec_suspend_elections_authoritarian_desc;Suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. This action might heavily destabilize our nation because we lack the two thirds party popularity majority required for our party to unilaterally make such a decision.;;;;;;;;;;;;;x
+ai_dec_suspend_elections_majority_authoritarian_title;Suspend Elections;;;;;;;;;;;;;x
+ai_dec_suspend_elections_majority_authoritarian_desc;Suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. The legitimacy of our decision is bolstered by our two thirds majority in the legislature, and consequently we do not expect to face a great deal of resistance or dissent.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+EVTNAME1970;Political Turmoil;;;;;;;;;;;;;x
+EVTDESC1970;Demonstrations and rioting have spread across several cities with the news of the ruling party’s latest attempt to remove all checks on its power. The peaceful protests quickly escalated into violence, and the streets echo with citizens questioning the attempts to focus state power on one party. Prominent members of the opposition openly talk about our nation 'descending into the madness of totalitarianism.' How should we deal with the protesters?;;;;;;;;;;;;;x
+EVTOPTA1970;Address the Nation;;;;;;;;;;;;;x
+EVTOPTB1970;Reinforce the Police;;;;;;;;;;;;;x
+EVTOPTC1970;Send in the Army;;;;;;;;;;;;;x
+EVTNAME1971;New Constitution;;;;;;;;;;;;;x
+EVTDESC1971;Suspending elections was a good first step in halting our nation’s degradation and putting an end to so-called ‘free democracies’ that bewitch the masses with false ideas and squander their energy and true potential. To remedy the blight on our people, we must now formally alter the constitution. We have called for a parliamentary session approve our new constitution and lay the cornerstone of ideas for our future state. The occasion will be momentous and the parliament will retroactively enact the decrees that we have already passed. What type of government should we strive to achieve?;;;;;;;;;;;;;x
+EVTOPTA1971;Totalitarian State;;;;;;;;;;;;;x
+EVTOPTB1971;Authoritarian State;;;;;;;;;;;;;x
+EVTNAME1972;New Constitution;;;;;;;;;;;;;x
+EVTDESC1972;Suspending elections was a good first step in halting our nation’s degradation and putting an end to so-called ‘free democracies’ that bewitch the masses with false ideas and squander their energy and true potential. To remedy the blight on our people, we must now formally alter the constitution. We have called for a parliamentary session approve our new constitution and lay the cornerstone of ideas for our future state. The occasion will be momentous and the parliament will retroactively enact the decrees that we have already passed.;;;;;;;;;;;;;x
+EVTOPTA1972;Excellent;;;;;;;;;;;;;x
+EVTNAME1973;New Constitution;;;;;;;;;;;;;x
+EVTDESC1973;Suspending elections was a good first step in halting our nation’s degradation and putting an end to so-called ‘free democracies’ that bewitch the masses with false ideas and squander their energy and true potential. To remedy the blight on our people, we must now formally alter the constitution. We have called for a parliamentary session approve our new constitution and lay the cornerstone of ideas for our future state. The occasion will be momentous and the parliament will retroactively enact the decrees that we have already passed. What type of government should we strive to achieve?;;;;;;;;;;;;;x
+EVTOPTA1973;Authoritarian State;;;;;;;;;;;;;x
+EVTOPTB1973;Absolute Monarchy;;;;;;;;;;;;;x
+EVTNAME1974;Rioting;;;;;;;;;;;;;x
+EVTDESC1974;Rioting erupted today as people gathered to demonstrate against state oppression. The streets resonated with the staccato sound of gunfire and exploding tear gas canisters as rioting protesters clashed with security forces. It remains unclear who instigated the confrontation, but oppositional parties have been urging for demonstrations to protest what they say is the growing number of attacks on their freedoms and rights. The police and security forces managed to take control and restore order, but substantial damage has already been done both monetarily and to our credibility.;;;;;;;;;;;;;x
+EVTOPTA1974;OK;;;;;;;;;;;;;x
+EVTNAME1975;Minor Demonstrations;;;;;;;;;;;;;x
+EVTDESC1975;A demonstration is taking place not far from our head offices in the capital as crowds gather jeering, shouting, sounding horns and banging drums, waving signs with slogans like 'We stand for Democracy' and 'Warning: Dictatorship Ahead.' The three-and-a-half mile march, apparently organized by a coalition of opposition parties, began early in the day. The Minister of the Interior assured the government that the police, although concerned at the number of people gathering, have the situation under control. They proved unable to prevent the demonstration from taking place altogether because several separate meeting points were used before the marchers converged.;;;;;;;;;;;;;x
+EVTOPTA1975;Let them march;;;;;;;;;;;;;x
+EVTOPTB1975;Disperse the crowd;;;;;;;;;;;;;x
+EVTNAME1976;Demonstration in the Capital;;;;;;;;;;;;;x
+EVTDESC1976;A peaceful protest will take place on the main square in the capital over the government’s plan to suspend elections. Organizers of the gathering of more than 100 'intellectuals' and their supporters, including two high ranking military officers, will demand that the government immediately rethink its position toward democracy. The protesters also claim that the country and their community has become divided under the current ruling party and that supporters of democracy have been subjected to widespread government sponsored social abuse, ridicule, secret arrests, and state violence. What should be done?;;;;;;;;;;;;;x
+EVTOPTA1976;Let them march;;;;;;;;;;;;;x
+EVTOPTB1976;Arrest the Leaders;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

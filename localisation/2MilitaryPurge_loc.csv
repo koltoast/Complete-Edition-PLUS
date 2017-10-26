@@ -1,0 +1,73 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+military_purge_political;Political Military Purge;;;;;;;;;;;;;x
+military_purge_operational;Operational Military Purge;;;;;;;;;;;;;x
+corrupt_general_exposed;Corrupt General Exposed;;;;;;;;;;;;;x
+military_incompetence_punished;Military Incompetence Punished;;;;;;;;;;;;;x
+insubordinate_general_deposed;Insubordinate General Deposed;;;;;;;;;;;;;x
+treasonous_general_exposed;Treasonous General Exposed;;;;;;;;;;;;;x
+recruitment_drive;Recruitment Drive;;;;;;;;;;;;;x
+military_morale_increases;Military Morale Increases;;;;;;;;;;;;;x
+public_distrust_military;Public Distrust of Military;;;;;;;;;;;;;x
+notorious_general_deposed;Notorious General Deposed;;;;;;;;;;;;;x
+loyal_officers_rewarded;Loyal Officers Rewarded;;;;;;;;;;;;;x
+old_guard_retirement;Old Guard Retirement;;;;;;;;;;;;;x
+military_witchhunt;Military Witch Hunt;;;;;;;;;;;;;x
+military_purge_delay;Military Purge Delay;;;;;;;;;;;;;x
+dec_military_purge_title;Military Purge;;;;;;;;;;;;;x
+dec_military_purge_desc;Embark on a thorough reorganisation of our military and purge any undesireable elements, whether political or operational.;;;;;;;;;;;;;x
+EVTNAME2001;Military Purge;;;;;;;;;;;;;x
+EVTDESC2001;In order to ultimately strengthen our nation, it is a necessary evil to purge our military of undesirable elements that undermine our nation and the ideals it stands for. Ideas are more powerful than arms, and just as we would not let our enemies bear arms against us, neither should we allow them to harbor subversive ideas. It's best to act swiftly and without mercy, but what should we focus on during this process?;;;;;;;;;;;;;x
+EVTOPTA2001;Political Focus;;;;;;;;;;;;;x
+EVTOPTB2001;Operational Focus;;;;;;;;;;;;;x
+EVTNAME2002;Corrupt General Exposed;;;;;;;;;;;;;x
+EVTDESC2002;Our interior security reports that one of our high ranking military officials has been engaged in corrupt conduct. The agency, along with the office of the interior minister, has also implicated a network of people that aided the high-ranking officer in his crimes against our nation. All of the culprits have been arrested and will face a court-martial.;;;;;;;;;;;;;x
+EVTOPTA2002;Excellent;;;;;;;;;;;;;x
+EVTNAME2003;Military Incompetence Punished;;;;;;;;;;;;;x
+EVTDESC2003;Direct orders have been carried out in a manner that makes the failures of certain individuals in the general staff apparent. We need to get rid of all doubt and the tendency of some to believe that a problem can be solved by reapplying an earlier failed solution. The incompetent fools have done enough damage!;;;;;;;;;;;;;x
+EVTOPTA2003;Sack them;;;;;;;;;;;;;x
+EVTNAME2004;Insubordinate General Deposed;;;;;;;;;;;;;x
+EVTDESC2004;Disturbing news has arrived about an insubordinate general who is spreading disloyalty among the general staff. 'There is nothing so disobedient as an undisciplined mind,' as the saying goes, and this cannot be tolerated. It's time to teach them all the lesson that none are here to serve themselves: rather they are here to serve only the nation.;;;;;;;;;;;;;x
+EVTOPTA2004;Sack them;;;;;;;;;;;;;x
+EVTNAME2005;Treasonous General Exposed;;;;;;;;;;;;;x
+EVTDESC2005;Our interior minister reports that one of our high ranking officers has engaged in activities that aid the enemy, betraying our cause and our nation. The ministry of security is investigating his connections to contain the damage while the high ranking military leader is being dealt with. Traitors deserve neither pity nor mercy and we are leaving no stone unturned.;;;;;;;;;;;;;x
+EVTOPTA2005;Good work;;;;;;;;;;;;;x
+EVTNAME2006;New Recruits Attracted;;;;;;;;;;;;;x
+EVTDESC2006;Our drive to strengthen the officer corps by purging undesirable elements has yielded a new influx of recruits into the armed forces. In the great mass of our people there are plenty of individuals of intelligence from whom new and more loyal leadership can be recruited.;;;;;;;;;;;;;x
+EVTOPTA2006;Terrific;;;;;;;;;;;;;x
+EVTNAME2007;Rank-and-file Morale Increases;;;;;;;;;;;;;x
+EVTDESC2007;The Chief of Staff just handed in a report on the effectiveness of our purge. We have gotten rid of some of the most troublesome individuals in the military and rewarded those loyal to us. In doing so we have managed to increase the morale of our military staff. Finally, we can achieve our aim of a military composed of soldiers who place their duty and service to our nation ahead of their own individual discomfort.;;;;;;;;;;;;;x
+EVTOPTA2007;OK;;;;;;;;;;;;;x
+EVTNAME2008;Growing Distrust of Military;;;;;;;;;;;;;x
+EVTDESC2008;The behavior of high ranking military officials has weakened our citizens’ trusts in our armed forces and our ability to maintain discipline. It is best to act swiftly and without mercy in order to make an example out of those individuals who seem to have lost sight of what is important. We need to regain control of the situation immediately and appoint new leadership.;;;;;;;;;;;;;x
+EVTOPTA2008;Reorganize them;;;;;;;;;;;;;x
+EVTNAME2009;Notorious General Deposed;;;;;;;;;;;;;x
+EVTDESC2009;The trouble with a hero is that sometimes his ego grows bigger than his name. The Minister of the Interior reports that his office has discovered a plot involving one of our high ranking officers apparently conspiring against you. The officer is a decorated hero, thus making this is a delicate matter, but he has been given the option of having his family kept safe with assurances that they will not be persecuted following his death.;;;;;;;;;;;;;x
+EVTOPTA2009;OK;;;;;;;;;;;;;x
+EVTNAME2010;Loyal Officers Rewarded;;;;;;;;;;;;;x
+EVTDESC2010;The Chief of Staff held an award ceremony today decorating loyal members of the military. At the ceremony, he read aloud a commendation issued by the government to officers who have rendered meritorious service during this turbulent period in our nation.;;;;;;;;;;;;;x
+EVTOPTA2010;OK;;;;;;;;;;;;;x
+EVTNAME2011;Old Guard Retired;;;;;;;;;;;;;x
+EVTDESC2011;After years of loyal service, the Chief of Staff informs that one of our high ranking generals needs to step into retirement. It is essential that our military maintain the requisite level of operational readiness required to meet the complex challenges of leading the armed forces of our great nation, and as such distinguished but obsolete leadership must make way for fresh ideas from time to time. A festive departure ceremony will be held in his honor.;;;;;;;;;;;;;x
+EVTOPTA2011;He will be missed;;;;;;;;;;;;;x
+EVTNAME2012;Purge becomes Witch-hunt;;;;;;;;;;;;;x
+EVTDESC2012;The process of purging the military has led to a practice of making accusations of disloyalty, subversion, or treason without proper evidence. Individuals within the armed forces are making allegations to benefit themselves at the expense of their colleagues.;;;;;;;;;;;;;x
+EVTOPTA2012;It is now beyond our control;;;;;;;;;;;;;x
+EVTNAME2021;Military Purge Concludes;;;;;;;;;;;;;x
+EVTDESC2021;We had embarked on a thorough reorganization of our military, and today we can resoundingly proclaim that our goals have been achieved. A ceremony is being held in honor of our brave soldiers and our glorious new military leadership.;;;;;;;;;;;;;x
+EVTOPTA2021;OK;;;;;;;;;;;;;x
+EVTNAME2022;War Halts Military Purge;;;;;;;;;;;;;x
+EVTDESC2022;$MONARCHTITLE$, the outbreak of war has abruptly ended our military purge. We can't tell if it has been effective or not, but we have much more pressing problems at the moment, regardless.;;;;;;;;;;;;;x
+EVTOPTA2022;Military Purge Ends Due to War;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

@@ -1,0 +1,599 @@
+﻿
+#################################################################
+##################  COnstitución de la ONU  #####################
+#################################################################
+
+country_event = {               ###Se constituye la estructura de la ONU
+	id = 700158
+
+	trigger = {
+	   not = { has_global_flag = CSJSE }
+	   year = 1946
+	   exists = ENG
+	   exists = FRA
+	   exists = USA
+		
+	}
+	   
+	mean_time_to_happen = { months = 6 }
+
+	title = "Constitucion de la ONU"
+	desc = "CSJSE_desc"
+	picture = "ONU"
+
+	option = {
+			name = "OK"
+	    ai_chance = { factor = 100 }
+         set_global_flag = CSJSE
+
+	}
+}
+
+
+########################################################################
+################## INTERVENCIÓN MIEMBROS DE LA ONU #####################
+########################################################################
+
+country_event = {               ###intervencion de la OTAN
+	id = 700159
+
+	trigger = {
+		not = { has_global_flag = INTCSJSE }
+		not = { has_country_flag = INTMI }		
+		NOT = { is_org_member = XNA }		
+		not = { has_global_flag = NATO_war }
+		not = { has_country_flag = falklands_war } 
+	or= { 
+        not = { has_country_modifier = NATO_armsembargo }	
+		not = { has_country_modifier = NATO_Nuclear_Embargo }		
+		}
+		or = { not = { alignment = {
+			   faction = allies
+			   value = 30 }
+		        }
+		       and = { war = yes		
+                       not = { alignment = {
+			                   faction = allies
+			                   value = 30 }
+		                     }
+				     }
+		       and = { revolt_percentage = 0.5		
+                       not = { alignment = {
+			                   faction = allies
+			                   value = 30 }
+		                     }
+                }				 
+			}
+				   
+	   }
+	   
+	mean_time_to_happen = { months = 12 }
+
+	title = "EVTNAME700159"
+	desc = "EVTDESC700159"
+	picture = "ONU"
+
+	option = {
+			name = "EVTOPTA700159"
+	    ai_chance = { factor = 50 }
+         any_country = { end_war = THIS }
+		this = {
+				add_country_modifier = {
+				name = NATO_armsembargo
+				duration = 180
+					}
+				} 
+		this = {
+				add_country_modifier = {
+				name = NATO_Nuclear_Embargo
+				duration = 180
+					}
+				}				
+		any_org_member = {
+			orgtag = XAN
+			trade_embargo = yes
+		}
+        set_country_flag = armsembnato		
+
+
+	}
+	option = {
+			name = "EVTOPTB700159"
+		    ai_chance = { factor = 50 
+			modifier = {
+				factor = 0.1							#10% chance
+				this = { is_org_member = XWP }
+
+			 }	
+			modifier = {
+				factor = 0.1
+				this = { is_major = yes }
+			 }			 
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 3
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 7
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 11
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 15
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 19
+			}
+			modifier = {
+				factor = 0.5
+				num_of_centrifuges_greater = 39
+			}			
+          }
+ 		random = {
+				chance = 50
+			modifier = {
+				factor = 0.1							#10% chance
+				this = { is_org_member = XWP }
+
+			 }	
+			modifier = {
+				factor = 0.1
+				this = { is_major = yes }
+			 }			 
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 3
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 7
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 11
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 15
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 19
+			}
+			modifier = {
+				factor = 0.5
+				num_of_centrifuges_greater = 39
+			}				
+		    any_country = { limit = { is_org_member = XNA } limited_war = THIS set_country_flag = NATO_intervention }
+			set_country_flag = declar_warnato
+			set_global_flag = NATO_war
+		}    		  
+ 		random = {
+				chance = 50
+			modifier = {
+				factor = 0.2							#10% chance
+				this = { is_org_member = XWP }
+
+			 }	
+			modifier = {
+				factor = 0.2
+				this = { is_major = yes }
+			 }			 
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 3
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 7
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 11
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 15
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 19
+			}
+			modifier = {
+				factor = 0.5
+				num_of_centrifuges_greater = 39
+			}				
+		this = {
+				add_country_modifier = {
+				name = NATO_armsembargo
+				duration = 180
+					}
+				} 
+		this = {
+				add_country_modifier = {
+				name = NATO_Nuclear_Embargo
+				duration = 180
+					}
+                }					
+								
+		any_org_member = {
+			orgtag = XAN
+			trade_embargo = yes
+		}
+        set_country_flag = armsembnato		
+	 } 
+			this = { relation = { who = XNA value = -50 } }
+			this = { relation = { who = XWP value = 50 } }
+			
+        }
+    }
+
+country_event = {               ### las hostilidades por amenaza o en defensa de un aliado han terminado
+	id = 700160
+
+	trigger = {
+        has_country_flag = NATO_intervention 
+        war = no		
+	   }
+	   
+	mean_time_to_happen = { months = 1 }
+
+	title = "EVTNAME700160"
+	desc = "EVTDESC700160"
+	picture = "ONU"
+
+	option = {
+			name = "EVTOPTA700160"
+	    ai_chance = { factor = 100 }
+        ##any_country = { limit = { is_org_member = XAN has_country_flag = NATO_intervention war = no } clr_country_flag = NATO_intervention }		
+		clr_country_flag = NATO_intervention ##marcar si se desmarca el anterior
+		clr_global_flag = NATO_war
+		any_country = { country_event 700163 }
+
+	}
+}
+
+country_event = {               ### se comprueba si algún miembro de la alianza "ha sido atacado"
+	id = 700161
+
+	trigger = {
+       war = yes 
+       not = { is_org_member = XNA }
+       not = { has_global_flag = NATO_war }
+	   not = { alignment = {
+			faction = allies
+			value = 30
+		     }
+			}
+	or= { 
+        not = { has_country_modifier = NATO_armsembargo }	
+		not = { has_country_modifier = NATO_Nuclear_Embargo }		
+		}			
+      not = { has_country_flag = falklands_war }			
+	  
+          		
+	}
+	   
+	mean_time_to_happen = { months = 6 }
+
+	title = "EVTNAME700161"
+	desc = "EVTDESC700161"
+	picture = "ONU"
+	
+	option = {
+			name = "EVTOPTA700161"
+	    ai_chance = { factor = 50 }
+         any_country = { end_war = THIS }
+		this = {
+				add_country_modifier = {
+				name = NATO_armsembargo
+				duration = 180
+					}
+				} 
+		this = {
+				add_country_modifier = {
+				name = NATO_Nuclear_Embargo
+				duration = 180
+					}
+				}				
+		any_org_member = {
+			orgtag = XAN
+			trade_embargo = yes
+		}
+        set_country_flag = armsembnato		 
+
+	}
+
+	option = {
+			name = "EVTOPTB700161"
+	    ai_chance = { factor = 50
+			modifier = {
+				factor = 0.2							#10% chance
+				this = { is_org_member = XWP }
+
+			 }	
+			modifier = {
+				factor = 0.1
+				this = { is_major = yes }
+			 }			 
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 3
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 7
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 11
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 15
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 19
+			}
+			modifier = {
+				factor = 0.5
+				num_of_centrifuges_greater = 39
+			}
+
+		}
+		
+ 		random = {
+				chance = 50
+			modifier = {
+				factor = 0.1							#10% chance
+				this = { is_org_member = XWP }
+
+			 }	
+			modifier = {
+				factor = 0.1
+				this = { is_major = yes }
+			 }			 
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 3
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 7
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 11
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 15
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 19
+			}
+			modifier = {
+				factor = 0.5
+				num_of_centrifuges_greater = 39
+			}				
+		random_country = { limit = { alignment = { faction = allies value = 80 } war_with = this } country_event  700162 }
+		set_country_flag = declar_war_allynato
+		}    		  
+ 		random = {
+				chance = 50
+			modifier = {
+				factor = 0.2							#10% chance
+				this = { is_org_member = XWP }
+
+			 }	
+			modifier = {
+				factor = 0.2
+				this = { is_major = yes }
+			 }			 
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 3
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 7
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 11
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 15
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 19
+			}
+			modifier = {
+				factor = 0.5
+				num_of_centrifuges_greater = 39
+			}				
+		this = {
+				add_country_modifier = {
+				name = NATO_armsembargo
+				duration = 180
+					}
+				} 
+		this = {
+				add_country_modifier = {
+				name = NATO_Nuclear_Embargo
+				duration = 180
+					}
+				}				
+		any_org_member = {
+			orgtag = XAN
+			trade_embargo = yes
+		}
+       	set_country_flag = armsembnato
+	} 
+		this = { relation = { who = XNA value = -50 } }
+		this = { relation = { who = XWP value = 50 } }		
+
+
+
+	}
+}
+		
+	country_event = {
+		
+		id = 700162
+
+		is_triggered_only = yes
+
+		title = "EVTNAME700162"
+		desc = "EVTDESC700162"
+		picture = "1945_UN_charter"
+
+		option = {
+		name = "EVTOPTA700162"
+	    ai_chance = { factor = 100 }
+		random = {
+				chance = 50
+			modifier = {
+				factor = 0.2							#10% chance
+				this = { is_org_member = XWP }
+
+			 }	
+			modifier = {
+				factor = 0.1
+				this = { is_major = yes }
+			 }			 
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 3
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 7
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 11
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 15
+			}
+			modifier = {
+				factor = 0.75
+				num_of_centrifuges_greater = 19
+			}
+			modifier = {
+				factor = 0.5
+				num_of_centrifuges_greater = 39
+			}				
+		any_country = { limit = { is_org_member = XNA } limited_war = this set_country_flag = NATO_intervention }  ####hay que vigilar si es "this" o "from"
+		set_country_flag = NATO_intervention
+		set_global_flag = NATO_war
+		any_country = { country_event 700173 }
+			}		
+			this = { relation = { who = XNA value = -50 } }
+			this = { relation = { who = XWP value = 50 } }
+	}
+	
+ }
+
+	country_event = {
+		
+		id = 700163
+
+		is_triggered_only = yes
+
+	title = "EVTNAME700163"
+	desc = "EVTDESC700163"
+	picture = "ONU"
+
+	option = {
+        name = "EVTOPTA700163"	
+	    ai_chance = { factor = 100 }
+	}
+ }	
+	
+	country_event = {
+		
+		id = 700172
+
+		is_triggered_only = yes
+
+	title = "EVTNAME700172"
+	desc = "EVTDESC700172"
+	picture = "ONU"
+
+	option = {
+        name = "EVTOPTA700172"	
+	    ai_chance = { factor = 100 }
+	}
+ }
+	
+	country_event = {
+		
+		id = 700173
+
+		is_triggered_only = yes
+
+	title = "EVTNAME700173"
+	desc = "EVTDESC700173"
+	picture = "ONU"
+
+	option = {
+        name = "EVTOPTA700173"	
+	    ai_chance = { factor = 100 }
+	}
+ }	
+ 
+country_event = {               ### 
+	id = 700180
+
+	trigger = {
+        has_country_flag = NATO_armsembargo
+        not = { has_country_modifier = NATO_armsembargo }
+        not = { has_country_modifier = NATO_Nuclear_Embargo }		
+        		
+	   }
+	   
+	mean_time_to_happen = { months = 1 }
+
+	title = "EVTNAME700180"
+	desc = "EVTDESC700180"
+	picture = "ONU"
+
+	option = {
+			name = "EVTOPTA700180"
+	    ai_chance = { factor = 100 }
+        clr_country_flag = NATO_armsembargo
+		any_org_member = {
+			orgtag = XAN
+			arms_embargo_cancel = yes
+		}
+
+	}
+}
+
+country_event = {               ### 
+	id = 700182
+
+	is_triggered_only = yes
+
+	title = "EVTNAME700182"
+	desc = "EVTDESC700182"
+	picture = "ONU"
+
+	option = {
+			name = "EVTOPTA700182"
+	    ai_chance = { factor = 100 }
+		}
+  }
+  

@@ -1,0 +1,115 @@
+#WomensRightsConvention_decisions.txt
+#UN Women's Rights Convention
+
+#UN Secretary General:
+	#dec_UN_raise_womens_rights_convention - Raise the UN Women's Rights Convention in the General Assembly
+	#dec_UN_womens_rights_convention_disable_voting_notifications - Disable UN Voting Notifications
+	
+#Global:
+	#dec_UN_ratify_womens_rights_convention - Ratify the UN Women's Rights Convention
+	#dec_UN_withdraw_from_womens_rights_convention - Withdraw from the UN Women's Rights Convention
+	
+diplomatic_decisions = {
+## UN Secretary General ##
+	#dec_UN_raise_womens_rights_convention - Raise the UN Women's Rights Convention in the General Assembly
+	dec_UN_raise_womens_rights_convention = {
+		category = international
+		picture = "1979_CEDAW"
+		potential = {
+			#year = 1978
+			NOT = { has_global_flag = gflag_UN_womens_rights_convention_raised }
+			NOT = { has_global_flag = gflag_UN_resolution_active }
+			is_org_leader = XUN
+		}
+		
+		allow = {
+			NOT = { 
+				USA = { has_country_modifier = mod_UN_womens_rights_convention_failure_delay }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			set_global_flag = gflag_UN_womens_rights_convention_raised
+			set_global_flag = gflag_UN_resolution_active
+			country_event = 11600
+		}
+	}
+	
+	#dec_UN_womens_rights_convention_disable_voting_notifications - Disable UN Voting Notifications
+	dec_UN_womens_rights_convention_disable_voting_notifications = {
+		category = international
+		picture = "1979_CEDAW_2"
+		
+		potential = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_womens_rights_convention_voting
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		effect = {
+			clr_global_flag = gflag_UN_voting_notifications
+		}
+	}
+	
+## Global ##
+	#dec_UN_ratify_womens_rights_convention - Ratify the UN Women's Rights Convention
+	dec_UN_ratify_womens_rights_convention = {
+		category = international
+		picture = "1979_CEDAW_2"
+		potential = {
+			is_org_member = XUN
+			NOT = { has_country_flag = flag_UN_womens_rights_convention_ratified }
+			has_global_flag = gflag_UN_womens_rights_convention_passes
+		}
+		
+		allow = {
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			NOT = { intelligence_policy = wet_operations_pol }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			set_country_flag = flag_UN_womens_rights_convention_ratified
+			country_event = 11612
+		}
+	}
+	
+	#dec_UN_withdraw_from_womens_rights_convention - Withdraw from the UN Women's Rights Convention
+	dec_UN_withdraw_from_womens_rights_convention = {
+		category = international
+		picture = "1979_CEDAW_2"
+		potential = {
+			is_org_member = XUN
+			has_country_flag = flag_UN_womens_rights_convention_ratified
+		}
+		
+		allow = {
+			NOT = { has_country_flag = "UN_EMBARGO" }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			clr_country_flag = flag_UN_womens_rights_convention_ratified
+			country_event = 11614
+		}
+	}
+	
+
+}

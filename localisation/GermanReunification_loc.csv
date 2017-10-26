@@ -1,0 +1,177 @@
+##################################################;;;;;;;;;;;;;;x
+# Country Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## DDR ##;;;;;;;;;;;;;;x
+mod_DDR_joins_FRG_delay;Reunification Chance Postponed;;;;;;;;;;;;;x
+mod_DDR_joins_FRG_delay_longer;Reunification Chance Postponed;;;;;;;;;;;;;x
+mod_DDR_demand_west_german_integration_delay;Reunification Demand Postponed;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## FRG ##;;;;;;;;;;;;;;x
+mod_FRG_joins_FRG_delay;Reunification Chance Postponed;;;;;;;;;;;;;x
+mod_FRG_joins_FRG_delay_longer;Reunification Chance Postponed;;;;;;;;;;;;;x
+mod_FRG_demand_east_german_integration_delay;Reunification Demand Postponed;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## DDR ##;;;;;;;;;;;;;;x
+dec_DDR_form_germany_title;Form Germany;;;;;;;;;;;;;x
+dec_DDR_form_germany_desc;Reunite Germany as a single nation under 'the Act of German Unity'. As we currently hold the key of Germany in our hands with all crucial territory within our domain, we can finally lay the remains of World War II at rest and proclaim German Unity.;;;;;;;;;;;;;x
+dec_DDR_demand_west_german_integration_title;Demand reunification;;;;;;;;;;;;;x
+dec_DDR_demand_west_german_integration_desc;International plans for the unification of Germany were made even before the establishment of the two German states. Initially drawn up by the Soviet Union in the so called 'Stalin Note', this notion of one German state can be realized by establishing political or diplomatic dominance and officially demanding the disseverment of West Germany. Though being a high risk international gamble it offers great rewards. ;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## FRG ##;;;;;;;;;;;;;;x
+dec_FRG_form_germany_title;Form Germany;;;;;;;;;;;;;x
+dec_FRG_form_germany_desc;Reunite Germany as a single nation under 'the Act of German Unity'. As we currently hold the key of Germany in our hands with all crucial territory within our domain, we can finally lay the remains of World War II at rest and proclaim German Unity.;;;;;;;;;;;;;x
+dec_FRG_demand_east_german_integration_title;Demand reunification by East Germany;;;;;;;;;;;;;x
+dec_FRG_demand_east_german_integration_desc;International plans for the unification of Germany were made even before the establishment of the two German states. The notion of one German state can be realized by establishing political or diplomatic dominance and officially demanding the disseverment of West Germany. Though being a high risk international gamble it offers great rewards. ;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## GER ##;;;;;;;;;;;;;;x
+dec_GER_move_capital_to_berlin_title;Move Capital to Berlin;;;;;;;;;;;;;x
+dec_GER_move_capital_to_berlin_desc;Now that we have reunited Germany, we may move our capital back to Berlin from Bonn. The act's full official title is 'Act for the implementation of the enactment of the German Bundestag for the completion of the German unity'. It regulates the move of the German Bundestag and parts of the government from Bonn to Berlin. As an act of compensation, it also regulates the move of certain Federal agencies and other federal facilities to Bonn in ordet to preserve Bonn as a location of politics.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## SOV ##;;;;;;;;;;;;;;x
+dec_SOV_reunite_germany_title;Reunite Germany;;;;;;;;;;;;;x
+dec_SOV_reunite_germany_desc;With both East and West Germany within the Warsaw Pact, we may choose to reunite Germany as a single nation under 'the Act of German Unity'. Initially drawn up by the Soviet Union in the so called 'Stalin Note' and seen at the time as being a high risk international gamble, we can finally lay the remains of World War II at rest and bolster our prestige.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## USA ##;;;;;;;;;;;;;;x
+dec_USA_reunite_germany_title;Reunite Germany;;;;;;;;;;;;;x
+dec_USA_reunite_germany_desc;With both West and East Germany within NATO, we may choose to reunite Germany as a single nation under 'the Act of German Unity'. This is a great opportunity for us to finally lay the remains of World War II at rest and bolster our prestige.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## DDR ##;;;;;;;;;;;;;;x
+EVTNAME170100;German Unity;;;;;;;;;;;;;x
+EVTDESC170100;Conditions are right for us to takes steps towards Germany Unity. A Treaty has been drawn up and needs your approval to be passed through the legislative chambers of both German nations. It contains amendments to both nations’ constitutions that will adopt the Treaty whereby the East German state will officially dissolve itself and join West Germany as five new States. Will you approve such measures?;;;;;;;;;;;;;x
+EVTOPTA170100;Join West Germany;;;;;;;;;;;;;x
+EVTOPTB170100;Stay Independent;;;;;;;;;;;;;x
+EVTNAME170101;Offer of German Unity;;;;;;;;;;;;;x
+EVTDESC170101;Developments inside West Germany have increasingly moved towards Germany Unity. A Treaty has been drawn up and needs your approval to be passed through the legislative chambers of both German nations. It contains amendments to both nations’ constitutions that will adopt the Treaty whereby the West German state will officially dissolve itself and join East Germany. Will you approve such measures?;;;;;;;;;;;;;x
+EVTOPTA170101;Accept the offer;;;;;;;;;;;;;x
+EVTOPTB170101;Reject the offer;;;;;;;;;;;;;x
+EVTNAME170102;German Unity rejected ;;;;;;;;;;;;;x
+EVTDESC170102;West Germany has rejected our proposal of German Unity and in an official reply they have informed us that ‘A united German state was nothing more than an episode in history and we reject the notion and repudiate the continuity between our two cultures. We have our own separate identity and cannot under current circumstances accept a treaty that might violate or jeopardize that’.;;;;;;;;;;;;;x
+EVTOPTA170102;Unfortunate;;;;;;;;;;;;;x
+EVTNAME170103;Day of German Unity ;;;;;;;;;;;;;x
+EVTDESC170103;Joyous scenes play out all across Germany as people from East and West can finally freely cross the border. Long lost relatives meet, families unite, and strangers hug and kiss one another in the streets in a celebratory mood. Politicians and scholars talk about the beginning of 'inner reunification' in lifestyle, wealth, political beliefs and other matters. To commemorate the day that marks the official unification of the former East and West Germany, the day has been declared an official German national holiday, the Day of German Unity (Tag der deutschen Einheit).;;;;;;;;;;;;;x
+EVTOPTA170103;Great News;;;;;;;;;;;;;x
+EVTNAME170104;The German Question ;;;;;;;;;;;;;x
+EVTDESC170104;After 1945 and the defeat of the Third Reich, Germany became divided by allied occupation. Formalized in an official agreement, the occupation would eventually evolve into East Germany and West Germany, as well as the military occupation zone of Berlin. In fact, the US, the UK and France never formally acknowledged the authority of the East German government to govern East Berlin, as the official Allied protocol recognized only the authority of the Soviet Union in East Berlin in accordance with the occupation status of Berlin as a whole. This view was to be supported by the continued practice of patrols of Allied soldiers of all four Allies in all four sectors. Thus, occasionally Western Allied soldiers were on patrol in East Berlin and Soviet soldiers were patrolling in West Berlin. The patrols would continue uncontrolled on both sides, with the tacit agreement that no nation would use their patrolling privileges for helping Germans to flee each other’s sectors. Unlike East Berlin, the western sectors would become a political enclave, surrounded by East German territory and with special status. The Western Allies were guaranteed three air corridors to their sectors of Berlin, and the gratious Soviet Union also informally allowed road and rail access between West Berlin and the western parts of Germany. At first, this arrangement was officially only meant to be a temporary administrative structure, with all parties declaring that Germany and Berlin would soon be reunited. However, as the relations between the Soviet Union and the Western Allies seamed to sour, the joint administration of Germany and Berlin was destined to break down. ;;;;;;;;;;;;;x
+EVTOPTA170104;Okay;;;;;;;;;;;;;x
+EVTNAME170105;Integration demand;;;;;;;;;;;;;x
+EVTDESC170105;A Treaty has been drawn up by West Germany and needs your approval to be passed through the legislative chambers of both German nations. It contains amendments to both nations’ constitutions that will adopt the Treaty whereby the our state will officially dissolve itself and join West Germany. Will you approve such measures?;;;;;;;;;;;;;x
+EVTOPTA170105;Very well;;;;;;;;;;;;;x
+EVTOPTB170105;No;;;;;;;;;;;;;x
+EVTNAME170106;$FROM$ agrees to our integration;;;;;;;;;;;;;x
+EVTDESC170106;At an official international conference in West Berlin called by the Federal Republic of Germany, the West German delegation made a demand to dissolve our nation. To reduce the aggravated threat of a new World War, $FROM$ is averting a crisis and giving us a chilling and shocking statement that our nation is to be reunified and integrated into a single German state honoring the demands of West Germany. What action should we take?  ;;;;;;;;;;;;;x
+EVTOPTA170106;Very well;;;;;;;;;;;;;x
+EVTOPTB170106;Secede from the Warsaw Pact;;;;;;;;;;;;;x
+EVTNAME170107;German Unity accepted;;;;;;;;;;;;;x
+EVTDESC170107;West Germany has accepted our proposal of German Unity. Our two constitutions have been formally merged ensuring that all necessary processes have been set in motion to secure the continuity of our state in history. By this landmark act, we have officially expanded our laws and policies to all our new citizens. The internal borders are no more as West Germany officially voted to dissolve itself and to join our state.  ;;;;;;;;;;;;;x
+EVTOPTA170107;Good news;;;;;;;;;;;;;x
+EVTNAME170108;Integration acceptance;;;;;;;;;;;;;x
+EVTDESC170108;West Germany has accepted our proposal of German Unity. Our two constitutions have been formally merged ensuring that all necessary processes have been set in motion to secure the continuity of our state in history. By this landmark act, we have officially expanded our laws and policies to all our new citizens. The internal borders are no more as West Germany officially voted to dissolve itself and to join our state.  ;;;;;;;;;;;;;x
+EVTOPTA170108;Good news;;;;;;;;;;;;;x
+EVTNAME170109;Demand rejected;;;;;;;;;;;;;x
+EVTDESC170109;West Germany has rejected our proposal of German Unity and in an official reply they have informed us that ‘A united German state was nothing more than an episode in history and we reject the notion and repudiate the continuity between our two cultures. We have our own separate identity and cannot under current circumstances accept a treaty that might violate or jeopardize that’.;;;;;;;;;;;;;x
+EVTOPTA170109;Unfortunate;;;;;;;;;;;;;x
+EVTNAME170110;German Unity Rejected;;;;;;;;;;;;;x
+EVTDESC170110;In order to begin negotiations on a Treaty of German reunification, conditions must be certain, that an independent Germany would not possess hostile intentions towards NATO, its allies or affiliates. In particular a strong German military would be a step back into a Europe that was controlled by militaristic and aggressive rivalry. Therefore, NATO has no other choice then to rejected East German calls for German Unity.;;;;;;;;;;;;;x
+EVTOPTA170110;Unfortunate;;;;;;;;;;;;;x
+EVTNAME170111;$FROM$ conditions;;;;;;;;;;;;;x
+EVTDESC170111;In order to begin negotiations on a Treaty of German reunification, conditions must be certain, that an independent Germany would be neutral towards NATO, its allies or affiliates. In particular a strong German military would be a step back into a Europe that was controlled by militaristic and aggressive rivalry. Therefore, NATO conditions approval of German Unity to a state without a formal alliance to the Warsaw Pact.  ;;;;;;;;;;;;;x
+EVTOPTA170111;Agree to the conditions;;;;;;;;;;;;;x
+EVTOPTA170112;Reject them;;;;;;;;;;;;;x
+EVTNAME170112;German Unity;;;;;;;;;;;;;x
+EVTDESC170112;Diplomatic actions have been exhausted and West Germany stands increasingly more isolated. The time has come for us to make a decision of either risking it all by take matter into our own hands or back down. This decision can potentially carry a devastating impact as it can lead us down a path of all-out war. What is your decision?;;;;;;;;;;;;;x
+EVTOPTA170112;Reunite by force!;;;;;;;;;;;;;x
+EVTOPTA170112;Do not push the issue further;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## FRG ##;;;;;;;;;;;;;;x
+EVTNAME172100;German Unity;;;;;;;;;;;;;x
+EVTDESC172100;Conditions are right for us to takes steps towards Germany Unity. A Treaty has been drawn up and needs your approval to be passed through the legislative chambers of both German nations. It contains amendments to both nations’ constitutions that will adopt the Treaty whereby the West German state will officially dissolve itself and join East Germany. Will you approve such measures?;;;;;;;;;;;;;x
+EVTOPTA172100;Join East Germany;;;;;;;;;;;;;x
+EVTOPTB172100;Stay Independent;;;;;;;;;;;;;x
+EVTNAME172101;Offer of German Unity;;;;;;;;;;;;;x
+EVTDESC172101;Developments inside East Germany have increasingly moved towards Germany Unity. A Treaty has been drawn up and needs your approval to be passed through the legislative chambers of both German nations. It contains amendments to both nations’ constitutions that will adopt the Treaty whereby the East German state will officially dissolve itself and join West Germany as five new States. Will you approve such measures?;;;;;;;;;;;;;x
+EVTOPTA172101;Accept the offer;;;;;;;;;;;;;x
+EVTOPTB172101;Reject the offer;;;;;;;;;;;;;x
+EVTNAME172102;German Unity rejected ;;;;;;;;;;;;;x
+EVTDESC172102;East Germany has rejected our proposal of German Unity and in an official reply they have informed us that ‘A united German state was nothing more than an episode in history and we reject the notion and repudiate the continuity between our two cultures. We have our own separate identity and cannot under current circumstances accept a treaty that might violate or jeopardize that’.;;;;;;;;;;;;;x
+EVTOPTA172102;Unfortunate;;;;;;;;;;;;;x
+EVTNAME172103;Day of German Unity ;;;;;;;;;;;;;x
+EVTDESC172103;Joyous scenes play out all across Germany as people from East and West can finally freely cross the border. Long lost relatives meet, families unite, and strangers hug and kiss one another in the streets in a celebratory mood. Politicians and scholars talk about the beginning of 'inner reunification' in lifestyle, wealth, political beliefs and other matters. To commemorate the day that marks the official unification of the former East and West Germany, the day has been declared an official German national holiday, the Day of German Unity (Tag der deutschen Einheit).;;;;;;;;;;;;;x
+EVTOPTA172103;Fantastic News!;;;;;;;;;;;;;x
+EVTNAME172104;The German Question ;;;;;;;;;;;;;x
+EVTDESC172104;After 1945 and the defeat of the Third Reich, Germany became divided by allied occupation. Formalized in an official agreement the occupation would eventually evolve into East Germany and West Germany, as well as the military occupation zone of Berlin. According to the legal theory followed by the Western Allies, ending the Berlin occupation zones required a quadripartite agreement. In lack of such, the American, British, and French occupation sectors of Berlin would form West Berlin as a free city under the formal administration of the Western Allies instead of West Germany but maintain that the sectors were run by all the four former victorious powers.  This view was to be supported by the continued practice of patrols of Allied soldiers of all four Allies in all four sectors. Thus, occasionally Western Allied soldiers were on patrol in East Berlin and Soviet soldiers were patrolling in West Berlin. The patrols would continue uncontrolled on both sides, with the tacit agreement that no nation would use their patrolling privileges for helping Germans to flee each other’s sectors. West Berlin, a political enclave, surrounded by East German territory, would have special status. The Western Allies were guaranteed three air corridors to their sectors of Berlin, and the Soviets also informally allowed road and rail access between West Berlin and the western parts of Germany. At first, this arrangement was officially only meant to be a temporary administrative structure, with all parties declaring that Germany and Berlin would soon be reunited. However, as the relations between the Western Allies and the Soviet Union seamed to sour, the joint administration of Germany and Berlin was destined to break down. ;;;;;;;;;;;;;x
+EVTOPTA172104;Okay;;;;;;;;;;;;;x
+EVTNAME172105;Integration demand;;;;;;;;;;;;;x
+EVTDESC172105;A Treaty has been drawn up by East Germany and needs your approval to be passed through the legislative chambers of both German nations. It contains amendments to both nations’ constitutions that will adopt the Treaty whereby the our state will officially dissolve itself and join East Germany. Will you approve such measures?;;;;;;;;;;;;;x
+EVTOPTA172105;Very well;;;;;;;;;;;;;x
+EVTOPTB172105;No;;;;;;;;;;;;;x
+EVTNAME172106;$FROM$ agrees to our integration;;;;;;;;;;;;;x
+EVTDESC172106;At an official international conference in East Berlin called by the German Democratic Republic, the East German delegation made a demand to dissolve our nation. To reduce the aggravated threat of a new World War, $FROM$ is averting a crisis and giving us a chilling and shocking statement that our nation is to be reunified and integrated into a single German state honoring the demands of East Germany. What action should we take?  ;;;;;;;;;;;;;x
+EVTOPTA172106;Very well;;;;;;;;;;;;;x
+EVTOPTB172106;Secede from NATO;;;;;;;;;;;;;x
+EVTNAME172107;German Unity accepted;;;;;;;;;;;;;x
+EVTDESC172107;East Germany has accepted our proposal of German Unity. Our two constitutions have been formally merged ensuring that all necessary processes have been set in motion to secure the continuity of our state in history. By this landmark act, we have officially expanded our laws and policies to all our new citizens. The internal borders are no more as East Germany officially voted to dissolve itself and to join our state.  ;;;;;;;;;;;;;x
+EVTOPTA172107;Good news;;;;;;;;;;;;;x
+EVTNAME172108;Integration acceptance;;;;;;;;;;;;;x
+EVTDESC172108;East Germany has accepted our proposal of German Unity. Our two constitutions have been formally merged ensuring that all necessary processes have been set in motion to secure the continuity of our state in history. By this landmark act, we have officially expanded our laws and policies to all our new citizens. The internal borders are no more as East Germany officially voted to dissolve itself and to join our state.  ;;;;;;;;;;;;;x
+EVTOPTA172108;Good news;;;;;;;;;;;;;x
+EVTNAME172109;Demand rejected;;;;;;;;;;;;;x
+EVTDESC172109;East Germany has rejected our proposal of German Unity and in an official reply they have informed us that ‘A united German state was nothing more than an episode in history and we reject the notion and repudiate the continuity between our two cultures. We have our own separate identity and cannot under current circumstances accept a treaty that might violate or jeopardize that’.;;;;;;;;;;;;;x
+EVTOPTA172109;Unfortunate;;;;;;;;;;;;;x
+EVTNAME172110;German Unity Rejected;;;;;;;;;;;;;x
+EVTDESC172110;In order to begin negotiations on a Treaty of German reunification, conditions must be certain, that an independent Germany would not possess hostile intentions towards the Warsaw Pact, its allies or affiliates. In particular a strong German military would be a step back into a Europe that was controlled by militaristic and aggressive rivalry. Therefore, the Warsaw Pact has no other choice then to rejected West German calls for German Unity.;;;;;;;;;;;;;x
+EVTOPTA172110;Unfortunate;;;;;;;;;;;;;x
+EVTNAME172111;$FROM$ conditions;;;;;;;;;;;;;x
+EVTDESC172111;In order to begin negotiations on a Treaty of German reunification, conditions must be certain, that an independent Germany would be neutral towards the Warsaw Pact, its allies or affiliates. In particular a strong German military would be a step back into a Europe that was controlled by militaristic and aggressive rivalry. Therefore, the Warsaw Pact conditions approval of German Unity to a state without a formal alliance to NATO.  ;;;;;;;;;;;;;x
+EVTOPTA172111;Agree to the conditions;;;;;;;;;;;;;x
+EVTOPTA172112;Reject them;;;;;;;;;;;;;x
+EVTNAME172112;German Unity;;;;;;;;;;;;;x
+EVTDESC172112;Diplomatic actions have been exhausted and East Germany stands increasingly more isolated. The time has come for us to make a decision of either risking it all by take matter into our own hands or back down. This decision can potentially carry a devastating impact as it can lead us down a path of all-out war. What is your decision?;;;;;;;;;;;;;x
+EVTOPTA172112;Reunite by force!;;;;;;;;;;;;;x
+EVTOPTA172112;Do not push the issue further;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## SOV ##;;;;;;;;;;;;;;x
+EVTNAME326140;West German demand;;;;;;;;;;;;;x
+EVTDESC326140;At an international conference in West Berlin called by the Federal German Republic, the West German state made a demand that all international relations should be negotiated with a single, united German government. 'The Warsaw Pact must agree on the formation of this government for the sake of all German people and the peaceful reunification of Germany' the statement read. They demand the dissolving of East Germany and its integration into a single state.;;;;;;;;;;;;;x
+EVTOPTA326140;Reject it;;;;;;;;;;;;;x
+EVTOPTB326140;Only if Germany leaves NATO;;;;;;;;;;;;;x
+EVTOPTB326140;Very well;;;;;;;;;;;;;x
+EVTNAME326141;Conditions accepted;;;;;;;;;;;;;x
+EVTDESC326141;We recognize that Germany has gone through a long transition. Our foreign minister summed it up by saying that: 'A divided Germany is the past and any issues that had existed previously, it seemed perfectly reasonable to lay them to rest. For us, the question is no longer should Germany unify, rather, under what circumstances? With persistency, our line to use reunification as a way to push a united Germany out of NATO towards neutrality has succeeded. West Germany has accepted our condition!';;;;;;;;;;;;;x
+EVTOPTA326141;Good news;;;;;;;;;;;;;x
+EVTNAME326142;Conditions rejected;;;;;;;;;;;;;x
+EVTDESC326142;Despite international pressure from the Warsaw Pact, West Germany has issued a diplomatic statement delivered to our ambassador rejecting calls for constraint regarding German Unity. ‘Germany’s foreign affairs are not subject to Warsaw Pact policy and as a sovereign nation the German people reserve the sole right to dictate demands in Berlin’. They are defiant and in violation of our demands they have declared their intentions to reunite Germany and keep the united German state firmly allied and committed to NATO. ;;;;;;;;;;;;;x
+EVTOPTA326142;Very Unfortunate;;;;;;;;;;;;;x
+EVTNAME326143;East German discontent;;;;;;;;;;;;;x
+EVTDESC326143;As a formal objections to our stance on the question of ‘German Unity’, East Germany declared it’s suspension of military cooperation and its withdrawal from the Warsaw Pact. Thus their membership in the Treaty of Friendship, Cooperation and Mutual Assistance is at an end. ;;;;;;;;;;;;;x
+EVTOPTA326143;Shameful turncoats!;;;;;;;;;;;;;x
+EVTNAME326144;Germany Unity;;;;;;;;;;;;;x
+EVTDESC326144;Joyous scenes play out all across Germany as people from East and West can finally freely cross the border. Long lost relatives meet, families unite, and strangers hug and kiss one another in the streets in a celebratory mood. Politicians and scholars talk about the beginning of 'inner reunification' in lifestyle, wealth, political beliefs and other matters. To commemorate the day that marks the official unification of the former East and West Germany, the day has been declared an official German national holiday, the Day of German Unity (Tag der deutschen Einheit).;;;;;;;;;;;;;x
+EVTOPTA326144;A momentous day;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## USA ##;;;;;;;;;;;;;;x
+EVTNAME354140;East German demand;;;;;;;;;;;;;x
+EVTDESC354140;At an international conference in East Berlin called by the German Democratic Republic, the East German state made a demand that all international relations should be negotiated with a single, united German government. NATO must agree on the formation of this government for the sake of all patriotic forces of the German people and the peaceful reunification of Germany. They demand the dissolving of West Germany and its integration into a single state.;;;;;;;;;;;;;x
+EVTOPTA354140;Reject it;;;;;;;;;;;;;x
+EVTOPTB354140;Only if Germany leaves the Warsaw Pact;;;;;;;;;;;;;x
+EVTOPTB354140;Very well;;;;;;;;;;;;;x
+EVTNAME354141;Conditions accepted;;;;;;;;;;;;;x
+EVTDESC354141;We recognize that Germany has gone through a long transition. Our foreign minister summed it up by saying that: 'A divided Germany is the past and any issues that had existed previously, it seemed perfectly reasonable to lay them to rest. For us, the question is no longer should Germany unify, rather, under what circumstances? With persistency, our line to use reunification as a way to push a united Germany out of the Warsaw Pact towards neutrality has succeeded. East Germany has accepted our condition!';;;;;;;;;;;;;x
+EVTOPTA354141;Good news;;;;;;;;;;;;;x
+EVTNAME354142;East Germany rejects our conditions for reunification;;;;;;;;;;;;;x
+EVTDESC354142;Despite international pressure from NATO, East Germany has issued a diplomatic statement delivered to our ambassador rejecting calls for constraint regarding German Unity. ‘Germany’s foreign affairs are not subject to NATO policy and as a sovereign nation the German people reserve the sole right to dictate demands in Berlin’. They are defiant and in violation of our demands they have declared their intentions to reunite Germany and keep the united German state firmly allied and committed to the Warsaw Pact. ;;;;;;;;;;;;;x
+EVTOPTA354142;Very Unfortunate;;;;;;;;;;;;;x
+EVTNAME354143;West German discontent;;;;;;;;;;;;;x
+EVTDESC354143;As a formal objections to our stance on the question of ‘German Unity’, West Germany declared it’s suspension of military cooperation and its withdrawal from NATO. Thus their membership in the North-Atlantic Treaty Organization is at an end. ;;;;;;;;;;;;;x
+EVTOPTA354143;Shameful turncoats!;;;;;;;;;;;;;x
+EVTNAME354144;Germany Unity;;;;;;;;;;;;;x
+EVTDESC354144;Joyous scenes play out all across Germany as people from East and West can finally freely cross the border. Long lost relatives meet, families unite, and strangers hug and kiss one another in the streets in a celebratory mood. Politicians and scholars talk about the beginning of 'inner reunification' in lifestyle, wealth, political beliefs and other matters. To commemorate the day that marks the official unification of the former East and West Germany, the day has been declared an official German national holiday, the Day of German Unity (Tag der deutschen Einheit).;;;;;;;;;;;;;x
+EVTOPTA354144;A momentous day;;;;;;;;;;;;;x
+EVTNAME354145;The fate of West Berlin;;;;;;;;;;;;;x
+EVTDESC354145;With German Unity looming around the corner, our position of continued control in West Berlin has fast become untenable. We have therefore in formal terms been asked to consent that times are changing and our presence to preserve peace and prosperity is no longer needed – in other words the Germans are throwing us out.;;;;;;;;;;;;;x
+EVTOPTA354145;Terrible setback!;;;;;;;;;;;;;x

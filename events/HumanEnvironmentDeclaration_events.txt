@@ -1,0 +1,689 @@
+#HumanEnvironmentDeclaration_events.txt
+#UN Human Environment Declaration
+
+#UN Secretary General:
+	#13600 - Raise the UN Human Environment Declaration for Voting - Triggered by dec_UN_raise_human_environment_declaration
+	#13601 - Should We Have Voting Notifications Or Not?
+	#13602 - UN Human Environment Declaration Resolution Fails in the General Assembly
+	#13603 - UN Human Environment Declaration Resolution Passes in the General Assembly
+	
+#Global:
+	#13610 - Vote on the UN Human Environment Declaration - Notifications Off
+	#13611 - Vote on the UN Human Environment Declaration - Notifications On (Major Event)
+	
+	
+## UN Secretary General ##
+	#13600 - Raise the UN Human Environment Declaration for Voting
+	country_event = {
+	
+		id = 13600
+		
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME13600"
+		desc = "EVTDESC13600"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA13600" 					#Large diplomatic investment
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			
+			#trigger = {
+			#	XUN = { prestige = 40 }
+			#}
+			#XUN  = { prestige_change = -40 }
+			
+			country_event = 13601
+		}
+
+		option = {
+			name = "EVTOPTB13600" 					#Small diplomatic investment
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			
+			#trigger = {
+			#	XUN = { prestige = 15 }
+			#}
+			#XUN  = { prestige_change = -15 }
+			
+			country_event = 13601
+		}
+
+		option = {
+			name = "EVTOPTC13600"					#No diplomatic investment
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			
+			country_event = 13601
+		}
+	}
+	
+	#13601 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 13601
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME13601"
+		desc = "EVTDESC13601"
+		picture = "xxxx"
+		
+		option = {
+			name = "EVTOPTA13601"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_human_environment_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_human_environment_declaration_voting
+		}
+		
+		option = {
+			name = "EVTOPTB13601"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_human_environment_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_human_environment_declaration_voting
+		}
+	
+	}
+	
+	#13602 - UN Human Environment Declaration Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 13602
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_human_environment_declaration_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME13602"
+		desc = "EVTDESC13602"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_human_environment_declaration_voting
+			set_global_flag = gflag_UN_human_environment_declaration_fails
+		}
+
+		option = {
+			name = "EVTOPTA13602"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			#XUN  = { prestige_change = -50 }
+			
+			#hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_human_environment_declaration_failure_delay
+						duration = 1460
+					}
+				}
+			#}
+			clr_global_flag = gflag_UN_human_environment_declaration_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#13603 - UN Human Environment Declaration Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 13603
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_human_environment_declaration_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME13603"
+		desc = "EVTDESC13603"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_human_environment_declaration_voting
+			clr_global_flag = gflag_UN_human_environment_declaration_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_human_environment_declaration_passes
+		}
+
+		option = {
+			name = "EVTOPTA13603"					#Excellent
+			clr_global_var = var_UN_votes_Total
+			
+			any_country = {
+				limit = {
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				add_country_modifier = {
+					name = mod_UN_human_environment_declaration
+					duration = -1
+				}
+			}
+			
+			#XUN  = { prestige_change = 50 }
+			
+			clr_global_flag = gflag_UN_human_environment_declaration_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+
+## Global ##
+	#13610 - Vote on the UN Human Environment Declaration - Notifications Off
+	country_event = {
+	
+		id = 13610
+		
+		trigger = {
+			has_country_flag = flag_UN_human_environment_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_human_environment_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME13610"
+		desc = "EVTDESC13610"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_human_environment_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_human_environment_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA13610"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.25
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.1
+					human_rights = separate_but_equal
+				}
+				modifier = {
+					factor = 1.5
+					domestic_policy = health_focus_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						domestic_policy = social_focus_pol
+						domestic_policy = educational_focus_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = detente_pol
+				}
+				modifier = {
+					factor = 1.5
+					nuclear_policy = nuclear_free_focus_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						rule_of_law = substantively_defined
+						rule_of_law = well_defined
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						education_policy = very_high_funding_edu_pol
+						education_policy = high_funding_edu_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_identity = civic_focus
+						national_identity = equality_focus
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB13610"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC13610"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						domestic_policy = industrial_focus_pol
+						domestic_policy = defence_focus_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						domestic_policy = commercial_focus_pol
+						domestic_policy = agricultural_focus_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.5
+					nuclear_policy = military_nuclear_focus_pol
+				}
+				modifier = {
+					factor = 1.25
+					nuclear_policy = mixed_nuclear_focus_pol
+				}
+				modifier = {
+					factor = 1.25
+					armaments_policy = nuclear_armaments_focus_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = thinly_defined
+						rule_of_law = narrowly_defined
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = corporate_focus
+						national_identity = state_building_focus
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+	
+	#13611 - Vote on the UN Human Environment Declaration - Notifications On
+	country_event = {
+	
+		id = 13611
+		
+		trigger = {
+			has_country_flag = flag_UN_human_environment_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_human_environment_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME13610"
+		desc = "EVTDESC13610"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_human_environment_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_human_environment_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA13610"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.25
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.1
+					human_rights = separate_but_equal
+				}
+				modifier = {
+					factor = 1.5
+					domestic_policy = health_focus_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						domestic_policy = social_focus_pol
+						domestic_policy = educational_focus_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = detente_pol
+				}
+				modifier = {
+					factor = 1.5
+					nuclear_policy = nuclear_free_focus_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						rule_of_law = substantively_defined
+						rule_of_law = well_defined
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						education_policy = very_high_funding_edu_pol
+						education_policy = high_funding_edu_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_identity = civic_focus
+						national_identity = equality_focus
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB13610"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC13610"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						domestic_policy = industrial_focus_pol
+						domestic_policy = defence_focus_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						domestic_policy = commercial_focus_pol
+						domestic_policy = agricultural_focus_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.5
+					nuclear_policy = military_nuclear_focus_pol
+				}
+				modifier = {
+					factor = 1.25
+					nuclear_policy = mixed_nuclear_focus_pol
+				}
+				modifier = {
+					factor = 1.25
+					armaments_policy = nuclear_armaments_focus_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = thinly_defined
+						rule_of_law = narrowly_defined
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = corporate_focus
+						national_identity = state_building_focus
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}	

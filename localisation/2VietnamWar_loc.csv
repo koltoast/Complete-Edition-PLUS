@@ -1,0 +1,171 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+1959_vietnam_war_title;Vietnam War;;;;;;;;;;;;;x
+1959_vietnam_war_desc;The Vietnam War was a Cold War-era military conflict that occurred in Vietnam, Laos, and Cambodia. This war followed the First Indochina War and was fought between North Vietnam, supported by its communist allies, and the government of South Vietnam, supported by the United States and other anti-communist countries. The Viet Cong, a lightly armed South Vietnamese communist common front directed by the North, largely fought a guerrilla war against anti-communist forces in the region.;;;;;;;;;;;;;x
+DRV_surrender_SVI_vietnam_war_title;Surrender to the South?;;;;;;;;;;;;;x
+DRV_surrender_SVI_vietnam_war_desc;We have been defeated in combat aswell as outside,  the situation grows worse by the day, all over North Vietnam our troops are captured, routed or turn sides. Should we surrender to the south and stop this bloodshed?;;;;;;;;;;;;;x
+1955_referendum_SVI_title;State of Vietnam referendum;;;;;;;;;;;;;x
+1955_referendum_SVI_desc;The referendum on the state of South Vietnam was used to determine the future form of government of the State of Vietnam, wether it should become a Monarchy or form a republic. There were reports of widespread electoral fraud on both sides with sometimes more votes than registered voters.;;;;;;;;;;;;;x
+SVI_surrender_DRV_vietnam_war_title;Surrender to the North?;;;;;;;;;;;;;x
+SVI_surrender_DRV_vietnam_war_desc;We have been defeated in combat aswell as outside,  the situation grows worse by the day, all over South Vietnam our troops are captured, routed or turn sides. Should we surrender to the north and stop this bloodshed?;;;;;;;;;;;;;x
+1959_US_vietnam_support_no_tonkin_title;Help South Vietnam (No Case for War);;;;;;;;;;;;;x
+1959_US_vietnam_support_no_tonkin_desc;South Vietnam is at war with the North, we should help the former against the latter to curb communist influence in the region. But joining without a good reason would be bad for our international relations aswell as at home.;;;;;;;;;;;;;x
+1959_US_vietnam_support_tonkin_title;Help South Vietnam (WITH Case for War);;;;;;;;;;;;;x
+1959_US_vietnam_support_tonkin_desc;South Vietnam is at war with the North, we should help the former against the latter to curb communist influence in the region. Now that the incident in the gulf of tonkin has happened maybe we should invade?;;;;;;;;;;;;;x
+vietnam_USA_leave_war_title;Leave Vietnam?;;;;;;;;;;;;;x
+vietnam_USA_leave_war_desc;Our people urge us to leave the war in vietnam to solve itself, people protest more and more against it as our reasons for staying there become less and less valid, maybe we should leave?;;;;;;;;;;;;;x
+vietnam_USA_leave_war_DRV_victory_title;Leave Vietnam?;;;;;;;;;;;;;x
+vietnam_USA_leave_war_DRV_victory_desc;Even with our help, North Vietnam was managed to defeat the south.;;;;;;;;;;;;;x
+1959_vietnam_war_CHC_DRV_title;Aid North Vietnam;;;;;;;;;;;;;x
+1959_vietnam_war_CHC_DRV_desc;North Vietnam is in dire need of aid in their war against the South. Perhaps it would be wise to send them supplies or, if the situation allows it, to intervene directly through military action.;;;;;;;;;;;;;x
+1959_vietnam_war_CHI_SVI_title;Aid South Vietnam;;;;;;;;;;;;;x
+1959_vietnam_war_CHI_SVI_desc;South Vietnam is in dire need of aid in their war against the North. Perhaps it would be wise to send them supplies or, if the situation allows it, to intervene directly through military action.;;;;;;;;;;;;;x
+1959_vietnam_war_ENG_SVI_title;Aid South Vietnam;;;;;;;;;;;;;x
+1959_vietnam_war_ENG_SVI_desc;South Vietnam is in dire need of aid in their war against the North. Perhaps it would be wise to send them supplies or, if the situation allows it, to intervene directly through military action.;;;;;;;;;;;;;x
+1959_vietnam_war_FRA_SVI_title;Aid South Vietnam;;;;;;;;;;;;;x
+1959_vietnam_war_FRA_SVI_desc;South Vietnam is in dire need of aid in their war against the North. Perhaps it would be wise to send them supplies or, if the situation allows it, to intervene directly through military action.;;;;;;;;;;;;;x
+1959_vietnam_war_SOV_DRV_title;Aid North Vietnam;;;;;;;;;;;;;x
+1959_vietnam_war_SOV_DRV_desc;North Vietnam is in dire need of aid in their war against the South. Perhaps it would be wise to send them supplies or, if the situation allows it, to intervene directly through military action.;;;;;;;;;;;;;x
+EVTNAME177009;The Vietnam War;;;;;;;;;;;;;x
+EVTDESC177009;The invasion of South Vietnam would be a costly one, several nations such as the USA might come to the South Vietnamese aid, but in due time and with the proper tactics we should be able to reunify the nation once more. On the other hand we could proclaim our support for a divided Vietnam. One way or the other, Indochina will change dramatically.;;;;;;;;;;;;;x
+EVTOPTA177009;Let us unify our nation!;;;;;;;;;;;;;x
+EVTOPTB177009;Not yet;;;;;;;;;;;;;x
+EVTOPTC177009;We must learn to live divided;;;;;;;;;;;;;x
+EVTNAME177010;Formation of the Viet Cong;;;;;;;;;;;;;x
+EVTDESC177010;The Viet Cong, or National Liberation Front (NLF), was a political organization and army in South Vietnam and Cambodia that fought the South Vietnamese government during the Vietnam War. It had both guerrilla and regular army units, as well as a network of cadres who organized peasants in the territory it controlled. Many soldiers were recruited in South Vietnam. During the war, communists and anti-war spokesmen insisted the Viet Cong was an insurgency indigenous to the South, while the South Vietnamese government portrayed the group as a tool of the North.;;;;;;;;;;;;;x
+EVTOPTA177010;Help arm the Viet Cong;;;;;;;;;;;;;x
+EVTOPTB177010;They don't need our aid;;;;;;;;;;;;;x
+EVTNAME177011;USA leaves Vietnam;;;;;;;;;;;;;x
+EVTDESC177011;Even outnumbered the resistance we have offered the USA has been enough that we have forced them to leave Vietnam, now is the time to go on the offensive and reunify our nation!;;;;;;;;;;;;;x
+EVTOPTA177011;Great!;;;;;;;;;;;;;x
+EVTNAME177012;Surrender?;;;;;;;;;;;;;x
+EVTDESC177012;We have been defeated in combat aswell as outside,  the situation grows worse by the day, all over North Vietnam our troops are captured, routed or turn sides. Should we surrender to the south and stop this bloodshed?;;;;;;;;;;;;;x
+EVTOPTA177012;Surrender (Game Over);;;;;;;;;;;;;x
+EVTOPTB177012;We can still win!;;;;;;;;;;;;;x
+EVTNAME177013;North Vietnam wins the war;;;;;;;;;;;;;x
+EVTDESC177013;We have done it, the south has surrendered to our superior army, our nation has finally been reunified. The south is still bound to bring us many problems, especially while we reintegrate it, but as things stand the future looks bright for the now unified Vietnam!;;;;;;;;;;;;;x
+EVTOPTA177013;A great day!;;;;;;;;;;;;;x
+EVTNAME333000;State of Vietnam Referendum;;;;;;;;;;;;;x
+EVTDESC333000;The referendum on the state of South Vietnam was used to determine the future form of government of the State of Vietnam, wether it should become a Monarchy or form a republic. There were reports of widespread electoral fraud on both sides with sometimes more votes than registered voters.;;;;;;;;;;;;;x
+EVTOPTA333000;Republic;;;;;;;;;;;;;x
+EVTOPTB333000;Monarchy;;;;;;;;;;;;;x
+EVTNAME333001;Formation of the Viet Cong;;;;;;;;;;;;;x
+EVTDESC333001;The Viet Cong, or National Liberation Front (NLF), was a political organization and army in South Vietnam and Cambodia that fought the South Vietnamese government during the Vietnam War. It had both guerrilla and regular army units, as well as a network of cadres who organized peasants in the territory it controlled. Many soldiers were recruited in South Vietnam. During the war, communists and anti-war spokesmen insisted the Viet Cong was an insurgency indigenous to the South, while the South Vietnamese government portrayed the group as a tool of the North.;;;;;;;;;;;;;x
+EVTOPTA333001;More enemies for us to crush!;;;;;;;;;;;;;x
+EVTNAME333002;The Viet Cong Strike!;;;;;;;;;;;;;x
+EVTDESC333002;All throughout the Vietnam War, vietcong forces attacked locations in South Vietnam through guerilla and hit and run tactics. These were mainly done to generate dissent within the South aswell as to sabotage supply lines.;;;;;;;;;;;;;x
+EVTOPTA333002;They will pay;;;;;;;;;;;;;x
+EVTNAME333003;The Viet Cong Strike!;;;;;;;;;;;;;x
+EVTDESC333003;All throughout the Vietnam War, vietcong forces attacked locations in South Vietnam through guerilla and hit and run tactics. These were mainly done to generate dissent within the South aswell as to sabotage supply lines.;;;;;;;;;;;;;x
+EVTOPTA333003;They will pay;;;;;;;;;;;;;x
+EVTNAME333004;USA leaves Vietnam;;;;;;;;;;;;;x
+EVTDESC333004;The USA has removed its forces from Vietnam, we can no longer count on the air and naval superiority they gave us, this is a grim day for the Republic.;;;;;;;;;;;;;x
+EVTOPTA333004;We are alone now...;;;;;;;;;;;;;x
+EVTNAME333005;South Vietnam wins the war;;;;;;;;;;;;;x
+EVTDESC333005;We have done it, the north has surrendered to our superior army, our nation has finally been reunified. The north is still bound to bring us many problems, especially while we reintegrate it, but as things stand the future looks bright for the Republic of a now unified Vietnam!;;;;;;;;;;;;;x
+EVTOPTA333005;A great day!;;;;;;;;;;;;;x
+EVTNAME333006;Surrender?;;;;;;;;;;;;;x
+EVTDESC333006;We have been defeated in combat aswell as outside,  the situation grows worse by the day, all over South Vietnam our troops are captured, routed or turn sides. Should we surrender to the north and stop this bloodshed?;;;;;;;;;;;;;x
+EVTOPTA333006;Surrender (Game Over);;;;;;;;;;;;;x
+EVTOPTB333006;We can still win!;;;;;;;;;;;;;x
+EVTNAME354005;Gulf of Tonkin Incident;;;;;;;;;;;;;x
+EVTDESC354005;"The Gulf of Tonkin incident (or the USS Maddox incident) is the name given to two separate confrontations, one actual and one false, involving North Vietnam and the United States in the waters of the Gulf of Tonkin. The outcome of these two incidents was the passage by Congress of the Gulf of Tonkin Resolution, which granted the President of the United States the authority to assist any Southeast Asian country whose government was considered to be jeopardized by ""communist aggression"". The resolution served as a legal justification for deploying U.S. conventional forces and the commencement of open warfare against North Vietnam.";;;;;;;;;;;;;x
+EVTOPTA354005;They will pay!;;;;;;;;;;;;;x
+EVTNAME354006;Help South Vietnam?;;;;;;;;;;;;;x
+EVTDESC354006;South Vietnam is at war with the North, we should help the former against the latter to curb communist influence in the region. But joining without a good reason would be bad for our international relations aswell as at home.;;;;;;;;;;;;;x
+EVTOPTA354006;Declare war on the North!;;;;;;;;;;;;;x
+EVTOPTB354006;Send supplies to the South;;;;;;;;;;;;;x
+EVTOPTC354006;Do nothing;;;;;;;;;;;;;x
+EVTNAME354007;Help South Vietnam?;;;;;;;;;;;;;x
+EVTDESC354007;South Vietnam is at war with the North, we should help the former against the latter to curb communist influence in the region. Now that the incident in the gulf of tonkin has happened maybe we should invade?;;;;;;;;;;;;;x
+EVTOPTA354007;Declare war on the North!;;;;;;;;;;;;;x
+EVTOPTB354007;Send supplies to the South;;;;;;;;;;;;;x
+EVTOPTC354007;Do nothing;;;;;;;;;;;;;x
+EVTNAME354008;Anti-Vietnam War Demonstrations;;;;;;;;;;;;;x
+EVTDESC354008;Several anti war demonstrations occured all troughout the country today, people have begun to think we shouldn't be involved in Vietnam anymore. This will surely affect our popularity negatively amongst the population.;;;;;;;;;;;;;x
+EVTOPTA354008;Darn!;;;;;;;;;;;;;x
+EVTNAME354009;Anti-Vietnam War demonstrations turn into a riot;;;;;;;;;;;;;x
+EVTDESC354009;Previously peaceful demonstrations have turned into riots today as thousands took to the streets to protest against our involvement in Vietnam.;;;;;;;;;;;;;x
+EVTOPTA354009;This is horrible!;;;;;;;;;;;;;x
+EVTNAME354010;Anti-Vietnam War Rallies;;;;;;;;;;;;;x
+EVTDESC354010;Several thousand rallied agaisnt the war in Vietnam today. Most were peaceful, but it seems the more we stay involved in the region, the more resistance we get from our homefront. This will surely erode our popularity and prestige.;;;;;;;;;;;;;x
+EVTOPTA354010;;;;;;;;;;;;;;x
+EVTNAME354011;;;;;;;;;;;;;;x
+EVTDESC354011;;;;;;;;;;;;;;x
+EVTOPTA354011;;;;;;;;;;;;;;x
+EVTNAME354012;;;;;;;;;;;;;;x
+EVTDESC354012;;;;;;;;;;;;;;x
+EVTOPTA354012;;;;;;;;;;;;;;x
+EVTNAME354013;;;;;;;;;;;;;;x
+EVTDESC354013;;;;;;;;;;;;;;x
+EVTOPTA354013;;;;;;;;;;;;;;x
+EVTNAME354014;;;;;;;;;;;;;;x
+EVTDESC354014;;;;;;;;;;;;;;x
+EVTOPTA354014;;;;;;;;;;;;;;x
+EVTOPTB354014;;;;;;;;;;;;;;x
+EVTNAME354015;;;;;;;;;;;;;;x
+EVTDESC354015;;;;;;;;;;;;;;x
+EVTOPTA354015;;;;;;;;;;;;;;x
+EVTOPTB354015;;;;;;;;;;;;;;x
+EVTNAME151018;The Situation in Vietnam;;;;;;;;;;;;;x
+EVTDESC151018;We could help North Vietnam by sending them supplies and materials to help in their war effort agaisnt the South. We could also get involved militarily, but that would surely increase tensions with the western world dramatically.;;;;;;;;;;;;;x
+EVTOPTA151018;Intervene Militarily;;;;;;;;;;;;;x
+EVTOPTB151018;Send supplies;;;;;;;;;;;;;x
+EVTOPTC151018;We must not get entangled in another war;;;;;;;;;;;;;x
+EVTNAME152011;The Situation in Vietnam;;;;;;;;;;;;;x
+EVTDESC152011;We could help South Vietnam by sending them supplies and materials to help in their war effort agaisnt the North. We could also get involved militarily, but that would surely increase tensions with the soviet block dramatically.;;;;;;;;;;;;;x
+EVTOPTA152011;Intervene Militarily;;;;;;;;;;;;;x
+EVTOPTB152011;Send supplies;;;;;;;;;;;;;x
+EVTOPTC152011;We must not get entangled in another war;;;;;;;;;;;;;x
+EVTNAME181007;The Situation in Vietnam;;;;;;;;;;;;;x
+EVTDESC181007;We could help South Vietnam by sending them supplies and materials to help in their war effort agaisnt the North. We could also get involved militarily, but that would surely increase tensions with the soviet block dramatically.;;;;;;;;;;;;;x
+EVTOPTA181007;Intervene Militarily;;;;;;;;;;;;;x
+EVTOPTB181007;Send supplies;;;;;;;;;;;;;x
+EVTOPTC181007;We must not get entangled in another war;;;;;;;;;;;;;x
+EVTNAME194030;The Situation in Vietnam;;;;;;;;;;;;;x
+EVTDESC194030;We could help South Vietnam by sending them supplies and materials to help in their war effort agaisnt the North. We could also get involved militarily, but that would surely increase tensions with the soviet block dramatically.;;;;;;;;;;;;;x
+EVTOPTA194030;Intervene Militarily;;;;;;;;;;;;;x
+EVTOPTB194030;Send supplies;;;;;;;;;;;;;x
+EVTOPTC194030;We must not get entangled in another war;;;;;;;;;;;;;x
+EVTNAME326005;The Situation in Vietnam;;;;;;;;;;;;;x
+EVTDESC326005;We could help North Vietnam by sending them supplies and materials to help in their war effort agaisnt the South. We could also get involved militarily, but that would surely increase tensions with the western world dramatically.;;;;;;;;;;;;;x
+EVTOPTA326005;Intervene Militarily;;;;;;;;;;;;;x
+EVTOPTB326005;Send supplies;;;;;;;;;;;;;x
+EVTOPTC326005;We must not get entangled in another war;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

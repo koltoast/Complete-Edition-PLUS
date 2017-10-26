@@ -1,0 +1,545 @@
+#SuspendElections_events.txt
+#Suspend Elections
+
+#Global:
+	#1970 - Leaders Address the nation
+	
+	#1971 - Elections Suspended (Fascist)
+	#1972 - Elections Suspended (Maoist-Communist)
+	#1973 - Elections Suspended (Paternal Autocrat)
+	
+	#1974 - Political Riots
+	#1975 - Minor Demonstrations
+	#1976 - Large Demonstrations
+	
+
+## Global ##
+	#1970 - Leaders Address the nation
+	country_event = {
+		
+		id = 1970
+
+		is_triggered_only = yes
+
+		title = "EVTNAME1970"
+		desc = "EVTDESC1970"
+		picture = "1968_Grosvenor_Square"
+
+		option = {
+			name = "EVTOPTA1970"			    			# Leaders Address the nation
+			set_country_flag = suspend_elections_revolts
+			add_country_modifier = {
+				name = suspended_elections_timer
+				duration = 455
+			}
+			money = -120
+			supplies = -50			
+			capital_scope = {
+				police_brigade = current			
+			}
+			random = {
+				chance = 5
+				election = no 
+				elections_and_voting = single_party_system
+				set_country_flag = signed_suspended_elections
+			}		
+		}
+
+		option = {
+			name = "EVTOPTB1970"			    			# Reinforce the police
+			set_country_flag = suspend_elections_revolts
+			add_country_modifier = {
+				name = event_reinforce_the_police
+				duration = 272
+			}
+			dissent = 10
+			money = -120
+			supplies = -50		
+			capital_scope = {
+				police_brigade = current			
+			}	
+			#For those above 150 Brigades 			
+			random_owned = { limit = { owner = { total_amount_of_brigades = 150 } } 
+				add_province_modifier = {					
+					name = event_civil_disorder
+					duration = 800
+				} 
+			}
+			random_owned = { limit = { owner = { total_amount_of_brigades = 150 } } 
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 800
+				} 			
+			}
+			random_owned = { limit = { owner = { total_amount_of_brigades = 150 } }  
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 800
+				} 			
+			}
+			random_owned = { limit = { owner = { total_amount_of_brigades = 150 } }  
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 800
+				} 
+			}			
+			random_owned = { limit = { owner = { total_amount_of_brigades = 150 } } 
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 800
+				} 			
+			}			
+			random_owned = { limit = { owner = { total_amount_of_brigades = 150 } } 
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 800
+				} 
+			}						
+			#For those below 150 Brigades but higher than 100 
+			random_owned = { limit = { owner = { total_amount_of_brigades = 100 NOT = {total_amount_of_brigades = 150} } }
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 800
+				} 
+			}			
+			random_owned = { limit = { owner = { total_amount_of_brigades = 100	NOT = {total_amount_of_brigades = 150} } } 
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 800
+				} 		
+			}		
+			random_owned = { limit = { owner = { total_amount_of_brigades = 100	NOT = {total_amount_of_brigades = 150} } } 
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 800
+				} 		
+			}
+			random_owned = { limit = { owner = { total_amount_of_brigades = 100	NOT = {total_amount_of_brigades = 150} } } 
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 800
+				} 		
+			}
+			#For those below 100 Brigades but higher than 50
+			random_owned = { limit = { owner = { total_amount_of_brigades = 50 NOT = {total_amount_of_brigades = 100}} } 
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 800
+				}		
+			}
+			random_owned = { limit = { owner = { total_amount_of_brigades = 50 NOT = {total_amount_of_brigades = 100}} } 
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 800
+				}		
+			}
+			#For those below 50 Brigades but higher than 25
+			random_owned = { limit = { owner = { total_amount_of_brigades = 25 NOT = {total_amount_of_brigades = 50}} }  
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 800
+				}		
+			}
+			#For those below 25
+			random_owned = { limit = { owner = { NOT = {total_amount_of_brigades = 25}} }
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 800
+				}		
+			}	
+			random = {
+				chance = 10
+				election = no 
+				elections_and_voting = single_party_system
+				set_country_flag = signed_suspended_elections
+			}			
+		}
+
+		option = {
+			name = "EVTOPTC1970"			    			# Send in the Army
+			set_country_flag = suspend_elections_revolts
+			add_country_modifier = {
+				name = event_send_in_the_army_internal
+				duration = 62
+			}
+			dissent = 35 		
+			money = -120
+			supplies = -50	
+			capital_scope = {
+				police_brigade = current			
+			}	
+			random = {
+				chance = 15
+				election = no 
+				elections_and_voting = single_party_system
+				set_country_flag = signed_suspended_elections
+			}		
+		}
+	}
+
+	### CHANGE GOV TYPE AFTER SUSPENDED ELECTION ###
+
+	#1971 - Elections Suspended (Fascist)
+	country_event = {									#Elections suspended fascist
+		
+		id = 1971		 
+
+		trigger = {
+			has_country_flag = signed_suspended_elections
+			ideology = fascistic_idolg 
+			government = totalitarian_gov  
+			government = authoritarian_gov		
+		}
+		
+		mean_time_to_happen = {
+			days = 	60
+		}
+
+		title = "EVTNAME1971"
+		desc = "EVTDESC1971"
+		picture = "signing_constitution"
+
+		option = {
+			name = "EVTOPTA1971"			    			#Totalitarian
+			government = totalitarian_gov 
+			clr_country_flag = signed_suspended_elections
+			ai_chance = { factor = 95 }		
+		}
+		
+		option = {
+			name = "EVTOPTB1971"			    			#Authoritarian
+			government = authoritarian_gov  		
+			clr_country_flag = signed_suspended_elections
+			ai_chance = { factor = 5 }		
+		}		
+	}
+
+	#1972 - Elections Suspended (Maoist-Communist)
+	country_event = {									#Elections suspended maoist-communist
+		
+		id = 1972		 
+
+		trigger = {
+			has_country_flag = signed_suspended_elections		
+			OR = {
+				ideology = maoist_idolg   	
+				ideology = communist_idolg   		
+			}
+			government = totalitarian_gov 		
+		}
+		
+		mean_time_to_happen = {
+			days = 	60
+		}
+
+		title = "EVTNAME1972"
+		desc = "EVTDESC1972"
+		picture = "signing_constitution"
+
+		option = {
+			name = "EVTOPTA1972"			    			#Totalitarian
+			government = totalitarian_gov 
+			clr_country_flag = signed_suspended_elections
+		}		
+	}
+
+	#1973 - Elections Suspended (Paternal Autocrat)
+	country_event = {									#Elections suspended paternal autocrat
+		
+		id = 1973		 
+
+		trigger = {
+			has_country_flag = signed_suspended_elections		
+			ideology = paternal_auto_idolg 
+			government = authoritarian_gov 		
+			government = absolute_monarchy_gov 		
+		}
+		
+		mean_time_to_happen = {
+			days = 	60
+		}
+
+		title = "EVTNAME1973"
+		desc = "EVTDESC1973"
+		picture = "signing_constitution"
+
+		option = {
+			name = "EVTOPTA1973"			    			#Authoritarian
+			government = authoritarian_gov 
+			clr_country_flag = signed_suspended_elections
+			ai_chance = { factor = 100 }
+		}	
+
+		option = {
+			name = "EVTOPTB1973"			    			#Absolute Monarchy
+			government = absolute_monarchy_gov 
+			clr_country_flag = signed_suspended_elections
+			ai_chance = { factor = 0 }
+		}		
+	}
+
+	### Suspend election happenings ###
+
+	#1974 - Political Riots
+	country_event = {
+		
+		id = 1974		#Political Riots
+
+		trigger = {
+			has_country_flag = suspend_elections_revolts
+			NOT = {
+				capital_scope = {
+					has_province_modifier = event_opposition_rallies
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 182
+			modifier = {
+				factor = 0.5
+				has_country_modifier = suspended_elections_timer
+			}
+			modifier = {
+				factor = 4
+				has_country_modifier = event_reinforce_the_police
+			}
+			modifier = {
+				factor = 4
+				has_country_modifier = event_send_in_the_army_internal
+			}		
+		}
+
+		title = "EVTNAME1974"
+		desc = "EVTDESC1974"
+		picture = "1968_Paris_Riots"
+		
+		option = {
+			name = "EVTOPTA1974"			    			# O.K.
+			supplies = -100
+			#For those above 150 Brigades 			
+			random_owned = { limit = { owner = { total_amount_of_brigades = 150 } is_capital = yes }  
+				add_province_modifier = {					
+					name = event_civil_disorder
+					duration = 182
+				} 
+			}
+			random_owned = { limit = { owner = { total_amount_of_brigades = 150 } }  
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 182
+				} 			
+			}
+			random_owned = { limit = { owner = { total_amount_of_brigades = 150 } } 
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 182
+				} 			
+			}
+			random_owned = { limit = { owner = { total_amount_of_brigades = 150 } }  
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 182
+				} 
+			}			
+			random_owned = { limit = { owner = { total_amount_of_brigades = 150 } } 
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 182
+				} 			
+			}			
+			random_owned = { limit = { owner = { total_amount_of_brigades = 150 } } 
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 182
+				} 
+			}						
+			#For those below 150 Brigades but higher than 100 
+			random_owned = { limit = { owner = { total_amount_of_brigades = 100 NOT = {total_amount_of_brigades = 150} } is_capital = yes }  
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 182
+				} 
+			}			
+			random_owned = { limit = { owner = { total_amount_of_brigades = 100	NOT = {total_amount_of_brigades = 150} } }  
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 182
+				} 		
+			}		
+			random_owned = { limit = { owner = { total_amount_of_brigades = 100	NOT = {total_amount_of_brigades = 150} } } 
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 182
+				} 		
+			}
+			random_owned = { limit = { owner = { total_amount_of_brigades = 100	NOT = {total_amount_of_brigades = 150} } }  
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 182
+				} 		
+			}
+			#For those below 100 Brigades but higher than 50
+			random_owned = { limit = { owner = { total_amount_of_brigades = 50 NOT = {total_amount_of_brigades = 100}} is_capital = yes } 
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 182
+				}		
+			}
+			random_owned = { limit = { owner = { total_amount_of_brigades = 50 NOT = {total_amount_of_brigades = 100}} } 
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 182
+				}		
+			}
+			#For those below 50 Brigades but higher than 25
+			random_owned = { limit = { owner = { total_amount_of_brigades = 25 NOT = {total_amount_of_brigades = 50}} is_capital = yes }  
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 182
+				}		
+			}
+			#For those below 25
+			random_owned = { limit = { owner = { NOT = {total_amount_of_brigades = 25}} is_capital = yes }
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 182
+				}		
+			}			
+
+		}
+	}
+
+	#1975 - Minor Demonstrations
+	country_event = {
+		
+		id = 1975		#Minor Demonstrations
+
+		trigger = {
+			has_country_flag = suspend_elections_revolts
+			NOT = {
+				has_country_modifier = event_send_in_the_army_internal
+				capital_scope = {
+					has_province_modifier = event_opposition_rallies
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 182
+			modifier = {
+				factor = 0.5
+				has_country_modifier = suspended_elections_timer
+			}
+			modifier = {
+				factor = 1
+				has_country_modifier = event_reinforce_the_police
+			}		
+		}
+
+		title = "EVTNAME1975"
+		desc = "EVTDESC1975"
+		picture = "1960_New_Orleans_school_protest"
+		
+		option = {
+			name = "EVTOPTA1975"			    			#Let them march
+			popularity = -0.1
+			#For those above 150 Brigades 			
+			random_owned = { limit = { owner = { total_amount_of_brigades = 150 } is_capital = yes }
+				add_province_modifier = {					
+					name = event_opposition_rallies
+					duration = 182
+				}
+			}
+			#For those below 150 Brigades but higher than 100 
+			random_owned = { limit = { owner = { total_amount_of_brigades = 100 NOT = { total_amount_of_brigades = 150 } } }  
+				add_province_modifier = {					
+					name = event_opposition_rallies 
+					duration = 182
+				} 
+			}			
+			#For those below 100 Brigades but higher than 50
+			random_owned = { limit = { owner = { total_amount_of_brigades = 50 NOT = { total_amount_of_brigades = 100 } } is_capital = yes } 
+				add_province_modifier = {					
+					name = event_opposition_rallies 
+					duration = 182
+				}		
+			}
+			#For those below 50 Brigades but higher than 25
+			random_owned = { limit = { owner = { total_amount_of_brigades = 25 NOT = { total_amount_of_brigades = 50 } } is_capital = yes }  
+				add_province_modifier = {					
+					name = event_opposition_rallies 
+					duration = 182
+				}		
+			}
+			#For those below 25
+			random_owned = { limit = { owner = { NOT = { total_amount_of_brigades = 25 } } is_capital = yes }
+				add_province_modifier = {					
+					name = event_opposition_rallies 
+					duration = 182
+				}
+			}			
+
+		}
+		
+		option = {
+			name = "EVTOPTB1975"			    			#Disperse the crowd
+			supplies = -30
+			popularity = -3.0	
+			random = { 
+				chance = 60
+				country_event = 1974
+			}
+		}	
+	}
+
+	#1976 - Large Demonstrations
+	country_event = {
+		
+		id = 1976		#Demonstration in the capital LARGE
+
+		trigger = {
+			has_country_flag = suspend_elections_revolts
+			NOT = {has_country_modifier = event_send_in_the_army_internal}
+		}
+		
+		mean_time_to_happen = {
+			days = 182
+			modifier = {
+				factor = 0.5
+				has_country_modifier = suspended_elections_timer
+			}
+			modifier = {
+				factor = 2
+				has_country_modifier = event_reinforce_the_police
+			}		
+		}
+
+		title = "EVTNAME1976"
+		desc = "EVTDESC1976"
+		picture = "1968_May_protest"
+		
+		option = {
+			name = "EVTOPTA1976"			    			#Let them march
+			popularity = -5
+			capital_scope = {   
+				add_province_modifier = {					
+					name = event_opposition_rallies
+					duration = 182
+				} 
+			}						
+		}
+		
+		option = {
+			name = "EVTOPTB1976"			    			#Arrest the Leaders
+			supplies = -50
+			money = -50
+			capital_scope = {			
+				add_province_modifier = {					
+					name = event_civil_disorder 
+					duration = 800
+				}
+			}
+			kill_random_leaders = 2
+		}	
+	}

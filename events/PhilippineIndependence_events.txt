@@ -1,0 +1,286 @@
+#PhilipineIndependence_decisions.txt
+#1946 Philippine Independence
+
+#USA - USA:
+	#354103 - USA_fate_of_philippines follow-up event - Whether to allow independence or not
+	#354104 - demand_independence_PHI follow-up event - Whether to allow independence or not
+	#354105 - Intervene in philippines
+
+#PHI - Philippines:
+	#287001 - Notification of full independence
+	#287002	- Notification of limited independence
+	#287003	- Notification of refused independence
+	#287004	- Demand Independence
+	#287005	- Ban Huks
+	#287006	- Assasination of Aurora Quezon
+	#287007	- Philippine intervention notification
+
+
+## USA ##
+country_event = {
+	
+	id = 354103			#USA_fate_of_philippines follow-up event - Whether to allow independence or not
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "EVTNAME354103"
+	desc = "EVTDESC354103"
+	picture = "1946_LoweringUSFlag_RaisingPHIFlag_Philippines_Independence"	#IR Ruud
+
+	option = {
+		name = "EVTOPTA354103"			    				
+		ai_chance = { factor = 20 }
+		dissent = -1										
+		national_unity = 1	
+		liberate_puppet = PHI
+		#relation = { who = XUN value = 20 }
+		PHI = { country_event = 287001 }
+	}
+	
+	option = {
+		name = "EVTOPTB354103"								
+		ai_chance = { factor = 75 }
+		liberate_puppet = PHI
+		military_access = PHI									
+		supplies = -100
+		PHI = { supplies = 100 }
+		PHI = { country_event = 287002 }
+	}
+	
+	option = {
+		name = "EVTOPTC354103"								
+		ai_chance = { factor = 5 }							
+		dissent = 10										
+		national_unity = -3	
+		#relation = { who = XUN value = -20 }
+		relation = { who = PHI value = -40 }
+		PHI = { country_event = 287003 }					
+	}
+}
+
+country_event = {
+	
+	id = 354104			#demand_independence_PHI follow-up event - Whether to allow independence or not
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "EVTNAME354104"
+	desc = "EVTDESC354104"
+	picture = "1946_Philippines_Independence_Proclaimed"	#IR Ruud
+
+	option = {
+		name = "EVTOPTA354104"			    				
+		ai_chance = { factor = 95 }
+
+		dissent = -1										
+		national_unity = 1	
+		liberate_puppet = PHI
+		PHI = { country_event = 287001 }
+		#relation = { who = XUN value = 10 }
+	}
+	
+	option = {
+		name = "EVTOPTB354104"								
+		ai_chance = { factor = 5 }							
+		dissent = 10										
+		national_unity = -3		
+		PHI = { country_event = 287003 }	
+		#relation = { who = XUN value = -30 }
+		relation = { who = PHI value = -80 }			
+	}
+}
+
+country_event = {
+	
+	id = 354105			#Intervene in philippines
+
+	is_triggered_only = yes
+
+	title = "EVTNAME354105"
+	desc = "EVTDESC354105"
+	picture = "1946_Philippines_Independence_US_Intervention"	#IR Ruud
+
+	option = {
+		name = "EVTOPTA354105"			    				
+		ai_chance = { factor = 90 }
+		
+		supplies = -200
+		fuel = -100
+		relation = { who = PHI value = 5 }
+	}
+	
+	option = {
+		name = "EVTOPTB354105"								
+		ai_chance = { factor = 10 }		
+		relation = { who = PHI value = -25 }			
+	}
+}
+
+## PHI ##
+country_event = {
+	
+	id = 287001			#Notification of full independence
+
+	is_triggered_only = yes
+
+	title = "EVTNAME287001"
+	desc = "EVTDESC287001"
+	picture = "1946_Roxas_McArthur_Philippines_Independence"	#IR Ruud
+
+	option = {
+		name = "EVTOPTA287001"
+		load_oob = PHI_1948.txt
+	}
+
+}
+
+country_event = {
+	
+	id = 287002			#Notification of limited independence
+
+	is_triggered_only = yes
+
+	title = "EVTNAME287002"
+	desc = "EVTDESC287002"
+	picture = "1946_Philippines_Limited_Independence"	#IR Ruud
+
+	option = {
+		name = "EVTOPTA287002"
+		load_oob = PHI_1948.txt
+	}
+
+}
+
+country_event = {
+	
+	id = 287003			#Notification of refused independence
+
+	is_triggered_only = yes
+
+	title = "EVTNAME287003"
+	desc = "EVTDESC287003"
+	picture = "1946_Philippines_Independence_Refused"	#IR Ruud
+
+	option = {
+		name = "EVTOPTA287003"
+	}
+
+}
+
+country_event = {
+	
+	id = 287004			#Demand Independence
+
+	is_triggered_only = yes
+
+	title = "EVTNAME287004"
+	desc = "EVTDESC287004"
+	picture = "1946_Philippines_Demands_Independence"	#IR Ruud
+
+	option = {
+		name = "EVTOPTA287004"
+		USA = { country_event = 354104 }
+	}
+
+}
+
+country_event = {
+	
+	id = 287005			#Ban Huks
+
+	is_triggered_only = yes
+
+	title = "EVTNAME287005"
+	desc = "EVTDESC287005"
+	picture = "1946_Ban_Huks_Philippines_Independence"	#IR Ruud
+
+	option = {
+		name = "EVTOPTA287005"			    				
+		ai_chance = { factor = 95 }
+		outlaw_party = maoist_idolg
+		outlaw_party = communist_idolg
+		any_owned = { revolt_risk = 5 }
+		random_owned = {
+			limit = { owned_by = PHI NOT = { has_province_modifier = hukbalahap_revolt } }
+			add_province_modifier = { name = hukbalahap_revolt duration = 800 } 
+		}
+		random_owned = { 
+			limit = { owned_by = PHI NOT = { has_province_modifier = hukbalahap_revolt } }
+			add_province_modifier = { name = hukbalahap_revolt duration = 800 } 
+		}
+		random_owned = { 
+			limit = { owned_by = PHI NOT = { has_province_modifier = hukbalahap_revolt } } 
+			add_province_modifier = { name = hukbalahap_revolt duration = 800 } 
+		}
+		set_global_flag = PHI_huks_banned
+	}
+	
+	option = {
+		name = "EVTOPTB287005"			    				
+		ai_chance = { factor = 5 }
+		communist_idolg = { 
+			popularity = 15 
+			#organisation = 10 
+		}
+		national_unity = -5
+		relation = { who = SOV value = 15 }
+		relation = { who = USA value = -25 }
+	}
+
+}
+
+country_event = {
+	
+	id = 287006			#Assasination of Aurora Quezon
+
+	trigger = {
+		tag = PHI
+		has_global_flag = PHI_huks_banned
+		not = { has_country_flag = PHI_AuroraAssasination }
+		or = {
+			ideology = social_cons_idolg
+			ideology = market_liberal_idolg
+			ideology = social_liberal_idolg
+			ideology = social_democrat_idolg
+		}
+	}
+	
+	mean_time_to_happen = { months = 24 }
+
+	title = "EVTNAME287006"
+	desc = "EVTDESC287006"
+	picture = "1946_Assasination Aurora_Quezon_Philippines_Independence"	#IR Ruud
+
+	option = {
+		name = "EVTOPTA287006"
+		dissent = 5
+		communist_idolg = { 
+			popularity = -10 
+			#organisation = -5 
+		}
+		relation = { who = USA value = 15 }
+		set_country_flag = PHI_AuroraAssasination
+	}
+}
+
+country_event = {
+	
+	id = 287007			#Philippine intervention notification
+
+	is_triggered_only = yes		
+
+	title = "EVTNAME287007"
+	desc = "EVTDESC287007"
+	picture = "1946_Philippines_Independence_PHI_Intervention_notification"	#IR Ruud
+
+	option = {
+		name = "EVTOPTA287007"
+		supplies = 200
+		fuel = 100
+		relation = { who = USA value = 5 }
+	}
+}

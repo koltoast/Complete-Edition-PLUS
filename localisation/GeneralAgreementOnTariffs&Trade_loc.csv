@@ -1,0 +1,61 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+mod_UN_general_agreement_on_tariffs_and_trade_failure_delay;UN General Agreement On Tariffs & Trade Delay;;;;;;;;;;;;;x
+mod_UN_general_agreement_on_tariffs_and_trade_ratifier_delay;UN General Agreement On Tariffs & Trade Ratifier Delay;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+mod_UN_general_agreement_on_tariffs_and_trade_revoked_recently;UN General Agreement On Tariffs & Trade Revoked Recently;;;;;;;;;;;;;x
+mod_UN_general_agreement_on_tariffs_and_trade_ratified;UN General Agreement On Tariffs & Trade;;;;;;;;;;;;;x
+mod_UN_general_agreement_on_tariffs_and_trade_ratified_recently;UN General Agreement On Tariffs & Trade Ratified Recently;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+dec_UN_raise_general_agreement_on_tariffs_and_trade_title;The UN General Agreement On Tariffs & Trade;;;;;;;;;;;;;x
+dec_UN_raise_general_agreement_on_tariffs_and_trade_desc;United Nations General Assembly Resolution 66/62 II, The General Agreement on Tariffs and Trade - 1st Round.;;;;;;;;;;;;;x
+dec_UN_general_agreement_on_tariffs_and_trade_disable_voting_notifications_title;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+dec_UN_general_agreement_on_tariffs_and_trade_disable_voting_notifications_desc;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+dec_UN_ratify_general_agreement_on_tariffs_and_trade_title;Ratify UN General Agreement On Tariffs & Trade;;;;;;;;;;;;;x
+dec_UN_ratify_general_agreement_on_tariffs_and_trade_desc;Ratify The General Agreement on Tariffs and Trade - 1st Round.;;;;;;;;;;;;;x
+dec_UN_withdraw_from_general_agreement_on_tariffs_and_trade_title;Withdraw from UN General Agreement On Tariffs & Trade;;;;;;;;;;;;;x
+dec_UN_withdraw_from_general_agreement_on_tariffs_and_trade_desc;Withdraw from The General Agreement on Tariffs and Trade - 1st Round.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+EVTNAME15000;The UN General Agreement On Tariffs & Trade;;;;;;;;;;;;;x
+EVTDESC15000;The United Nations General Agreement on Tariffs and Trade - 1st Round.;;;;;;;;;;;;;x
+EVTOPTA15000;Large Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTB15000;Small Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTC15000;No Diplomatic Investment.;;;;;;;;;;;;;x
+EVTNAME15001;UN Voting Notifications;;;;;;;;;;;;;x
+EVTDESC15001;Shall we receive notifications when nations decide their vote on the current UN Resolution undergoing a vote?\nThese can be turned off at any time by an international decision.;;;;;;;;;;;;;x
+EVTOPTA15001;Receive Notifications.;;;;;;;;;;;;;x
+EVTOPTB15001;No Notifications.;;;;;;;;;;;;;x
+EVTNAME15002;UN General Agreement On Tariffs & Trade Fails Vote;;;;;;;;;;;;;x
+EVTDESC15002;The United Nations General Agreement on Tariffs and Trade - 1st Round, has been defeated by vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA15002;Unfortunate;;;;;;;;;;;;;x
+EVTNAME15003;UN General Agreement On Tariffs & Trade Passes Vote;;;;;;;;;;;;;x
+EVTDESC15003;The United Nations General Agreement on Tariffs and Trade - 1st Round, has passed its vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA15003;Excellent;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+EVTNAME15010;General Agreement On Tariffs & Trade UN Vote;;;;;;;;;;;;;x
+EVTDESC15010;We have the opportunity to vote on The United Nations General Agreement on Tariffs and Trade - 1st Round, at the UN General Assembly.\nWe can either vote For it, Abstain, or vote Against it.;;;;;;;;;;;;;x
+EVTOPTA15010;§GVote For;;;;;;;;;;;;;x
+EVTOPTB15010;Abstain;;;;;;;;;;;;;x
+EVTOPTC15010;§RVote Against;;;;;;;;;;;;;x
+EVTNAME15012;Ratified the General Agreement On Tariffs & Trade;;;;;;;;;;;;;x
+EVTDESC15012;We have ratified the UN General Agreement On Tariffs & Trade.;;;;;;;;;;;;;x
+EVTOPTA15012;Progress and civility will prevail.;;;;;;;;;;;;;x
+EVTNAME15014;Withdrawal from the General Agreement On Tariffs & Trade;;;;;;;;;;;;;x
+EVTDESC15014;We have withdrawn from the UN General Agreement On Tariffs & Trade.;;;;;;;;;;;;;x
+EVTOPTA15014;Good riddance.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

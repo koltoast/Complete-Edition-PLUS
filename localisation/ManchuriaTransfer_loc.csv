@@ -1,0 +1,43 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#SOV;;;;;;;;;;;;;;x
+manchurian_transfer_SOV_title;Manchuria and the Communists;;;;;;;;;;;;;x
+manchurian_transfer_SOV_desc;Currently, a large part of Manchuria is under Soviet control and is being used by the Chinese communist revolutionaries as a base of operations. Considering the current situation of the Chinese Civil War, it might be time to put Manchuria under direct Chinese control.;;;;;;;;;;;;;x
+manchurian_transfer_CHI_SOV_title;Manchuria and the Nationalists;;;;;;;;;;;;;x
+manchurian_transfer_CHI_SOV_desc;Currently, a large part of Manchuria is under Soviet control and used by the Chinese communist revolutionaries as a base of operation. However, the Communists are not doing well and might even lose the war. Perhaps it is time to adjust our strategy in China.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ; REMOVE HASH FOR ACTIVE EVENTS AND OPTIONS;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#SOV;;;;;;;;;;;;;;x
+EVTNAME326001;Transferring Manchuria to the Chinese;;;;;;;;;;;;;x
+EVTDESC326001;As long as Soviet troops are present in Manchuria, the Nationalists will not dare to attack it. It gives us time to transfer Manchurian factories to the USSR too. However, handing it it over to the Communists would strengthen their position and pave the way to a future Sino-Soviet alliance.;;;;;;;;;;;;;x
+EVTOPTA326001;They can have it;;;;;;;;;;;;;x
+EVTOPTB326001;No, we keep it for now;;;;;;;;;;;;;x
+EVTNAME326002;Transferring Manchuria to the Chinese;;;;;;;;;;;;;x
+EVTDESC326002;With a Communists doing not so well in the Chinese Civil War, we should rethink our strategy for China. Handing over Manchuria to the Nationalists could help us to revive our alliance with them.;;;;;;;;;;;;;x
+EVTOPTA326002;Use it to bait the Nationalists;;;;;;;;;;;;;x
+EVTOPTB326002;No, give it to the Communists;;;;;;;;;;;;;x
+EVTOPTC326002;We keep it for now;;;;;;;;;;;;;x
+EVTNAME326003;Transferring Manchuria to the Chinese;;;;;;;;;;;;;x
+EVTDESC326003;Now that the Chinese Civil War is finally over and the Communists are victorious, it's time to hand over the rest of Manchuria back to them.;;;;;;;;;;;;;x
+EVTOPTA326003;OK;;;;;;;;;;;;;x
+EVTNAME326004;Transferring Manchuria to the Chinese;;;;;;;;;;;;;x
+EVTDESC326004;Now that the Chinese Civil War is finally over and the Nationalists are victorious, it's time to hand over the rest of Manchuria back to them.;;;;;;;;;;;;;x
+EVTOPTA326004;OK;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#CHI;;;;;;;;;;;;;;x
+EVTNAME152007;The Soviets Hand Over Manchuria;;;;;;;;;;;;;x
+EVTDESC152007;After the Soviet Invasion of the Asian mainland territories under Japanese control, Manchuria fell under the control of the USSR. With the Communists starting to lose ground, the Soviets have decided to give us full control over Manchuria. This brings us one step closer to a fully unified China.;;;;;;;;;;;;;x
+EVTOPTA152007;OK;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#CHC;;;;;;;;;;;;;;x
+EVTNAME151013;The Soviets Hand Over Manchuria;;;;;;;;;;;;;x
+EVTDESC151013;After the Soviet Invasion of the Asian mainland territories under Japanese control, Manchuria fell under the control of the USSR. Now, the Soviets have decided to give us full control over Manchuria. China is one step closer to being fully unified.;;;;;;;;;;;;;x
+EVTOPTA151013;OK;;;;;;;;;;;;;x
+EVTNAME151014;Manchuria Goes to the Nationalists;;;;;;;;;;;;;x
+EVTDESC151014;Instead of supporting the revolution and handing over Manchuria to us, the Soviets have given it to the Nationalists and ousted our troops. With Manchuria lost as a base of operation, our chances of defeating the Nationalists grow thinner.;;;;;;;;;;;;;x
+EVTOPTA151014;Betrayal!;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

@@ -1,0 +1,128 @@
+#MaltaIndependence_decisions.txt
+#1956 Malta Independence
+
+#ENG - United Kingdom:
+	#dec_ENG_integrate_malta			- Honour our promise and integrate Malta into our nation
+	#dec_ENG_release_malta 				- Honour our promise and release Malta as a sovereign nation
+	
+#MLT - Malta:
+	#dec_MLT_integration_referendum		- Launch UK integration referendum
+	#dec_MLT_independence_referendum	- Launch UK independence referendum
+	
+	
+diplomatic_decisions = {
+## ENG ##
+	#dec_ENG_integrate_malta	- Honour our promise and integrate Malta into our nation
+	dec_ENG_integrate_malta = {
+		category = international
+	    picture = "1956_Maltese_Integration_Year"
+		
+		potential = {
+			tag = ENG
+			exists = MLT
+			MLT = { vassal_of = THIS }
+			has_global_flag = gflag_malta_integration_promised
+		}
+		
+		allow = {
+			has_country_modifier = mod_ENG_malta_integration_promised_timer
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		effect = {
+			remove_country_modifier = mod_ENG_malta_integration_promised_timer
+			clr_global_flag = gflag_malta_integration_promised
+			set_global_flag = gflag_malta_integration_accepted
+			MLT = { country_event = 253005 }
+		}
+	}
+	
+	#dec_ENG_release_malta	- Honour our promise and release Malta as a sovereign nation
+	dec_ENG_release_malta = {
+		category = international
+	    picture = "1964_Maltese_Independence"
+		
+		potential = {
+			exists = MLT
+			MLT = { vassal_of = THIS }
+			has_global_flag = gflag_malta_independence_promised
+		}
+		
+		allow = {
+			has_country_modifier = mod_ENG_malta_independence_promised_timer
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		effect = {
+			remove_country_modifier = mod_ENG_malta_integration_promised_timer
+			clr_global_flag = gflag_malta_independence_promised
+			set_global_flag = gflag_malta_independence_promised
+			MLT = { country_event = 253013 }
+		}
+	}
+	
+## MLT ##
+	#dec_MLT_integration_referendum		- Launch UK integration referendum
+	dec_MLT_integration_referendum = {
+		category = international
+	    picture = "1956_Maltese_Integration_Year"
+		
+		potential = {
+			tag = MLT
+			MLT = { vassal_of = ENG }
+		}
+		
+		allow = {
+			NOT = { has_country_modifier = mod_MLT_integration_referendum_delay }
+			NOT = { has_country_flag = flag_MLT_integration_referendum_in_progress }
+			NOT = { has_global_flag = gflag_malta_integration_promised }
+			NOT = { has_global_flag = gflag_malta_integration_rejected }
+			NOT = { has_country_flag = flag_MLT_independence_referendum_in_progress }
+			NOT = { has_global_flag = gflag_malta_independence_promised }
+			NOT = { num_of_cities = 6 }
+			is_major = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			set_country_flag = flag_MLT_integration_referendum_in_progress
+			country_event = 253000
+		}
+	}
+	
+	#dec_MLT_independence_referendum	- Launch UK independence referendum
+	dec_MLT_independence_referendum = {
+		category = international
+	    picture = "1964_Maltese_Independence_signs"
+		
+		potential = {
+			tag = MLT
+			MLT = { vassal_of = ENG }
+		}
+		
+		allow = {
+			NOT = { has_country_flag = flag_MLT_integration_referendum_in_progress }
+			NOT = { has_global_flag = gflag_malta_integration_promised }
+			NOT = { has_country_modifier = mod_MLT_independence_referendum_delay }
+			NOT = { has_country_flag = flag_MLT_independence_referendum_in_progress }
+			NOT = { has_global_flag = gflag_malta_independence_promised }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			set_country_flag = flag_MLT_independence_referendum_in_progress
+			country_event = 253010
+		}
+	}

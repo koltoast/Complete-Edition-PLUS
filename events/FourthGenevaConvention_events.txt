@@ -1,0 +1,85 @@
+#FourthGenevaConvention_events.txt
+#Fourth Geneva Convention
+
+#SCH - Switzerland:
+	#306000 - Establishing the Fourth Geneva Convention
+
+#Global:
+	#10000 - We have signed the Fourth Geneva Convention
+
+
+## SCH ##
+	#306000 - Establishing the Fourth Geneva Convention
+	country_event = {
+
+		id = 306000
+		
+		major = yes
+
+		trigger = {
+			tag = SCH
+			war = no
+			year = 1949
+			NOT = { has_global_flag = geneva_convention_held }
+			NOT = {
+				ideology = fascistic_idolg
+				civil_liberties = martial_law
+				civil_liberties = suspended_indefinitely
+				human_rights = not_recognized
+			}
+		}
+		
+		fire_only_once = yes
+	 
+		mean_time_to_happen =  {
+			months = 7
+			modifier = {
+				factor = 0.5 #increase likelihood to happen
+				year = 1950
+			}
+		}
+
+		title = "EVTNAME306000"
+		desc = "EVTDESC306000"
+		picture = "1949_Geneva_Convention"
+
+		option = {
+			name = "EVTOPTA306000" 
+			prestige_change = 20
+			set_global_flag = geneva_convention_held
+			add_country_modifier = {
+				name = signed_the_geneva_convention
+				duration = -1
+			}
+		}
+	}
+
+## Global ##
+	#10000 - We have signed the Fourth Geneva Convention
+	country_event = {
+		
+		id = 10000		#We have signed the Fourth Geneva Convention
+		
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME10000"
+		desc = "EVTDESC10000"
+		picture = "1949_Geneva_Convention_signing"
+
+		option = {
+			name = "EVTOPTA10000"			    			# OK
+			#hidden_effects = {
+				SCH = {
+					add_country_modifier = {
+						name = geneva_convention_delay
+						duration = 61
+					}
+				}
+			#}
+			prestige_change = 8
+			relation = { who = SCH value = 10 }
+			#relation = { who = XUN value = 20 }
+		}
+	}

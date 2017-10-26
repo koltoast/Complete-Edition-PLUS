@@ -1,0 +1,61 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+mod_UN_incendiary_weapons_convention_failure_delay;UN Incendiary Weapons Convention Delay;;;;;;;;;;;;;x
+mod_UN_incendiary_weapons_convention_ratifier_delay;UN Incendiary Weapons Convention Ratifier Delay;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+mod_UN_incendiary_weapons_convention_revoked_recently;UN Incendiary Weapons Convention Revoked Recently;;;;;;;;;;;;;x
+mod_UN_incendiary_weapons_convention_ratified;UN Incendiary Weapons Convention;;;;;;;;;;;;;x
+mod_UN_incendiary_weapons_convention_ratified_recently;UN Incendiary Weapons Convention Ratified Recently;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+dec_UN_raise_incendiary_weapons_convention_title;The UN Incendiary Weapons Convention;;;;;;;;;;;;;x
+dec_UN_raise_incendiary_weapons_convention_desc;United Nations General Assembly Resolution 66/62 III, The Protocol on Prohibitions or Restrictions on the Use of Incendiary Weapons.;;;;;;;;;;;;;x
+dec_UN_incendiary_weapons_convention_disable_voting_notifications_title;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+dec_UN_incendiary_weapons_convention_disable_voting_notifications_desc;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+dec_UN_ratify_incendiary_weapons_convention_title;Ratify UN Incendiary Weapons Convention;;;;;;;;;;;;;x
+dec_UN_ratify_incendiary_weapons_convention_desc;Ratify The Protocol on Prohibitions or Restrictions on the Use of Incendiary Weapons.;;;;;;;;;;;;;x
+dec_UN_withdraw_from_incendiary_weapons_convention_title;Withdraw from UN Incendiary Weapons Convention;;;;;;;;;;;;;x
+dec_UN_withdraw_from_incendiary_weapons_convention_desc;Withdraw from The Protocol on Prohibitions or Restrictions on the Use of Incendiary Weapons.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+EVTNAME12600;The UN Incendiary Weapons Convention;;;;;;;;;;;;;x
+EVTDESC12600;United Nations General Assembly Resolution 66/62 III, The Protocol on Prohibitions or Restrictions on the Use of Incendiary Weapons.;;;;;;;;;;;;;x
+EVTOPTA12600;Large Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTB12600;Small Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTC12600;No Diplomatic Investment.;;;;;;;;;;;;;x
+EVTNAME12601;UN Voting Notifications;;;;;;;;;;;;;x
+EVTDESC12601;Shall we receive notifications when nations decide their vote on the current UN Resolution undergoing a vote?\nThese can be turned off at any time by an international decision.;;;;;;;;;;;;;x
+EVTOPTA12601;Receive Notifications.;;;;;;;;;;;;;x
+EVTOPTB12601;No Notifications.;;;;;;;;;;;;;x
+EVTNAME12602;UN Incendiary Weapons Convention Fails Vote;;;;;;;;;;;;;x
+EVTDESC12602;United Nations General Assembly Resolution 66/62 III, The Protocol on Prohibitions or Restrictions on the Use of Incendiary Weapons, has been defeated by vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA12602;Unfortunate;;;;;;;;;;;;;x
+EVTNAME12603;UN Incendiary Weapons Convention Passes Vote;;;;;;;;;;;;;x
+EVTDESC12603;United Nations General Assembly Resolution 66/62 III, The Protocol on Prohibitions or Restrictions on the Use of Incendiary Weapons, has passed its vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA12603;Excellent;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+EVTNAME12610;Incendiary Weapons Convention UN Vote;;;;;;;;;;;;;x
+EVTDESC12610;We have the opportunity to vote on United Nations General Assembly Resolution 66/62 III, The Protocol on Prohibitions or Restrictions on the Use of Incendiary Weapons, at the UN General Assembly.\nWe can either vote For it, Abstain, or vote Against it.;;;;;;;;;;;;;x
+EVTOPTA12610;§GVote For;;;;;;;;;;;;;x
+EVTOPTB12610;Abstain;;;;;;;;;;;;;x
+EVTOPTC12610;§RVote Against;;;;;;;;;;;;;x
+EVTNAME12612;Ratified the Incendiary Weapons Convention;;;;;;;;;;;;;x
+EVTDESC12612;We have ratified the UN Incendiary Weapons Convention.;;;;;;;;;;;;;x
+EVTOPTA12612;Progress and civility will prevail.;;;;;;;;;;;;;x
+EVTNAME12614;Withdrawal from the Incendiary Weapons Convention;;;;;;;;;;;;;x
+EVTDESC12614;We have withdrawn from the UN Incendiary Weapons Convention.;;;;;;;;;;;;;x
+EVTOPTA12614;Good riddance.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

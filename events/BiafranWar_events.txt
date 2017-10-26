@@ -1,0 +1,940 @@
+#181020 - The Nigerian Question
+#181021 - Nigerian Referendum
+#181022 - Nigerian UDI
+#274000 - The First Republic
+#274001 - Authoritarian Coup d’état!
+#274002 - Counter Coup!
+#274003 - Biafran Declaration of Independence!
+#180010 - Event 01 for EGY – Support NIG
+#350000 - Event 01 for UAR – Support NIG
+#181023 - Event 04 for ENG – Support NIG
+#274004 - NIG peace offer to BIF
+#128000 - BIF Foreign Aid arrives
+#128001 - BIF peace
+
+##### Nigerian Independence Events #####
+
+country_event = {
+	
+	id = 181020			#Event 01 for ENG: The Nigerian Question (Optional Release)
+
+	trigger = {
+		#has_global_modifier = decolonisation_started  Setting this modifier still to be implemented
+		owns = 14873
+		owns = 5152
+		owns = 5271
+		owns = 5395
+		NOT = {
+			national_unity = 80
+		}
+		dissent = 5
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			OR = {
+				ideology = left_wing_radical_idolg
+				ideology_group = comintern
+			}
+		}
+	}
+	
+	title = "EVTNAME181020"
+	desc = "EVTDESC181020"
+	picture = "1958_nigeria_independence_conference"
+	
+	option = {
+		name = "EVTOPTA181020"					#Nigeria shall have its independence! 
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 1.25
+				dissent = 10
+			}
+			modifier = {
+				factor = 1.25
+				dissent = 20
+			}
+			modifier = {
+				factor = 1.25
+				dissent = 30
+			}
+			modifier = {
+				factor = 2
+				dissent = 50
+			}
+		}
+		release = NIG
+		dissent = -5
+		national_unity = 10
+		set_country_flag = nigerian_question_1
+		#fuel = 500						#No such effect yet
+			any_owned = {
+				limit = {
+					is_core = NIG
+				}
+				remove_core = ENG
+			}		
+	}
+	
+	option = {
+		name = "EVTOPTB181020"					#Nigeria shall be an Autonomous Dominion 
+		ai_chance = {
+		factor = 0.15
+		}
+		
+		release_vassal = NIG 						#Check this effect
+		set_country_flag = nigerian_question_2	
+			any_owned = {
+				limit = {
+					is_core = NIG
+				}
+				remove_core = ENG
+			}
+	}
+	
+	option = {
+		name = "EVTOPTC181020"					#Enough of this Nonsense
+		ai_chance = {
+		factor = 0.05
+		}
+		
+		dissent = 5
+		any_owned = {	
+			limit = {
+				is_core = NIG
+			}
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+			remove_core = ENG
+		}
+		set_country_flag = nigerian_question_3	
+	}
+}
+
+country_event = {
+	
+	id = 181021		# Nigeria demands independence (Demanded Release)
+
+	trigger = {
+		#Decolonisation has started
+		year = 1958 #temporary
+		
+		NOT = {
+			exists = NIG
+		}
+			
+		owns = 14873
+		owns = 5152
+		owns = 5271
+		owns = 5395
+			
+		has_country_flag = nigerian_question_3
+
+		
+		NOT = {
+			has_country_flag = nigeria_referendum_2_1
+			has_country_flag = nigeria_referendum_2_2
+		}
+		
+		dissent = 20
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+			modifier = {
+				factor = 0.6
+				exists = NGR
+			}
+			modifier = {
+				factor = 0.6
+				exists = CHA
+			}
+			modifier = {
+				factor = 0.6
+				exists = BEN
+			}
+			modifier = {
+				factor = 0.6
+				exists = CAM
+			}
+			modifier = {
+				factor = 0.6
+				neighbour = ENG 		#Check this
+			}
+#			modifier = {
+#				factor = 0.6
+#				NOT = {
+#					national_unity = 70
+#					}
+#			}				
+	}
+	
+	title = "EVTNAME181021"
+	desc = "EVTDESC181021"
+	picture = "1960_nigeria_independent"
+
+	option = {
+		name = "EVTOPTA181021"		    			# Nigeria shall have its Independence 
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 5
+				ideology_group = comintern
+			}
+			modifier = {
+				factor = 0.1
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 0.25
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 20
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 30
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 40
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 50
+			}
+		}
+		release = NIG
+		liberate_puppet = NIG
+		set_country_flag = nigeria_referendum_2_1
+	}
+
+	option = {
+		name = "EVTOPTB181021"			    			# This is not the desire of the masses!
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0.5
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0.2
+				ideology_group = comintern
+			}
+		}
+		dissent = 10
+		national_unity = -5
+		any_owned = {
+			limit = {
+				is_core = NIG
+			}
+			#revolt_risk = 5
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+		}
+		set_country_flag = nigeria_referendum_2_2
+	}
+}
+
+country_event = {
+	
+	id = 181022		# Nigeria unilaterally declares its independence
+
+	trigger = {
+		#Decolonisation has started
+		year = 1960 #temporary
+		
+		NOT = {
+			exists = NIG
+		}
+			
+		owns = 14873
+		owns = 5152
+		owns = 5271
+		owns = 5395
+			
+			has_country_flag = nigeria_referendum_2_2
+		
+		NOT = {
+			has_country_flag = nigeria_independence
+		}
+		
+		dissent = 6
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.25
+			year = 1965
+		}
+	}
+	
+	title = "EVTNAME181022"
+	desc = "EVTDESC181022"
+	picture = "1960_nigeria_independent"
+	major = yes
+
+
+	option = {
+		name = "EVTOPTA181022"			    			# Let’s forget Nigeria
+		ai_chance = {
+			factor = 100
+		}
+		ENG = { 
+			liberate_puppet = NIG
+			release = NIG
+			}
+		NIG = {
+			load_oob = NIG_1961.txt
+			government = authoritarian_gov
+		}
+		set_country_flag = nigeria_independence
+	}
+
+	option = {
+		name = "EVTOPTB181022"			    			# We shall protect the interest of the Nigerian masses 
+		ai_chance = {
+			factor = 0
+		}
+		ENG = { 
+			liberate_puppet = NIG
+			release = NIG
+			}
+		NIG = {
+			load_oob = NIG_1961.txt
+			government = authoritarian_gov
+		}
+		set_country_flag = nigeria_independence
+		limited_war = NIG #temporary until proper war goal system in place
+		#war = {
+		#	target = NIG
+		#	attacker_goal = { casus_belli = puppet }	# War goal of establishing RHO as a Dominion, 
+		#} 
+	}
+}
+
+#Establishing Government
+
+country_event = {
+	
+	id = 274000		# The First Republic
+
+	trigger = {
+
+	tag = NIG
+	government = authoritarian_gov
+	NOT = { vassal_of = ENG}
+	economy_unbalanced = no
+	war = no
+	NOT = {
+			has_country_flag = refused_elections
+		}
+		
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.25
+			year = 1966
+		}
+		modifier = {
+			factor = 0.75
+			national_unity = 80
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				dissent = 10
+				}
+			}
+		}
+	
+	title = "EVTNAME274000"
+	desc = "EVTDESC274000"
+	picture = "1963_nigeria_first_republic"
+
+
+	option = {
+		name = "EVTOPTA274000"			    			# Let the elections begin!
+		ai_chance = {
+			factor = 80
+		}
+		government = republic_gov
+		dissent = -5
+		national_unity = 10
+		start_election = NIG
+	}
+
+	option = {
+		name = "EVTOPTB274000"			    			# We are not yet ready! 
+		ai_chance = {
+			factor = 20
+		}
+		add_country_modifier = {
+			name = g_minor_revolt_risk
+			duration = 10950						#perma
+		}
+		set_country_flag = refused_elections
+	}
+}
+
+country_event = {
+	
+	id = 274001		# Authoritarian Coup d’état!
+
+	trigger = {
+
+	tag = NIG
+	government = republic_gov
+	NOT = { vassal_of = ENG}
+	war = no
+	dissent = 5
+	OR = {
+		AND = {
+			NOT = {
+				national_unity = 80
+			}
+			dissent = 5
+		}
+		year = 1965
+		}
+	NOT = {
+		has_country_flag = auth_coup_detat
+		}
+	NOT = {
+		has_country_flag = republic_continues
+		}	
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.2
+			year = 1966
+		}
+		modifier = {
+			factor = 0.75
+		NOT = {	
+			national_unity = 70
+			}
+		}
+		modifier = {
+			factor = 0.3
+			has_country_flag = refused_elections
+			}	
+		}
+	
+	title = "EVTNAME274001"
+	desc = "EVTDESC274001"
+	picture = "1966_nigerian_coup"
+
+
+	option = {
+		name = "EVTOPTA274001"			    			# o	Appoint Johnson Aguiyi-Ironsi
+		ai_chance = {
+			factor = 80
+		}
+		set_country_flag = auth_coup_detat
+		government = authoritarian_gov
+		head_of_state = 1274005
+		head_of_government = 1274005
+		dissent = 20
+		national_unity = -10
+		add_country_modifier = {
+				name = g_minor_revolt_risk
+				duration = 1095
+			}
+	
+	}
+
+	option = {
+		name = "EVTOPTB274001"			    			# Hold new Elections
+		ai_chance = {
+			factor = 20
+		}
+		dissent = 20
+		national_unity = -30
+		add_country_modifier = {
+			name = g_moderate_revolt_risk
+			duration = 1095							
+			}
+		remove_minister = 1274004
+		clr_country_flag = refused_elections
+		set_country_flag = republic_continues
+		start_election = NIG
+	}
+}
+
+country_event = {
+	
+	id = 274002		# Counter Coup!
+
+	trigger = {
+
+	tag = NIG
+	government = authoritarian_gov
+	NOT = { vassal_of = ENG}
+	war = no
+	dissent = 5
+	has_country_flag = auth_coup_detat
+
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+		modifier = {
+			factor = 0.2
+			year = 1967
+		}
+		modifier = {
+			factor = 0.75
+		NOT = {	
+			national_unity = 70
+			}
+		}
+		modifier = {
+			factor = 0.9
+			has_country_flag = refused_elections			#If there was no First Republic to begin with
+			}	
+		}
+	
+	title = "EVTNAME274002"
+	desc = "EVTDESC274002"
+	picture = "1966_nigerian_counter-coup"
+
+
+	option = {
+		name = "EVTOPTA274002"			    			# o	Appoint Johnson Yakubu Gowon
+		ai_chance = {
+			factor = 90
+		}
+		set_country_flag = counter_coup_detat
+		head_of_state = 1274006
+		head_of_government = 1274006
+		dissent = 20
+		national_unity = -10
+	
+	}
+
+	option = {
+		name = "EVTOPTB274001"			    			# Hold new Elections
+		ai_chance = {
+			factor = 10
+		}
+		government = republic_gov		
+		dissent = 20
+		national_unity = -30
+		remove_country_modifier = g_minor_revolt_risk					
+		add_country_modifier = {
+				name = g_moderate_revolt_risk
+				duration = 1095							
+			}	
+		clr_country_flag = refused_elections
+		start_election = NIG
+	}
+}
+
+country_event = {
+	
+	id = 274003		# Biafran Declaration of Independence!
+	
+	major = yes
+
+	trigger = {
+
+	tag = NIG
+	NOT = { vassal_of = ENG}
+	NOT = {
+		national_unity = 70
+		}
+	NOT = {
+		has_country_flag = biafra_independence_done
+		}
+
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.25
+			has_country_flag = auth_coup_detat
+		}
+		modifier = {
+			factor = 0.6
+			has_country_flag = counter_coup_detat			
+			}
+		modifier = {
+			factor = 0.8
+			government = authoritarian_gov
+			}
+		modifier = {
+			factor = 0.8
+			has_country_flag = refused_elections			#If there was no First Republic to begin with
+			}
+		modifier = {
+			factor = 0.95
+		NOT = {	
+			national_unity = 60
+			}			
+		}
+		modifier = {
+			factor = 0.95
+			dissent = 10
+		}
+	}	
+	title = "EVTNAME274003"
+	desc = "EVTDESC274003"
+	picture = "1967_biafra_independent"
+
+
+	option = {
+		name = "EVTOPTA274003"			    			# Traitors!
+		ai_chance = {
+			factor = 95
+		}
+		set_country_flag = biafra_independence_done
+		
+		5270 = { add_core = BIF }								#Rivers
+		5271 = { add_core = BIF }
+		
+		5331 = { add_core = BIF }								#East Central Nigeria
+		5332 = { add_core = BIF }
+		5393 = { add_core = BIF }
+		
+		5394 = { add_core = BIF }								#Cross Rivers
+		5395 = { add_core = BIF }
+		5464 = { add_core = BIF }
+		
+		release = BIF											#Biafra becomes free as a non-puppet
+		limited_war = BIF
+		dissent = 10
+		national_unity = 10
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = g_minor_revolt_risk
+				}
+			}
+			remove_country_modifier = g_minor_revolt_risk
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = g_moderate_revolt_risk
+				}
+			}
+			remove_country_modifier = g_moderate_revolt_risk
+			add_country_modifier = {
+				name = g_minor_revolt_risk
+				duration = 1095
+			}
+		}
+		
+		BIF = {
+			supplies = 500
+			fuel = 200
+			money = 1000
+			manpower = 15
+			load_oob = BIF_1967_rebel.txt
+		}
+	}
+
+	option = {
+		name = "EVTOPTB274003"			    			# Let them go.
+		ai_chance = {
+			factor = 5
+		}
+		set_country_flag = biafra_independence_done
+		
+		5270 = { add_core = BIF }								#Rivers
+		5271 = { add_core = BIF }
+		
+		5331 = { add_core = BIF }								#East Central Nigeria
+		5332 = { add_core = BIF }
+		5393 = { add_core = BIF }
+		
+		5394 = { add_core = BIF }								#Cross Rivers
+		5395 = { add_core = BIF }
+		5464 = { add_core = BIF }
+		
+		release = BIF											#Biafra becomes free as a non-puppet
+		national_unity = 20
+		
+		BIF = {
+			supplies = 500
+			fuel = 200
+			money = 1000
+			manpower = 15
+			load_oob = BIF_1967_rebel.txt
+			
+			any_owned = {
+				limit = {
+					is_core = NIG
+					}
+				remove_core = NIG
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 180010		#Event 01 for EGY/UAR – Support NIG
+
+	is_triggered_only = yes
+
+	title = "EVTNAME180010"
+	desc = "EVTDESC180010"
+	picture = "1967_egyptian_aid_to_nigeria"
+
+		
+	option = {
+		name = "EVTOPTA180010"			    			#Send an Expeditionary Air force
+		ai_chance = { factor = 60 }
+		money = -50000
+		supplies = -1000
+		fuel = -200
+		manpower = -20
+		NIG = {
+			relation = { who = THIS value = 50 }
+			load_oob = EGY-expair-NIG.txt
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB180010"			    			#Send aid
+		ai_chance = { factor = 30 }
+		money = -10000
+		supplies = -500
+		fuel = -100
+		NIG = {
+			money = -10000
+			supplies = -500
+			fuel = -100
+			relation = { who = THIS value = 20 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC180010"			    			#Do not get involved
+		ai_chance = { factor = 10 }
+		NIG = {
+			relation = { who = THIS value = -50 }
+		}
+		prestige_change = -15
+	}
+}
+
+
+country_event = {
+	
+	id = 350000		#Event 01 for EGY/UAR – Support NIG
+
+	is_triggered_only = yes
+
+	title = "EVTNAME350000"
+	desc = "EVTDESC350000"
+	picture = "1967_egyptian_aid_to_nigeria"
+
+		
+	option = {
+		name = "EVTOPTA350000"			    			#Send an Expeditionary Air force
+		ai_chance = { factor = 60 }
+		money = -50000
+		supplies = -1000
+		fuel = -200
+		manpower = -20
+		NIG = {
+			relation = { who = THIS value = 50 }
+			load_oob = EGY-expair-NIG.txt
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB350000"			    			#Send aid
+		ai_chance = { factor = 30 }
+		money = -10000
+		supplies = -500
+		fuel = -100
+		NIG = {
+			money = -10000
+			supplies = -500
+			fuel = -100
+			relation = { who = THIS value = 20 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC350000"			    			#Do not get involved
+		ai_chance = { factor = 10 }
+		NIG = {
+			relation = { who = THIS value = -50 }
+		}
+		prestige_change = -15
+	}
+}
+
+country_event = {
+	
+	id = 181023		#Event 04 for ENG – Support NIG
+
+	is_triggered_only = yes
+
+	title = "EVTNAME181023"
+	desc = "EVTDESC181023"
+	picture = "1967_british_aid_to_Nigeria"
+
+			
+	option = {
+		name = "EVTOPTA181023"			    			#Send aid
+		ai_chance = { factor = 90 }
+		money = -100000
+		supplies = -10000
+		fuel = -2000
+		NIG = {
+			money = 100000
+			supplies = 10000
+			fuel = 2000
+			relation = { who = THIS value = 20 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB181023"			    			#Do not get involved
+		ai_chance = { factor = 10 }
+		NIG = {
+			relation = { who = THIS value = -50 }
+		}
+		prestige_change = -15
+	}
+}
+
+country_event = {
+	
+	id = 274004					#BIF peace offer
+
+	trigger = {
+		tag = NIG
+		war_with = BIF
+		OR = {
+		AND = {
+			lost_national = 0.2
+			NOT = {
+				BIF = { lost_national = 0.5 }
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+	months = 1 
+		modifier = {
+			factor = 0.25
+			dissent = 10
+		}
+		modifier = {
+			factor = 0.25
+			lost_national = 0.3
+			}
+		modifier = {
+			factor = 0.25
+			lost_national = 0.4
+			}
+	}
+	is_triggered_only = no
+
+	title = "EVTNAME274004"
+	desc = "EVTDESC274004"
+	picture = "1967_gowon-war_will_be_over_in_4-8_weeks"
+
+	option = {													#Offer peace to Biafra
+		name = "EVTOPTA274004"
+		ai_chance = { factor = 95 }
+		dissent = 10
+		popularity = -20
+		prestige_change = -10
+		
+		#5270 = { remove_core = NIG }							#Represents recognition of Biafran claims
+		#5271 = { remove_core = NIG }
+		#5331 = { remove_core = NIG }
+		#5332 = { remove_core = NIG }
+		#5393 = { remove_core = NIG }
+		#5394 = { remove_core = NIG }
+		#5464 = { remove_core = NIG }
+		
+		non_aggression_pact = BIF
+		BIF = { country_event = 128001 }
+	}
+	
+	option = {
+		name = "EVTOPTB274004"									#Never
+		ai_chance = { factor = 5 }
+		dissent = 5
+		prestige_change = -5
+		money = -100											#A war is expensive
+	}
+}
+
+country_event = {
+	
+	id = 128000			#Foreign Aid arrives
+
+	trigger = {
+		tag = BIF
+		war_with = NIG
+	}
+	
+	mean_time_to_happen = { days = 100 }
+	is_triggered_only = no
+
+	title = "EVTNAME128000"
+	desc = "EVTDESC128000"
+	picture = "1950_unloading_supplies"
+
+	option = {
+		name = "EVTOPTA128000"
+		money = 5000
+		supplies = 500
+		fuel = 100
+	}
+}
+
+country_event = {
+	
+	id = 128001			#NIG admits defeat and declares white peace
+
+	trigger = {
+		tag = BIF
+	}
+
+	is_triggered_only = yes
+
+	title = "EVTNAME128001"
+	desc = "EVTDESC128001"
+	picture = "1967_Biafra_celebrations"			#placeholder
+
+	option = {
+		name = "EVTOPTA128001"
+		ai_chance = { factor = 100 }
+		money = 1000
+		prestige_change = 15					#Quite a feat for small Biafra
+		end_war = NIG
+	}
+	
+	option = {
+		name = "EVTOPTB128001"
+		ai_chance = { factor = 0 }
+		prestige_change = 20					#Never!
+	}
+}

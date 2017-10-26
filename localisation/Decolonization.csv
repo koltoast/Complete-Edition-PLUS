@@ -1,0 +1,1436 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;x
+# Events ; REMOVE HASH FOR ACTIVE EVENTS AND OPTIONS;;;;;;;;;;;;;x
+##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;##################################################;x
+#ANG;Angola;;;;;;;;;;;;;x
+EVTNAME6000;The Angolan Independence;;;;;;;;;;;;;x
+EVTDESC6000;From the demands of angolan intellectuals to the recent popular uprisings, the nationalist sentiment in Angola is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Angola is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6000;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6000;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6000;Angola is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6001;The Angolan Independence;;;;;;;;;;;;;x
+EVTDESC6001;The angolan government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6001;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6001;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6002;The Angolan War;;;;;;;;;;;;;x
+EVTDESC6002;Armed groups of rebel militias continue to terrorize the population in Angola. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Angola. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6002;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6002;Crush the rebel scum! Angola is ours!;;;;;;;;;;;;;x
+EVTNAME6003;The Angolan War;;;;;;;;;;;;;x
+EVTDESC6003;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6003;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6003;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#BEN;Benin;;;;;;;;;;;;;x
+EVTNAME6010;The Beninese Independence;;;;;;;;;;;;;x
+EVTDESC6010;From the demands of beninese intellectuals to the recent popular uprisings, the nationalist sentiment in Benin is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Benin is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6010;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6010;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6010;Benin is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6011;The Beninese Independence;;;;;;;;;;;;;x
+EVTDESC6011;The beninese government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6011;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6011;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6012;The Beninese War;;;;;;;;;;;;;x
+EVTDESC6012;Armed groups of rebel militias continue to terrorize the population in Benin. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Benin. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6012;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6012;Crush the rebel scum! Benin is ours!;;;;;;;;;;;;;x
+EVTNAME6013;The Beninese War;;;;;;;;;;;;;x
+EVTDESC6013;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6013;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6013;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#BKN;Burkina Faso;;;;;;;;;;;;;x
+EVTNAME6020;The Burkinabe Independence;;;;;;;;;;;;;x
+EVTDESC6020;From the demands of burkinabe intellectuals to the recent popular uprisings, the nationalist sentiment in Burkina Faso is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Burkina Faso is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6020;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6020;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6020;Burkina Faso is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6021;The Burkinabe Independence;;;;;;;;;;;;;x
+EVTDESC6021;The burkinabe government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6021;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6021;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6022;The Burkinabe War;;;;;;;;;;;;;x
+EVTDESC6022;Armed groups of rebel militias continue to terrorize the population in Burkina Faso. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Burkina Faso. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6022;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6022;Crush the rebel scum! Burkina Faso is ours!;;;;;;;;;;;;;x
+EVTNAME6023;The Burkinabe War;;;;;;;;;;;;;x
+EVTDESC6023;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6023;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6023;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#BOT;Botswana;;;;;;;;;;;;;x
+EVTNAME6030;The Batswana Independence;;;;;;;;;;;;;x
+EVTDESC6030;From the demands of batswana intellectuals to the recent popular uprisings, the nationalist sentiment in Botswana is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Botswana is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6030;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6030;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6030;Botswana is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6031;The Batswana Independence;;;;;;;;;;;;;x
+EVTDESC6031;The batswana government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6031;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6031;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6032;The Batswana War;;;;;;;;;;;;;x
+EVTDESC6032;Armed groups of rebel militias continue to terrorize the population in Botswana. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Botswana. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6032;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6032;Crush the rebel scum! Botswana is ours!;;;;;;;;;;;;;x
+EVTNAME6033;The Batswana War;;;;;;;;;;;;;x
+EVTDESC6033;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6033;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTA6033;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#BRD;Burundi;;;;;;;;;;;;;x
+EVTNAME6040;The Burundian Independence;;;;;;;;;;;;;x
+EVTDESC6040;From the demands of burundian intellectuals to the recent popular uprisings, the nationalist sentiment in Burundi is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Burundi is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6040;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6040;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6040;Burundi is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6041;The Burundian Independence;;;;;;;;;;;;;x
+EVTDESC6041;The burundian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6041;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6041;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6042;The Burundian War;;;;;;;;;;;;;x
+EVTDESC6042;Armed groups of rebel militias continue to terrorize the population in Burundi. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Burundi. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6042;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6042;Crush the rebel scum! Burundi is ours!;;;;;;;;;;;;;x
+EVTNAME6043;The Burundian War;;;;;;;;;;;;;x
+EVTDESC6043;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6043;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6043;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#CAM;Cameroon;;;;;;;;;;;;;x
+EVTNAME6050;The Cameroonian Independence;;;;;;;;;;;;;x
+EVTDESC6050;From the demands of cameroonian intellectuals to the recent popular uprisings, the nationalist sentiment in Cameroon is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Cameroon is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6050;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6050;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6050;Cameroon is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6051;The Cameroonian Independence;;;;;;;;;;;;;x
+EVTDESC6051;The cameroonian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6051;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6051;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6052;The Cameroonian War;;;;;;;;;;;;;x
+EVTDESC6052;Armed groups of rebel militias continue to terrorize the population in Cameroon. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Cameroon. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6052;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6052;Crush the rebel scum! Cameroon is ours!;;;;;;;;;;;;;x
+EVTNAME6053;The Cameroonian War;;;;;;;;;;;;;x
+EVTDESC6053;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6053;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6053;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#CAR;Central African Republic;;;;;;;;;;;;;x
+EVTNAME6060;The Central African Independence;;;;;;;;;;;;;x
+EVTDESC6060;From the demands of central african intellectuals to the recent popular uprisings, the nationalist sentiment in Central Africa is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Central Africa is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6060;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6060;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6060;Central Africa is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6061;The Central African Independence;;;;;;;;;;;;;x
+EVTDESC6061;The central african government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6061;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6061;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6062;The Central African War;;;;;;;;;;;;;x
+EVTDESC6062;Armed groups of rebel militias continue to terrorize the population in Central Africa. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Central Africa. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6062;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6062;Crush the rebel scum! Central Africa is ours!;;;;;;;;;;;;;x
+EVTNAME6063;The Central African War;;;;;;;;;;;;;x
+EVTDESC6063;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6063;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6063;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#CDI;Ivory Coast;;;;;;;;;;;;;x
+EVTNAME6070;The Ivorian Independence;;;;;;;;;;;;;x
+EVTDESC6070;From the demands of ivorian intellectuals to the recent popular uprisings, the nationalist sentiment in Ivory Coast is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Ivory Coast is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6070;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6070;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6070;Ivory Coast is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6071;The Ivorian Independence;;;;;;;;;;;;;x
+EVTDESC6071;The ivorian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6071;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6071;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6072;The Ivorian War;;;;;;;;;;;;;x
+EVTDESC6072;Armed groups of rebel militias continue to terrorize the population in Ivory Coast. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Ivory Coast. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6072;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6072;Crush the rebel scum! Ivory Coast is ours!;;;;;;;;;;;;;x
+EVTNAME6073;The Ivorian War;;;;;;;;;;;;;x
+EVTDESC6073;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6073;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTA6073;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#CHA;Chad;;;;;;;;;;;;;x
+EVTNAME6080;The Chadian Independence;;;;;;;;;;;;;x
+EVTDESC6080;From the demands of chadian intellectuals to the recent popular uprisings, the nationalist sentiment in Chad is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Chad is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6080;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6080;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6080;Chad is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6081;The Chadian Independence;;;;;;;;;;;;;x
+EVTDESC6081;The chadian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6081;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6081;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6082;The Chadian War;;;;;;;;;;;;;x
+EVTDESC6082;Armed groups of rebel militias continue to terrorize the population in Chad. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Chad. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6082;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6082;Crush the rebel scum! Chad is ours!;;;;;;;;;;;;;x
+EVTNAME6083;The Chadian War;;;;;;;;;;;;;x
+EVTDESC6083;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6083;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6083;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#CNG;Republic of the Congo;;;;;;;;;;;;;x
+EVTNAME6090;The Congolese Independence;;;;;;;;;;;;;x
+EVTDESC6090;From the demands of congolese intellectuals to the recent popular uprisings, the nationalist sentiment in Congo is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Congo is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6090;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6090;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6090;Congo is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6091;The Congolese Independence;;;;;;;;;;;;;x
+EVTDESC6091;The congolese government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6091;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6091;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6092;The Congolese War;;;;;;;;;;;;;x
+EVTDESC6092;Armed groups of rebel militias continue to terrorize the population in Congo. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Congo. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6092;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6092;Crush the rebel scum! Congo is ours!;;;;;;;;;;;;;x
+EVTNAME6093;The Congolese War;;;;;;;;;;;;;x
+EVTDESC6093;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6093;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6093;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#COM;Comoros;;;;;;;;;;;;;x
+EVTNAME6100;The Comoran Independence;;;;;;;;;;;;;x
+EVTDESC6100;From the demands of comoran intellectuals to the recent popular uprisings, the nationalist sentiment in Comoros is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Comoros is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6100;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6100;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6100;Comoros is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6101;The Comoran Independence;;;;;;;;;;;;;x
+EVTDESC6101;The comoran government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6101;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6101;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6102;The Comoran War;;;;;;;;;;;;;x
+EVTDESC6102;Armed groups of rebel militias continue to terrorize the population in Comoros. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Comoros. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6102;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6102;Crush the rebel scum! Comoros is ours!;;;;;;;;;;;;;x
+EVTNAME6103;The Comoran War;;;;;;;;;;;;;x
+EVTDESC6103;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6103;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6103;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#CPV;Cape Verde;;;;;;;;;;;;;x
+EVTNAME6110;The Cape Verdean Independence;;;;;;;;;;;;;x
+EVTDESC6110;From the demands of cape verdean intellectuals to the recent popular uprisings, the nationalist sentiment in Cape Verde is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Cape Verde is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6110;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6110;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6110;Cape Verde is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6111;The Cape Verdean Independence;;;;;;;;;;;;;x
+EVTDESC6111;The cape verdean government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6111;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6111;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6112;The Cape Verdean War;;;;;;;;;;;;;x
+EVTDESC6112;Armed groups of rebel militias continue to terrorize the population in Cape Verde. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Cape Verde. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6112;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6112;Crush the rebel scum! Cape Verde is ours!;;;;;;;;;;;;;x
+EVTNAME6113;The Cape Verdean War;;;;;;;;;;;;;x
+EVTDESC6113;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6113;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6113;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#DJI;Djibouti;;;;;;;;;;;;;x
+EVTNAME6120;The Djiboutian Independence;;;;;;;;;;;;;x
+EVTDESC6120;From the demands of djiboutian intellectuals to the recent popular uprisings, the nationalist sentiment in Djibouti is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Djibouti is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6120;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6120;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6120;Djibouti is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6121;The Djiboutian Independence;;;;;;;;;;;;;x
+EVTDESC6121;The djiboutian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6121;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6121;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6122;The Djiboutian War;;;;;;;;;;;;;x
+EVTDESC6122;Armed groups of rebel militias continue to terrorize the population in Djibouti. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Djibouti. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6122;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6122;Crush the rebel scum! Djibouti is ours!;;;;;;;;;;;;;x
+EVTNAME6123;The Djiboutian War;;;;;;;;;;;;;x
+EVTDESC6123;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6123;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6123;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#DRC;Democratic Republic of Congo;;;;;;;;;;;;;x
+EVTNAME6130;The Congolese Independence;;;;;;;;;;;;;x
+EVTDESC6130;From the demands of congolese intellectuals to the recent popular uprisings, the nationalist sentiment in Congo is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Congo is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6130;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6130;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6130;Congo is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6131;The Congolese Independence;;;;;;;;;;;;;x
+EVTDESC6131;The congolese government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6131;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6131;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6132;The Congolese War;;;;;;;;;;;;;x
+EVTDESC6132;Armed groups of rebel militias continue to terrorize the population in Congo. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Congo. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6132;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6132;Crush the rebel scum! Congo is ours!;;;;;;;;;;;;;x
+EVTNAME6133;The Congolese War;;;;;;;;;;;;;x
+EVTDESC6133;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6133;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6133;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#EAF;East African Republic;;;;;;;;;;;;;x
+#EQG;Equatorial Guinea;;;;;;;;;;;;;x
+EVTNAME6150;The Equatorial Guinean Independence;;;;;;;;;;;;;x
+EVTDESC6150;From the demands of equatorial guinean intellectuals to the recent popular uprisings, the nationalist sentiment in Equatorial Guinea is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Equatorial Guinea is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6150;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6150;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6150;Equatorial Guinea is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6151;The Equatorial Guinean Independence;;;;;;;;;;;;;x
+EVTDESC6151;The equatorial guinean government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6151;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6151;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6152;The Equatorial Guinean War;;;;;;;;;;;;;x
+EVTDESC6152;Armed groups of rebel militias continue to terrorize the population in Equatorial Guinea. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Equatorial Guinea. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6152;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6152;Crush the rebel scum! Equatorial Guinea is ours!;;;;;;;;;;;;;x
+EVTNAME6153;The Equatorial Guinean War;;;;;;;;;;;;;x
+EVTDESC6153;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6153;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6153;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#ERI;Eritrea;;;;;;;;;;;;;x
+EVTNAME6160;The Eritrean Independence;;;;;;;;;;;;;x
+EVTDESC6160;From the demands of eritrean intellectuals to the recent popular uprisings, the nationalist sentiment in Eritrea is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Eritrea is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6160;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6160;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6160;Eritrea is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6161;The Eritrean Independence;;;;;;;;;;;;;x
+EVTDESC6161;The eritrean government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6161;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6161;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6162;The Eritrean War;;;;;;;;;;;;;x
+EVTDESC6162;Armed groups of rebel militias continue to terrorize the population in Eritrea. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Eritrea. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6162;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6162;Crush the rebel scum! Eritrea is ours!;;;;;;;;;;;;;x
+EVTNAME6163;The Eritrean War;;;;;;;;;;;;;x
+EVTDESC6163;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6163;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6163;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#ETH;Ethiopia;;;;;;;;;;;;;x
+EVTNAME6170;The Ethiopian Independence;;;;;;;;;;;;;x
+EVTDESC6170;From the demands of ethiopian intellectuals to the recent popular uprisings, the nationalist sentiment in Ethiopia is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Ethiopia is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6170;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6170;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6170;Ethiopia is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6171;The Ethiopian Independence;;;;;;;;;;;;;x
+EVTDESC6171;The ethiopian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6171;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6171;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6172;The Ethiopian War;;;;;;;;;;;;;x
+EVTDESC6172;Armed groups of rebel militias continue to terrorize the population in Ethiopia. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Ethiopia. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6172;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6172;Crush the rebel scum! Ethiopia is ours!;;;;;;;;;;;;;x
+EVTNAME6173;The Ethiopian War;;;;;;;;;;;;;x
+EVTDESC6173;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6173;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6173;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#FSU;French Sudan (Mali);;;;;;;;;;;;;x
+#GAB;Gabon;;;;;;;;;;;;;x
+EVTNAME6190;The Gabonese Independence;;;;;;;;;;;;;x
+EVTDESC6190;From the demands of gabonese intellectuals to the recent popular uprisings, the nationalist sentiment in Gabon is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Gabon is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6190;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6190;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6190;Gabon is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6191;The Gabonese Independence;;;;;;;;;;;;;x
+EVTDESC6191;The gabonese government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6191;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6191;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6192;The Gabonese War;;;;;;;;;;;;;x
+EVTDESC6192;Armed groups of rebel militias continue to terrorize the population in Gabon. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Gabon. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6192;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6192;Crush the rebel scum! Gabon is ours!;;;;;;;;;;;;;x
+EVTNAME6193;The Gabonese War;;;;;;;;;;;;;x
+EVTDESC6193;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6193;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6193;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#GAM;Gambia;;;;;;;;;;;;;x
+EVTNAME6200;The Gambian Independence;;;;;;;;;;;;;x
+EVTDESC6200;From the demands of gambian intellectuals to the recent popular uprisings, the nationalist sentiment in Gambia is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Gambia is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6200;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6200;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6200;Gambia is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6201;The Gambian Independence;;;;;;;;;;;;;x
+EVTDESC6201;The gambian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6201;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6201;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6202;The Gambian War;;;;;;;;;;;;;x
+EVTDESC6202;Armed groups of rebel militias continue to terrorize the population in Gambia. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Gambia. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6202;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6202;Crush the rebel scum! Gambia is ours!;;;;;;;;;;;;;x
+EVTNAME6203;The Gambian War;;;;;;;;;;;;;x
+EVTDESC6203;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6203;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6203;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#GHN;Ghana;;;;;;;;;;;;;x
+EVTNAME6210;The Ghanaian Independence;;;;;;;;;;;;;x
+EVTDESC6210;From the demands of ghanaian intellectuals to the recent popular uprisings, the nationalist sentiment in Ghana is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Ghana is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6210;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6210;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6210;Ghana is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6211;The Ghanaian Independence;;;;;;;;;;;;;x
+EVTDESC6211;The ghanaian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6211;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6211;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6212;The Ghanaian War;;;;;;;;;;;;;x
+EVTDESC6212;Armed groups of rebel militias continue to terrorize the population in Ghana. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Ghana. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6212;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6212;Crush the rebel scum! Ghana is ours!;;;;;;;;;;;;;x
+EVTNAME6213;The Ghanaian War;;;;;;;;;;;;;x
+EVTDESC6213;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6213;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6213;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#GUB;Guinea-Bissau;;;;;;;;;;;;;x
+EVTNAME6220;The Bissau-Guinean Independence;;;;;;;;;;;;;x
+EVTDESC6220;From the demands of bissau-guinean intellectuals to the recent popular uprisings, the nationalist sentiment in Guinea-Bissau is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Guinea-Bissau is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6220;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6220;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6220;Guinea-Bissau is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6221;The Bissau-Guinean Independence;;;;;;;;;;;;;x
+EVTDESC6221;The bissau-guinean government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6221;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6221;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6222;The Bissau-Guinean War;;;;;;;;;;;;;x
+EVTDESC6222;Armed groups of rebel militias continue to terrorize the population in Guinea-Bissau. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Guinea-Bissau. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6222;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6222;Crush the rebel scum! Guinea-Bissau is ours!;;;;;;;;;;;;;x
+EVTNAME6223;The Bissau-Guinean War;;;;;;;;;;;;;x
+EVTDESC6223;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6223;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6223;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#GUI;Guinea;;;;;;;;;;;;;x
+EVTNAME6230;The Guinean Independence;;;;;;;;;;;;;x
+EVTDESC6230;From the demands of guinean intellectuals to the recent popular uprisings, the nationalist sentiment in Guinea is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Guinea is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6230;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6230;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6230;Guinea is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6231;The Guinean Independence;;;;;;;;;;;;;x
+EVTDESC6231;The guinean government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6231;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6231;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6232;The Guinean War;;;;;;;;;;;;;x
+EVTDESC6232;Armed groups of rebel militias continue to terrorize the population in Guinea. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Guinea. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6232;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6232;Crush the rebel scum! Guinea is ours!;;;;;;;;;;;;;x
+EVTNAME6233;The Guinean War;;;;;;;;;;;;;x
+EVTDESC6233;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6233;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6233;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#KAT;Katsina;;;;;;;;;;;;;x
+#KEN;Kenya;;;;;;;;;;;;;x
+EVTNAME6250;The Kenyan Independence;;;;;;;;;;;;;x
+EVTDESC6250;From the demands of kenyan intellectuals to the recent popular uprisings, the nationalist sentiment in Kenya is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Kenya is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6250;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6250;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6250;Kenya is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6251;The Kenyan Independence;;;;;;;;;;;;;x
+EVTDESC6251;The kenyan government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6251;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6251;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6252;The Kenyan War;;;;;;;;;;;;;x
+EVTDESC6252;Armed groups of rebel militias continue to terrorize the population in Kenya. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Kenya. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6252;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6252;Crush the rebel scum! Kenya is ours!;;;;;;;;;;;;;x
+EVTNAME6253;The Kenyan War;;;;;;;;;;;;;x
+EVTDESC6253;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6253;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6253;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#KON;Zaire;;;;;;;;;;;;;x
+#LBY;Libya;;;;;;;;;;;;;x
+EVTNAME6270;The Libyan Independence;;;;;;;;;;;;;x
+EVTDESC6270;From the demands of libyan intellectuals to the recent popular uprisings, the nationalist sentiment in Libya is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Libya is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6270;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6270;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6270;Libya is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6271;The Libyan Independence;;;;;;;;;;;;;x
+EVTDESC6271;The libyan government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6271;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6271;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6272;The Libyan War;;;;;;;;;;;;;x
+EVTDESC6272;Armed groups of rebel militias continue to terrorize the population in Libya. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Libya. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6272;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6272;Crush the rebel scum! Libya is ours!;;;;;;;;;;;;;x
+EVTNAME6273;The Libyan War;;;;;;;;;;;;;x
+EVTDESC6273;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6273;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6273;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#LIB;Liberia;;;;;;;;;;;;;x
+EVTNAME6280;The Liberian Independence;;;;;;;;;;;;;x
+EVTDESC6280;From the demands of liberian intellectuals to the recent popular uprisings, the nationalist sentiment in Liberia is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Liberia is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6280;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6280;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6280;Liberia is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6281;The Liberian Independence;;;;;;;;;;;;;x
+EVTDESC6281;The liberian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6281;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6281;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6282;The Liberian War;;;;;;;;;;;;;x
+EVTDESC6282;Armed groups of rebel militias continue to terrorize the population in Liberia. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Liberia. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6282;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6282;Crush the rebel scum! Liberia is ours!;;;;;;;;;;;;;x
+EVTNAME6283;The Liberian War;;;;;;;;;;;;;x
+EVTDESC6283;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6283;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6283;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#LST;Lesotho;;;;;;;;;;;;;x
+EVTNAME6290;The Basotho Independence;;;;;;;;;;;;;x
+EVTDESC6290;From the demands of basotho intellectuals to the recent popular uprisings, the nationalist sentiment in Lesotho is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Lesotho is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6290;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6290;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6290;Lesotho is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6291;The Basotho Independence;;;;;;;;;;;;;x
+EVTDESC6291;The basotho government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6291;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6291;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6292;The Basotho War;;;;;;;;;;;;;x
+EVTDESC6292;Armed groups of rebel militias continue to terrorize the population in Lesotho. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Lesotho. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6292;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6292;Crush the rebel scum! Lesotho is ours!;;;;;;;;;;;;;x
+EVTNAME6293;The Basotho War;;;;;;;;;;;;;x
+EVTDESC6293;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6293;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6293;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#MAD;Madagascar;;;;;;;;;;;;;x
+EVTNAME6300;The Malagasy Independence;;;;;;;;;;;;;x
+EVTDESC6300;From the demands of malagasy intellectuals to the recent popular uprisings, the nationalist sentiment in Madagascar is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Madagascar is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6300;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6300;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6300;Madagascar is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6301;The Malagasy Independence;;;;;;;;;;;;;x
+EVTDESC6301;The malagasy government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6301;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6301;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6302;The Malagasy War;;;;;;;;;;;;;x
+EVTDESC6302;Armed groups of rebel militias continue to terrorize the population in Madagascar. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Madagascar. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6302;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6302;Crush the rebel scum! Madagascar is ours!;;;;;;;;;;;;;x
+EVTNAME6303;The Malagasy War;;;;;;;;;;;;;x
+EVTDESC6303;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6303;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6303;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#MAL;Mali;;;;;;;;;;;;;x
+EVTNAME6310;The Malian Independence;;;;;;;;;;;;;x
+EVTDESC6310;From the demands of malian intellectuals to the recent popular uprisings, the nationalist sentiment in Mali is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Mali is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6310;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6310;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6310;Mali is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6311;The Malian Independence;;;;;;;;;;;;;x
+EVTDESC6311;The malian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6311;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6311;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6312;The Malian War;;;;;;;;;;;;;x
+EVTDESC6312;Armed groups of rebel militias continue to terrorize the population in Mali. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Mali. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6312;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6312;Crush the rebel scum! Mali is ours!;;;;;;;;;;;;;x
+EVTNAME6313;The Malian War;;;;;;;;;;;;;x
+EVTDESC6313;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6313;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6313;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#MLW;Malawi;;;;;;;;;;;;;x
+EVTNAME6320;The Malawian Independence;;;;;;;;;;;;;x
+EVTDESC6320;From the demands of malawian intellectuals to the recent popular uprisings, the nationalist sentiment in Malawi is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Malawi is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6320;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6320;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6320;Malawi is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6321;The Malawian Independence;;;;;;;;;;;;;x
+EVTDESC6321;The malawian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6321;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6321;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6322;The Malawian War;;;;;;;;;;;;;x
+EVTDESC6322;Armed groups of rebel militias continue to terrorize the population in Malawi. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Malawi. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6322;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6322;Crush the rebel scum! Malawi is ours!;;;;;;;;;;;;;x
+EVTNAME6323;The Malawian War;;;;;;;;;;;;;x
+EVTDESC6323;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6323;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6323;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#MOR;Morocco;;;;;;;;;;;;;x
+#MOZ;Mozambique;;;;;;;;;;;;;x
+EVTNAME6340;The Mozambican Independence;;;;;;;;;;;;;x
+EVTDESC6340;From the demands of mozambican intellectuals to the recent popular uprisings, the nationalist sentiment in Mozambique is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Mozambique is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6340;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6340;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6340;Mozambique is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6341;The Mozambican Independence;;;;;;;;;;;;;x
+EVTDESC6341;The mozambican government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6341;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6341;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6342;The Mozambican War;;;;;;;;;;;;;x
+EVTDESC6342;Armed groups of rebel militias continue to terrorize the population in Mozambique. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Mozambique. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6342;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6342;Crush the rebel scum! Mozambique is ours!;;;;;;;;;;;;;x
+EVTNAME6343;The Mozambican War;;;;;;;;;;;;;x
+EVTDESC6343;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6343;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6343;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#MRA;Mauritania;;;;;;;;;;;;;x
+EVTNAME6350;The Mauritanian Independence;;;;;;;;;;;;;x
+EVTDESC6350;From the demands of mauritanian intellectuals to the recent popular uprisings, the nationalist sentiment in Mauritania is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Mauritania is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6350;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6350;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6350;Mauritania is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6351;The Mauritanian Independence;;;;;;;;;;;;;x
+EVTDESC6351;The mauritanian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6351;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6351;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6352;The Mauritanian War;;;;;;;;;;;;;x
+EVTDESC6352;Armed groups of rebel militias continue to terrorize the population in Mauritania. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Mauritania. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6352;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6352;Crush the rebel scum! Mauritania is ours!;;;;;;;;;;;;;x
+EVTNAME6353;The Mauritanian War;;;;;;;;;;;;;x
+EVTDESC6353;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6353;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6353;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#MRT;Mauritius;;;;;;;;;;;;;x
+EVTNAME6360;The Mauritian Independence;;;;;;;;;;;;;x
+EVTDESC6360;From the demands of mauritian intellectuals to the recent popular uprisings, the nationalist sentiment in Mauritius is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Mauritius is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6360;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6360;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6360;Mauritius is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6361;The Mauritian Independence;;;;;;;;;;;;;x
+EVTDESC6361;The mauritian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6361;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6361;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6362;The Mauritian War;;;;;;;;;;;;;x
+EVTDESC6362;Armed groups of rebel militias continue to terrorize the population in Mauritius. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Mauritius. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6362;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6362;Crush the rebel scum! Mauritius is ours!;;;;;;;;;;;;;x
+EVTNAME6363;The Mauritian War;;;;;;;;;;;;;x
+EVTDESC6363;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6363;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6363;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#NAM;Namibia;;;;;;;;;;;;;x
+#NGR;Niger;;;;;;;;;;;;;x
+EVTNAME6380;The Nigerien Independence;;;;;;;;;;;;;x
+EVTDESC6380;From the demands of nigerien intellectuals to the recent popular uprisings, the nationalist sentiment in Niger is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Niger is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6380;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6380;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6380;Niger is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6381;The Nigerien Independence;;;;;;;;;;;;;x
+EVTDESC6381;The nigerien government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6381;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6381;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6382;The Nigerien War;;;;;;;;;;;;;x
+EVTDESC6382;Armed groups of rebel militias continue to terrorize the population in Niger. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Niger. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6382;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6382;Crush the rebel scum! Niger is ours!;;;;;;;;;;;;;x
+EVTNAME6383;The Nigerien War;;;;;;;;;;;;;x
+EVTDESC6383;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6383;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6383;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#NIG;Nigeria;;;;;;;;;;;;;x
+EVTNAME6390;The Nigerian Independence;;;;;;;;;;;;;x
+EVTDESC6390;From the demands of nigerian intellectuals to the recent popular uprisings, the nationalist sentiment in Nigeria is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Nigeria is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6390;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6390;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6390;Nigeria is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6391;The Nigerian Independence;;;;;;;;;;;;;x
+EVTDESC6391;The nigerian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6391;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6391;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6392;The Nigerian War;;;;;;;;;;;;;x
+EVTDESC6392;Armed groups of rebel militias continue to terrorize the population in Nigeria. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Nigeria. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6392;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6392;Crush the rebel scum! Nigeria is ours!;;;;;;;;;;;;;x
+EVTNAME6393;The Nigerian War;;;;;;;;;;;;;x
+EVTDESC6393;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6393;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6393;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#RWA;Rwanda;;;;;;;;;;;;;x
+EVTNAME6400;The Rwandan Independence;;;;;;;;;;;;;x
+EVTDESC6400;From the demands of rwandan intellectuals to the recent popular uprisings, the nationalist sentiment in Rwanda is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Rwanda is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6400;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6400;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6400;Rwanda is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6401;The Rwandan Independence;;;;;;;;;;;;;x
+EVTDESC6401;The rwandan government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6401;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6401;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6402;The Rwandan War;;;;;;;;;;;;;x
+EVTDESC6402;Armed groups of rebel militias continue to terrorize the population in Rwanda. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Rwanda. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6402;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6402;Crush the rebel scum! Rwanda is ours!;;;;;;;;;;;;;x
+EVTNAME6403;The Rwandan War;;;;;;;;;;;;;x
+EVTDESC6403;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6403;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6403;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#SAF;South Africa;;;;;;;;;;;;;x
+#SCL;Seychelles;;;;;;;;;;;;;x
+EVTNAME6420;The Seychellois Independence;;;;;;;;;;;;;x
+EVTDESC6420;From the demands of seychellois intellectuals to the recent popular uprisings, the nationalist sentiment in Seychelles is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Seychelles is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6420;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6420;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6420;Seychelles is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6421;The Seychellois Independence;;;;;;;;;;;;;x
+EVTDESC6421;The seychellois government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6421;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6421;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6422;The Seychellois War;;;;;;;;;;;;;x
+EVTDESC6422;Armed groups of rebel militias continue to terrorize the population in Seychelles. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Seychelles. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6422;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6422;Crush the rebel scum! Seychelles is ours!;;;;;;;;;;;;;x
+EVTNAME6423;The Seychellois War;;;;;;;;;;;;;x
+EVTDESC6423;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6423;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6423;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#SDR;Sahrawi Arab Democratic Republic;;;;;;;;;;;;;x
+#SEN;Senegal;;;;;;;;;;;;;x
+EVTNAME6440;The Senegalese Independence;;;;;;;;;;;;;x
+EVTDESC6440;From the demands of senegalese intellectuals to the recent popular uprisings, the nationalist sentiment in Senegal is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Senegal is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6440;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6440;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6440;Senegal is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6441;The Senegalese Independence;;;;;;;;;;;;;x
+EVTDESC6441;The senegalese government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6441;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6441;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6442;The Senegalese War;;;;;;;;;;;;;x
+EVTDESC6442;Armed groups of rebel militias continue to terrorize the population in Senegal. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Senegal. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6442;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6442;Crush the rebel scum! Senegal is ours!;;;;;;;;;;;;;x
+EVTNAME6443;The Senegalese War;;;;;;;;;;;;;x
+EVTDESC6443;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6443;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6443;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#SIE;Sierra Leone;;;;;;;;;;;;;x
+EVTNAME6450;The Sierra Leonean Independence;;;;;;;;;;;;;x
+EVTDESC6450;From the demands of sierra leonean intellectuals to the recent popular uprisings, the nationalist sentiment in Sierra Leone is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Sierra Leone is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6450;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6450;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6450;Sierra Leone is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6451;The Sierra Leonean Independence;;;;;;;;;;;;;x
+EVTDESC6451;The sierra leonean government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6451;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6451;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6452;The Sierra Leonean War;;;;;;;;;;;;;x
+EVTDESC6452;Armed groups of rebel militias continue to terrorize the population in Sierra Leone. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Sierra Leone. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6452;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6452;Crush the rebel scum! Sierra Leone is ours!;;;;;;;;;;;;;x
+EVTNAME6453;The Sierra Leonean War;;;;;;;;;;;;;x
+EVTDESC6453;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6453;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6453;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#SKA;South Kasai;;;;;;;;;;;;;x
+#SLL;Somaliland;;;;;;;;;;;;;x
+#SOM;Somalia;;;;;;;;;;;;;x
+EVTNAME6480;The Somali Independence;;;;;;;;;;;;;x
+EVTDESC6480;From the demands of somali intellectuals to the recent popular uprisings, the nationalist sentiment in Somalia is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Somalia is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6480;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6480;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6480;Somalia is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6481;The Somali Independence;;;;;;;;;;;;;x
+EVTDESC6481;The somali government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6481;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6481;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6482;The Somali War;;;;;;;;;;;;;x
+EVTDESC6482;Armed groups of rebel militias continue to terrorize the population in Somalia. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Somalia. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6482;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6482;Crush the rebel scum! Somalia is ours!;;;;;;;;;;;;;x
+EVTNAME6483;The Somali War;;;;;;;;;;;;;x
+EVTDESC6483;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6483;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6483;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#SUD;Sudan;;;;;;;;;;;;;x
+EVTNAME6490;The Sudanese Independence;;;;;;;;;;;;;x
+EVTDESC6490;From the demands of sudanese intellectuals to the recent popular uprisings, the nationalist sentiment in Sudan is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Sudan is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6490;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6490;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6490;Sudan is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6491;The Sudanese Independence;;;;;;;;;;;;;x
+EVTDESC6491;The sudanese government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6491;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6491;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6492;The Sudanese War;;;;;;;;;;;;;x
+EVTDESC6492;Armed groups of rebel militias continue to terrorize the population in Sudan. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Sudan. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6492;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6492;Crush the rebel scum! Sudan is ours!;;;;;;;;;;;;;x
+EVTNAME6493;The Sudanese War;;;;;;;;;;;;;x
+EVTDESC6493;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6493;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6493;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#SWA;Swaziland;;;;;;;;;;;;;x
+EVTNAME6500;The Swazi Independence;;;;;;;;;;;;;x
+EVTDESC6500;From the demands of swazi intellectuals to the recent popular uprisings, the nationalist sentiment in Swaziland is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Swaziland is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6500;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6500;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6500;Swaziland is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6501;The Swazi Independence;;;;;;;;;;;;;x
+EVTDESC6501;The swazi government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6501;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6501;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6502;The Swazi War;;;;;;;;;;;;;x
+EVTDESC6502;Armed groups of rebel militias continue to terrorize the population in Swaziland. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Swaziland. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6502;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6502;Crush the rebel scum! Swaziland is ours!;;;;;;;;;;;;;x
+EVTNAME6503;The Swazi War;;;;;;;;;;;;;x
+EVTDESC6503;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6503;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6503;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#TNG;Tanganyika;;;;;;;;;;;;;x
+#TNZ;Tanzania;;;;;;;;;;;;;x
+EVTNAME6520;The Tanzanian Independence;;;;;;;;;;;;;x
+EVTDESC6520;From the demands of tanzanian intellectuals to the recent popular uprisings, the nationalist sentiment in Tanzania is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Tanzania is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6520;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6520;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6520;Tanzania is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6521;The Tanzanian Independence;;;;;;;;;;;;;x
+EVTDESC6521;The tanzanian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6521;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6521;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6522;The Tanzanian War;;;;;;;;;;;;;x
+EVTDESC6522;Armed groups of rebel militias continue to terrorize the population in Tanzania. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Tanzania. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6522;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6522;Crush the rebel scum! Tanzania is ours!;;;;;;;;;;;;;x
+EVTNAME6523;The Tanzanian War;;;;;;;;;;;;;x
+EVTDESC6523;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6523;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6523;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#TOG;Togo;;;;;;;;;;;;;x
+EVTNAME6530;The Togolese Independence;;;;;;;;;;;;;x
+EVTDESC6530;From the demands of togolese intellectuals to the recent popular uprisings, the nationalist sentiment in Togo is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Togo is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6530;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6530;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6530;Togo is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6531;The Togolese Independence;;;;;;;;;;;;;x
+EVTDESC6531;The togolese government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6531;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6531;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6532;The Togolese War;;;;;;;;;;;;;x
+EVTDESC6532;Armed groups of rebel militias continue to terrorize the population in Togo. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Togo. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6532;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6532;Crush the rebel scum! Togo is ours!;;;;;;;;;;;;;x
+EVTNAME6533;The Togolese War;;;;;;;;;;;;;x
+EVTDESC6533;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6533;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6533;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#TUN;Tunisia;;;;;;;;;;;;;x
+EVTNAME6540;The Tunisian Independence;;;;;;;;;;;;;x
+EVTDESC6540;From the demands of tunisian intellectuals to the recent popular uprisings, the nationalist sentiment in Tunisia is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Tunisia is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6540;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6540;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6540;Tunisia is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6541;The Tunisian Independence;;;;;;;;;;;;;x
+EVTDESC6541;The tunisian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6541;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6541;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6542;The Tunisian War;;;;;;;;;;;;;x
+EVTDESC6542;Armed groups of rebel militias continue to terrorize the population in Tunisia. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Tunisia. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6542;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6542;Crush the rebel scum! Tunisia is ours!;;;;;;;;;;;;;x
+EVTNAME6543;The Tunisian War;;;;;;;;;;;;;x
+EVTDESC6543;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6543;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6543;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#UGD;Uganda;;;;;;;;;;;;;x
+EVTNAME6550;The Ugandan Independence;;;;;;;;;;;;;x
+EVTDESC6550;From the demands of ugandan intellectuals to the recent popular uprisings, the nationalist sentiment in Uganda is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Uganda is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6550;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6550;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6550;Uganda is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6551;The Ugandan Independence;;;;;;;;;;;;;x
+EVTDESC6551;The ugandan government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6551;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6551;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6552;The Ugandan War;;;;;;;;;;;;;x
+EVTDESC6552;Armed groups of rebel militias continue to terrorize the population in Uganda. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Uganda. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6552;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6552;Crush the rebel scum! Uganda is ours!;;;;;;;;;;;;;x
+EVTNAME6553;The Ugandan War;;;;;;;;;;;;;x
+EVTDESC6553;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6553;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6553;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+#ZIM;Zimbabwe;;;;;;;;;;;;;x
+#ZMB;Zambia;;;;;;;;;;;;;x
+EVTNAME6570;The Zambian Independence;;;;;;;;;;;;;x
+EVTDESC6570;From the demands of zambian intellectuals to the recent popular uprisings, the nationalist sentiment in Zambia is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Zambia is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
+EVTOPTA6570;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x
+EVTOPTB6570;Allow self-rule while keeping control over foreign affairs.;;;;;;;;;;;;;x
+EVTOPTC6570;Zambia is an integral part of our territory and forever will be.;;;;;;;;;;;;;x
+EVTNAME6571;The Zambian Independence;;;;;;;;;;;;;x
+EVTDESC6571;The zambian government has been so far complacent with our rule, but after a recent wave of nationalist and pan-african sentiments the status quo is no longer sustainable. Their leaders wish to negotiate a peaceful transition to full indepence, but they are willing to fight for it if necessary.;;;;;;;;;;;;;x
+EVTOPTA6571;This was inevitable, grant them independence.;;;;;;;;;;;;;x
+EVTOPTB6571;Insubordination will not be tolerated.;;;;;;;;;;;;;x
+EVTNAME6572;The Zambian War;;;;;;;;;;;;;x
+EVTDESC6572;Armed groups of rebel militias continue to terrorize the population in Zambia. Our position has always been to keep the integrity of the national territory despite some internal opposition, but international pressure has increased with more and more countries supporting the immediate independence of Zambia. Now the choice between fighting for a territory rightfuly ours at great cost or to give in and save face is yours.;;;;;;;;;;;;;x
+EVTOPTA6572;Enough is enough. Accept defeat with dignity.;;;;;;;;;;;;;x
+EVTOPTB6572;Crush the rebel scum! Zambia is ours!;;;;;;;;;;;;;x
+EVTNAME6573;The Zambian War;;;;;;;;;;;;;x
+EVTDESC6573;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
+EVTOPTA6573;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
+EVTOPTB6573;We don't negotiate with terrorists.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;

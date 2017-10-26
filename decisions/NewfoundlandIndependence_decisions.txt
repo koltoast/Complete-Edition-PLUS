@@ -1,0 +1,219 @@
+#NewfoundlandIndependence_decisions.txt
+#1948 Newfoundland Independence Decisions
+
+#ENG - United Kingdom:
+	#dec_ENG_offer_newfoundland_to_Canada - Offer Newfoundland to Canada
+	
+#CAN - Canada:
+	#dec_CAN_pressure_UK_to_give_us_newfoundland - Pressure the United Kingdom to give us Newfoundland
+	
+#USA - USA:
+	#dec_USA_offer_Canada_mainland_newfoundland - Offer Canada mainland Newfoundland in exchange for fishing rights to improve relations
+
+
+diplomatic_decisions = {
+## ENG ##
+	#dec_ENG_offer_newfoundland_to_Canada - Offer Newfoundland to Canada
+	dec_ENG_offer_newfoundland_to_Canada = {
+	
+		category = international
+	    picture = "1948_Newfoundland"
+		
+		potential = {
+			tag = ENG
+			owns = 3641
+			has_global_flag = gflag_ENG_Newfoundland_direct_rule_maintained
+			exists = CAN
+		}
+  
+		allow = {
+			NOT = { war_with = CAN }
+			NOT = { truce_with = CAN }
+			NOT = { war_with = USA }
+			NOT = {
+				any_owned_province = {
+					region = region_Canada_Labrador
+					NOT = { controlled_by = THIS }
+				}
+			}
+			relation = { who = CAN value = -150 }
+			NOT = { has_country_modifier = mod_ENG_Newfoundland_offer_delay }
+			NOT = { has_global_flag = gflag_ENG_Newfoundland_offered_to_Canada }
+			NOT = { has_global_flag = gflag_CAN_Newfoundland_demanded_from_UK }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					AND = {
+						any_owned_province = {
+							region = region_Canada_Labrador
+							revolt_risk = 4
+						}
+						3641 = { revolt_risk = 2 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { relation = { who = CAN value = 75 } }
+			}
+			modifier = {
+				factor = 0
+				war = yes
+				war_exhaustion = 12
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ideology = fascistic_idolg
+					AND = {
+						OR = {
+							government = totalitarian_gov
+							government = authoritarian_gov
+							government = theocracy_gov
+							government = absolute_monarchy_gov
+						}
+						NOT = { 
+							ideology_group = comintern
+							ideology = left_wing_radical_idolg
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ideology = left_wing_radical_idolg
+					ideology = social_democrat_idolg
+				}
+			}
+			modifier = {
+				factor = 2
+				3641 = { revolt_risk = 6 }
+			}
+			modifier = {
+				factor = 2
+				3641 = { revolt_risk = 10 }
+			}
+		}
+		
+		effect = {
+			set_global_flag = gflag_ENG_Newfoundland_offered_to_Canada
+			CAN = { country_event = 144992 }
+		}
+	}
+	
+## CAN ##
+	#dec_CAN_pressure_UK_to_give_us_newfoundland - Pressure the United Kingdom to give us Newfoundland
+	dec_CAN_pressure_UK_to_give_us_newfoundland = {
+	
+		category = international
+	    picture = "1948_Newfoundland"
+	
+		potential = {
+			tag = CAN
+			exists = ENG
+			NOT = { vassal_of = ENG }
+			ENG = { owns = 3641 }
+			has_global_flag = gflag_ENG_Newfoundland_direct_rule_maintained
+		}
+  
+		allow = {
+			NOT = { vassal_of = ENG }
+			NOT = { has_global_flag = gflag_ENG_Newfoundland_offered_to_Canada }
+			NOT = { has_global_flag = gflag_CAN_Newfoundland_demanded_from_UK }
+			NOT = { war_with = ENG }
+			NOT = { truce_with = ENG }
+			NOT = {
+				war = yes
+				war_exhaustion = 5
+			}
+			NOT = { has_country_modifier = mod_ENG_Newfoundland_offer_delay }
+			NOT = { has_country_modifier = mod_CAN_Newfoundland_demand_delay }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				relation = { who = ENG value = 175 }
+			}
+			modifier = {
+				factor = 0
+				relation = { who = ENG value = 150 }
+				alliance_with = ENG
+			}
+			modifier = {
+				factor = 0
+				NOT = { prestige = 50 }
+			}
+		}
+		
+		effect = {
+			set_global_flag = gflag_CAN_Newfoundland_demanded_from_UK
+			prestige_change = -10
+			ENG = { country_event = 181096 }
+		}
+	}
+	
+## USA ##
+	#dec_USA_offer_Canada_mainland_newfoundland - Offer Canada mainland Newfoundland in exchange for fishing rights to improve relations
+	dec_USA_offer_Canada_mainland_newfoundland = {
+	
+		category = international
+	    picture = "1948_Labrador"
+	
+		potential = {
+			tag = USA
+			owns = 3641
+			OR = {
+				AND = {
+					exists = CAN
+					neighbour = CAN
+					region_Canada_Quebec = { owned_by = CAN }
+				}
+				AND = {
+					exists = QUE
+					neighbour = QUE
+					region_Canada_Quebec = { owned_by = QUE }
+				}
+			}
+			NOT = { has_global_flag = gflag_USA_Canada_offered_mainland_newfoundland }
+		}
+  
+		allow = {
+			NOT = { war_with = CAN }
+			NOT = { truce_with = CAN }
+			NOT = { war_with = QUE }
+			NOT = { truce_with = QUE }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					economy_unbalanced = no
+					economy_rating_greater = 8.0
+					NOT = { relation = { who = CAN value = 75 } }
+					biggest_naval = yes
+					ideology = fascistic_idolg
+					national_identity = territorial_focus
+					national_identity = state_building_focus
+					national_attitude = imperialism
+				}
+			}
+		}
+		
+		effect = {
+			set_global_flag = gflag_USA_Canada_offered_mainland_newfoundland
+			3391 = {
+				owner = { country_event = 144994 }
+			}
+		}
+	}
+	
+}

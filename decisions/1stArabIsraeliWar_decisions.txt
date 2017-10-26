@@ -1,0 +1,359 @@
+#1stArabIsraeliWar_decisions.txt
+#1948 1st Arab-Israeli War
+
+#Asia:
+	#1948_war_arab_minors - Whether to intervene in the war in Palestine or not - for YEM/OMN/BAH/KWT/LBY/NYE/SYA/SDR
+	
+#EGY - Egypt:
+	#1948_war_EGY - Whether to go to war with Israel or not
+	#1948_war_victory_EGY - Israel is defeated with EGY as the major victor - EGY decides the future of Palestine
+	
+#IRQ - Iraq:
+	#1948_war_IRQ - Whether to intervene in the war in Palestine or not
+
+#SYR - Syria:
+	#1948_war_SYR - Whether to go to war with Israel or not
+	#1948_war_victory_SYR - Israel is defeated with SYR as the major victor - SYR decides the future of Palestine
+
+#JOR - Jordan:
+	#1948_war_JOR - Whether to go to war with Israel or not
+	#1948_war_victory_JOR - Israel is defeated with JOR as the major victor - JOR decides the future of Palestine
+
+#LEB - Lebanon:
+	#1948_war_LEB - Lebanese intervention in the war in Palestine
+
+#SAU - Saudi Arabia:
+	#1948_war_SAU - Whether to intervene in the war in Palestine or not
+
+
+diplomatic_decisions = {
+## Asia ##
+	#1948_war_arab_minors - Whether to go to war with Israel or not
+	1948_war_arab_minors = {
+		category = international
+	    picture = "1948_Arab_volunteers"
+		
+		potential = {
+			NOT = { has_country_flag =  1948_war_arab_minors_done }
+			has_global_flag = 1948_palestine_war_start
+			OR = {
+				tag = BAH
+				tag = KWT			#Kuwait
+				tag = LBY
+				tag = NYE			#North Yemen
+				tag = OMN
+				tag = SDR			#Sahrawi Arab Democratic Republic
+				tag = SUD
+				tag = SYA			#South Yemen
+				tag = UAE
+				tag = YEM
+			}
+			exists = ISR
+		}
+		
+		allow = {
+			exists = ISR
+			exists = PAL
+			PAL = { war_with = ISR }									#No supporting the war without a war
+			is_subject = no												#SAU is not a puppet state
+		}
+		
+		ai_will_do = { factor = 25 }
+		
+		effect = {
+			country_event = 103000 										#Decision follow-up event
+			set_country_flag = 1948_war_arab_minors_done				#Country flag only, so every Arab minor should be able to take that decision
+		}
+	}
+
+## EGY ##
+	#1948_war_EGY - Whether to go to war with Israel or not
+	1948_war_EGY = {
+		category = international
+	    picture = "1948_Egypt_Invades"
+		
+		potential = {
+			NOT = { has_country_flag =  1948_war_EGY_done }
+			#NOT = { has_country_flag =  EGY_palestine_question_yes }	#EGY did not support the participation of Palestine
+			has_global_flag = 1948_palestine_war_start
+			tag = EGY
+			exists = ISR
+		}
+		
+		allow = {
+			exists = ISR
+			exists = PAL
+			PAL = { war_with = ISR }									#No joining the war without a war
+			NOT = { EGY = { war_with = ISR } }							#No DOW if already at war
+			NOT = { EGY = { war_with = PAL } }
+			NOT = { EGY = { alliance_with = ISR }}
+			NOT = { EGY = { alliance_with = PAL }}
+			is_subject = no												#EGY is not a puppet state
+		}
+		
+		ai_will_do = { factor = 25 }
+		
+		effect = {
+			EGY = { country_event = 180000 } #Decision follow-up event
+			set_country_flag = 1948_war_EGY_done
+		}
+	}
+
+	#1948_war_victory_EGY - Israel is defeated with EGY as the major victor - EGY decides the future of Palestine
+	1948_war_victory_EGY = {
+		category = international
+	    picture = "1949_egypt_israel_armistice"
+		
+		potential = {
+			NOT = { has_global_flag =  1948_war_victory_EGY_done }
+			NOT = { has_global_flag =  1948_war_victory_JOR_done }
+			NOT = { has_global_flag =  1948_war_victory_SYR_done }
+			has_global_flag = 1948_palestine_war_start					#There was the war
+			tag = EGY
+			NOT = { exists = ISR }										#ISR has been defeated
+			7800 = { controlled_by = EGY }								#EGY controls Tel Aviv and hence is the major victor
+		}
+		
+		allow = {
+			NOT = { EGY = { war_with = JOR } }							#No inter-Arab war
+			NOT = { EGY = { war_with = SYR } }
+			NOT = { lost_national = 25 }								#EGY is not under major pressure
+			is_subject = no												#EGY is not a puppet state
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			EGY = { country_event = 180003 } #Decision follow-up event
+			set_global_flag = 1948_war_victory_EGY_done
+		}
+	}
+
+## IRQ ##
+	#1948_war_IRQ - Whether to go to war with Israel or not
+	1948_war_IRQ = {
+		category = international
+	    picture = "1948_Arab_volunteers"
+		
+		potential = {
+			NOT = { has_country_flag =  1948_war_IRQ_done }
+			#NOT = { has_country_flag =  IRQ_palestine_question_yes }	#IRQ did not support the participation of Palestine
+			has_global_flag = 1948_palestine_war_start
+			tag = IRQ
+			exists = ISR
+		}
+		
+		allow = {
+			exists = ISR
+			exists = PAL
+			PAL = { war_with = ISR }									#No joining the war without a war
+			NOT = { IRQ = { war_with = ISR } }							#No DOW if already at war
+			NOT = { IRQ = { war_with = PAL } }
+			NOT = { IRQ = { war_with = JOR } }							#Historically, the Iraqi troops initially used were stationed in Jordan
+			NOT = { IRQ = { alliance_with = ISR }}
+			NOT = { IRQ = { alliance_with = PAL }}
+			is_subject = no												#IRQ is not a puppet state
+		}
+		
+		ai_will_do = { factor = 25 }
+		
+		effect = {
+			IRQ = { country_event = 221000 } #Decision follow-up event
+			set_country_flag = 1948_war_IRQ_done
+		}
+	}
+
+## JOR ##
+	#1948_war_JOR - Whether to go to war with Israel or not
+	1948_war_JOR = {
+		category = international
+	    picture = "1948_Transjordan_Invades"
+		
+		potential = {
+			NOT = { has_country_flag =  1948_war_JOR_done }
+			#NOT = { has_country_flag =  JOR_palestine_question_yes }	#JOR did not support the participation of Palestine
+			has_global_flag = 1948_palestine_war_start
+			tag = JOR
+			exists = ISR
+		}
+		
+		allow = {
+			exists = ISR
+			exists = PAL
+			PAL = { war_with = ISR }									#No joining the war without a war
+			NOT = { JOR = { war_with = ISR } }							#No DOW if already at war
+			NOT = { JOR = { war_with = PAL } }
+			NOT = { JOR = { alliance_with = ISR }}
+			NOT = { JOR = { alliance_with = PAL }}
+			is_subject = no												#JOR is not a puppet state
+		}
+		
+		ai_will_do = { factor = 25 }
+		
+		effect = {
+			JOR = { country_event = 226000 } #Decision follow-up event
+			set_country_flag = 1948_war_JOR_done
+		}
+	}
+
+	#1948_war_victory_JOR - Israel is defeated with JOR as the major victor - JOR decides the future of Palestine
+	1948_war_victory_JOR = {
+		category = international
+	    picture = "1949_Jericho_Conference"
+		
+		potential = {
+			NOT = { has_global_flag =  1948_war_victory_JOR_done }
+			NOT = { has_global_flag =  1948_war_victory_EGY_done }
+			NOT = { has_global_flag =  1948_war_victory_SYR_done }
+			has_global_flag = 1948_palestine_war_start					#There was the war
+			tag = EGY
+			NOT = { exists = ISR }										#ISR has been defeated
+			7800 = { controlled_by = JOR }								#JOR controls Tel Aviv and hence is the major victor
+		}
+		
+		allow = {
+			NOT = { JOR = { war_with = SYR } }							#No inter-Arab war
+			NOT = { JOR = { war_with = EGY } }
+			NOT = { lost_national = 0.25 }								#JOR is not under major pressure
+			is_subject = no												#JOR is not a puppet state
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			EGY = { country_event = 226005 } 							#Decision follow-up event
+			set_global_flag = 1948_war_victory_JOR_done
+		}
+	}
+
+## LEB ##
+	#1948_war_LEB - Lebanese intervention in the war in Palestine
+	1948_war_LEB = {
+		category = international
+	    picture = "1948_Lebanon_Joins"
+		
+		potential = {
+			NOT = { has_country_flag =  1948_war_LEB_done }
+			#NOT = { has_country_flag =  LEB_palestine_question_yes }	#LEB did not support the participation of Palestine
+			has_global_flag = 1948_palestine_war_start
+			tag = LEB
+			exists = ISR
+		}
+		
+		allow = {
+			exists = ISR
+			exists = PAL
+			PAL = { war_with = ISR }									#No joining the war without a war
+			NOT = { LEB = { war_with = ISR } }							#No DOW if already at war
+			NOT = { LEB = { war_with = PAL } }
+			NOT = { LEB = { alliance_with = ISR }}
+			NOT = { LEB = { alliance_with = PAL }}
+			is_subject = no												#LEB is not a puppet state
+		}
+		
+		ai_will_do = { factor = 25 }
+		
+		effect = {
+			LEB = { country_event = 242000 } 							#Decision follow-up event
+			set_country_flag = 1948_war_LEB_done
+		}
+	}
+
+## SAU ##
+	#1948_war_SAU - Whether to go to war with Israel or not
+	1948_war_SAU = {
+		category = international
+	    picture = "1948_Arab_volunteers"
+		
+		potential = {
+			NOT = { has_country_flag =  1948_war_SAU_done }
+			#NOT = { has_country_flag =  SAU_palestine_question_yes }	#SAU did not support the participation of Palestine
+			has_global_flag = 1948_palestine_war_start
+			tag = SAU
+			exists = ISR
+		}
+		
+		allow = {
+			exists = ISR
+			exists = PAL
+			PAL = { war_with = ISR }									#No joining the war without a war
+			NOT = { SAU = { war_with = ISR } }							#No DOW if already at war
+			NOT = { SAU = { war_with = PAL } }
+			NOT = { SAU = { war_with = JOR } }							#So the Saudis can move troops through Jordan
+			NOT = { SAU = { alliance_with = ISR }}
+			NOT = { SAU = { alliance_with = PAL }}
+			is_subject = no												#SAU is not a puppet state
+		}
+		
+		ai_will_do = { factor = 25 }
+		
+		effect = {
+			SAU = { country_event = 305000 } #Decision follow-up event
+			set_country_flag = 1948_war_SAU_done
+		}
+	}
+
+## SYR ##
+	#1948_war_SYR - Whether to go to war with Israel or not
+	1948_war_SYR = {
+		category = international
+	    picture = "1948_Syria_decides"
+		
+		potential = {
+			NOT = { has_country_flag =  1948_war_SYR_done }
+			#NOT = { has_country_flag =  SYR_palestine_question_yes }	#SYR did not support the participation of Palestine
+			has_global_flag = 1948_palestine_war_start
+			tag = SYR
+			exists = ISR
+		}
+		
+		allow = {
+			exists = ISR
+			exists = PAL
+			PAL = { war_with = ISR }									#No joining the war without a war
+			NOT = { SYR = { war_with = ISR } }							#No DOW if already at war
+			NOT = { SYR = { war_with = PAL } }
+			NOT = { SYR = { alliance_with = ISR }}
+			NOT = { SYR = { alliance_with = PAL }}
+			is_subject = no												#SYR is not a puppet state
+		}
+		
+		ai_will_do = { factor = 25 }
+		
+		effect = {
+			SYR = { country_event = 335000 } #Decision follow-up event
+			set_country_flag = 1948_war_SYR_done
+		}
+	}
+
+	#1948_war_victory_SYR - Israel is defeated with SYR as the major victor - SYR decides the future of Palestine
+	1948_war_victory_SYR = {
+		category = international
+	    picture = "1949_Syria_decides"
+		
+		potential = {
+			NOT = { has_global_flag =  1948_war_victory_SYR_done }
+			NOT = { has_global_flag =  1948_war_victory_EGY_done }
+			NOT = { has_global_flag =  1948_war_victory_JOR_done }
+			has_global_flag = 1948_palestine_war_start					#There was the war
+			tag = SYR
+			NOT = { exists = ISR }										#ISR has been defeated
+			7800 = { controlled_by = SYR }								#SYR controls Tel Aviv and hence is the major victor
+		}
+		
+		allow = {
+			NOT = { SYR = { war_with = JOR } }							#No inter-Arab war
+			NOT = { SYR = { war_with = EGY } }
+			NOT = { lost_national = 0.25 }								#SYR is not under major pressure
+			is_subject = no												#SYR is not a puppet state
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			EGY = { country_event = 335005 } 							#Decision follow-up event
+			set_global_flag = 1948_war_victory_SYR_done
+		}
+	}
+	
+}

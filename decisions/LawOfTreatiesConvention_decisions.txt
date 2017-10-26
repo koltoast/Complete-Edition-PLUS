@@ -1,0 +1,89 @@
+#FourthGenevaConvention_decisions.txt
+#Fourth Geneva Convention
+
+#Global:
+	#dec_ratify_law_of_treaties_convention		- Ratify the Vienna Convention on the Law of Treaties
+
+
+diplomatic_decisions = {
+## Global ##
+	#dec_ratify_law_of_treaties_convention - Ratify the Vienna Convention on the Law of Treaties
+	dec_ratify_law_of_treaties_convention = {
+		category = international
+#		picture = "xxxx"
+		potential = {
+			NOT = {
+				has_country_modifier = ratified_the_law_of_treaties_convention
+			}
+			has_global_flag = law_of_treaties_convention_held
+		}
+		
+		allow = {
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			national_unity = 25
+			NOT = {
+				AND = {
+					war = yes
+					OR = {
+						war_exhaustion = 15
+						lost_national = 0.1
+					}
+				}
+			}
+			NOT = { war_with = AUS }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.50
+				OR = {
+					foreign_policy = isolationism_pol
+					foreign_policy = hardline_pol
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					rule_of_law = thinly_defined
+					AND = {
+						rule_of_law = narrowly_defined
+						foreign_policy = isolationism_pol
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				war = yes
+			}
+			modifier = {
+				factor = 2
+				intelligence_policy = counter_intelligence_focus_pol
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					internal_policy = state_controlled_aff_pol
+					internal_policy = repressive_aff_pol
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { neutrality = 30 }
+			}
+			modifier = {
+				factor = 0
+				AUS = { has_country_modifier = law_of_treaties_convention_delay }
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = ratified_the_law_of_treaties_convention
+				duration = -1
+			}
+			country_event = 10200
+		}
+	}
+
+}

@@ -1,0 +1,332 @@
+
+
+diplomatic_decisions = {
+
+	capital_ONU = {
+		category = national
+		potential = {	
+				this = { is_org_member = XUN }
+			    is_major = yes
+			    economy_rating_greater = 4				
+				NOT = { has_country_modifier = UN_ARMSEMBARGO }
+				not = { money = 10000 }
+                 				
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+            random_country = { 
+			limit = { not = { tag = this } not = { war_with = this } relation = { who = this value = 100 } NOT = { has_country_modifier = RmoneyONU }
+		    money = 100000 } 
+			money = -10000 this = { money = 10000 } 					
+			  add_country_modifier = {
+				name = "GmoneyONU"				
+				duration = 30 }
+			 
+			}			
+			##add_country_modifier = {
+				#name = "fuel"				
+				#duration = 30
+			#}			
+		}
+	}
+
+	capital_ONU2 = {
+		category = national
+		potential = {	
+				this = { is_org_member = XUN }
+				is_major = no
+				NOT = { has_country_modifier = UN_ARMSEMBARGO }
+				not = { money = 1000 }
+                				
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+            random_country = { 
+			limit = { not = { tag = this } not = { war_with = this } relation = { who = this value = 100 } NOT = { has_country_modifier = RmoneyONU2 } 
+		    money = 10000 } 
+			money = -1000 this = { money = 1000 } 					
+			 add_country_modifier = {
+				name = "GmoneyONU2"				
+				duration = 30 }
+			  
+			}			
+			##add_country_modifier = {
+				#name = "fuel"				
+				#duration = 30
+			#}			
+		}
+	}
+
+	capital_WORLD = {
+		category = national
+		potential = {	
+		        is_major = yes
+			    economy_rating_greater = 4
+				not = { money = 10000 }
+                 				
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+            random_country = { 
+			limit = { not = { tag = this } not = { war_with = this } relation = { who = this value = 150 } NOT = { has_country_modifier = RmoneyONU }
+		    money = 100000 }
+			money = -10000 this = { money = 10000 } 					
+			 add_country_modifier = {
+				name = "GworldONU"				
+				duration = 30 }
+			  
+			}			
+			##add_country_modifier = {
+				#name = "fuel"				
+				#duration = 30
+			#}			
+		}
+	}
+
+	capital_WORLD2 = {
+		category = national
+		potential = {	
+		        is_major = no
+				not = { money = 1000 }
+                				
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+            random_country = { 
+			limit = { not = { tag = this } not = { war_with = this } relation = { who = this value = 150 } NOT = { has_country_modifier = RmoneyONU2 } 
+		    money = 10000 } 
+			money = -1000 this = { money = 1000 } 					
+			 add_country_modifier = {
+				name = "GworldONU2"				
+				duration = 30 }			  
+			}			
+			##add_country_modifier = {
+				#name = "fuel"				
+				#duration = 30
+			#}			
+		}
+	}
+
+	capital_pr_NATO1 = {
+		category = national
+		potential = {	
+		        
+				alignment = { faction = allies value = 80 }
+				not = { money = 10000 }
+			    is_major = yes
+			    economy_rating_greater = 4
+				has_global_flag = capital_xna
+                 				
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+         country_event 700184
+         clr_global_flag = capital_xna		 
+		}
+	}	
+	
+	capital_pr_NATO2 = {
+		category = national
+		potential = {	
+		        
+				alignment = { faction = allies value = 80 }
+				not = { money = 1000 }
+				is_major = no
+				has_global_flag = capital_xna2
+                 				
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+         country_event 700188
+         clr_global_flag = capital_xna2			 
+		}
+	}	
+
+	capital_xna1 = {
+		category = national
+		potential = {	
+		        this = { is_org_member = XNA }
+                money = 100000
+				NOT = { has_country_modifier = Gcap_Nato }
+				NOT = { has_country_modifier = Gcap_Nato2 }
+				not = { has_global_flag = capital_xna }
+				
+                 				
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+         set_global_flag = capital_xna			
+		}
+	}
+
+	capital_xna2 = {
+		category = national
+		potential = {	
+		        this = { is_org_member = XNA }
+                money = 100000
+				NOT = { has_country_modifier = Gcap_Nato }
+				NOT = { has_country_modifier = Gcap_Nato2 }
+				not = { has_global_flag = capital_xna2 }
+				
+                 				
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+         set_global_flag = capital_xna2			
+		}
+	}	
+
+	capital_pr_WP1 = {
+		category = national
+		potential = {	
+		        
+				alignment = { faction = comintern value = 80 }
+				not = { money = 10000 }
+			    is_major = yes
+			    economy_rating_greater = 4
+				has_global_flag = capital_xwp
+                 				
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+         country_event 700186
+         clr_global_flag = capital_xwp		 
+		}
+	}	
+	
+	capital_pr_WP2 = {
+		category = national
+		potential = {	
+		        
+				alignment = { faction = comintern value = 80 }
+				not = { money = 1000 }
+				is_major = no
+				has_global_flag = capital_xwp2
+                 				
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+         country_event 700189
+         clr_global_flag = capital_xwp2			 
+		}
+	}	
+
+	capital_xwp1 = {
+		category = national
+		potential = {	
+		        this = { is_org_member = XWP }
+                money = 100000
+				NOT = { has_country_modifier = Gcap_WP }
+				NOT = { has_country_modifier = Gcap_WP2 }
+				not = { has_global_flag = capital_xwp }
+				
+                 				
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+         set_global_flag = capital_xwp			
+		}
+	}
+
+	capital_xwp2 = {
+		category = national
+		potential = {	
+		        this = { is_org_member = XWP }
+                money = 100000
+				NOT = { has_country_modifier = Gcap_WP }
+				NOT = { has_country_modifier = Gcap_WP2 }
+				not = { has_global_flag = capital_xwp2 }
+				
+                 				
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+         set_global_flag = capital_xwp2			
+		}
+	}
+		
+}

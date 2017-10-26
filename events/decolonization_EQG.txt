@@ -1,0 +1,596 @@
+#Index:
+	#6150 - colony is owned		- 3 options
+	#6151 - colony is a puppet	- 2 options
+	#6152 – rebel reinforcements - if EQG exists			- 2 options
+	#6153 – rebel reinforcements - if EQG does not exist	- 2 options
+
+country_event = {
+	
+	id = 6150										#Colony is owned
+	
+	trigger = {
+		owns = 6279
+		controls = 6279
+		NOT = { national_unity = 69 }
+		NOT = { exists = EQG }
+		NOT = { has_country_flag = colonial_war_EQG }
+		NOT = { national_culture = cul_sub_saharan_africa }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 1.00						#60 months		
+			not = { national_unity = 69 }
+		}
+		modifier = {
+			factor = 0.75						#45 months
+			not = { national_unity = 59 }
+		}
+		modifier = {
+			factor = 0.80						#36 months
+			not = { national_unity = 49 }
+		}
+		modifier = {
+			factor = 0.75						#27 months
+			not = { national_unity = 39 }
+		}
+		modifier = {
+			factor = 0.25
+			ideology = maoist_idolg
+		}
+		modifier = {
+			factor = 0.25
+			ideology = communist_idolg
+		}
+	}
+	
+	immediate = {
+		region_Equatorial_Guinea_Equatorial_Guinea = { remove_core = SPA }
+		region_Equatorial_Guinea_Equatorial_Guinea = { remove_core = THIS }
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6150"
+	desc = "EVTDESC6150"
+	picture = "1974_Mozambique_Lusaka_Accord"
+	
+	option = {											#chance to release immediatly
+		name = "EVTOPTA6150"
+		trigger = {
+			NOT = {
+			ideology = fascist_idolg
+			ideology = paternal_auto_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5							#25% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 0.8							#40% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 1								#50% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 1.2							#60% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 1.5							#75% chance
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 1.7							#85% chance
+				ideology = maoist_idolg
+			}
+			modifier = {
+				factor = 1.9							#95% chance
+				ideology = communist_idolg
+			}
+		}
+		release = EQG
+		recognize = EQG
+		relation = { who = EQG value = 100 }
+	}
+		
+	option = {											#chance to puppet
+		name = "EVTOPTB6150"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0								#0% chance
+				ideology = fascist_idolg
+			}
+			modifier = {
+				factor = 0								#0% chance
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.5							#75% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 1.2							#60% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 1								#50% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 0.8							#40% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0.5							#25% chance
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0.3							#15% chance
+				ideology = maoist_idolg
+			}
+			modifier = {
+				factor = 0.1							#5% chance
+				ideology = communist_idolg
+			}
+		}
+		release_vassal = EQG
+		recognize = EQG
+	}
+	
+	option = {											#chance to start a colonial war
+		name = "EVTOPTC6150"
+		trigger = {
+			NOT = {
+			ideology = maoist_idolg
+			ideology = communist_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0								#100% chance
+				ideology = fascist_idolg
+			}
+			modifier = {
+				factor = 0								#95% chance
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.5							#0% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 1.2							#0% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 1								#0% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 0.8							#0% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0.5							#0% chance
+				ideology = left_wing_radical_idolg
+			}
+		}
+		random_owned = {
+			limit = { region = region_Equatorial_Guinea_Equatorial_Guinea}
+			add_province_modifier = { name = nationalist_revolt duration = 800 }
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Equatorial_Guinea_Equatorial_Guinea }
+			add_province_modifier = { name = nationalist_revolt duration = 800 }
+			create_revolt = 5
+		}
+		set_country_flag = colonial_war_EQG
+	}
+}
+
+country_event = {
+	
+	id = 6151										#Colony is a puppet
+	
+	trigger = {
+		NOT = { national_unity = 69 }
+		exists = EQG
+		EQG = { vassal_of = THIS }
+		NOT = { national_culture = cul_sub_saharan_africa }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 1.00						#60 months		
+			not = { national_unity = 69 }
+		}
+		modifier = {
+			factor = 0.75						#45 months
+			not = { national_unity = 59 }
+		}
+		modifier = {
+			factor = 0.80						#36 months
+			not = { national_unity = 49 }
+		}
+		modifier = {
+			factor = 0.75						#27 months
+			not = { national_unity = 39 }
+		}
+		modifier = {
+			factor = 0.25
+			ideology = maoist_idolg
+		}
+		modifier = {
+			factor = 0.25
+			ideology = communist_idolg
+		}
+	}
+	
+	immediate = {
+		region_Equatorial_Guinea_Equatorial_Guinea = { remove_core = SPA }
+		region_Equatorial_Guinea_Equatorial_Guinea = { remove_core = THIS }
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6151"
+	desc = "EVTDESC6151"
+	picture = "1974_Mozambique_Lusaka_Accord"
+	
+	option = {											#chance to release immediatly
+		name = "EVTOPTA6151"
+		trigger = {
+			NOT = {
+			ideology = fascist_idolg
+			ideology = paternal_auto_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2							#100% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = maoist_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = communist_idolg
+			}
+		}
+		release = EQG
+		recognize = EQG
+		relation = { who = EQG value = 100 }
+	}
+		
+	option = {											#auto release puppet and declare war
+		name = "EVTOPTB6151"
+		trigger = { 
+			not = {
+			ideology = maoist_idolg
+			ideology = communist_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2							#100% chance
+				ideology = fascist_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = left_wing_radical_idolg
+			}
+		}
+		liberate_puppet = EQG
+		war = EQG
+		EQG = {
+			supplies = 500
+			random_owned = {
+				limit = { region = region_Equatorial_Guinea_Equatorial_Guinea }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Equatorial_Guinea_Equatorial_Guinea }
+				militia_brigade = current
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 6152										#War continues - rebel reinforcements - if EQG does not exist
+	
+	trigger = {
+		owns = 6279
+		NOT = { national_unity = 69 }
+		NOT = { exists = EQG }
+		has_country_flag = colonial_war_EQG
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 1.00
+			not = { national_unity = 69 }
+			national_unity = 60
+		}
+		modifier = {
+			factor = 0.75
+			not = { national_unity = 59 }
+			national_unity = 50
+		}
+		modifier = {
+			factor = 0.50
+			not = { national_unity = 49 }
+			national_unity = 40
+		}
+		modifier = {
+			factor = 0.25
+			not = { national_unity = 39 }
+			national_unity = 30
+		}
+		modifier = {
+			factor = 0.10
+			not = { national_unity = 29 }
+		}
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6152"
+	desc = "EVTDESC6152"
+	picture = "1974_Mozambique_Lusaka_Accord"
+
+	option = {
+		name = "EVTOPTA6152"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0								#0% chance
+				dissent = 0
+				not = { dissent = 9 }	
+			}
+			modifier = {
+				factor = 0.1							#5% chance
+				dissent = 10
+				not = { dissent = 19 }	
+			}
+			modifier = {
+				factor = 0.2							#10% chance
+				dissent = 20
+				not = { dissent = 29 }
+			}
+			modifier = {
+				factor = 0.4							#20% chance
+				dissent = 30
+				not = { dissent = 39 }
+			}
+			modifier = {
+				factor = 0.8							#40% chance
+				dissent = 40
+				not = { dissent = 49 }
+			}
+			modifier = {
+				factor = 0.6							#80% chance
+				dissent = 50
+			}
+		}
+		release = EQG
+		recognize = EQG
+		dissent = -5								#People are happy because the war ended
+		clr_country_flag = colonial_war_EQG
+	}
+	
+	option = {
+		name = "EVTOPTB6152"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2								#100% chance
+				dissent = 0
+				not = { dissent = 9 }
+			}
+			modifier = {
+				factor = 1.9							#95% chance
+				dissent = 10
+				not = { dissent = 19 }
+			}
+			modifier = {
+				factor = 1.8							#90% chance
+				dissent = 20
+				not = { dissent = 29 }
+			}
+			modifier = {
+				factor = 1.6							#80% chance
+				dissent = 30
+				not = { dissent = 39 }
+			}
+			modifier = {
+				factor = 1.2							#60% chance
+				dissent = 40
+				not = { dissent = 49 }	
+			}
+			modifier = {
+				factor = 0.4							#20% chance
+				dissent = 50	
+			}
+		}
+		random_owned = {
+			limit = { region = region_Equatorial_Guinea_Equatorial_Guinea NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 }
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Equatorial_Guinea_Equatorial_Guinea NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 }
+			create_revolt = 5
+		}
+	}
+}
+
+country_event = {
+	
+	id = 6153										#War continues - rebel reinforcements - if EQG exists
+	
+	trigger = {
+		owns = 6279
+		NOT = { national_unity = 69 }
+		exists = EQG
+		has_country_flag = colonial_war_EQG
+		war_with = EQG
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 1.00
+			not = { national_unity = 69 }
+			national_unity = 60
+		}
+		modifier = {
+			factor = 0.75
+			not = { national_unity = 59 }
+			national_unity = 50
+		}
+		modifier = {
+			factor = 0.50
+			not = { national_unity = 49 }
+			national_unity = 40
+		}
+		modifier = {
+			factor = 0.25
+			not = { national_unity = 39 }
+			national_unity = 30
+		}
+		modifier = {
+			factor = 0.10
+			not = { national_unity = 29 }
+		}
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6153"
+	desc = "EVTDESC6153"
+	picture = "1974_Mozambique_Lusaka_Accord"
+
+	option = {
+		name = "EVTOPTA6153"
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1								#5% chance
+				dissent = 10
+			}
+			modifier = {
+				factor = 2								#10% chance
+				dissent = 20
+			}
+			modifier = {
+				factor = 2								#20% chance
+				dissent = 30
+			}
+			modifier = {
+				factor = 2								#40% chance
+				dissent = 40
+			}
+			modifier = {
+				factor = 2								#80% chance
+				dissent = 50
+			}
+		}
+		THIS = { end_war = EQG }
+		recognize = EQG
+		dissent = -5								#People are happy because the war ended
+		clr_country_flag = colonial_war_EQG
+	}
+	
+	option = {
+		name = "EVTOPTB6153"
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1								#5% chance
+				not = { dissent = 10 }
+			}
+			modifier = {
+				factor = 2								#10% chance
+				not = { dissent = 20 }
+			}
+			modifier = {
+				factor = 2								#20% chance
+				not = { dissent = 30 }
+			}
+			modifier = {
+				factor = 2								#40% chance
+				not = { dissent = 40 }
+			}
+			modifier = {
+				factor = 2								#80% chance
+				not = { dissent = 50 }
+			}
+		}
+		EQG = {
+			supplies = 500
+			random_owned = {
+				limit = { region = region_Equatorial_Guinea_Equatorial_Guinea }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Equatorial_Guinea_Equatorial_Guinea }
+				militia_brigade = current
+			}
+		}
+	}
+}

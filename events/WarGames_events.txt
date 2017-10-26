@@ -1,0 +1,896 @@
+#WarGames_events.txt
+#War Games
+
+#Global:
+	#2031 - War Games begin - Triggered by 
+	
+	#2032 - Naval lessons learned
+	#2033 - Army lessons learned
+	#2034 - Airforce lessons learned
+	#2035 - Combined arms lessons
+	#2036 - Army General gains experience
+	#2037 - Navy Admiral gains experience
+	#2038 - Airforce General gains experience
+	#2039 - Neighbor concerned by troop movements
+	#2040 - Cold war tensions increase
+	#2041 - Exercise turns into embarrassment
+	#2042 - Exercise boosts national prestige	
+	#2043 - Armed forces excel during exercises	
+	#2044 - Concern over environmental damage
+	#2045 - Conscripts fail to report for duty
+	#2046 - War games boost army recruitment effort
+	#2047 - Munitions explosion during wargames	
+	#2048 - Military land hardware shortcoming highlighted by miliary exercise
+	#2049 - Military naval hardware shortcoming highlighted by miliary exercise
+	#2050 - Military air hardware shortcoming highlighted by miliary exercise
+	#2051 - Officers killed in training accident
+
+	#2061 - War Games Over due to war
+	#2062 - War Games Over
+	#2063 - Ally joins our War Games
+		
+	
+## Global ##
+	#2031 - War Games begin - Triggered by 
+	country_event = {
+		
+		id = 2031
+
+		is_triggered_only = yes
+
+		title = "EVTNAME2031"
+		desc = "EVTDESC2031"
+		picture = "1965_Warsaw_Pact_Excercise_2"
+
+		option = {
+			name = "EVTOPTA2031"			    			# Large war games
+			clr_country_flag = war_games_start
+			set_country_flag = war_games
+			add_country_modifier = {
+				name = war_games_expensive
+				duration = 182
+			}
+		}
+
+		option = {
+			name = "EVTOPTB2031"			    			# Moderate war games
+			clr_country_flag = war_games_start
+			set_country_flag = war_games
+			add_country_modifier = {
+				name = war_games_cheap
+				duration = 122
+			}
+		}
+	}
+
+	#2032 - Naval lessons learned
+	country_event = {
+		
+		id = 2032			#Naval lessons learned
+
+		trigger = {
+			has_country_flag = war_games
+			total_amount_of_ships = 15
+			NOT = { has_country_modifier = war_games_delay_1 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244	
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2032"
+		desc = "EVTDESC2032"
+		picture = "HMS_Cumberland"
+		
+		option = {
+			name = "EVTOPTA2032"			    			# O.K.
+			add_country_modifier = {
+				name = war_games_naval_lessons
+				duration = 182
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_1
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2033 - Army lessons learned
+	country_event = {
+		
+		id = 2033			#Army lessons learned
+
+		trigger = {
+			has_country_flag = war_games
+			NOT = { has_country_modifier = war_games_delay_2 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2033"
+		desc = "EVTDESC2033"
+		picture = "army_live_exercise"
+		
+		option = {
+			name = "EVTOPTA2033"			    			# O.K.
+			add_country_modifier = {
+				name = war_games_army_lessons
+				duration = 182
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_2
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2034 - Airforce lessons learned	
+	country_event = {
+		
+		id = 2034			#Airforce lessons learned
+
+		trigger = {
+			has_country_flag = war_games
+			total_amount_of_planes = 10
+			NOT = { has_country_modifier = war_games_delay_3 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2034"
+		desc = "EVTDESC2034"
+		picture = "F-111"
+		
+		option = {
+			name = "EVTOPTA2034"			    			# O.K.
+			add_country_modifier = {
+				name = war_games_airforce_lessons
+				duration = 182
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_3
+					duration = 61
+				}
+			#}
+		}
+	}
+	
+	#2035 - Combined arms lessons
+	country_event = {
+		
+		id = 2035			#Combined arms lessons
+
+		trigger = {
+			has_country_flag = war_games
+			total_amount_of_brigades = 5
+			total_amount_of_ships = 5
+			total_amount_of_planes = 5
+			NOT = { has_country_modifier = war_games_delay_4 }
+		}
+		
+		mean_time_to_happen = {
+			days = 365
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2035"
+		desc = "EVTDESC2035"
+		picture = "1984_Reforger_combined_arms"
+		
+		option = {
+			name = "EVTOPTA2035"			    			# O.K.
+			add_country_modifier = {
+				name = war_games_combined_lessons
+				duration = 182
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_4
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2036 - Army General gains experience
+	country_event = {
+		
+		id = 2036			#Army General gains experience
+
+		trigger = {
+			has_country_flag = war_games
+			NOT = { has_country_modifier = war_games_delay_5 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2036"
+		desc = "EVTDESC2036"
+		picture = "promotion_army"
+		
+		option = {
+			name = "EVTOPTA2036"			    			# O.K.
+			prestige_change = 2
+			officer_pool = 5
+			#Increase Army General skill
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_5
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2037 - Navy Admiral gains experience
+	country_event = {
+		
+		id = 2037			#Navy Admiral gains experience
+
+		trigger = {
+			has_country_flag = war_games
+			total_amount_of_ships = 10
+			NOT = { has_country_modifier = war_games_delay_6 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2037"
+		desc = "EVTDESC2037"
+		picture = "promotion_navy"
+		
+		option = {
+			name = "EVTOPTA2037"			    			# O.K.
+			prestige_change = 2
+			officer_pool = 5
+			#Increase Admiral skill
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_6
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2038 - Airforce General gains experience
+	country_event = {
+		
+		id = 2038			#Airforce General gains experience
+
+		trigger = {
+			has_country_flag = war_games
+			total_amount_of_planes = 10
+			NOT = { has_country_modifier = war_games_delay_7 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2038"
+		desc = "EVTDESC2038"
+		picture = "promotion_airforce"
+		
+		option = {
+			name = "EVTOPTA2038"			    			# O.K.
+			prestige_change = 2
+			officer_pool = 5
+			#Increase Aiforce General skill
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_7
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2039 - Neighbor concerned by troop movements
+	country_event = {
+		
+		id = 2039			#Neighbor concerned by troop movements
+
+		trigger = {
+			has_country_flag = war_games
+			#any_neighbor_country = yes				#Trigger acting strangely
+			NOT = { has_country_modifier = war_games_delay_8 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244
+			modifier = {
+				factor = 0.5
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2039"
+		desc = "EVTDESC2039"
+		picture = "1976_Reforger_column"
+		
+		option = {
+			name = "EVTOPTA2039"			    			# O.K.
+			random_country = {
+				limit = { neighbour = THIS }
+				relation = { who = THIS value = -20 }
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_8
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2040 - Cold war tensions increase
+	country_event = {
+		
+		id = 2040			#Cold war tensions increase
+
+		trigger = {
+			has_country_flag = war_games
+			num_of_warheads_greater = 1
+			doomsday_clock = 1
+			NOT = { has_country_modifier = war_games_delay_9 }
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.5
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2040"
+		desc = "EVTDESC2040"
+		picture = "1963_BOTAS"
+		
+		option = {
+			name = "EVTOPTA2040"			    			# O.K.
+			change_doomsday_clock = 1
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_9
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2041 - Exercise turns into embarrassment
+	country_event = {
+		
+		id = 2041			#Exercise turns into embarrassment
+
+		trigger = {
+			has_country_flag = war_games
+			NOT = { has_country_modifier = war_games_delay_10 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244
+			modifier = {
+				factor = 0.67
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2041"
+		desc = "EVTDESC2041"
+		picture = "1967_Vietnam_protest"
+		
+		option = {
+			name = "EVTOPTA2041"			    			# O.K.
+			add_country_modifier = {
+				name = war_games_military_embarrassment
+				duration = 182
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_10
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2042 - Exercise boosts national prestige
+	country_event = {
+		
+		id = 2042			#Exercise boosts national prestige
+
+		trigger = {
+			has_country_flag = war_games
+			NOT = { has_country_modifier = war_games_delay_11 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244	
+			modifier = {
+				factor = 0.67
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2042"
+		desc = "EVTDESC2042"
+		picture = "1991_ticker_tape_parade"
+		
+		option = {
+			name = "EVTOPTA2042"			    			# O.K.
+			prestige_change = 15
+			national_unity = 2
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_11
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2043 - Armed forces excel during exercises	
+	country_event = {
+		
+		id = 2043			#Armed forces excel during exercises
+
+		trigger = {
+			has_country_flag = war_games
+			NOT = { has_country_modifier = war_games_delay_12 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244	
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2043"
+		desc = "EVTDESC2043"
+		picture = "1984_Reforger_troops_pose"
+		
+		option = {
+			name = "EVTOPTA2043"			    			# O.K.
+			add_country_modifier = {
+				name = war_games_military_excel
+				duration = 182
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_12
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2044 - Concern over environmental damage
+	country_event = {
+		
+		id = 2044			#Concern over environmental damage
+
+		trigger = {
+			has_country_flag = war_games
+			NOT = { has_country_modifier = war_games_delay_13 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2044"
+		desc = "EVTDESC2044"
+		picture = "1984_Reforger_tracks"
+		
+		option = {
+			name = "EVTOPTA2044"			    			# O.K.
+			add_country_modifier = {
+				name = war_games_environmental_damage
+				duration = 182
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_13
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2045 - Conscripts fail to report for duty
+	country_event = {
+		
+		id = 2045			#Conscripts fail to report for duty
+
+		trigger = {
+			has_country_flag = war_games
+			OR = {
+				military_service = expanded_drafted_army
+				military_service = conventional_drafted_army
+				military_service = limited_conscription_army
+			}
+			NOT = { has_country_modifier = war_games_delay_14 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244
+		}
+
+		title = "EVTNAME2045"
+		desc = "EVTDESC2045"
+		picture = "empty_barracks"
+		
+		option = {
+			name = "EVTOPTA2045"			    			# O.K.
+			add_country_modifier = {
+				name = war_games_conscripts_disappear
+				duration = 182
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_14
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2046 - War games boost army recruitment effort	
+	country_event = {
+		
+		id = 2046			#War games boost army recruitment effort
+
+		trigger = {
+			has_country_flag = war_games
+			NOT = {
+				military_service = expanded_drafted_army
+				military_service = conventional_drafted_army
+			}
+			NOT = { has_country_modifier = war_games_delay_15 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2046"
+		desc = "EVTDESC2046"
+		picture = "1960_boot_camp"
+		
+		option = {
+			name = "EVTOPTA2046"			    			# O.K.
+			add_country_modifier = {
+				name = war_games_recruitment_boosted
+				duration = 182
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_15
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2047 - Munitions explosion during wargames	
+	country_event = {
+		
+		id = 2047			#Munitions explosion during wargames
+
+		trigger = {
+			has_country_flag = war_games
+			NOT = { has_country_modifier = war_games_delay_16 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2047"
+		desc = "EVTDESC2047"
+		picture = "1973_ammunitions_train_explosion"
+		
+		option = {
+			name = "EVTOPTA2047"			    			# O.K.
+			supplies = -50
+			fuel = -25
+			dissent = 1
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_16
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2048 - Military land hardware shortcoming highlighted by miliary exercise
+	country_event = {
+		
+		id = 2048			#Military land hardware shortcoming highlighted by miliary exercise
+
+		trigger = {
+			has_country_flag = war_games
+			NOT = { has_country_modifier = war_games_delay_17 }
+		}
+		
+		mean_time_to_happen = {
+			days = 365
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2048"
+		desc = "EVTDESC2048"
+		picture = "Exploded_gun_barrel"
+		
+		option = {
+			name = "EVTOPTA2048"			    			# O.K.
+			prestige_change = -5
+			add_country_modifier = {
+					name = land_technology_improved
+					duration = 182
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_17
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2049 - Military naval hardware shortcoming highlighted by miliary exercise
+	country_event = {
+		
+		id = 2049			#Military naval hardware shortcoming highlighted by miliary exercise
+
+		trigger = {
+			has_country_flag = war_games
+			total_amount_of_ships = 20
+			NOT = { has_country_modifier = war_games_delay_18 }
+		}
+		
+		mean_time_to_happen = {
+			days = 365
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2049"
+		desc = "EVTDESC2049"
+		picture = "1987_USS_Stark"
+		
+		option = {
+			name = "EVTOPTA2049"			    			# O.K.
+			prestige_change = -5
+			add_country_modifier = {
+				name = naval_technology_improved
+				duration = 182
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_18
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2050 - Military air hardware shortcoming highlighted by miliary exercise
+	country_event = {
+		
+		id = 2050			#Military air hardware shortcoming highlighted by miliary exercise
+
+		trigger = {
+			has_country_flag = war_games
+			total_amount_of_planes = 20
+			NOT = { has_country_modifier = war_games_delay_19 }
+		}
+		
+		mean_time_to_happen = {
+			days = 365
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2050"
+		desc = "EVTDESC2050"
+		picture = "Fighter_ejection"
+		
+		option = {
+			name = "EVTOPTA2050"			    			# O.K.
+			prestige_change = -5
+			add_country_modifier = {
+				name = air_technology_improved
+				duration = 182
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_19
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2051 - Officers killed in training accident
+	country_event = {
+		
+		id = 2051			#Officers killed in training accident
+
+		trigger = {
+			has_country_flag = war_games
+			NOT = { has_country_modifier = war_games_delay_20 }
+		}
+		
+		mean_time_to_happen = {
+			days = 244
+			modifier = {
+				factor = 0.75
+				has_country_modifier = war_games_expensive
+			}
+		}
+
+		title = "EVTNAME2051"
+		desc = "EVTDESC2051"
+		picture = "1962_Medevac"
+		
+		option = {
+			name = "EVTOPTA2051"			    			# O.K.
+			prestige_change = -2
+			kill_random_leaders = 1
+			#hidden_effects = {
+				add_country_modifier = {
+					name = war_games_delay_20
+					duration = 61
+				}
+			#}
+		}
+	}
+
+	#2061 - War Games Over due to war
+	country_event = {
+		
+		id = 2061
+		
+		trigger = {
+			has_country_flag = war_games
+			NOT = {
+				has_country_modifier = war_games_expensive
+				has_country_modifier = war_games_cheap
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME2061"
+		desc = "EVTDESC2061"
+		picture = "1984_Reforger"
+
+		option = {
+			name = "EVTOPTA2061"			    			# War Games Over
+			clr_country_flag = war_games
+			add_country_modifier = {
+				name = war_games_delay
+				duration = 1825
+			}
+		}
+	}
+
+	#2062 - War Games Over
+	country_event = {
+		
+		id = 2062
+		
+		trigger = {
+			OR = {
+				has_country_modifier = war_games_expensive
+				has_country_modifier = war_games_cheap
+			}
+			war = yes
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME2062"
+		desc = "EVTDESC2062"
+		picture = "1984_Reforger"
+		
+		immediate = { clr_country_flag = war_games }
+
+		option = {
+			name = "EVTOPTA2062"			    			# War Games Over due to war
+			remove_country_modifier = war_games_expensive
+			remove_country_modifier = war_games_cheap
+			add_country_modifier = {
+				name = war_games_delay
+				duration = 1825
+			}
+		}
+	}
+	
+	#2063 - Ally joins our War Games
+	country_event = {
+		
+		id = 2063
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME2063"
+		desc = "EVTDESC2063"
+		picture = "1965_Warsaw_Pact_Excercise_2"
+
+		option = {
+			name = "EVTOPTA2063"			    			# Excellent
+			relation = { who = FROM value = 15 }
+			prestige_change = 5
+		}
+	}

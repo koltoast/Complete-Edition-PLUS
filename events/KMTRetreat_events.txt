@@ -1,0 +1,260 @@
+#KMTRetreat_events.txt
+#1949 KMT Retreat to Taiwan
+
+#CHI - Nationalist China:
+	#152050 - PRC Declared #1 - Triggered by CHC decision establish_the_prc_CHC
+	#152051 - PRC Declared #2 - Triggered by CHC decision establish_the_prc_CHC
+	#152052 - Peace between PRC and RoC - Triggered by CHC decision ceasefire_with_KMT_CHC Opt B
+	#152053 - USA defends Taiwan against PRC Triggered by USA - Triggered by CHC event 151024 - US sends fleet to blockade Taiwan straight
+	
+#CHC - Communist China:
+	#151020 - Victory in the War of Liberation - Triggered by CHC decision establish_the_prc_CHC
+	#151021 - PRC established - Triggered by CHC decision establish_the_prc_CHC
+	#151023 - Peace between PRC and KMT - Triggered by CHC decision ceasefire_with_KMT_CHC
+	#151024 - US sends fleet to blockade Taiwan straight - Triggered by blockade_taiwan_straight_USA
+	#151025 - USA defends Taiwan against PRC aggression - Triggered by CHC event 151024 - US sends fleet to blockade Taiwan straight Opt B
+	
+#USA - United States of America:
+	#354120 - Taiwan Strait crisis Communist China declares war - Triggered by CHC event 151024 - US sends fleet to blockade Taiwan straight
+	
+
+## CHI ##	
+	#152050 - PRC Declared
+	country_event = {
+		
+		id = 152050
+
+		is_triggered_only = yes
+
+		title = "EVTNAME152050"								#PRC established
+		desc = "EVTDESC152050"
+		picture = "1949_mao_declares_prc"
+
+		option = {
+			name = "EVTOPTA152050"			    			#Temporary Retreat to Taiwan
+			ai_chance = { factor = 85 }					#Historical choice
+			set_country_flag = retreat_to_taiwan
+			capital = 13189
+			national_unity = -2
+			prestige_change = -10
+			popularity = -5
+			load_oob = CHI_evacuation.txt
+			supplies = 2500
+			money = 100
+			fuel = 50
+			taiwan_region = {
+				revolt_risk = -10
+				#anti_air = 1
+			}
+			13189 = {
+				#increase infra or add factory
+			}
+				
+			#any_province = {
+			#	limit = {
+			#		core = CHC
+			#		owner = CHI
+			#	}
+			#	owner = CHC
+			#}
+			
+		}
+
+		option = {
+			name = "EVTOPTB152050"			    			#Hold our ground
+			ai_chance = { factor = 15 }					#Ahistorical choice
+			popularity = 5
+		}
+	}
+
+	#PRC Declared #2
+	country_event = {
+		
+		id = 152051
+
+		is_triggered_only = yes
+
+		title = "EVTNAME152050"								#PRC established
+		desc = "EVTDESC152050"
+		picture = "1949_mao_declares_prc"
+
+		option = {
+			name = "EVTOPTB151020"			    			#Hold our ground
+			popularity = 5
+		}
+	}
+
+	#152052 - Peace between PRC and RoC
+	country_event = {
+		
+		id = 152052
+
+		is_triggered_only = yes
+
+		title = "EVTNAME152052"								#Peace between PRC and RoC
+		desc = "EVTDESC152052"
+		picture = "1949_roc_chiang_kai"
+
+		option = {
+			name = "EVTOPTA151022"							#Okay
+		}
+	}
+
+	#152053 - USA defends Taiwan against PRC 
+	country_event = {
+		
+		id = 152053
+
+		is_triggered_only = yes
+
+		title = "EVTNAME152053"								#USA defends Taiwan against PRC aggression
+		desc = "EVTDESC152053"
+		picture = "1952_taiwan_strait_crisis"
+
+		option = {
+			name = "EVTOPTA152053"							#Okay
+		}
+	}
+	
+## CHC ##
+	#151020 - Victory in the War of Liberation
+	country_event = {
+		
+		id = 151020
+
+		is_triggered_only = yes
+
+		title = "EVTNAME151020"								#Victory in the War of Liberation
+		desc = "EVTDESC151020"
+		picture = "1949_mao_declares_prc"
+
+		option = {
+			name = "EVTOPTA151020"
+		}
+	}
+
+	#151021 - PRC Established
+	country_event = {
+		
+		id = 151021
+
+		is_triggered_only = yes
+
+		title = "EVTNAME151021"								#PRC established
+		desc = "EVTDESC151021"
+		picture = "1949_mao_declares_prc"
+
+		option = {
+			name = "EVTOPTA151021"							#Okay
+		}
+	}
+
+	#151023 - Peace between PRC and KMT
+	country_event = {
+		
+		id = 151023
+
+		is_triggered_only = yes
+
+		title = "EVTNAME151023"								#Peace between PRC and KMT
+		desc = "EVTDESC151023"
+		picture = "1949_roc_chiang_kai"
+
+		option = {
+			name = "EVTOPTA151023"							#Okay
+		}
+	}
+
+	#151024 - US sends fleet to blockade Taiwan straight
+	country_event = {
+		
+		id = 151024
+
+		is_triggered_only = yes
+
+		title = "EVTNAME151024"								#US sends fleet to blockade Taiwan straight
+		desc = "EVTDESC151024"
+		picture = "1952_taiwan_strait_crisis"
+
+		option = {
+			name = "EVTOPTA151024"							#Declare Ceasefire with KMT
+			ai_chance = { factor = 95 }				#Historical choice
+			set_country_flag = ceasefire_with_KMT
+			end_war = CHI
+			CHI = {
+				any_owned = {
+					limit = {
+						is_core = CHI
+						controlled_by = CHC
+					}
+					secede_province = CHC
+				}
+			}
+			#CHC = { country_event = 02a }
+			CHI = { country_event = 152052 }
+			any_country = {
+				limit = {
+					NOT = {
+						OR = {
+							tag = CHC
+							tag = CHI
+						}
+					}
+				}
+				country_event = 151023
+			}
+		}
+
+		option = {
+			name = "EVTOPTB151024"							#The USA will not stand in our way!
+			ai_chance = { factor = 5 }				#Ahistorical choice
+			war = USA
+			USA = { country_event = 354120 }
+			CHI = { country_event = 152053 }
+			any_country = {
+				limit = {
+					NOT = {
+						OR = {
+							tag = USA
+							tag = CHC
+							tag = CHI
+						}
+					}
+				}
+				country_event = 151025
+			}
+		}
+	}
+
+	#151025 - USA defends Taiwan against PRC aggression
+	country_event = {
+		
+		id = 151025
+
+		is_triggered_only = yes
+
+		title = "EVTNAME151025"								#USA defends Taiwan against PRC aggression
+		desc = "EVTDESC151025"
+		picture = "1952_taiwan_strait_crisis"
+
+		option = {
+			name = "EVTOPTA151025"							#Okay
+		}
+	}
+
+## USA ##
+	#354120 - Taiwan Strait crisis Communist China declares war
+	country_event = {
+		
+		id = 354120
+
+		is_triggered_only = yes
+
+		title = "EVTNAME354120"								#China attacks USA to get to Taiwan
+		desc = "EVTDESC354120"
+		picture = "1952_taiwan_strait_crisis"
+
+		option = {
+			name = "EVTOPTA354120"							#Okay
+		}
+	}	

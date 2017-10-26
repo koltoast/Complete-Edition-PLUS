@@ -1,0 +1,62 @@
+#MinorityRightsDeclaration_decisions.txt
+#UN Minority Rights Declaration
+
+#UN Secretary General:
+	#dec_UN_raise_minority_rights_declaration - Raise the UN Minority Rights Declaration in the General Assembly
+	#dec_UN_minority_rights_disable_voting_notifications - Disable UN Voting Notifications
+
+	
+diplomatic_decisions = {
+## UN Secretary General ##
+	#dec_UN_raise_minority_rights_declaration - Raise the UN Minority Rights Declaration in the General Assembly
+	dec_UN_raise_minority_rights_declaration = {
+		category = international
+		picture = "xxxx"
+		potential = {
+			#year = 1973
+			NOT = { has_global_flag = gflag_UN_minority_rights_declaration_raised }
+			NOT = { has_global_flag = gflag_UN_resolution_active }
+			is_org_leader = XUN
+		}
+		
+		allow = {
+			NOT = { 
+				USA = { has_country_modifier = mod_UN_minority_rights_declaration_failure_delay }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			set_global_flag = gflag_UN_minority_rights_declaration_raised
+			set_global_flag = gflag_UN_resolution_active
+			country_event = 13300
+		}
+	}
+	
+	#dec_UN_minority_rights_disable_voting_notifications - Disable UN Voting Notifications
+	dec_UN_minority_rights_disable_voting_notifications = {
+		category = international
+		picture = "xxxx"
+		
+		potential = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_minority_rights_declaration_voting
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		effect = {
+			clr_global_flag = gflag_UN_voting_notifications
+		}
+	}
+	
+}

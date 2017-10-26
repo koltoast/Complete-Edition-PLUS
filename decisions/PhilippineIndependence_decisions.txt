@@ -1,0 +1,133 @@
+#PhilipineIndependence_decisions.txt
+#1946 Philippine Independence
+
+#USA:
+	#USA_fate_of_philippines
+	#USA_intervention_philippines
+
+#PHI:
+	#demand_independence_PHI
+	#ban_huks_PHI
+
+
+diplomatic_decisions = {
+## USA ##
+	USA_fate_of_philippines = {
+		category = international
+#		picture = ""
+		potential = {
+			tag = USA
+			PHI = {
+				vassal_of = THIS
+				war = no 
+			}
+			not = { has_country_flag = independence_PHI_done }
+			not = { has_global_flag = PHI_demandindependence }
+			war = no
+			is_subject = no
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = independence_PHI_done
+			country_event = 354103
+		}
+	}
+	
+	USA_intervention_philippines = {
+		category = international
+#		picture = ""
+		potential = {
+			tag = USA
+			has_global_flag = PHI_huks_banned
+			not = { has_country_flag = PHI_intervention_done }
+			is_subject = no
+			war = no
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = PHI_intervention_done
+			country_event = 354105
+		}
+	}
+	
+## PHI ##
+	demand_independence_PHI = {
+		category = national
+#		picture = ""
+		potential = {
+			tag = PHI
+			not = { has_global_flag = PHI_demandindependence }
+			war = no
+			is_subject = yes
+		}
+
+		allow = {
+			controls = 13428
+			controls = 13424
+			controls = 13195
+			not = { dissent = 10 }
+			national_unity = 85
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_global_flag = PHI_demandindependence
+			country_event = 287004
+		}
+	}
+	ban_huks_PHI = {
+		category = national
+#		picture = ""
+		potential = {
+			tag = PHI
+			not = { has_global_flag = PHI_banhuks }
+			war = no
+			is_subject = no		
+			or = {
+				ideology = social_cons_idolg
+				ideology = market_liberal_idolg
+				ideology = social_liberal_idolg
+				ideology = social_democrat_idolg
+			}
+		}
+
+		allow = {
+			controls = 13428
+			controls = 13424
+			controls = 13195
+			not = { dissent = 10 }
+		}
+		
+		ai_will_do = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { total_amount_of_brigades = 2 }
+			}
+		}
+		
+		effect = {
+			set_global_flag = PHI_banhuks
+			country_event = 287005
+		}
+	}
+	
+}
+		

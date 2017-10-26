@@ -1,0 +1,115 @@
+#IncendiaryWeaponsConvention_decisions.txt
+#UN Incendiary Weapons Convention
+
+#UN Secretary General:
+	#dec_UN_raise_incendiary_weapons_convention - Raise the UN Incendiary Weapons Convention in the General Assembly
+	#dec_UN_incendiary_weapons_convention_disable_voting_notifications - Disable UN Voting Notifications
+	
+#Global:
+	#dec_UN_ratify_incendiary_weapons_convention - Ratify the UN Incendiary Weapons Convention
+	#dec_UN_withdraw_from_incendiary_weapons_convention - Withdraw from the UN Incendiary Weapons Convention
+	
+diplomatic_decisions = {
+## UN Secretary General ##
+	#dec_UN_raise_incendiary_weapons_convention - Raise the UN Incendiary Weapons Convention in the General Assembly
+	dec_UN_raise_incendiary_weapons_convention = {
+		category = international
+		picture = "xxxx"
+		potential = {
+			#year = 1980
+			NOT = { has_global_flag = gflag_UN_incendiary_weapons_convention_raised }
+			NOT = { has_global_flag = gflag_UN_resolution_active }
+			is_org_leader = XUN
+		}
+		
+		allow = {
+			NOT = { 
+				USA = { has_country_modifier = mod_UN_incendiary_weapons_convention_failure_delay }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			set_global_flag = gflag_UN_incendiary_weapons_convention_raised
+			set_global_flag = gflag_UN_resolution_active
+			country_event = 12600
+		}
+	}
+	
+	#dec_UN_incendiary_weapons_convention_disable_voting_notifications - Disable UN Voting Notifications
+	dec_UN_incendiary_weapons_convention_disable_voting_notifications = {
+		category = international
+		picture = "xxxx"
+		
+		potential = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_incendiary_weapons_convention_voting
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		effect = {
+			clr_global_flag = gflag_UN_voting_notifications
+		}
+	}
+	
+## Global ##
+	#dec_UN_ratify_incendiary_weapons_convention - Ratify the UN Incendiary Weapons Convention
+	dec_UN_ratify_incendiary_weapons_convention = {
+		category = international
+		picture = "xxxx"
+		potential = {
+			is_org_member = XUN
+			NOT = { has_country_flag = flag_UN_incendiary_weapons_convention_ratified }
+			has_global_flag = gflag_UN_incendiary_weapons_convention_passes
+		}
+		
+		allow = {
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			NOT = { intelligence_policy = wet_operations_pol }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			set_country_flag = flag_UN_incendiary_weapons_convention_ratified
+			country_event = 12612
+		}
+	}
+	
+	#dec_UN_withdraw_from_incendiary_weapons_convention - Withdraw from the UN Incendiary Weapons Convention
+	dec_UN_withdraw_from_incendiary_weapons_convention = {
+		category = international
+		picture = "xxxx"
+		potential = {
+			is_org_member = XUN
+			has_country_flag = flag_UN_incendiary_weapons_convention_ratified
+		}
+		
+		allow = {
+			NOT = { has_country_flag = "UN_EMBARGO" }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			clr_country_flag = flag_UN_incendiary_weapons_convention_ratified
+			country_event = 12614
+		}
+	}
+	
+
+}

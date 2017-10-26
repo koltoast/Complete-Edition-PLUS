@@ -1,0 +1,107 @@
+CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Country Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## CUB ##;;;;;;;;;;;;;;x
+mod_CUB_moncada_barracks_attacked;Moncada Barracks Attacked;;;;;;;;;;;;;x
+mod_CUB_serious_rebellion;Serious Rebellion;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## USA ##;;;;;;;;;;;;;;x
+dec_1952us_elections_cuba_title;Intervene in Cuban Elections;;;;;;;;;;;;;x
+dec_1952us_elections_cuba_desc;We can choose whether to intervene in the upcoming Cuban elections, to get the result we want and thus maintain order in the Americas.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+EVTNAME164010;Roberto Agramonte wins election!;;;;;;;;;;;;;x
+EVTDESC164010;The presidential election went ahead without any trouble, which was surprising because of the high emotions expressed from all parties.;;;;;;;;;;;;;x
+EVTOPTA164010;Hooray for Agramonte!;;;;;;;;;;;;;x
+EVTNAME164011;Carlos Hevia wins election!;;;;;;;;;;;;;x
+EVTDESC164011;The presidential election went ahead without any trouble, which was surprising because of the high emotions expressed from all parties.;;;;;;;;;;;;;x
+EVTOPTA164011;Hooray for Carlos Hevia!;;;;;;;;;;;;;x
+EVTNAME164012;Fulgencio Batista wins election!;;;;;;;;;;;;;x
+EVTDESC164012;The presidential election went ahead without any trouble, which was surprising because of the high emotions expressed from all parties.;;;;;;;;;;;;;x
+EVTOPTA164012;Hooray for Fulgencio Batista!;;;;;;;;;;;;;x
+EVTNAME164013;General Batista returns to power in Cuba!;;;;;;;;;;;;;x
+EVTDESC164013;Fulgencio Batista has previously been in power in Cuba. He was running in the Presidential Election this time, but realising he had no chance of winning the election, and with the support of the Army, he staged a coup and re-took power in Cuba.;;;;;;;;;;;;;x
+EVTOPTA164013;Fulgencio Batista takes power in Cuba!;;;;;;;;;;;;;x
+EVTNAME164014;Cuba thanks the USA for sending aid;;;;;;;;;;;;;x
+EVTDESC164014;The Cuban government was very grateful to the USA for sending aid at this time.;;;;;;;;;;;;;x
+EVTOPTA164014;Thanks America!;;;;;;;;;;;;;x
+EVTNAME164015;Cuba thanks the Soviets for sending aid;;;;;;;;;;;;;x
+EVTDESC164015;The new left-wing government in Havana was very grateful to the Soviets for sending aid at this time.;;;;;;;;;;;;;x
+EVTOPTA164015;Thanks Brothers!;;;;;;;;;;;;;x
+EVTNAME164014;Cuba suffers rebel attacks;;;;;;;;;;;;;x
+EVTDESC164014;Random attacks from elusive rebels tormented the government in Havana.;;;;;;;;;;;;;x
+EVTOPTA164014;The bastards!;;;;;;;;;;;;;x
+EVTNAME164015;Young lawyer among rebel leaders;;;;;;;;;;;;;x
+EVTDESC164015;A young lawyer by the name of Fidel Castro has risen to prominence among the leftwing rebels in Cuba.;;;;;;;;;;;;;x
+EVTOPTA164015;Fidel Castro, a new breed of rebel;;;;;;;;;;;;;x
+EVTNAME164016;Rebels attack Moncada Barracks in Havana;;;;;;;;;;;;;x
+EVTDESC164016;A rebel force of about 50 rebels managed to infiltrate the main security barracks in Havana.;;;;;;;;;;;;;x
+EVTOPTA164016;Rebels repulsed and some captured;;;;;;;;;;;;;x
+EVTNAME164017;Left-wing rebels mount serious threat to State;;;;;;;;;;;;;x
+EVTDESC164017;Left-wing rebels have taken over a province in the east of the country, and are advancing towards the capital.;;;;;;;;;;;;;x
+EVTOPTA164017;God help us all!;;;;;;;;;;;;;x
+EVTNAME164018;Left-wing rebels declare victory in Cuba;;;;;;;;;;;;;x
+EVTDESC164018;Left-wing rebels have taken control and dislodged the right-wing government in Cuba.;;;;;;;;;;;;;x
+EVTOPTA164018;Victory!;;;;;;;;;;;;;x
+EVTNAME164020;CIA behind Bay of Pigs attack!;;;;;;;;;;;;;x
+EVTDESC164020;Disgruntled right-wing forces attacked Cuban forces at the Bay of Pigs.;;;;;;;;;;;;;x
+EVTOPTA164020;Kill the Capitalist Pigs!;;;;;;;;;;;;;x
+EVTNAME164021;Right-wing rebels mount serious threat to State;;;;;;;;;;;;;x
+EVTDESC164021;Right-wing rebels have taken over a province in the east of the country, and are advancing towards the capital.;;;;;;;;;;;;;x
+EVTOPTA164021;God help us all!;;;;;;;;;;;;;x
+EVTNAME164022;Right-wing rebels declare victory in Cuba;;;;;;;;;;;;;x
+EVTDESC164022;Right-wing rebels have taken control and dislodged the left-wing government in Cuba.;;;;;;;;;;;;;x
+EVTOPTA164022;Victory!;;;;;;;;;;;;;x
+EVTNAME164023;Soviets behind Bay of Pigs attack!;;;;;;;;;;;;;x
+EVTDESC164023;Disgruntled left-wing forces attacked Cuban forces at the Bay of Pigs.;;;;;;;;;;;;;x
+EVTOPTA164023;Kill the Commie Bastards!;;;;;;;;;;;;;x
+EVTNAME164024;Election Result;;;;;;;;;;;;;x
+EVTDESC164024;The result of the election has been announced.;;;;;;;;;;;;;x
+EVTOPTA164024;OK;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## USA ##;;;;;;;;;;;;;;x
+EVTNAME354250;USA decides about Cuban election;;;;;;;;;;;;;x
+EVTDESC354250;The presidential election in Cuba is due to happen soon. The polls suggest a left-wing candidate would win the election. The USA had to decide from a list of 3 options, what to do?;;;;;;;;;;;;;x
+EVTOPTA354250;No election! Instigate a Coup in Cuba!;;;;;;;;;;;;;x
+EVTOPTB354250;Let the election proceed;;;;;;;;;;;;;x
+EVTOPTC354250;Make sure our guy wins;;;;;;;;;;;;;x
+EVTNAME354252;USA embargoes Cuban trade;;;;;;;;;;;;;x
+EVTDESC354252;Following the election of a left-wing president in Cuba, the United States initiated a trade embargo against Cuba.;;;;;;;;;;;;;x
+EVTOPTA354252;Embargo Cuba;;;;;;;;;;;;;x
+EVTOPTB354252;Not at this time;;;;;;;;;;;;;x
+EVTNAME354253;USA sends aid to Cuba;;;;;;;;;;;;;x
+EVTDESC354253;Following the Right achieving success in Cuba, the United States decided to send aid to Cuba.;;;;;;;;;;;;;x
+EVTOPTA354253;Send aid to Cuba;;;;;;;;;;;;;x
+EVTOPTB354253;Not at this time;;;;;;;;;;;;;x
+EVTNAME354254;Outside forces funding rebels in Cuba;;;;;;;;;;;;;x
+EVTDESC354254;US Intel reports outside forces active in Cuba.;;;;;;;;;;;;;x
+EVTOPTA354254;OK, thanks for the heads-up.;;;;;;;;;;;;;x
+EVTNAME354255;USA regrets the communist takeover in Cuba;;;;;;;;;;;;;x
+EVTDESC354255;Caught off-guard, the USA was surprised to find that the communists had achieved victory so quickly.;;;;;;;;;;;;;x
+EVTOPTA354255;Embargo Cuba!;;;;;;;;;;;;;x
+EVTOPTB354255;Not at this time;;;;;;;;;;;;;x
+EVTNAME354256;USA cheers the conservative takeover in Cuba;;;;;;;;;;;;;x
+EVTDESC354256;Caught off-guard, the USA was surprised to find that the conservatives had achieved victory so quickly.;;;;;;;;;;;;;x
+EVTOPTA354256;Send aid to Cuba!;;;;;;;;;;;;;x
+EVTOPTB354256;Not at this time;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## SOV ##;;;;;;;;;;;;;;x
+EVTNAME326120;Soviets sends aid to Cuba;;;;;;;;;;;;;x
+EVTDESC326120;Following the Left success in Cuba, the Soviet Union decided to send aid to Cuba.;;;;;;;;;;;;;x
+EVTOPTA326120;Send aid to Cuba;;;;;;;;;;;;;x
+EVTOPTB326120;Not at this time;;;;;;;;;;;;;x
+EVTNAME326121;Soviets sends aid to Cuba;;;;;;;;;;;;;x
+EVTDESC326121;Following the Left success in Cuba, the Soviet Union decided to send aid to Cuba.;;;;;;;;;;;;;x
+EVTOPTA326121;Send aid to Cuba;;;;;;;;;;;;;x
+EVTOPTB326121;Not at this time;;;;;;;;;;;;;x
+EVTNAME326122;Soviets regret the capitalist takeover in Cuba;;;;;;;;;;;;;x
+EVTDESC326122;Caught off-guard, the Soviet Union was surprised to find that the capitalists had achieved victory so quickly.;;;;;;;;;;;;;x
+EVTOPTA326122;Embargo Cuba!;;;;;;;;;;;;;x
+EVTOPTB326122;Not at this time;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

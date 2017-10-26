@@ -1,0 +1,62 @@
+#Women&ChildrenInWarDeclaration_decisions.txt
+#UN Women & Children In War Declaration
+
+#UN Secretary General:
+	#dec_UN_raise_women_and_children_in_war_declaration - Raise the UN Women & Children In War Declaration in the General Assembly
+	#dec_UN_women_and_children_in_war_disable_voting_notifications - Disable UN Voting Notifications
+
+	
+diplomatic_decisions = {
+## UN Secretary General ##
+	#dec_UN_raise_women_and_children_in_war_declaration - Raise the UN Women & Children In War Declaration in the General Assembly
+	dec_UN_raise_women_and_children_in_war_declaration = {
+		category = international
+		picture = "1974_DPWCEAC"
+		potential = {
+			#year = 1973
+			NOT = { has_global_flag = gflag_UN_women_and_children_in_war_declaration_raised }
+			NOT = { has_global_flag = gflag_UN_resolution_active }
+			is_org_leader = XUN
+		}
+		
+		allow = {
+			NOT = { 
+				USA = { has_country_modifier = mod_UN_women_and_children_in_war_declaration_failure_delay }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			set_global_flag = gflag_UN_women_and_children_in_war_declaration_raised
+			set_global_flag = gflag_UN_resolution_active
+			country_event = 13100
+		}
+	}
+	
+	#dec_UN_women_and_children_in_war_disable_voting_notifications - Disable UN Voting Notifications
+	dec_UN_women_and_children_in_war_disable_voting_notifications = {
+		category = international
+		picture = "1974_DPWCEAC"
+		
+		potential = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_women_and_children_in_war_declaration_voting
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		effect = {
+			clr_global_flag = gflag_UN_voting_notifications
+		}
+	}
+	
+}

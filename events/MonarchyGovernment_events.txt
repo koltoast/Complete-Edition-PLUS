@@ -1,0 +1,1523 @@
+#MonarchyGovernment_events.txt
+#Monarchy Government Events
+
+#Global:
+## Positive ##
+	#53000 - Royal baby born
+	#53001 - Extravagent royal marriage
+	#53002 - Royal bonds bring two nations closer together
+	#53003 - Monarch asked to adjudicate in political crisis
+	#53004 - Monarch seen as moral rock in changing times
+	#53005 - Celebration of monarch's rule draws huge crowds
+	#53006 - Tourists drawn to country by its living royal heritage
+	#53007 - Member of royal family champions humanitarian and social issues
+	#53008 - Strategic dynastic marriages unite feuding factions
+	
+## Negative ##
+	#53020 - Newspaper editorial insults monarch
+	#53021 - Royal Nepotism alleged
+	#53022 - Royal Titles being sold
+	#53023 - Royal tax loopholes criticised
+	#53024 - Monarch's younger son embarresses court
+	#53025 - Royal gaffe at public function
+	#53026 - Royal marriage collapses publically
+	#53027 - Royal family's wealth draws controversy
+	#53028 - Alleged illegitimate child attempts blackmail
+		#53029 - News of illegitimate royal child reaches tabloids
+	#53030 - Family fued among likely royal successors
+	#53031 - Rumours circulate about poor health within the royal family
+	#53032 - Embezzlement alleged at royal charity
+		#53033 - Draft report reveals widespread royal corruption
+		#53034 - Report inconclusive
+		#53035 - Report absolves any in the royal family of blame
+	#53036 - Monarch Abdicates - Triggered by Global decision dec_MonarchyGovernment_monarchAbdicates
+	
+
+## Global ##
+	## Positive ##	
+	#Royal baby born
+	country_event = {
+
+		id = 53000		#Royal baby born
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				AND = {
+					government = constitutional_monarchy_gov
+					NOT = {
+						elections_and_voting = winner_takes_it_all
+						elections_and_voting = semi-proportional
+						elections_and_voting = proportional
+					}
+				}
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalBaby }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+		}
+
+		title = "EVTNAME53000"		#Royal Baby Born
+		desc = "EVTDESC53000"		
+		picture = "1946_Carl_Gustav_is_born"
+
+		option = {
+		name = "EVTOPTA53000"		#A reason for celebrations
+			national_unity = 1
+			add_country_modifier = {
+				name = mod_monarchyGovernment_royalBaby
+				duration = 365
+			}
+		}
+	}
+
+	#Extravagant royal marriage
+	country_event = {
+
+		id = 53001		#Extravagant royal marriage
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				AND = {
+					government = constitutional_monarchy_gov
+					NOT = {
+						elections_and_voting = winner_takes_it_all
+						elections_and_voting = semi-proportional
+						elections_and_voting = proportional
+					}
+				}
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalMarriage_delay }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+		}
+
+		title = "EVTNAME53001"		#Extravagant royal marriage
+		desc = "EVTDESC53001"		
+		picture = "1956_Royal_wedding_Monaco"
+
+		option = {
+		name = "EVTOPTA53001"		#This shall boost our royal family's prestige
+			ai_chance = { factor = 50 }
+			money = -15
+			prestige_change = 5
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalMarriage_delay
+					duration = 365
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTB53001"		#This shall boost our neighbourly relations
+			ai_chance = { factor = 50 }
+			trigger = {
+				any_neighbor_country = {
+					OR = {
+						same_religion = yes
+						same_culture = yes
+					}
+				}
+			}
+			money = -15
+			random_country = {
+				limit = {
+					neighbour = yes
+					OR = {
+						same_religion = yes
+						same_culture = yes
+					}
+				}
+			}
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalMarriage_delay
+					duration = 365
+				}
+			}
+		}
+	}
+
+	#Royal bonds bring two nations closer together
+	country_event = {
+
+		id = 53002		#Royal bonds bring two nations closer together
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				AND = {
+					government = constitutional_monarchy_gov
+					NOT = {
+						elections_and_voting = winner_takes_it_all
+						elections_and_voting = semi-proportional
+						elections_and_voting = proportional
+					}
+				}
+			}
+			any_neighbor_country = {
+				NOT = { tag = THIS }
+				OR = {
+					AND = {
+						relation = { who = THIS value = -25 }
+						OR = {
+							government = absolute_monarchy_gov
+							government = constitutional_monarchy_gov
+						}
+						OR = {
+							same_religion = yes
+							same_culture = yes
+						}
+					}
+					any_neighbor_country = {
+						NOT = { tag = THIS }
+						AND = {
+							relation = { who = THIS value = -25 }
+							OR = {
+								government = absolute_monarchy_gov
+								government = constitutional_monarchy_gov
+							}
+							OR = {
+								same_religion = yes
+								same_culture = yes
+							}
+						}
+					}
+				}
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalBonds_delay }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+		}
+
+		title = "EVTNAME53002"		#Royal bonds bring two nations closer together
+		desc = "EVTDESC53002"		
+		picture = "1960_Dutch_royal_state_visit_Belgium"
+		
+		immediate = {
+			hidden_effects = {
+				any_neighbor_country = {
+					limit = {
+						NOT = { tag = THIS }
+						OR = {
+							AND = {
+								relation = { who = THIS value = -25 }
+								OR = {
+									government = absolute_monarchy_gov
+									government = constitutional_monarchy_gov
+								}
+								OR = {
+									same_religion = THIS
+									same_culture = THIS
+								}
+							}
+							any_neighbor_country = {
+								NOT = { tag = THIS }
+								AND = {
+									relation = { who = THIS value = -25 }
+									OR = {
+										government = absolute_monarchy_gov
+										government = constitutional_monarchy_gov
+									}
+									OR = {
+										same_religion = THIS
+										same_culture = THIS
+									}
+								}
+							}
+						}
+					}
+					set_country_flag = flag_monarchyGovernment_royalBonds_immediate
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA53002"		#This shall boost our neighbourly relations
+			random_country = {
+				limit = {
+					has_country_flag = flag_monarchyGovernment_royalBonds_immediate
+				}
+				relation = { who = THIS value = 25 }
+			}
+			prestige_change = 2
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalBonds_delay
+					duration = 365
+				}
+			}
+		}
+	}
+
+	#Monarch asked to arbitrate in political crisis
+	country_event = {
+
+		id = 53003		#Monarch asked to adjudicate in political crisis
+
+		trigger = {
+			government = constitutional_monarchy_gov
+			NOT = {
+				elections_and_voting = winner_takes_it_all
+				elections_and_voting = semi-proportional
+				elections_and_voting = proportional
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalNegotiation_delay }
+			NOT = { national_unity = 90 }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+			modifier = {
+				factor = 1.5
+				national_unity = 75
+			}
+			modifier = {
+				factor = 1.5
+				national_unity = 60
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { national_unity = 45 }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { national_unity = 30 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { national_unity = 30 }
+			}
+		}
+
+		title = "EVTNAME53003"		#Monarch asked to adjudicate in political crisis
+		desc = "EVTDESC53003"		
+		picture = "1956_Anthony_Eden_greets_Queen"
+
+		option = {
+		name = "EVTOPTA53003"		#We should stay out of party political dealings
+			ai_chance = { factor = 40 }
+			national_unity = 1
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalNegotiation_delay
+					duration = 365
+				}
+			}
+		}
+		
+		option = {
+		name = "EVTOPTB53003"		#The government is in the right
+			ai_chance = { factor = 35 }
+			popularity = 3
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalNegotiation_delay
+					duration = 365
+				}
+			}
+		}
+		
+		option = {
+		name = "EVTOPTC53003"		#The opposition is in the right
+			ai_chance = { factor = 25 }
+			popularity = -3
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalNegotiation_delay
+					duration = 365
+				}
+			}
+		}
+	}
+
+	#Monarch seen as moral rock in changing times
+	country_event = {
+
+		id = 53004		#Monarch seen as moral rock in changing times
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				AND = {
+					government = constitutional_monarchy_gov
+					NOT = {
+						elections_and_voting = winner_takes_it_all
+						elections_and_voting = semi-proportional
+						elections_and_voting = proportional
+					}
+				}
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalStability_delay }
+			OR = {
+				NOT = { national_unity = 70 }
+				war_exhaustion = 15
+				economy_unbalanced = yes
+			}
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+			modifier = {
+				factor = 0.75
+				government = constitutional_monarchy_gov
+			}
+		}
+
+		title = "EVTNAME53004"		#Monarch seen as moral rock in changing times
+		desc = "EVTDESC53004"		
+		picture = "1970_Queen_visits_Australia"
+
+		option = {
+		name = "EVTOPTA53004"		#Good news
+			national_unity = 3
+			popularity = 1
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalStability_delay
+					duration = 365
+				}
+			}
+		}
+	}
+
+	#Celebration of monarch's rule draws huge crowds
+	country_event = {
+
+		id = 53005		#Celebration of monarch's rule draws huge crowds
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				AND = {
+					government = constitutional_monarchy_gov
+					NOT = {
+						elections_and_voting = winner_takes_it_all
+						elections_and_voting = semi-proportional
+						elections_and_voting = proportional
+					}
+				}
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalCelebration_delay }
+			popularity = 60
+			national_unity = 35
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+			modifier = {
+				factor = 0.75
+				popularity = 75
+			}
+			modifier = {
+				factor = 0.75
+				popularity = 90
+			}
+		}
+
+		title = "EVTNAME53005"		#Celebration of monarch's rule draws huge crowds
+		desc = "EVTDESC53005"		
+		picture = "1977_Silver_Jubilee_Elizabeth_II"
+
+		option = {
+		name = "EVTOPTA53005"		#Great
+			dissent = -2
+			prestige_change = 5
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalCelebration_delay
+					duration = 365
+				}
+			}
+		}
+	}
+
+	#Tourists drawn to country by its living royal heritage
+	country_event = {
+
+		id = 53006		#Tourists drawn to country by its living royal heritage
+
+		trigger = {
+			government = constitutional_monarchy_gov
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalTourism }
+			NOT = {
+				war_exhaustion = 10
+				dissent = 20 
+			}
+			national_unity = 30
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+			modifier = {
+				factor = 0.75
+				year = 1970
+			}
+			modifier = {
+				factor = 0.75
+				prestige = 50
+			}
+			modifier = {
+				factor = 2
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					internal_policy = state_controlled_aff_pol
+					internal_policy = repressive_aff_pol
+				}
+			}
+			modifier = {
+				factor = 1.5
+				dissent = 5
+			}
+			modifier = {
+				factor = 1.5
+				dissent = 10
+			}
+			modifier = {
+				factor = 1.5
+				dissent = 15
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					war = yes
+					war_exhaustion = 5
+				}
+			}
+		}
+
+		title = "EVTNAME53006"		#Tourists drawn to country by its living royal heritage
+		desc = "EVTDESC53006"		
+		picture = "1965_Buckingham_Palace_with_tourists"
+
+		option = {
+		name = "EVTOPTA53006"		#Great
+			prestige_change = 2
+			add_country_modifier = {
+				name = mod_monarchyGovernment_royalTourism
+				duration = 365
+			}
+		}
+	}
+
+	#Member of royal family champions humanitarian and social issues
+	country_event = {
+
+		id = 53007		#Member of royal family champions humanitarian and social issues
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				government = constitutional_monarchy_gov
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalActivism }
+			NOT = {
+				war_exhaustion = 10
+				dissent = 20 
+			}
+			national_unity = 30
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+			modifier = {
+				factor = 1.5
+				OR = {
+					education_policy = very_low_funding_edu_pol
+					education_policy = low_funding_edu_pol
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					internal_policy = state_controlled_aff_pol
+					internal_policy = repressive_aff_pol
+				}
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					internal_policy = liberal_aff_pol
+					internal_policy = democratic_aff_pol
+				}
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					domestic_policy = social_focus_pol
+					domestic_policy = educational_focus_pol
+				}
+			}
+		}
+
+		title = "EVTNAME53007"		#Member of royal family champions humanitarian and social issues
+		desc = "EVTDESC53007"		
+		picture = "1981_Prince_Charles_in_USA"
+
+		option = {
+		name = "EVTOPTA53007"		#Great
+			prestige_change = 5
+			random_owned = {
+				limit = {
+					owner = { government = absolute_monarchy_gov }
+				}
+				owner = { popularity = 2 }
+			}
+			add_country_modifier = {
+				name = mod_monarchyGovernment_royalActivism
+				duration = 365
+			}
+		}
+	}
+
+	#Strategic dynastic marriages unite feuding factions
+	country_event = {
+
+		id = 53008		#Strategic dynastic marriages unite feuding factions
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				AND = {
+					government = constitutional_monarchy_gov
+					NOT = {
+						elections_and_voting = winner_takes_it_all
+						elections_and_voting = semi-proportional
+						elections_and_voting = proportional
+					}
+				}
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalStrategy_delay }
+			national_unity = 20
+			NOT = { national_unity = 80 }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+			modifier = {
+				factor = 1.5
+				government = constitutional_monarchy_gov
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { national_unity = 70 }
+			}
+		}
+
+		title = "EVTNAME53008"		#Strategic dynastic marriages unite feuding factions
+		desc = "EVTDESC53008"		
+		picture = "1962_Spanish_royal_wedding"
+
+		option = {
+		name = "EVTOPTA53008"		#Good news
+			national_unity = 3
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalStrategy_delay
+					duration = 365
+				}
+			}
+		}
+	}
+
+	## Negative ##
+	#Newspaper Editorial insults Monarch
+	country_event = {
+
+		id = 53020		#Newspaper Editorial insults Monarch
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				AND = {
+					government = constitutional_monarchy_gov
+					NOT = {
+						elections_and_voting = winner_takes_it_all
+						elections_and_voting = semi-proportional
+						elections_and_voting = proportional
+					}
+				}
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalEditorial_delay }
+			NOT = { freedom_of_the_press = propaganda_press }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+		}
+
+		title = "EVTNAME53020"		#Newspaper Editorial insults Monarch
+		desc = "EVTDESC53020"		
+		picture = "1956_Greet_Hofmans_affair"
+
+		option = {
+		name = "EVTOPTA53020"		#Jail the editor
+			ai_chance = { factor = 25 }
+			trigger = {
+				OR = {
+					freedom_of_the_press = state_press
+					freedom_of_the_press = censored_press
+				}
+			}
+			popularity = -2
+			prestige_change = -5
+			national_unity = 1
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalEditorial_delay
+					duration = 365
+				}
+			}
+		}
+		
+		option = {
+		name = "EVTOPTB53020"		#Discourage future such publications
+			ai_chance = { factor = 50 }
+			popularity = -1
+			national_unity = -1
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalEditorial_delay
+					duration = 365
+				}
+			}
+		}
+		
+		option = {
+		name = "EVTOPTC53020"		#Do not intervene
+			ai_chance = { factor = 25 }
+			popularity = 1
+			dissent = 2
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalEditorial_delay
+					duration = 365
+				}
+			}
+		}
+
+	}
+
+	#Royal Nepotism alleged
+	country_event = {
+
+		id = 53021		#Royal Nepotism alleged
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				AND = {
+					government = constitutional_monarchy_gov
+					NOT = {
+						elections_and_voting = winner_takes_it_all
+						elections_and_voting = semi-proportional
+						elections_and_voting = proportional
+					}
+				}
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalNepotism_delay }
+			NOT = { national_unity = 90 }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+			modifier = {
+				factor = 1.25
+				national_unity = 75
+			}
+			modifier = {
+				factor = 1.25
+				national_unity = 60
+			}
+			modifier = {
+				factor = 0.85
+				NOT = { national_unity = 45 }
+			}
+			modifier = {
+				factor = 0.85
+				NOT = { national_unity = 30 }
+			}
+			modifier = {
+				factor = 0.85
+				NOT = { national_unity = 30 }
+			}
+		}
+
+		title = "EVTNAME53021"		#Royal Nepotism alleged
+		desc = "EVTDESC53021"		
+		picture = "1952_King_Saud"
+		
+		option = {
+		name = "EVTOPTA53021"		#Nothing wrong with a few favours
+			ai_chance = { factor = 40 }
+			national_unity = -1
+			popularity = -2
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalNepotism_delay
+					duration = 365
+				}
+			}
+		}
+		
+		option = {
+		name = "EVTOPTB53021"		#Crack down on such activities
+			ai_chance = { factor = 60 }
+			national_unity = -1
+			money = -30
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalNepotism_delay
+					duration = 365
+				}
+			}
+		}
+
+	}
+
+	#Royal Titles being sold
+	country_event = {
+
+		id = 53022		#Royal Titles being sold
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				government = constitutional_monarchy_gov
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalTitles_delay }
+			NOT = { national_unity = 90 }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+		}
+
+		title = "EVTNAME53022"		#Royal Titles being sold
+		desc = "EVTDESC53022"		
+		picture = "1967_knighthood_ceremony_Sir_Francis_Chichester"
+		
+		option = {
+		name = "EVTOPTA53022"		#It is a lucrative business
+			ai_chance = { factor = 40 }
+			prestige_change = -5
+			popularity = -2
+			money = 30
+			add_country_modifier = {
+				name = mod_monarchyGovernment_royalTitles
+				duration = 365
+			}
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalTitles_delay
+					duration = 365
+				}
+			}
+		}
+		
+		option = {
+		name = "EVTOPTB53022"		#Crack down on such activities
+			ai_chance = { factor = 60 }
+			money = -15
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalTitles_delay
+					duration = 365
+				}
+			}
+		}
+
+	}
+
+	#Royal tax loopholes criticised
+	country_event = {
+
+		id = 53023		#Royal tax loopholes criticised
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				government = constitutional_monarchy_gov
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalTax_delay }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+			modifier = {
+				factor = 0.85
+				economy_unbalanced = yes
+			}
+			modifier = {
+				factor = 1.25
+				fiscal_policy = reduced_taxation_pol
+			}
+			modifier = {
+				factor = 0.85
+				OR = {
+					fiscal_policy = fiscal_straitjacket_pol
+					fiscal_policy = increased_taxation_pol
+				}
+			}
+			modifier = {
+				factor = 1.25
+				popularity = 80
+			}
+			modifier = {
+				factor = 0.85
+				NOT = { popularity = 50 }
+			}
+		}
+
+		title = "EVTNAME53023"		#Royal tax loopholes criticised
+		desc = "EVTDESC53023"		
+		picture = "2013_royal_spending"
+		
+		option = {
+		name = "EVTOPTA53023"		#We should not interfere with tradition
+			ai_chance = { factor = 50 }
+			popularity = -2
+			money = -15
+			add_country_modifier = {
+				name = mod_monarchyGovernment_royalTax
+				duration = 365
+			}
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalTax_delay
+					duration = 365
+				}
+			}
+		}
+		
+		option = {
+		name = "EVTOPTB53023"		#Crack down on such activities
+			ai_chance = { factor = 50 }
+			national_unity = -2
+			money = 15
+			add_country_modifier = {
+				name = mod_monarchyGovernment_royalTax_delay
+				duration = 365
+			}
+		}
+
+	}
+
+	#Monarch's younger son embarresses court
+	country_event = {
+
+		id = 53024		#Monarch's younger son embarrasses court
+
+		trigger = {
+			government = absolute_monarchy_gov
+			elections_and_voting = hereditary_rule
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalEmbarressment_delay }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+		}
+
+		title = "EVTNAME53024"		#Monarch's younger son embarrasses court
+		desc = "EVTDESC53024"		
+		picture = "1980_Luxemburg_royal_portrait"
+		
+		option = {
+		name = "EVTOPTA53024"		#Unfortunate
+			national_unity = -2
+			prestige_change = -5
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalEmbarressment_delay
+					duration = 365
+				}
+			}
+		}
+
+	}
+
+	#Royal gaffe at public function
+	country_event = {
+
+		id = 53025		#Royal gaffe at public function
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				government = constitutional_monarchy_gov
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalGaffe_delay }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+		}
+
+		title = "EVTNAME53025"		#Royal gaffe at public function
+		desc = "EVTDESC53025"		
+		picture = "1971_Shah_at_banquet"
+		
+		option = {
+		name = "EVTOPTA53025"		#Unfortunate
+			popularity = -1
+			prestige_change = -10
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalGaffe_delay
+					duration = 365
+				}
+			}
+		}
+
+	}
+
+	#Royal marriage collapses publically
+	country_event = {
+
+		id = 53026		#Royal marriage collapses publically
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				government = constitutional_monarchy_gov
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalDivorce_delay }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+		}
+
+		title = "EVTNAME53026"		#Royal marriage collapses publically
+		desc = "EVTDESC53026"		
+		picture = "1995_Queen_orders_divorce"
+		
+		option = {
+		name = "EVTOPTA53026"		#Unfortunate
+			national_unity = -1
+			popularity = -2
+			prestige_change = -10
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalDivorce_delay
+					duration = 365
+				}
+			}
+		}
+
+	}
+
+	#Royal family's wealth draws controversy
+	country_event = {
+
+		id = 53027		#Royal family's wealth draws controversy
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				government = constitutional_monarchy_gov
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalWealth_delay }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+		}
+
+		title = "EVTNAME53027"		#Royal family's wealth draws controversy
+		desc = "EVTDESC53027"		
+		picture = "2013_royal_spending"
+		
+		option = {
+		name = "EVTOPTA53027"		#Donate a portion to charity
+			random_owned = {
+				limit = {
+					owner = { government = absolute_monarchy_gov }
+				}
+				owner = { money = -100 }
+			}
+			random_owned = {
+				limit = {
+					owner = { government = constitutional_monarchy_gov }
+				}
+				owner = { 
+					money = -10
+					national_unity = -1
+				}
+			}
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalWealth_delay
+					duration = 365
+				}
+			}
+		}
+		
+		option = {
+		name = "EVTOPTB53027"		#They are merely envious
+			popularity = -2
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalWealth_delay
+					duration = 365
+				}
+			}
+		}
+
+	}
+
+	#Alleged illegitimate child attempts blackmail
+	country_event = {
+
+		id = 53028		#Alleged illegitimate child attempts blackmail
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				government = constitutional_monarchy_gov
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalBlackmail_delay }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+		}
+
+		title = "EVTNAME53028"		#Alleged illegitimate child attempts blackmail
+		desc = "EVTDESC53028"		
+		picture = "1995_letter_to_Dutch_Queen"
+		
+		option = {
+		name = "EVTOPTA53028"		#Pay them off
+			ai_chance = { factor = 60 }
+			money = -100
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalBlackmail_delay
+					duration = 365
+				}
+			}
+		}
+		
+		option = {
+		name = "EVTOPTB53028"		#Call their bluff
+			ai_chance = { factor = 40 }
+			hidden_effects = {
+				random = {
+					chance = 50
+					set_country_flag = flag_monarchyGovernment_royalBlackmail
+					#Used as trigger for country_event 29
+				}
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalBlackmail_delay
+					duration = 365
+				}
+			}
+		}
+
+	}
+
+	#News of illegitimate royal child reaches tabloids
+	country_event = {
+
+		id = 53029
+
+		trigger = {
+			has_country_flag = flag_monarchyGovernment_royalBlackmail
+		}
+
+		mean_time_to_happen =  {
+			days = 31
+		}
+
+		title = "EVTNAME53029"		#Alleged illegitimate child attempts blackmail
+		desc = "EVTDESC53029"		
+		picture = "2005_Jazmin_Grace_Grimaldi"
+		
+		option = {
+		name = "EVTOPTA53029"		#Best ignore it
+			ai_chance = { factor = 40 }
+			popularity = -2
+			clr_country_flag = flag_monarchyGovernment_royalBlackmail
+		}
+		
+		option = {
+		name = "EVTOPTB53029"		#Seek public forgiveness
+			ai_chance = { factor = 60 }
+			prestige_change = -15
+			clr_country_flag = flag_monarchyGovernment_royalBlackmail
+		}
+
+	}
+
+	#Family feud among likely royal successors
+	country_event = {
+
+		id = 53030		#Family feud among likely royal successors
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				AND = {
+					government = constitutional_monarchy_gov
+					NOT = {
+						elections_and_voting = winner_takes_it_all
+						elections_and_voting = semi-proportional
+						elections_and_voting = proportional
+					}
+				}
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalFued }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+		}
+
+		title = "EVTNAME53030"		#Family feud among likely royal successors
+		desc = "EVTDESC53030"		
+		picture = "1947_Saudi_princes"
+		
+		option = {
+		name = "EVTOPTA53030"		#A messy affair
+			add_country_modifier = {
+				name = mod_monarchyGovernment_royalFued
+				duration = 365
+			}
+		}
+
+	}
+
+	#Rumours circulate about poor health within the royal family
+	country_event = {
+
+		id = 53031	#Rumours circulate about poor health within the royal family
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				AND = {
+					government = constitutional_monarchy_gov
+					NOT = {
+						elections_and_voting = winner_takes_it_all
+						elections_and_voting = semi-proportional
+						elections_and_voting = proportional
+					}
+				}
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalHealth_delay }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+		}
+
+		title = "EVTNAME53031"		#Rumours circulate about poor health within the royal family
+		desc = "EVTDESC53031"		
+		picture = "1947_Royal_portrait"
+		
+		option = {
+		name = "EVTOPTA53031"		#Publically deny the rumours
+			ai_chance = { factor = 50 }
+			random_list = {
+				33 = {
+					national_unity = -2
+				}
+				33 = {
+					popularity = -2
+				}
+				33 = {
+				}
+			}
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalHealth_delay
+					duration = 365
+				}
+			}
+		}
+		
+		option = {
+		name = "EVTOPTB53031"		#Best not to give it oxygen
+			ai_chance = { factor = 50 }
+			add_country_modifier = {
+				name = mod_monarchyGovernment_royalHealth
+				duration = 183
+			}
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalHealth_delay
+					duration = 365
+				}
+			}
+		}
+
+	}
+
+	#Embezzlement alleged at royal charity
+	country_event = {
+
+		id = 53032		#Embezzlement alleged at royal charity
+
+		trigger = {
+			OR = {
+				government = absolute_monarchy_gov
+				government = constitutional_monarchy_gov
+			}
+			NOT = { has_country_modifier = mod_monarchyGovernment_royalCharity_delay }
+		}
+
+		mean_time_to_happen =  {
+			months = 240
+			modifier = {
+				factor = 1.5
+				government = absolute_monarchy_gov
+			}
+		}
+
+		title = "EVTNAME53032"		#Embezzlement alleged at royal charity
+		desc = "EVTDESC53032"		
+		picture = "1947_King_Saud_at_banquet"
+		
+		option = {
+		name = "EVTOPTA53032"		#An independent investigation shall take place
+			ai_chance = { factor = 50 }
+			money = -5
+			set_country_flag = 	flag_monarchyGovernment_royalCharity
+		}
+		
+		option = {
+		name = "EVTOPTB53032"		#The royal family will deal with their own affairs
+			ai_chance = { factor = 50 }
+			popularity = -2
+			national_unity = -1
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalCharity_delay
+					duration = 365
+				}
+			}
+		}
+
+	}
+
+	#Draft report reveals widespread royal corruption
+	country_event = {
+
+		id = 53033		#Draft report reveals widespread royal corruption
+
+		trigger = {
+			has_country_flag = flag_monarchyGovernment_royalCharity
+		}
+
+		mean_time_to_happen =  {
+			days = 92
+		}
+
+		title = "EVTNAME53033"		#Draft report reveals widespread royal corruption
+		desc = "EVTDESC53033"		
+		picture = "1954_King_Saud_and_family"
+		
+		option = {
+			name = "EVTOPTA53033"		#Try to suppress the report
+			ai_chance = { factor = 50 }
+			trigger = { 
+				OR = {
+					freedom_of_the_press = propaganda_press
+					freedom_of_the_press = state_press
+					freedom_of_the_press = censored_press
+				}
+			}
+			clr_country_flag = flag_monarchyGovernment_royalCharity
+			random_owned = {
+				limit = {
+					owner = { freedom_of_the_press = propaganda_press }
+				}
+				owner = {
+					random_list = {
+						30 = {
+							popularity = -4
+							national_unity = -3
+							prestige_change = -20
+						}
+						70 = {
+							prestige_change = -10
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { freedom_of_the_press = state_press }
+				}
+				owner = {
+					random_list = {
+						40 = {
+							popularity = -4
+							national_unity = -3
+							prestige_change = -20
+						}
+						60 = {
+							prestige_change = -10
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { freedom_of_the_press = censored_press }
+				}
+				owner = {
+					random_list = {
+						50 = {
+							popularity = -4
+							national_unity = -3
+							prestige_change = -20
+						}
+						50 = {
+							prestige_change = -5
+						}
+					}
+				}
+			}
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalCharity_delay
+					duration = 365
+				}
+			}
+		}
+		
+		option = {
+			name = "EVTOPTB53033"		#The public will make up their minds
+			ai_chance = { factor = 50 }
+			clr_country_flag = flag_monarchyGovernment_royalCharity
+			popularity = -3
+			national_unity = -2
+			prestige_change = -15
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalCharity_delay
+					duration = 365
+				}
+			}
+		}
+
+	}
+
+	#Report inconclusive
+	country_event = {
+
+		id = 53034		#Report inconclusive
+
+		trigger = {
+			has_country_flag = flag_monarchyGovernment_royalCharity
+		}
+
+		mean_time_to_happen =  {
+			days = 90
+		}
+
+		title = "EVTNAME53034"		#Report inconclusive
+		desc = "EVTDESC53034"		
+		picture = "1954_King_Saud_and_family"
+		
+		option = {
+			name = "EVTOPTA53034"		#It could certainly have been worse
+			clr_country_flag = flag_monarchyGovernment_royalCharity
+			popularity = -1
+			prestige_change = -5
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalCharity_delay
+					duration = 365
+				}
+			}
+		}
+
+	}
+
+	#Report absolves any in the royal family of blame
+	country_event = {
+
+		id = 53035		#Report absolves any in the royal family of blame
+
+		trigger = {
+			has_country_flag = flag_monarchyGovernment_royalCharity
+		}
+
+		mean_time_to_happen =  {
+			days = 92
+		}
+
+		title = "EVTNAME53035"		#Report absolves any in the royal family of blame
+		desc = "EVTDESC53035"		
+		picture = "1954_King_Saud_and_family"
+		
+		option = {
+		name = "EVTOPTA53035"		#Good news
+			clr_country_flag = flag_monarchyGovernment_royalCharity
+			popularity = 1
+			prestige_change = 5
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_monarchyGovernment_royalCharity_delay
+					duration = 365
+				}
+			}
+		}
+
+	}
+
+	#Monarch Abdicates
+	country_event = {
+
+		id = 53036		#Monarch Abdicates
+
+		is_triggered_only = yes
+
+		title = "EVTNAME53036"		#Monarch Abdicates - Triggered by Global decision dec_MonarchyGovernment_monarchAbdicates
+		desc = "EVTDESC53036"		
+		picture = "1951_Leopold_III_abdicates"
+		
+		major = yes
+		
+		option = {
+			name = "EVTOPTA53036"		#OK
+			prestige_change = -15
+			random_owned = {
+				limit = {
+					owner = { government = absolute_monarchy_gov }
+				}
+				owner = {
+					random_list = {
+						50 = { 
+							national_unity = -4
+							popularity = -2
+						}
+						50 = {
+							national_unity = -2
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { government = constitutional_monarchy_gov }
+				}
+				owner = { national_unity = -2 }
+			}
+			#kill_minister = 
+		}
+	}

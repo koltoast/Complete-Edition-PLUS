@@ -1,0 +1,84 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#ENG;;;;;;;;;;;;;;x
+may_plan_ENG_title;May Plan for Independent India;;;;;;;;;;;;;x
+may_plan_ENG_desc;We can propose a plan for Indian independence;;;;;;;;;;;;;x
+june_plan_ENG_title;June Plan for Independent India;;;;;;;;;;;;;x
+june_plan_ENG_desc;We can propose a plan for Indian independence;;;;;;;;;;;;;x
+mountbatten_plan_ENG_title;Mountbatten Plan for Independent India;;;;;;;;;;;;;x
+mountbatten_plan_ENG_desc;We can propose a plan for Indian independence;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ; REMOVE HASH FOR ACTIVE EVENTS AND OPTIONS;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#ENG;;;;;;;;;;;;;;x
+EVTNAME181061;Royal Indian Navy Mutiny;;;;;;;;;;;;;x
+EVTDESC181061;The sailors of the Royal Indian Navy have revolted in protest against conditions in the navy. The revolt has spread and become general unrest against British rule;;;;;;;;;;;;;x
+EVTOPTA181061;Put down the mutiny!;;;;;;;;;;;;;x
+EVTNAME181062;Direct Action Day;;;;;;;;;;;;;x
+EVTDESC181062;The Muslim League has declared today a day of direct action, calling for a day of protest in support of a partitioned India. The protests quickly degenerated into religious violence;;;;;;;;;;;;;x
+EVTOPTA181062;This cannot continue!;;;;;;;;;;;;;x
+EVTNAME181063;May Plan for Indian Independence;;;;;;;;;;;;;x
+EVTDESC181063;We can propose a plan to give the Indian people their freedom!;;;;;;;;;;;;;x
+EVTOPTA181063;Propose a united India;;;;;;;;;;;;;x
+EVTOPTB181063;Propose partition along religious lines;;;;;;;;;;;;;x
+EVTNAME181064;India Refuses our Plan;;;;;;;;;;;;;x
+EVTDESC181064;The Constituent Assembly of India have been unable to agree to our plan, we must seek another route to peaceful independence;;;;;;;;;;;;;x
+EVTOPTA181064;Ok;;;;;;;;;;;;;x
+EVTNAME181065;India Accepts our Plan;;;;;;;;;;;;;x
+EVTDESC181065;The Constituent Assembly of India have agreed to form a united, independent India;;;;;;;;;;;;;x
+EVTOPTA181065;Great!;;;;;;;;;;;;;x
+EVTNAME181066;India Refuses our Plan;;;;;;;;;;;;;x
+EVTDESC181066;The Constituent Assembly of India have been unable to agree to our plan, we must seek another route to peaceful independence;;;;;;;;;;;;;x
+EVTOPTA181066;Ok;;;;;;;;;;;;;x
+EVTNAME181067;India Accepts our Plan;;;;;;;;;;;;;x
+EVTDESC181067;The Constituent Assembly of India have agreed to form partitioned, independent Pakistan and India;;;;;;;;;;;;;x
+EVTOPTA181067;Great!;;;;;;;;;;;;;x
+EVTNAME181068;June Plan for Indian Independence;;;;;;;;;;;;;x
+EVTDESC181068;We can propose a plan to give the Indian people their freedom!;;;;;;;;;;;;;x
+EVTOPTA181068;Propose partition along religious lines;;;;;;;;;;;;;x
+EVTNAME181069;Mountbatten Plan for Indian Independence;;;;;;;;;;;;;x
+EVTDESC181069;We can propose a plan to give the Indian people their freedom!;;;;;;;;;;;;;x
+EVTOPTA181069;Allow the Constituent Assembly of India to decide their fate;;;;;;;;;;;;;x
+EVTNAME181070;United India;;;;;;;;;;;;;x
+EVTDESC181070;The Indian people have decided to remain united;;;;;;;;;;;;;x
+EVTOPTA181070;Grant them independence;;;;;;;;;;;;;x
+EVTNAME181071;Partition of India;;;;;;;;;;;;;x
+EVTDESC181071;The Indian people have decided to partition along religious lines;;;;;;;;;;;;;x
+EVTOPTA181071;Grant them independence;;;;;;;;;;;;;x
+EVTNAME181072;Riots in India;;;;;;;;;;;;;x
+EVTDESC181072;Huge waves of unrest and religious violence have swept across India.;;;;;;;;;;;;;x
+EVTOPTA181072;We did what we could;;;;;;;;;;;;;x
+EVTNAME181073;India Renounces British Rule;;;;;;;;;;;;;x
+EVTDESC181073;India have refused to continue to act as a vassal in our empire, they have demanded we end the pretence of independence and instead grant them full independence;;;;;;;;;;;;;x
+EVTOPTA181073;We must proceed carefully;;;;;;;;;;;;;x
+EVTNAME181074;Pakistan Renounces British Rule;;;;;;;;;;;;;x
+EVTDESC181074;Pakistan have refused to continue to act as a vassal in our empire, they have demanded we end the pretence of independence and instead grant them full independence;;;;;;;;;;;;;x
+EVTOPTA181074;We must proceed carefully;;;;;;;;;;;;;x
+EVTNAME181075;Chaos in India;;;;;;;;;;;;;x
+EVTDESC181075;The Indian independence movement has gathered pace, and has moved from a relatively peaceful series of demonstrations to general mayhem. Workers are on strike across the country and religious violence and armed gangs are a common sight on the streets.;;;;;;;;;;;;;x
+EVTOPTA181075;This cannot continue...;;;;;;;;;;;;;x
+EVTNAME181077;Decide May Plan;;;;;;;;;;;;;x
+EVTDESC181077;AI ONLY.;;;;;;;;;;;;;x
+EVTOPTA181077;AI ONLY;;;;;;;;;;;;;x
+EVTNAME181078;Decide June Plan;;;;;;;;;;;;;x
+EVTDESC181078;AI ONLY.;;;;;;;;;;;;;x
+EVTOPTA181078;AI ONLY;;;;;;;;;;;;;x
+EVTNAME181079;Decide Mountbatten Plan;;;;;;;;;;;;;x
+EVTDESC181079;AI ONLY.;;;;;;;;;;;;;x
+EVTOPTA181079;AI ONLY;;;;;;;;;;;;;x
+#IND;;;;;;;;;;;;;;x
+EVTNAME218041;Population Transfer;;;;;;;;;;;;;x
+EVTDESC218041;As part of the process of separating the British Raj into two independent nations, it is necessary to transfer populations of Hindus to India and Muslims to Pakistan. This process has descended into chaos and religious violence.;;;;;;;;;;;;;x
+EVTOPTA218041;Bloodshed was inevitable!;;;;;;;;;;;;;x
+EVTNAME218042;Muslim Riots;;;;;;;;;;;;;x
+EVTDESC218042;Our Muslim population is unhappy that they have not been granted their own Muslim homeland in Pakistan;;;;;;;;;;;;;x
+EVTOPTA218042;Riots on the streets!;;;;;;;;;;;;;x
+EVTNAME218043;Assassination of Gandhi;;;;;;;;;;;;;x
+EVTDESC218043;The father of our nation, Mahatma Gandhi, has been assassinated!;;;;;;;;;;;;;x
+EVTOPTA218043;A nation mourns!;;;;;;;;;;;;;x
+#PAK;;;;;;;;;;;;;;x
+EVTNAME282021;Population Transfer;;;;;;;;;;;;;x
+EVTDESC282021;As part of the process of separating the British Raj into two independent nations, it is necessary to transfer populations of Hindus to India and Muslims to Pakistan. This process has descended into chaos and religious violence.;;;;;;;;;;;;;x
+EVTOPTA282021;Bloodshed was inevitable!;;;;;;;;;;;;;x

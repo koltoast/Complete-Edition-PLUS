@@ -1,0 +1,965 @@
+#WomensRightsConvention_events.txt
+#UN Women's Rights Convention
+
+#UN Secretary General:
+	#11600 - Raise the UN Women's Rights Convention for Voting - Triggered by dec_UN_raise_womens_rights_convention
+	#11601 - Should We Have Voting Notifications Or Not?
+	#11602 - UN Women's Rights Convention Resolution Fails in the General Assembly
+	#11603 - UN Women's Rights Convention Resolution Passes in the General Assembly
+	
+#Global:
+	#11610 - Vote on the UN Women's Rights Convention - Notifications Off
+	#11611 - Vote on the UN Women's Rights Convention - Notifications On (Major Event)
+	#11612 - We have ratified the UN Women's Rights Convention - Triggered
+	#11613 - We have ratified the UN Women's Rights Convention - Non-triggered
+	#11614 - We have revoked the UN Women's Rights Convention
+	
+	
+## UN Secretary General ##
+	#11600 - Raise the UN Women's Rights Convention for Voting
+	country_event = {
+	
+		id = 11600
+
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME11600"
+		desc = "EVTDESC11600"
+		picture = "1979_CEDAW_2"
+
+		option = {
+			name = "EVTOPTA11600" 					#Large diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 40 }
+			#}
+			#XUN  = { prestige_change = -40 }
+			
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			country_event = 11601
+		}
+
+		option = {
+			name = "EVTOPTB11600" 					#Small diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 15 }
+			#}
+			#XUN  = { prestige_change = -15 }
+			
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			country_event = 11601
+		}
+
+		option = {
+			name = "EVTOPTC11600"					#No diplomatic investment
+			
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			country_event = 11601
+		}
+	}
+	
+	#11601 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 11601
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME11601"
+		desc = "EVTDESC11601"
+		picture = "1979_CEDAW_2"
+		
+		option = {
+			name = "EVTOPTA11601"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_womens_rights_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_womens_rights_convention_voting
+		}
+		
+		option = {
+			name = "EVTOPTB11601"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_womens_rights_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_womens_rights_convention_voting
+		}
+	}
+	
+	#11602 - UN Women's Rights Convention Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 11602
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_womens_rights_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME11602"
+		desc = "EVTDESC11602"
+		picture = "1979_CEDAW"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_womens_rights_convention_voting
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_womens_rights_convention_fails
+		}
+
+		option = {
+			name = "EVTOPTA11602"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			#XUN  = { prestige_change = -50 }
+			
+			#hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_womens_rights_convention_failure_delay
+						duration = 1460
+					}
+				}
+			#}
+			clr_global_flag = gflag_UN_womens_rights_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#11603 - UN Women's Rights Convention Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 11603
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_womens_rights_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME11603"
+		desc = "EVTDESC11603"
+		picture = "1979_CEDAW"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_womens_rights_convention_voting
+			clr_global_flag = gflag_UN_womens_rights_convention_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_womens_rights_convention_passes
+		}
+
+		option = {
+			name = "EVTOPTA11603"					#Excellent
+			clr_global_var = var_UN_votes_For
+			
+			#XUN  = { prestige_change = 50 }
+			
+			any_country = {
+				limit = {
+					has_country_flag = flag_UN_womens_rights_convention_supporter
+				}
+				set_country_flag = flag_UN_womens_rights_convention_ratified
+				country_event = 11612
+			}
+			clr_global_flag = gflag_UN_womens_rights_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+
+## Global ##
+	#11610 - Vote on the UN Women's Rights Convention - Notifications Off
+	country_event = {
+	
+		id = 11610
+		
+		trigger = {
+			has_country_flag = flag_UN_womens_rights_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_womens_rights_convention_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME11610"
+		desc = "EVTDESC11610"
+		picture = "1979_CEDAW"
+		
+		immediate = {
+			clr_country_flag = flag_UN_womens_rights_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_womens_rights_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA11610"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_womens_rights_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = substantively_defined
+						rule_of_law = well_defined
+					}
+				}
+				modifier = {
+					factor = 1.25
+					civil_liberties = fully_granted_liberties
+				}
+				modifier = {
+					factor = 3
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.1
+					economic_policy = development_eco_pol
+				}
+				modifier = {
+					factor = 1.5
+					national_identity = equality_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = humanitarian_focus
+						national_identity = civic_focus
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_culture = cul_north_america
+						national_culture = cul_western_europe
+						national_culture = cul_east_europe
+					}
+				}
+				modifier = {
+					factor = 2
+					ideology_group = comintern
+				}
+				modifier = {
+					factor = 1.5
+					ideology = left_wing_radical_idolg
+				}
+				modifier = {
+					factor = 1.25
+					ideology = social_democrat_idolg
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_womens_rights_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB11610"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+			clr_country_flag = flag_UN_womens_rights_convention_supporter
+		}
+
+		option = {
+			name = "EVTOPTC11610"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					rule_of_law = thinly_defined
+				}
+				modifier = {
+					factor = 1.1
+					civil_liberties = suspended_indefinitely
+				}
+				modifier = {
+					factor = 5
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.5
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 1.1
+					economic_policy = agrarian_based_policy_pol
+				}
+				modifier = {
+					factor = 1.25
+					public_oversight = moral_code_of_conduct
+				}
+				modifier = {
+					factor = 1.5
+					organized_religions_law = state_religion
+				}
+				modifier = {
+					factor = 1.1
+					national_identity = cultural_bias_focus
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_culture = cul_middle_east
+						national_culture = cul_sub_saharan_africa
+					}
+				}
+				modifier = {
+					factor = 1.1
+					national_culture = cul_south_asia
+				}
+				modifier = {
+					factor = 5
+					ideology = fascistic_idolg
+				}
+				modifier = {
+					factor = 1.25
+					ideology = paternal_auto_idolg
+				}
+				modifier = {
+					factor = 1.1
+					ideology = social_cons_idolg
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			clr_country_flag = flag_UN_womens_rights_convention_supporter
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_womens_rights_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#11611 - Vote on the UN Women's Rights Convention - Notifications On
+	country_event = {
+	
+		id = 11611
+		
+		trigger = {
+			has_country_flag = flag_UN_womens_rights_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_womens_rights_convention_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME11610"
+		desc = "EVTDESC11610"
+		picture = "1979_CEDAW"
+		
+		immediate = {
+			clr_country_flag = flag_UN_womens_rights_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_womens_rights_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA11610"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_womens_rights_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = substantively_defined
+						rule_of_law = well_defined
+					}
+				}
+				modifier = {
+					factor = 1.25
+					civil_liberties = fully_granted_liberties
+				}
+				modifier = {
+					factor = 3
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.1
+					economic_policy = development_eco_pol
+				}
+				modifier = {
+					factor = 1.5
+					national_identity = equality_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = humanitarian_focus
+						national_identity = civic_focus
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_culture = cul_north_america
+						national_culture = cul_western_europe
+						national_culture = cul_east_europe
+					}
+				}
+				modifier = {
+					factor = 2
+					ideology_group = comintern
+				}
+				modifier = {
+					factor = 1.5
+					ideology = left_wing_radical_idolg
+				}
+				modifier = {
+					factor = 1.25
+					ideology = social_democrat_idolg
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_womens_rights_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB11610"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC11610"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					rule_of_law = thinly_defined
+				}
+				modifier = {
+					factor = 1.1
+					civil_liberties = suspended_indefinitely
+				}
+				modifier = {
+					factor = 5
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.5
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 1.1
+					economic_policy = agrarian_based_policy_pol
+				}
+				modifier = {
+					factor = 1.25
+					public_oversight = moral_code_of_conduct
+				}
+				modifier = {
+					factor = 1.5
+					organized_religions_law = state_religion
+				}
+				modifier = {
+					factor = 1.1
+					national_identity = cultural_bias_focus
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_culture = cul_middle_east
+						national_culture = cul_sub_saharan_africa
+					}
+				}
+				modifier = {
+					factor = 1.1
+					national_culture = cul_south_asia
+				}
+				modifier = {
+					factor = 5
+					ideology = fascistic_idolg
+				}
+				modifier = {
+					factor = 1.25
+					ideology = paternal_auto_idolg
+				}
+				modifier = {
+					factor = 1.1
+					ideology = social_cons_idolg
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_womens_rights_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#11612 - We have ratified the UN Women's Rights Convention - Triggered
+	country_event = {
+	
+		id = 11612
+
+		is_triggered_only = yes
+
+		title = "EVTNAME11612"
+		desc = "EVTDESC11612"
+		picture = "1979_CEDAW_2"
+
+		option = {
+			name = "EVTOPTA11612"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_womens_rights_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_womens_rights_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_womens_rights_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#11613 - We have ratified the UN Women's Rights Convention (Non-triggered)
+	country_event = {
+	
+		id = 11613
+
+		trigger = {
+			ai = yes
+			has_global_flag = gflag_UN_womens_rights_convention_passes
+			NOT = { has_country_modifier = mod_UN_womens_rights_convention_ratified }
+			NOT = { USA = { has_country_modifier = mod_UN_racial_discrimination_convention_ratifier_delay } }
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			NOT = { ideology = fascistic_idolg }
+			NOT = { human_rights = not_recognized }
+			#Add more
+		}
+		
+		mean_time_to_happen = {
+			months = 40
+			modifier = {
+				factor = 0.6
+				is_org_leader = XUN
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					rule_of_law = substantively_defined
+					rule_of_law = well_defined
+				}
+			}
+			modifier = {
+				factor = 0.7
+				civil_liberties = fully_granted_liberties
+			}
+			modifier = {
+				factor = 0.2
+				human_rights = universal_rights
+			}
+			modifier = {
+				factor = 0.8
+				economic_policy = development_eco_pol
+			}
+			modifier = {
+				factor = 0.6
+				national_identity = equality_focus
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					national_identity = humanitarian_focus
+					national_identity = civic_focus
+				}
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					national_culture = cul_north_america
+					national_culture = cul_western_europe
+					national_culture = cul_east_europe
+				}
+			}
+			modifier = {
+				factor = 0.4
+				ideology_group = comintern
+			}
+			modifier = {
+				factor = 0.6
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0.7
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 1.25
+				rule_of_law = thinly_defined
+			}
+			modifier = {
+				factor = 1.25
+				civil_liberties = suspended_indefinitely
+			}
+			modifier = {
+				factor = 2
+				human_rights = cultural_relativism
+			}
+			modifier = {
+				factor = 1.25
+				economic_policy = agrarian_based_policy_pol
+			}
+			modifier = {
+				factor = 1.5
+				public_oversight = moral_code_of_conduct
+			}
+			modifier = {
+				factor = 2
+				organized_religions_law = state_religion
+			}
+			modifier = {
+				factor = 1.25
+				national_identity = cultural_bias_focus
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					national_culture = cul_middle_east
+					national_culture = cul_sub_saharan_africa
+				}
+			}
+			modifier = {
+				factor = 1.25
+				national_culture = cul_south_asia
+			}
+			modifier = {
+				factor = 1.5
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.25
+				ideology = social_cons_idolg
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME11612"
+		desc = "EVTDESC11612"
+		picture = "1979_CEDAW_2"
+
+		option = {
+			name = "EVTOPTA11612"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_womens_rights_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_womens_rights_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_womens_rights_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#11614 - We have revoked the UN Women's Rights Convention
+	country_event = {
+	
+		id = 11614
+
+		trigger = {
+			ai = yes
+			has_country_modifier = mod_UN_womens_rights_convention_ratified
+			NOT = { has_country_modifier = mod_UN_womens_rights_convention_ratified_recently }
+			NOT = { has_country_flag = flag_UN_womens_rights_convention_supporter }
+			OR = {
+				human_rights = not_recognized
+				ideology = fascistic_idolg
+			}
+		}
+		
+		mean_time_to_happen = {
+			months = 9
+			modifier = {
+				factor = 0.75
+				organized_religions_law = state_religion
+			}
+			modifier = {
+				factor = 0.8
+				public_oversight = moral_code_of_conduct
+			}
+			modifier = {
+				factor = 0.25
+				has_country_flag = "UN_EMBARGO"
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME11614"
+		desc = "EVTDESC11614"
+		picture = "1979_CEDAW_2"
+
+		option = {
+			name = "EVTOPTA11614"					#Good riddance
+			prestige_change = -8
+			remove_country_modifier = mod_UN_womens_rights_convention_ratified
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_womens_rights_convention_revoked_recently
+					duration = 365
+				}
+			#}
+			
+			#XUN = { prestige_change = -3 }
+		}
+	}

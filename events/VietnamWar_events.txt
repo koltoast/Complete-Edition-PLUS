@@ -1,0 +1,919 @@
+#VietnamWar_events.txt
+#1959 Vietnam War
+
+#USA - USA:
+	#354005 - Gulf of Tonkin Incident
+	#354006 - USA supports SVI without Tonkin
+	#354007 - USA supports SVI with Tonkin
+	#354008 - Anti-Vietnam War demonstrations, Democratic USA
+	#354009 - Anti-Vietnam War riots, Democratic USA
+	#354010 - Anti-Vietnam War rally, Democratic USA
+	#354011 - Anti-Vietnam War demonstrations, Autocratic USA
+	#354012 - Anti-Vietnam War riots, Autocratic USA
+	#354013 - Anti-Vietnam War rally, Autocratic USA
+	#354014 - Should USA leaves Vietnam?
+	#354015 - Should USA leaves Vietnam? (DRV wins against the south)
+	
+#SVI - South Vietnam:
+	#333000 - Referendum Event (Monarchy or Republic)
+	#333001 - Formation of the Viet Cong
+	#333002 - The Vietcong strike! #Funded
+	#333003 - The Vietcong strike! #NOT Funded
+	#333004 - USA leaves Vietnam!
+	#333005 - South Vietnam wins Vietnam War
+	#333006 - South Vietnam surrenders to the North
+
+#DRV - North Vietnam:
+	#177009 - DRV DoW's SVI, Vietnam War
+	#177010 - Formation of the Viet Cong
+	#177011 - USA leaves Vietnam
+	#177012 - North Vietnam surrenders to the South
+	#177013 - South Vietnam wins Vietnam War
+
+#CHC - Communist China:
+	#151018 - CHC joins the Vietnam war
+
+#SOV - Soviet Union:
+	#326005 - SOV joins the Vietnam war
+
+#CHI - Nationalist China:
+	#152011 - CHI joins the Vietnam war
+
+#ENG - United Kingdom:
+	#181007 - ENG joins the Vietnam war
+
+#FRA - France:
+	#194030 - FRA joins the Vietnam war
+	
+	
+## USA ##
+#354005 - Gulf of Tonkin Incident
+country_event = {
+	id = 354005
+	
+	mean_time_to_happen = { days = 1300 }
+	is_triggered_only = no
+	
+	title = "EVTNAME354005"
+	desc = "EVTDESC354005"
+	picture = "1964_Tonkin_incident"
+	
+	trigger = {
+		tag = USA
+		SVI = { war_with = DRV }
+		has_global_flag = 1959_vietnam_war_active
+		DRV = { ideology_group = maoist_idolg }
+		DRV = { ideology_group = communist_idolg }
+	}
+	
+	option = {
+		name = "EVTOPTA354005" #They will pay!
+		set_country_flag = gulf_of_tonkin_incident
+		national_unity = 5
+		DRV = { relation = { who = USA value = -100 } }
+	}
+}
+
+#354006 - USA supports SVI without Tonkin
+country_event = {
+	id = 354006
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME354006"
+	desc = "EVTDESC354006"
+	picture = "us_troops_vietnam"
+	
+	option = {
+		ai_chance = { factor = 5 }
+		name = "EVTOPTA354006" #Help South Vietnam
+		limited_war = DRV
+		DRV = { set_country_flag = 1959_vietnam_war_US_support_SVI }
+		SVI = { set_country_flag = 1959_vietnam_war_US_support_SVI }
+		USA = { set_country_flag = 1959_vietnam_war_US_support_SVI_no_tonkin }
+		USA = { supplies = -500 }
+		SVI = { supplies = 500 }
+		USA = { relation = { who = SVI value = 100 } }
+		USA = { relation = { who = DRV value = -100 } }
+		dissent = 15
+		national_unity = -5
+		popularity = -10
+	}
+	option = {
+		ai_chance = { factor = 15 }
+		name = "EVTOPTB354006" #Send supplies to South Vietnam
+		USA = { supplies = -250 }
+		SVI = { supplies = 250 }
+		USA = { relation = { who = SVI value = 30 } }
+		USA = { relation = { who = DRV value = -30 } }
+	}
+	option = {
+		ai_chance = { factor = 80 }
+		name = "EVTOPTC354006" #Do nothing
+	}
+}
+
+#354007 - USA supports SVI with Tonkin
+country_event = {
+	id = 354007
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME354007"
+	desc = "EVTDESC354007"
+	picture = "us_troops_vietnam"
+	
+	option = {
+		ai_chance = { factor = 80 }
+		name = "EVTOPTA354007" #Help South Vietnam
+		limited_defensive_war = SVI
+		DRV = { set_country_flag = 1959_vietnam_war_US_support_SVI }
+		SVI = { set_country_flag = 1959_vietnam_war_US_support_SVI }
+		USA = { set_country_flag = 1959_vietnam_war_US_support_SVI }
+		USA = { supplies = -500 }
+		SVI = { supplies = 500 }
+		USA = { relation = { who = SVI value = 100 } }
+		USA = { relation = { who = DRV value = -100 } }
+		dissent = 3
+		national_unity = -2
+		popularity = -10
+	}
+	option = {
+		ai_chance = { factor = 15 }
+		name = "EVTOPTB354007" #Send supplies to South Vietnam
+		USA = { supplies = -250 }
+		SVI = { supplies = 250 }
+		USA = { relation = { who = SVI value = 30 } }
+		USA = { relation = { who = DRV value = -30 } }
+	}
+	option = {
+		ai_chance = { factor = 5 }
+		name = "EVTOPTC354007" #Do nothing
+		clr_country_flag = 1959_US_vietnam_support_tonkin_done
+	}
+}
+
+##############################################
+###Riot Events for Vietnam War, DEMOCRATIC USA
+##############################################
+
+#354008 - Anti-Vietnam War demonstrations, Democratic USA
+country_event = {
+	id = 354008
+	
+	mean_time_to_happen = { days = 100 }
+	is_triggered_only = no
+	
+	title = "EVTNAME354008"
+	desc = "EVTDESC354008"
+	picture = "1967_Anti-Vietnam_demonstrations"
+	
+	trigger = {
+		tag = USA
+		SVI = { war_with = DRV }
+		has_country_flag = 1959_vietnam_war_US_support_SVI
+		OR = {
+			ideology = "social_cons_idolg"
+			ideology = "market_liberal_idolg"
+			ideology = "social_liberal_idolg"
+			ideology = "social_democrat_idolg"
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA354008" #Those darn hippies
+		dissent = 1
+		popularity = -1
+		random = {
+			chance = 50
+			dissent = 1
+			popularity = -1
+		}
+	}
+}
+
+#354009 - Anti-Vietnam War riots, Democratic USA
+country_event = {
+	id = 354009
+	
+	mean_time_to_happen = { days = 300 }
+	is_triggered_only = no
+	
+	title = "EVTNAME354009"
+	desc = "EVTDESC354009"
+	picture = "1970_Anti-Vietnam_demonstrations"
+	
+	trigger = {
+		tag = USA
+		SVI = { war_with = DRV }
+		has_country_flag = 1959_vietnam_war_US_support_SVI
+		OR = {
+			ideology = "social_cons_idolg"
+			ideology = "market_liberal_idolg"
+			ideology = "social_liberal_idolg"
+			ideology = "social_democrat_idolg"
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA354009" #Those darn hippies
+		dissent = 3
+		popularity = -3
+		random = {
+			chance = 50
+			dissent = 3
+			popularity = -3
+		}
+	}
+}
+
+#354010 - Anti-Vietnam War rally, Democratic USA
+country_event = {
+	id = 354010
+	
+	mean_time_to_happen = { days = 200 }
+	is_triggered_only = no
+	
+	title = "EVTNAME354010"
+	desc = "EVTDESC354010"
+	picture = "1971_Anti-Vietnam_demonstrations"
+	
+	trigger = {
+		tag = USA
+		SVI = { war_with = DRV }
+		has_country_flag = 1959_vietnam_war_US_support_SVI
+		OR = {
+			ideology = "social_cons_idolg"
+			ideology = "market_liberal_idolg"
+			ideology = "social_liberal_idolg"
+			ideology = "social_democrat_idolg"
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA354010" #Those darn hippies
+		dissent = 2
+		popularity = -2
+		random = {
+			chance = 50
+			dissent = 2
+			popularity = -2
+		}
+	}
+}
+
+##############################################
+###Riot Events for Vietnam War, AUTOCRATIC USA
+##############################################
+
+#354011 - Anti-Vietnam War demonstrations, Autocratic USA
+country_event = {
+	id = 354011
+	
+	mean_time_to_happen = { days = 200 }
+	is_triggered_only = no
+	
+	title = "EVTNAME354011"
+	desc = "EVTDESC354011"
+	picture = "1967_Anti-Vietnam_demonstrations"
+	
+	trigger = {
+		tag = USA
+		SVI = { war_with = DRV }
+		has_country_flag = 1959_vietnam_war_US_support_SVI
+		OR = {
+			ideology = "left_wing_radical_idolg"
+			ideology = "paternal_auto_idolg"
+			ideology = "fascistic_idolg"
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA354011" #Those darn hippies
+		dissent = 1
+		popularity = -1
+		random = {
+			chance = 50
+			dissent = 1
+			popularity = -1
+		}
+	}
+}
+
+#354012 - Anti-Vietnam War riots, Autocratic USA
+country_event = {
+	id = 354012
+	
+	mean_time_to_happen = { days = 600 }
+	is_triggered_only = no
+	
+	title = "EVTNAME354012"
+	desc = "EVTDESC354012"
+	picture = "1970_Anti-Vietnam_demonstrations"
+	
+	trigger = {
+		tag = USA
+		SVI = { war_with = DRV }
+		has_country_flag = 1959_vietnam_war_US_support_SVI
+		OR = {
+			ideology = "left_wing_radical_idolg"
+			ideology = "paternal_auto_idolg"
+			ideology = "fascistic_idolg"
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA354012" #Those darn hippies
+		dissent = 4
+		popularity = -4
+		random = {
+			chance = 50
+			dissent = 3
+			popularity = -3
+		}
+	}
+}
+
+#354013 - Anti-Vietnam War rally, Autocratic USA
+country_event = {
+	id = 354013
+	
+	mean_time_to_happen = { days = 400 }
+	is_triggered_only = no
+	
+	title = "EVTNAME354013"
+	desc = "EVTDESC354013"
+	picture = "1971_Anti-Vietnam_demonstrations"
+	
+	trigger = {
+		tag = USA
+		SVI = { war_with = DRV }
+		has_country_flag = 1959_vietnam_war_US_support_SVI
+		OR = {
+			ideology = "left_wing_radical_idolg"
+			ideology = "paternal_auto_idolg"
+			ideology = "fascistic_idolg"
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA354013" #Those darn hippies
+		dissent = 3
+		popularity = -3
+		random = {
+			chance = 50
+			dissent = 2
+			popularity = -2
+		}
+	}
+}
+
+#354014 - Should USA leave Vietnam?
+country_event = {
+	id = 354014
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME354014"
+	desc = "EVTDESC354014"
+	picture = "1973_Paris_talks"
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = "EVTOPTA354014" #Leave Vietnam
+		end_war = DRV
+		end_war = SVI
+		dissent = -15
+		national_unity = 5
+		popularity = 10
+		DRV = { clr_country_flag = 1959_vietnam_war_US_support_SVI }
+		SVI = { clr_country_flag = 1959_vietnam_war_US_support_SVI }
+		USA = { clr_country_flag = 1959_vietnam_war_US_support_SVI }
+		SVI = { country_event = 333003 }
+		DRV = { country_event = 177011 }
+	}
+	option = {
+		name = "EVTOPTB354014" #Later
+		clr_country_flag = vietnam_USA_leave_war_done
+	}
+}
+
+#354015 - Should USA leave Vietnam? (DRV wins war)
+country_event = {
+	id = 354015
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME354015"
+	desc = "EVTDESC354015"
+	picture = "1975_Fall_of_Saigon"
+	
+	option = {
+		ai_chance = { factor = 70 }
+		name = "EVTOPTA354015" #Leave Vietnam
+		end_war = DRV
+		end_war = SVI
+		dissent = -10
+		national_unity = 5
+		popularity = 7
+		DRV = { clr_country_flag = 1959_vietnam_war_US_support_SVI }
+		SVI = { clr_country_flag = 1959_vietnam_war_US_support_SVI }
+		USA = { clr_country_flag = 1959_vietnam_war_US_support_SVI }
+		SVI = { country_event = 333003 }
+		DRV = { country_event = 177011 }
+	}
+	option = {
+		name = "EVTOPTB354015" #We will remain and fight
+		clr_country_flag = vietnam_USA_leave_war_done
+		dissent = 5
+		popularity = -5
+	}
+}
+
+## SVI ##
+#333000 - Referendum Event (Monarchy or Republic)
+country_event = {
+	id = 333000
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME333000"
+	desc = "EVTDESC333000"
+	picture = "1955_State_of_Vietnam_referendum"
+	
+	option = {
+		name = "EVTOPTA333000" #Republic
+		ai_chance = { factor = 90 }
+		government = paternal_auto_idolg #Requires a change of leading party, no such function exists as of yet
+	}
+	option = {
+		name = "EVTOPTB333000" #Monarchy
+		ai_chance = { factor = 10 }
+		government = absolute_monarchy_gov #Requires a change of leading party, no such function exists as of yet
+	}
+}
+
+#333001 - Formation of the Viet Cong
+country_event = {
+	id = 333001
+	
+	mean_time_to_happen = { days = 100 }
+	is_triggered_only = no	
+	
+	title = "EVTNAME333001"
+	desc = "EVTDESC333001"
+	picture = "1954_Forming_of_Viet_Cong"
+	
+	trigger = {
+		tag = SVI
+		SVI = { war_with = DRV }
+		has_global_flag = 1959_vietnam_war_active
+		NOT = { has_country_flag = viet_cong_funded }
+		NOT = { has_country_flag = viet_cong_not_funded }
+		DRV = { ideology_group = maoist_idolg }
+		DRV = { ideology_group = communist_idolg }
+	}
+	
+	option = {
+		name = "EVTOPTA333001" #More enemies for us to crush!
+		dissent = 7
+		national_unity = -5
+		DRV = { country_event = 177010 }
+	}
+}
+
+#333002 - The Vietcong strike! #Funded
+country_event = {
+	id = 333002
+	
+	mean_time_to_happen = { days = 150 }
+	is_triggered_only = no	
+	
+	title = "EVTNAME333002"
+	desc = "EVTDESC333002"
+	picture = "1960_Viet_Cong_attack"
+	
+	trigger = {
+		tag = SVI
+		SVI = { war_with = DRV }
+		has_global_flag = 1959_vietnam_war_active
+		has_country_flag = viet_cong_funded
+		DRV = { ideology_group = comintern }
+	}
+	
+	option = {
+		name = "EVTOPTA333002" #They will pay
+		dissent = 6
+		national_unity = -3
+	}
+}
+
+#333003 - The Vietcong strike! #NOT Funded
+country_event = {
+	id = 333003
+	
+	mean_time_to_happen = { days = 200 }
+	is_triggered_only = no	
+	
+	title = "EVTNAME333003"
+	desc = "EVTDESC333003"
+	picture = "1957_Viet_Cong"
+	
+	trigger = {
+		tag = SVI
+		SVI = { war_with = DRV }
+		has_global_flag = 1959_vietnam_war_active
+		has_country_flag = viet_cong_not_funded
+		DRV = { ideology_group = comintern }
+	}
+	
+	option = {
+		name = "EVTOPTA333003" #They will pay
+		dissent = 5
+		national_unity = -3
+	}
+}
+
+#333004 - USA leaves Vietnam!
+country_event = {
+	id = 333004
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME333004"
+	desc = "EVTDESC333004"
+	picture = "1973_Last_US_troops_leave_Vietnam"
+	
+	option = {
+		name = "EVTOPTA333004" #We are alone now...
+		leave_alliance = USA
+	}
+}
+
+#333005 - South Vietnam wins Vietnam War
+country_event = {
+	id = 333005
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME333005"
+	desc = "EVTDESC333005"
+	picture = "1975_South_Vietnam_victory"
+	
+	option = {
+		name = "EVTOPTA333005" #A great day!
+		inherit = DRV
+		supplies = 500 #Supplies from DRV
+		money = 500 #Supplies from DRV
+		rare_materials = 250 #Supplies from DRV
+		popularity = 10 #Ruling party gets popularity
+		national_unity = -10 #North has a lot of communist supporters
+		dissent = 5 #North has a lot of communist supporters
+		clr_global_flag = 1959_vietnam_war_active
+		#SVI = { tag = VIE }
+	}
+}
+
+#333006 - South Vietnam surrenders to the North
+country_event = {
+	id = 333006
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME333006"
+	desc = "EVTDESC333006"
+	picture = "1975_Fall_of_Saigon"
+	
+	option = {
+		name = "EVTOPTA333006" #Surrender (Game Over)
+		dissent = 5
+		DRV = { country_event = 177013 }
+	}
+	option = {
+		name = "EVTOPTB333006" #We can still win!
+		popularity = -10
+	}
+}
+
+## DRV ##
+#177009 - DRV DoW's SVI, Vietnam War
+country_event = {
+	id = 177009
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME177009"
+	desc = "EVTDESC177009"
+	picture = "1972_North_Vietnam_prepares_Easter_Offensive"
+	
+	option = {
+		name = "EVTOPTA177009" #Let us unify our nation!
+		ai_chance = { factor = 90 }
+		set_global_flag = 1959_vietnam_war_active
+		war = SVI
+		DRV = { relation = { who = SVI value = -100 } }
+		DRV = { relation = { who = XUN value = -50 } } 
+		DRV = { relation = { who = USA value = -50 } }
+	}
+	option = {
+		name = "EVTOPTB177009" #Not yet
+		clr_country_flag = 1959_vietnam_war_done
+	}
+	option = {
+		name = "EVTOPTC177009" #We must learn to live divided
+		DRV = { relation = { who = SVI value = 100 } }
+		DRV = { relation = { who = XUN value = 50 } }
+		DRV = { relation = { who = USA value = 50 } }
+		dissent = 5
+	}
+}
+
+#177010 - Formation of the Viet Cong
+country_event = {
+	id = 1770010
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME177010"
+	desc = "EVTDESC177010"
+	picture = "1968_Viet_Cong_troops_before_Tet"
+	
+	option = {
+		name = "EVTOPTA177010" #Help arm the viet cong
+		ai_chance = { factor = 70 }
+		set_country_flag = viet_cong_funded
+		SVI = { set_country_flag = viet_cong_funded }
+		money = -50
+		supplies = -200
+	}
+	
+	option = {
+		name = "EVTOPTB177010" #They don't need our aid
+		ai_chance = { factor = 30 }
+		set_country_flag = viet_cong_not_funded
+		SVI = { set_country_flag = viet_cong_not_funded }
+	}
+}
+
+#177011 - USA leaves Vietnam
+country_event = {
+	id = 177011
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME177011"
+	desc = "EVTDESC177011"
+	picture = "1973_Last_US_troops_leave_Vietnam"
+	
+	option = {
+		name = "EVTOPTA177011" #Great!
+		dissent = -5
+	}
+}
+
+#177012 - North Vietnam surrenders to the South
+country_event = {
+	id = 177012
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME177012"
+	desc = "EVTDESC177012"
+	picture = "1975_Fall_of_Saigon"
+	
+	option = {
+		name = "EVTOPTA177012" #Surrender (Game Over)
+		dissent = 5
+		SVI = { country_event = 333005 }
+	}
+	option = {
+		name = "EVTOPTB177012" #We can still win!
+		popularity = -10
+	}
+}
+
+#177013 - North Vietnam wins Vietnam War
+country_event = {
+	id = 177013
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME177013"
+	desc = "EVTDESC177013"
+	picture = "1975_Fall_of_Saigon"
+	
+	option = {
+		name = "EVTOPTA177013" #A great day!
+		inherit = SVI
+		supplies = 500 #Supplies from SVI
+		money = 500 #Supplies from SVI
+		rare_materials = 250 #Supplies from SVI
+		popularity = 10 #Ruling party gets popularity
+		national_unity = -10 #North has a lot of communist supporters
+		dissent = 5 #North has a lot of communist supporters
+		clr_global_flag = 1959_vietnam_war_active
+		set_country_flag = 1959_vietnam_war_DRV_victory
+		USA = { set_country_flag = 1959_vietnam_war_DRV_victory }
+		#SVI = { tag = VIE } #Doesn't work
+	}
+}
+
+## CHC ##
+#151018 - CHC joins the Vietnam war
+country_event = {
+	id = 151018
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME151018"
+	desc = "EVTDESC151018"
+	picture = "1956_Mao_and_Ho_Chi_Minh"
+	
+	option = {
+		ai_chance = { factor = 1 }
+		name = "EVTOPTA151018" #Help North Vietnam
+		limited_defensive_war = DRV
+		DRV = { set_country_flag = 1959_vietnam_war_CHC_support_SVI }
+		DRV = { set_country_flag = 1959_vietnam_war_CHC_support_SVI }
+		CHC = { set_country_flag = 1959_vietnam_war_CHC_support_SVI }
+		CHC = { supplies = -500 }
+		DRV = { supplies = 500 }
+		CHC = { relation = { who = DRV value = 100 } }
+		CHC = { relation = { who = SVI value = -100 } }
+		dissent = 15
+		national_unity = -5
+		popularity = -10
+	}
+	option = {
+		name = "EVTOPTB151018" #Send supplies to North Vietnam
+		ai_chance = { factor = 9 }
+		CHC = { supplies = -250 }
+		DRV = { supplies = 250 }
+		CHC = { relation = { who = DRV value = 30 } }
+		CHC = { relation = { who = SVI value = -30 } }
+	}
+	option = {
+		ai_chance = { factor = 90 }
+		name = "EVTOPTC151018" #We must not get entangled in another war
+	}
+}
+
+## SOV ##
+#326005 - SOV joins the Vietnam war
+country_event = {
+	id = 326005
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME326005"
+	desc = "EVTDESC326005"
+	picture = "1955_Ho_Chi_Minh_visits_USSR"
+	
+	option = {
+		ai_chance = { factor = 0 }
+		name = "EVTOPTA326005" #Help North Vietnam
+		limited_defensive_war = DRV
+		DRV = { set_country_flag = 1959_vietnam_war_SOV_support_DRV }
+		SVI = { set_country_flag = 1959_vietnam_war_SOV_support_DRV }
+		SOV = { set_country_flag = 1959_vietnam_war_SOV_support_DRV }
+		SOV = { supplies = -500 }
+		DRV = { supplies = 500 }
+		SOV = { relation = { who = DRV value = 100 } }
+		SOV = { relation = { who = SVI value = -100 } }
+		dissent = 15
+		national_unity = -5
+		popularity = -10
+	}
+	option = {
+		name = "EVTOPTB326005" #Send supplies to North Vietnam
+		ai_chance = { factor = 40 }
+		SOV = { supplies = -250 }
+		DRV = { supplies = 250 }
+		SOV = { relation = { who = DRV value = 30 } }
+		SOV = { relation = { who = SVI value = -30 } }
+	}
+	option = {
+		ai_chance = { factor = 60 }
+		name = "EVTOPTC326005" #We must not get entangled in another war
+	}
+}
+
+## CHI ##
+#152011 - CHI joins the Vietnam war
+country_event = {
+	id = 152011
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME152011"
+	desc = "EVTDESC152011"
+	picture = "1956_Mao_and_Ho_Chi_Minh"
+	
+	option = {
+		ai_chance = { factor = 1 }
+		name = "EVTOPTA152011" #Help South Vietnam
+		limited_defensive_war = SVI
+		DRV = { set_country_flag = 1959_vietnam_war_CHI_support_SVI }
+		SVI = { set_country_flag = 1959_vietnam_war_CHI_support_SVI }
+		CHI = { set_country_flag = 1959_vietnam_war_CHI_support_SVI }
+		CHI = { supplies = -500 }
+		SVI = { supplies = 500 }
+		CHI = { relation = { who = SVI value = 100 } }
+		CHI = { relation = { who = SVI value = -100 } }
+		dissent = 15
+		national_unity = -5
+		popularity = -10
+	}
+	option = {
+		name = "EVTOPTB152011" #Send supplies to South Vietnam
+		ai_chance = { factor = 9 }
+		CHI = { supplies = -250 }
+		SVI = { supplies = 250 }
+		CHI = { relation = { who = SVI value = 30 } }
+		CHI = { relation = { who = DRV value = -30 } }
+	}
+	option = {
+		ai_chance = { factor = 90 }
+		name = "EVTOPTC152011" #We must not get entangled in another war
+	}
+}
+
+## ENG ##
+#181007 - ENG joins the Vietnam war
+country_event = {
+	id = 181007
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME181007"
+	desc = "EVTDESC181007"
+	picture = "1965_ARVN_operations_Vietnam"
+	
+	option = {
+		ai_chance = { factor = 1 }
+		name = "EVTOPTA181007" #Help South Vietnam
+		limited_defensive_war = SVI
+		DRV = { set_country_flag = 1959_vietnam_war_ENG_support_SVI }
+		SVI = { set_country_flag = 1959_vietnam_war_ENG_support_SVI }
+		ENG = { set_country_flag = 1959_vietnam_war_ENG_support_SVI }
+		ENG = { supplies = -500 }
+		SVI = { supplies = 500 }
+		ENG = { relation = { who = SVI value = 100 } }
+		ENG = { relation = { who = SVI value = -100 } }
+		dissent = 15
+		national_unity = -5
+		popularity = -10
+	}
+	option = {
+		ai_chance = { factor = 9 }
+		name = "EVTOPTB181007" #Send supplies to South Vietnam
+		ENG = { supplies = -250 }
+		SVI = { supplies = 250 }
+		ENG = { relation = { who = SVI value = 30 } }
+		ENG = { relation = { who = DRV value = -30 } }
+	}
+	option = {
+		ai_chance = { factor = 99 }
+		name = "EVTOPTC181007" #We must not get entangled in another war
+	}
+}
+
+## FRA ##
+#194030 - FRA joins the Vietnam war
+country_event = {
+	id = 194030
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME194030"
+	desc = "EVTDESC194030"
+	picture = "1965_ARVN_operations_Vietnam"
+	
+	option = {
+		ai_chance = { factor = 1 }
+		name = "EVTOPTA194030" #Help South Vietnam
+		limited_defensive_war = SVI
+		DRV = { set_country_flag = 1959_vietnam_war_FRA_support_SVI }
+		SVI = { set_country_flag = 1959_vietnam_war_FRA_support_SVI }
+		FRA = { set_country_flag = 1959_vietnam_war_FRA_support_SVI }
+		FRA = { supplies = -500 }
+		SVI = { supplies = 500 }
+		FRA = { relation = { who = SVI value = 100 } }
+		FRA = { relation = { who = SVI value = -100 } }
+		dissent = 15
+		national_unity = -5
+		popularity = -10
+	}
+	option = {
+		name = "EVTOPTB194030" #Send supplies to South Vietnam
+		ai_chance = { factor = 9 }
+		FRA = { supplies = -250 }
+		SVI = { supplies = 250 }
+		FRA = { relation = { who = SVI value = 30 } }
+		FRA = { relation = { who = DRV value = -30 } }
+	}
+	option = {
+		ai_chance = { factor = 90 }
+		name = "EVTOPTC194030" #We must not get entangled in another war
+	}
+}

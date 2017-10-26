@@ -1,0 +1,845 @@
+#CubanRevolution_events.txt
+#1953 Cuban Revolution
+
+#CUB - Cuba:
+	#164010 - USA choose "election", election proceeds = Agramonte
+	#164011 - USA choose "our guy wins" their guy wins = Hevia
+	#164012 - Election, Batista wins election
+	#164013 - Batista coups Cuba before election can occur		#historical
+	
+	#164014 - Cuba receives aid from USA
+	#164015 - Cuba receives aid from SOV
+	#164016 - Rebels attack Moncada barracks in Havana
+	
+	#164017 - Left wing rebels start serious rebellion (Right in power)
+	#164018 - Left wing rebels take capital and win war
+	#164020 - Bay of pigs (historical)
+	
+	#164021 - Right wing rebels start serious rebellion (Left in power)
+	#164022 - Right wing rebels take capital and win war
+	#164023 - Bay of pigs (ahistorical)
+	
+	#164024 - Random winner for election chosen
+	
+#USA - United States:
+	#354250 - USA chooses what to do about Cuban election FIRES 01-05 events
+		
+	#354252 - USA embargoes Cuba after left wing president elected
+	#354253 - USA sends aid to Cuba
+	#354254 - Outside forces funding rebels in Cuba
+	#354255 - USA regrets communist takeover in Cuba
+	#354256 - USA congratulations to Cuba for right-wing victory and sends aid
+	
+#SOV - Soviet Union:
+	#326120 - Soviet congratulations to Cuba and sends aid
+	#326121 - Soviet congratulations to Cuba and sends aid
+	#326122 - Embargo Cuba
+
+
+## CUB ##	
+	#164010 - USA choose "election", election proceeds = Agramonte
+	country_event = {
+
+		id = 164010											
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME164010"
+		desc = "EVTDESC164010"
+		picture = "1952_Cuban_elections_Agramonte"
+				
+		option = { 
+			name = "EVTOPTA164010"
+			prestige_change = 5
+			set_country_flag = agramonte_president
+			head_of_state = 1164018
+			head_of_government = 1164018
+			dissent = 1
+			any_owned = {
+				limit = {
+					region = region_West_Cuba
+				}
+				revolt_risk = 1
+			}
+		}
+	}
+
+	#164011 - USA choose "our guy wins" their guy wins = Hevia	
+	country_event = {
+
+		id = 164011										
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME164011"
+		desc = "EVTDESC164011"
+		picture = "1952_Cuban_elections_Hevia"
+					
+		option = { 
+			name = "EVTOPTA164011"
+			prestige_change = 5
+			set_country_flag = hevia_president
+			head_of_state = 1164019
+			head_of_government = 1164019
+			dissent = 2
+			any_owned = {
+				limit = {
+					region = region_West_Cuba
+				}
+				revolt_risk = 1
+			}
+		}
+	}
+	
+	#164012 - Election, Batista wins election
+	country_event = {
+
+		id = 164012								
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME164012"
+		desc = "EVTDESC164012"
+		picture = "1952_Cuban_elections_Batista"
+	
+		option = { 
+			name = "EVTOPTA164012"
+			prestige_change = -5
+			dissent = 2
+			set_country_flag = batista_president
+			head_of_state = 1164002
+			head_of_government = 1164002
+			any_owned = {
+				limit = {
+					region = region_East_Cuba
+					region = region_Central_Cuba
+				}
+				revolt_risk = 2
+			}
+		}
+	}
+	
+	#164013 - Batista coups Cuba before election can occur		#historical
+	country_event = {
+
+		id = 164013
+		
+		is_triggered_only = yes
+			
+		title = "EVTNAME164013"			
+		desc =  "EVTDESC164013"
+		picture = "1952_Cuba_Batista_coup"
+	
+		option = { 
+			name = "EVTOPTA164013" 		#OK
+			dissent = 10
+			prestige_change = -10
+			set_country_flag = batista_president_coup
+			head_of_state = 1164002
+			head_of_government = 1164002
+			any_owned = {
+				limit = {
+					OR = {
+						region = region_East_Cuba
+						region = region_Central_Cuba
+					}
+				}
+				revolt_risk = 2
+			}
+		}
+	}
+
+	#164014 - Cuba receives aid from USA
+	country_event = {
+
+		id = 164014
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME164014"
+		desc =  "EVTDESC164014"
+		picture = "1950_unloading_supplies"
+		
+		option = { 
+			name = "EVTOPTA164014" #thanks usa
+			relation = { who = USA value = 25 }
+			supplies = 1500									
+			money = 1000
+		}
+	}
+	
+	#164015 - Cuba receives aid from SOV
+	country_event = {
+
+		id = 164015
+		
+		is_triggered_only = yes
+		
+		mean_time_to_happen =  {
+			days = 10
+		}
+
+		title = "EVTNAME164015"		
+		desc =  "EVTDESC164015" 						
+		picture = "1950_unloading_supplies"
+		
+		option = { 
+			name = "EVTOPTA164015"
+			relation = { who = SOV value = 25 }
+			supplies = 1500									
+			money = 1000
+		}
+	}
+	
+	#164016 - Rebels attack Moncada barracks in Havana
+	country_event = {
+
+		id = 164016 
+		
+		trigger = {
+			tag = CUB
+			NOT = { has_country_flag = CUBmoncada }
+			NOT = { has_country_modifier = mod_CUB_serious_rebellion }
+			OR = {
+				has_country_flag = USembargoCUB  
+				has_country_flag = USnotembargoCUB
+				has_country_flag = USfriendCUB
+				has_country_flag = SOVfriendCUB						
+			}
+		}
+			
+		mean_time_to_happen =  {
+			days = 60		
+		}	
+	
+		title = "EVTNAME164016"		
+		desc =  "EVTDESC164016"  					
+		picture = "1953_Moncada_barracks"
+		
+		option = { 
+			name = "EVTOPTA164016"
+			set_country_flag = CUBmoncada
+			1997 = { create_revolt = 3 }
+			dissent = 2
+			USA = { country_event = 354254 }
+			add_country_modifier = {
+				name = mod_CUB_moncada_barracks_attacked
+				duration = 1095
+			}
+		}
+	}
+	
+	#164017 - Left wing rebels start serious rebellion (Right in power)
+	country_event = {
+
+		id = 164017
+		
+		trigger = {
+			tag = CUB
+			has_country_flag = CUBmoncada
+			NOT = { has_country_flag = CUBhas_resistance_movement_laid_open }
+			NOT = { has_country_flag = CUBLeftgranma }
+			NOT = { has_country_modifier = mod_CUB_moncada_barracks_attacked }
+			OR = {
+				CUB = { ideology = social_cons_idolg }
+				CUB = { ideology = paternal_auto_idolg	}
+				CUB = { ideology = fascistic_idolg }
+				CUB = { ideology = market_liberal_idolg }
+			}
+		}
+				
+		mean_time_to_happen =  {
+			months = 6		
+		}
+		
+		title = "EVTNAME164017"		
+		desc =  "EVTDESC164017"  					
+		picture = "1956_Castro_in_Cuba"
+		
+		option = {
+			name = "EVTOPTA164017"			    			
+			#REB = {
+			#	load_oob = 164017-OPT1-REB.txt #Left rebels spawn in East cuba
+			#}
+			any_owned = {
+				limit = {
+					region = region_Central_Cuba
+				}
+				create_revolt = 1
+			}
+			add_country_modifier = {
+				name = mod_CUB_serious_rebellion
+				duration = 180
+			}
+			set_country_flag = CUBLeftgranma
+			dissent = 20
+			national_unity = -30	
+		}
+	}
+	
+	#164018 - Left wing rebels take capital and win war
+	country_event = {
+
+		id = 164018	
+
+		trigger = {
+			tag = CUB
+			has_country_flag = CUBLeftgranma
+			NOT = { has_country_flag = LeftVictoryInCuba }
+			OR = {
+				CUB = { ideology = social_cons_idolg }
+				CUB = { ideology = paternal_auto_idolg	}
+				CUB = { ideology = fascistic_idolg }
+				CUB = { ideology = market_liberal_idolg }
+			}
+			CUB = { lost_national = 0.3 }
+			REB = { controls = 1997 } #Havana
+		}
+		
+		mean_time_to_happen = {
+			days = 14
+		}
+	
+		title = "EVTNAME164018"			#Left victory
+		desc =  "EVTDESC164018"
+		picture = "1959_rebels_entering_Havana"
+	
+		option = { 
+			name = "EVTOPTA164018" 				#Victory
+			set_country_flag = LeftVictoryInCuba
+			head_of_state = 1164004
+			head_of_government = 1164005
+			dissent = -20
+			prestige_change = 20
+			national_unity = 50
+			remove_country_modifier = mod_CUB_serious_rebellion
+		}
+	}
+	
+	##Check - where is Left wing rebels take over Cuba
+	
+	#164020 - Bay of pigs (historical)
+	country_event = {
+
+		id = 164020
+		
+		trigger = {
+			tag = CUB
+			CUB = { has_country_flag = LeftVictoryInCuba }
+			OR = {
+				USA = { has_country_flag = USnotembargoCUB2 }
+				USA = { has_country_flag = USembargoCUB2 }
+			}
+			NOT = { has_country_flag = CUBBayOfPigs }
+		}
+			
+		mean_time_to_happen =  {
+			months = 3		
+		}
+	
+		title = "EVTNAME164020"		
+		desc =  "EVTDESC164020"  					
+		picture = "1961_Bay_of_Pigs"
+		
+		option = { 
+			name = "EVTOPTA164020"
+			2029 = { create_revolt = 2 }
+			dissent = -2
+			set_country_flag = CUBBayOfPigs
+		}
+	}
+	
+	#164021 - Right wing rebels start serious rebellion (Left in power)
+	country_event = {
+
+		id = 164021
+		
+		trigger = {
+			tag = CUB
+			has_country_flag = CUBmoncada 
+			NOT = { has_country_flag = CUBhas_resistance_movement_laid_open }
+			NOT = { has_country_flag = CUBRightgranma }
+			NOT = { has_country_modifier = mod_CUB_moncada_barracks_attacked }	
+			OR = {
+				CUB = { ideology = social_liberal_idolg }
+				CUB = { ideology = communist_idolg	}
+				CUB = { ideology = left_wing_radical_idolg }
+				CUB = { ideology = maoist_idolg }
+			}
+		}
+				
+		mean_time_to_happen =  {
+			months = 6		
+		}
+		
+		title = "EVTNAME164021"		
+		desc =  "EVTDESC164021"  					
+		picture = "1961_Bay_of_Pigs_alt2"
+			
+		option = {
+			name = "EVTOPTA164021"			    			
+			#REB = {
+			#	load_oob = 164021-OPT1-REB2.txt #Left rebels spawn in East cuba
+			#}
+			any_owned = {
+				limit = {
+					region = region_West_Cuba
+					region = region_Central_Cuba
+				}
+				create_revolt = 1
+			}
+			add_country_modifier = {
+				name = mod_CUB_serious_rebellion
+				duration = 180
+			}
+			set_country_flag = CUBRightgranma
+			dissent = 20
+			national_unity = -30
+		}
+	}
+
+	#164022 - Right wing rebels take capital and win war
+	country_event = {
+
+		id = 164022	
+
+		trigger = {
+			tag = CUB
+			has_country_flag = CUBRightgranma
+			NOT = { has_country_flag = RightVictoryInCuba }
+			OR = {
+				CUB = { ideology = social_liberal_idolg }
+				CUB = { ideology = communist_idolg	}
+				CUB = { ideology = left_wing_radical_idolg }
+				CUB = { ideology = maoist_idolg }
+			}
+			CUB = { lost_national = 0.3 }
+			REB = { controls = 1997 } #Havana
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+	
+		title = "EVTNAME164022"			#Right victory
+		desc =  "EVTDESC164022"
+		picture = "1959_rebels_entering_Havana_mod_right_wing"
+	
+		option = { 
+			name = "EVTOPTA164022" 				#Victory
+			set_country_flag = RightVictoryInCuba
+			head_of_state = 1164011
+			head_of_government = 1164011
+			dissent = -15
+			prestige_change = 15
+			national_unity = 40
+			remove_country_modifier = mod_CUB_serious_rebellion
+		}
+	}
+	
+	#164023 - Bay of pigs (ahistorical)
+	country_event = {
+
+		id = 164023
+		
+		trigger = {
+			tag = CUB
+			CUB = { has_country_flag = RightVictoryInCuba }
+			OR = {
+				SOV = { has_country_flag = SOVnotembargoCUB2 }
+				SOV = { has_country_flag = SOVembargoCUB2 }
+			}
+		}
+		
+		mean_time_to_happen =  {
+			months = 3		
+		}	
+	
+		title = "EVTNAME164023"		
+		desc =  "EVTDESC164023"  					
+		picture = "1961_Bay_of_Pigs_alt"
+		
+		option = { 
+			name = "EVTOPTA164023"
+			2029 = { create_revolt = 2 }
+			dissent = -2
+		}
+	}
+	
+## USA ##
+	#354250 - USA chooses what to do about Cuban election FIRES 01-05 events
+	country_event = {
+
+		id = 354250						
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME354250" 			
+		desc = "EVTDESC354250"
+		picture = "1952_Venezoelan_elections"
+	
+		option = { 								#historic coup
+			name = "EVTOPTA354250"
+			ai_chance = { factor = 70 }
+			CUB = { country_event = 164013 }
+		}
+		
+		option = { 								#election go ahead
+			name = "EVTOPTB354250"
+			ai_chance = { factor = 20 }
+			CUB = { country_event = 164024 }
+			set_country_flag = CUB52election
+		}	
+		
+		option = { 								#ensure our guy wins
+			name = "EVTOPTC354250"
+			ai_chance = { factor = 10 }
+			CUB = { country_event = 164011 }
+		}
+		
+	}
+	
+ 	#164024 - Random winner for election chosen
+	country_event = {
+
+		id = 164024											
+	
+		is_triggered_only = yes
+
+		title = "EVTNAME164024" 		
+		desc = "EVTDESC164024"
+		picture = "1952_Venezoelan_elections"
+				
+		option = {
+			name = "EVTOPTA164024" 		#OK
+			#hidden_effects = {
+				random_list = {
+					33 = { country_event = 164010 }
+					33 = { country_event = 164011 }
+					33 = { country_event = 164012 }
+				}
+			#}
+		}		
+	}
+
+	#354252 - USA embargoes Cuba after left wing president elected
+	country_event = {
+
+		id = 354252
+	
+		trigger = {
+			tag = USA
+			AND = { 
+				CUB = { has_country_flag = CUB52election }
+				OR = {
+					NOT = { has_country_flag = USembargoCUB } 
+					NOT = { has_country_flag = USnotembargoCUB } 
+				}
+				OR = {
+					CUB = { ideology = social_liberal_idolg }
+					CUB = { ideology = communist_idolg	}
+					CUB = { ideology = left_wing_radical_idolg }
+					CUB = { ideology = maoist_idolg }
+				}
+			}
+		}
+		
+		mean_time_to_happen =  {
+			days = 60
+		}
+
+		title = "EVTNAME354252"
+		desc =  "EVTDESC354252"
+		picture = "1960_Cuban_embargo"
+														
+		option = {
+			name = "EVTOPTA354252" 		#OK
+			ai_chance = { factor = 100 }
+			trade_embargo = CUB		
+			relation = { who = CUB value = -10 }															
+			set_country_flag = USembargoCUB
+			CUB = { dissent = 5 }
+		}
+		
+		option = {
+			name = "EVTOPTB354252" 		#not at this time	
+			ai_chance = { factor = 0 }
+			set_country_flag = USnotembargoCUB
+		}
+	}
+	
+	#354253 - USA sends aid to Cuba
+	country_event = {
+
+		id = 354253
+		
+		trigger = {
+			tag = USA
+			AND = {
+				OR = {
+					CUB = { has_country_flag = batista_president }
+					CUB = { has_country_flag = batista_president_coup }
+				}
+				OR = {
+					CUB = { ideology = social_cons_idolg }
+					CUB = { ideology = paternal_auto_idolg	}
+					CUB = { ideology = fascistic_idolg }
+					CUB = { ideology = market_liberal_idolg }
+				}
+				NOT = { has_country_flag = USfriendCUB }
+			}
+		}
+		
+		mean_time_to_happen =  {
+			days = 30
+		}
+
+		title = "EVTNAME354253"
+		desc =  "EVTDESC354253"  			
+		picture = "1957_US_aid_to_Cuba"
+															
+		option = {
+			name = "EVTOPTA354253" 		#send aid	
+			ai_chance = { factor = 100 }
+			relation = { who = CUB value = 20 }															
+			set_country_flag = USfriendCUB
+			supplies = -1500									
+			money = -1000
+			CUB = { country_event = 164014 }
+			add_country_modifier = {
+				name = mod_CUB_serious_rebellion
+				duration = 365
+			}
+		}
+		
+		option = {
+			name = "EVTOPTB354253" 		#not at this time
+			ai_chance = { factor = 0 }
+			set_country_flag = USfriendCUB
+			add_country_modifier = {
+				name = mod_CUB_serious_rebellion
+				duration = 365
+			}
+		}
+	}
+	
+	country_event = {
+
+		id = 354254 
+		
+		is_triggered_only = yes
+		
+		mean_time_to_happen =  {
+			days = 60
+		}
+		
+		title = "EVTNAME354254"		
+		desc =  "EVTDESC354254"   					
+		picture = "1961_Bay_of_Pigs_weapons"
+		
+		option = { 
+			name = "EVTOPTA354254"
+			CUB = {
+				dissent = 2
+				revolt_risk = 1
+			}
+			set_country_flag = USintelCUB
+		}
+	}
+	
+	#354255 - USA regrets communist takeover in Cuba
+	country_event = {
+
+		id = 354255 
+		
+		is_triggered_only = yes
+		
+		mean_time_to_happen =  {
+			days = 20
+		}
+		
+		title = "EVTNAME354255"		
+		desc =  "EVTDESC354255"   					
+		picture = "1960_Cuban_embargo_2"
+		
+		option = {
+			name = "EVTOPTA354255" 		#embargo cuba
+			ai_chance = { factor = 50 }
+			trade_embargo = CUB			
+			relation = { who = CUB value = -20 }															
+			set_country_flag = USembargoCUB2
+			dissent = 1 
+		}
+	
+		option = {
+			name = "EVTOPTB354255" 		#not at this time	
+			ai_chance = { factor = 50 }
+			dissent = 2 
+			set_country_flag = USnotembargoCUB2
+		}
+	}
+	
+	#354256 - USA congratulations to Cuba for right-wing victory and sends aid
+	country_event = {
+
+		id = 354256						#usa send aid to cuba
+		
+		trigger = {
+			tag = USA
+			CUB = { has_country_flag = RightVictoryInCuba } 
+			NOT = { has_country_flag = USAfriendCUB2 } 
+			OR = {
+				CUB = { ideology = social_cons_idolg }
+				CUB = { ideology = paternal_auto_idolg	}
+				CUB = { ideology = fascistic_idolg }
+				CUB = { ideology = market_liberal_idolg }
+			}
+		}
+			
+		mean_time_to_happen =  {
+			days = 60
+		}
+
+		title = "EVTNAME354256"
+		desc =  "EVTDESC354256"  			
+		picture = "1960_Cuban_embargo"
+															
+		option = {
+			name = "EVTOPTA354256"			#send aid
+			ai_chance = { factor = 100 }
+			relation = { who = CUB value = 100 }															
+			set_country_flag = USAfriendCUB2
+			supplies = -1500									
+			money = -1000
+			CUB = { country_event = 326122 }
+		}
+			
+		option = {
+			name = "EVTOPTB354256" 		#not at this time	
+			ai_chance = { factor = 0 }
+			set_country_flag = USAfriendCUB2
+			SOV = { country_event = 326122 }
+		}
+	}
+	
+## SOV ##	
+	#326120 - Soviet congratulations to Cuba and sends aid
+	country_event = {
+
+		id = 326120
+		
+		trigger = {
+			tag = SOV
+			AND = {
+				CUB = { has_country_flag = CUB52election }
+				OR = {
+					CUB = { ideology = social_liberal_idolg }
+					CUB = { ideology = communist_idolg	}
+					CUB = { ideology = left_wing_radical_idolg }
+					CUB = { ideology = maoist_idolg }
+				}
+				NOT = { has_country_flag = SOVfriendCUB }
+			}
+		}
+			
+		mean_time_to_happen =  {
+			days = 60
+		}
+
+		title = "EVTNAME326120"
+		desc =  "EVTDESC326120"  			
+		picture = "1961_Bay_of_Pigs_alt3"
+															
+		option = {
+			name = "EVTOPTA326120"			#send aid
+			ai_chance = { factor = 100 }
+			relation = { who = CUB value = 20 }															
+			set_country_flag = SOVfriendCUB
+			supplies = -1500									
+			money = -1000
+			CUB = { country_event = 164015 }
+			add_country_modifier = {
+				name = mod_CUB_serious_rebellion
+				duration = 365
+			}
+		}
+			
+		option = {
+			name = "EVTOPTB326120" 		#not at this time	
+			ai_chance = { factor = 0 }
+			set_country_flag = SOVfriendCUB
+			add_country_modifier = {
+				name = mod_CUB_serious_rebellion
+				duration = 365
+			}
+		}
+	}
+	
+	#326121 - Soviet congratulations to Cuba and sends aid 
+	country_event = {
+
+		id = 326121
+		
+		trigger = {
+			tag = SOV
+			CUB = { has_country_flag = LeftVictoryInCuba } 
+			NOT = { has_country_flag = SOVfriendCUB2 } 
+			OR = { 										
+				CUB = { head_of_state = 1164012 }		#Lleó
+				CUB = { head_of_state = 1164013 }		#Castro
+			}
+		}
+			
+		mean_time_to_happen =  {
+			days = 60
+		}
+
+		title = "EVTNAME326121"
+		desc =  "EVTDESC326121"  			
+		picture = "1961_Bay_of_Pigs_alt3"
+		
+		option = {
+			name = "EVTOPTA326121"			#send aid
+			ai_chance = { factor = 100 }
+			relation = { who = CUB value = 100 }															
+			set_country_flag = SOVfriendCUB2
+			supplies = -1500									
+			money = -1000
+			CUB = { country_event = 354255 }
+		}
+			
+		option = {
+			name = "EVTOPTB326121" 		#not at this time	
+			ai_chance = { factor = 0 }
+			set_country_flag = SOVfriendCUB2
+			USA = { country_event = 354255 }
+		}
+	}
+	
+	#326122 - Embargo Cuba
+	country_event = {
+
+		id = 326122 
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME326122"		
+		desc =  "EVTDESC326122"   					
+		picture = "1960_Cuban_embargo_2"
+			
+		option = {
+			name = "EVTOPTA326122" 		#embargo cuba
+			ai_chance = { factor = 50 }
+			trade_embargo = CUB			
+			relation = { who = CUB value = -20 }															
+			set_country_flag = SOVembargoCUB2
+			dissent = 1 
+		}
+		
+		option = {
+			name = "EVTOPTB326122" 		#not at this time	
+			ai_chance = { factor = 50 }
+			dissent = 2 
+			set_country_flag = SOVnotembargoCUB2
+		}
+	}

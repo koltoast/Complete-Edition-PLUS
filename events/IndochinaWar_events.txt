@@ -1,0 +1,1193 @@
+#IndochinaWar_events.txt
+#1946 Indochina War
+
+#FRA - France:
+	#194000 - rebellion_indochina_FRA follow-up event
+	#194001 - FRA abandons Indochina - DRV gets its provinces and SVI/CMB/LAO are released
+	#194002 - DRV_hanoi_FRA follow-up event - France has to decide what to do about the DRV
+	#194003 - DRV_rebellion_FRA follow-up event - France has to decide what to do about the DRV
+	#194004 - fate_indochina_left_FRA follow-up event - Left-wing France has to decide what to do with the victorious Indochina
+	#194005 - geneva_indochina_FRA follow-up event - The Geneva Conference regarding Indochina
+	#194006 - FRA sends too many troops from Metropolitan France to oversea territories
+	#194007 - FRA is losing the Indochina War but doesn't take the Geneva Conference decision
+	
+	#To Add: Sino-French Accord of February 1946 http://en.wikipedia.org/wiki/Kwangchowan
+
+#DRV - North Vietnam:
+	#177000 - DRV has to give Hanoi to the Kuomintang. Triggered by OPTA of CHI152000
+	#177001 - DRV has to give Haiphong to IDC. Triggered by OPTA of FRA194002
+	#177003 - DRV goes well against IDC
+	#177004 - Geneva Conference & DRV victory. Triggered by OPTA of FRA194005
+	#177005 - Geneva Conference & DRV major victory. Triggered by OPTB of FRA194005
+	#177006 - CHI sends support against the French
+	#177007 - CHC sends support against the French
+	
+#IDC - Indochina:
+	#717000 - FRA sends expeditionary forces to Indochina. Triggered by OPTA of rebellion_indochina_FRA decision
+	#717001 - FRA sends regular forces to Indochina. Triggered by OPTB of rebellion_indochina_FRA decision
+	#717002 - IDC takes back Saigon from the rebels
+	#717003 - IDC defeats DRV
+	#717004 - IDC gets free troops after the occupation of Hanoi/Haiphong
+	#717005 - CHI sends support against the communists
+	
+#CHI - Nationalist China:
+	#152000 - leave_indochina_CHI follow-up event
+	#152001 - CHI has to give Hanoi to IDC. Triggered by OPTA of FRA194002
+	#152002 - CHI has to back Hanoi to DRV after DRV has beaten the French
+	#152003 - intervene_firstindochinawar_CHI follow-up event
+	#152004 - Giving CHI's provinces back to DRV
+
+#CHC - Communist China:
+	#151000 - intervene_firstindochinawar_CHC follow-up event
+	
+
+## FRA ##
+#194000 - rebellion_indochina_FRA follow-up event
+country_event = {
+	
+	id = 194000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME194000"
+	desc = "EVTDESC194000"
+	picture = "1945_august_revolution_hanoi"
+
+	option = {
+		name = "EVTOPTA194000"			    #Send an expeditionary force to Indochina
+		ai_chance = { factor = 85 }			#Historical choice
+		money = -200						#FRA pays for forces
+		manpower = -20
+		supplies = -1000
+		fuel = -300
+		dissent = 3	
+		neutrality = -5
+		IDC = { country_event = 717000 }	#Triggers EV717000 for IDC
+
+	}
+	option = {
+		name = "EVTOPTB194000"				#Send regular troops to Indochina
+		ai_chance = { factor = 10 }			#Ahistorical, but more likely than you leaving
+		dissent = 8							#Another war? We just got out of the last one alive!
+		create_alliance = IDC
+		neutrality = -15
+		IDC = { country_event = 717001 }	#Triggers EV717001 for IDC
+	}
+	option = {
+		name = "EVTOPTC194000"				#Abandon Indochina
+		ai_chance = { factor = 5 }			#Ahistorical and unlikely
+		DRV = { end_war = FRA }		    	#Just in case the player went to war with DRV
+		inherit = IDC
+		dissent = 8							#Giving up the empire? Some people won't like that
+		popularity = -3	
+		neutrality = 5								
+		FRA = { country_event = 194001 }	#Triggers EV194001 for FRA
+		
+		11937 = { remove_core = IDC }   	#IDC Vietnamese cores removed
+		12006 = { remove_core = IDC }
+		12078 = { remove_core = IDC }
+		12079 = { remove_core = IDC }
+		12148 = { remove_core = IDC }
+		12149 = { remove_core = IDC }
+		12150 = { remove_core = IDC }		
+		12215 = { remove_core = IDC }
+		12216 = { remove_core = IDC }
+		12217 = { remove_core = IDC }
+		12218 = { remove_core = IDC }
+		12225 = { remove_core = IDC }
+		12226 = { remove_core = IDC }
+		12288 = { remove_core = IDC }
+		12289 = { remove_core = IDC }
+		12290 = { remove_core = IDC }
+		12295 = { remove_core = IDC }
+		12296 = { remove_core = IDC }
+		12352 = { remove_core = IDC }
+		12353 = { remove_core = IDC }
+		12354 = { remove_core = IDC }
+		12355 = { remove_core = IDC }
+		12356 = { remove_core = IDC }
+		12357 = { remove_core = IDC }
+		12358 = { remove_core = IDC }	
+		12412 = { remove_core = IDC }
+		12413 = { remove_core = IDC }
+		12414 = { remove_core = IDC }
+		12415 = { remove_core = IDC }
+		12416 = { remove_core = IDC }
+
+		11866 = { remove_core = IDC }		#IDC Laotian cores removed
+		11935 = { remove_core = IDC }
+		11936 = { remove_core = IDC }
+		12007 = { remove_core = IDC }
+		12008 = { remove_core = IDC }
+		12009 = { remove_core = IDC }
+		12010 = { remove_core = IDC }
+		12080 = { remove_core = IDC }
+		12081 = { remove_core = IDC }
+		12151 = { remove_core = IDC }
+		12152 = { remove_core = IDC }
+		12153 = { remove_core = IDC }
+		12219 = { remove_core = IDC }
+		12220 = { remove_core = IDC }
+		12221 = { remove_core = IDC }
+		12291 = { remove_core = IDC }
+		12292 = { remove_core = IDC }
+		
+		12016 = { remove_core = IDC }		#IDC Cambodian cores removed
+		12086 = { remove_core = IDC }
+		12087 = { remove_core = IDC }
+		12088 = { remove_core = IDC }
+		12089 = { remove_core = IDC }
+		12156 = { remove_core = IDC }
+		12157 = { remove_core = IDC }
+		12158 = { remove_core = IDC }
+		12159 = { remove_core = IDC }
+		12222 = { remove_core = IDC }
+		12223 = { remove_core = IDC }
+		12224 = { remove_core = IDC }
+		12293 = { remove_core = IDC }
+		12294 = { remove_core = IDC }
+		
+		set_global_flag = vietnam_participated
+	}
+}
+
+#194001 - FRA abandons Indochina - DRV gets its provinces and SVI/CMB/LAO are released
+country_event = {
+	
+	id = 194001
+
+	is_triggered_only = yes
+
+	title = "EVTNAME194001"
+	desc = "EVTDESC194001"
+	picture = "1945_august_revolution_hanoi_2"
+
+	option = {
+		name = "EVTOPTA194001"			    #We can't afford another war
+		12290 = { secede_province = DRV }	#DRV gets its formely IDC-owned cores
+		12218 = { secede_province = DRV }
+		12150 = { secede_province = DRV }
+		12217 = { secede_province = DRV }
+		12216 = { secede_province = DRV }
+		CHI = { country_event = 152004 }
+		12289 = { secede_province = DRV }	#DRV should already own these, but just in case		
+		12288 = { secede_province = DRV }
+		11937 = { secede_province = DRV }
+		12215 = { secede_province = DRV }
+		12149 = { secede_province = DRV }
+		12148 = { secede_province = DRV }
+		12079 = { secede_province = DRV }
+		12078 = { secede_province = DRV }
+		12006 = { secede_province = DRV }
+	
+		release = SVI
+		release = CMB
+		release = LAO
+		
+		national_unity = 10
+	}
+}
+
+#194002 - DRV_hanoi_FRA follow-up event - France has to decide what to do about the DRV
+country_event = {
+	
+	id = 194002
+
+	is_triggered_only = yes
+
+	title = "EVTNAME194002"
+	desc = "EVTDESC194002"
+	picture = "1945_chinese_allied_talks"
+
+	option = {
+		name = "EVTOPTA194002"			    		#Negotiate with the KMT
+		ai_chance = { factor = 80 }					#Historical choice
+		money = -200								#FRA pays the Chinese
+		manpower = -20								#FRA pays for units popping up in Hanoi/Haiphong
+		supplies = -1000
+		fuel = -300
+		CHI = { country_event = 152001 }			#IDC gets Hanoi from CHI
+		DRV = { country_event = 177001 }			#Haiphong from DRV
+		12289 = { naval_base = 1 }					#Naval base for Haiphong
+		
+		IDC = { country_event = 717004 }			#IDC gets free troops in Hanoi/Haiphong
+		IDC = { war = DRV }
+	}
+	
+	option = {
+		name = "EVTOPTB194002"						#Independence for Laos
+		ai_chance = { factor = 20 }					#Ahistorical but not that unlikely
+		dissent = 5									#Limited autonomy for Laos? Sign of weakness!
+		IDC = { capital = 12296 }					#Saigon - just in case
+		
+		11866 = { remove_core = IDC }				#IDC Laotian cores removed
+		11935 = { remove_core = IDC }
+		11936 = { remove_core = IDC }
+		12007 = { remove_core = IDC }
+		12008 = { remove_core = IDC }
+		12009 = { remove_core = IDC }
+		12010 = { remove_core = IDC }
+		12080 = { remove_core = IDC }
+		12081 = { remove_core = IDC }
+		12151 = { remove_core = IDC }
+		12152 = { remove_core = IDC }
+		12153 = { remove_core = IDC }
+		12219 = { remove_core = IDC }
+		12220 = { remove_core = IDC }
+		12221 = { remove_core = IDC }
+		12291 = { remove_core = IDC }
+		12292 = { remove_core = IDC }
+		IDC = { release_vassal = LAO }			#IDC gets Laotian ally, but without any free troops
+		IDC = { war = DRV }
+
+	}
+}
+
+#194003 - DRV_rebellion_FRA follow-up event - France has to decide what to do about the DRV
+country_event = {
+	
+	id = 194003
+
+	is_triggered_only = yes
+
+	title = "EVTNAME194003"
+	desc = "EVTDESC194003"
+	picture = "1946_first_indochina_war"
+
+	option = {
+		name = "EVTOPTA194003"			    		#Seize Hanoi and Haiphong!
+		ai_chance = { factor = 80 }					#Semi-historical choice
+		manpower = -20								#FRA pays for units popping up in Hanoi & Haiphong
+		money = -50
+		supplies = -1000
+		fuel = -300
+		DRV = { country_event = 177002 }			#IDC gets Hanoi & Haiphong from DRV
+		IDC = { country_event = 717004 }			#IDC gets free troops in Hanoi/Haiphong
+		IDC = { war = DRV }
+	}
+	
+	option = {
+		name = "EVTOPTB194003"						#Independence for Laos
+		ai_chance = { factor = 20 }					#Ahistorical but not that unlikely
+		dissent = 5									#Limited autonomy for Laos? Sign of weakness!
+		IDC = { capital = 12296 }					#Saigon - just in case
+		
+		11866 = { remove_core = IDC }				#IDC Laotian cores removed
+		11935 = { remove_core = IDC }
+		11936 = { remove_core = IDC }
+		12007 = { remove_core = IDC }
+		12008 = { remove_core = IDC }
+		12009 = { remove_core = IDC }
+		12010 = { remove_core = IDC }
+		12080 = { remove_core = IDC }
+		12081 = { remove_core = IDC }
+		12151 = { remove_core = IDC }
+		12152 = { remove_core = IDC }
+		12153 = { remove_core = IDC }
+		12219 = { remove_core = IDC }
+		12220 = { remove_core = IDC }
+		12221 = { remove_core = IDC }
+		12291 = { remove_core = IDC }
+		12292 = { remove_core = IDC }
+		IDC = { release_vassal = LAO }			#IDC gets Laotian ally, but without any free troops
+		IDC = { war = DRV }
+
+	}
+}
+
+#194004 - fate_indochina_FRA follow-up event - France has to decide what to do with the victorious Indochina
+country_event = {
+	
+	id = 194004
+
+	is_triggered_only = yes
+
+	title = "EVTNAME194004"
+	desc = "EVTDESC194004"
+	picture = "1954_Hanoi_lowering_French_flag"
+
+	option = {
+		name = "EVTOPTA194004"			    			#Keep the colony
+		ai_chance = { factor = 85 }						#Sounds plausible - it worked before didn't it?
+		IDC = { inherit = LAO }
+		11866 = { add_core = IDC }						#IDC gets Laotian cores back
+		11935 = { add_core = IDC }
+		11936 = { add_core = IDC }
+		12007 = { add_core = IDC }
+		12008 = { add_core = IDC }
+		12009 = { add_core = IDC }
+		12010 = { add_core = IDC }
+		12080 = { add_core = IDC }
+		12081 = { add_core = IDC }
+		12151 = { add_core = IDC }
+		12152 = { add_core = IDC }
+		12153 = { add_core = IDC }
+		12219 = { add_core = IDC }
+		12220 = { add_core = IDC }
+		12221 = { add_core = IDC }
+		12291 = { add_core = IDC }
+		12292 = { add_core = IDC }
+		dissent = 2										#We're keeping those troublemakers?
+		national_unity = -2		
+		any_owned = {
+			limit = {
+				is_core = IDC
+			}
+			revolt_risk = 1
+		}
+														#France strategic goal reached - Indochina was held @
+	}
+	
+	option = {
+		name = "EVTOPTB194004"							#Establish direct French control
+		ai_chance = { factor = 15 }						#Ahistorical but not that unlikely
+		relation = { who = USA value = -10 }			#NATO is not amused @
+		relation = { who = XUN value = -25 }
+		dissent = 4									#Direct control over those rowdies!?
+		any_owned = {
+			limit = {
+				is_core = IDC
+			}
+			revolt_risk = 3
+		}
+	}
+}
+
+#194005 - geneva_indochina_FRA follow-up event - The Geneva Conference regarding Indochina
+country_event = {
+	
+	id = 194005
+
+	is_triggered_only = yes
+
+	title = "EVTNAME194005"
+	desc = "EVTDESC194005"
+	picture = "1954_Geneva_conference"
+
+	option = {
+		name = "EVTOPTA194005"			    			#Accept the partition of Vietnam - historical choice
+		ai_chance = { factor = 95 }						#Historical choice
+		FRA = { inherit = IDC }
+		
+		12290 = { secede_province = DRV }				#DRV gets its formely IDC-owned cores
+		12218 = { secede_province = DRV }
+		12150 = { secede_province = DRV }
+		12217 = { secede_province = DRV }
+		12216 = { secede_province = DRV }
+		
+		12289 = { secede_province = DRV }				#DRV should already own these, but just in case		
+		12288 = { secede_province = DRV }
+		11937 = { secede_province = DRV }
+		12215 = { secede_province = DRV }
+		12149 = { secede_province = DRV }
+		12148 = { secede_province = DRV }
+		12079 = { secede_province = DRV }
+		12078 = { secede_province = DRV }
+		12006 = { secede_province = DRV }
+	
+		release = SVI									#South Vietnam is also established
+		release = CMB
+		release = LAO
+		
+		12016 = { secede_province = CMB }				#In case Cambodia didn't get a core
+		12086 = { secede_province = CMB }
+		12087 = { secede_province = CMB }
+		12088 = { secede_province = CMB }
+		12089 = { secede_province = CMB }
+		12156 = { secede_province = CMB }
+		12157 = { secede_province = CMB }
+		12158 = { secede_province = CMB }
+		12159 = { secede_province = CMB }
+		12222 = { secede_province = CMB }
+		12223 = { secede_province = CMB }
+		12224 = { secede_province = CMB }
+		12293 = { secede_province = CMB }
+		12294 = { secede_province = CMB }
+		
+		11866 = { secede_province = LAO }				#In case Laos didn't get a core
+		11935 = { secede_province = LAO }
+		11936 = { secede_province = LAO }
+		12007 = { secede_province = LAO }
+		12008 = { secede_province = LAO }
+		12009 = { secede_province = LAO }
+		12010 = { secede_province = LAO }
+		12080 = { secede_province = LAO }
+		12081 = { secede_province = LAO }
+		12151 = { secede_province = LAO }
+		12152 = { secede_province = LAO }
+		12153 = { secede_province = LAO }
+		12219 = { secede_province = LAO }
+		12220 = { secede_province = LAO }
+		12221 = { secede_province = LAO }
+		12291 = { secede_province = LAO }
+		12292 = { secede_province = LAO }
+		
+		12225 = { secede_province = SVI }				#In case South Vietnam didn't get a core
+		12226 = { secede_province = SVI }
+		12295 = { secede_province = SVI }
+		12296 = { secede_province = SVI }
+		12352 = { secede_province = SVI }
+		12253 = { secede_province = SVI }
+		12354 = { secede_province = SVI }
+		12355 = { secede_province = SVI }
+		12356 = { secede_province = SVI }
+		12357 = { secede_province = SVI }
+		12358 = { secede_province = SVI }
+		12412 = { secede_province = SVI }
+		12413 = { secede_province = SVI }
+		12414 = { secede_province = SVI }
+		12415 = { secede_province = SVI }
+		12416 = { secede_province = SVI }
+		
+		IDC = { release_vassal = SVI }					#Just in case that happened somehow
+		IDC = { release_vassal = LAO }
+		IDC = { release_vassal = CMB }
+		
+		FRA = { release_vassal = SVI }
+		FRA = { release_vassal = LAO }
+		FRA = { release_vassal = CMB }
+		
+		dissent = 2
+		national_unity = 5
+		
+		CHI = { country_event = 152002 }				#CHI has to give back Hanoi
+		DRV = { country_event = 177004 }				#DRV victory
+	}
+	
+	option = {
+		name = "EVTOPTB194005"							#Complete withdrawl from Indochina - socialist régimes will take over
+		ai_chance = { factor = 5 }		
+
+		11937 = { secede_province = DRV }				#DRV gets all of Vietnam
+		12006 = { secede_province = DRV }
+		12078 = { secede_province = DRV }
+		12079 = { secede_province = DRV }
+		12148 = { secede_province = DRV }
+		12149 = { secede_province = DRV }
+		12150 = { secede_province = DRV }
+		12215 = { secede_province = DRV }
+		12216 = { secede_province = DRV }
+		12217 = { secede_province = DRV }
+		12218 = { secede_province = DRV }
+		12225 = { secede_province = DRV }
+		12226 = { secede_province = DRV }
+		12288 = { secede_province = DRV }
+		12290 = { secede_province = DRV }
+		12295 = { secede_province = DRV }
+		12296 = { secede_province = DRV }
+		12352 = { secede_province = DRV }
+		12353 = { secede_province = DRV }
+		12354 = { secede_province = DRV }
+		12355 = { secede_province = DRV }
+		12356 = { secede_province = DRV }
+		12357 = { secede_province = DRV }
+		12358 = { secede_province = DRV }
+		12412 = { secede_province = DRV }
+		12413 = { secede_province = DRV }
+		12414 = { secede_province = DRV }
+		12415 = { secede_province = DRV }
+		12416 = { secede_province = DRV }
+
+		release = CMB									#South Vietnam is not established - North Vietnam takes full control
+		release = LAO
+		
+		12016 = { secede_province = CMB }				#In case Cambodia didn't get a core
+		12086 = { secede_province = CMB }
+		12087 = { secede_province = CMB }
+		12088 = { secede_province = CMB }
+		12089 = { secede_province = CMB }
+		12156 = { secede_province = CMB }
+		12157 = { secede_province = CMB }
+		12158 = { secede_province = CMB }
+		12159 = { secede_province = CMB }
+		12222 = { secede_province = CMB }
+		12223 = { secede_province = CMB }
+		12224 = { secede_province = CMB }
+		12293 = { secede_province = CMB }
+		12294 = { secede_province = CMB }
+		
+		11866 = { secede_province = LAO }				#In case Laos didn't get a core
+		11935 = { secede_province = LAO }
+		11936 = { secede_province = LAO }
+		12007 = { secede_province = LAO }
+		12008 = { secede_province = LAO }
+		12009 = { secede_province = LAO }
+		12010 = { secede_province = LAO }
+		12080 = { secede_province = LAO }
+		12081 = { secede_province = LAO }
+		12151 = { secede_province = LAO }
+		12152 = { secede_province = LAO }
+		12153 = { secede_province = LAO }
+		12219 = { secede_province = LAO }
+		12220 = { secede_province = LAO }
+		12221 = { secede_province = LAO }
+		12291 = { secede_province = LAO }
+		12292 = { secede_province = LAO }
+		
+		
+		IDC = { release_vassal = LAO }					#Just in case that happened somehow
+		IDC = { release_vassal = CMB }
+		
+		FRA = { release_vassal = LAO }
+		FRA = { release_vassal = CMB }
+		
+		dissent = 8
+		popularity = -4
+		national_unity = 10
+
+		CHI = { country_event = 152002 }				#CHI has to give back Hanoi
+		DRV = { country_event = 177005 }				#DRV total victory
+	}
+}
+
+#194006 - FRA sends too many troops from Metropolitan France to oversea territories
+country_event = {
+	
+	id = 194006
+
+	trigger = {
+		tag = FRA
+		any_owned_province = {
+			NOT = { is_core = FRA }
+		}
+		NOT = { has_country_flag = anticolonial_demonstrations }
+	}
+	
+	mean_time_to_happen = { 
+		days = 7
+	}
+
+	title = "EVTNAME194006"
+	desc = "EVTDESC194006"
+	picture = "1945_Fench_troops_leave_for_Indochina"
+
+	option = {
+		name = "EVTOPTA194006"			    #OK
+		national_unity = -1
+		set_country_flag = anticolonial_demonstrations
+	}
+}
+
+#194007 - FRA is losing the Indochina War but doesn't take the Geneave Conference decision
+country_event = {
+	
+	id = 194007
+
+	trigger = {
+		tag = FRA
+		has_global_flag =  IDC717003triggered						#DRV victory event happened
+		NOT = { has_country_flag = geneva_indochina_FRA_done }		#FRA hasn't taken the Geneva
+		OR = {														#No anti-war demonstrations if there's no war
+			IDC = { war_with = DRV }
+			war_with = DRV
+		}
+		
+	}
+
+	mean_time_to_happen = {
+		days = 14
+	}
+
+	title = "EVTNAME194007"
+	desc = "EVTDESC194007"
+	picture = "1950_Anti-war_demonstration_Paris"
+
+	option = {
+		name = "EVTOPTA194007"			    			#OK
+		dissent = 3
+		national_unity = -2
+		populariy = -2
+	}
+}
+
+## DRV ##
+#177000 - DRV has to give Hanoi to the Kuomintang. Triggered by OPTA of CHI152000
+country_event = {
+	
+	id = 177000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME177000"
+	desc = "EVTDESC177000"
+	picture = "1946_war_in_china"
+
+	option = {
+		name = "EVTOPTA177000"			    			#OK
+		11937 = { secede_province = CHI }				#The Kuomintang occupy Hanoi
+	}
+}
+
+#177001 - DRV has to give Haiphong to IDC. Triggered by OPTA of FRA194002
+country_event = {
+	
+	id = 177001
+
+	is_triggered_only = yes
+
+	title = "EVTNAME177001"
+	desc = "EVTDESC177001"
+	picture = "1947_French_enter_Hanoi"
+
+	option = {
+		name = "EVTOPTA177001"			    			#OK
+		12289 = { secede_province = IDC }				#Haiphong is occupied by IDC
+	}
+}
+
+#177002 - DRV has to give Hanoi & Haiphong to IDC. Triggered by OPTA of FRA194002
+country_event = {
+	
+	id = 177002
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME177002"
+	desc = "EVTDESC177002"
+	picture = "1947_French_enter_Hanoi"
+	
+	option = {
+		name = "EVTOPTA177002"			    			#OK
+		12289 = { secede_province = IDC }				#Hanoi is occupied by IDC
+		11937 = { secede_province = IDC }				#Haiphong is occupied by IDC
+	}
+}
+
+#177003 - DRV goes well against IDC
+country_event = {
+	
+	id = 177003
+
+	trigger = {
+		tag = IDC
+		NOT = { has_global_flag =  IDC717003triggered }
+		IDC = { war_with = DRV }
+		OR = {
+			IDC = { lost_national = 0.50 }						#IDC is losing a lot of territory
+			IDC = { dissent = 35 }								#IDC has massive internal problems
+		}
+	}
+	
+	mean_time_to_happen = { 
+		days = 7
+	}
+
+	title = "EVTNAME177003"										#The tide has turned
+	desc = "EVTDESC177003"
+	picture = "1954_victory_for_vietnamese"
+
+	option = {
+		name = "EVTOPTA177003"
+		war_exhaustion = -1
+		national_unity = 2										#IDC Stability boost @
+		set_global_flag = IDC177003triggered
+	}
+}
+
+#177004 - Geneva Conference & DRV victory
+country_event = {
+	
+	id = 177004
+
+	is_triggered_only = yes
+
+	title = "EVTNAME177004"
+	desc = "EVTDESC177004"
+	picture = "1954_Geneva_conference"
+
+	option = {
+		name = "EVTOPTA177004"			    		#Accept the partition of Vietnam for now
+		ai_chance = { factor = 90 }					#Historical choice
+		relation = { who = FRA value = 25 }
+		relation = { who = ENG value = 25 }
+		relation = { who = SOV value = 25 }
+		supplies = 1000								#DRV re-organising itself
+		fuel = 200
+		dissent = -5								#No more war for now
+		DRV = { end_war = FRA }						#In case France joined IDC
+	}
+	
+	option = {
+		name = "EVTOPTB177004"						#Fight on
+		ai_chance = { factor = 10 }		
+		relation = { who = FRA value = -100 }		#Those should be on a low anyway
+		relation = { who = USA value = -25 }
+		relation = { who = ENG value = -25 }
+		relation = { who = CHI value = -25 }
+		dissent = 5									
+		DRV = { war = SVI }							#Which will have been released at this point
+
+	}
+}
+
+#177005 - Geneva Conference & DRV major victory
+country_event = {
+	
+	id = 177005
+
+	is_triggered_only = yes
+
+	title = "EVTNAME177005"
+	desc = "EVTDESC177005"
+	picture = "1954_Geneva_conference"
+
+	option = {
+		name = "EVTOPTA177005"			    		#Victory!
+		relation = { who = SOV value = 25 }
+		relation = { who = CHC value = 50 }
+		supplies = 1500								#DRV re-organising itself and plundering the south
+		fuel = 300
+		dissent = -5
+		national_unity = 10
+		popularity = 10
+		
+		11937 = { add_core = DRV }					#DRV gets cores on all of Vietnam
+		12006 = { add_core = DRV }
+		12078 = { add_core = DRV }
+		12079 = { add_core = DRV }
+		12148 = { add_core = DRV }
+		12149 = { add_core = DRV }
+		12150 = { add_core = DRV }		
+		12215 = { add_core = DRV }
+		12216 = { add_core = DRV }
+		12217 = { add_core = DRV }
+		12218 = { add_core = DRV }
+		12225 = { add_core = DRV }
+		12226 = { add_core = DRV }
+		12288 = { add_core = DRV }	
+		12290 = { add_core = DRV }
+		12295 = { add_core = DRV }
+		12296 = { add_core = DRV }
+		12352 = { add_core = DRV }
+		12353 = { add_core = DRV }
+		12354 = { add_core = DRV }
+		12355 = { add_core = DRV }
+		12356 = { add_core = DRV }
+		12357 = { add_core = DRV }
+		12358 = { add_core = DRV }	
+		12412 = { add_core = DRV }
+		12413 = { add_core = DRV }
+		12414 = { add_core = DRV }
+		12415 = { add_core = DRV }
+		12416 = { add_core = DRV }
+		
+		DRV = { capital = 11937 }					#Hanoi - in case CHI occupied it beforehand
+		
+	}
+}
+
+#177006 - CHI sends support against the French
+country_event = {
+	
+	id = 177006
+
+	is_triggered_only = yes
+
+	title = "EVTNAME177006"
+	desc = "EVTDESC177006"
+	picture = "1946_vietminh"
+
+	option = {
+		name = "EVTOPTA177006"			    #Thanks, KMT
+		supplies = 1500									
+		money = 200
+		dissent = -1
+	}
+}
+
+#177007 - CHC sends support against the French
+country_event = {
+	
+	id = 177007
+
+	is_triggered_only = yes
+
+	title = "EVTNAME177007"
+	desc = "EVTDESC177007"
+	picture = "1946_vietminh"
+
+	option = {
+		name = "EVTOPTA177007"			    #Thanks, PRC
+		supplies = 1500									
+		money = 200
+		dissent = -1
+	}
+}
+
+## IDC ##
+#717000 - FRA sends expeditionary forces to Indochina. Triggered by OPTA of rebellion_indochina_FRA decision
+country_event = {
+	
+	id = 717000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME717000"				#France sends support against the rebels
+	desc = "EVTDESC717000"
+	picture = "1945_Fench_troops_leave_for_Indochina"
+
+	option = {
+		name = "EVTOPTA717000"			#We will hold Indochina!
+		supplies = 1000					#French support
+		load_oob = IDC_1946_French_arrive_saigon.txt			#French expeditionary forces OOB is loaded
+		load_oob = IDC_1946_French_invade_hanoi.txt
+	}
+}
+
+
+#717001- FRA sends regular forces to Indochina. Triggered by OPTB of rebellion_indochina_FRA decision
+country_event = {
+	
+	id = 717001
+
+	is_triggered_only = yes
+
+	title = "EVTNAME717001"							#France joins the fight against the rebels
+	desc = "EVTDESC717001"
+	picture = "1945_Fench_troops_leave_for_Indochina"
+
+	option = {
+		name = "EVTOPTA717001"						#We will hold Indochina!
+		supplies = 1000								#French support
+	}
+}
+
+
+#717002 - IDC takes back Saigon from the rebels
+country_event = {
+	
+	id = 717002
+
+	trigger = {
+		tag = IDC
+		IDC = { controls = 12225 } #Saigon
+		NOT = { has_country_flag =  IDC717002triggered }
+	}
+	
+	mean_time_to_happen = { 
+		days = 1
+	}
+
+	title = "EVTNAME717002"
+	desc = "EVTDESC717002"
+	picture = "1947_French_enter_Hanoi"
+
+	option = {
+		name = "EVTOPTA717002"						#OK
+		supplies = 500
+		12225 = { naval_base = 2 }					#Military infrastructure for Saigon
+		12225 = { air_base = 2 }
+		12225 = { anti_air = 4 }
+		12225 = { infra = 6 }
+		IDC = { capital = 12296 }					#Saigon
+		national_unity = 5							#IDC Stability boost @
+		set_global_flag = IDC_retook_saigon_done
+		set_country_flag = IDC717002triggered
+	}
+}
+
+#717003 - IDC defeats DRV
+country_event = {
+	
+	id = 717003
+
+	trigger = {
+		tag = IDC
+		NOT = { has_country_flag = IDC717003triggered }
+		NOT = { exists = DRV }									#DRV is gone
+		num_of_revolts = 0										#The rebels have been beaten
+		OR = {
+		IDC = { controls = 12225 } #Saigon						#IDC/FRA control key regions
+		FRA = { controls = 12225 }
+		}
+		OR = {
+		IDC = { controls = 12289 } #Haiphong
+		FRA = { controls = 12289 }
+		}
+		OR = {
+		IDC = { controls = 12079 } #Son La
+		FRA = { controls = 12079 }
+		}
+	}
+	
+	mean_time_to_happen = { 
+		days = 1
+	}
+
+	title = "EVTNAME717003"
+	desc = "EVTDESC717003"
+	picture = "1954_french_tank_vietnam"
+
+	option = {
+		name = "EVTOPTA717002"									#Great!
+		national_unity = 5										#IDC Stability boost @
+		set_country_flag = IDC717003triggered
+		set_global_flag = indochina_french_victory
+	}
+}
+
+#717004 - IDC gets free troops after the occupation of Hanoi/Haiphong 
+country_event = {
+	
+	id = 717004
+
+	is_triggered_only = yes
+
+	title = "EVTNAME717004"			
+	desc = "EVTDESC717004"
+	picture = "1946_legion_indochina"
+
+	option = {
+		name = "EVTOPTA717004"						#We will hold Indochina!
+		11937 = { infantry_brigade = current }		#Infantry brigade for Hanoi
+		12289 = { infantry_brigade = current }		#Infantry brigade for Haiphong
+		supplies = 1500								#French support
+	}
+}
+
+#717005 - CHI sends support against the communists
+country_event = {
+	
+	id = 717005
+
+	is_triggered_only = yes
+
+	title = "EVTNAME717005"
+	desc = "EVTDESC717005"
+	picture = "1950_unloading_supplies"
+
+	option = {
+		name = "EVTOPTA717005"			    #Thanks, China
+		supplies = 1500									
+		money = 200
+		dissent = -1
+	}
+}
+
+## CHI ##
+#152000 - leave_indochina_CHI follow-up event
+country_event = {
+	
+	id = 152000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152000"
+	desc = "EVTDESC152000"
+	picture = "1946_war_in_china"
+
+	option = {
+		name = "EVTOPTA152000"			    			#We stay in Indochina
+		ai_chance = { factor = 85 }						#Historical choice
+		relation = { who = FRA value = -25 }			#Don't mess with our colony, KMT!
+		relation = { who = IDC value = -50 }
+		relation = { who = DRV value = -50 }			#Ho doesn't approve non-communists occupying Hanoi
+		DRV = { country_event = 177000 }				#DRV will have to give Hanoi to CHI
+		set_global_flag = hanoi_seized_CHI
+
+	}
+	option = {
+		name = "EVTOPTB152000"							#We have to concentrate on the war against Mao
+		ai_chance = { factor = 15 }						#Ahistorical, but not that unlikely
+		supplies = 500									#France pays for the KMT leaving
+		money = 200
+		relation = { who = FRA value = 25 }				#France appreciates KMT not meddling in Indochina
+		relation = { who = IDC value = 50 }
+		relation = { who = DRV value = 50 } 			#Hanoi won't be occupied by KMT
+		set_global_flag = hanoi_not_seized_CHI
+	}
+}
+
+#152001 - CHI has to give Hanoi to IDC. Triggered by OPTA of FRA194002
+country_event = {
+	
+	id = 152001
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152001"
+	desc = "EVTDESC152001"
+	picture = "1947_French_enter_Hanoi"
+
+	option = {
+		name = "EVTOPTA152001"			    			#OK
+		money = 200										#Compensation by France
+		relation = { who = FRA value = 50 }				#France gave up the concessions in China
+		11937 = { secede_province = IDC }				#Hanoi is occupied by IDC
+	}
+}
+
+#152002 - CHI has to back Hanoi to DRV after DRV has beaten the French
+country_event = {
+	
+	id = 152002
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152002"
+	desc = "EVTDESC152002"
+	picture = "1947_French_enter_Hanoi"
+
+	option = {
+		name = "EVTOPTA152001"			    			#OK
+		11937 = { secede_province = DRV }				#Hanoi goes back to the Vietnamse
+	}
+}
+
+#152003 - intervene_firstindochinawar_CHI follow-up event
+country_event = {
+	
+	id = 152003
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152003"
+	desc = "EVTDESC152003"
+	picture = "1945_august_revolution_hanoi"
+
+	option = {
+		name = "EVTOPTA152003"			    			#Support the Viet Minh
+		ai_chance = { 
+			factor = 15
+			modifier = {
+				factor = 1.5
+				relation = { who = DRV value = 75 }	
+			}
+			modifier = {
+				factor = 1.5
+				relation = { who = DRV value = 150 }	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { money = 300 }
+					NOT = { supplies = 2250 }
+				}
+			}
+		}	
+		supplies = -1500									
+		money = -200
+		relation = { who = DRV value = 50 }		
+		relation = { who = FRA value = -25 }			
+		relation = { who = IDC value = -25 }	
+		dissent = 1										#Supporting communists while at war with Mao		
+		DRV = { country_event = 177006 }				
+	}
+	
+	option = {
+		name = "EVTOPTB152003"							#Support the nationalist Vietnamese
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 1.5
+				relation = { who = IDC value = 75 }	
+			}
+			modifier = {
+				factor = 1.5
+				relation = { who = IDC value = 150 }	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { money = 300 }
+					NOT = { supplies = 2250 }
+				}
+			}
+		}						
+		supplies = -1500									
+		money = -200
+		relation = { who = FRA value = 25 }				
+		relation = { who = IDC value = 50 }
+		relation = { who = DRV value = -50 }
+		IDC = { country_event = 717005 }		
+	}
+	
+	option = {
+		name = "EVTOPTC152003"							#Don't intervene
+		ai_chance = { factor = 75 }						#Historical choice			
+		relation = { who = FRA value = 15 }				
+		relation = { who = IDC value = 15 }
+		relation = { who = DRV value = -25 } 		
+	}
+}
+
+#152004 - Giving CHI's provinces to DRV
+country_event = {
+	
+	id = 152004
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152004"
+	desc = "EVTDESC152004"
+	picture = "1945_august_revolution_hanoi"
+
+	option = {
+		name = "OK"
+		12288 = { secede_province = DRV }
+		11937 = { secede_province = DRV }
+		12289 = { secede_province = DRV }
+		12216 = { secede_province = DRV }
+		12217 = { secede_province = DRV }
+		12150 = { secede_province = DRV }
+		12218 = { secede_province = DRV }
+		12290 = { secede_province = DRV }
+	}
+}
+
+## CHC ##
+#151000 - intervene_firstindochinawar_CHC follow-up event
+country_event = {
+	
+	id = 151000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151000"
+	desc = "EVTDESC151000"
+	picture = "1945_august_revolution_hanoi"
+
+	option = {
+		name = "EVTOPTA151000"			    			#Support the Viet Minh
+		ai_chance = { 									#Historical choice
+			factor = 80
+			modifier = {
+				factor = 0.5
+				NOT = { relation = { who = IDC value = -100 } }
+			}
+			modifier = {
+				factor = 0.67
+				NOT = { relation = { who = IDC value = 0 } }
+			}
+			modifier = {
+				factor = 1.5
+				relation = { who = IDC value = 75 }	
+			}
+			modifier = {
+				factor = 1.5
+				relation = { who = IDC value = 150 }	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { money = 220 }
+					NOT = { supplies = 1650 }
+				}
+			}
+		}	
+		supplies = -1500									
+		money = -200
+		relation = { who = DRV value = 50 }		
+		relation = { who = FRA value = -25 }			
+		relation = { who = IDC value = -25 }			
+		DRV = { country_event = 177007 }				#DRV gets support		
+	}
+	
+	option = {
+		name = "EVTOPTB151000"							#Don't intervene
+		ai_chance = { factor = 20 }		
+		relation = { who = FRA value = 15 }				
+		relation = { who = IDC value = 15 }
+		relation = { who = DRV value = -25 } 		
+	}
+}

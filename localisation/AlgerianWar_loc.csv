@@ -1,0 +1,45 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Events ; REMOVE HASH FOR ACTIVE EVENTS AND OPTIONS;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#FRA;;;;;;;;;;;;;;x
+EVTNAME194008;Anger at the release of Algeria;;;;;;;;;;;;;x
+EVTDESC194008;Our citizens are not happy with the recent release of Algeria into independence. Algeria has been part of the French Empire for over a century and is home to many French settlers. Now there are demonstrations all over the country demanding a change of foreign policy and the resignation of the current government.;;;;;;;;;;;;;x
+EVTOPTA194008;OK;;;;;;;;;;;;;x
+EVTNAME194009;La Toussaint rouge;;;;;;;;;;;;;x
+EVTDESC194009;Today, terrorists from the Front de Libération Nationale executed several bomb attacks against police and military targets in French Algeria. The FLN does not currently have broad support among the Algerian population, but the Algerian nationalist movement is growing and is likely to get stronger in the future. How shall we approach the turmoil in Algeria? The territory has been ours for a century and is essentially a part of France, not just a mere colony. Many settlers live there and simply abandoning it will not be tolerated by the French people.;;;;;;;;;;;;;x
+EVTOPTA194009;Send forces to keep order - Algeria is French!;;;;;;;;;;;;;x
+EVTOPTB194009;Let's grant them some autonomy;;;;;;;;;;;;;x
+EVTOPTC194009;The Algerians deserve full independence;;;;;;;;;;;;;x
+EVTNAME194010;Café War bombing;;;;;;;;;;;;;x
+EVTDESC194010;With the Algerians demanding more freedom, FLN and MNA, the two Algerian nationalist movements, have begun fighting out their differences in Metropolitan France. Today, yet another bomb exploded in a French city and once again, many innocents were killed. The public demands that the government deal with this campaign of terror.;;;;;;;;;;;;;x
+EVTOPTA194010;A cowardly attack!;;;;;;;;;;;;;x
+EVTNAME194011;Café War bombing;;;;;;;;;;;;;x
+EVTDESC194011;With the Algerians demanding more freedom, FLN and MNA, the two Algerian nationalist movements, have begun fighting out their differences in Metropolitan France. Today, yet another bomb exploded in a French city and once again, many innocents were killed. The public demands that the government deal with this campaign of terror.;;;;;;;;;;;;;x
+EVTOPTA194011;A cowardly attack!;;;;;;;;;;;;;x
+EVTNAME194012;Café War bombing;;;;;;;;;;;;;x
+EVTDESC194012;With the Algerians demanding more freedom, FLN and MNA, the two Algerian nationalist movements, have begun fighting out their differences in Metropolitan France. Today, yet another bomb exploded in a French city and once again, many innocents were killed. The public demands that the government deal with this campaign of terror.;;;;;;;;;;;;;x
+EVTOPTA194012;A cowardly attack!;;;;;;;;;;;;;x
+EVTNAME194013;The Battle of Philippeville;;;;;;;;;;;;;x
+EVTDESC194013;The situation in Algeria is escalating and members of the nationalist movement are now carrying out open military attacks. This morning, 'fellagha' ('bandit') fighters of the FLN assaulted our local forces in Philippeville. Because we had intelligence about the impending attack, we were able to fend them off, but the conflict has clearly moved to a new level. What should be our strategy from here on?;;;;;;;;;;;;;x
+EVTOPTA194013;Fight with all means necessary!;;;;;;;;;;;;;x
+EVTOPTB194013;Send more police forces;;;;;;;;;;;;;x
+EVTOPTC194013;Abandon Algeria;;;;;;;;;;;;;x
+EVTNAME194014;Rebel uprising in Algeria;;;;;;;;;;;;;x
+EVTDESC194014;Today, nationalist rebels seized control over an area of Algeria. They demand full independence for their country, withdrawal of all French troops, and declared their willingness to die for their cause.;;;;;;;;;;;;;x
+EVTOPTA194014;OK;;;;;;;;;;;;;x
+EVTNAME194015;Rebel uprising in Algeria;;;;;;;;;;;;;x
+EVTDESC194015;Today, nationalist rebels seized control over an area of Algeria. They demand full independence for their country, withdrawal of all French troops, and declared their willingness to die for their cause.;;;;;;;;;;;;;x
+EVTOPTA194015;OK;;;;;;;;;;;;;x
+EVTNAME194016;Anger at our Algerian policy;;;;;;;;;;;;;x
+EVTDESC194016;A majority of the population are angry at what they perceive as our mishandling of the Algerian conflict. The general consensus seems to be that we chose a hardline policy and released Algeria too late when a more conciliatory approach could have prevented a large part of the bloodshed.;;;;;;;;;;;;;x
+EVTOPTA194016;It's easy to be wise with hindsight!;;;;;;;;;;;;;x
+EVTNAME194017;Nation-wide uprising in Algeria;;;;;;;;;;;;;x
+EVTDESC194017;The independence movement in Algeria is growing bigger and bigger. We now have a nation-wide uprising on our hands. The conflict about the future of Algeria is growing more intense at home as well: some of our policymakers and generals warn that we will not be able to hold on to our colony, while others urge us to continue the fight.;;;;;;;;;;;;;x
+EVTOPTA194017;This is getting out of hand...;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#ALG;;;;;;;;;;;;;;x
+EVTNAME112000;Freedom for Algeria;;;;;;;;;;;;;x
+EVTDESC112000;Finally, Algeria has thrown off the shackles of colonialism. The struggle is not over, though, as France will do everything to restore their occupation of Algeria.;;;;;;;;;;;;;x
+EVTOPTA112000;OK;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

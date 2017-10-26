@@ -1,0 +1,61 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+mod_UN_mines_and_booby_traps_convention_failure_delay;UN Mines & Booby Traps Convention Delay;;;;;;;;;;;;;x
+mod_UN_mines_and_booby_traps_convention_ratifier_delay;UN Mines & Booby Traps Convention Ratifier Delay;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+mod_UN_mines_and_booby_traps_convention_revoked_recently;UN Mines & Booby Traps Convention Revoked Recently;;;;;;;;;;;;;x
+mod_UN_mines_and_booby_traps_convention_ratified;UN Mines & Booby Traps Convention;;;;;;;;;;;;;x
+mod_UN_mines_and_booby_traps_convention_ratified_recently;UN Mines & Booby Traps Convention Ratified Recently;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+dec_UN_raise_mines_and_booby_traps_convention_title;The UN Mines & Booby Traps Convention;;;;;;;;;;;;;x
+dec_UN_raise_mines_and_booby_traps_convention_desc;United Nations General Assembly Resolution 66/62 II, The Protocol on Prohibitions or Restrictions on the Use of Mines, Booby-Traps and Other Devices.;;;;;;;;;;;;;x
+dec_UN_mines_and_booby_traps_convention_disable_voting_notifications_title;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+dec_UN_mines_and_booby_traps_convention_disable_voting_notifications_desc;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+dec_UN_ratify_mines_and_booby_traps_convention_title;Ratify UN Mines & Booby Traps Convention;;;;;;;;;;;;;x
+dec_UN_ratify_mines_and_booby_traps_convention_desc;Ratify The Protocol on Prohibitions or Restrictions on the Use of Mines, Booby-Traps and Other Devices.;;;;;;;;;;;;;x
+dec_UN_withdraw_from_mines_and_booby_traps_convention_title;Withdraw from UN Mines & Booby Traps Convention;;;;;;;;;;;;;x
+dec_UN_withdraw_from_mines_and_booby_traps_convention_desc;Withdraw from The Protocol on Prohibitions or Restrictions on the Use of Mines, Booby-Traps and Other Devices.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+EVTNAME12500;The UN Mines & Booby Traps Convention;;;;;;;;;;;;;x
+EVTDESC12500;United Nations General Assembly Resolution 66/62 II, The Protocol on Prohibitions or Restrictions on the Use of Mines, Booby-Traps and Other Devices.;;;;;;;;;;;;;x
+EVTOPTA12500;Large Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTB12500;Small Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTC12500;No Diplomatic Investment.;;;;;;;;;;;;;x
+EVTNAME12501;UN Voting Notifications;;;;;;;;;;;;;x
+EVTDESC12501;Shall we receive notifications when nations decide their vote on the current UN Resolution undergoing a vote?\nThese can be turned off at any time by an international decision.;;;;;;;;;;;;;x
+EVTOPTA12501;Receive Notifications.;;;;;;;;;;;;;x
+EVTOPTB12501;No Notifications.;;;;;;;;;;;;;x
+EVTNAME12502;UN Mines & Booby Traps Convention Fails Vote;;;;;;;;;;;;;x
+EVTDESC12502;United Nations General Assembly Resolution 66/62 II, The Protocol on Prohibitions or Restrictions on the Use of Mines, Booby-Traps and Other Devices, has been defeated by vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA12502;Unfortunate;;;;;;;;;;;;;x
+EVTNAME12503;UN Mines & Booby Traps Convention Passes Vote;;;;;;;;;;;;;x
+EVTDESC12503;United Nations General Assembly Resolution 66/62 II, The Protocol on Prohibitions or Restrictions on the Use of Mines, Booby-Traps and Other Devices, has passed its vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA12503;Excellent;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+EVTNAME12510;Mines & Booby Traps Convention UN Vote;;;;;;;;;;;;;x
+EVTDESC12510;We have the opportunity to vote on United Nations General Assembly Resolution 66/62 II, The Protocol on Prohibitions or Restrictions on the Use of Mines, Booby-Traps and Other Devices, at the UN General Assembly.\nWe can either vote For it, Abstain, or vote Against it.;;;;;;;;;;;;;x
+EVTOPTA12510;§GVote For;;;;;;;;;;;;;x
+EVTOPTB12510;Abstain;;;;;;;;;;;;;x
+EVTOPTC12510;§RVote Against;;;;;;;;;;;;;x
+EVTNAME12512;Ratified the Mines & Booby Traps Convention;;;;;;;;;;;;;x
+EVTDESC12512;We have ratified the UN Mines & Booby Traps Convention.;;;;;;;;;;;;;x
+EVTOPTA12512;Progress and civility will prevail.;;;;;;;;;;;;;x
+EVTNAME12514;Withdrawal from the Mines & Booby Traps Convention;;;;;;;;;;;;;x
+EVTDESC12514;We have withdrawn from the UN Mines & Booby Traps Convention.;;;;;;;;;;;;;x
+EVTOPTA12514;Good riddance.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

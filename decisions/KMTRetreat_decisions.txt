@@ -1,0 +1,188 @@
+#KMTRetreat_decisions.txt
+#1949 KMT Retreat to Taiwan
+	
+#CHC - Communist China:
+	#establish_the_prc_CHC			- Mao establishes the PRC
+	#ceasefire_with_KMT_CHC			- The PRC offers a ceasefire to the KMT in Taiwan
+	
+#USA - United States of America:
+	#blockade_taiwan_straight_USA 	- The USA protects the Chinese Nationalists on Taiwan
+
+
+diplomatic_decisions = {
+## CHC ##
+	#Establish the PRC
+	establish_the_prc_CHC = {
+		category = national
+	    picture = "1949_mao_declares_prc"
+		
+		potential = {
+			NOT = {
+				has_country_flag = prc_established
+			}
+			tag = CHC
+			is_subject = no
+			CHI = {
+				exists = yes
+				is_subject = no
+			}
+			controls = 12907
+			num_of_cities = 30
+		}
+			
+		allow = {
+			NOT = {
+				lost_national = 0.5
+			}
+			controls = 12909
+			controls = 12575
+			controls = 12398
+			controls = 13186
+			controls = 12651
+			controls = 13057
+			#province controlled > 200
+			CHI = {
+				OR = {
+					lost_national = 0.75
+					NOT = {
+						national_unity = 25
+					}
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			set_country_flag = prc_established
+			capital = 12907
+			national_unity = 50
+			prestige_change = 20
+			popularity = 20
+			CHC = { country_event = 151020 }
+			any_country = {
+				limit = {
+					tag = CHI
+					controls = 13189
+				}
+				country_event = 152050
+			}
+			any_country = {
+				limit = {
+					tag = CHI
+					NOT = {
+						controls = 13189
+					}
+				}
+				country_event = 152051
+			}
+			any_country = {
+				limit = {
+					NOT = {
+						OR = {
+							tag = CHC
+							tag = CHI
+						}
+					}
+				}
+				country_event = 151021
+			}
+		}
+	}
+
+	#Ceasefire with the KMT in Taiwan
+	ceasefire_with_KMT_CHC = {
+		category = national
+	    picture = "1949_roc_chiang_kai"
+		
+		potential = {
+			NOT = {
+				has_country_flag = ceasefire_with_KMT
+			}
+			tag = CHC
+			CHI = {
+				has_country_flag = retreat_to_taiwan
+				controls = 13189
+			}
+		}
+		allow = {
+			war_with = CHI
+		}
+		
+		ai_will_do = { 
+			factor = 0
+		}
+		
+		effect = {
+			set_country_flag = ceasefire_with_KMT
+			end_war = CHI
+			CHI = {
+				any_owned = {
+					limit = {
+						is_core = CHI
+						controlled_by = CHC
+					}
+					secede_province = CHC
+				}
+			}
+			#CHC = { country_event = 02a }
+			CHI = { country_event = 152052 }
+			any_country = {
+				limit = {
+					NOT = {
+						OR = {
+							tag = CHC
+							tag = CHI
+						}
+					}
+				}
+				country_event = 151023
+			}
+		}
+	}
+	
+## USA ##
+	#Blockade Taiwan Straight
+	blockade_taiwan_straight_USA = {
+	category = national
+	    picture = "1952_taiwan_strait_crisis"
+		potential = {
+			NOT = {
+				has_country_flag = taiwan_straight_blockaded
+			}
+			tag = USA
+			CHI = {
+				exists = yes
+				is_subject = no
+				has_country_flag = retreat_to_taiwan
+				controls = 13189 #Taipei
+			}
+				AND = {
+					NOT = {
+						relation = { who = CHC value = 0 }
+					}
+					has_country_flag = intervene_koreanwar_USA_done
+				}			
+		}
+		allow = {
+			NOT = {
+				war_with = CHI
+				war_with = CHC
+			}
+			total_amount_of_ships = 30
+		}
+		
+		ai_will_do = { 
+			factor = 1
+
+		}
+		
+		effect = {
+			set_country_flag = taiwan_straight_blockaded
+			relation = { who = CHI value = 50 }
+			prestige_change = 10
+			CHC = { country_event = 151024 }
+		}
+	}
+	
+}	

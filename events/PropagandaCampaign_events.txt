@@ -1,0 +1,2318 @@
+#PropagandaCampaign_events.txt
+#Propaganda Campaign
+
+#Global:
+	#2071 - Propaganda Campaign begins
+	
+	#2106 - The triumphs of our industries are celebrated
+	#2072 - Industrial worker productivity praised as an example for all
+	#2073 - Agricultural worker productivity praised as an example for all
+	#2074 - Capitalist entrepreneurship praised as an example for all
+	#2075 - Women's home-making praised as an example for all
+	#2076 - Radios distributed around the country
+	#2077 - Propaganda films toured across the country
+	#2078 - Films find success at foreign festivals
+	#2079 - Technological innovations showcased around country	
+	#2080 - Technological innovations showcased around the world
+	#2081 - Propaganda lectures held
+	#2082 - Propaganda town meetings held
+	#2083 - Propaganda posters on streets and in newspapers	
+	#2084 - Government radio stations promoted
+	#2085 - Foreign radio stations blocked
+	#2086 - National art advanced at exhibitions around the world
+	#2087 - International cultural performances promoted
+	#2088 - Doctors sent overseas to do good-works
+	#2089 - Leader's book of proverbs distributed
+	#2090 - New school textbooks published along government guidelines
+	#2091 - Leader's personal achievements lauded (personality cult)
+	#2092 - New statue of leader unveiled
+	#2093 - Bust of founding figure unveiled in capital
+	#2094 - Street renamed to honour national figure
+	#2095 - Memorial to war heroes unveiled
+	#2096 - Foreign academics funded
+	#2097 - Foreign newspaper funded
+	#2098 - Foreign protest movement funded
+	#2099 - Emigres community recruited to our propgaganda campaign
+	#2100 - Trade union leaders co-opted to distribute propaganda material
+	#2101 - Foreign front organisation promulgates our propaganda offensive - prestige
+	#2102 - Foreign front organisation (friendship society) promulgates our propaganda offensive - relations
+	#2103 - Foreign organisation promulgates our international peace campaign
+	#2104 - Head of state addresses the nation via radio
+	#2105 - Head of state addresses the nation in a televised address
+	
+	#2110 - Troublesome academics obstructing propaganda campaign 
+	#2111 - Propaganda Campaign Over
+	#2112 - Propaganda Campaign Over due to war	
+	
+	
+## Global ##
+	#2071 - Propaganda Campaign begins
+	country_event = {
+		
+		id = 2071
+
+		is_triggered_only = yes
+
+		title = "EVTNAME2071"
+		desc = "EVTDESC2071"
+		picture = "propaganda_poster_anti-capitalism"
+
+		option = {
+			name = "EVTOPTA2071"			    			# Outwards-focused Propaganda Campaign
+			clr_country_flag = propaganda_campaign_start
+			set_country_flag = propaganda_campaign
+			add_country_modifier = {
+				name = propaganda_campaign_outwards
+				duration = 182
+			}
+		}
+
+		option = {
+			name = "EVTOPTB2071"			    			# Inwards-focused Propaganda Campaign
+			clr_country_flag = propaganda_campaign_start
+			set_country_flag = propaganda_campaign
+			add_country_modifier = {
+				name = propaganda_campaign_inwards
+				duration = 182
+			}
+		}
+	}
+	
+	#2106 - The triumphs of our industries are celebrated
+	country_event = {
+		
+		id = 2106			#The triumphs of our industries are celebrated
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			NOT = {
+				ideology = market_liberal_idolg
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 1200
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.75
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 0.67
+				domestic_policy = industrial_focus_pol
+			}
+			modifier = {
+				factor = 0.67
+				economic_policy = industrial_policy_pol
+			}
+		}
+
+		title = "EVTNAME2106"
+		desc = "EVTDESC2106"
+		picture = "propaganda_poster_industry"
+		
+		option = {
+			name = "EVTOPTA2106"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_industry_triumphs
+				duration = 182
+			}
+			prestige_change = 5
+		}
+	}
+	
+	#2072 - Industrial worker productivity praised as an example for all
+	country_event = {
+		
+		id = 2072			#Industrial worker productivity praised as an example for all
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			NOT = {
+				ideology = market_liberal_idolg
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 1200
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					ideology = left_wing_radical_idolg
+					ideology = paternal_auto_idolg
+					ideology_group = comintern
+				}
+			}
+			modifier = {
+				factor = 0.75
+				ideology = communist_idolg
+			}
+			modifier = {
+				factor = 0.5
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = industrial_focus_pol
+			}
+			modifier = {
+				factor = 0.50
+				economic_policy = industrial_policy_pol
+			}
+		}
+
+		title = "EVTNAME2072"
+		desc = "EVTDESC2072"
+		picture = "propaganda_poster_factory_worker"
+		
+		option = {
+			name = "EVTOPTA2072"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_industrial_efficiency
+				duration = 91
+			}
+			national_unity = 2
+		}
+	}
+
+	#2073 - Agricultural worker productivity praised as an example for all
+	country_event = {
+		
+		id = 2073			#Agricultural worker productivity praised as an example for all
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			NOT = {
+				ideology = market_liberal_idolg
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 1200
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					ideology = left_wing_radical_idolg
+					ideology = paternal_auto_idolg
+					ideology_group = comintern
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					ideology = maoist_idolg
+					ideology = fascistic_idolg
+				}
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = agricultural_focus_pol
+			}
+			modifier = {
+				factor = 0.50
+				economic_policy = agrarian_based_policy_pol
+			}
+		}
+
+		title = "EVTNAME2073"
+		desc = "EVTDESC2073"
+		picture = "propaganda_poster_agriculture"
+		
+		option = {
+			name = "EVTOPTA2073"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_agricultural_efficiency
+				duration = 91
+			}
+			national_unity = 1
+		}
+	}
+
+	#2074 - Capitalist entrepreneurship praised as an example for all
+	country_event = {
+		
+		id = 2074			#Capitalist entrepreneurship praised as an example for all
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			NOT = {
+				ideology_group = comintern
+				ideology = fascistic_idolg
+				ideology = left_wing_radical_idolg
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 1200
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.50
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					ideology = social_democrat_idolg
+					ideology = paternal_auto_idolg
+				}
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = commercial_focus_pol
+			}
+			modifier = {
+				factor = 0.50
+				economic_policy = supply_side_eco_pol
+			}
+		}
+
+		title = "EVTNAME2074"
+		desc = "EVTDESC2074"
+		picture = "propaganda_poster_entrepreneur"
+		
+		option = {
+			name = "EVTOPTA2073"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_capitalist_efficiency
+				duration = 91
+			}
+			national_unity = 1
+		}
+	}
+
+	#2075 - Women's home-making praised as an example for all
+	country_event = {
+		
+		id = 2075			#Women's home-making praised as an example for all
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			OR = {
+				ideology = paternal_auto_idolg
+				ideology = fascistic_idolg
+				ideology = social_cons_idolg
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 1200
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.50
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = health_focus_pol
+			}
+			modifier = {
+				factor = 0.90
+				economic_policy = agrarian_based_policy_pol
+			}
+		}
+
+		title = "EVTNAME2075"
+		desc = "EVTDESC2075"
+		picture = "propaganda_housewife"
+		
+		option = {
+			name = "EVTOPTA2075"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_homemaker_efficiency
+				duration = 91
+			}
+			national_unity = 1
+		}
+	}
+
+	#2076 - Radios distributed around the country
+	country_event = {
+		
+		id = 2076			#Radios distributed around the country
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			industry_electronics = 2
+			OR = {
+				freedom_of_the_press = propaganda_press
+				freedom_of_the_press = state_press
+				freedom_of_the_press = censored_press
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					ideology = fascistic_idolg
+					ideology_group = comintern
+				}
+			}
+		}
+
+		title = "EVTNAME2076"
+		desc = "EVTDESC2076"
+		picture = "propaganda_radio"
+		
+		option = {
+			name = "EVTOPTA2076"			    			# O.K.
+			random_list = {
+				20 = {
+				}
+				20 = {
+					national_unity = 1
+				}
+				20 = {
+					national_unity = 2
+				}
+				20 = {
+					popularity = 1
+				}
+				20 = {
+					popularity = 2
+				}
+			}
+		}
+	}
+
+	#2077 - Propaganda films toured across the country
+	country_event = {
+		
+		id = 2077			#Propaganda films toured across the country
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					ideology = fascistic_idolg
+					ideology_group = comintern
+				}
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					domestic_policy = educational_focus_pol
+					domestic_policy = social_focus_pol
+				}
+			}
+		}
+
+		title = "EVTNAME2077"
+		desc = "EVTDESC2077"
+		picture = "propaganda_movie"
+		
+		option = {
+			name = "EVTOPTA2077"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_films_toured_nationally
+				duration = 182
+			}
+		}
+	}
+
+	#2078 - Films find success at foreign festivals
+	country_event = {
+		
+		id = 2078			#Films find success at foreign festivals
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_outwards
+			}
+			modifier = {
+				factor = 1.25
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					ideology = fascistic_idolg
+					ideology_group = comintern
+					ideology = paternal_auto_idolg
+				}
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					domestic_policy = educational_focus_pol
+					domestic_policy = social_focus_pol
+				}
+			}
+		}
+
+		title = "EVTNAME2078"
+		desc = "EVTDESC2078"
+		picture = "propaganda_movie_festival"
+		
+		option = {
+			name = "EVTOPTA2078"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_films_toured_internationally
+				duration = 182
+			}
+		}
+	}
+
+	#2079 - Technological innovations showcased around country
+	country_event = {
+		
+		id = 2079			#Technological innovations showcased around country
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					ideology = fascistic_idolg
+					ideology = paternal_auto_idolg
+				}
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = educational_focus_pol
+			}
+			
+			modifier = {
+				factor = 0.75
+				economic_policy = technology_based_eco_pol
+			}
+		}
+
+		title = "EVTNAME2079"
+		desc = "EVTDESC2079"
+		picture = "1959_propaganda_innovation_showcase"
+		
+			
+		option = {
+			name = "EVTOPTA2079"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_innovation_toured_nationally
+				duration = 182
+			}
+		}
+	}
+
+	#2080 - Technological innovations showcased around the world
+	country_event = {
+		
+		id = 2080			#Technological innovations showcased around the world
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_outwards
+			}
+			modifier = {
+				factor = 1.25
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					ideology = fascistic_idolg
+					ideology = paternal_auto_idolg
+				}
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = educational_focus_pol
+			}
+			
+			modifier = {
+				factor = 0.75
+				economic_policy = technology_based_eco_pol
+			}
+		}
+
+		title = "EVTNAME2080"
+		desc = "EVTDESC2080"
+		picture = "1959_propaganda_innovation_showcase"
+		
+		option = {
+			name = "EVTOPTA2080"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_innovation_toured_internationally
+				duration = 182
+			}
+		}
+	}
+
+	#2081 - Propaganda lectures held
+	country_event = {
+
+		id = 2081			#Propaganda lectures held
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 1460
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.33
+				OR = {
+					ideology = fascistic_idolg
+					ideology_group = comintern
+					ideology = left_wing_radical_idolg
+				}
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = educational_focus_pol
+			}
+			
+			modifier = {
+				factor = 0.90
+				domestic_policy = social_focus_pol
+			}
+		}
+
+		title = "EVTNAME2081"
+		desc = "EVTDESC2081"
+		picture = "1958_DDR_parteitag_SED"
+		
+		option = {
+			name = "EVTOPTA2081"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_lectures
+				duration = 182
+			}
+		}
+	}
+
+	#2082 - Propaganda town meetings held
+	country_event = {
+
+		id = 2082			#Propaganda town meetings held
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					ideology = fascistic_idolg
+					ideology_group = comintern
+					ideology = left_wing_radical_idolg
+				}
+			}
+			modifier = {
+				factor = 0.90
+				domestic_policy = educational_focus_pol
+			}
+			
+			modifier = {
+				factor = 0.75
+				domestic_policy = social_focus_pol
+			}
+		}
+
+		title = "EVTNAME2082"
+		desc = "EVTDESC2082"
+		picture = "1960_Castro_speech"
+		
+		option = {
+			name = "EVTOPTA2082"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_town_meetings
+				duration = 182
+			}
+		}
+	}
+
+	#2083 - Propaganda posters on streets and in newspapers	
+	country_event = {
+
+		id = 2083			#Propaganda posters on streets and in newspapers
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			OR = {
+				freedom_of_the_press = propaganda_press
+				freedom_of_the_press = state_press
+				freedom_of_the_press = censored_press
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					ideology = fascistic_idolg
+					ideology_group = comintern
+					ideology = left_wing_radical_idolg
+				}
+			}
+			modifier = {
+				factor = 1.5
+				freedom_of_the_press = censored_press
+			}
+			modifier = {
+				factor = 0.75
+				freedom_of_the_press = propaganda_press
+			}
+			modifier = {
+				factor = 0.90
+				domestic_policy = educational_focus_pol
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = social_focus_pol
+			}
+		}
+
+		title = "EVTNAME2083"
+		desc = "EVTDESC2083"
+		picture = "1976_street_Moscow"
+		
+		option = {
+			name = "EVTOPTA2083"			    			# Poster Option 1
+			random_list = {
+				10 = {
+				}
+				30 = {
+					add_country_modifier = {
+						name = propaganda_posters_1
+						duration = 91
+					}
+				}
+				30 = {
+					add_country_modifier = {
+						name = propaganda_posters_1
+						duration = 182
+					}
+				}
+				30 = {
+					add_country_modifier = {
+						name = propaganda_posters_1
+						duration = 274
+					}
+				}
+			}
+		}
+		
+		option = {
+			name = "EVTOPTB2083"			    			# Poster Option 2
+			random_list = {
+				10 = {
+				}
+				30 = {
+					add_country_modifier = {
+						name = propaganda_posters_2
+						duration = 91
+					}
+				}
+				30 = {
+					add_country_modifier = {
+						name = propaganda_posters_2
+						duration = 182
+					}
+				}
+				30 = {
+					add_country_modifier = {
+						name = propaganda_posters_2
+						duration = 274
+					}
+				}
+			}
+		}
+		
+		option = {
+			name = "EVTOPTC2083"			    			# Poster Option 3
+			random_list = {
+				10 = {
+				}
+				30 = {
+					add_country_modifier = {
+						name = propaganda_posters_3
+						duration = 91
+					}
+				}
+				30 = {
+					add_country_modifier = {
+						name = propaganda_posters_3
+						duration = 182
+					}
+				}
+				30 = {
+					add_country_modifier = {
+						name = propaganda_posters_3
+						duration = 274
+					}
+				}
+			}
+		}
+	}
+
+	#2084 - Government radio stations promoted
+	country_event = {
+
+		id = 2084			#Government radio stations promoted
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			industry_electronics = 2
+			OR = {
+				freedom_of_the_press = propaganda_press
+				freedom_of_the_press = state_press
+				freedom_of_the_press = censored_press
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					ideology = fascistic_idolg
+				}
+			}
+			modifier = {
+				factor = 1.5
+				freedom_of_the_press = censored_press
+			}
+			modifier = {
+				factor = 0.75
+				freedom_of_the_press = propaganda_press
+			}
+			modifier = {
+				factor = 0.90
+				domestic_policy = educational_focus_pol
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = social_focus_pol
+			}
+		}
+
+		title = "EVTNAME2084"
+		desc = "EVTDESC2084"
+		picture = "Radio_Moscow"
+		
+		option = {
+			name = "EVTOPTA2084"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_radio_stations_promoted
+				duration = 365
+			}
+		}
+	}
+
+	#2085 - Foreign radio stations blocked
+	country_event = {
+
+		id = 2085			#Foreign radio stations blocked
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			industry_electronics = 3
+			OR = {
+				freedom_of_the_press = propaganda_press
+				freedom_of_the_press = state_press
+				freedom_of_the_press = censored_press
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					ideology = fascistic_idolg
+				}
+			}
+			modifier = {
+				factor = 1.5
+				freedom_of_the_press = censored_press
+			}
+			modifier = {
+				factor = 0.75
+				freedom_of_the_press = propaganda_press
+			}
+			modifier = {
+				factor = 0.90
+				domestic_policy = defence_focus_pol
+			}
+			modifier = {
+				factor = 0.90
+				domestic_policy = technology_based_eco_pol
+			}
+		}
+
+		title = "EVTNAME2085"
+		desc = "EVTDESC2085"
+		picture = "Soviet_Radio_jsmming_VGDSh_dipoles"
+		
+		option = {
+			name = "EVTOPTA2085"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_radio_stations_blocked
+				duration = 365
+			}
+		}
+	}
+
+	#2086 - National art advanced at exhibitions around the world
+	country_event = {
+		
+		id = 2086			#National art advanced at exhibitions around the world
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_outwards
+			}
+			modifier = {
+				factor = 1.25
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					ideology = fascistic_idolg
+					ideology_group = comintern
+					ideology = paternal_auto_idolg
+				}
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					domestic_policy = educational_focus_pol
+					domestic_policy = social_focus_pol
+				}
+			}
+		}
+
+		title = "EVTNAME2086"
+		desc = "EVTDESC2086"
+		picture = "1945_Soviet_art"
+		
+		option = {
+			name = "EVTOPTA2086"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_art_toured_internationally
+				duration = 182
+			}
+		}
+	}
+
+	#2087 - International cultural performances promoted
+	country_event = {
+		
+		id = 2087			#International cultural performances promoted
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_outwards
+			}
+			modifier = {
+				factor = 1.25
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					ideology = fascistic_idolg
+					ideology_group = comintern
+					ideology = paternal_auto_idolg
+				}
+			}
+			modifier = {
+				factor = 1.50
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					domestic_policy = social_focus_pol
+					domestic_policy = health_focus_pol
+				}
+			}
+		}
+
+		title = "EVTNAME2087"
+		desc = "EVTDESC2087"
+		picture = "1965_Soviet_dance_performance"
+		
+		option = {
+			name = "EVTOPTA2087"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_culture_toured_internationally
+				duration = 182
+			}
+		}
+	}
+
+	#2088 - Doctors sent overseas to do good-works
+	country_event = {
+		
+		id = 2088			#Doctors sent overseas to do good-works
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			NOT = {
+				ideology = fascistic_idolg
+				ideology = market_liberal_idolg
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 912
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_outwards
+			}
+			modifier = {
+				factor = 1.50
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 0.75
+				ideology_group = comintern
+			}
+			modifier = {
+				factor = 0.67
+				domestic_policy = health_focus_pol
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					economic_policy = indicative_planning_pol
+					economic_policy = five-year_planning_pol
+				}
+			}
+		}
+
+		title = "EVTNAME2088"
+		desc = "EVTDESC2088"
+		picture = "1970_Soviet_doctor_Iraq"
+		
+		option = {
+			name = "EVTOPTA2088"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_doctors_sent_overseas
+				duration = 365
+			}
+		}
+	}
+
+	#2089 - Leader's book of proverbs distributed
+	country_event = {
+		
+		id = 2089			#Leader's book of proverbs distributed
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			OR = {
+				government = absolute_monarchy_gov
+				government = theocracy_gov
+				government = authoritarian_gov
+				government = totalitarian_gov
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 1095
+			modifier = {
+				factor = 0.50
+				elections_and_voting = hereditary_rule
+			}
+			modifier = {
+				factor = 0.90
+				freedom_of_the_press = state_press
+			}
+			modifier = {
+				factor = 0.75
+				freedom_of_the_press = propaganda_press
+			}
+		}
+
+		title = "EVTNAME2089"
+		desc = "EVTDESC2089"
+		picture = "1975_Green_Book"
+		
+		option = {
+			name = "EVTOPTA2089"			    			# O.K.
+			national_unity = 2
+			prestige_change = 20
+			popularity = 1
+			#Perhaps increase the power/prestige of the country's ideology, if such an effect is later added
+		}
+	}
+
+	#2090 - New school textbooks published along government guidelines
+	country_event = {
+		
+		id = 2090			#New school textbooks published along government guidelines
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			OR = {
+				freedom_of_the_press = propaganda_press
+				freedom_of_the_press = state_press
+				freedom_of_the_press = censored_press
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 1.5
+				freedom_of_the_press = censored_press
+			}
+			modifier = {
+				factor = 0.75
+				freedom_of_the_press = propaganda_press
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = educational_focus_pol
+			}
+		}
+
+		title = "EVTNAME2090"
+		desc = "EVTDESC2090"
+		picture = "Communist_school_books"
+		
+		
+		option = {
+			name = "EVTOPTA2090"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_school_textbooks
+				duration = 730
+			}
+		}
+	}
+
+	#2091 - Leader's personal achievements lauded (personality cult)
+	country_event = {
+		
+		id = 2091			#Leader's personal achievements lauded (personality cult)
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			OR = {
+				government = absolute_monarchy_gov
+				government = theocracy_gov
+				government = authoritarian_gov
+				government = totalitarian_gov
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.75
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 0.50
+				elections_and_voting = hereditary_rule
+			}
+			modifier = {
+				factor = 0.90
+				freedom_of_the_press = state_press
+			}
+			modifier = {
+				factor = 0.75
+				freedom_of_the_press = propaganda_press
+			}
+		}
+
+		title = "EVTNAME2091"
+		desc = "EVTDESC2091"
+		picture = "1951_Eva_Juan_Peron"
+		
+		
+		option = {
+			name = "EVTOPTA2091"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_leader_achievements
+				duration = 730
+			}
+		}
+	}
+
+	#2092 - New statue of leader unveiled
+	country_event = {
+		
+		id = 2092			#New statue of leader unveiled
+		
+		trigger = {
+			has_country_flag = propaganda_campaign
+			OR = {
+				government = absolute_monarchy_gov
+				government = theocracy_gov
+				government = authoritarian_gov
+				government = totalitarian_gov
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.75
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 0.50
+				elections_and_voting = hereditary_rule
+			}
+		}
+
+		title = "EVTNAME2092"
+		desc = "EVTDESC2092"
+		picture = "2010_statue_unveiled"
+		
+		
+		option = {
+			name = "EVTOPTA2092"			    			# O.K.
+			prestige_change = 15
+		}
+	}
+
+	#2093 - Bust of founding figure unveiled in capital
+	country_event = {
+		
+		id = 2093			#Bust of founding figure unveiled in capital
+		
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 1460
+			modifier = {
+				factor = 0.90
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 0.90
+				national_identity = civic_focus
+			}
+			modifier = {
+				factor = 0.75
+				national_identity = state_building_focus
+			}
+			modifier = {
+				factor = 1.25
+				economic_policy = supply_side_eco_pol
+			}
+		}
+
+		title = "EVTNAME2093"
+		desc = "EVTDESC2093"
+		picture = "Bust_Thomas_Jefferson"
+		
+		
+		option = {
+			name = "EVTOPTA2093"			    			# O.K.
+			national_unity = 1
+			prestige_change = 5
+		}
+	}
+
+	#2094 - Street renamed to honour national figure
+	country_event = {
+		
+		id = 2094			#Street renamed to honour national figure
+		
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 1460
+			modifier = {
+				factor = 0.90
+				national_identity = civic_focus
+			}
+			modifier = {
+				factor = 0.75
+				national_identity = state_building_focus
+			}
+		}
+
+		title = "EVTNAME2094"
+		desc = "EVTDESC2094"
+		picture = "1982_unveiling_street_sign"
+		
+		
+		option = {
+			name = "EVTOPTA2094"			    			# O.K.
+			national_unity = 1
+			prestige_change = 5
+		}
+	}
+
+	#2095 - Memorial to war heroes unveiled
+	country_event = {
+		
+		id = 2095			#Memorial to war heroes unveiled
+		
+		trigger = {
+			has_country_flag = propaganda_campaign
+			OR = {
+				year = 1975
+				NOT = {
+					tag = GER
+					tag = DDR
+					tag = JAP
+					tag = ITA
+					tag = HUN
+					tag = ROM
+					tag = BUL
+					tag = SIA
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 1460
+			modifier = {
+				factor = 0.75
+				domestic_policy = defence_focus_pol
+			}
+			modifier = {
+				factor = 0.90
+				national_identity = state_building_focus
+			}
+			modifier = {
+				factor = 0.90
+				national_identity = territorial_focus
+			}
+		}
+
+		title = "EVTNAME2095"
+		desc = "EVTDESC2095"
+		picture = "1946_Polish_war_memorial"
+		
+		
+		option = {
+			name = "EVTOPTA2095"			    			# O.K.
+			national_unity = 1
+			prestige_change = 5
+		}
+	}
+
+	#2096 - Foreign academics funded
+	country_event = {
+		
+		id = 2096			#Foreign academics funded
+		
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 912
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_outwards
+			}
+			modifier = {
+				factor = 0.90
+				domestic_policy = educational_focus_pol
+			}
+			modifier = {
+				factor = 0.90
+				economic_policy = technology_based_eco_pol
+			}
+			modifier = {
+				factor = 2
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.25
+				foreign_policy = dove_policy_pol
+			}
+			modifier = {
+				factor = 0.75
+				education_policy = very_high_funding_edu_pol
+			}
+			modifier = {
+				factor = 0.90
+				education_policy = high_funding_edu_pol
+			}
+			modifier = {
+				factor = 1.15
+				education_policy = low_funding_edu_pol
+			}
+			modifier = {
+				factor = 1.5
+				education_policy = very_low_funding_edu_pol
+			}
+			modifier = {
+				factor = 1.25
+				economic_policy = supply_side_eco_pol
+			}
+		}
+
+		title = "EVTNAME2096"
+		desc = "EVTDESC2096"
+		picture = "1970_TNO_LEOK"
+		
+		option = {
+			name = "EVTOPTA2096"			    			# O.K.
+			random_country = {
+				limit = {
+					NOT = {
+						tag = THIS
+						ideology = THIS
+						relation = { who = THIS value = -50 }
+						alliance_with = THIS
+					}
+					num_of_cities = 10
+				}
+				random_list = {
+					20 = {
+					}
+					20 = {
+						dissent = -1
+					}
+					40 = {
+						popularity = -1
+					}
+					15 = {
+						national_unity = -1
+					}
+					5 = {
+						THIS = {				#Check that this works
+							neutrality = -1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#2097 - Foreign newspaper funded
+	country_event = {
+		
+		id = 2097			#Foreign newspaper funded
+		
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 912
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_outwards
+			}
+			modifier = {
+				factor = 0.90
+				domestic_policy = educational_focus_pol
+			}
+			modifier = {
+				factor = 0.90
+				economic_policy = technology_based_eco_pol
+			}
+			modifier = {
+				factor = 2
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.25
+				foreign_policy = dove_policy_pol
+			}
+			modifier = {
+				factor = 0.75
+				education_policy = very_high_funding_edu_pol
+			}
+			modifier = {
+				factor = 0.90
+				education_policy = high_funding_edu_pol
+			}
+			modifier = {
+				factor = 1.15
+				education_policy = low_funding_edu_pol
+			}
+			modifier = {
+				factor = 1.5
+				education_policy = very_low_funding_edu_pol
+			}
+			modifier = {
+				factor = 1.25
+				economic_policy = supply_side_eco_pol
+			}
+		}
+
+		title = "EVTNAME2097"
+		desc = "EVTDESC2097"
+		picture = "1960_IHT_cover_Europe"
+		
+		option = {
+			name = "EVTOPTA2097"			    			# O.K.
+			random_country = {
+				limit = {
+					NOT = {
+						tag = THIS
+						ideology = THIS
+						relation = { who = THIS value = -50 }
+						alliance_with = THIS
+					}
+					num_of_cities = 10
+				}
+				random_list = {
+					20 = {
+					}
+					20 = {
+						popularity = -1
+					}
+					40 = {
+						popularity = -2
+					}
+					15 = {
+						national_unity = -1
+					}
+					5 = {
+						THIS = {				#Check that this works
+							neutrality = -1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	country_event = {
+		
+		id = 2098			#Foreign protest movement funded
+		
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 912
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_outwards
+			}
+			modifier = {
+				factor = 0.90
+				domestic_policy = social_focus_pol
+			}
+			modifier = {
+				factor = 0.90
+				economic_policy = development_eco_pol
+			}
+			modifier = {
+				factor = 2
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.25
+				foreign_policy = dove_policy_pol
+			}
+			modifier = {
+				factor = 1.25
+				economic_policy = supply_side_eco_pol
+			}
+		}
+
+		title = "EVTNAME2098"
+		desc = "EVTDESC2098"
+		picture = "1983_KKN_protest_march"
+		
+		option = {
+			name = "EVTOPTA2098"			    			# O.K.
+			random_country = {
+				limit = {
+					NOT = {
+						tag = THIS
+						ideology = THIS
+						relation = { who = THIS value = -50 }
+						alliance_with = THIS
+					}
+					num_of_cities = 10
+				}
+				random_list = {
+					20 = {
+					}
+					20 = {
+						dissent = 1
+					}
+					40 = {
+						dissent = 2
+					}
+					15 = {
+						national_unity = -2
+					}
+					5 = {
+						THIS = {				#Check that this works
+							neutrality = -1
+						}
+						national_unity = 1
+					}
+				}
+			}
+		}
+	}
+
+	#2099 - Emigres community recruited to our propgaganda campaign
+	country_event = {
+		
+		id = 2099			#Emigres community recruited to our propgaganda campaign
+		
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 912
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_outwards
+			}
+			modifier = {
+				factor = 0.90
+				domestic_policy = social_focus_pol
+			}
+			modifier = {
+				factor = 0.90
+				economic_policy = development_eco_pol
+			}
+			modifier = {
+				factor = 2
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.25
+				foreign_policy = dove_policy_pol
+			}
+			modifier = {
+				factor = 1.25
+				economic_policy = supply_side_eco_pol
+			}
+		}
+
+		title = "EVTNAME2099"
+		desc = "EVTDESC2099"
+		picture = "1965_new_york_street_scene"
+		
+		
+		option = {
+			name = "EVTOPTA2099"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_emigres_coopted
+				duration = 365
+			}
+		}
+	}
+
+	#2100 - Trade union leaders co-opted to distribute propaganda material
+	country_event = {
+		
+		id = 2100			#Trade union leaders co-opted to distribute propaganda material
+		
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 912
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.90
+				domestic_policy = social_focus_pol
+			}
+			modifier = {
+				factor = 0.90
+				economic_policy = development_eco_pol
+			}
+			modifier = {
+				factor = 1.25
+				economic_policy = supply_side_eco_pol
+			}
+		}
+
+		title = "EVTNAME2100"
+		desc = "EVTDESC2100"
+		picture = "1965_unloading_truck"
+		
+		
+		option = {
+			name = "EVTOPTA2100"			    			# O.K.
+			add_country_modifier = {
+				name = propaganda_trade_unions_coopted
+				duration = 365
+			}
+		}
+	}
+
+	#2101 - Foreign front organisation promulgates our propaganda offensive - prestige
+	country_event = {
+		
+		id = 2101			#Foreign front organisation promulgates our propaganda offensive - prestige
+		
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 912	
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_outwards
+			}
+			modifier = {
+				factor = 2
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.2
+				foreign_policy = dove_policy_pol
+			}
+			modifier = {
+				factor = 0.90
+				domestic_policy = containment_pol
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = hardline_pol
+			}
+			modifier = {
+				factor = 0.90
+				ideology_group = conintern
+			}
+		}
+
+		title = "EVTNAME2101"
+		desc = "EVTDESC2101"
+		picture = "1975_Takeo_Miki_at_UN"
+		
+		
+		option = {
+			name = "EVTOPTA2101"			    			# Focus their effort on increasing our prestige
+			random_list = {
+				20 = {
+				}
+				20 = {
+					prestige_change = 25
+				}
+				40 = {
+					prestige_change = 10
+				}
+				15 = {
+					prestige_change = -10
+				}
+				5 = {
+					neutrality = -1
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTB2101"			    			# Focus their effort on decreasing the prestige of a foreign nation
+			random_country = {
+				limit = {
+					NOT = {
+						tag = THIS
+						ideology = THIS
+						relation = { who = THIS value = -50 }
+						alliance_with = THIS
+					}
+					num_of_cities = 10
+				}
+				random_list = {
+					20 = {
+					}
+					20 = {
+						prestige_change = -25
+					}
+					40 = {
+						prestige_change = -10
+					}
+					15 = {
+						prestige_change = 10
+					}
+					5 = {
+						THIS = {				#Check that this works
+							neutrality = -1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#2102 - Foreign front organisation (friendship society) promulgates our propaganda offensive - relations
+	country_event = {
+		
+		id = 2102			#Foreign front organisation (friendship society) promulgates our propaganda offensive - relations
+		
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 912	
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_outwards
+			}
+			modifier = {
+				factor = 2
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.2
+				foreign_policy = dove_policy_pol
+			}
+			modifier = {
+				factor = 0.90
+				domestic_policy = containment_pol
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = hardline_pol
+			}
+			modifier = {
+				factor = 0.90
+				ideology_group = conintern
+			}
+		}
+
+		title = "EVTNAME2102"
+		desc = "EVTDESC2102"
+		picture = "1970_Friendship_Society"
+		
+		
+		option = {
+			name = "EVTOPTA2102"			    			# Focus their effort on increasing our relations with the friendly country
+			random_country = {
+				limit = {
+					NOT = {
+						tag = THIS
+					}
+					relation = { who = THIS value = 50 }
+					num_of_cities = 10
+					OR = {
+						relation = { who = THIS value = 125 }
+						military_access = THIS
+						alliance_with = THIS
+						ideology = THIS							#Check if this is a valid trigger use
+					}
+				}
+				random_list = {
+					20 = {
+					}
+					20 = {
+						relation = { who = THIS value = 20 }
+					}
+					40 = {
+						relation = { who = THIS value = 60 }
+					}
+					15 = {
+						relation = { who = THIS value = -10 }
+					}
+					5 = {
+						THIS = {
+							neutrality = -1
+						}
+					}
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTB2102"			    			# Focus their effort on decreasing the relations of the friendly country with an enemy country
+			random_country = {								#Check if this double nesting works
+				limit = {
+					NOT = {
+						tag = THIS
+					}
+					relation = { who = THIS value = 50 }
+					num_of_cities = 10
+					OR = {
+						relation = { who = THIS value = 125 }
+						military_access = yes
+						alliance_with = THIS
+						ideology = THIS							#Check if this is a valid trigger use
+					}
+				}
+				random_country = {
+					limit = {
+						NOT = {
+							tag = THIS
+							ideology = THIS
+							relation = { who = THIS value = -50 }
+							alliance_with = THIS
+						}
+						num_of_cities = 10
+					}
+					random_list = {
+						20 = {
+						}
+						20 = {
+							relation = { who = FROM value = -20 }
+						}
+						40 = {
+							relation = { who = FROM value = -60 }
+						}
+						15 = {
+							relation = { who = FROM value = 10 }
+						}
+						5 = {
+							THIS = {
+								neutrality = -1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#2103 - Foreign organisation promulgates our international peace campaign
+	country_event = {
+		
+		id = 2103			#Foreign organisation promulgates our international peace campaign
+		
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 912	
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_outwards
+			}
+			modifier = {
+				factor = 0.5
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 0.80
+				foreign_policy = dove_policy_pol
+			}
+			modifier = {
+				factor = 1.15
+				domestic_policy = containment_pol
+			}
+			modifier = {
+				factor = 1.50
+				domestic_policy = hardline_pol
+			}
+			modifier = {
+				factor = 0.90
+				ideology_group = conintern
+			}
+		}
+
+		title = "EVTNAME2103"
+		desc = "EVTDESC2103"
+		picture = "1975_Takeo_Miki_at_UN"
+		
+		
+		option = {
+			name = "EVTOPTA2103"			    			# Focus their effort on promoting our peacefulness
+			random_list = {
+				20 = {
+				}
+				30 = {
+					neutrality = 1
+				}
+				15 = {
+					war_exhaustion = -1
+				}
+				10 = {
+					prestige_change = 10
+				}
+				10 = {
+					neutrality = 2
+				}
+				10 = {
+					prestige_change = -5
+				}
+				5 = {
+					change_doomsday_clock = -1
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTB2103"			    			# Focus their effort on promoting the aggression of an enemy
+			trigger = { war = yes }
+			random_country = {
+				limit = {
+					war_with = THIS
+				}
+				random_list = {
+					20 = {
+					}
+					30 = {
+						neutrality = -1
+					}
+					15 = {
+						war_exhaustion = 1
+					}
+					10 = {
+						prestige_change = -10
+					}
+					10 = {
+						neutrality = -2
+					}
+					10 = {
+						prestige_change = 5
+					}
+					5 = {
+						change_doomsday_clock = 1
+					}
+				}
+			}
+		}
+	}
+
+	#2104 - Head of state addresses the nation via radio
+	country_event = {
+
+		id = 2104			#Head of state addresses the nation via radio
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			industry_electronics = 2
+			NOT = {
+				industry_electronics = 5
+			}
+			OR = {
+				freedom_of_the_press = propaganda_press
+				freedom_of_the_press = state_press
+				freedom_of_the_press = censored_press
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					ideology = fascistic_idolg
+				}
+			}
+			modifier = {
+				factor = 1.5
+				freedom_of_the_press = censored_press
+			}
+			modifier = {
+				factor = 0.75
+				freedom_of_the_press = propaganda_press
+			}
+			modifier = {
+				factor = 0.90
+				domestic_policy = educational_focus_pol
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = social_focus_pol
+			}
+		}
+
+		title = "EVTNAME2104"
+		desc = "EVTDESC2104"
+		picture = "1947_Radio_Moscow"
+		
+		option = {
+			name = "EVTOPTA2104"			    			# Focus on the nation's indivisibility
+			national_unity = 1.5
+			dissent = -0.5
+		}
+		
+		option = {
+			name = "EVTOPTB2104"			    			# Focus on the nation's prestige
+			prestige_change = 20
+		}
+	}
+
+	#2105 - Head of state addresses the nation in a televised address 
+	country_event = {
+
+		id = 2105			#Head of state addresses the nation in a televised address 
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+			industry_electronics = 4
+			OR = {
+				freedom_of_the_press = propaganda_press
+				freedom_of_the_press = state_press
+				freedom_of_the_press = censored_press
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 730
+			modifier = {
+				factor = 0.20
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					ideology = fascistic_idolg
+				}
+			}
+			modifier = {
+				factor = 1.5
+				freedom_of_the_press = censored_press
+			}
+			modifier = {
+				factor = 0.75
+				freedom_of_the_press = propaganda_press
+			}
+			modifier = {
+				factor = 0.90
+				domestic_policy = educational_focus_pol
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = social_focus_pol
+			}
+		}
+
+		title = "EVTNAME2105"
+		desc = "EVTDESC2105"
+		picture = "1980_Brezhnev_TV_address"
+		
+		option = {
+			name = "EVTOPTA2105"			    			# Focus on the nation's indivisibility
+			national_unity = 2
+			dissent = -1
+		}
+		
+		option = {
+			name = "EVTOPTB2105"			    			# Focus on the nation's prestige
+			prestige_change = 30
+		}
+	}
+
+	# Denigrate scapegoat community - not included for now
+
+	#2110 - Troublesome academics obstructing propaganda campaign 
+	country_event = {
+		
+		id = 2110			#Troublesome academics obstructing propaganda campaign 
+
+		trigger = {
+			has_country_flag = propaganda_campaign
+		}
+		
+		mean_time_to_happen = {
+			days = 1460
+			modifier = {
+				factor = 0.75
+				has_country_modifier = propaganda_campaign_inwards
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					ideology_group = comintern
+					ideology = fascistic_idolg
+					ideology = market_liberal_idolg
+				}
+			}
+			modifier = {
+				factor = 0.75
+				domestic_policy = educational_focus_pol
+			}
+			modifier = {
+				factor = 0.75
+				education_policy = very_high_funding_edu_pol
+			}
+			modifier = {
+				factor = 0.90
+				education_policy = high_funding_edu_pol
+			}
+			modifier = {
+				factor = 1.15
+				education_policy = low_funding_edu_pol
+			}
+			modifier = {
+				factor = 1.5
+				education_policy = very_low_funding_edu_pol
+			}
+		}
+
+		title = "EVTNAME2110"
+		desc = "EVTDESC2110"
+		picture = "1968_professors"
+		
+		option = {
+			name = "EVTOPTA2110"			    			# Silence them
+			national_unity = -2
+			prestige_change = -20
+		}
+		
+		option = {
+			name = "EVTOPTB2110"			    			# Permit their dissent
+			dissent = 2
+			popularity = -1
+		}
+		
+		option = {
+			name = "EVTOPTC2110"			    			# End the propaganda campaign
+			prestige_change = -5
+			clr_country_flag = propaganda_campaign
+		}
+	}
+
+	#2111 - Propaganda Campaign Over
+	country_event = {
+		
+		id = 2111		#Propaganda Campaign Over
+		
+		trigger = {
+			has_country_flag = propaganda_campaign
+			NOT = {
+				has_country_modifier = propaganda_campaign_inwards
+				has_country_modifier = propaganda_campaign_outwards
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME2111"
+		desc = "EVTDESC2111"
+		picture = "propaganda_finished"
+
+		option = {
+			name = "EVTOPTA2111"			    			# Propaganda Campaign Over
+			clr_country_flag = propaganda_campaign
+			add_country_modifier = {
+				name = propaganda_campaign_delay
+				duration = 1825
+			}
+		}
+	}
+
+	#2112 - Propaganda Campaign Over due to war
+	country_event = {
+		
+		id = 2112			#Propaganda Campaign Over due to war
+		
+		trigger = {
+			has_country_flag = propaganda_campaign
+			war = yes
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME2112"
+		desc = "EVTDESC2112"
+		picture = "propaganda_cancelled"
+		
+		immediate = { clr_country_flag = propaganda_campaign }
+
+		option = {
+			name = "EVTOPTA2112"			    			# Propaganda Campaign Over due to war
+			remove_country_modifier = propaganda_campaign_outwards
+			remove_country_modifier = propaganda_campaign_inwards
+			add_country_modifier = {
+				name = propaganda_campaign_delay
+				duration = 1825
+			}
+		}
+	}

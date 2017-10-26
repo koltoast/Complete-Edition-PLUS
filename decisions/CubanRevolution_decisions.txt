@@ -1,0 +1,41 @@
+#CubanRevolution_decisions.txt
+#1953 Cuban Revolution
+
+#USA - United States:
+	#dec_1952us_elections_cuba - Intervene in Cuban election
+
+
+diplomatic_decisions = {
+## USA ##
+	#dec_1952us_elections_cuba - Intervene in Cuban election
+	dec_USA_cuban_election_intervention = {
+	
+		category = international
+		picture = "1952_Venezoelan_elections"
+
+		potential = { 
+			tag = USA
+			exists = USA
+			exists = CUB
+			CUB = { is_subject = no }
+			CUB = { ideology = social_cons_idolg } #grau
+			NOT = { has_country_flag = CUB_intervention_start }
+		}
+		
+		allow = {
+			CUB = { ideology = social_liberal_idolg } #Socarrás
+		}
+
+		#######################THIS TRIGGER NEEDS WORK
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		effect = {
+			set_country_flag = CUB_intervention_start 
+			country_event = 164010
+		}
+	}
+}
+

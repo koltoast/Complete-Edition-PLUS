@@ -1,0 +1,338 @@
+
+
+diplomatic_decisions = {
+
+	#####  The Border War #####
+
+	dec_SAF_border_war = {
+		category = national
+		picture = "1975_Operation_Savannah"
+		potential = {
+			tag = SAF
+			exists = ANG
+			NOT = {
+				SAF = {
+				war_with = ANG
+				}
+			}
+		}
+		allow = {
+			ANG = {
+				has_country_flag = ANG_civil_war
+			}
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100
+			modifier = {
+				factor = 2
+				5773 = { controlled_by = REB }
+			}
+			modifier = {
+				factor = 2
+				5775 = { controlled_by = REB }
+			}
+			modifier = {
+				factor = 2
+				5954 = { controlled_by = REB }
+			}
+			modifier = {
+				factor = 1.75
+				ZMB = {
+					ideology = left_wing_radical_idolg
+				}
+			}
+			modifier = {
+				factor = 1.75
+				CNG = {
+					ideology = left_wing_radical_idolg
+				}
+			}
+		}
+		
+		effect = {
+			war = ANG
+			ANG = {
+				relation = { who = THIS value = -300 }
+			}
+		}
+	}
+	
+	
+	#####  Intervention Events for Border War #####	
+	
+	dec_SOV_angolan_issue = {
+		category = national
+		picture = "1975_Operation_Savannah"
+		potential = {
+			tag = SOV
+			SAF = {
+				war_with = ANG
+			}
+			ANG = {
+				OR = {
+					ideology = left_wing_radical_idolg
+					ideology_group = comintern
+				}
+			}
+			NOT = {
+				has_country_flag = angolan_issue
+			}
+		}
+		
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					money = 10000
+					supplies = 1000
+					#fuel = 200		#Does not exist as a trigger for some reason
+				}
+			}
+		}
+		
+		effect = {
+			country_event = 326020 		# Event 01 for SOV
+			set_country_flag = angolan_issue
+		}
+	}
+	
+	dec_DDR_angolan_issue = {
+		category = national
+		picture = "1975_Operation_Savannah"
+		potential = {
+			tag = DDR
+			SAF = {
+				war_with = ANG
+			}
+			ANG = {
+				OR = {
+					ideology = left_wing_radical_idolg
+					ideology_group = comintern
+				}
+			}
+			NOT = {
+				has_country_flag = angolan_issue
+			}
+		}
+		
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					money = 10000
+					supplies = 1000
+					#fuel = 200		#Does not exist as a trigger for some reason
+				}
+			}
+		}
+		
+		effect = {
+			country_event = 170000 		# Event 01 for DDR
+			set_country_flag = angolan_issue
+		}
+	}
+	
+	dec_USA_angolan_issue = {
+		category = national
+		picture = "1975_Operation_Savannah"
+		potential = {
+			tag = USA
+			SAF = {
+				war_with = ANG
+			}
+			ANG = {
+				OR = {
+					ideology = left_wing_radical_idolg
+					ideology_group = comintern
+				}
+			}
+			NOT = {
+				has_country_flag = angolan_issue
+			}
+		}
+		
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					money = 10000
+					supplies = 1000
+					#fuel = 200		#Does not exist as a trigger for some reason
+				}
+			}
+		}
+		
+		effect = {
+			country_event = 354020 		# Event 01 for USA
+			set_country_flag = angolan_issue
+		}
+	}
+	
+	dec_CHC_angolan_issue = {
+		category = national
+		picture = "1975_Operation_Savannah"
+		potential = {
+			tag = CHC
+			SAF = {
+				war_with = ANG
+			}
+			ANG = {
+				OR = {
+					ideology = left_wing_radical_idolg
+					ideology_group = comintern
+				}
+			}
+			NOT = {
+				has_country_flag = angolan_issue
+			}
+		}
+		
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					money = 10000
+					supplies = 1000
+					#fuel = 200		#Does not exist as a trigger for some reason
+				}
+			}
+		}
+		
+		effect = {
+			country_event = 151040	# Event 01 for CHC
+			set_country_flag = angolan_issue
+		}
+	}
+	
+	dec_minors_angolan_issue = {
+		category = national
+		picture = "1975_Operation_Savannah"
+		potential = {
+			OR = {
+				tag = CUB
+				tag = MOZ
+				tag = ZMB
+				tag = NAM
+			}	
+			SAF = {
+				war_with = ANG
+			}
+			ANG = {
+				OR = {
+					ideology = left_wing_radical_idolg
+					ideology_group = comintern
+				}
+			}
+			NOT = {
+				has_country_flag = angolan_issue
+			}
+			NOT = {
+				ideology = fascistic_idolg
+				ideology = paternal_auto_idolg
+				ideology = social_cons_idolg
+				ideology = market_liberal_idolg
+			}
+		}
+		
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					money = 5000
+					supplies = 500
+					#fuel = 100		#Does not exist as a trigger for some reason
+				}
+			}
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+		
+		effect = {
+			country_event = 164000 		# Multi-Event 01 for CUB/MOZ/ZMB/NAM – Support ANG (Minor)
+			set_country_flag = angolan_issue
+		}
+	}
+	
+	dec_minors_angolan_issue_2 = {
+		category = national
+		picture = "1981_Operation_Protea_South_African_Border_War"
+		potential = {
+			OR = {
+				tag = RHO
+				tag = MOZ
+				tag = NAM
+			}	
+			SAF = {
+				war_with = ANG
+			}
+			OR = {
+				ideology = fascistic_idolg
+				ideology = paternal_auto_idolg
+				ideology = social_cons_idolg
+				ideology = market_liberal_idolg
+			}
+			NOT = {
+				has_country_flag = angolan_issue
+			}
+		}
+		
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					money = 5000
+					supplies = 500
+					#fuel = 100		#Does not exist as a trigger for some reason
+				}
+			}
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+		
+		effect = {
+			country_event = 232000	#Multi-Event 02 for KON/MOZ/RHO – Support SAF (Minor)
+			set_country_flag = angolan_issue
+		}
+	}
+	
+	
+	
+	
+	
+}

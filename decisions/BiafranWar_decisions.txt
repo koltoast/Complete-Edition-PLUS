@@ -1,0 +1,276 @@
+diplomatic_decisions = {
+
+	NIG_demand_independence = {
+		category = national
+		picture = "1958_nigeria_independence_conference"
+		potential = {
+			vassal_of = ENG
+			tag = NIG
+			NOT = {
+				has_country_flag = demand_independence
+			}
+			national_unity = 60 		#Check this
+
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = { 
+			factor = 100
+			modifier = {
+				factor = 10
+				ENG = {
+					dissent = 10
+				}
+				OR = {
+					NOT = {
+						dissent = 5
+					}
+					economy_unbalanced = no
+				}
+			}
+			modifier = {
+				factor = 2
+				dissent = 15
+			}
+			modifier = {
+				factor = 2
+				exists = NGR
+			}
+			modifier = {
+				factor = 2
+				exists = CHA
+			}
+			modifier = {
+				factor = 2
+				exists = BEN
+			}
+			modifier = {
+				factor = 2
+				exists = CAM
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					neighbour = ENG 		#Check this
+					}
+			}
+
+		}
+		
+		effect = {
+			ENG = {
+				country_event = 181021
+				set_country_flag = demand_independence
+			}
+		}
+	}
+
+	NIG_UDI = {
+		category = national
+		picture = ""
+		potential = {
+			tag = NIG
+			ENG = {
+					has_country_flag = nigeria_referendum_2_2
+			}
+			NOT = {
+				has_country_flag = form_udi
+			}
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				AND = {
+					NOT = {
+						dissent = 5
+					}
+					economy_unbalanced = no
+				}
+			}
+		}
+		
+		effect = {
+			ENG = {
+				country_event = 181022
+			}
+			set_country_flag = form_udi
+		}
+	}
+	
+	NIG_hold_elections = {
+		category = national
+		picture = "1960_nigeria_independent"
+		potential = {
+			tag = NIG
+			government = authoritarian_gov
+			has_country_flag = refused_elections
+			NOT = {
+				has_country_flag = auth_coup_detat
+				}
+			NOT = {
+				has_country_flag = counter_coup_detat
+				}
+		}
+		
+		allow = {
+			war = no
+			economy_unbalanced = no
+		}
+		
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 100
+				AND = {
+					NOT = {
+						dissent = 5
+					}
+					economy_unbalanced = no
+				}
+			}
+		}
+		
+		effect = {
+
+			clr_country_flag = refused_elections
+			any_owned = {
+				limit = {
+					has_province_modifier = minor_revolt_risk
+					}
+				remove_province_modifier = minor_revolt_risk					
+			}
+			government = republic_gov
+			start_election = NIG
+			remove_country_modifier = g_minor_revolt_risk
+		}
+	}
+	
+	dec_EGY_biafran_issue = {
+		category = national
+		picture = "1967_gowon-war_will_be_over_in_4-8_weeks"
+		potential = {
+			war = no
+			tag = EGY
+			NIG = {
+				war_with = BIF
+			}
+			NOT = {
+				has_country_flag = biafran_issue
+			}
+		}
+		
+		allow = {
+			money = 50000
+			supplies = 1000
+			manpower = 20
+			#bomber_tech = 1
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					money = 55000
+					supplies = 1100
+					manpower = 25
+					#fuel = 200		#Does not exist as a trigger for some reason
+				}
+			}
+		}
+		
+		effect = {
+			country_event = 180010		# Event 01 for EGY
+			set_country_flag = biafran_issue
+		}
+	}	
+	
+	dec_UAR_biafran_issue = {
+		category = national
+		picture = "1967_gowon-war_will_be_over_in_4-8_weeks"
+		potential = {
+			war = no
+			tag = UAR
+			NIG = {
+				war_with = BIF
+			}
+			NOT = {
+				has_country_flag = biafran_issue
+			}
+		}
+		
+		allow = {
+			money = 50000
+			supplies = 1000
+			manpower = 20
+			#bomber_tech = 1
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					money = 55000
+					supplies = 1100
+					manpower = 25
+					#fuel = 200		#Does not exist as a trigger for some reason
+				}
+			}
+		}
+		
+		effect = {
+			country_event = 350000		# Event 01 for UAR
+			set_country_flag = biafran_issue
+		}
+	}	
+		
+	dec_ENG_biafran_issue = {
+		category = national
+		picture = "1967_gowon-war_will_be_over_in_4-8_weeks"
+		potential = {
+			war = no
+			tag = ENG
+			NIG = {
+				war_with = BIF
+			}
+			NOT = {
+				has_country_flag = biafran_issue
+			}
+		}
+		
+		allow = {
+			money = 100000
+			supplies = 10000
+			#fuel = 2000
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					money = 110000
+					supplies = 11000
+					#fuel = 2000		#Does not exist as a trigger for some reason
+				}
+			}
+		}
+		
+		effect = {
+			country_event = 181023		# Event 04 for ENG
+			set_country_flag = biafran_issue
+		}
+	}	
+	
+}

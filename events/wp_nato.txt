@@ -1,0 +1,253 @@
+	#700192 - 
+	country_event = {
+	
+		id = 700192
+
+		trigger = {
+			has_country_flag = declar_warwp
+			not = { has_country_flag = decl_war_WP }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME700192"
+		desc = "EVTDESC700192"
+		picture = "1973_General_Assembly_voting"
+
+		option = {
+			name = "EVTOPTA700192"					
+			any_country = {
+				limit = { not = { has_country_flag = declar_warwp } }
+				country_event = 700174
+			}
+			clr_country_flag = declar_warwp
+			set_country_flag = decl_war_WP
+		}
+	}
+	
+	#700193 - 
+	country_event = {
+	
+		id = 700193
+
+		trigger = {
+			has_country_flag = armsembwp
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME700193"
+		desc = "EVTDESC700193"
+		picture = "1973_General_Assembly_voting"
+
+		option = {
+			name = "EVTOPTA700193"					
+			any_country = {
+				limit = { not = { has_country_flag = armsembwp } }
+				country_event = 700183
+			}
+			clr_country_flag = armsembwp
+		}
+	}	
+	
+	#700194 - 
+	country_event = {
+	
+		id = 700194
+
+		trigger = {
+			has_country_flag = decl_war_WP
+			war = no
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME700194"
+		desc = "EVTDESC700194"
+		picture = "1973_General_Assembly_voting"
+
+		option = {
+			name = "EVTOPTA700194"					
+			any_country = {
+				limit = { not = { has_country_flag = decl_war_WP } }
+				country_event 700169 
+			}
+			clr_country_flag = decl_war_WP
+		}
+	}
+
+	#700195 - 
+	country_event = {
+	
+		id = 700195
+
+		trigger = {
+			has_country_flag = declar_war_allywp
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME700195"
+		desc = "EVTDESC700195"
+		picture = "1973_General_Assembly_voting"
+
+		option = {
+			name = "EVTOPTA700195"					
+			any_country = {
+				limit = { not = { has_country_flag = declar_war_allywp } }
+				country_event = 700196
+			}
+			clr_country_flag = declar_war_allywp
+		}
+	}	
+	
+country_event = {               ### 
+	id = 700196
+
+	is_triggered_only = yes
+	   
+	title = "EVTNAME700196"
+	desc = "EVTDESC700196"
+	picture = "ONU"
+
+	option = {
+			name = "EVTOPTA700196"
+	    ai_chance = { factor = 100 }
+		}
+
+ }
+
+	#700197 - 
+	country_event = {
+	
+		id = 700197
+
+		trigger = {
+			has_country_flag = declar_warnato
+			not = { has_country_flag = decl_war_nato }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME700197"
+		desc = "EVTDESC700197"
+		picture = "1973_General_Assembly_voting"
+
+		option = {
+			name = "EVTOPTA700197"					
+			any_country = {
+				limit = { not = { has_country_flag = declar_warnato } }
+				country_event = 700172
+			}
+			clr_country_flag = declar_warnato
+			set_country_flag = decl_war_nato
+		}
+	}
+	
+	#700198 - 
+	country_event = {
+	
+		id = 700198
+
+		trigger = {
+			has_country_flag = armsembnato
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME700198"
+		desc = "EVTDESC700198"
+		picture = "1973_General_Assembly_voting"
+
+		option = {
+			name = "EVTOPTA700198"					
+			any_country = {
+				limit = { not = { has_country_flag = armsembnato } }
+				country_event = 700182
+			}
+			clr_country_flag = armsembnato
+		}
+	}	
+	
+	#700199 - 
+	country_event = {
+	
+		id = 700199
+
+		trigger = {
+			has_country_flag = decl_war_nato
+			war = no
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME700199"
+		desc = "EVTDESC700199"
+		picture = "1973_General_Assembly_voting"
+
+		option = {
+			name = "EVTOPTA700199"					
+			any_country = {
+				limit = { not = { has_country_flag = decl_war_nato } }
+				country_event 700163 
+			}
+			clr_country_flag = decl_war_nato
+		}
+	}
+
+	#700200 - 
+	country_event = {
+	
+		id = 700200
+
+		trigger = {
+			has_country_flag = declar_war_allynato
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME700200"
+		desc = "EVTDESC700200"
+		picture = "1973_General_Assembly_voting"
+
+		option = {
+			name = "EVTOPTA700200"					
+			any_country = {
+				limit = { not = { has_country_flag = declar_war_allynato } }
+				country_event = 700201
+			}
+			clr_country_flag = declar_war_allynato
+		}
+	}	
+	
+country_event = {               ### 
+	id = 700201
+
+	is_triggered_only = yes
+	   
+	title = "EVTNAME700201"
+	desc = "EVTDESC700201"
+	picture = "ONU"
+
+	option = {
+			name = "EVTOPTA700201"
+	    ai_chance = { factor = 100 }
+		}
+
+ }

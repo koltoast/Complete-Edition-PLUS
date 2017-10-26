@@ -1,0 +1,51 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+flag_UN_membership_vetoed;UN Membership Application Vetoed;;;;;;;;;;;;;x
+flag_UN_membership_not_vetoed;UN Membership Application Not Vetoed;;;;;;;;;;;;;x
+flag_UN_membership_fast_delay;UN Membership Process Fast-tracked;;;;;;;;;;;;;x
+flag_UN_membership_slow_delay;UN Membership Process Slow;;;;;;;;;;;;;x
+mod_UN_membership_vetoed_delay;UN Membership Application Vetoed Delay;;;;;;;;;;;;;x
+mod_UN_membership_acceptance_delay;UN Membership Application Acceptance Delay;;;;;;;;;;;;;x
+mod_UN_membership_process_fast_delay;UN Membership Fast-tracked Process;;;;;;;;;;;;;x
+mod_UN_membership_process_slow_delay;UN Membership Process;;;;;;;;;;;;;x
+mod_UN_secretary_general_fast_track_application_delay;UN Membership Process Fast-tracked Delay;;;;;;;;;;;;;x
+dec_join_united_nations_title;Request United Nations Membership.;;;;;;;;;;;;;x
+dec_join_united_nations_desc;Apply to join the United Naitons as a member state.;;;;;;;;;;;;;x
+EVTNAME9000;Joining the United Nations;;;;;;;;;;;;;x
+EVTDESC9000;We have begun the process of joining the United Nations as a member state. Whether we are permitted into the organisation at this time or not will depend on the opinions held by the UN's Permanent Members.\nThrough the UN we hope to gain a voice on the international diplomatic stage, shape the creation of new international law, and benefit from the collective security the organisation provides.\n;;;;;;;;;;;;;x
+EVTOPTA9000;Okay;;;;;;;;;;;;;x
+EVTNAME9001;A New UN Member?;;;;;;;;;;;;;x
+EVTDESC9001;$FROMCOUNTRY$ has begun the process of joining the United Nations as a member state. As a UN Permanent Member we have the option of vetoing this application but doing so would come at the cost of some of our international prestige.;;;;;;;;;;;;;x
+EVTOPTA9001;Veto;;;;;;;;;;;;;x
+EVTOPTB9001;Don't Veto;;;;;;;;;;;;;x
+EVTNAME9002;UN Application Vetoed;;;;;;;;;;;;;x
+EVTDESC9002;$FROMCOUNTRY$, that is a UN Permanent Member state has chosen to veto our current application to the United Nations. We will be able to attempt this process again in two years time.;;;;;;;;;;;;;x
+EVTOPTA9002;Unfortunate;;;;;;;;;;;;;x
+EVTNAME9003;UN Application Progresses;;;;;;;;;;;;;x
+EVTDESC9003;None of the UN Permanent Member states have chosen to veto our application to the United Nations and thus our membership application will now move forward through the UN's legal processes by being forwarded to the Secretary General.;;;;;;;;;;;;;x
+EVTOPTA9003;Good things take time.;;;;;;;;;;;;;x
+EVTNAME9004;Admitted to the United Nations;;;;;;;;;;;;;x
+EVTDESC9004;We have recieved word that the United Nations Security Council has formally accepted our application to join the UN as a member state. We can now fully participate in the organisation.;;;;;;;;;;;;;x
+EVTOPTA9004;Good news;;;;;;;;;;;;;x
+EVTNAME9010;United Nations Membership Application;;;;;;;;;;;;;x
+EVTDESC9010;$FROMCOUNTRY$ has begun the process of joining the United Nations, and has not had its application vetoed by any of the UN's Permanent Members.\nAs the current Secretary General of the United Nations we will now progress this application through the relevant legal processes, although we may have the option of fast-tracking it.;;;;;;;;;;;;;x
+EVTOPTA9010;Fast track the process;;;;;;;;;;;;;x
+EVTOPTB9010;Let the process run its course;;;;;;;;;;;;;x
+EVTNAME700016;Resolucion de la ONU en contra de la guerra;;;;;;;;;;;;;x
+EVTDESC700016;La ONU ha votado una resolución de intervención contra nuestro pais;;;;;;;;;;;;;x
+EVTOPTA700016;Acatemos la Resolucion;;;;;;;;;;;;;x
+EVTOPTB700016;No, sigamos con la guerra;;;;;;;;;;;;;
+EVTNAME700170;Intervención de la ONU contra nuestro país;;;;;;;;;;;;;x
+EVTDESC700170;LA ONU ha decidido intervenir militarmente en nuestro país para devolver la paz mundial a la zona;;;;;;;;;;;;;x
+EVTOPTA700170;maldición;;;;;;;;;;;;;x
+EVTNAME700171;La ONU se retira;;;;;;;;;;;;;x
+EVTDESC700171;La ONU ha dado por terminada su misión militar en nuestro país;;;;;;;;;;;;;x
+EVTOPTA700171;Estupendo;;;;;;;;;;;;;x
+EVTNAME700244;La Onu interviene en $FROMCOUNTRY$;;;;;;;;;;;;;x
+EVTDESC700244;LA ONU ha decidido intervenir militarmente contra $FROMCOUNTRY$ para devolver la paz mundial a la zona;;;;;;;;;;;;;x
+EVTOPTA700244;Okay;;;;;;;;;;;;;x
+EVTNAME700245;La ONU se retira de $FROMCOUNTRY$ tras pacificar la zona;;;;;;;;;;;;;x
+EVTDESC700245;La ONU ha dado por terminada su misión militar en $FROMCOUNTRY$;;;;;;;;;;;;;
+EVTOPTA700245;Okay;;;;;;;;;;;;;
+EVTNAME700246;Fin de Nuestra misión internacional con la ONU;;;;;;;;;;;;;
+EVTDESC700246;Hemos terminado nuestra misión de paz internacional al servicio de la ONU;;;;;;;;;;;;;
+EVTOPTA700246;Okay;;;;;;;;;;;;;

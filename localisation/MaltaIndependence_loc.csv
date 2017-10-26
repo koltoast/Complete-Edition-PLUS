@@ -1,0 +1,128 @@
+CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Country Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## ENG ##;;;;;;;;;;;;;;x
+mod_ENG_malta_integration_promised_timer;Integration Promised;;;;;;;;;;;;;x
+mod_ENG_malta_independence_promised_timer;Independence Promised;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## MLT ##;;;;;;;;;;;;;;x
+mod_MLT_integration_referendum_delay;Integration Referendum Delay;;;;;;;;;;;;;x
+mod_MLT_independence_referendum_delay;Independence Referendum Delay;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## ENG ##;;;;;;;;;;;;;;x
+dec_ENG_integrate_malta_title;Integrate Malta;;;;;;;;;;;;;;x
+dec_ENG_integrate_malta_desc;We have promised to integrate Malta into our United Kingdom after being presented with a referendum showing strong support for it in Malta.;;;;;;;;;;;;;;x
+dec_ENG_release_malta_title;Release Malta;;;;;;;;;;;;;x
+dec_ENG_release_malta_desc;We have promised to grant Malta independence after being presented with a referendum showing strong support for it in Malta.;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## MLT ##;;;;;;;;;;;;;;x
+dec_MLT_integration_referendum_title;Conduct UK Integration Referendum;;;;;;;;;;;;;x
+dec_MLT_integration_referendum_desc;Conduct a referendum among the population to gauge support for the nation's integration into the United Kingdom.;;;;;;;;;;;;;x
+dec_MLT_independence_referendum_title;Conduct Independence Referendum;;;;;;;;;;;;;x
+dec_MLT_independence_referendum_desc;Conduct a referendum among the population to gauge support for the nation's independence from the United Kingdom.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## ENG ##;;;;;;;;;;;;;;x
+EVTNAME181110;Constitution for Malta Drafted;;;;;;;;;;;;;x
+EVTDESC181110;Sir Harold MacMichael, our colonial commissioner currently appointed to Malta, has finished drafting a constitution for the archipelago which would return to it limited self-government, in line with commitments made during the Second World War.\nThis near-dominion status would have us retain control over the archipelago's foreign affairs.\n\nAlternatively, we could grant the archipelago complete self-government within the commonwealth, or retain direct control over it at a risk to our international prestige and unrest among the territory's inhabitants.;;;;;;;;;;;;;x
+EVTOPTA181110;Limited self-government;;;;;;;;;;;;;x
+EVTOPTB181110;Complete independence;;;;;;;;;;;;;x
+EVTOPTC181110;Maintain control;;;;;;;;;;;;;x
+EVTNAME181111;Malta Presents Referendum Results;;;;;;;;;;;;;x
+EVTDESC181111;The Prime Minister of our dominion Malta has presented us with the results of a referendum recently held on the archipelago, showing clear and decisive support for an integration of the archipelago into the United Kingdom. Their Prime Minister insists that the Maltese should enjoy the same political, social and economic status and opportunities that British citizens do.\n\nWe can accept or reject their proposal; there are concerns being voiced by the Colonial Office that to reject it could strengthen determination in Malta for complete independence, but integrating a territory with its own long-established culture and history into our own civil, political and economic institutions would present challenges as well.;;;;;;;;;;;;;x
+EVTOPTA181111;Accept it;;;;;;;;;;;;;x
+EVTOPTB181111;Promise it within two years;;;;;;;;;;;;;x
+EVTOPTC181111;Reject it;;;;;;;;;;;;;x
+EVTNAME181112;Malta Presents Referendum Results;;;;;;;;;;;;;x
+EVTDESC181112;The Prime Minister of our dominion Malta has presented us with the results of a referendum recently held on the archipelago, showing majority support for integration of the archipelago into the United Kingdom but somewhat undermined by low turn-out. Their Prime Minister insists that the Maltese should enjoy the same political, social and economic status and opportunities that British citizens do.\n\nWe can accept or reject their proposal; there are concerns being voiced by the Colonial Office that to reject it could strengthen determination in Malta for complete independence, but integrating a territory with its own long-established culture and history into our own civil, political and economic institutions would present challenges as well.;;;;;;;;;;;;;x
+EVTOPTA181112;Accept it;;;;;;;;;;;;;x
+EVTOPTB181112;Promise it within two years;;;;;;;;;;;;;x
+EVTOPTC181112;Reject it;;;;;;;;;;;;;x
+EVTNAME181113;Malta Promised Integration;;;;;;;;;;;;;x
+EVTDESC181113;;;;;;;;;;;;;;x
+EVTOPTA181113;Grant them integration;;;;;;;;;;;;;x
+EVTOPTB181113;Renege on our promise;;;;;;;;;;;;;x
+EVTNAME181114;Malta Presents Referendum Results;;;;;;;;;;;;;x
+EVTDESC181114;The Prime Minister of our dominion Malta has presented us with the results of a referendum recently held on the archipelago, showing clear and decisive support for an independence of the archipelago from the United Kingdom. Their Prime Minister insists that the Maltese should enjoy control of their own foreign affairs as a sovereign commonwealth nation.\n\nWe can accept or reject their proposal; but rejecting it would have consequences on our international prestige and could lead to political instability or unrest in Malta.;;;;;;;;;;;;;x
+EVTOPTA181114;Accept it;;;;;;;;;;;;;x
+EVTOPTB181114;Promise it within two years;;;;;;;;;;;;;x
+EVTOPTC181114;Reject it;;;;;;;;;;;;;x
+EVTNAME181115;Malta Presents Referendum Results;;;;;;;;;;;;;x
+EVTDESC181115;The Prime Minister of our dominion Malta has presented us with the results of a referendum recently held on the archipelago, showing majority support for independence of the archipelago from the United Kingdom but somewhat undermined by low turn-out. Their Prime Minister insists that the Maltese should enjoy control of their own foreign affairs as a sovereign commonwealth nation.\n\nWe can accept or reject their proposal; but rejecting it would have consequences on our international prestige and could lead to political instability or unrest in Malta.;;;;;;;;;;;;;x
+EVTOPTA181115;Accept it;;;;;;;;;;;;;x
+EVTOPTB181115;Promise it within two years;;;;;;;;;;;;;x
+EVTOPTC181115;Reject it;;;;;;;;;;;;;x
+EVTNAME181116;Malta Promised Independence;;;;;;;;;;;;;x
+EVTDESC181116;The timetable previously promised to Malta for granting their independence has reached it's end; now we must proceed with such action immediately or face possible unrest in Malta and a loss of international prestige.;;;;;;;;;;;;;x
+EVTOPTA181116;Grant them independence;;;;;;;;;;;;;x
+EVTOPTB181116;Renege on our promise;;;;;;;;;;;;;x
+EVTNAME181117;Malta Unilaterally Declares Independence;;;;;;;;;;;;;x
+EVTDESC181117;The local government of Malta has chosen to unilaterally declare the archipelago's independence from British rule. How shall we respond?;;;;;;;;;;;;;x
+EVTOPTA181117;There is nothing we can do;;;;;;;;;;;;;x
+EVTOPTB181117;Send in the troops;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## MLT ##;;;;;;;;;;;;;;x
+EVTNAME253000;$YEAR$ UK Integration Referendum;;;;;;;;;;;;;x
+EVTDESC253000;We have established a constitutional referendum on integration with the United Kingdom, seeking to gauge the public's support for such a crucial decision before choosing whether to seek London's approval for us becoming politically, socially and economically part of the United Kingdom.\n\nThe results should be returned to us within a few weeks.;;;;;;;;;;;;;x
+EVTOPTA253000;Okay;;;;;;;;;;;;;x
+EVTNAME253001;Church Lobbies Against Integration;;;;;;;;;;;;;x
+EVTDESC253001;The Catholic church has long been a powerful and pervasive force in Malta, the opinions they choose to preach and the objectives they choose to promote to their congregation can hold considerable sway upon Maltese politics.\nThe Maltese Catholic church has taken particular interest in the ongoing referendum on integration with the United Kingdom. They fear that under a British government their place in Maltese society and the privileges they enjoy because of it would be under threat, and have been promoting such concerns and opposition to the referendum to the overwhelmingly Catholic population at-large.;;;;;;;;;;;;;x
+EVTOPTA253001;Okay;;;;;;;;;;;;;x
+EVTNAME253002;Referendum Results Favour Integration;;;;;;;;;;;;;x
+EVTDESC253002;The results of the referendum we commissioned into possible integration with the United Kingdom have been returned, and they strongly favour integration. There can be no doubt a significant majority of our population are in favour of us becoming politically, socially and economically part of the United Kingdom.\n\nIf we wish to we can still declare this referendum null-and-void, although this could risk decreasing our political popularity as well as possible unrest.\nOtherwise, we will now send the referendum results to London and wait to see how they respond.;;;;;;;;;;;;;x
+EVTOPTA253002;Present the results to London;;;;;;;;;;;;;x
+EVTOPTB253002;Abandon Integration;;;;;;;;;;;;x
+EVTNAME253003;Referendum Results Unclear;;;;;;;;;;;;;x
+EVTDESC253003;The results of the referendum we commissioned into possible integration with the United Kingdom have been returned, but the results are unclear. Although a majority of ballots returned are in favour of integration turnout has been rather low, possibly as a result of calls by some civil and religious organisations to boycott the referendum.\n\nWe can now either abandon the referendum and the aim of integration on account of its unclear results, or try to push ahead with integration and send the results to London to see how they respond.;;;;;;;;;;;;;x
+EVTOPTA253003;Present the results to London;;;;;;;;;;;;;x
+EVTOPTB253003;Abandon Integration;;;;;;;;;;;;x
+EVTNAME253004;Referendum Results Reject Integration;;;;;;;;;;;;;x
+EVTDESC253004;The results of the referendum we commissioned into possible integration with the United Kingdom have been returned, and they decisively reject integration. There can be no doubt a significant majority of our population oppose us becoming politically, socially and economically part of the United Kingdom.\n\nWe have no choice but the abandon the aim of integration, for now.;;;;;;;;;;;;;x
+EVTOPTA253004;Abandon Integration;;;;;;;;;;;;;x
+EVTNAME253005;United Kingdom Approves Integration;;;;;;;;;;;;;x
+EVTDESC253005;The United Kingdom has thankfully chosen to approve our request for integration after having been presented with the results of our referendum.;;;;;;;;;;;;;x
+EVTOPTA253005;Great news;;;;;;;;;;;;;x
+EVTNAME253006;United Kingdom Promises Integration;;;;;;;;;;;;;x
+EVTDESC253006;In response to our presentation of the recent integration referendum results, the United Kingdom has promised us integration but not immediately. Citing a difficult situation at the moment, they instead promise to enact the legislative changes required sometime within the next two years.;;;;;;;;;;;;;x
+EVTOPTA253006;We will take them at their word;;;;;;;;;;;;;x
+EVTNAME253007;United Kingdom Rejects Integration;;;;;;;;;;;;;x
+EVTDESC253007;The United Kingdom has chosen to reject our request for integration, despite being shown the majority support for it in Malta.;;;;;;;;;;;;;x
+EVTOPTA253007;Unfortunate;;;;;;;;;;;;;x
+EVTNAME253008;United Kingdom Reneges on Integration;;;;;;;;;;;;;x
+EVTDESC253008;Despite promising to give us independence in the near future, the United Kingdom has now chosen to renege on that pledge.;;;;;;;;;;;;;x
+EVTOPTA253008;Unfortunate;;;;;;;;;;;;;x
+EVTNAME253010;$YEAR$ UK Independence Referendum;;;;;;;;;;;;;x
+EVTDESC253010;We have established a constitutional referendum on independence from the United Kingdom, seeking to gauge the public's support for such a crucial decision before making our declaration to London.\n\nThe results should be returned to us within a few weeks.;;;;;;;;;;;;;x
+EVTOPTA253010;Okay;;;;;;;;;;;;;x
+EVTNAME253012;Referendum Results Favour Independence;;;;;;;;;;;;;x
+EVTDESC253012;The results of the referendum we commissioned into possible independence from with the United Kingdom have been returned, and they strongly favour independence. There can be no doubt a significant majority of our population are in favour of us becoming politically, socially and economically part of the United Kingdom.\n\nIf we wish to we can still declare this referendum null-and-void, although this could risk decreasing our political popularity as well as possible unrest.\nOtherwise, we will now adopt the new constitution and see how London respond.;;;;;;;;;;;;;x
+EVTOPTA253012;Present the results to London;;;;;;;;;;;;;x
+EVTOPTB253012;Abandon Independence;;;;;;;;;;;;;x
+EVTNAME253013;Referendum Results Unclear;;;;;;;;;;;;;x
+EVTDESC253013;The results of the referendum we commissioned into possible independence from with the United Kingdom have been returned, but the results are unclear. Although a majority of ballots returned are in favour of independence turnout has been rather low.\n\nWe can now either abandon the referendum and the aim of independence on account of its unclear results, or try to push ahead with independence and see how London respond.;;;;;;;;;;;;;x
+EVTOPTA253013;Present the results to London;;;;;;;;;;;;;x
+EVTOPTB253013;Abandon Independence;;;;;;;;;;;;;x
+EVTNAME253014;Referendum Results Reject Independence;;;;;;;;;;;;;x
+EVTDESC253014;The results of the referendum we commissioned into possible independence from the United Kingdom have been returned, and they decisively reject independence. There can be no doubt a significant majority of our population oppose us severing our political and economic ties with the United Kingdom.\n\nWe can choose to abandon our aim of independence for now, or declare our independence anyway at the cost of considerable instability.;;;;;;;;;;;;;x
+EVTOPTA253014;Abandon Independence;;;;;;;;;;;;;x
+EVTOPTB253014;Declare Independence;;;;;;;;;;;;;x
+EVTNAME253015;United Kingdom Approves Independence;;;;;;;;;;;;;x
+EVTDESC253015;The United Kingdom has thankfully chosen to approve our request for independence after having been presented with the results of our referendum.\nToday will go down in history as a landmark day for Maltese history.;;;;;;;;;;;;;x
+EVTOPTA253015;Great news;;;;;;;;;;;;;x
+EVTNAME253016;United Kingdom Promises Independence;;;;;;;;;;;;;x
+EVTDESC253016;In response to our presentation of the recent independence referendum results, the United Kingdom has promised us independence but not immediately. Citing a difficult situation at the moment, they instead promise to enact the legislative changes required sometime within the next two years.;;;;;;;;;;;;;x
+EVTOPTA253016;We will take them at their word;;;;;;;;;;;;;x
+EVTOPTB253016;Declare Independence;;;;;;;;;;;;;x
+EVTNAME253017;United Kingdom Rejects Independence;;;;;;;;;;;;;x
+EVTDESC253017;The United Kingdom has chosen to reject our request for independence, despite being shown the majority support for it in Malta. We can either chose to resign ourselves to this fate, perhaps trying again in a few years, or unilaterally declare independence immediately.;;;;;;;;;;;;;x
+EVTOPTA253017;Unfortunate;;;;;;;;;;;;;x
+EVTNAME253018;United Kingdom Reneges on Independence;;;;;;;;;;;;;x
+EVTDESC253018;Despite promising to give us independence in the near future, the United Kingdom has now chosen to renege on that pledge. We can either chose to resign ourselves to this fate, perhaps trying again in a few years, or unilaterally declare independence immediately. ;;;;;;;;;;;;;x
+EVTOPTA253018;Unfortunate;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

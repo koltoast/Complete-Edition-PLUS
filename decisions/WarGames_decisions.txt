@@ -1,0 +1,96 @@
+#WarGames_decisions.txt
+#War Games
+
+#Global:
+	#dec_war_games - Begin War Games
+	#dec_war_games_join_ally - Join the War Games of a neighbouring ally
+
+
+diplomatic_decisions = {
+## Global ##
+	dec_war_games = {
+		category = national
+		picture = "1965_Warsaw_Pact_Excercise"
+		potential = {
+			OR = {
+				OR = {
+					tag = USA
+					tag = SOV
+				}
+				total_amount_of_brigades = 25
+			}
+		}
+		
+		allow = {
+			NOT = {
+				war_exhaustion = 3
+				has_country_flag = war_games
+				has_country_flag = war_games_start
+				has_country_flag = military_purge
+				has_country_flag = military_purge_start
+				has_country_flag = propaganda_campaign
+				has_country_flag = propaganda_campaign_start
+				has_country_flag = cultural_revolution #Communist China will have its own unique event chain
+				has_country_flag = government_junket
+				has_country_flag = government_junket_start
+				has_country_flag = anticorruption_campaign
+				has_country_flag = anticorruption_campaign_start
+				has_country_modifier = war_games_campaign_delay
+			}
+			OR = {
+				OR = {
+					tag = USA
+					tag = SOV
+				}
+				total_amount_of_brigades = 40
+			}
+			war = no
+		}
+		
+		ai_will_do = { 
+			factor = 0
+		}
+		
+		effect = {
+			set_country_flag = war_games_start
+			country_event = 2031
+		}
+	}
+	
+	dec_war_games_join_ally = {
+		category = national
+		picture = "1956_Suez_Swedish_Peacekeepers"
+		potential = {
+			war = no
+			any_neighbor_country = {
+				alliance_with = THIS
+				has_country_modifier = war_games_expensive
+			}
+		}
+		
+		allow = {
+			total_amount_of_brigades = 20
+		}
+		
+		ai_will_do = { 
+			factor = 0
+		}
+		
+		effect = {
+			random_country = {
+				limit = {
+					neighbour = THIS
+					alliance_with = THIS
+					has_country_modifier = war_games_expensive
+				}
+				country_event = 2063
+				relation = { who = THIS value = 10 }
+			}
+			add_country_modifier = {
+				name = war_games_cheap
+				duration = 91
+			}
+		}
+	}
+
+}

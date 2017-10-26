@@ -1,0 +1,101 @@
+#DecolonisationIndia_decisions.txt
+#1947 Decolonisation of India
+
+#ENG:
+	#may_plan_ENG - propose IND independence
+	#june_plan_ENG - propose IND independence, second chance to do it divided
+	#mountbatten_plan_ENG - propose IND vote on how to be independent
+
+
+
+
+diplomatic_decisions = {
+## ENG ##
+	may_plan_ENG = {		#propose IND independence
+		category = national
+		picture = "1946_Cabinet_Mission_India_5"
+		potential = {
+			is_subject = no 
+			NOT = { exists = IND }
+			tag = ENG
+			NOT = { has_country_flag = may_plan_IND }
+			OR = {
+				ENG = { any_owned_province = { is_core = IND } }
+				ENG = { any_owned_province = { is_core = PAK } }
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = may_plan_IND
+			country_event = 181063
+		}
+	}
+	june_plan_ENG = {		#propose IND independence
+		category = national
+		picture = "1946_Cabinet_Mission_India"
+		potential = {
+			is_subject = no 
+			NOT = { exists = IND }
+			tag = ENG
+			has_country_flag = may_plan_IND
+			NOT = { has_country_flag = june_plan_IND }
+			OR = {
+				ENG = { any_owned_province = { is_core = IND } }
+				ENG = { any_owned_province = { is_core = PAK } }
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = june_plan_IND
+			country_event = 181068
+		}
+	}
+	mountbatten_plan_ENG = {		#propose IND vote on how to be independent
+		category = national
+		picture = "1947_Mountbatten_proposal"
+		potential = {
+			is_subject = no 
+			NOT = { exists = IND }
+			tag = ENG
+			has_country_flag = june_plan_IND
+			NOT = { has_country_flag = mountbatten_plan_IND }
+			OR = {
+				ENG = { any_owned_province = { is_core = IND } }
+				ENG = { any_owned_province = { is_core = PAK } }
+			}
+		}
+		
+		allow = {
+			war = no
+			not = { 9900 = { revolt_risk = 3 } }
+			not = { 14888 = { revolt_risk = 3 } }
+			not = { 10232 = { revolt_risk = 3 } }
+			not = { 11159 = { revolt_risk = 3 } }
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = mountbatten_plan_IND
+			country_event = 181069
+		}
+	}
+}

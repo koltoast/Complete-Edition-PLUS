@@ -1,0 +1,2275 @@
+#German Reunification_events.txt
+#19xx German Reunification
+
+#DDR - East Germany:
+	#170100 - Reunification with West Germany
+	#170101 - Offer of reunification from West Germany	
+	#170102 - West Germany rejects reunification
+	#170103 - East Germany forms united Germany
+	#170104 - The German Question
+	
+	#170105 - West Germany demands our integration
+	#170106 - [Warsaw Pact Leader] agrees to our integration into West Germany
+	#170107 - West Germany accepts our demand for integration of them
+	#170108 - NATO Leader accepts our integration of West Germany
+	#170109 - West Germany rejects our demand for integration of them
+	#170110 - NATO Leader rejects our demand for integration of West Germany
+	#170111 - NATO Leader gives their conditions for German reunification
+	#170112 - East Germany leaves the Warsaw Pact to oppose reunification
+	
+#FRG - West Germany:
+	#172100 - Reunification with East Germany
+	#172101 - Offer of reunification from East Germany
+	#172102 - East Germany rejects reunification
+	#172103 - West Germany forms united Germany
+	#172104 - The German Question
+	
+	#172105 - East Germany demands our integration
+	#172106 - [NATO Leader] agrees to our integration into East Germany
+	#172107 - East Germany accepts our demand for integration of them
+	#172108 - Warsaw Pact Leader accepts our integration of East Germany
+	#172109 - East Germany rejects our demand for integration of them
+	#172110 - Warsaw Pact Leader rejects our demand for integration of East Germany
+	#172111 - Warsaw Pact Leader gives their conditions for German reunification
+	#172112 - East Germany leaves the Warsaw Pact to oppose reunification
+	
+#SOV - Soviet Union:
+	#326140 - West Germany demands East German integration
+	#326141 - West Germany agrees to our conditions for reunification
+	#326142 - West Germany rejects our conditions for reunification
+	#326143 - East Germany leaves the Warsaw Pact to oppose reunification
+	#326144 - Soviet Union reunifies Germany
+	
+#USA - United States:
+	#354140 - East Germany demands West German integration
+	#354141 - East Germany agrees to our conditions for reunification
+	#354142 - East Germany rejects our conditions for reunification
+	#354143 - West Germany leaves NATO to oppose reunification
+	#354144 - United States reunifies Germany
+	#354145 - Continued control of West Berlin untenable
+	
+	
+## DDR ###
+	#170100 - Reunification with West Germany
+	country_event = {
+		
+		id = 170100
+		
+		trigger = {
+			ai = yes
+			tag = DDR
+			exists = FRG
+			OR = {
+				AND = {
+					num_of_cities = 5
+					FRG = { NOT = { num_of_cities = 10 } }
+				}
+				AND = {
+					num_of_cities = 10
+					FRG = { NOT = { num_of_cities = 20 } }
+				}
+				AND = {
+					num_of_cities = 20
+					FRG = { NOT = { num_of_cities = 45 } }
+				}
+				AND = {
+					num_of_cities = 40
+					FRG = { NOT = { num_of_cities = 100 } }
+				}
+				num_of_cities = 60
+			}
+			NOT = { exists = GER }
+			NOT = { has_country_modifier = mod_DDR_joins_FRG_delay }
+			is_subject = no
+			NOT = { faction = comintern }
+			FRG = { is_subject = no }
+			FRG = { national_unity = 40 }
+			NOT = {
+				AND = {
+					is_major = yes
+					FRG = { is_major = no }
+				}
+			}
+			war = no
+			FRG = {
+				NOT = {
+					AND = {
+						war = yes
+						war_exhaustion = 5
+					}
+					war_with = SOV
+					war_with = RUS
+					war_with = USA
+					war_with = ENG
+					war_with = FRA
+				}
+			}
+			NOT = { truce_with = FRG }
+			relation = { who = FRG value = -150 }
+			OR = {
+				AND = {
+					ideology = fascistic_idolg
+					FRG = { ideology = fascistic_idolg }
+				}
+				AND = {
+					OR = {
+						ideology = maoist_idolg
+						ideology = communist_idolg
+					}
+					OR = {
+						FRG = { ideology = maoist_idolg }
+						FRG = { ideology = communist_idolg }
+					}
+				}
+				AND = {
+					OR = {
+						ideology = paternal_auto_idolg
+						ideology = social_cons_idolg
+						ideology = market_liberal_idolg
+					}
+					OR = {
+						government = totalitarian_gov
+						government = authoritarian_gov
+						government = absolute_monarchy_gov
+					}
+					OR = {
+						FRG = { ideology = paternal_auto_idolg }
+						FRG = { ideology = social_cons_idolg }
+						FRG = { ideology = market_liberal_idolg }
+					}
+					OR = {
+						FRG = { government = totalitarian_gov }
+						FRG = { government = authoritarian_gov }
+						FRG = { government = absolute_monarchy_gov }
+					}
+				}
+				AND = {
+					OR = {
+						ideology = social_liberal_idolg
+						ideology = social_democrat_idolg
+						ideology = left_wing_radical_idolg
+					}
+					OR = {
+						government = totalitarian_gov
+						government = authoritarian_gov
+						government = absolute_monarchy_gov
+					}
+					OR = {
+						FRG = { ideology = social_liberal_idolg }
+						FRG = { ideology = social_democrat_idolg }
+						FRG = { ideology = left_wing_radical_idolg }
+					}
+					OR = {
+						FRG = { government = totalitarian_gov }
+						FRG = { government = authoritarian_gov }
+						FRG = { government = absolute_monarchy_gov }
+					}
+				}
+				AND = {
+					OR = {
+						ideology = social_cons_idolg
+						ideology = market_liberal_idolg
+						ideology = social_liberal_idolg
+						ideology = social_democrat_idolg
+						ideology = left_wing_radical_idolg
+					}
+					OR = {
+						government = constitutional_monarchy_gov
+						government = republic_gov
+						government = constitutional_republic_gov
+					}
+					OR = {
+						FRG = { ideology = social_cons_idolg }
+						FRG = { ideology = market_liberal_idolg }
+						FRG = { ideology = social_liberal_idolg }
+						FRG = { ideology = social_democrat_idolg }
+						FRG = { ideology = left_wing_radical_idolg }
+					}
+					OR = {
+						FRG = { government = constitutional_monarchy_gov }
+						FRG = { government = republic_gov }
+						FRG = { government = constitutional_republic_gov }
+					}
+				}
+			}
+			#@@@FRG = { gdp_compare = 1.2 }
+			#Add more economic stuff
+		}
+		
+		mean_time_to_happen = {
+			days = 183
+			modifier = {
+				factor = 0.5
+				same_party = FRG
+			}
+			modifier = {
+				factor = 0.75
+				relation = { who = FRG value = 75 }
+			}
+			modifier = {
+				factor = 0.75
+				relation = { who = FRG value = 150 }
+			}
+			modifier = {
+				factor = 1.33
+				NOT = { relation = { who = FRG value = -75 } }
+			}
+		}
+		
+		title = "EVTNAME170100"
+		desc = "EVTDESC170100"
+		picture = "1990_German_reunification"
+		
+		immediate = {
+			set_global_var = {
+				name = var_temp_province_number_comparison
+				value = 0
+			}
+			any_owned = { 
+				chg_global_var = {
+					name = var_temp_province_number_comparison
+					value = 1
+				}
+			}
+			FRG = {
+				any_owned = { 
+					chg_global_var = {
+						name = var_temp_province_number_comparison
+						value = -1
+					}
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA170100"		#Join West Germany
+			ai_chance = {
+				factor = 75
+				modifier = {
+					factor = 1.5
+					same_party = FRG
+				}
+				modifier = {
+					factor = 1.33
+					relation = { who = DDR value = 75 }
+				}
+				modifier = {
+					factor = 1.33
+					relation = { who = DDR value = 150 }
+				}
+				modifier = {
+					factor = 1.5
+					NOT = {
+						has_global_var_gt = {
+							name = var_temp_province_number_comparison
+							value = -5
+						}
+					}
+				}
+			}
+			relation = { who = FRG value = 100 }
+			FRG = { country_event = 172101 }
+			national_unity = -25
+			popularity = 5
+			clr_global_var = var_temp_province_number_comparison
+		}
+
+		option = {
+			name = "EVTOPTB170100"		#Stay independent
+			ai_chance = {
+				factor = 25
+				modifier = {
+					factor = 1.33
+					is_major = yes
+				}
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = FRG value = -75 } }
+				}
+				modifier = {
+					factor = 2
+					num_of_warheads_greater = 0
+				}
+				modifier = {
+					factor = 1.5
+					num_of_warheads_greater = 10
+				}
+				modifier = {
+					factor = 1.5
+					has_global_var_gt = {
+						name = var_temp_province_number_comparison
+						value = 5
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { has_country_modifier = mod_DDR_joins_FRG_delay_longer }
+					}
+				}
+				owner = {
+					national_unity = -8
+					dissent = 4
+					popularity = -4
+				}
+			}
+			popularity = -1
+			add_country_modifier = {
+				name = mod_DDR_joins_FRG_delay
+				duration = 365
+			}
+			add_country_modifier = {
+				name = mod_DDR_joins_FRG_delay_longer
+				duration = 1460
+			}
+			clr_global_var = var_temp_province_number_comparison
+		}
+	}
+
+	#170101 - Offer of reunification from West Germany
+	country_event = {
+		
+		id = 170101 
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME170101"
+		desc = "EVTDESC170101"
+		picture = "1989_Helmut_Kohl_Brandenburger_Tor"
+		
+		option = {
+			name = "EVTOPTA170101"		#Accept the offer
+			ai_chance = {
+				factor = 90
+				modifier = {
+					factor = 1.1
+					same_party = FRG
+				}
+				modifier = {
+					factor = 1.1
+					relation = { who = FRG value = 75 }
+				}
+				modifier = {
+					factor = 1.1
+					relation = { who = FRG value = 150 }
+				}
+				modifier = {
+					factor = 1.1
+					national_unity = 70
+				}
+				modifier = {
+					factor = 1.1
+					national_unity = 90
+				}
+			}
+			inherit = FRG
+			inherit = WBR
+			national_unity = -10
+			prestige_change = 40
+			set_global_flag = gflag_DDR_forms_united_germany
+			country_event = 170103
+		}
+		
+		option = {
+			name = "EVTOPTB170101"		#Reject the offer
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 1.25
+					NOT = { relation = { who = DDR value = -75 } }
+				}
+				modifier = {
+					factor = 1.25
+					NOT = { national_unity = 50 }
+				}
+				modifier = {
+					factor = 1.25
+					FRG = { economy_unbalanced = yes }
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						AND = {
+							ideology = maoist_idolg
+							FRG = { ideology = communist_idolg }
+						}
+						AND = {
+							ideology = communist_idolg
+							FRG = { ideology = maoist_idolg }
+						}
+					}
+				}
+			}
+			popularity = -1
+			prestige_change = -10
+			FRG = { country_event = 172102 }
+		}
+	}
+
+	#170102 - West Germany rejects reunification
+	country_event = {
+		
+		id = 170102
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME170102"
+		desc = "EVTDESC170102"
+		picture = "1976_Helmut_Schmidt_SPD_Parteitag"
+		
+		option = {
+			name = "EVTOPTA170102"		#Unfortunate
+			popularity = -5
+			national_unity = -10
+			prestige_change = -25
+		}
+	}
+
+	#170103 - East Germany forms united Germany
+	country_event = {
+		
+		id = 170103
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME170103"
+		desc = "EVTDESC170103"
+		picture = "1990_German_reunification"
+		
+		option = {
+			name = "EVTOPTA170103"		#Great News
+			national_unity = 5
+			popularity = 5
+			dissent = -5
+			prestige_change = 60
+			change_tag = GER		#Still needs to be implemented
+			any_owned = {
+				limit = { is_core = FRG }
+				remove_core = FRG
+			}
+			any_owned = {
+				limit = { is_core = DDR }
+				remove_core = DDR
+			}
+			any_owned = {
+				limit = { is_core = WBR }
+				remove_core = WBR
+			}
+			capital = 14867
+			14876 = { change_province_name = "Pankow" }
+			14867 = { change_province_name = "Berlin" }
+		}
+	}
+
+	#170104 - The German Question
+	country_event = {
+		
+		id = 170104
+		
+		trigger = {
+			tag = DDR
+			exists = FRG
+			NOT = { has_country_flag = flag_DDR_the_german_question }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		title = "EVTNAME170104"
+		desc = "EVTDESC170104"
+		picture = "1963_Checkpoint_Charlie"
+		
+		option = {
+			name = "EVTOPTA170104"		#Okay
+			set_country_flag = flag_DDR_the_german_question
+		}
+	}
+
+	#170105 - West Germany demands our integration
+	country_event = {
+		
+		id = 170105
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME170105"
+		desc = "EVTDESC170105"
+		picture = "1989_Helmut_Kohl_Brandenburger_Tor"
+		
+		option = {
+			name = "EVTOPTA170105"		#Very well
+			ai_chance = {
+				factor = 85
+				modifier = {
+					factor = 1.33
+					relation = { who = FROM value = 175 }
+				}
+				modifier = {
+					factor = 1.33
+					relation = { who = FROM value = 125 }
+				}
+				modifier = {
+					factor = 1.33
+					relation = { who = FROM value = 75 }
+				}
+				modifier = {
+					factor = 1.33
+					dissent = 20
+				}
+				modifier = {
+					factor = 1.5
+					dissent = 40
+				}
+				modifier = {
+					factor = 1.33
+					NOT = { national_unity = 50 }
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { national_unity = 30 }
+				}
+				modifier = {
+					factor = 1.33
+					revolt_percentage = 20
+				}
+				modifier = {
+					factor = 1.5
+					revolt_percentage = 40
+				}
+			}
+			FRG = { country_event = 172107 }
+		}
+		
+		option = {
+			name = "EVTOPTB170105"		#No
+			ai_chance = {
+				factor = 15
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = FROM value = -50 } }
+				}
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = FROM value = -100 } }
+				}
+				modifier = {
+					factor = 1.33
+					national_unity = 75
+				}
+				modifier = {
+					factor = 1.33
+					national_unity = 90
+				}
+			}
+			national_unity = -4
+			dissent = 2
+			FRG = { country_event = 172109 }
+		}
+	}
+
+	#170106 - [Warsaw Pact Leader] agrees to our integration into West Germany
+	country_event = {
+		
+		id = 170106
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME170106"
+		desc = "EVTDESC170106"
+		picture = "1986_Gorbachev_visits_Brandenburger_Tor"
+		
+		option = {
+			name = "EVTOPTA170106"		#Very well
+			ai_chance = {
+				factor = 85
+				modifier = {
+					factor = 1.33
+					NOT = { national_unity = 50 }
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { national_unity = 40 }
+				}
+				modifier = {
+					factor = 2
+					NOT = { national_unity = 30 }
+				}
+				modifier = {
+					factor = 5
+					NOT = { national_unity = 20 }
+				}
+			}
+			FRG = { country_event = 172108 }
+		}
+		
+		option = {
+			name = "EVTOPTB170106"		#Secede from the Warsaw Pact
+			ai_chance = {
+				factor = 15
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = FROM value = -50 } }
+				}
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = FROM value = -100 } }
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { relation = { who = FROM value = -150 } }
+				}
+				modifier = {
+					factor = 2
+					national_unity = 75
+				}
+				modifier = {
+					factor = 3
+					national_unity = 80
+				}
+				modifier = {
+					factor = 5
+					national_unity = 90
+				}
+			}
+			national_unity = -4
+			dissent = 2
+			leave_faction = comintern
+			any_country = {
+				limit = {
+					is_org_member = XWP
+					alliance_with = THIS
+				}
+				leave_alliance = THIS
+			}
+			relation = { who = FROM value = -75 }
+			FROM = { country_event = 326143 }
+		}
+	}
+
+	#170107 - West Germany accepts our demand for integration of them
+	country_event = {
+		
+		id = 170107
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME170107"
+		desc = "EVTDESC170107"
+		picture = "1975_Helsinki_Accords_2"
+		
+		option = {
+			name = "EVTOPTA170107"		#Good news
+			inherit = FRG
+			inherit = WBR
+			national_unity = -10
+			prestige_change = 40
+			set_global_flag = gflag_DDR_forms_united_germany
+			country_event = 170103
+		}
+	}
+
+	#170108 - East Germany accepts our demand for integration of them
+	country_event = {
+		
+		id = 170108
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME170108"
+		desc = "EVTDESC170108"
+		picture = "1990_Volkskammer_DDR_agrees_to_reunification"
+		
+		option = {
+			name = "EVTOPTA170108"		#Good news
+			inherit = FRG
+			inherit = WBR
+			national_unity = -10
+			prestige_change = 40
+			set_global_flag = gflag_DDR_forms_united_germany
+			country_event = 170103
+		}
+	}
+
+	#170109 - West Germany rejects our demand for integration of them
+	country_event = {
+		
+		id = 170109
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME170109"
+		desc = "EVTDESC170109"
+		picture = "1976_Helmut_Schmidt_SPD_Parteitag"
+		
+		option = {
+			name = "EVTOPTA170109"		#Unfortunate
+			popularity = -1
+			prestige_change = -2
+		}
+	}
+
+	#170110 - NATO Leader rejects our demand for integration of West Germany
+	country_event = {
+		
+		id = 170110
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME170110"
+		desc = "EVTDESC170110"
+		picture = "1975_Gerald_Ford_at_his_desk"
+		
+		option = {
+			name = "EVTOPTA170110"		#Unfortunate
+			popularity = -1
+			prestige_change = -2
+		}
+	}
+
+	#170111 - NATO Leader gives their conditions for Germany reunification
+	country_event = {
+		
+		id = 170111
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME170111"
+		desc = "EVTDESC170111"
+		picture = "1974_Gerald_Ford_pardons_Nixon"
+		
+		option = {
+			name = "EVTOPTA170111"		#Agree to the conditions
+			ai_chance = {
+				factor = 50
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = SOV value = 50 } }
+					SOV = { is_org_leader = XWP }
+				}
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = SOV value = -50 } }
+					SOV = { is_org_leader = XWP }
+				}
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = SOV value = -150 } }
+					SOV = { is_org_leader = XWP }
+				}
+			}
+			random_list = {
+				25 = { dissent = 1 }
+				25 = { national_unity = -2 }
+				50 = {}
+			}
+			random_country = {
+				limit = { is_org_leader = XNA }
+				country_event = 354141
+			}
+		}
+		
+		option = {
+			name = "EVTOPTB170111"		#Reject them
+			ai_chance = {
+				factor = 50
+				modifier = {
+					factor = 1.33
+					relation = { who = SOV value = 190 }
+					SOV = { is_org_leader = XWP }
+				}
+				modifier = {
+					factor = 1.33
+					relation = { who = SOV value = 150 }
+					SOV = { is_org_leader = XWP }
+				}
+				modifier = {
+					factor = 1.33
+					relation = { who = SOV value = 100 }
+					SOV = { is_org_leader = XWP }
+				}
+			}
+			popularity = -2
+			dissent = 1
+			prestige_change = -5
+			random_country = {
+				limit = { is_org_leader = XNA }
+				country_event = 354142
+			}
+		}
+	}
+
+	#170112 - West Germany leaves NATO to oppose reunification
+	country_event = {
+		
+		id = 170112
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME170112"
+		desc = "EVTDESC170112"
+		picture = "1961_Bundeswehr_M48s"
+		
+		major = yes
+		
+		option = {
+			name = "EVTOPTA170112"		#Reunite by force!
+			ai_chance = {
+				factor = 60
+				modifier = {
+					factor = 1.33
+					is_major = yes
+				}
+				modifier = {
+					factor = 1.5
+					national_identity = territorial_focus
+				}
+				modifier = {
+					factor = 1.33
+					OR = {
+						national_attitude = imperialism
+						national_attitude = colonialism
+						national_attitude = hegemony
+					}
+				}
+				modifier = {
+					factor = 1.33
+					compare_total_amount_of_brigades = {
+						first = DDR
+						second = FRG
+						value = 1.15
+					}
+				}
+				modifier = {
+					factor = 1.33
+					compare_total_amount_of_brigades = {
+						first = DDR
+						second = FRG
+						value = 1.33
+					}
+				}
+				modifier = {
+					factor = 1.33
+					compare_total_amount_of_brigades = {
+						first = DDR
+						second = FRG
+						value = 1.5
+					}
+				}
+				modifier = {
+					factor = 2
+					compare_total_amount_of_brigades = {
+						first = DDR
+						second = FRG
+						value = 2
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						compare_total_amount_of_brigades = {
+							first = DDR
+							second = FRG
+							value = 0.7
+						}
+					}
+				}
+			}
+			limited_war = FRG
+		}
+		
+		option = {
+			name = "EVTOPTB170112"		#Do not push the issue further
+			ai_chance = {
+				factor = 40
+				modifier = {
+					factor = 1.33
+					war_exhaustion = 5
+				}
+				modifier = {
+					factor = 1.33
+					war_exhaustion = 10
+				}
+				modifier = {
+					factor = 1.33
+					war_exhaustion = 15
+				}
+				modifier = {
+					factor = 1.33
+					war_exhaustion = 20
+				}
+				modifier = {
+					factor = 1.33
+					war = yes
+				}
+				modifier = {
+					factor = 1.1
+					economy_unbalanced = yes
+				}
+				modifier = {
+					factor = 1.33
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.33
+					OR = {
+						national_attitude = defensive
+						national_attitude = non-interventionism
+					}
+				}
+				modifier = {
+					factor = 1.33
+					NOT = {
+						compare_total_amount_of_brigades = {
+							first = DDR
+							second = FRG
+							value = 0.9
+						}
+					}
+				}
+				modifier = {
+					factor = 1.33
+					NOT = {
+						compare_total_amount_of_brigades = {
+							first = DDR
+							second = FRG
+							value = 0.8
+						}
+					}
+				}
+			}
+			popularity = -1
+			prestige_change = -2
+		}
+	}
+
+## FRG ###
+	#172100 - Reunification with East Germany
+	country_event = {
+		
+		id = 172100
+		
+		trigger = {
+			ai = yes
+			tag = FRG
+			exists = DDR
+			OR = {
+				AND = {
+					num_of_cities = 5
+					DDR = { NOT = { num_of_cities = 10 } }
+				}
+				AND = {
+					num_of_cities = 10
+					DDR = { NOT = { num_of_cities = 20 } }
+				}
+				AND = {
+					num_of_cities = 20
+					DDR = { NOT = { num_of_cities = 45 } }
+				}
+				AND = {
+					num_of_cities = 40
+					DDR = { NOT = { num_of_cities = 100 } }
+				}
+				num_of_cities = 60
+			}
+			NOT = { exists = GER }
+			NOT = { has_country_modifier = mod_FRG_joins_DDR_delay }
+			is_subject = no
+			DDR = { is_subject = no }
+			NOT = { faction = allies }
+			DDR = { national_unity = 40 }
+			NOT = {
+				AND = {
+					is_major = yes
+					DDR = { is_major = no }
+				}
+			}
+			war = no
+			DDR = {
+				NOT = {
+					AND = {
+						war = yes
+						war_exhaustion = 5
+					}
+					war_with = SOV
+					war_with = RUS
+					war_with = USA
+					war_with = ENG
+					war_with = FRA
+				}
+			}
+			NOT = { truce_with = DDR }
+			relation = { who = DDR value = -150 }
+			OR = {
+				AND = {
+					ideology = fascistic_idolg
+					DDR = { ideology = fascistic_idolg }
+				}
+				AND = {
+					OR = {
+						ideology = maoist_idolg
+						ideology = communist_idolg
+					}
+					OR = {
+						DDR = { ideology = maoist_idolg }
+						DDR = { ideology = communist_idolg }
+					}
+				}
+				AND = {
+					OR = {
+						ideology = paternal_auto_idolg
+						ideology = social_cons_idolg
+						ideology = market_liberal_idolg
+					}
+					OR = {
+						government = totalitarian_gov
+						government = authoritarian_gov
+						government = absolute_monarchy_gov
+					}
+					OR = {
+						DDR = { ideology = paternal_auto_idolg }
+						DDR = { ideology = social_cons_idolg }
+						DDR = { ideology = market_liberal_idolg }
+					}
+					OR = {
+						DDR = { government = totalitarian_gov }
+						DDR = { government = authoritarian_gov }
+						DDR = { government = absolute_monarchy_gov }
+					}
+				}
+				AND = {
+					OR = {
+						ideology = social_liberal_idolg
+						ideology = social_democrat_idolg
+						ideology = left_wing_radical_idolg
+					}
+					OR = {
+						government = totalitarian_gov
+						government = authoritarian_gov
+						government = absolute_monarchy_gov
+					}
+					OR = {
+						DDR = { ideology = social_liberal_idolg }
+						DDR = { ideology = social_democrat_idolg }
+						DDR = { ideology = left_wing_radical_idolg }
+					}
+					OR = {
+						DDR = { government = totalitarian_gov }
+						DDR = { government = authoritarian_gov }
+						DDR = { government = absolute_monarchy_gov }
+					}
+				}
+				AND = {
+					OR = {
+						ideology = social_cons_idolg
+						ideology = market_liberal_idolg
+						ideology = social_liberal_idolg
+						ideology = social_democrat_idolg
+						ideology = left_wing_radical_idolg
+					}
+					OR = {
+						government = constitutional_monarchy_gov
+						government = republic_gov
+						government = constitutional_republic_gov
+					}
+					OR = {
+						DDR = { ideology = social_cons_idolg }
+						DDR = { ideology = market_liberal_idolg }
+						DDR = { ideology = social_liberal_idolg }
+						DDR = { ideology = social_democrat_idolg }
+						DDR = { ideology = left_wing_radical_idolg }
+					}
+					OR = {
+						DDR = { government = constitutional_monarchy_gov }
+						DDR = { government = republic_gov }
+						DDR = { government = constitutional_republic_gov }
+					}
+				}
+			}
+			#@@@FRG = { gdp_compare = 1.2 }
+			#Add more economic stuff
+		}
+		
+		mean_time_to_happen = {
+			days = 183
+			modifier = {
+				factor = 0.5
+				same_party = DDR
+			}
+			modifier = {
+				factor = 0.75
+				relation = { who = DDR value = 75 }
+			}
+			modifier = {
+				factor = 0.75
+				relation = { who = DDR value = 150 }
+			}
+			modifier = {
+				factor = 1.33
+				NOT = { relation = { who = DDR value = -75 } }
+			}
+		}
+		
+		title = "EVTNAME172100"
+		desc = "EVTDESC172100"
+		picture = "1990_German_reunification"
+		
+		immediate = {
+			set_global_var = {
+				name = var_temp_province_number_comparison
+				value = 0
+			}
+			any_owned = { 
+				chg_global_var = {
+					name = var_temp_province_number_comparison
+					value = 1
+				}
+			}
+			DDR = {
+				any_owned = { 
+					chg_global_var = {
+						name = var_temp_province_number_comparison
+						value = -1
+					}
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA172100"		#Join East Germany
+			ai_chance = {
+				factor = 75
+				modifier = {
+					factor = 1.5
+					same_party = DDR
+				}
+				modifier = {
+					factor = 1.33
+					relation = { who = DDR value = 75 }
+				}
+				modifier = {
+					factor = 1.33
+					relation = { who = DDR value = 150 }
+				}
+				modifier = {
+					factor = 1.5
+					NOT = {
+						has_global_var_gt = {
+							name = var_temp_province_number_comparison
+							value = -5
+						}
+					}
+				}
+			}
+			relation = { who = DDR value = 100 }
+			DDR = { country_event = 170101 }
+			national_unity = -25
+			popularity = 5
+			clr_global_var = var_temp_province_number_comparison
+		}
+
+		option = {
+			name = "EVTOPTB172100"		#Stay independent
+			ai_chance = {
+				factor = 25
+				modifier = {
+					factor = 1.33
+					is_major = yes
+				}
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = DDR value = -75 } }
+				}
+				modifier = {
+					factor = 2
+					num_of_warheads_greater = 0
+				}
+				modifier = {
+					factor = 1.5
+					num_of_warheads_greater = 10
+				}
+				modifier = {
+					factor = 1.5
+					has_global_var_gt = {
+						name = var_temp_province_number_comparison
+						value = 5
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { has_country_modifier = mod_FRG_joins_DDR_delay_longer }
+					}
+				}
+				owner = {
+					national_unity = -8
+					dissent = 4
+					popularity = -4
+				}
+			}
+			popularity = -1
+			add_country_modifier = {
+				name = mod_FRG_joins_DDR_delay
+				duration = 365
+			}
+			add_country_modifier = {
+				name = mod_FRG_joins_DDR_delay_longer
+				duration = 1460
+			}
+			clr_global_var = var_temp_province_number_comparison
+		}
+	}
+
+	#172101 - Offer of reunification from East Germany
+	country_event = {
+		
+		id = 172101
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME172101"
+		desc = "EVTDESC172101"
+		picture = "1988_Honecker_meets_Lafontaine"
+		
+		major = yes
+		
+		option = {
+			name = "EVTOPTA172101"		#Accept the offer
+			ai_chance = {
+				factor = 90
+				modifier = {
+					factor = 1.1
+					same_party = DDR
+				}
+				modifier = {
+					factor = 1.1
+					relation = { who = DDR value = 75 }
+				}
+				modifier = {
+					factor = 1.1
+					relation = { who = DDR value = 150 }
+				}
+				modifier = {
+					factor = 1.1
+					national_unity = 70
+				}
+				modifier = {
+					factor = 1.1
+					national_unity = 90
+				}
+			}
+			inherit = DDR
+			inherit = WBR
+			national_unity = -10
+			prestige_change = 40
+			set_global_flag = gflag_FRG_forms_united_germany
+			country_event = 172103
+		}
+		
+		option = {
+			name = "EVTOPTB172101"		#Reject the offer
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 1.25
+					NOT = { relation = { who = FRG value = -75 } }
+				}
+				modifier = {
+					factor = 1.25
+					NOT = { national_unity = 50 }
+				}
+				modifier = {
+					factor = 1.25
+					DDR = { economy_unbalanced = yes }
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						AND = {
+							ideology = maoist_idolg
+							DDR = { ideology = communist_idolg }
+						}
+						AND = {
+							ideology = communist_idolg
+							DDR = { ideology = maoist_idolg }
+						}
+					}
+				}
+			}
+			popularity = -1
+			prestige_change = -10
+			DDR = { country_event = 170102 }
+		}
+	}
+
+	#172102 - East Germany rejects reunification
+	country_event = {
+		
+		id = 172102
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME172102"
+		desc = "EVTDESC172102"
+		picture = "1986_Honecker_at_SED_parteitag"
+		
+		option = {
+			name = "EVTOPTA172102"		#Unfortunate
+			popularity = -5
+			national_unity = -10
+			prestige_change = -25
+		}
+	}
+
+	#172103 - West Germany forms united Germany
+	country_event = {
+		
+		id = 172103
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME172103"
+		desc = "EVTDESC172103"
+		picture = "1990_German_reunification"
+		
+		option = {
+			name = "EVTOPTA172103"		#Great News
+			national_unity = 5
+			popularity = 5
+			dissent = -5
+			prestige_change = 60
+			change_tag = GER		#Still needs to be implemented
+			any_owned = {
+				limit = { is_core = FRG }
+				remove_core = FRG
+			}
+			any_owned = {
+				limit = { is_core = DDR }
+				remove_core = DDR
+			}
+			any_owned = {
+				limit = { is_core = WBR }
+				remove_core = WBR
+			}
+			14876 = { change_province_name = "Pankow" }
+			14867 = { change_province_name = "Berlin" }
+		}
+	}
+
+	#172104 - The German Question
+	country_event = {
+		
+		id = 172104
+		
+		trigger = {
+			tag = FRG
+			exists = DDR
+			NOT = { has_country_flag = flag_FRG_the_german_question }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		title = "EVTNAME172104"
+		desc = "EVTDESC172104"
+		picture = "1963_Checkpoint_Charlie"
+		
+		option = {
+			name = "EVTOPTA172104"		#Okay
+			set_country_flag = flag_FRG_the_german_question
+		}
+	}
+
+	#172105 - East Germany demands our integration
+	country_event = {
+		
+		id = 172105
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME172105"
+		desc = "EVTDESC172105"
+		picture = "1986_Honecker_at_SED_parteitag"
+		
+		option = {
+			name = "EVTOPTA172105"		#Very well
+			ai_chance = {
+				factor = 85
+				modifier = {
+					factor = 1.33
+					relation = { who = FROM value = 175 }
+				}
+				modifier = {
+					factor = 1.33
+					relation = { who = FROM value = 125 }
+				}
+				modifier = {
+					factor = 1.33
+					relation = { who = FROM value = 75 }
+				}
+				modifier = {
+					factor = 1.33
+					dissent = 20
+				}
+				modifier = {
+					factor = 1.5
+					dissent = 40
+				}
+				modifier = {
+					factor = 1.33
+					NOT = { national_unity = 50 }
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { national_unity = 30 }
+				}
+				modifier = {
+					factor = 1.33
+					revolt_percentage = 20
+				}
+				modifier = {
+					factor = 1.5
+					revolt_percentage = 40
+				}
+			}
+			DDR = { country_event = 170107 }
+		}
+		
+		option = {
+			name = "EVTOPTB172105"		#No
+			ai_chance = {
+				factor = 15
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = FROM value = -50 } }
+				}
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = FROM value = -100 } }
+				}
+				modifier = {
+					factor = 1.33
+					national_unity = 75
+				}
+				modifier = {
+					factor = 1.33
+					national_unity = 90
+				}
+			}
+			national_unity = -4
+			dissent = 2
+			DDR = { country_event = 170109 }
+		}
+	}
+
+	#172106 - [NATO Leader] agrees to our integration into East Germany
+	country_event = {
+		
+		id = 172106
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME172106"
+		desc = "EVTDESC172106"
+		picture = "1975_Helsinki_Accords"
+		
+		option = {
+			name = "EVTOPTA172106"		#Very well
+			ai_chance = {
+				factor = 85
+				modifier = {
+					factor = 1.33
+					NOT = { national_unity = 50 }
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { national_unity = 40 }
+				}
+				modifier = {
+					factor = 2
+					NOT = { national_unity = 30 }
+				}
+				modifier = {
+					factor = 5
+					NOT = { national_unity = 20 }
+				}
+			}
+			DDR = { country_event = 170108 }
+		}
+		
+		option = {
+			name = "EVTOPTB172106"		#Secede from NATO
+			ai_chance = {
+				factor = 15
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = FROM value = -50 } }
+				}
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = FROM value = -100 } }
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { relation = { who = FROM value = -150 } }
+				}
+				modifier = {
+					factor = 2
+					national_unity = 75
+				}
+				modifier = {
+					factor = 3
+					national_unity = 80
+				}
+				modifier = {
+					factor = 5
+					national_unity = 90
+				}
+			}
+			national_unity = -4
+			dissent = 2
+			leave_faction = allies
+			any_country = {
+				limit = {
+					is_org_member = XNA
+					alliance_with = THIS
+				}
+				leave_alliance = THIS
+			}
+			relation = { who = FROM value = -75 }
+			FROM = { country_event = 354143 }
+		}
+	}
+
+	#172107 - East Germany accepts our demand for integration of them
+	country_event = {
+		
+		id = 172107
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME172107"
+		desc = "EVTDESC172107"
+		picture = "1990_German_reunification"
+		
+		option = {
+			name = "EVTOPTA172107"		#Good news
+			inherit = DDR
+			inherit = WBR
+			national_unity = -10
+			prestige_change = 40
+			set_global_flag = gflag_FRG_forms_united_germany
+			country_event = 172103
+		}
+	}
+
+	#172108 - East Germany accepts our demand for integration of them
+	country_event = {
+		
+		id = 172108
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME172108"
+		desc = "EVTDESC172108"
+		picture = "1990_German_reunification"
+		
+		option = {
+			name = "EVTOPTA172108"		#Good news
+			inherit = DDR
+			inherit = WBR
+			national_unity = -10
+			prestige_change = 40
+			set_global_flag = gflag_FRG_forms_united_germany
+			country_event = 172103
+		}
+	}
+
+	#172109 - East Germany rejects our demand for integration of them
+	country_event = {
+		
+		id = 172109
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME172109"
+		desc = "EVTDESC172109"
+		picture = "1986_Honecker_at_SED_parteitag"
+		
+		option = {
+			name = "EVTOPTA172109"		#Unfortunate
+			popularity = -1
+			prestige_change = -2
+		}
+	}
+
+	#172110 - Warsaw Pact Leader rejects our demand for integration of East Germany
+	country_event = {
+		
+		id = 172110
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME172110"
+		desc = "EVTDESC172110"
+		picture = "1973_Leonid_Brezhnev"
+		
+		option = {
+			name = "EVTOPTA172110"		#Unfortunate
+			popularity = -1
+			prestige_change = -2
+		}
+	}
+
+	#172111 - Warsaw Pact Leader gives their conditions for Germany reunification
+	country_event = {
+		
+		id = 172111
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME172111"
+		desc = "EVTDESC172111"
+		picture = "1986_Gorbachev_visits_Brandenburger_Tor"
+		
+		option = {
+			name = "EVTOPTA172111"		#Agree to the conditions
+			ai_chance = {
+				factor = 50
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = USA value = 50 } }
+					USA = { is_org_leader = XNA }
+				}
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = USA value = -50 } }
+					USA = { is_org_leader = XNA }
+				}
+				modifier = {
+					factor = 1.33
+					NOT = { relation = { who = USA value = -150 } }
+					USA = { is_org_leader = XNA }
+				}
+			}
+			random_list = {
+				25 = { dissent = 1 }
+				25 = { national_unity = -2 }
+				50 = {}
+			}
+			random_country = {
+				limit = { is_org_leader = XWP }
+				country_event = 326141
+			}
+		}
+		
+		option = {
+			name = "EVTOPTB172111"		#Reject them
+			ai_chance = {
+				factor = 50
+				modifier = {
+					factor = 1.33
+					relation = { who = USA value = 190 }
+					USA = { is_org_leader = XNA }
+				}
+				modifier = {
+					factor = 1.33
+					relation = { who = USA value = 150 }
+					USA = { is_org_leader = XNA }
+				}
+				modifier = {
+					factor = 1.33
+					relation = { who = USA value = 100 }
+					USA = { is_org_leader = XNA }
+				}
+			}
+			popularity = -2
+			dissent = 1
+			prestige_change = -5
+			random_country = {
+				limit = { is_org_leader = XWP }
+				country_event = 326142
+			}
+		}
+	}
+
+	#172112 - East Germany leaves the Warsaw Pact to oppose reunification
+	country_event = {
+		
+		id = 172112
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME172112"
+		desc = "EVTDESC172112"
+		picture = "1980_Nationale_Volksarmee"
+		
+		major = yes
+		
+		option = {
+			name = "EVTOPTA172112"		#Reunite by force!
+			ai_chance = {
+				factor = 60
+				modifier = {
+					factor = 1.33
+					is_major = yes
+				}
+				modifier = {
+					factor = 1.5
+					national_identity = territorial_focus
+				}
+				modifier = {
+					factor = 1.33
+					OR = {
+						national_attitude = imperialism
+						national_attitude = colonialism
+						national_attitude = hegemony
+					}
+				}
+				modifier = {
+					factor = 1.33
+					compare_total_amount_of_brigades = {
+						first = FRG
+						second = DDR
+						value = 1.15
+					}
+				}
+				modifier = {
+					factor = 1.33
+					compare_total_amount_of_brigades = {
+						first = FRG
+						second = DDR
+						value = 1.33
+					}
+				}
+				modifier = {
+					factor = 1.33
+					compare_total_amount_of_brigades = {
+						first = FRG
+						second = DDR
+						value = 1.5
+					}
+				}
+				modifier = {
+					factor = 2
+					compare_total_amount_of_brigades = {
+						first = FRG
+						second = DDR
+						value = 2
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						compare_total_amount_of_brigades = {
+							first = FRG
+							second = DDR
+							value = 0.7
+						}
+					}
+				}
+			}
+			limited_war = DDR
+		}
+		
+		option = {
+			name = "EVTOPTB172112"		#Do not push the issue further
+			ai_chance = {
+				factor = 40
+				modifier = {
+					factor = 1.33
+					war_exhaustion = 5
+				}
+				modifier = {
+					factor = 1.33
+					war_exhaustion = 10
+				}
+				modifier = {
+					factor = 1.33
+					war_exhaustion = 15
+				}
+				modifier = {
+					factor = 1.33
+					war_exhaustion = 20
+				}
+				modifier = {
+					factor = 1.33
+					war = yes
+				}
+				modifier = {
+					factor = 1.1
+					economy_unbalanced = yes
+				}
+				modifier = {
+					factor = 1.33
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.33
+					OR = {
+						national_attitude = defensive
+						national_attitude = non-interventionism
+					}
+				}
+				modifier = {
+					factor = 1.33
+					NOT = {
+						compare_total_amount_of_brigades = {
+							first = FRG
+							second = DDR
+							value = 0.9
+						}
+					}
+				}
+				modifier = {
+					factor = 1.33
+					NOT = {
+						compare_total_amount_of_brigades = {
+							first = FRG
+							second = DDR
+							value = 0.8
+						}
+					}
+				}
+			}
+			popularity = -1
+			prestige_change = -2
+		}
+	}
+
+## SOV ##
+	#326140 - West Germany demands East German integration
+	country_event = {
+		
+		id = 326140
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME326140"
+		desc = "EVTDESC326140"
+		picture = "1989_Helmut_Kohl_Brandenburger_Tor"
+		
+		option = {
+			name = "EVTOPTA326140"		#Reject it
+			ai_chance = {
+				factor = 50
+				modifier = {
+					factor = 1.5
+					NOT = { relation = { who = FROM value = -50 } }
+				}
+				modifier = {
+					factor = 2
+					NOT = { relation = { who = FROM value = -100 } }
+				}
+				modifier = {
+					factor = 1.5
+					DDR = { national_unity = 75 }
+				}
+				modifier = {
+					factor = 1.5
+					DDR = { national_unity = 90 }
+				}
+			}
+			FRG = { country_event = 172110 }
+			relation = { who = FRG value = -25 }
+		}
+		
+		option = {
+			name = "EVTOPTB326140"		#Only if Germany leaves NATO
+			trigger = {
+				FRG = { faction = allies }
+			}
+			ai_chance = {
+				factor = 40
+			}
+			FRG = { country_event = 172111 }
+			relation = { who = USA value = -25 }
+		}
+		
+		option = {
+			name = "EVTOPTC326140"		#Very well
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 1.5
+					relation = { who = FROM value = 175 }
+				}
+				modifier = {
+					factor = 1.5
+					relation = { who = FROM value = 125 }
+				}
+				modifier = {
+					factor = 1.5
+					relation = { who = FROM value = 75 }
+				}
+				modifier = {
+					factor = 1.5
+					DDR = { dissent = 20 }
+				}
+				modifier = {
+					factor = 2
+					DDR = { dissent = 40 }
+				}
+				modifier = {
+					factor = 1.5
+					DDR = { NOT = { national_unity = 50 } }
+				}
+				modifier = {
+					factor = 2
+					DDR = { NOT = { national_unity = 30 } }
+				}
+				modifier = {
+					factor = 1.5
+					DDR = { revolt_percentage = 20 }
+				}
+				modifier = {
+					factor = 2
+					DDR = { revolt_percentage = 40 }
+				}
+				modifier = {
+					factor = 2
+					is_major = no
+				}
+				modifier = {
+					factor = 3
+					NOT = { FRG = { faction = allies } }
+				}
+			}
+			DDR = { country_event = 170106 }
+			relation = { who = FRG value = -10 }
+			change_doomsday_clock = 1
+		}
+	}
+	
+	#326141 - West Germany agrees to our conditions for reunification
+	country_event = {
+		
+		id = 326141
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME326141"
+		desc = "EVTDESC326141"
+		picture = "1973_Helmut_Schmidt"
+		
+		option = {
+			name = "EVTOPTA326141"		#Good news
+			DDR = { country_event = 170106 }
+			prestige_change = 10
+		}
+	}
+	
+	#326142 - West Germany rejects our conditions for reunification
+	country_event = {
+		
+		id = 326142
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME326142"
+		desc = "EVTDESC326142"
+		picture = "1976_Helmut_Schmidt_SPD_Parteitag"
+		
+		option = {
+			name = "EVTOPTA326142"		#Unfortunate
+		}
+	}
+	
+	#326143 - East Germany leaves the Warsaw Pact to oppose reunification
+	country_event = {
+		
+		id = 326143
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME326143"
+		desc = "EVTDESC326143"
+		picture = "1980_Nationale_Volksarmee"
+		
+		option = {
+			name = "EVTOPTA326143"		#Oh well
+			prestige_change = -10
+			FRG = { country_event = 172112 }
+		}
+	}
+	
+	#326144 - Soviet Union reunifies Germany
+	country_event = {
+		
+		id = 326144
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME326144"
+		desc = "EVTDESC326144"
+		picture = "1990_German_reunification"
+		
+		major = yes
+		
+		option = {
+			name = "EVTOPTA326144"		#A momentous day
+			DDR = {
+				inherit = FRG
+				national_unity = 5
+				popularity = 5
+				dissent = -5
+				prestige_change = 15
+				change_tag = GER
+				any_owned = {
+					limit = { is_core = FRG }
+					remove_core = FRG
+				}
+				any_owned = {
+					limit = { is_core = DDR }
+					remove_core = DDR
+				}
+				any_owned = {
+					limit = { is_core = WBR }
+					remove_core = WBR
+				}
+				capital = 14867
+				14876 = { change_province_name = "Pankow" }
+				14867 = { change_province_name = "Berlin" }
+			}
+			
+		}
+	}
+
+## USA ##
+	#354140 - East Germany demands West German integration
+	country_event = {
+		
+		id = 354140
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME354140"
+		desc = "EVTDESC354140"
+		picture = "1986_Honecker_at_SED_parteitag"
+		
+		option = {
+			name = "EVTOPTA354140"		#Reject it
+			ai_chance = {
+				factor = 70		#PREV50
+				modifier = {
+					factor = 1.5
+					NOT = { relation = { who = FROM value = -50 } }
+				}
+				modifier = {
+					factor = 2
+					NOT = { relation = { who = FROM value = -100 } }
+				}
+				modifier = {
+					factor = 1.5
+					FRG = { national_unity = 75 }
+				}
+				modifier = {
+					factor = 1.5
+					FRG = { national_unity = 90 }
+				}
+			}
+			DDR = { country_event = 170110 }
+			relation = { who = DDR value = -25 }
+		}
+		
+		option = {
+			name = "EVTOPTB354140"		#Only if Germany leaves the Warsaw Pact
+			trigger = {
+				DDR = { faction = comintern }
+			}
+			ai_chance = {
+				factor = 20		#PREV40
+			}
+			DDR = { country_event = 170111 }
+			relation = { who = SOV value = -25 }
+		}
+		
+		option = {
+			name = "EVTOPTC354140"		#Very well
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 1.5
+					relation = { who = FROM value = 175 }
+				}
+				modifier = {
+					factor = 1.5
+					relation = { who = FROM value = 125 }
+				}
+				modifier = {
+					factor = 1.5
+					relation = { who = FROM value = 75 }
+				}
+				modifier = {
+					factor = 1.5
+					FRG = { dissent = 20 }
+				}
+				modifier = {
+					factor = 2
+					FRG = { dissent = 40 }
+				}
+				modifier = {
+					factor = 1.5
+					FRG = { NOT = { national_unity = 50 } }
+				}
+				modifier = {
+					factor = 2
+					FRG = { NOT = { national_unity = 30 } }
+				}
+				modifier = {
+					factor = 1.5
+					FRG = { revolt_percentage = 20 }
+				}
+				modifier = {
+					factor = 2
+					FRG = { revolt_percentage = 40 }
+				}
+				modifier = {
+					factor = 2
+					is_major = no
+				}
+				modifier = {
+					factor = 3
+					NOT = { DDR = { faction = comintern } }
+				}
+			}
+			FRG = { country_event = 172106 }
+			relation = { who = DDR value = -10 }
+			change_doomsday_clock = 1
+		}
+	}
+	
+	#354141 - East Germany agrees to our conditions for reunification
+	country_event = {
+		
+		id = 354141
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME354141"
+		desc = "EVTDESC354141"
+		picture = "1975_Helsinki_Accords"
+		
+		option = {
+			name = "EVTOPTA354141"		#Okay
+			FRG = { country_event = 172106 }
+			prestige_change = 10
+		}
+	}
+	
+	#354142 - East Germany rejects our conditions for reunification
+	country_event = {
+		
+		id = 354142
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME354142"
+		desc = "EVTDESC354142"
+		picture = "1986_Honecker_at_SED_parteitag"
+		
+		option = {
+			name = "EVTOPTA354142"		#Okay
+		}
+	}
+	
+	#354143 - West Germany leaves NATO to oppose reunification
+	country_event = {
+		
+		id = 354143
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME354143"
+		desc = "EVTDESC354143"
+		picture = "1961_Bundeswehr_M48s"
+		
+		option = {
+			name = "EVTOPTA354143"		#Oh well
+			prestige_change = -10
+			DDR = { country_event = 170112 }
+		}
+	}
+	
+	#354144 - United States reunifies Germany
+	country_event = {
+		
+		id = 354144
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME354144"
+		desc = "EVTDESC354144"
+		picture = "1990_German_reunification"
+		
+		major = yes
+		
+		option = {
+			name = "EVTOPTA354144"		#A momentous day
+			FRG = {
+				inherit = DDR
+				inherit = WBR
+				national_unity = 5
+				popularity = 5
+				dissent = -5
+				prestige_change = 15
+				change_tag = GER
+				any_owned = {
+					limit = { is_core = FRG }
+					remove_core = FRG
+				}
+				any_owned = {
+					limit = { is_core = DDR }
+					remove_core = DDR
+				}
+				any_owned = {
+					limit = { is_core = WBR }
+					remove_core = WBR
+				}
+				14876 = { change_province_name = "Pankow" }
+				14867 = { change_province_name = "Berlin" }
+			}
+		}
+	}
+	
+	#354145 - Continued control of West Berlin untenable
+	country_event = {
+		
+		id = 354145
+		
+		trigger = {
+			WBR = { vassal_of = THIS }
+			OR = {
+				FRG = { faction = comintern }
+				AND = {
+					5570 = { owner = { faction = comintern } }
+					5423 = { owner = { faction = comintern } }
+					5355 = { owner = { faction = comintern } }
+					5292 = { owner = { faction = comintern } }
+					5229 = { owner = { faction = comintern } }
+					5351 = { owner = { faction = comintern } }
+					5490 = { owner = { faction = comintern } }
+					5633 = { owner = { faction = comintern } }
+					5718 = { owner = { faction = comintern } }
+					14867 = { owner = { faction = comintern } }
+					14876 = { owner = { faction = comintern } }
+					5719 = { owner = { faction = comintern } }
+					5565 = { owner = { faction = comintern } }
+					5493 = { owner = { faction = comintern } }
+				}
+			}
+		}
+		
+		title = "EVTNAME354145"
+		desc = "EVTDESC354145"
+		picture = "1982_T-62_Berlin"
+		
+		option = {
+			name = "EVTOPTA354145"		#Unfortunate
+			prestige_change = -5
+			DDR = { inherit = WBR }
+		}
+	}

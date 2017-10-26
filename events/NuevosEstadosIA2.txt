@@ -1,0 +1,446 @@
+##################################################################################################################
+# SI  ESTAN   EN   GUERRA ########################################################################################
+##################################################################################################################
+
+#####################################
+#   INDEPENDIZAR NACIONES   #
+#####################################
+
+country_event = {
+
+	trigger = {
+		not = { tag = EUR }
+		is_subject = no		
+		not = { has_global_flag = CRISISNACIONAL }
+		year = 1946
+		war = yes		
+		not = { year = 1956 }
+		OR = {
+				THIS = { government = theocracy_gov    }
+				THIS = { government = constitutional_monarchy_gov }
+				THIS = { government = republic_gov }
+				THIS = { government = constitutional_republic_gov }
+		}		
+		OR = {
+			not = { national_unity = 70 }
+			not = { popularity = 30 }
+		}
+		dissent = 15
+	}
+
+	id = 5550006
+	
+	title = "Independizar naciones"
+	desc = "Es necesario intentar concederles la independencia para mantener el estado nacional."
+	picture = "ANARKIA-2"
+
+	mean_time_to_happen = {  months = -1 }
+
+	option = {
+		set_global_flag = CRISISNACIONAL
+		name = "No es necesario"	
+		ai_chance = { factor = 75 }	
+		national_unity = -5
+
+		random_list={
+		50 = {national_unity = 5}
+		35 = {national_unity = 0}
+		15 = {dissent = 5}
+		}
+		random_list={
+		50 = {popularity = -5}
+		35 = {popularity = 0}
+		15 = {popularity = 10}
+		}
+		random_list={
+		50 = {organisation = 10}
+		35 = {organisation = 0}
+		15 = {organisation = -5}
+		}
+		
+	}
+
+	option = {
+		set_global_flag = CRISISNACIONAL
+		name = "Negociemos"			
+		ai_chance = { factor = 25 }
+		dissent = 5
+		any_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}		
+		release_vassal = random
+
+		random_list={
+		50 = {dissent = -5}
+		35 = {dissent = 0}
+		15 = {national_unity = -5}
+		}
+		random_list={
+		50 = {popularity = 10}
+		35 = {popularity = 0}
+		15 = {popularity = -5}
+		}
+		random_list={
+		50 = {organisation = -5}
+		35 = {organisation = 0}
+		15 = {organisation = 10}
+		}
+
+		random_list={
+		85 = { 
+					release_vassal = random
+					release_vassal = random
+				}
+		10 = { 
+					release_vassal = random
+					release_vassal = random		
+					release_vassal = random
+					release_vassal = random
+				}
+		5 = { 
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+				}
+		}
+    
+	}
+}
+
+
+
+####################################
+#   REVUELTAS Y ANARQUIA - YUGULO  #
+####################################
+
+country_event = {
+
+	trigger = {
+		not = { tag = EUR }
+		is_subject = no
+		year = 1956
+		war = yes		
+		not = { year = 1966 }
+		
+		not = { has_global_flag = CRISISNACIONAL }
+		OR = {
+				THIS = { government = theocracy_gov    }
+				THIS = { government = constitutional_monarchy_gov }
+				THIS = { government = republic_gov }
+				THIS = { government = constitutional_republic_gov }
+		}
+		OR = {
+			not = { national_unity = 80 }
+			not = { popularity = 35 }
+		}
+		dissent = 10
+	}
+
+	id = 5550007
+	
+	title = "Revuelta independentista"
+	desc = "Los rebeldes se han alzado en armas contra nuestra autoridad."
+	picture = "ANARKIA-3"
+
+	mean_time_to_happen = {  months = -1 }
+	option = {
+		set_global_flag = CRISISNACIONAL
+		name = "Acabemos con la anarquía revolucionaria"	
+		ai_chance = { factor = 60 }	
+		national_unity = -5
+
+		random_list={
+		50 = {national_unity = 5}
+		35 = {national_unity = 0}
+		15 = {dissent = 5}
+		}
+		random_list={
+		50 = {popularity = -5}
+		35 = {popularity = 0}
+		15 = {popularity = 10}
+		}
+		random_list={
+		50 = {organisation = 10}
+		35 = {organisation = 0}
+		15 = {organisation = -5}
+		}
+		
+	}
+	
+	option = {
+		set_global_flag = CRISISNACIONAL
+		name = "Negociemos con los insurgentes"	
+		ai_chance = { factor = 40 }		
+		dissent = 5
+		any_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}
+		release_vassal = random
+
+		random_list={
+		50 = {dissent = -5}
+		35 = {dissent = 0}
+		15 = {national_unity = -5}
+		}
+		random_list={
+		50 = {popularity = 10}
+		35 = {popularity = 0}
+		15 = {popularity = -5}
+		}
+		random_list={
+		50 = {organisation = -5}
+		35 = {organisation = 0}
+		15 = {organisation = 10}
+		}
+
+		random_list={
+		85 = { 
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+				}
+		10 = { 
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+				}
+		5 = { 
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+				}
+		}
+     
+
+	}
+
+}
+
+################################
+#   ULTIMAS COLONIAS - YUGULO  #
+################################
+
+country_event = {
+
+	trigger = {
+		not = { tag = EUR }
+		is_subject = no
+		year = 1966
+		war = yes		
+		
+		not = { has_global_flag = CRISISNACIONAL }
+		OR = {
+				THIS = { government = theocracy_gov    }
+				THIS = { government = constitutional_monarchy_gov }
+				THIS = { government = republic_gov }
+				THIS = { government = constitutional_republic_gov }
+		}
+		OR = {
+			not = { national_unity = 90 }
+			not = { popularity = 40 }
+		}
+		dissent = 10
+	}
+
+	id = 5550008
+	
+	title = "Creación de nuevas naciones modernas"
+	desc = "Para preservar la unidad nacional es necesario intentar liberar territorios y negociar con insurgentes con el consecuente descontento de los sectores mas conservadores."
+	picture = "ANARKIA-4"
+
+	mean_time_to_happen = {  months = -1 }
+
+	option = {
+		set_global_flag = CRISISNACIONAL
+		name = "Alea Jacta Est"	
+		ai_chance = { factor = 55 }	
+		national_unity = -5
+
+		random_list={
+		50 = {national_unity = 5}
+		35 = {national_unity = 0}
+		15 = {dissent = 5}
+		}
+		random_list={
+		50 = {popularity = -5}
+		35 = {popularity = 0}
+		15 = {popularity = 10}
+		}
+		random_list={
+		50 = {organisation = 10}
+		35 = {organisation = 0}
+		15 = {organisation = -5}
+		}
+
+		
+	}
+
+
+	option = {
+		set_global_flag = CRISISNACIONAL
+		name = "¡Negociemos!"	
+		ai_chance = { factor = 45 }			
+		dissent = 5
+		any_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}
+		release_vassal = random
+
+		random_list={
+		50 = {dissent = -5}
+		35 = {dissent = 0}
+		15 = {national_unity = -5}
+		}
+		random_list={
+		50 = {popularity = 10}
+		35 = {popularity = 0}
+		15 = {popularity = -5}
+		}
+		random_list={
+		50 = {organisation = -5}
+		35 = {organisation = 0}
+		15 = {organisation = 10}
+		}
+
+		random_list={
+		85 = { 
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+				}
+		10 = { 
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+				}
+		5 = { 
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+					release_vassal = random
+				}
+		}
+     
+	}
+
+}
+
+
+
+############################################
+############################################
+# NACIONES VASALLAS PASAN A INDEPENDIENTES #
+############################################
+############################################
+
+
+
+country_event = {
+
+	trigger = {
+		not = { tag = EUR }
+		is_subject = yes
+		
+		money = 2000
+		not = { dissent = 5 }
+		national_unity = 70
+		popularity = 45
+		organisation = 35
+		war = no
+	}
+
+	id = 5550009
+	
+	title = "¡Independencia!"
+	desc = "Para preservar el estado nacional es necesario intentar la independencia total y tomar nuestras propias decisiones como nación soberana o permanecer leales a la metrópoli con el consecuente descontento de los sectores mas independentistas."
+	picture = "ANARKIA-2"
+
+	mean_time_to_happen = {  months = -1 }
+
+	option = {
+		name = "No es buena idea"	
+		ai_chance = { factor = 40 }	
+		dissent = 5
+		neutrality = 5
+
+		random_list={
+		50 = {dissent = -5}
+		35 = {dissent = 0}
+		15 = {national_unity = -5}
+		}
+		random_list={
+		50 = {popularity = 10}
+		35 = {popularity = 0 }
+		15 = {popularity = -10}
+		}
+		random_list={
+		50 = {organisation = -10}
+		35 = {organisation = -5}
+		15 = {organisation = 10}
+		}
+		
+	}
+
+
+	option = {
+		name = "Alea Jacta Est"	
+		ai_chance = { factor = 60 }			
+		national_unity = 5
+		neutrality = -10
+		money = -1000
+
+			REB = { inherit = THIS }
+			any_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}
+
+
+			do_election = THIS
+			start_election = this
+            
+	}
+
+}
+

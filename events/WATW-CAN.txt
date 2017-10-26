@@ -1,0 +1,144 @@
+#144980	- The Rise of Hawthorne - We are the world event 
+#144981	- A boost to the economy - We are the world event 
+#144982	- Establish the Guards - We are the world event 
+#144983	- Monument in your honor - We are the world event 
+
+#144980	- Rise to power - We are the world event 
+country_event = {
+	
+	id = 144980
+
+	trigger = {
+		CAN = { head_of_government = 1133024}		
+		tag = CAN		
+		NOT = { has_country_flag = event_rise_to_power_watw_CAN_done }
+	}
+
+	title = "EVTNAME144980"
+	desc = "EVTDESC144980"
+	picture = "1958_Rise_of_Hawthorne"
+
+	option = {
+		name = "EVTOPTA144980"		#Establish the guards
+		ai_chance = { factor = 100 }						
+		country_event = 144982
+		set_country_flag = event_rise_to_power_watw_CAN_done
+
+	}
+	
+	option = {						#OK
+		name = "EVTOPTB144980" 
+		ai_chance = { factor = 0 }
+		set_country_flag = event_rise_to_power_watw_CAN_done		
+	}
+}
+
+#144981	- A boost to the economy - We are the world event
+country_event = {
+	
+	id = 144981
+
+	trigger = {
+		tag = CAN
+		CAN = { head_of_government = 1133024}
+		owns = 484 
+		owns = 513 
+		owns = 514 
+		owns = 515 
+		owns = 516 
+		owns = 545 
+		owns = 546 
+		owns = 547 
+		owns = 548 
+		owns = 580 
+		owns = 579 
+		owns = 581 
+		owns = 613 
+		owns = 614 
+		owns = 648 
+		owns = 649  
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 3
+	}	
+	
+	title = "EVTNAME144981"
+	desc = "EVTDESC144981"
+	picture = "1958_Hawthorne_economic_boost"
+
+	option = {
+		name = "EVTOPTA144981"		#improve infra
+		ai_chance = { factor = 65 }
+		random_list = {
+			50 = {
+				random_owned = { limit = { region = region_Canada_East_British_Columbia} infra = 4 }
+				random_owned = { limit = { region = region_Canada_East_British_Columbia} infra = 4 }
+				random_owned = { limit = { region = region_Canada_East_British_Columbia} infra = 4 }			
+				random_owned = { limit = { region = region_Canada_East_British_Columbia} infra = 4 }			
+			}
+			35 = {
+				random_owned = { limit = { region = region_Canada_East_British_Columbia} infra = 4 }			
+				random_owned = { limit = { region = region_Canada_East_British_Columbia} infra = 4 }		
+			}
+			10 = {
+				random_owned = { limit = { region = region_Canada_East_British_Columbia} infra = 3 }
+				random_owned = { limit = { region = region_Canada_East_British_Columbia} infra = 3 }
+			}
+			5 = {
+				random_owned = { limit = { region = region_Canada_East_British_Columbia} infra = 3 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB144981"		#take money now
+		ai_chance = { factor = 35 }
+		money = 500
+		supplies = 150
+	}
+}
+
+#144982	- Establish the Guards - We are the world event 
+country_event = {
+	
+	id = 144982
+
+	is_triggered_only = yes
+
+	title = "EVTNAME144982"
+	desc = "EVTDESC144982"
+	picture = "1958_Guards_of_Hawthorne"
+
+	option = {
+		name = "EVTOPTA144982"		#Establish the guards
+		load_oob = CAN_Hawthorne-Guard.txt
+	}
+}
+
+#144983	- Monument in your honor - We are the world event 
+country_event = {
+	
+	id = 144983
+
+	trigger = {
+		tag = CAN
+		has_country_flag = event_rise_to_power_watw_CAN_done
+		NOT = {has_country_flag = event_monument_built_watw_CAN_done}
+		#national monument not yet built		
+		capital_scope = { NOT = { has_special_building = national_monument } }
+	}
+
+	title = "EVTNAME144983"
+	desc = "EVTDESC144983"
+	picture = "1958_Monument_of_Hawthorne"
+
+	option = {
+		name = "EVTOPTA144983"		#Excellent
+		capital_scope = {
+			national_monument = yes
+		}
+		set_country_flag = event_monument_built_watw_CAN_done		
+	}
+}

@@ -1,0 +1,41 @@
+#FootballWar_decisions.txt
+#1969 Football War
+
+#HON:
+	#dec_HON_land_reform - HON land reform
+	
+
+diplomatic_decisions = {
+## HON ##
+	#dec_HON_land_reform - HON land reform
+	dec_HON_land_reform = {
+		category = national
+		picture = "1967_Honduras_Land_Reform"
+		
+		potential = {
+			tag = HON
+			has_country_flag = salvadoran_immigration
+			NOT = {
+				has_country_flag = hon_land_reform
+				has_country_modifier = mod_salvadoran_immigration_delay
+			}
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = { 
+			factor = 1
+			modifier = {
+				factor = 10
+				economy_unbalanced = yes
+			}
+		}
+		
+		effect = {
+			country_event = 214001		# Event 02 for HON
+			set_country_flag = hon_land_reform
+		}
+	}
+
+}

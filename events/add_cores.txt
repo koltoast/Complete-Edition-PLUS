@@ -1,0 +1,349 @@
+
+country_event = {
+
+	id = 700234
+	
+	trigger = {
+	ai = yes
+	NOT = { has_global_flag = add_cores1 }	
+	or = {				
+		    year = 1975
+         NOT = { exists = SOV } 
+        }      
+		  
+		}
+
+	mean_time_to_happen = { days = -2 }
+	option = {
+		set_global_flag = add_cores1
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = RUSIA
+					}
+					add_core = RUS
+					clr_province_flag = RUSIA 
+				}
+			}
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Azerbaijan
+					}
+					add_core = AZB
+					clr_province_flag = Azerbaijan 
+				}
+			}
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Armenia
+					}
+					add_core = ARM
+					clr_province_flag = Armenia 
+				}
+			}
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Georgia
+					}
+					add_core = GEO
+					clr_province_flag = Georgia 
+				}
+			}
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Kurdistan
+					}
+					add_core = KUR
+					clr_province_flag = Kurdistan 
+				}
+			}
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Kyrgyzstan
+					}
+					add_core = KYG
+					clr_province_flag = Kyrgyzstan 
+				}
+			}
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Belarus
+					}
+					add_core = BLR
+					clr_province_flag = Belarus 
+				}
+			}
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Tajikistan
+					}
+					add_core = TAJ
+					clr_province_flag = Tajikistan 
+				}
+			}
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Turkmenistan
+					}
+					add_core = TRK
+					clr_province_flag = Turkmenistan 
+				}
+			}
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Transnistria
+					}
+					add_core = TSN
+					clr_province_flag = Transnistria 
+				}
+			}
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Ukraine
+					}
+					add_core = UKR
+					clr_province_flag = Ukraine 
+				}
+			}	
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Uzbekistan
+					}
+					add_core = UZB
+					clr_province_flag = Uzbekistan 
+				}
+			}			
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Lithuania
+					}
+					add_core = LIT
+					clr_province_flag = Lithuania 
+				}
+			}
+
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Latvia
+					}
+					add_core = LAT
+					clr_province_flag = Latvia 
+				}
+			}
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Estonia
+					}
+					add_core = EST
+					clr_province_flag = Estonia 
+				}
+			}
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Nagorno_Karabakh
+					}
+					add_core = NGK
+					clr_province_flag = Nagorno_Karabakh 
+				}
+			}
+			SOV = {
+				any_owned = {
+					limit = {
+						is_core = SOV
+						has_province_flag = Moldova
+					}
+					add_core = MOL
+					clr_province_flag = Moldova 
+				}
+			}			
+
+	}
+	
+ }
+  
+country_event = {
+
+	id = 700236
+	
+	trigger = {
+	  NOT = { has_global_flag = add_cores2 }
+      ai = yes				
+	  or = {
+		 year = 1975			
+         NOT = { exists = BEL } 
+        }
+     }	 
+	 
+	mean_time_to_happen = { days = 1 }
+	option = {
+		set_global_flag = add_cores2
+			BEL = {
+				any_owned = {
+					limit = {
+						is_core = BEL
+						has_province_flag = Wallonia
+					}
+					add_core = WLL
+					clr_province_flag = Wallonia 
+				}
+			}
+			BEL = {
+				any_owned = {
+					limit = {
+						is_core = BEL
+						has_province_flag = Flanders
+					}
+					add_core = FLA
+					clr_province_flag = Flanders 
+				}
+			}						
+
+	}
+	
+ } 
+
+country_event = {
+
+	id = 700237
+	
+	trigger = {
+	  NOT = { has_global_flag = add_cores3 }
+      ai = yes				
+	  or = {
+		 year = 1975			
+         NOT = { exists = YUG } 
+        } 
+		  
+		}
+
+	mean_time_to_happen = { days = -2 }
+	option = {
+		set_global_flag = add_cores3
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						has_province_flag = Bosnia_Herzegovina
+					}
+					add_core = BOS
+					clr_province_flag = Bosnia_Herzegovina 
+				}
+			}
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						has_province_flag = Croatia
+					}
+					add_core = CRO
+					clr_province_flag = Croatia 
+				}
+			}
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						has_province_flag = Kosovo
+					}
+					add_core = KOS
+					clr_province_flag = Kosovo 
+				}
+			}
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						has_province_flag = Oblast_Krajina
+					}
+					add_core = KRJ
+					clr_province_flag = Oblast_Krajina 
+				}
+			}
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						has_province_flag = Montenegro
+					}
+					add_core = MTN
+					clr_province_flag = Montenegro 
+				}
+			}
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						has_province_flag = Serbian_Krajina
+					}
+					add_core = RSK
+					clr_province_flag = Serbian_Krajina 
+				}
+			}
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						has_province_flag = Serbia
+					}
+					add_core = SER
+					clr_province_flag = Serbia
+				}
+			}	
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						has_province_flag = Slovenia
+					}
+					add_core = SLV
+					clr_province_flag = Slovenia
+				}
+			}
+			YUG = {
+				any_owned = {
+					limit = {
+						is_core = YUG
+						has_province_flag = Macedonia
+					}
+					add_core = MCD
+					clr_province_flag = Macedonia
+				}
+			}			
+
+	}
+	
+ }
+ 
+ 
+

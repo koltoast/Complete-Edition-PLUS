@@ -1,0 +1,105 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Country Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## ENG ##;;;;;;;;;;;;;;x
+mod_ENG_Newfoundland_offer_delay;Newfoundland Offer Delay;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## CAN ##;;;;;;;;;;;;;;x
+mod_CAN_Newfoundland_demand_delay;Newfoundland Demand Delay;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Province Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## CAN ##;;;;;;;;;;;;;;x
+pmod_CAN_newfoundland_fishing_rights_expanded;Fishing Rights Expanded;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## USA ##;;;;;;;;;;;;;;x
+pmod_USA_newfoundland_fishing_rights_curtailed;Fishing Rights Curtailed;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## ENG ##;;;;;;;;;;;;;;x
+dec_ENG_offer_newfoundland_to_Canada_title;Offer Newfoundland to Canada;;;;;;;;;;;;;x
+dec_ENG_offer_newfoundland_to_Canada_desc;Offer Newfoundland to Canada;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## CAN ##;;;;;;;;;;;;;;x
+dec_CAN_pressure_UK_to_give_us_newfoundland_title;Pressure the UK to cede Newfoundland;;;;;;;;;;;;;x
+dec_CAN_pressure_UK_to_give_us_newfoundland_desc;Pressure the UK to cede Newfoundland;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## USA ##;;;;;;;;;;;;;;x
+dec_USA_offer_Canada_mainland_newfoundland_title;Offer to sell Labrador to Canada;;;;;;;;;;;;;x
+dec_USA_offer_Canada_mainland_newfoundland_desc;The accession of Newfoundland & Labrador to our nation has taken a toll upon relations us and Canada. Canadian resentment of the British-defined Quebec-Labrador boundary line has also become more of a concern now that it forms an international boundary between sovereign nations.\n Canada would likely be amenable to us selling them the sparsely populated mainland Labrador in exchange for a monetary settlement and an expansion of their fishing rights in the area, as a method of repairing relations between our nations it may be worth considering.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ; REMOVE HASH FOR ACTIVE EVENTS AND OPTIONS;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## ENG ##;;;;;;;;;;;;;;x
+EVTNAME181090;The Newfoundland Question;;;;;;;;;;;;;x
+EVTDESC181090;The former dominion of Newfoundland in northeastern North America has been ruled by direct British commission since its financial collapse in the 1930s. With the devastation of WWII impacting upon the Empire's remaining finances, it may be worth seeking an end to our financial oversight of the territory by ceding it to Canada or the USA.\nThe most diplomatic, but expensive, solution however would be to gauge the opinions of the territory's residents first through a referendum before deciding upon our course of action.;;;;;;;;;;;;;x
+EVTOPTA181090;Organise a referendum for its populace;;;;;;;;;;;;;x
+EVTOPTB181090;Maintain direct rule;;;;;;;;;;;;;x
+EVTOPTC181090;Give the region to Canada;;;;;;;;;;;;;x
+EVTOPTD181090;Give the region to the USA;;;;;;;;;;;;;x
+EVTNAME181091;Newfoundland Referendum Results Favour Canada;;;;;;;;;;;;;x
+EVTDESC181091;The results of the referendum in Newfoundland on its fate have favoured its accession to Canada.;;;;;;;;;;;;;x
+EVTOPTA181091;Very well, give it to Canada;;;;;;;;;;;;;x
+EVTOPTB181091;No, continue direct rule!;;;;;;;;;;;;;x
+EVTOPTC181091;No, give it to the USA!;;;;;;;;;;;;;x
+EVTNAME181092;Newfoundland Referendum Results Favour the USA;;;;;;;;;;;;;x
+EVTDESC181092;The results of the referendum in Newfoundland on its fate have favoured its accession to the USA.;;;;;;;;;;;;;x
+EVTOPTA181092;Very well, give it to the USA;;;;;;;;;;;;;x
+EVTOPTB181092;No, continue direct rule!;;;;;;;;;;;;;x
+EVTOPTC181092;No, give it to Canada!;;;;;;;;;;;;;x
+EVTNAME181093;Newfoundland Referendum Results Favour Direct Rule;;;;;;;;;;;;;x
+EVTDESC181093;The results of the referendum in Newfoundland on its fate have favoured our continued direct rule over the region.;;;;;;;;;;;;;x
+EVTOPTA181093;Very well, continue direct rule;;;;;;;;;;;;;x
+EVTOPTB181093;No, give it to Canada!;;;;;;;;;;;;;x
+EVTOPTC181093;No, give it to the USA!;;;;;;;;;;;;;x
+EVTNAME181094;Canada accepts our offer of Newfoundland;;;;;;;;;;;;;x
+EVTDESC181094;Canada has accepted our offer of Newfoundland.;;;;;;;;;;;;;x
+EVTOPTA181094;Good;;;;;;;;;;;;;x
+EVTNAME181095;Canada rejects our offer of Newfoundland;;;;;;;;;;;;;x
+EVTDESC181095;Canada has rejected our offer of Newfoundland.;;;;;;;;;;;;;x
+EVTOPTA181095;Good;;;;;;;;;;;;;x
+EVTNAME181096;Canada pressures us to give up Newfoundland;;;;;;;;;;;;;x
+EVTDESC181096;Canada is pressuring us through diplomatic channels to give up our continued rule of Newfoundland and cede it to them.;;;;;;;;;;;;;x
+EVTOPTA181096;Very well;;;;;;;;;;;;;x
+EVTOPTB181096;Unacceptable;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## CAN ##;;;;;;;;;;;;;;x
+EVTNAME144990;Should we desire Newfoundland?;;;;;;;;;;;;;x
+EVTDESC144990;The former dominion of Newfoundland neighbouring us to the east has been ruled by direct British commission since its financial collapse in the 1930s. With the devastation of WWII impacting upon the Empire's remaining finances, Britain is attempting to seek an end to its financial oversight of the territory.\nShould we raise our interest with Britain towards having the territory become part of Canada?;;;;;;;;;;;;;x
+EVTOPTA144990;A good idea;;;;;;;;;;;;;x
+EVTOPTB144990;No;;;;;;;;;;;;;x
+EVTNAME144991;We have been granted Newfoundland;;;;;;;;;;;;;x
+EVTDESC144991;Britain has agreed to transfer governance and sovereignty of Newfoundland to our nation.\nFrom this day forward Newfoundland will be a province of the confedaration of Canada.;;;;;;;;;;;;;x
+EVTOPTA144991;Good news;;;;;;;;;;;;;x
+EVTNAME144992;We have been offered Newfoundland;;;;;;;;;;;;;x
+EVTDESC144992;Britain has offered to transfer the territory of Newfoundland to our nation.\n How shall we respond?;;;;;;;;;;;;;x
+EVTOPTA144992;Accept the offer;;;;;;;;;;;;;x
+EVTOPTB144992;Decline the offer;;;;;;;;;;;;;x
+EVTNAME144993;The UK has rejected our demand for Newfoundland;;;;;;;;;;;;;x
+EVTDESC144993;Britain has rejected our demand for Newfoundland.;;;;;;;;;;;;;x
+EVTOPTA144993;Unfortunate;;;;;;;;;;;;;x
+EVTNAME144994;The USA has offered to sell us Labrador;;;;;;;;;;;;;x
+EVTDESC144994;The USA has offered to transfer the sparsely populated territory of Labrador to us in exchange for a monetary settlement and the expansion of their fishing rights in the area.;;;;;;;;;;;;;x
+EVTOPTA144994;Accept the offer;;;;;;;;;;;;;x
+EVTOPTB144994;Decline the offer;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## USA ##;;;;;;;;;;;;;;x
+EVTNAME354090;Should we desire Newfoundland?;;;;;;;;;;;;;x
+EVTDESC354090;The former dominion of Newfoundland in northeastern North America has been ruled by direct British commission since its financial collapse in the 1930s. With the devastation of WWII impacting upon the Empire's remaining finances, Britain is attempting to seek an end to its financial oversight of the territory.\n Should we raise our interest with Britain towards having the territory become part of the USA?;;;;;;;;;;;;;x
+EVTOPTA354090;A good idea;;;;;;;;;;;;;x
+EVTOPTB354090;No;;;;;;;;;;;;;x
+EVTNAME354091;We have been granted Newfoundland;;;;;;;;;;;;;x
+EVTDESC354091;Britain has agreed to transfer governance and sovereignty of Newfoundland to our nation.\n From this day forward Newfoundland will be a state of the United States of America.;;;;;;;;;;;;;x
+EVTOPTA354091;Good news;;;;;;;;;;;;;x
+EVTNAME354092;Canada accepts our offer of Labrador;;;;;;;;;;;;;x
+EVTDESC354092;Canada has accepted our offer to sell them Labrador in exchange for a monetary settlement and the expansion of our fishing rights in the area.;;;;;;;;;;;;;x
+EVTOPTA354092;Good;;;;;;;;;;;;;x
+EVTNAME354093;Canada rejects our offer of Labrador;;;;;;;;;;;;;x
+EVTDESC354093;Canada has rejected our offer to sell them Labrador.;;;;;;;;;;;;;x
+EVTOPTA354093;Unfortunate;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

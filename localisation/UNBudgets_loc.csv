@@ -1,0 +1,33 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Country Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+mod_Global_UN_funding_minimum;Minimal UN Funding;;;;;;;;;;;;;x
+mod_Global_UN_funding_moderate;Moderate UN Funding;;;;;;;;;;;;;x
+mod_Global_UN_funding_high;Elevated UN Funding;;;;;;;;;;;;;x
+mod_UN_funding_duration;UN Funding Round;;;;;;;;;;;;;x
+;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;;x
+# Events ; REMOVE HASH FOR ACTIVE EVENTS AND OPTIONS;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;;x
+EVTNAME9100;UN Funding Round;;;;;;;;;;;;;x
+EVTDESC9100;The time has come once again to organise new funding commitments from the United Nations member states towards the organisation's ongoing operations. Let us hope they decide upon their commitments with knowledge of the UN's crucial role in mind.;;;;;;;;;;;;;x
+EVTOPTA9100;Okay;;;;;;;;;;;;;x;
+EVTNAME9102;Disappointing Funding Result;;;;;;;;;;;;;x
+EVTDESC9102;The results of our recent UN funding negotiations have been disappointing.;;;;;;;;;;;;;x
+EVTOPTA9102;Unfortunate;;;;;;;;;;;;;x;
+EVTNAME9103;Satisfying Funding Result;;;;;;;;;;;;;x
+EVTDESC9103;The results of our recent UN funding negotiations have been satisfying.;;;;;;;;;;;;;x
+EVTOPTA9103;Okay;;;;;;;;;;;;;x;
+EVTNAME9104;Impressive Funding Result;;;;;;;;;;;;;x
+EVTDESC9104;The results of our recent UN funding negotiations have been impressive.;;;;;;;;;;;;;x
+EVTOPTA9104;Excellent;;;;;;;;;;;;;x;
+;;;;;;;;;;;;;x
+## UN Member States ##;;;;;;;;;;;;;;;x
+EVTNAME9101;UN Funding Decision;;;;;;;;;;;;;x
+EVTDESC9101;The time has come once again to set our relative funding level towards the United Nations and the programmes it runs.;;;;;;;;;;;;;x
+EVTOPTA9101;Minimal Funding;;;;;;;;;;;;;x
+EVTOPTB9101;Moderate Funding;;;;;;;;;;;;;x
+EVTOPTC9101;Elevated Funding;;;;;;;;;;;;;x
+;;;;;;;;;;;;;x

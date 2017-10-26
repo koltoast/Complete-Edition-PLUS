@@ -1,0 +1,66 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+dec_join_WP;We have begun the process of joining WP;;;;;;;;;;;;;x
+EVTNAME700151;Joining the  Warsaw pact;;;;;;;;;;;;;x
+EVTDESC700151;We have begun the process of joining the Warsaw pact as a member state. Whether we are permitted into the organisation at this time or not will depend on the opinions held by the WP's Permanent Members.\nThrough the WP we hope to gain a voice on the international diplomatic stage, shape the creation of new international law, and benefit from the collective security the organisation provides.\n;;;;;;;;;;;;;x
+EVTOPTA700151;Okay;;;;;;;;;;;;;x
+EVTNAME700152;A New WP Member?;;;;;;;;;;;;;x
+EVTDESC700152;$FROMCOUNTRY$ has begun the process of joining the Warsaw pact as a member state. As a WP Permanent Member we have the option of vetoing this application but doing so would come at the cost of some of our international prestige.;;;;;;;;;;;;;x
+EVTOPTA700152;Veto;;;;;;;;;;;;;x
+EVTOPTB700152;Don't Veto;;;;;;;;;;;;;x
+EVTNAME700153;WP Application Vetoed;;;;;;;;;;;;;x
+EVTDESC700153;$FROMCOUNTRY$, that is a WP Permanent Member state has chosen to veto our current application to the  Warsaw pact. We will be able to attempt this process again in two years time.;;;;;;;;;;;;;x
+EVTOPTA700153;Unfortunate;;;;;;;;;;;;;x
+EVTNAME700154;WP Application Progresses;;;;;;;;;;;;;x
+EVTDESC700154;None of the WP Permanent Member states have chosen to veto our application to the  Warsaw pact and thus our membership application will now move forward through the WP's legal processes by being forwarded to the Secretary General.;;;;;;;;;;;;;x
+EVTOPTA700154;Good things take time.;;;;;;;;;;;;;x
+EVTNAME700155;Admitted to the  Warsaw pact;;;;;;;;;;;;;x
+EVTDESC700155;We have recieved word that the  Warsaw pact Security Council has formally accepted our application to join the WP as a member state. We can now fully participate in the organisation.;;;;;;;;;;;;;x
+EVTOPTA700155;Good news;;;;;;;;;;;;;x
+EVTNAME700156; Warsaw pact Membership Application;;;;;;;;;;;;;x
+EVTDESC700156;$FROMCOUNTRY$ has begun the process of joining the  Warsaw pact, and has not had its application vetoed by any of the WP's Permanent Members.\nAs the current Secretary General of the  Warsaw pact we will now progress this application through the relevant legal processes, although we may have the option of fast-tracking it.;;;;;;;;;;;;;x
+EVTOPTA700156;Fast track the process;;;;;;;;;;;;;x
+EVTOPTB700156;Let the process run its course;;;;;;;;;;;;;x
+EVTNAME700165;Intervencion de el Pacto de Varsovia contra un pais hostil al equilibrio mundial;;;;;;;;;;;;;x
+EVTDESC700165;El Pacto de Varsovia  nos conmina al cese de hostilidades;;;;;;;;;;;;;x
+EVTOPTA700165;Acatemos la Resolucion;;;;;;;;;;;;;x
+EVTOPTB700165;No,sigamos con la guerra;;;;;;;;;;;;;x
+EVTNAME700166;Nuestra coalición, El Pacto de Varsovia, aplasta al enemigo;;;;;;;;;;;;;x
+EVTDESC700166;el enemigo que atacó a la zona de defensa de nuestra coalición ha sido vencido;;;;;;;;;;;;;x
+EVTOPTA700166;Okay;;;;;;;;;;;;;x
+EVTNAME700167;El Pacto de Varsovia en defensa de sus aliados;;;;;;;;;;;;;x
+EVTDESC700167;El Pacto de Varsovia  nos conmina al cese de hostilidades;;;;;;;;;;;;;x
+EVTOPTA700167;Acatemos la Resolucion;;;;;;;;;;;;;x
+EVTOPTB700167;No,sigamos con la guerra;;;;;;;;;;;;;x
+EVTNAME700168;Nuestros aliados del Pacto de Varsovia viene en nuestra defensa;;;;;;;;;;;;;x
+EVTDESC700168;Nuestros aliados estan preparandose para intervenir a nuestro lado;;;;;;;;;;;;;x
+EVTOPTA700168;Okay;;;;;;;;;;;;;x
+EVTNAME700169;El Pacto de Varsovia aplasta a su enemigo  $FROMCOUNTRY$;;;;;;;;;;;;;x
+EVTDESC700169; $FROMCOUNTRY$ que atacó a la zona de defensa del Pacto de Varsovia ha sido vencido;;;;;;;;;;;;;x
+EVTOPTA700169;Okay;;;;;;;;;;;;;x
+EVTNAME700174;Intervencion militar del Pacto de Varsovia contra $FROMCOUNTRY$;;;;;;;;;;;;;x
+EVTDESC700174;El Pacto de Varsovia decide intervenir militarmente contra $FROMCOUNTRY$ ante el serio peligro para el equilibrio de la zona;;;;;;;;;;;;;x
+EVTOPTA700174;Okay;;;;;;;;;;;;;x
+EVTNAME700175;EL Pacto de Varsovia interviene en defensa de uno de sus aliados;;;;;;;;;;;;;x
+EVTDESC700175;Tras la agresión militar que sufrio uno de sus aliados, el Pacto de Varsovia ha decidido tomar cartas en el asunto y atacar sin dilacion;;;;;;;;;;;;;x
+EVTOPTA700175;Okay;;;;;;;;;;;;;x
+EVTNAME700181;EL Pacto de Varsovia levanta el embargo;;;;;;;;;;;;;
+EVTDESC700181;El Pacto de Varsovia levanta el embargo de armas y nuclear contra tu pais;;;;;;;;;;;;;
+EVTOPTA700181;Okay;;;;;;;;;;;;;
+EVTNAME700183;El Pacto de Varsovia impone un embargo completo contra $FROMCOUNTRY$;;;;;;;;;;;;;
+EVTDESC700183;El Pacto de Varsovia en su intencion de evitar una guerra con fines pacificos recurre a someter a $FROMCOUNTRY$ a un embargo de armas y nuclear;;;;;;;;;;;;;
+EVTOPTA700183;Okay;;;;;;;;;;;;;
+EVTNAME700192;Intervencion militar del Pacto de Varsovia contra nuestro país;;;;;;;;;;;;;
+EVTDESC700192;El Pacto de Varsovia decide intervenir militarmente contra nosotros por suponer que somos un serio peligro para el equilibrio de la zona;;;;;;;;;;;;;
+EVTOPTA700192;maldición;;;;;;;;;;;;;
+EVTNAME700193;El Pacto de Varsovia nos impone un embargo completo;;;;;;;;;;;;;
+EVTDESC700193;El Pacto de Varsovia en su intencion de evitar una guerra con fines pacificos recurre a someter a nuestro país a un embargo de armas y nuclear;;;;;;;;;;;;;
+EVTOPTA700193;maldición;;;;;;;;;;;;;
+EVTNAME700194;El Pacto de Varsovia aplasta a $FROMCOUNTRY$;;;;;;;;;;;;;
+EVTDESC700194;$FROMCOUNTRY$ que atacó  la zona de defensa del Pacto de Varsovia ha sido vencido;;;;;;;;;;;;;
+EVTOPTA700194;Okay;;;;;;;;;;;;;
+EVTNAME700195;Pacto de Varsovia viene en defensa de su aliado;;;;;;;;;;;;;
+EVTDESC700195;El Pacto de Varsovia estan preparandose para intervenir contra nosotros;;;;;;;;;;;;;
+EVTOPTA700195;maldición;;;;;;;;;;;;;
+EVTNAME700196;Pacto de Varsovia viene en defensa de su aliado contra $FROMCOUNTRY$;;;;;;;;;;;;;
+EVTDESC700196;El Pacto de Varsovia estan preparandose para intervenir contra $FROMCOUNTRY$;;;;;;;;;;;;;
+EVTOPTA700196;maldición;;;;;;;;;;;;;

@@ -1,0 +1,687 @@
+#RightToDevelopmentDeclaration_events.txt
+#UN Right To Development Declaration
+
+#UN Secretary General:
+	#13500 - Raise the UN Right To Development Declaration for Voting - Triggered by dec_UN_raise_right_to_development_declaration
+	#13501 - Should We Have Voting Notifications Or Not?
+	#13502 - UN Right To Development Declaration Resolution Fails in the General Assembly
+	#13503 - UN Right To Development Declaration Resolution Passes in the General Assembly
+	
+#Global:
+	#13510 - Vote on the UN Right To Development Declaration - Notifications Off
+	#13511 - Vote on the UN Right To Development Declaration - Notifications On (Major Event)
+	
+	
+## UN Secretary General ##
+	#13500 - Raise the UN Right To Development Declaration for Voting
+	country_event = {
+	
+		id = 13500
+		
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME13500"
+		desc = "EVTDESC13500"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA13500" 					#Large diplomatic investment
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			
+			#trigger = {
+			#	XUN = { prestige = 40 }
+			#}
+			#XUN  = { prestige_change = -40 }
+			
+			country_event = 13501
+		}
+
+		option = {
+			name = "EVTOPTB13500" 					#Small diplomatic investment
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			
+			#trigger = {
+			#	XUN = { prestige = 15 }
+			#}
+			#XUN  = { prestige_change = -15 }
+			
+			country_event = 13501
+		}
+
+		option = {
+			name = "EVTOPTC13500"					#No diplomatic investment
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			
+			country_event = 13501
+		}
+	}
+	
+	#13501 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 13501
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME13501"
+		desc = "EVTDESC13501"
+		picture = "xxxx"
+		
+		option = {
+			name = "EVTOPTA13501"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_right_to_development_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_right_to_development_declaration_voting
+		}
+		
+		option = {
+			name = "EVTOPTB13501"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_right_to_development_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_right_to_development_declaration_voting
+		}
+	
+	}
+	
+	#13502 - UN Right To Development Declaration Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 13502
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_right_to_development_declaration_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME13502"
+		desc = "EVTDESC13502"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_right_to_development_declaration_voting
+			set_global_flag = gflag_UN_right_to_development_declaration_fails
+		}
+
+		option = {
+			name = "EVTOPTA13502"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			#XUN  = { prestige_change = -50 }
+			
+			#hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_right_to_development_declaration_failure_delay
+						duration = 1460
+					}
+				}
+			#}
+			clr_global_flag = gflag_UN_right_to_development_declaration_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#13503 - UN Right To Development Declaration Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 13503
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_right_to_development_declaration_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME13503"
+		desc = "EVTDESC13503"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_right_to_development_declaration_voting
+			clr_global_flag = gflag_UN_right_to_development_declaration_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_right_to_development_declaration_passes
+		}
+
+		option = {
+			name = "EVTOPTA13503"					#Excellent
+			clr_global_var = var_UN_votes_Total
+			
+			any_country = {
+				limit = {
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				add_country_modifier = {
+					name = mod_UN_right_to_development_declaration
+					duration = -1
+				}
+			}
+			
+			#XUN  = { prestige_change = 50 }
+			
+			clr_global_flag = gflag_UN_right_to_development_declaration_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+
+## Global ##
+	#13510 - Vote on the UN Right To Development Declaration - Notifications Off
+	country_event = {
+	
+		id = 13510
+		
+		trigger = {
+			has_country_flag = flag_UN_right_to_development_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_right_to_development_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME13510"
+		desc = "EVTDESC13510"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_right_to_development_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_right_to_development_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA13510"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.25
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.1
+					human_rights = separate_but_equal
+				}
+				modifier = {
+					factor = 2
+					economic_policy = development_eco_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						economic_policy = industrial_policy_pol
+						economic_policy = indicative_planning_pol
+						economic_policy = five-year_planning_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					economic_policy = welfare_state_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						domestic_policy = industrial_focus_pol
+						domestic_policy = social_focus_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					internal_policy = state_controlled_aff_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						education_policy = very_high_funding_edu_pol
+						education_policy = high_funding_edu_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					national_identity = state_building_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = humanitarian_focus
+						national_identity = civic_focus
+						national_identity = equality_focus
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB13510"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC13510"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.25
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.1
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 1.5
+					economic_policy = supply_side_eco_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						internal_policy = liberal_aff_pol
+						internal_policy = democratic_aff_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						fiscal_policy = fiscal_straitjacket_pol
+						fiscal_policy = curtailed_gov_spending_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						fiscal_policy = debt_and_loans_pol
+						fiscal_policy = reduced_taxation_pol
+						fiscal_policy = tight_policy_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = corporate_focus
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = colonialism
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = imperialism
+						national_identity = hegemony
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+	
+	#13511 - Vote on the UN Right To Development Declaration - Notifications On
+	country_event = {
+	
+		id = 13511
+		
+		trigger = {
+			has_country_flag = flag_UN_right_to_development_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_right_to_development_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME13510"
+		desc = "EVTDESC13510"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_right_to_development_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_right_to_development_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA13510"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.25
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.1
+					human_rights = separate_but_equal
+				}
+				modifier = {
+					factor = 2
+					economic_policy = development_eco_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						economic_policy = industrial_policy_pol
+						economic_policy = indicative_planning_pol
+						economic_policy = five-year_planning_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					economic_policy = welfare_state_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						domestic_policy = industrial_focus_pol
+						domestic_policy = social_focus_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					internal_policy = state_controlled_aff_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						education_policy = very_high_funding_edu_pol
+						education_policy = high_funding_edu_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					national_identity = state_building_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = humanitarian_focus
+						national_identity = civic_focus
+						national_identity = equality_focus
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB13510"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC13510"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.25
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.1
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 1.5
+					economic_policy = supply_side_eco_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						internal_policy = liberal_aff_pol
+						internal_policy = democratic_aff_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						fiscal_policy = fiscal_straitjacket_pol
+						fiscal_policy = curtailed_gov_spending_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						fiscal_policy = debt_and_loans_pol
+						fiscal_policy = reduced_taxation_pol
+						fiscal_policy = tight_policy_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = corporate_focus
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = colonialism
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = imperialism
+						national_identity = hegemony
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}	

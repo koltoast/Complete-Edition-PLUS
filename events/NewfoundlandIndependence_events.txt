@@ -1,0 +1,926 @@
+#NewfoundlandIndependence_events.txt
+#1948 Newfoundland Independence Events
+
+#ENG - United Kingdom:
+	#181090 - The Newfoundland Question
+	#181091 - Newfoundland Referendum Results Favour Canada (weekly check?)
+	#181092 - Newfoundland Referendum Results Favour the USA (weekly check?)
+	#181093 - Newfoundland Referendum Results Favour Direct Rule (weekly check?)
+	#181094 - Canada accepts our offer of Newfoundland
+	#181095 - Canada rejects our offer of Newfoundland
+	#181096 - Canada pressures us to give them Newfoundland
+	
+#CAN - Canada:
+	#144990 - Should we desire Newfoundland? (Canada)
+	#144991 - We have been given Newfoundland (Canada)
+	#144992 - We have been offered Newfoundland
+	#144993 - UK has rejected our demand for Newfoundland
+	#144994 - USA has offered us mainland Newfoundland in exchange for fishing rights
+	
+#USA - USA:
+	#354090 - Should we desire Newfoundland? (USA)
+	#354091 - We have been given Newfoundland (USA)
+	#354092 - Canada accepts our offer of mainland Newfoundland in exchange for fishing rights
+	#354093 - Canada rejects our offer of mainland Newfoundland in exchange for fishing rights
+
+
+## ENG ##
+	#181090 - The Newfoundland Question
+	country_event = {
+	
+		id = 181090		#The Newfoundland Question
+
+		trigger = {
+			tag = ENG
+			owns = 3641
+			NOT = { has_global_flag = gflag_ENG_Newfoundland_referendum_preparations }
+			NOT = { has_global_flag = gflag_ENG_Newfoundland_direct_rule_maintained }
+			NOT = { has_global_flag = gflag_ENG_Newfoundland_given_to_Canada }
+			NOT = { has_global_flag = gflag_ENG_Newfoundland_given_to_United_States }
+			OR = {
+				has_global_flag = gflag_CAN_Canada_desires_Newfoundland
+				has_global_flag = gflag_CAN_Canada_does_not_desire_Newfoundland
+			}
+			OR = {
+				has_global_flag = gflag_USA_United_States_desires_Newfoundland
+				has_global_flag = gflag_USA_United_States_does_not_desire_Newfoundland
+			}
+		}
+
+		mean_time_to_happen =  {
+			days = 183
+		}
+
+		title = "EVTNAME181090"		#The Newfoundland Question
+		desc = "EVTDESC181090"		
+		picture = "1948_Newfoundland"
+		
+		major = yes
+
+		option = {
+			name = "EVTOPTA181090"		#Put the question to a referendum
+			ai_chance = {
+				factor = 84
+			}
+			money = -50
+			set_global_flag = gflag_ENG_Newfoundland_referendum_preparations
+		}
+
+		option = {
+			name = "EVTOPTB181090"		#Maintain direct rule
+			ai_chance = {
+				factor = 5
+			}
+			prestige_change = -10
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = gflag_USA_United_States_desires_Newfoundland }
+				}
+				relation = { who = USA value = -5 }
+			}
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = gflag_CAN_Canada_desires_Newfoundland }
+				}
+				relation = { who = CAN value = -10 }
+			}
+			set_global_flag = gflag_ENG_Newfoundland_direct_rule_maintained
+		}
+
+		option = {
+			name = "EVTOPTC181090"		#Give the region to Canada
+			ai_chance = {
+				factor = 10
+			}
+			trigger = {
+				exists = CAN
+				NOT = { war_with = CAN }
+				has_global_flag = gflag_CAN_Canada_desires_Newfoundland
+			}
+			set_global_flag = gflag_ENG_Newfoundland_given_to_Canada
+			prestige_change = -5
+			relation = { who = CAN value = 20 }
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = gflag_USA_United_States_desires_Newfoundland }
+				}
+				relation = { who = USA value = -10 }
+			}
+			CAN = { country_event = 144991 }
+		}
+
+		option = {
+			name = "EVTOPTD181090"		#Give the region to the USA
+			ai_chance = {
+				factor = 1
+			}
+			trigger = {
+				exists = USA
+				NOT = { war_with = USA }
+				has_global_flag = gflag_USA_United_States_desires_Newfoundland
+			}
+			set_global_flag = gflag_ENG_Newfoundland_given_to_United_States
+			prestige_change = -5
+			relation = { who = USA value = 20 }
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = gflag_CAN_Canada_desires_Newfoundland }
+				}
+				relation = { who = CAN value = -25 }
+			}
+			USA = { country_event = 354091 }
+		}
+	}
+
+	#181091 - Newfoundland Referendum Results Favour Canada
+	country_event = {
+	
+		id = 181091		#Newfoundland Referendum Results Favour Canada
+
+		trigger = {
+			tag = ENG
+			exists = CAN
+			NOT = { war_with = CAN }
+			relation = { who = CAN value = -150 }
+			owns = 3641
+			has_global_flag = gflag_ENG_Newfoundland_referendum_preparations
+			has_global_flag = gflag_CAN_Canada_desires_Newfoundland
+			NOT = { has_global_flag = gflag_ENG_Newfoundland_referendum_complete }
+		}
+
+		mean_time_to_happen =  {
+			days = 730
+		}
+
+		title = "EVTNAME181091"		#Newfoundland Referendum Results Favour Canada
+		desc = "EVTDESC0181091"		
+		picture = "1948_Newfoundland_referendum"
+		
+		major = yes
+		
+		immediate = {
+			set_global_flag = gflag_ENG_Newfoundland_referendum_complete
+		}
+
+		option = {
+			name = "EVTOPTA181091"		#Very well, give it to Canada
+			ai_chance = {
+				factor = 95
+			}
+			set_global_flag = gflag_ENG_Newfoundland_given_to_Canada
+			prestige_change = 10
+			relation = { who = CAN value = 20 }
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = gflag_USA_United_States_desires_Newfoundland }
+				}
+				relation = { who = USA value = -5 }
+			}
+			CAN = { country_event = 144991 }
+		}
+		
+		option = {
+			name = "EVTOPTB181091"		#No, continue direct rule!
+			ai_chance = {
+				factor = 5
+			}
+			set_global_flag = gflag_ENG_Newfoundland_direct_rule_maintained
+			prestige_change = -20
+			relation = { who = CAN value = -20 }
+		}
+		
+		option = {
+			name = "EVTOPTC181091"		#No, give it to the USA!
+			ai_chance = {
+				factor = 0
+			}
+			trigger = {
+				exists = USA
+				NOT = { war_with = USA }
+				has_global_flag = gflag_USA_United_States_desires_Newfoundland
+			}
+			set_global_flag = gflag_ENG_Newfoundland_given_to_United_States
+			prestige_change = -15
+			relation = { who = CAN value = -25 }
+			USA = { country_event = 354091 }
+		}
+	}
+
+	#181092 - Newfoundland Referendum Results Favour the USA
+	country_event = {
+	
+		id = 181092		#Newfoundland Referendum Results Favour USA
+
+		trigger = {
+			tag = ENG
+			exists = USA
+			NOT = { war_with = USA }
+			relation = { who = USA value = -150 }
+			owns = 3641
+			has_global_flag = gflag_ENG_Newfoundland_referendum_preparations
+			has_global_flag = gflag_USA_United_States_desires_Newfoundland
+			NOT = { has_global_flag = gflag_ENG_Newfoundland_referendum_complete }
+		}
+
+		mean_time_to_happen =  {
+			days = 812
+		}
+
+		title = "EVTNAME181092"		#Newfoundland Referendum Results Favour USA
+		desc = "EVTDESC181092"		
+		picture = "1948_Newfoundland_referendum"
+		
+		major = yes
+		
+		immediate = {
+			set_global_flag = gflag_ENG_Newfoundland_referendum_complete
+		}
+
+		option = {
+			name = "EVTOPTA181092"		#Very well, give it to the USA
+			ai_chance = {
+				factor = 50
+			}
+			set_global_flag = gflag_ENG_Newfoundland_given_to_Canada
+			prestige_change = 10
+			relation = { who = USA value = 20 }
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = gflag_CAN_Canada_desires_Newfoundland }
+				}
+				relation = { who = CAN value = -15 }
+			}
+			USA = { country_event = 354091 }
+		}
+		
+		option = {
+			name = "EVTOPTB181092"		#No, continue direct rule!
+			ai_chance = {
+				factor = 10
+			}
+			set_global_flag = gflag_ENG_Newfoundland_direct_rule_maintained
+			prestige_change = -20
+			relation = { who = CAN value = -10 }
+		}
+		
+		option = {
+			name = "EVTOPTC181092"		#No, give it to Canada!
+			ai_chance = {
+				factor = 40
+			}
+			trigger = {
+				exists = USA
+				NOT = { war_with = USA }
+				has_global_flag = gflag_USA_United_States_desires_Newfoundland
+			}
+			set_global_flag = gflag_ENG_Newfoundland_given_to_United_States
+			prestige_change = -15
+			relation = { who = USA value = -20 }
+			relation = { who = CAN value = 25 }
+			CAN = { country_event = 144991 }
+		}
+	}
+
+	#181093 - Newfoundland Referendum Results Favour Direct Rule
+	country_event = {
+	
+		id = 181093		#Newfoundland Referendum Results Favour Direct Rule
+
+		trigger = {
+			tag = ENG
+			exists = USA
+			NOT = { war_with = USA }
+			relation = { who = USA value = -150 }
+			owns = 3641
+			has_global_flag = gflag_ENG_Newfoundland_referendum_preparations
+			has_global_flag = gflag_USA_United_States_desires_Newfoundland
+			NOT = { has_global_flag = gflag_ENG_Newfoundland_referendum_complete }
+		}
+
+		mean_time_to_happen =  {
+			days = 812
+		}
+
+		title = "EVTNAME181093"		#Newfoundland Referendum Results Favour Direct Rule
+		desc = "EVTDESC181093"		
+		picture = "1948_Newfoundland_referendum"
+		
+		major = yes
+		
+		immediate = {
+			set_global_flag = gflag_ENG_Newfoundland_referendum_complete
+		}
+
+		option = {
+			name = "EVTOPTA181093"		#Very well, continue direct rule
+			ai_chance = {
+				factor = 60
+			}
+			set_global_flag = gflag_ENG_Newfoundland_direct_rule_maintained
+			prestige_change = 10
+			relation = { who = CAN value = 20 }
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = gflag_USA_United_States_desires_Newfoundland }
+				}
+				relation = { who = USA value = -5 }
+			}
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = gflag_CAN_Canada_desires_Newfoundland }
+				}
+				relation = { who = CAN value = -10 }
+			}
+		}
+		
+		option = {
+			name = "EVTOPTB181093"		#No, give it to Canada!
+			ai_chance = {
+				factor = 40
+			}
+			set_global_flag = gflag_ENG_Newfoundland_direct_rule_maintained
+			prestige_change = -20
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = gflag_USA_United_States_desires_Newfoundland }
+				}
+				relation = { who = USA value = -10 }
+			}
+			relation = { who = CAN value = 25 }
+			CAN = { country_event = 144991 }
+		}
+		
+		option = {
+			name = "EVTOPTC181093"		#No, give it to the USA!
+			ai_chance = {
+				factor = 0
+			}
+			trigger = {
+				exists = USA
+				NOT = { war_with = USA }
+				has_global_flag = gflag_USA_United_States_desires_Newfoundland
+			}
+			set_global_flag = gflag_ENG_Newfoundland_given_to_United_States
+			prestige_change = -15
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = gflag_CAN_Canada_desires_Newfoundland }
+				}
+				relation = { who = CAN value = -20 }
+			}
+			relation = { who = CAN value = 20 }
+			USA = { country_event = 354091 }
+		}
+	}
+	
+	#181094 - Canada accepts our offer of Newfoundland
+	country_event = {
+	
+		id = 181094		#We have been given Newfoundland
+
+		is_triggered_only = yes
+
+		title = "EVTNAME181094"		#We have been given Newfoundland
+		desc = "EVTDESC181094"
+		picture = "1948_Newfoundland_joins_Canada"
+
+		option = {
+			name = "EVTOPTA181094"		#Good
+			prestige_change = 5
+			relation = { who = CAN value = 20 }
+			dissent = -1
+		}
+	}
+	
+	#181095 - Canada rejects our offer of Newfoundland
+	country_event = {
+	
+		id = 181095		#We have been given Newfoundland
+
+		is_triggered_only = yes
+
+		title = "EVTNAME181095"		#We have been given Newfoundland
+		desc = "EVTDESC181095"
+		picture = "1948_Labrador"
+
+		option = {
+			name = "EVTOPTA181095"		#Unfortunate
+			relation = { who = CAN value = -5 }
+			clr_global_flag = gflag_ENG_Newfoundland_offered_to_Canada
+			add_country_modifier = {
+				name = mod_ENG_Newfoundland_offer_delay
+				duration = 1460
+			}
+		}
+	}
+	
+	#181096 - Canada pressures us to give them Newfoundland
+	country_event = {
+	
+		id = 181096		#Canada pressures us to give them Newfoundland
+
+		is_triggered_only = yes
+
+		title = "EVTNAME181096"		#Canada pressures us to give them Newfoundland
+		desc = "EVTDESC181096"
+		picture = "1948_Newfoundland"
+
+		option = {
+			name = "EVTOPTA181096"		#Very well
+			ai_chance = {
+				factor = 25
+				modifier = {
+					factor = 1.5
+					OR = {
+						ideology = left_wing_radical_idolg
+						ideology = social_democrat_idolg
+					}
+				}
+				modifier = {
+					factor = 2
+					any_owned_province = {
+						OR = {
+							region = region_Canada_Labrador
+							region = region_Canada_Newfoundland
+						}
+						revolt_risk = 2
+					}
+				}
+				modifier = {
+					factor = 1.5
+					3641 = { revolt_risk = 6 }
+				}
+				modifier = {
+					factor = 1.5
+					3641 = { revolt_risk = 10 }
+				}
+				modifier = {
+					factor = 1.25
+					war_exhaustion = 12
+				}
+				modifier = {
+					factor = 1.25
+					dissent = 10
+				}
+				modifier = {
+					factor = 1.25
+					dissent = 20
+				}
+				modifier = {
+					factor = 1.25
+					dissent = 30
+				}
+			}
+			prestige_change = -5
+			relation = { who = CAN value = -10 }
+			CAN = { country_event = 144991 }
+		}
+
+		option = {
+			name = "EVTOPTB181096"		#Unacceptable
+			ai_chance = {
+				factor = 75
+				modifier = {
+					factor = 5
+					ideology = fascistic_idolg
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						government = totalitarian_gov
+						government = authoritarian_gov
+						government = theocracy_gov
+						government = absolute_monarchy_gov
+					}
+					NOT = { 
+						ideology_group = comintern
+						ideology = left_wing_radical_idolg
+					}
+				}
+				modifier = {
+					factor = 1.5
+					national_unity = 85
+				}
+				modifier = {
+					factor = 1.25
+					NOT = { relation = { who = CAN value = 0 } }
+				}
+				modifier = {
+					factor = 1.25
+					NOT = { relation = { who = CAN value = 75 } }
+				}
+				modifier = {
+					factor = 1.25
+					NOT = { relation = { who = CAN value = 150 } }
+				}
+			}
+			dissent = 1
+			random_owned = {
+				limit = { 
+					OR = {
+						region = region_Canada_Labrador
+						region = region_Canada_Newfoundland
+					}
+				}
+				revolt_risk = 2
+			}
+			random_owned = {
+				limit = { 
+					OR = {
+						region = region_Canada_Labrador
+						region = region_Canada_Newfoundland
+					}
+				}
+				revolt_risk = 2
+			}
+			3641 = { revolt_risk = 2 }
+			relation = { who = CAN value = -25 }
+			CAN = { country_event = 144993 }
+		}
+	}
+
+## CAN ##
+	#144990 - Should we desire Newfoundland? (Canada)
+	country_event = {
+	
+		id = 144990		#Should we desire Newfoundland?
+
+		trigger = {
+			tag = CAN
+			exists = ENG
+			ENG = { owns = 3641 }
+			NOT = { war_with = ENG }
+			NOT = { has_global_flag = gflag_CAN_Canada_desires_Newfoundland }
+			NOT = { has_global_flag = gflag_CAN_Canada_does_not_desire_Newfoundland }
+		}
+
+		mean_time_to_happen =  {
+			days = 92
+		}
+
+		title = "EVTNAME144990"		#Should we desire Newfoundland?
+		desc = "EVTDESC144990"		
+		picture = "1948_Newfoundland"
+
+		option = {
+			name = "EVTOPTA144990"		#A good idea
+			ai_chance = { 
+				factor = 85
+				modifier = {
+					factor = 1.5
+					OR = {
+						head_of_government = visionary_type
+						head_of_government = ambitious_type
+						head_of_government = dictator_type
+					}
+				}
+				modifier = {
+					factor = 1.5
+					relation = { who = ENG value = 75 }
+				}
+				modifier = {
+					factor = 1.5
+					relation = { who = ENG value = 150 }
+				}
+				modifier = {
+					factor = 0
+					NOT = { relation = { who = ENG value = -150 } }
+				}
+			}
+			set_global_flag = gflag_CAN_Canada_desires_Newfoundland
+			relation = { who = ENG value = 5 }
+			relation = { who = USA value = -5 }
+		}
+
+		option = {
+			name = "EVTOPTB144990"		#No
+			ai_chance = { 
+				factor = 15
+				modifier = {
+					factor = 1.5
+					NOT = { relation = { who = ENG value = -75 } }
+				}
+			}
+			set_global_flag = gflag_CAN_Canada_does_not_desire_Newfoundland
+		}
+	}
+	
+	#144991 - We have been given Newfoundland (Canada)
+	country_event = {
+	
+		id = 144991		#We have been given Newfoundland
+
+		is_triggered_only = yes
+
+		title = "EVTNAME144991"		#We have been given Newfoundland
+		desc = "EVTDESC144991"		
+		picture = "1948_Newfoundland_joins_Canada"
+
+		option = {
+			name = "EVTOPTA144991"		#Good news
+			set_global_flag = gflag_CAN_Canada_given_Newfoundland
+			prestige_change = 5
+			ENG = {
+				any_owned = {
+					limit = { 
+						OR = {
+							region = region_Canada_Labrador
+							region = region_Canada_Newfoundland
+						}
+					}
+					secede_province = THIS
+				}
+			}
+			any_owned = {
+				limit = { 
+					OR = {
+						region = region_Canada_Labrador
+						region = region_Canada_Newfoundland
+					}
+				}
+				revolt_risk = -3
+			}
+		}
+	}
+	
+	#144992 - We have been offered Newfoundland
+	country_event = {
+	
+		id = 144992		#We have been offered Newfoundland
+
+		is_triggered_only = yes
+
+		title = "EVTNAME144992"		#We have been offered Newfoundland
+		desc = "EVTDESC144992"		
+		picture = "1948_Newfoundland"
+
+		option = {
+			name = "EVTOPTA144992"		#Accept the offer
+			ai_chance = {
+				factor = 98
+			}
+			set_global_flag = gflag_CAN_Canada_given_Newfoundland
+			prestige_change = 5
+			ENG = {
+				any_owned = {
+					limit = { 
+						OR = {
+							region = region_Canada_Labrador
+							region = region_Canada_Newfoundland
+						}
+					}
+					secede_province = THIS
+				}
+				country_event = 181094
+			}
+			any_owned = {
+				limit = { 
+					OR = {
+						region = region_Canada_Labrador
+						region = region_Canada_Newfoundland
+					}
+				}
+				revolt_risk = -3
+			}
+		}
+
+		option = {
+			name = "EVTOPTB144992"		#Decline the offer
+			ai_chance = {
+				factor = 2
+				modifier = {
+					factor = 2
+					economy_unbalanced = yes
+				}
+			}
+			dissent = 1
+			popularity = -1
+			ENG = { country_event = 181095 }
+		}
+	}
+	
+	#144993 - UK has rejected our demand for Newfoundland
+	country_event = {
+	
+		id = 144993		#UK has rejected our demand for Newfoundland
+
+		is_triggered_only = yes
+
+		title = "EVTNAM144993"		#UK has rejected our demand for Newfoundland
+		desc = "EVTDESC144993"
+		picture = "1948_Newfoundland"
+
+		option = {
+			name = "EVTOPTA144993"		#Unfortunate
+			prestige_change = -5
+			clr_global_flag = gflag_CAN_Newfoundland_demanded_from_UK
+			add_country_modifier = {
+				name = mod_CAN_Newfoundland_demand_delay
+				duration = 1460
+			}
+		}
+	}
+	
+	#144994 - USA has offered us Labrador in exchange for fishing rights
+	country_event = {
+	
+		id = 144994		#USA has offered us mainland Newfoundland in exchange for fishing rights
+
+		is_triggered_only = yes
+
+		title = "EVTNAME144994"		#USA has offered us mainland Newfoundland in exchange for fishing rights
+		desc = "EVTDESC144994"		
+		picture = "1948_Labrador"
+
+		option = {
+			name = "EVTOPTA144994"		#Accept the offer
+			ai_chance = {
+				factor = 75
+			}
+			set_global_flag = gflag_CAN_Canada_given_Newfoundland
+			prestige_change = 2
+			money = -15000
+			USA = {
+				any_owned = {
+					limit = { region = region_Canada_Labrador }
+					secede_province = THIS
+				}
+			}
+			any_owned = {
+				limit = {
+					port = yes
+					OR = {
+						region = region_Canada_Labrador
+						region = region_Canada_Saguenay
+						region = region_Canada_Levis
+						region = region_Canada_New_Brunswick
+						region = region_Canada_Nova_Scotia
+						region = region_Canada_Prince_Edward_Island
+					}
+				}
+				add_province_modifier = {
+					name = pmod_CAN_newfoundland_fishing_rights_expanded
+					duration = 3650
+				}
+			}
+			USA = { country_event = 354092 }
+		}
+
+		option = {
+			name = "EVTOPTB144994"		#Decline the offer
+			ai_chance = {
+				factor = 25
+				modifier = {
+					factor = 2
+					economy_unbalanced = yes
+				}
+			}
+			dissent = 0.5
+			USA = { country_event = 354093 }
+		}
+	}
+
+## USA ##
+	#354090 - Should we desire Newfoundland? (USA)
+	country_event = {
+	
+		id = 354090		#Should we desire Newfoundland?
+
+		trigger = {
+			tag = USA
+			exists = ENG
+			ENG = { owns = 3641 }
+			NOT = { war_with = ENG }
+			NOT = { has_global_flag = gflag_USA_United_States_desires_Newfoundland }
+			NOT = { has_global_flag = gflag_USA_United_States_does_not_desire_Newfoundland }
+		}
+
+		mean_time_to_happen =  {
+			days = 92
+		}
+
+		title = "EVTNAME354090"		#Should we desire Newfoundland?
+		desc = "EVTDESC354090"		
+		picture = "1948_Newfoundland"
+
+		option = {
+			name = "EVTOPTA354090"		#Yes
+			ai_chance = { 
+				factor = 25
+				modifier = {
+					factor = 1.5
+					OR = {
+						head_of_government = visionary_type
+						head_of_government = ambitious_type
+						head_of_government = dictator_type
+					}
+				}
+				modifier = {
+					factor = 1.25
+					relation = { who = ENG value = 75 }
+				}
+				modifier = {
+					factor = 1.25
+					relation = { who = ENG value = 150 }
+				}
+				modifier = {
+					factor = 0
+					NOT = { relation = { who = ENG value = -75 } }
+				}
+			}
+			set_global_flag = gflag_USA_United_States_desires_Newfoundland
+			relation = { who = ENG value = -20 }
+			relation = { who = CAN value = -30 }
+		}
+
+		option = {
+			name = "EVTOPTB354090"		#No
+			ai_chance = { 
+				factor = 75
+			}
+			set_global_flag = gflag_USA_United_States_does_not_desire_Newfoundland
+		}
+	}
+	
+	#354091 - We have been given Newfoundland (USA)
+	country_event = {
+	
+		id = 354091		#We have been given Newfoundland
+
+		is_triggered_only = yes
+
+		title = "EVTNAME354091"		#We have been given Newfoundland
+		desc = "EVTDESC354091"		
+		picture = "1948_Newfoundland_joins_Canada"
+
+		option = {
+			name = "EVTOPTA354091"		#Good news
+			set_global_flag = gflag_USA_United_States_given_Newfoundland
+			prestige_change = 5
+			ENG = {
+				any_owned = {
+					limit = { 
+						OR = {
+							region = region_Canada_Labrador
+							region = region_Canada_Newfoundland
+						}
+					}
+					secede_province = THIS
+				}
+			}
+			any_owned = {
+				limit = { 
+					OR = {
+						region = region_Canada_Labrador
+						region = region_Canada_Newfoundland
+					}
+				}
+				revolt_risk = -3
+			}
+		}
+	}
+	
+	#354092 - Canada accepts our offer of mainland Newfoundland in exchange for fishing rights
+	country_event = {
+	
+		id = 354092		#Canada accepts our offer of mainland Newfoundland in exchange for fishing rights
+
+		is_triggered_only = yes
+
+		title = "EVTNAME354092"		#Canada accepts our offer of mainland Newfoundland in exchange for fishing rights
+		desc = "EVTDESC354092"
+		picture = "1948_Labrador"
+
+		option = {
+			name = "EVTOPTA354092"		#Good
+			prestige_change = 5
+			relation = { who = CAN value = 15 }
+			any_owned = {
+				limit = {
+					port = yes
+					region = region_Canada_Newfoundland
+				}
+				add_province_modifier = {
+					name = pmod_USA_newfoundland_fishing_rights_curtailed
+					duration = 3650
+				}
+			}
+			money = 15000
+		}
+	}
+	
+	#354093 - Canada rejects our offer of mainland Newfoundland in exchange for fishing rights
+	country_event = {
+	
+		id = 354093		#Canada rejects our offer of mainland Newfoundland in exchange for fishing rights
+
+		is_triggered_only = yes
+
+		title = "EVTNAME354093"		#Canada rejects our offer of mainland Newfoundland in exchange for fishing rights
+		desc = "EVTDESC354093"
+		picture = "1948_Labrador"
+
+		option = {
+			name = "EVTOPTA354093"		#Unfortunate
+		}
+	}

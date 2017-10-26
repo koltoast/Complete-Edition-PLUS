@@ -1,0 +1,61 @@
+#MilitaryPurge_decisions.txt
+#Military Purge
+
+#Global:
+	#dec_military_purge - Begin Military Purge
+
+
+diplomatic_decisions = {
+## Global ##
+	#dec_military_purge
+	dec_military_purge = {
+		category = national
+		picture = "1943_purge_trial"
+		
+		potential = {
+			OR = {
+				government = totalitarian_gov
+				government = authoritarian_gov
+				government = absolute_monarchy_gov
+				government = theocracy_gov
+				government = constitutional_monarchy_gov
+				internal_policy = state_controlled_aff_pol
+				AND = {
+					internal_policy = repressive_aff_pol
+					domestic_policy = defence_focus_pol
+				}
+			}
+			total_amount_of_divisions = 8
+		}
+		
+		allow = {
+			NOT = { 
+				has_country_flag = war_games
+				has_country_flag = war_games_start
+				has_country_flag = military_purge
+				has_country_flag = military_purge_start
+				has_country_flag = propaganda_campaign
+				has_country_flag = propaganda_campaign_start
+				has_country_flag = cultural_revolution #Communist China will have its own unique event chain
+				has_country_flag = government_junket
+				has_country_flag = government_junket_start
+				has_country_flag = anticorruption_campaign
+				has_country_flag = anticorruption_campaign_start
+				has_country_modifier = military_purge_delay
+			}
+			total_amount_of_divisions = 10
+			#Has at least 5 military leaders, no such trigger at the moment
+			war = no
+		}
+		
+		ai_will_do = { 
+			factor = 0
+		}
+		
+		effect = {
+			set_country_flag = military_purge_start
+			country_event = 2001
+		}
+	}
+
+}

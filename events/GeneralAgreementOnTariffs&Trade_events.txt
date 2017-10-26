@@ -1,0 +1,1226 @@
+#GeneralAgreementOnTariffs&Trade_events.txt
+#UN General Agreement On Tariffs & Trade
+
+#UN Secretary General:
+	#15000 - Raise the UN General Agreement On Tariffs & Trade for Voting - Triggered by dec_UN_raise_general_agreement_on_tariffs_and_trade
+	#15001 - Should We Have Voting Notifications Or Not?
+	#15002 - UN General Agreement On Tariffs & Trade Resolution Fails in the General Assembly
+	#15003 - UN General Agreement On Tariffs & Trade Resolution Passes in the General Assembly
+	
+#Global:
+	#15010 - Vote on the UN General Agreement On Tariffs & Trade - Notifications Off
+	#15011 - Vote on the UN General Agreement On Tariffs & Trade - Notifications On (Major Event)
+	#15012 - We have ratified the UN General Agreement On Tariffs & Trade - Triggered
+	#15013 - We have ratified the UN General Agreement On Tariffs & Trade - Non-triggered
+	#15014 - We have revoked the UN General Agreement On Tariffs & Trade
+	
+	
+## UN Secretary General ##
+	#15000 - Raise the UN General Agreement On Tariffs & Trade for Voting
+	country_event = {
+	
+		id = 15000
+
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME15000"
+		desc = "EVTDESC15000"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA15000" 					#Large diplomatic investment
+			
+			trigger = {
+				XUN = { prestige = 40 }
+			}
+			XUN  = { prestige_change = -40 }
+			
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			country_event = 15001
+		}
+
+		option = {
+			name = "EVTOPTB15000" 					#Small diplomatic investment
+			
+			trigger = {
+				XUN = { prestige = 15 }
+			}
+			XUN  = { prestige_change = -15 }
+			
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			country_event = 15001
+		}
+
+		option = {
+			name = "EVTOPTC15000"					#No diplomatic investment
+			
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			country_event = 15001
+		}
+	}
+	
+	#15001 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 15001
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME15001"
+		desc = "EVTDESC15001"
+		picture = "xxxx"
+		
+		option = {
+			name = "EVTOPTA15001"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+				
+			set_global_var = {
+				name = var_UN_GATT_ratified_num
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_general_agreement_on_tariffs_and_trade_voting
+		}
+		
+		option = {
+			name = "EVTOPTB15001"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_GATT_ratified_num
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_general_agreement_on_tariffs_and_trade_voting
+		}
+	}
+	
+	#15002 - UN General Agreement On Tariffs & Trade Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 15002
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_general_agreement_on_tariffs_and_trade_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME15002"
+		desc = "EVTDESC15002"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_general_agreement_on_tariffs_and_trade_voting
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_general_agreement_on_tariffs_and_trade_fails
+		}
+
+		option = {
+			name = "EVTOPTA15002"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			XUN  = { prestige_change = -50 }
+			
+			hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_general_agreement_on_tariffs_and_trade_failure_delay
+						duration = 1460
+					}
+				}
+			}
+			clr_global_flag = gflag_UN_general_agreement_on_tariffs_and_trade_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#15003 - UN General Agreement On Tariffs & Trade Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 15003
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_general_agreement_on_tariffs_and_trade_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME15003"
+		desc = "EVTDESC15003"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_general_agreement_on_tariffs_and_trade_voting
+			clr_global_flag = gflag_UN_general_agreement_on_tariffs_and_trade_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_general_agreement_on_tariffs_and_trade_passes
+		}
+
+		option = {
+			name = "EVTOPTA15003"					#Excellent
+			clr_global_var = var_UN_votes_For
+			
+			XUN  = { prestige_change = 50 }
+			
+			any_country = {
+				limit = {
+					has_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_supporter
+				}
+				set_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_ratified
+				country_event = 15012
+			}
+			clr_global_flag = gflag_UN_general_agreement_on_tariffs_and_trade_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+
+## Global ##
+	#15010 - Vote on the UN General Agreement On Tariffs & Trade - Notifications Off
+	country_event = {
+	
+		id = 15010
+		
+		trigger = {
+			has_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_general_agreement_on_tariffs_and_trade_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME15010"
+		desc = "EVTDESC15010"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_general_agreement_on_tariffs_and_trade_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA15010"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						foreign_policy = dove_policy_pol
+						foreign_policy = detente_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					domestic_policy = commercial_focus_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						internal_policy = democratic_aff_pol
+						internal_policy = liberal_aff_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					economic_policy = supply_side_eco_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						economic_policy = technology_based_eco_pol
+						economic_policy = industrial_policy_pol
+						economic_policy = resource_based_policy_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					fiscal_policy = supply_side_eco_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						fiscal_policy = reduced_taxation_pol
+						fiscal_policy = fiscal_straitjacket_pol
+						fiscal_policy = curtailed_gov_spending_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						fiscal_policy = tight_policy_pol
+						fiscal_policy = debt_and_loans_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						education_policy = very_high_funding_edu_pol
+						education_policy = high_funding_edu_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						human_rights = universal_rights
+						human_rights = separate_but_equal
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						public_oversight = limited_oversight
+						public_oversight = non-systematic_oversight
+					}
+				}
+				modifier = {
+					factor = 1.1
+					organized_religions_law = secular_state
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = corporate_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = hegemony
+						national_identity = balance_of_power
+					}
+				}
+				modifier = {
+					factor = 1.1
+					is_org_member = XNA
+				}
+				modifier = {
+					factor = 10
+					is_org_leader = XNA
+					NOT = {
+						economic_policy = indicative_planning_pol
+						economic_policy = five-year_planning_pol
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_supporter
+			
+			relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB15010"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+			clr_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_supporter
+		}
+
+		option = {
+			name = "EVTOPTC15010"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.1
+					domestic_policy = social_focus_pol
+				}
+				modifier = {
+					factor = 1.25
+					internal_policy = state_controlled_aff_pol
+				}
+				modifier = {
+					factor = 2
+					economic_policy = five-year_planning_pol
+				}
+				modifier = {
+					factor = 1.5
+					economic_policy = indicative_planning_pol
+				}
+				modifier = {
+					factor = 1.1
+					economic_policy = welfare_state_pol
+				}
+				modifier = {
+					factor = 1.5
+					fiscal_policy = supply_side_eco_pol
+				}
+				modifier = {
+					factor = 1.25
+					military_policy = sustained_military_service_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						fiscal_policy = increased_government_spending_pol
+						fiscal_policy = expansionary_policy_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						human_rights = not_recognized
+						human_rights = cultural_relativism
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						public_oversight = transparent_public_oversight
+						public_oversight = systematic_oversight
+					}
+				}
+				modifier = {
+					factor = 1.25
+					organized_religions_law = state_religion
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = equality_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = state_building_focus
+						national_identity = civic_focus
+					}
+				}
+				modifier = {
+					factor = 1.5
+					is_org_member = XWP
+				}
+				modifier = {
+					factor = 10
+					is_org_leader = XWP
+					OR = {
+						economic_policy = indicative_planning_pol
+						economic_policy = five-year_planning_pol
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			clr_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_supporter
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_general_agreement_on_tariffs_and_trade_revoked_recently
+					duration = 60
+				}
+			}
+			
+			relation = { who = XUN value = -5 }
+		}
+	}
+
+	#15011 - Vote on the UN General Agreement On Tariffs & Trade - Notifications On
+	country_event = {
+	
+		id = 15011
+		
+		trigger = {
+			has_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_general_agreement_on_tariffs_and_trade_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME15010"
+		desc = "EVTDESC15010"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_general_agreement_on_tariffs_and_trade_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA15010"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						foreign_policy = dove_policy_pol
+						foreign_policy = detente_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					domestic_policy = commercial_focus_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						internal_policy = democratic_aff_pol
+						internal_policy = liberal_aff_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					economic_policy = supply_side_eco_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						economic_policy = technology_based_eco_pol
+						economic_policy = industrial_policy_pol
+						economic_policy = resource_based_policy_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					fiscal_policy = supply_side_eco_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						fiscal_policy = reduced_taxation_pol
+						fiscal_policy = fiscal_straitjacket_pol
+						fiscal_policy = curtailed_gov_spending_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						fiscal_policy = tight_policy_pol
+						fiscal_policy = debt_and_loans_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						education_policy = very_high_funding_edu_pol
+						education_policy = high_funding_edu_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						human_rights = universal_rights
+						human_rights = separate_but_equal
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						public_oversight = limited_oversight
+						public_oversight = non-systematic_oversight
+					}
+				}
+				modifier = {
+					factor = 1.1
+					organized_religions_law = secular_state
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = corporate_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = hegemony
+						national_identity = balance_of_power
+					}
+				}
+				modifier = {
+					factor = 1.1
+					is_org_member = XNA
+				}
+				modifier = {
+					factor = 10
+					is_org_leader = XNA
+					NOT = {
+						economic_policy = indicative_planning_pol
+						economic_policy = five-year_planning_pol
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_supporter
+			
+			relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB15010"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC15010"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.1
+					domestic_policy = social_focus_pol
+				}
+				modifier = {
+					factor = 1.25
+					internal_policy = state_controlled_aff_pol
+				}
+				modifier = {
+					factor = 2
+					economic_policy = five-year_planning_pol
+				}
+				modifier = {
+					factor = 1.5
+					economic_policy = indicative_planning_pol
+				}
+				modifier = {
+					factor = 1.1
+					economic_policy = welfare_state_pol
+				}
+				modifier = {
+					factor = 1.5
+					fiscal_policy = supply_side_eco_pol
+				}
+				modifier = {
+					factor = 1.25
+					military_policy = sustained_military_service_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						fiscal_policy = increased_government_spending_pol
+						fiscal_policy = expansionary_policy_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						human_rights = not_recognized
+						human_rights = cultural_relativism
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						public_oversight = transparent_public_oversight
+						public_oversight = systematic_oversight
+					}
+				}
+				modifier = {
+					factor = 1.25
+					organized_religions_law = state_religion
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = equality_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = state_building_focus
+						national_identity = civic_focus
+					}
+				}
+				modifier = {
+					factor = 1.5
+					is_org_member = XWP
+				}
+				modifier = {
+					factor = 10
+					is_org_leader = XWP
+					OR = {
+						economic_policy = indicative_planning_pol
+						economic_policy = five-year_planning_pol
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_general_agreement_on_tariffs_and_trade_revoked_recently
+					duration = 60
+				}
+			}
+			
+			relation = { who = XUN value = -5 }
+		}
+	}
+
+	#15012 - We have ratified the UN General Agreement On Tariffs & Trade - Triggered
+	country_event = {
+	
+		id = 15012
+
+		is_triggered_only = yes
+
+		title = "EVTNAME15012"
+		desc = "EVTDESC15012"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA15012"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_general_agreement_on_tariffs_and_trade_ratified
+				duration = -1
+			}
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_general_agreement_on_tariffs_and_trade_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_general_agreement_on_tariffs_and_trade_ratifier_delay
+						duration = 15
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_GATT_ratified_num
+				value = 1
+			}
+			
+			XUN = { prestige_change = 2 }
+		}
+	}
+
+	#15013 - We have ratified the UN General Agreement On Tariffs & Trade (Non-triggered)
+	country_event = {
+	
+		id = 15013
+
+		trigger = {
+			ai = yes
+			has_global_flag = gflag_UN_general_agreement_on_tariffs_and_trade_passes
+			NOT = { has_country_modifier = mod_UN_general_agreement_on_tariffs_and_trade_ratified }
+			NOT = { USA = { has_country_modifier = mod_UN_general_agreement_on_tariffs_and_trade_ratifier_delay } }
+			NOT = { 
+				has_global_var_gt = {
+					name = var_UN_GATT_ratified_num
+					value = 39
+				}
+			}
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			NOT = {
+				AND = {
+					is_major = yes
+					is_org_member = XWP
+					OR = {
+						economic_policy = five-year_planning_pol
+						economic_policy = indicative_planning_pol
+					}
+				}
+			}
+			#Add more
+		}
+		
+		mean_time_to_happen = {
+			months = 40
+			modifier = {
+				factor = 0.6
+				is_org_leader = XUN
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					foreign_policy = dove_policy_pol
+					foreign_policy = detente_pol
+				}
+			}
+			modifier = {
+				factor = 0.7
+				domestic_policy = commercial_focus_pol
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					internal_policy = democratic_aff_pol
+					internal_policy = liberal_aff_pol
+				}
+			}
+			modifier = {
+				factor = 0.6
+				economic_policy = supply_side_eco_pol
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					economic_policy = technology_based_eco_pol
+					economic_policy = industrial_policy_pol
+					economic_policy = resource_based_policy_pol
+				}
+			}
+			modifier = {
+				factor = 0.6
+				fiscal_policy = supply_side_eco_pol
+			}
+			modifier = {
+				factor = 0.7
+				OR = {
+					fiscal_policy = reduced_taxation_pol
+					fiscal_policy = fiscal_straitjacket_pol
+					fiscal_policy = curtailed_gov_spending_pol
+				}
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					fiscal_policy = tight_policy_pol
+					fiscal_policy = debt_and_loans_pol
+				}
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					education_policy = very_high_funding_edu_pol
+					education_policy = high_funding_edu_pol
+				}
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					human_rights = universal_rights
+					human_rights = separate_but_equal
+				}
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					public_oversight = limited_oversight
+					public_oversight = non-systematic_oversight
+				}
+			}
+			modifier = {
+				factor = 0.8
+				organized_religions_law = secular_state
+			}
+			modifier = {
+				factor = 0.7
+				national_identity = corporate_focus
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					national_identity = hegemony
+					national_identity = balance_of_power
+				}
+			}
+			modifier = {
+				factor = 0.8
+				is_org_member = XNA
+			}
+			modifier = {
+				factor = 0.4
+				is_org_leader = XNA
+				NOT = {
+					economic_policy = indicative_planning_pol
+					economic_policy = five-year_planning_pol
+				}
+			}
+			modifier = {
+				factor = 1.5
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.1
+				national_attitude = non-interventionism
+			}
+			
+			modifier = {
+				factor = 1.25
+				foreign_policy = hardline_pol
+			}
+			modifier = {
+				factor = 1.25
+				domestic_policy = social_focus_pol
+			}
+			modifier = {
+				factor = 1.5
+				internal_policy = state_controlled_aff_pol
+			}
+			modifier = {
+				factor = 3
+				economic_policy = five-year_planning_pol
+			}
+			modifier = {
+				factor = 2
+				economic_policy = indicative_planning_pol
+			}
+			modifier = {
+				factor = 1.25
+				economic_policy = welfare_state_pol
+			}
+			modifier = {
+				factor = 2
+				fiscal_policy = supply_side_eco_pol
+			}
+			modifier = {
+				factor = 1.5
+				military_policy = sustained_military_service_pol
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					fiscal_policy = increased_government_spending_pol
+					fiscal_policy = expansionary_policy_pol
+				}
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					human_rights = not_recognized
+					human_rights = cultural_relativism
+				}
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					public_oversight = transparent_public_oversight
+					public_oversight = systematic_oversight
+				}
+			}
+			modifier = {
+				factor = 1.5
+				organized_religions_law = state_religion
+			}
+			modifier = {
+				factor = 1.5
+				national_identity = equality_focus
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					national_identity = state_building_focus
+					national_identity = civic_focus
+				}
+			}
+			modifier = {
+				factor = 2
+				is_org_member = XWP
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME15012"
+		desc = "EVTDESC15012"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA15012"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_general_agreement_on_tariffs_and_trade_ratified
+				duration = -1
+			}
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_general_agreement_on_tariffs_and_trade_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_general_agreement_on_tariffs_and_trade_ratifier_delay
+						duration = 15
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_GATT_ratified_num
+				value = 1
+			}
+			
+			XUN = { prestige_change = 2 }
+		}
+	}
+
+	#15014 - We have revoked the UN General Agreement On Tariffs & Trade
+	country_event = {
+	
+		id = 15014
+
+		trigger = {
+			ai = yes
+			has_country_modifier = mod_UN_general_agreement_on_tariffs_and_trade_ratified
+			NOT = { has_country_modifier = mod_UN_general_agreement_on_tariffs_and_trade_ratified_recently }
+			AND = {
+				is_major = yes
+				is_org_member = XWP
+				OR = {
+					economic_policy = five-year_planning_pol
+					economic_policy = indicative_planning_pol
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			months = 9
+			modifier = {
+				factor = 0.5
+				has_country_flag = "UN_EMBARGO"
+			}
+			modifier = {
+				factor = 0.75
+				armaments_policy = five-year_planning_pol
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME15014"
+		desc = "EVTDESC15014"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA15014"					#Good riddance
+			prestige_change = -8
+			remove_country_modifier = mod_UN_general_agreement_on_tariffs_and_trade_ratified
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_general_agreement_on_tariffs_and_trade_revoked_recently
+					duration = 365
+				}
+			}
+			
+			XUN = { prestige_change = -3 }
+			
+			chg_global_var = {
+				name = var_UN_GATT_ratified_num
+				value = -1
+			}
+		}
+	}

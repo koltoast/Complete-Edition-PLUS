@@ -1,0 +1,55 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#USA;;;;;;;;;;;;;;x
+USA_fate_of_philippines_title;The fate of the Philippines;;;;;;;;;;;;;x
+USA_fate_of_philippines_desc;During the Second World War, the Philippines suffered terrible hardship during the Japanese occupation. Out of this hardship has been born a movement for full independence.;;;;;;;;;;;;;x
+USA_intervention_philippines_title;Intervention in the Philippines;;;;;;;;;;;;;x
+USA_intervention_philippines_desc;The Philippines are fighting a guerrilla war with communist rebels, should we intervene?;;;;;;;;;;;;;x
+#PHI;;;;;;;;;;;;;;x
+demand_independence_PHI_title;Demand Independence;;;;;;;;;;;;;x
+demand_independence_PHI_desc;The time has come for our people to take the issue of independence into our own hands.;;;;;;;;;;;;;x
+ban_huks_PHI_title;The Fate of the Hukbalahap Movement;;;;;;;;;;;;;x
+ban_huks_PHI_desc;The Hukbalahap Movement is a peasant-led guerrilla communist movement which opposed the Japanese occupation of our country. The time has come to decide how to handle this dangerous faction within our country.;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ; REMOVE HASH FOR ACTIVE EVENTS AND OPTIONS;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#USA;;;;;;;;;;;;;;x
+EVTNAME354103;The fate of the Philippines;;;;;;;;;;;;;x
+EVTDESC354103;The people of the Philippines have been asking for greater independence from the United States, how should we respond?;;;;;;;;;;;;;x
+EVTOPTA354103;Grant them full independence;;;;;;;;;;;;;x
+EVTOPTB354103;Grant them independence and aid, but retain military access ;;;;;;;;;;;;;x
+EVTOPTC354103;Keep them as a puppet!;;;;;;;;;;;;;x
+EVTNAME354104;Philippines demand independence!;;;;;;;;;;;;;x
+EVTDESC354104;The government of the Philippines have formally demanded independence from the United States, how should we respond?;;;;;;;;;;;;;x
+EVTOPTA354104;Grant them full independence;;;;;;;;;;;;;x
+EVTOPTB354104;Ignore the will of their people, keep them as a puppet!;;;;;;;;;;;;;x
+EVTNAME354105;Intervention in the Philippines;;;;;;;;;;;;;x
+EVTDESC354105;The Philippines are fighting a guerrilla war with communist rebels, should we intervene?;;;;;;;;;;;;;x
+EVTOPTA354105;Provide military assistance;;;;;;;;;;;;;x
+EVTOPTB354105;Stay out of this conflict;;;;;;;;;;;;;x
+#PHI;;;;;;;;;;;;;;x
+EVTNAME287001;Independence Granted;;;;;;;;;;;;;x
+EVTDESC287001;The benevolent leaders of the United States have today granted us independence!;;;;;;;;;;;;;x
+EVTOPTA287001;At last!;;;;;;;;;;;;;x
+EVTNAME287002;Independence Granted;;;;;;;;;;;;;x
+EVTDESC287002;The United States have granted us independence, but have retained military bases and limited our economic freedom!;;;;;;;;;;;;;x
+EVTOPTA287002;Independence, at any cost!;;;;;;;;;;;;;x
+EVTNAME287003;Independence Refused;;;;;;;;;;;;;x
+EVTDESC287003;The imperialist leaders of the United States have refused to grant independence!;;;;;;;;;;;;;x
+EVTOPTA287003;We will continue to seek freedom!;;;;;;;;;;;;;x
+EVTNAME287004;Demand Independence;;;;;;;;;;;;;x
+EVTDESC287004;Our government will formally request independence!;;;;;;;;;;;;;x
+EVTOPTA287004;We demand freedom!;;;;;;;;;;;;;x
+EVTNAME287005;The Fate of the Hukbalahaps;;;;;;;;;;;;;x
+EVTDESC287005;The Hukbalahap Movement is a peasant-led guerrilla communist movement which opposed the Japanese occupation of our country. The time has come to decide how to handle this dangerous faction within our country.;;;;;;;;;;;;;x
+EVTOPTA287005;Ban them!;;;;;;;;;;;;;x
+EVTOPTB287005;Allow them a political platform!;;;;;;;;;;;;;x
+EVTNAME287006;Assasination of Aurora Quezón;;;;;;;;;;;;;x
+EVTDESC287006;Hukbalahap members have ambushed and murdered Aurora Quezon, Chairman of the Philippine Red Cross and widow of the Philippines' second president, Manuel L. Quezon, as she was en route to her hometown for the dedication of the Quezon Memorial Hospital;;;;;;;;;;;;;x
+EVTOPTA287006;Condemn this cowardly attack!;;;;;;;;;;;;;x
+EVTNAME287007;US Aid;;;;;;;;;;;;;x
+EVTDESC287007;The US has decided to grant us military aid in our struggle against the Hukbalahap revolt;;;;;;;;;;;;;x
+EVTOPTA287007;Excellent!;;;;;;;;;;;;;x
+hukbalahap_revolt;Hukbalahap Revolt;;;;;;;;;;;;;x

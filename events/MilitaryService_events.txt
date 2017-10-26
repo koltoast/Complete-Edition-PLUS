@@ -1,0 +1,2649 @@
+
+
+country_event = {
+	
+	id = 50200		#Politician's son avoids draft - scandal
+
+	trigger = {
+		OR = {
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+		OR = {
+			war = yes
+			AND = {
+				doomsday_clock = 55
+				NOT = { defcon = 4 }
+			}
+			NOT = {
+				neutrality = 20
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1200
+		modifier = {
+			factor = 0.5
+			military_service = expanded_drafted_army
+		}
+		
+		modifier = {
+			factor = 0.6
+			elections_and_voting = hereditary_rule
+		}
+		modifier = {
+			factor = 0.7
+			elections_and_voting = single_party_system
+		}
+		modifier = {
+			factor = 0.8
+			elections_and_voting = gerrymandering
+		}
+		modifier = {
+			factor = 0.9
+			elections_and_voting = winner_takes_it_all
+		}
+		
+		
+		modifier = {
+			factor = 0.6
+			human_rights = not_recognized
+		}
+		modifier = {
+			factor = 0.8
+			human_rights = cultural_relativism
+		}
+		
+		modifier = {
+			factor = 5
+			freedom_of_the_press = propaganda_press
+		}
+		modifier = {
+			factor = 2.5
+			freedom_of_the_press = state_press
+		}
+		modifier = {
+			factor = 1.25
+			freedom_of_the_press = censored_press
+		}
+		
+		
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.50
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50200"		
+	desc = "EVTDESC50200"		
+	picture = "1965_anti_draft_protest"
+	
+	option = {
+		name = "EVTOPTA50200"		# The politician will take the fall.
+		ai_chance = { factor = 30 }
+		popularity = -2
+		prestige_change = -5
+	}
+	
+	option = {
+		name = "EVTOPTB50200"		# Order a government-wide enquiry.
+		ai_chance = { factor = 40 }
+		add_country_modifier = {
+			name = conscripts_politician_son_inquiry
+			duration = 183
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC50200"		# Attempt to cover it up.
+		ai_chance = { factor = 30 }
+		random_list = {
+			50 = {
+			}
+			25 = {
+				dissent = 2
+				national_unity = -2
+			}
+			25 = {
+				popularity = -1
+				national_unity = -1
+			}
+		}
+	}
+}
+
+
+country_event = {
+	
+	id = 50201		#'Champagne units' criticised
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+		}
+		OR = {
+			war = yes
+			AND = {
+				doomsday_clock = 55
+				NOT = { defcon = 4 }
+			}
+			NOT = {
+				neutrality = 20
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 900
+		modifier = {
+			factor = 4
+			military_service = limited_conscription_army
+		}
+		
+		modifier = {
+			factor = 0.6
+			elections_and_voting = hereditary_rule
+		}
+		modifier = {
+			factor = 0.7
+			elections_and_voting = single_party_system
+		}
+		modifier = {
+			factor = 0.8
+			elections_and_voting = gerrymandering
+		}
+		modifier = {
+			factor = 0.9
+			elections_and_voting = winner_takes_it_all
+		}
+		
+		
+		modifier = {
+			factor = 0.6
+			human_rights = not_recognized
+		}
+		modifier = {
+			factor = 0.8
+			human_rights = cultural_relativism
+		}
+		
+		modifier = {
+			factor = 5
+			freedom_of_the_press = propaganda_press
+		}
+		modifier = {
+			factor = 2.5
+			freedom_of_the_press = state_press
+		}
+		modifier = {
+			factor = 1.25
+			freedom_of_the_press = censored_press
+		}
+		
+		
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.50
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50201"		
+	desc = "EVTDESC50201"		
+	picture = "1960_boot_camp"
+	
+	option = {
+		name = "EVTOPTA50201"		# Disband the unit
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 1.5
+				NOT = { popularity = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				dissent = 10
+			}
+			modifier = {
+				factor = 1.25
+				dissent = 20
+			}
+		}
+		manpower = 5
+		add_country_modifier = {
+			name = conscripts_champagne_unit_disbanded
+			duration = 183
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50201"		# We see nothing wrong with them.
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 1.5
+				popularity = 90
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { dissent = 3 }
+			}
+		}
+		dissent = 1
+		popularity = -2
+	}
+	
+	option = {
+		name = "EVTOPTC50201"		# Expand conscription to eliminate such loopholes
+		ai_chance = { factor = 5 }
+		random_owned = {
+			limit = {
+				owner = {
+					military_service = limited_conscription_army
+				}
+			}
+			owner = {
+				military_service = conventional_drafted_army
+				dissent = 3
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					military_service = conventional_drafted_army
+				}
+			}
+			owner = {
+				military_service = expanded_drafted_army
+				dissent = 3
+			}
+		}
+	}
+}
+
+
+country_event = {
+	
+	id = 50202		#Conscription callup leads to research set-back
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+		OR = {
+			war = yes
+			AND = {
+				doomsday_clock = 55
+				NOT = { defcon = 4 }
+			}
+			NOT = {
+				neutrality = 20
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 3200
+		modifier = {
+			factor = 3
+			military_service = limited_conscription_army
+		}
+		modifier = {
+			factor = 0.33
+			military_service = expanded_drafted_army
+		}
+		
+		modifier = {
+			factor = 0.6
+			elections_and_voting = hereditary_rule
+		}
+		modifier = {
+			factor = 0.7
+			elections_and_voting = single_party_system
+		}
+		modifier = {
+			factor = 0.8
+			elections_and_voting = gerrymandering
+		}
+		modifier = {
+			factor = 0.9
+			elections_and_voting = winner_takes_it_all
+		}
+		
+		
+		modifier = {
+			factor = 0.6
+			human_rights = not_recognized
+		}
+		modifier = {
+			factor = 0.8
+			human_rights = cultural_relativism
+		}
+		
+		modifier = {
+			factor = 5
+			freedom_of_the_press = propaganda_press
+		}
+		modifier = {
+			factor = 2.5
+			freedom_of_the_press = state_press
+		}
+		modifier = {
+			factor = 1.25
+			freedom_of_the_press = censored_press
+		}
+		
+		
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.50
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50202"		
+	desc = "EVTDESC50202"		
+	picture = "1960_boot_camp"
+	
+	option = {
+		name = "EVTOPTA50202"		# Unfortunate
+		add_country_modifier = {
+			name = conscripts_research_setback
+			duration = 360
+		}
+	}
+}
+
+
+country_event = {
+	
+	id = 50203		#Conscription callup leads to industrial set-back
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+		OR = {
+			war = yes
+			AND = {
+				doomsday_clock = 55
+				NOT = { defcon = 4 }
+			}
+			NOT = {
+				neutrality = 20
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 3200
+		modifier = {
+			factor = 3
+			military_service = limited_conscription_army
+		}
+		modifier = {
+			factor = 0.33
+			military_service = expanded_drafted_army
+		}
+		
+		modifier = {
+			factor = 0.6
+			elections_and_voting = hereditary_rule
+		}
+		modifier = {
+			factor = 0.7
+			elections_and_voting = single_party_system
+		}
+		modifier = {
+			factor = 0.8
+			elections_and_voting = gerrymandering
+		}
+		modifier = {
+			factor = 0.9
+			elections_and_voting = winner_takes_it_all
+		}
+		
+		
+		modifier = {
+			factor = 0.6
+			human_rights = not_recognized
+		}
+		modifier = {
+			factor = 0.8
+			human_rights = cultural_relativism
+		}
+		
+		modifier = {
+			factor = 5
+			freedom_of_the_press = propaganda_press
+		}
+		modifier = {
+			factor = 2.5
+			freedom_of_the_press = state_press
+		}
+		modifier = {
+			factor = 1.25
+			freedom_of_the_press = censored_press
+		}
+		
+		
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.50
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50203"		
+	desc = "EVTDESC50203"		
+	picture = "1960_boot_camp"
+	
+	option = {
+		name = "EVTOPTA50203"		# Unfortunate
+		add_country_modifier = {
+			name = conscripts_industrial_setback
+			duration = 360
+		}
+	}
+}
+
+
+country_event = {
+	
+	id = 50204		# Peaceful demonstrations against the draft
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+		OR = {
+			war = yes
+			AND = {
+				doomsday_clock = 55
+				NOT = { defcon = 4 }
+			}
+			NOT = {
+				neutrality = 20
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1600
+		modifier = {
+			factor = 3
+			military_service = limited_conscription_army
+		}
+		modifier = {
+			factor = 0.33
+			military_service = expanded_drafted_army
+		}
+		
+		modifier = {
+			factor = 0.6
+			elections_and_voting = hereditary_rule
+		}
+		modifier = {
+			factor = 0.7
+			elections_and_voting = single_party_system
+		}
+		modifier = {
+			factor = 0.8
+			elections_and_voting = gerrymandering
+		}
+		modifier = {
+			factor = 0.9
+			elections_and_voting = winner_takes_it_all
+		}
+		
+		modifier = {
+			factor = 5
+			freedom_of_the_press = propaganda_press
+		}
+		modifier = {
+			factor = 2.5
+			freedom_of_the_press = state_press
+		}
+		modifier = {
+			factor = 1.25
+			freedom_of_the_press = censored_press
+		}
+		
+		modifier = {
+			factor = 0.9
+			military_policy = two_y_service_pol
+		}
+		modifier = {
+			factor = 0.8
+			military_policy = two_half_y_service_pol
+		}
+		modifier = {
+			factor = 0.7
+			military_policy = three_y_service_pol
+		}
+		modifier = {
+			factor = 0.6
+			military_policy = sustained_military_service_pol
+		}
+		
+		modifier = {
+			factor = 0.9
+			internal_policy = liberal_aff_pol
+		}
+		modifier = {
+			factor = 0.75
+			internal_policy = democratic_aff_pol
+		}
+		
+		modifier = {
+			factor = 0.8
+			dissent = 5
+		}
+		modifier = {
+			factor = 0.8
+			dissent = 10
+		}
+		modifier = {
+			factor = 0.7
+			dissent = 20
+		}
+		modifier = {
+			factor = 0.7
+			dissent = 40
+		}
+		modifier = {
+			factor = 0.6
+			dissent = 60
+		}
+		modifier = {
+			factor = 0.6
+			dissent = 80
+		}
+		
+		modifier = {
+			factor = 0.66
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.66
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.66
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.66
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.50
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50204"		
+	desc = "EVTDESC50204"		
+	picture = "1965_anti_draft_protest"
+	
+	option = {
+		name = "EVTOPTA50204"		# Unfortunate
+		add_country_modifier = {
+			name = conscripts_peaceful_demonstration
+			duration = 180
+		}
+	}
+}
+
+
+country_event = {
+	
+	id = 50205		# Peaceful demonstrations against the draft turn into widespread protests
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+		OR = {
+			war = yes
+			AND = {
+				doomsday_clock = 55
+				NOT = { defcon = 4 }
+			}
+			NOT = {
+				neutrality = 20
+			}
+		}
+		OR = {
+			has_country_modifier = conscripts_peaceful_demonstration
+			dissent = 30
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 360
+		modifier = {
+			factor = 0.9
+			military_policy = sustained_military_service_pol
+		}
+		
+		modifier = {
+			factor = 0.9
+			internal_policy = oppressive_aff_pol
+		}
+		modifier = {
+			factor = 0.8
+			internal_policy = repressive_aff_pol
+		}
+		modifier = {
+			factor = 0.7
+			internal_policy = state_controlled_aff_pol
+		}
+		
+		
+		modifier = {
+			factor = 0.8
+			dissent = 5
+		}
+		modifier = {
+			factor = 0.8
+			dissent = 10
+		}
+		modifier = {
+			factor = 0.7
+			dissent = 20
+		}
+		modifier = {
+			factor = 0.7
+			dissent = 40
+		}
+		modifier = {
+			factor = 0.6
+			dissent = 60
+		}
+		modifier = {
+			factor = 0.6
+			dissent = 80
+		}
+		
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.9
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50205"		
+	desc = "EVTDESC50205"		
+	picture = "1965_anti_draft_protest"
+	
+	option = {
+		name = "EVTOPTA50205"		# Send in the riot police
+		dissent = 5
+		national_unity = -2
+	}
+	
+	option = {
+		name = "EVTOPTB50205"		# Given time the protests will burn themselves out
+		add_country_modifier = {
+			name = conscripts_widespread_demonstrations
+			duration = 180
+		}
+	}
+}
+
+
+
+
+country_event = {
+	
+	id = 50206		#Officers concerned by poor physical quality of conscripts
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 4800
+		modifier = {
+			factor = 1.5
+			military_service = limited_conscription_army
+		}
+		modifier = {
+			factor = 0.5
+			military_service = expanded_drafted_army
+		}
+		
+		modifier = {
+			factor = 0.6
+			elections_and_voting = hereditary_rule
+		}
+		modifier = {
+			factor = 0.7
+			elections_and_voting = single_party_system
+		}
+		modifier = {
+			factor = 0.8
+			elections_and_voting = gerrymandering
+		}
+		modifier = {
+			factor = 0.9
+			elections_and_voting = winner_takes_it_all
+		}
+		
+		
+		modifier = {
+			factor = 0.75
+			domestic_policy = defence_focus_pol
+		}
+		modifier = {
+			factor = 1.5
+			domestic_policy = health_focus_pol
+		}
+		
+		modifier = {
+			factor = 2
+			freedom_of_the_press = propaganda_press
+		}
+		modifier = {
+			factor = 1.25
+			freedom_of_the_press = state_press
+		}
+		modifier = {
+			factor = 1.1
+			freedom_of_the_press = censored_press
+		}
+		
+		
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.75
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50206"		
+	desc = "EVTDESC50206"		
+	picture = "1960_boot_camp"
+	
+	option = {
+		name = "EVTOPTA50206"		# Unfortunate
+		manpower = -1
+		add_country_modifier = {
+			name = conscripts_poor_condition
+			duration = 360
+		}
+	}
+}
+
+country_event = {
+	
+	id = 50207		#Conscription call-up falls below target, but defense minister offers some alternatives
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+		}
+		NOT = {
+			has_country_modifier = conscripts_callup_falls_short
+			has_country_modifier = conscripts_callup_above_target_military
+			has_country_modifier = conscripts_callup_above_target_returned
+			has_country_modifier = conscripts_callup_above_target_construction
+		}
+		war = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 2400
+		
+		modifier = {
+			factor = 0.75
+			economy_unbalanced = yes 	# Check
+		}
+		
+		modifier = {
+			factor = 1.25
+			domestic_policy = defence_focus_pol
+		}
+		modifier = {
+			factor = 1.5
+			domestic_policy = health_focus_pol
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 20
+		}
+		
+	}
+	
+	title = "EVTNAME50207"		
+	desc = "EVTDESC50207"		
+	picture = "1960_boot_camp"
+	
+	option = {
+		name = "EVTOPTA50207"		# Unfortunate
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.25
+				war_exhaustion = 10
+			}
+		}
+		add_country_modifier = {
+			name = conscripts_callup_falls_short
+			duration = 360
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50207"		# Accept felons for this round of callups
+		ai_chance = { factor = 10 }
+		popularity = -1
+		national_unity = -3
+	}
+	
+	option = {
+		name = "EVTOPTC50207"		# Extend service for current conscripts
+		ai_chance = { factor = 10 }
+		popularity = -3
+		dissent = 2
+	}
+}
+
+
+### Good Events ###
+country_event = {
+	
+	id = 50208		#Employers praise life-skills and experience of ex-conscripts entering the labour market.
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+		NOT = {
+			ideology_group = comintern
+			military_policy = sustained_military_service_pol
+		}
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 2400
+		modifier = {
+			factor = 1.25
+			military_service = limited_conscription_army
+		}
+		modifier = {
+			factor = 2
+			military_service = expanded_drafted_army
+		}
+		
+		modifier = {
+			factor = 0.75
+			domestic_policy = educational_focus_pol
+		}
+		modifier = {
+			factor = 0.9
+			domestic_policy = health_focus_pol
+		}
+		
+		modifier = {
+			factor = 1.5
+			military_policy = basic_combat_training_pol
+		}
+		modifier = {
+			factor = 0.75
+			military_policy = one_y_service_pol
+		}
+		modifier = {
+			factor = 1.25
+			military_policy = two_y_service_pol
+		}
+		modifier = {
+			factor = 1.5
+			military_policy = two_half_y_service_pol
+		}
+		modifier = {
+			factor = 2
+			military_policy = three_y_service_pol
+		}
+	}
+	
+	title = "EVTNAME50208"		
+	desc = "EVTDESC50208"		
+	picture = "1960_boot_camp"
+	
+	option = {
+		name = "EVTOPTA50208"		# Great News.
+		national_unity = 1
+		add_country_modifier = {
+			name = conscripts_labour_experience
+			duration = 360
+		}
+	}
+}
+
+country_event = {
+	
+	id = 50209		#Conscription praised for its ability to unite men from all different walks of life.
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+		NOT = {
+			ideology_group = comintern
+			military_policy = sustained_military_service_pol
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2400
+		modifier = {
+			factor = 1.25
+			military_service = limited_conscription_army
+		}
+		modifier = {
+			factor = 2
+			military_service = expanded_drafted_army
+		}
+		
+		modifier = {
+			factor = 0.75
+			domestic_policy = educational_focus_pol
+		}
+		modifier = {
+			factor = 0.9
+			domestic_policy = health_focus_pol
+		}
+		
+		modifier = {
+			factor = 1.5
+			military_policy = basic_combat_training_pol
+		}
+		modifier = {
+			factor = 0.75
+			military_policy = one_y_service_pol
+		}
+		modifier = {
+			factor = 1.25
+			military_policy = two_y_service_pol
+		}
+		modifier = {
+			factor = 1.5
+			military_policy = two_half_y_service_pol
+		}
+		modifier = {
+			factor = 2
+			military_policy = three_y_service_pol
+		}
+	}
+	
+	title = "EVTNAME50209"		
+	desc = "EVTDESC50209"		
+	picture = "1960_boot_camp"
+	
+	option = {
+		name = "EVTOPTA50209"		# Great News.
+		national_unity = 3
+		dissent = -1
+	}
+}
+
+country_event = {
+	
+	id = 50210		#Conscription 'makes men out of boys'
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+		NOT = {
+			ideology_group = comintern
+			military_policy = sustained_military_service_pol
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2400
+		modifier = {
+			factor = 1.25
+			military_service = limited_conscription_army
+		}
+		modifier = {
+			factor = 2
+			military_service = expanded_drafted_army
+		}
+		
+		modifier = {
+			factor = 0.75
+			domestic_policy = educational_focus_pol
+		}
+		modifier = {
+			factor = 0.9
+			domestic_policy = health_focus_pol
+		}
+		
+		modifier = {
+			factor = 1.5
+			military_policy = basic_combat_training_pol
+		}
+		modifier = {
+			factor = 0.75
+			military_policy = one_y_service_pol
+		}
+		modifier = {
+			factor = 1.25
+			military_policy = two_y_service_pol
+		}
+		modifier = {
+			factor = 1.5
+			military_policy = two_half_y_service_pol
+		}
+		modifier = {
+			factor = 2
+			military_policy = three_y_service_pol
+		}
+	}
+	
+	title = "EVTNAME50210"		
+	desc = "EVTDESC50210"		
+	picture = "1960_boot_camp"
+	
+	option = {
+		name = "EVTOPTA50210"		# Great News.
+		national_unity = 3
+		dissent = -1
+	}
+}
+
+country_event = {
+	
+	id = 50211		#Latest conscription call-up results in more conscripts than expected, what shall we do with them?
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+		}
+		NOT = {
+			has_country_modifier = conscripts_callup_falls_short
+			has_country_modifier = conscripts_callup_above_target_military
+			has_country_modifier = conscripts_callup_above_target_returned
+			has_country_modifier = conscripts_callup_above_target_construction
+		}
+		manpower = 5
+		war = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 2400
+		
+		modifier = {
+			factor = 0.75
+			economy_unbalanced = no 	# Check
+		}
+		
+		modifier = {
+			factor = 0.85
+			domestic_policy = defence_focus_pol
+		}
+		modifier = {
+			factor = 0.75
+			domestic_policy = health_focus_pol
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 20
+		}
+		
+	}
+	
+	title = "EVTNAME50211"		
+	desc = "EVTDESC50211"		
+	picture = "1960_boot_camp"
+	
+	option = {
+		name = "EVTOPTA50211"		# The war effort could always use more men
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0.2
+				war = no
+			}
+			modifier = {
+				factor = 2
+				war_exhaustion = 8
+			}
+			modifier = {
+				factor = 2
+				war_exhaustion = 12
+			}
+			modifier = {
+				factor = 2
+				war_exhaustion = 16
+			}
+			modifier = {
+				factor = 2
+				war_exhaustion = 20
+			}
+		}
+		add_country_modifier = {
+			name = conscripts_callup_above_target_military
+			duration = 360
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50211"		# Relieve them of their duty, let them to return to their civilian lives
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				NOT = { war_exhaustion = 4 }
+			}
+		}
+		add_country_modifier = {
+			name = conscripts_callup_above_target_returned
+			duration = 360
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC50211"		# Put them to work in public works projects
+		ai_chance = { factor = 20 }
+		add_country_modifier = {
+			name = conscripts_callup_above_target_construction
+			duration = 360
+		}
+	}
+}
+
+country_event = {
+	
+	id = 50212		#Spate of draft dodgers
+
+	trigger = {
+		OR = {
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+		OR = {
+			war = yes
+			AND = {
+				doomsday_clock = 55
+				NOT = { defcon = 4 }
+			}
+			NOT = {
+				neutrality = 20
+			}
+		}
+		NOT = {
+			has_country_modifier = draft_dodgers_minor
+			has_country_modifier = draft_dodgers_moderate
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1200
+		modifier = {
+			factor = 0.5
+			military_service = expanded_drafted_army
+		}
+		
+		modifier = {
+			factor = 0.6
+			elections_and_voting = hereditary_rule
+		}
+		modifier = {
+			factor = 0.7
+			elections_and_voting = single_party_system
+		}
+		modifier = {
+			factor = 0.8
+			elections_and_voting = gerrymandering
+		}
+		modifier = {
+			factor = 0.9
+			elections_and_voting = winner_takes_it_all
+		}
+		
+		
+		modifier = {
+			factor = 0.6
+			human_rights = not_recognized
+		}
+		modifier = {
+			factor = 0.8
+			human_rights = cultural_relativism
+		}
+		
+		modifier = {
+			factor = 1.2
+			freedom_of_the_press = propaganda_press
+		}
+		modifier = {
+			factor = 1.1
+			freedom_of_the_press = state_press
+		}
+		modifier = {
+			factor = 1.05
+			freedom_of_the_press = censored_press
+		}
+		
+		
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.50
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50212"		
+	desc = "EVTDESC50212"		
+	picture = "1965_anti_draft_protest"
+	
+	option = {
+	name = "EVTOPTA50212"		# Such treasonous actions deserve lengthy imprisonment.
+		ai_chance = { factor = 75 }
+		dissent = 1
+		war_exhaustion = 1
+		add_country_modifier = {
+			name = draft_dodgers_minor
+			duration = 180
+		}
+	}
+	
+	option = {
+	name = "EVTOPTB50212"		# Reacting too fiercely would just make them martyrs for their cause.
+		ai_chance = { factor = 20 }
+		national_unity = -1
+		add_country_modifier = {
+			name = draft_dodgers_moderate
+			duration = 180
+		}
+	}
+	
+	option = {
+	name = "EVTOPTC50212"		# Perhaps it is time to loosen our conscription policies.
+		ai_chance = { factor = 5 }
+		random_owned = {
+			limit = {
+				owner = {
+					military_service = conventional_drafted_army
+				}
+			}
+			owner = {
+				military_service = limited_conscription_army
+				dissent = -1
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					military_service = expanded_drafted_army
+				}
+			}
+			owner = {
+				military_service = conventional_drafted_army
+				dissent = -1
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 50213		#Draft dodgers seeking refuges in neighboring country
+
+	trigger = {
+		OR = {
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+		OR = {
+			war = yes
+			AND = {
+				doomsday_clock = 55
+				NOT = { defcon = 4 }
+			}
+			NOT = {
+				neutrality = 20
+			}
+		}
+		any_neighbor_country = {
+			NOT = {
+				civil_liberties = suspended_indefinitely
+				human_rights = not_recognized
+				relation = { who = THIS value = 175 }
+			}
+		}
+		NOT = {
+			has_country_modifier = draft_dodgers_minor
+			has_country_modifier = draft_dodgers_moderate
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1200
+		modifier = {
+			factor = 0.5
+			military_service = expanded_drafted_army
+		}
+		
+		modifier = {
+			factor = 0.6
+			elections_and_voting = hereditary_rule
+		}
+		modifier = {
+			factor = 0.7
+			elections_and_voting = single_party_system
+		}
+		modifier = {
+			factor = 0.8
+			elections_and_voting = gerrymandering
+		}
+		modifier = {
+			factor = 0.9
+			elections_and_voting = winner_takes_it_all
+		}
+		
+		
+		modifier = {
+			factor = 0.6
+			human_rights = not_recognized
+		}
+		modifier = {
+			factor = 0.8
+			human_rights = cultural_relativism
+		}
+		
+		modifier = {
+			factor = 1.2
+			freedom_of_the_press = propaganda_press
+		}
+		modifier = {
+			factor = 1.1
+			freedom_of_the_press = state_press
+		}
+		modifier = {
+			factor = 1.05
+			freedom_of_the_press = censored_press
+		}
+		
+		
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.50
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50213"		
+	desc = "EVTDESC50213"		
+	picture = "1967_draft_dodgers_Toronto"
+	
+	option = {
+	name = "EVTOPTA50213"		# Pressure the country harbouring them to return them for imprisonment.
+		ai_chance = { factor = 75 }
+		random_country = {
+			limit = {
+				neighbour = THIS
+				NOT = {
+					war_with = THIS
+					civil_liberties = suspended_indefinitely
+					human_rights = not_recognized
+					relation = { who = THIS value = 175 }
+				}
+			}
+			country_event = 50224
+		}
+	}
+	
+	option = {
+	name = "EVTOPTB50213"		# There is nothing we can do.
+		ai_chance = { factor = 25 }
+		dissent = 1
+		war_exhaustion = 1
+		add_country_modifier = {
+			name = draft_dodgers_minor
+			duration = 180
+		}
+	}
+}
+
+country_event = {
+	
+	id = 50224		#Pressure over draft dodgers
+
+	is_triggered_only = yes
+	
+	title = "EVTNAME50224"		
+	desc = "EVTDESC50224"		
+	picture = "1967_draft_dodgers_Toronto"
+	
+	option = {
+	name = "EVTOPTA50224"		# Return them
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 3
+				OR = {
+					alliance_with = FROM
+					relation = { who = FROM value = 100 }
+				}
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					military_service = conventional_drafted_army
+					military_service = expanded_drafted_army
+				}
+			}
+		}
+		relation = { who = FROM value = 15 }
+		dissent = 1
+	}
+	
+	option = {
+	name = "EVTOPTB50224"		# Let them stay
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				factor = 2
+				NOT = { relation = { who = FROM value = -100 } }
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					military_service = abbreviated_volunteer_army
+					military_service = conventional_volunteer_army
+				}
+			}
+			
+		}
+		relation = { who = FROM value = -30 }
+		national_unity = -1
+	}
+}
+
+country_event = {
+	
+	id = 50214		#Prison memoirs of imprisoned objectors published
+
+	trigger = {
+		OR = {
+			AND = {
+				military_service = conventional_drafted_army
+				OR = {
+					has_country_modifier = draft_dodgers_minor
+					has_country_modifier = draft_dodgers_moderate
+				}
+			}
+			military_service = expanded_drafted_army
+		}
+		OR = {
+			war = yes
+			AND = {
+				doomsday_clock = 55
+				NOT = { defcon = 4 }
+			}
+			NOT = {
+				neutrality = 20
+			}
+			has_country_modifier = draft_dodgers_minor
+			has_country_modifier = draft_dodgers_moderate
+		}
+		OR = {
+			freedom_of_the_press = limited_restrictions
+			freedom_of_the_press = free_press
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2400
+		modifier = {
+			factor = 0.33
+			military_service = expanded_drafted_army
+		}
+		modifier = {
+			factor = 0.33
+			has_country_modifier = draft_dodgers_minor
+		}
+		modifier = {
+			factor = 0.33
+			has_country_modifier = draft_dodgers_moderate
+		}
+		
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.50
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50214"		
+	desc = "EVTDESC50214"		
+	picture = "1964_Bayard_Rustin"
+	
+	option = {
+	name = "EVTOPTA50214"		# Unfortunate.
+		ai_chance = { factor = 80 }
+		add_country_modifier = {
+			name = conscription_memoirs_published	# Increase war exhaustion and
+			duration = 180
+		}
+	}
+	
+	option = {
+	name = "EVTOPTB50214"		# Curtail their distribution
+		ai_chance = { factor = 20 }
+		national_unity = -2
+		dissent = 1
+		random_owned = {
+			limit = {
+				owner = {
+					freedom_of_the_press = free_press
+				}
+			}
+			owner = {
+				freedom_of_the_press = limited_restrictions
+				dissent = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 50215		#Prison memoirs of imprisoned objectors illegally distributed
+
+	trigger = {
+		OR = {
+			AND = {
+				military_service = conventional_drafted_army
+				OR = {
+					has_country_modifier = draft_dodgers_minor
+					has_country_modifier = draft_dodgers_moderate
+				}
+			}
+			military_service = expanded_drafted_army
+		}
+		OR = {
+			war = yes
+			AND = {
+				doomsday_clock = 55
+				NOT = { defcon = 4 }
+			}
+			NOT = {
+				neutrality = 20
+			}
+			has_country_modifier = draft_dodgers_minor
+			has_country_modifier = draft_dodgers_moderate
+		}
+		OR = {
+			freedom_of_the_press = censored_press
+			freedom_of_the_press = propaganda_press
+			freedom_of_the_press = state_press
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 4800
+		modifier = {
+			factor = 0.33
+			military_service = expanded_drafted_army
+		}
+		modifier = {
+			factor = 0.33
+			has_country_modifier = draft_dodgers_minor
+		}
+		modifier = {
+			factor = 0.33
+			has_country_modifier = draft_dodgers_moderate
+		}
+		
+		modifier = {
+			factor = 0.50
+			freedom_of_the_press = propaganda_press
+		}
+		modifier = {
+			factor = 0.75
+			freedom_of_the_press = state_press
+		}
+		
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.50
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50215"		
+	desc = "EVTDESC50215"		
+	picture = "1964_Bayard_Rustin"
+	
+	option = {
+	name = "EVTOPTA50215"		# Unfortunate.
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+			name = conscription_memoirs_distributed	# Increase war exhaustion and
+			duration = 180
+		}
+	}
+	
+	option = {
+	name = "EVTOPTB50215"		# Enact a crackdown
+		ai_chance = { factor = 50 }
+		national_unity = -1
+		dissent = 1
+	}
+}
+
+country_event = {
+	
+	id = 50216		#Draft cards burnt in public
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+		OR = {
+			war = yes
+			AND = {
+				doomsday_clock = 55
+				NOT = { defcon = 4 }
+			}
+			NOT = {
+				neutrality = 20
+			}
+		}
+		NOT = {
+			civil_liberties = martial_law
+			civil_liberties = suspended_indefinitely
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 3200
+		modifier = {
+			factor = 3
+			military_service = limited_conscription_army
+		}
+		modifier = {
+			factor = 0.33
+			military_service = expanded_drafted_army
+		}
+		modifier = {
+			factor = 0.75
+			has_country_modifier = draft_dodgers_minor
+		}
+		modifier = {
+			factor = 0.75
+			has_country_modifier = draft_dodgers_moderate
+		}
+		modifier = {
+			factor = 0.5
+			has_country_modifier = conscripts_peaceful_demonstration
+		}
+		
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.33
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50216"		
+	desc = "EVTDESC50216"		
+	picture = "1967_draft_card_burning"
+	
+	option = {
+	name = "EVTOPTA50216"		# They have not broken any laws
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+			name = draft_dodgers_minor
+			duration = 180
+		}
+	}
+	
+	option = {
+	name = "EVTOPTB50216"		# Have them arrested
+		ai_chance = { factor = 50 }
+		national_unity = -1
+		dissent = 1
+	}
+}
+
+country_event = {
+	
+	id = 50217		#Notable group of draftees objecting to participate as 'cogs in the war machine' in a war against 'fellow members of the proletariat'. 
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+		}
+		OR = {
+			war = yes
+			AND = {
+				doomsday_clock = 55
+				NOT = { defcon = 4 }
+			}
+			NOT = {
+				neutrality = 20
+			}
+		}
+		OR = {
+			#Comintern popularity at least 5%
+			#Left Wing Radical popularity at least 5%
+		}
+		NOT = {
+			has_country_modifier = draft_dodgers_minor
+			has_country_modifier = draft_dodgers_moderate
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 3200
+		
+		modifier = {
+			factor = 0.5
+			military_service = conventional_drafted_army
+		}
+		
+		modifier = {
+			factor = 0.6
+			elections_and_voting = hereditary_rule
+		}
+		modifier = {
+			factor = 0.7
+			elections_and_voting = single_party_system
+		}
+		modifier = {
+			factor = 0.8
+			elections_and_voting = gerrymandering
+		}
+		modifier = {
+			factor = 0.9
+			elections_and_voting = winner_takes_it_all
+		}
+		
+		
+		modifier = {
+			factor = 0.6
+			human_rights = not_recognized
+		}
+		modifier = {
+			factor = 0.8
+			human_rights = cultural_relativism
+		}
+		
+		modifier = {
+			factor = 5
+			freedom_of_the_press = propaganda_press
+		}
+		modifier = {
+			factor = 2.5
+			freedom_of_the_press = state_press
+		}
+		modifier = {
+			factor = 1.25
+			freedom_of_the_press = censored_press
+		}
+		
+		
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.50
+			war = yes
+		}
+		
+		modifier = {
+			factor = 1.5
+			ideology = left_wing_radical_idolg
+		}
+		modifier = {
+			factor = 3
+			ideology_group = comintern
+		}
+		
+		modifier = {
+			factor = 0.9
+			#Left Wing Radical popularity at least 10%
+		}
+		modifier = {
+			factor = 0.9
+			#Left Wing Radical popularity at least 20%
+		}
+		modifier = {
+			factor = 0.9
+			#Left Wing Radical popularity at least 30%
+		}
+		modifier = {
+			factor = 0.9
+			#Left Wing Radical popularity at least 40%
+		}
+		modifier = {
+			factor = 0.9
+			#Left Wing Radical popularity at least 50%
+		}
+		
+		modifier = {
+			factor = 0.5
+			any_neighbor_country = {
+				war_with = THIS
+				OR = {
+					ideology = left_wing_radical_idolg
+					ideology_group = comintern
+				}
+			}
+		}
+		modifier = {
+			factor = 25
+			any_neighbor_country = {
+				war_with = THIS
+				ideology = fascistic_idolg
+			}
+		}
+	}
+	
+	title = "EVTNAME50217"		
+	desc = "EVTDESC50217"		
+	picture = "1965_anti_draft_protest"
+	
+	option = {
+	name = "EVTOPTA50217"		# Intervene to ensure their imprisonment
+		ai_chance = { factor = 50 }
+		dissent = 2
+		add_country_modifier = {
+			name = draft_dodgers_minor
+			duration = 180
+		}
+	}
+	
+	option = {
+	name = "EVTOPTB50217"		# Leave the decision to the tribunal
+		ai_chance = { factor = 50 }
+		random_list = {
+			85 = {
+				country_event = 50225		#Objectors Sentenced by Tribunal
+			}
+			15 = {
+				country_event = 50226		#Objectors Cleared by Tribunal
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 50225		#Objectors Sentenced by Tribunal
+
+	is_triggered_only = yes
+	
+	title = "EVTNAME50225"		
+	desc = "EVTDESC50225"		
+	picture = "1943_purge_trial"
+	
+	option = {
+		name = "EVTOPTA50225"		# The Rule of Law
+		dissent = 1
+		add_country_modifier = {
+			name = draft_dodgers_minor
+			duration = 180
+		}
+	}
+}
+
+country_event = {
+	
+	id = 50226		#Objectors Cleared by Tribunal
+
+	is_triggered_only = yes
+	
+	title = "EVTNAME50226"		
+	desc = "EVTDESC50226"		
+	picture = "1943_purge_trial"
+	
+	option = {
+		name = "Unfortunate"		# Unfortunate
+		add_country_modifier = {
+			name = draft_dodgers_moderate
+			duration = 180
+		}
+	}
+}
+
+country_event = {
+	
+	id = 50218		#Film released lampooning peace-time consciption
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+		NOT = {
+			war = yes
+			AND = {
+				doomsday_clock = 55
+				NOT = { defcon = 4 }
+			}
+			freedom_of_the_press = propaganda_press
+		}
+		neutrality = 20
+	}
+	
+	mean_time_to_happen = {
+		days = 3200
+		
+		modifier = {
+			factor = 1.5
+			military_service = limited_conscription_army
+		}
+		modifier = {
+			factor = 0.75
+			military_service = expanded_drafted_army
+		}
+		
+		modifier = {
+			factor = 2
+			freedom_of_the_press = state_press
+		}
+		modifier = {
+			factor = 1.5
+			freedom_of_the_press = censored_press
+		}
+		modifier = {
+			factor = 0.75
+			freedom_of_the_press = limited_restrictions
+		}
+		modifier = {
+			factor = 0.5
+			freedom_of_the_press = free_press
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				public_oversight = transparent_public_oversight
+				public_oversight = systematic_oversight
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				economic_policy = industrial_policy_pol
+				economic_policy = agrarian_based_policy_pol
+				economic_policy = resource_based_policy_pol
+			}
+		}
+		
+		modifier = {
+			factor = 15
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 40
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 60
+		}
+	}
+	
+	title = "EVTNAME50218"		
+	desc = "EVTDESC50218"		
+	picture = "film_reel"
+	
+	option = {
+		name = "EVTOPTA50218"		# Unfortunate
+		add_country_modifier = {
+			name = conscription_lampooning_film		#Increase war exhaustion and 
+			duration = 180
+		}
+	}
+}
+
+country_event = {
+	
+	id = 50219		#Editorial in prominent newspaper criticises conscription
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 3800
+		
+		modifier = {
+			factor = 1.5
+			military_service = limited_conscription_army
+		}
+		modifier = {
+			factor = 0.75
+			military_service = expanded_drafted_army
+		}
+		
+		modifier = {
+			factor = 2
+			freedom_of_the_press = state_press
+		}
+		modifier = {
+			factor = 1.5
+			freedom_of_the_press = censored_press
+		}
+		modifier = {
+			factor = 0.75
+			freedom_of_the_press = limited_restrictions
+		}
+		modifier = {
+			factor = 0.5
+			freedom_of_the_press = free_press
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				public_oversight = transparent_public_oversight
+				public_oversight = systematic_oversight
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				economic_policy = industrial_policy_pol
+				economic_policy = agrarian_based_policy_pol
+				economic_policy = resource_based_policy_pol
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 40
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 60
+		}
+	}
+	
+	title = "EVTNAME50219"		
+	desc = "EVTDESC50219"		
+	picture = "1960_boot_camp"
+	
+	option = {
+		name = "EVTOPTA50219"		# Unfortunate
+		ai_chance = { factor = 80 }
+		add_country_modifier = {
+			name = conscription_critical_editorial		#Increase war exhaustion and 
+			duration = 180
+		}
+	}
+	
+	
+	option = {
+		name = "EVTOPTB50219"		# Pressure the editor to resign
+		ai_chance = { factor = 20 }
+		popularity = -2
+		national_unity = -2
+	}
+}
+
+country_event = {
+	
+	id = 50220		#Religious leaders petition government to end conscription
+
+	trigger = {
+		OR = {
+			military_service = limited_conscription_army
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 3800
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				public_oversight = transparent_public_oversight
+				public_oversight = systematic_oversight
+			}
+		}
+		modifier = {
+			factor = 2
+			elections_and_voting = hereditary_rule
+		}
+		modifier = {
+			factor = 1.5
+			elections_and_voting = single_party_system
+		}
+		
+		
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 40
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 60
+		}
+	}
+	
+	title = "EVTNAME50220"		
+	desc = "EVTDESC50220"		
+	picture = "1960_boot_camp"
+	
+	option = {
+		name = "EVTOPTA50220"		# Unfortunate
+		add_country_modifier = {
+			name = conscription_religious_opposition		#Decrease national unity
+			duration = 180
+		}
+	}
+}
+
+country_event = {
+	
+	id = 50221		#Trade union announces strike in solidarity with imprisoned draft objectors.
+
+	trigger = {
+		OR = {
+			AND = {
+				military_service = conventional_drafted_army
+				OR = {
+					has_country_modifier = draft_dodgers_minor
+					has_country_modifier = draft_dodgers_moderate
+				}
+			}
+			military_service = expanded_drafted_army
+		}
+		OR = {
+			war = yes
+			AND = {
+				doomsday_clock = 55
+				NOT = { defcon = 4 }
+			}
+			NOT = {
+				neutrality = 20
+			}
+			has_country_modifier = draft_dodgers_minor
+			has_country_modifier = draft_dodgers_moderate
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 4800
+		modifier = {
+			factor = 0.33
+			military_service = expanded_drafted_army
+		}
+		modifier = {
+			factor = 0.33
+			has_country_modifier = draft_dodgers_minor
+		}
+		modifier = {
+			factor = 0.33
+			has_country_modifier = draft_dodgers_moderate
+		}
+		
+		modifier = {
+			factor = 0.50
+			freedom_of_the_press = propaganda_press
+		}
+		modifier = {
+			factor = 0.75
+			freedom_of_the_press = state_press
+		}
+		
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.50
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50221"		
+	desc = "EVTDESC50221"		
+	picture = "1960_boot_camp"
+	
+	option = {
+		name = "EVTOPTA50221"		# Unfortunate.
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+			name = conscription_union_strike	# Decrease production
+			duration = 90
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50221"		# Enact a crackdown.
+		ai_chance = { factor = 50 }
+		national_unity = -1.5
+		dissent = 2
+	}
+}
+
+#Volunteer Army events
+
+#Good events
+country_event = {
+	
+	id = 50222		#Generals praise professionalism of volunteer army
+
+	trigger = {
+		OR = {
+			military_service = abbreviated_volunteer_army
+			military_service = conventional_volunteer_army
+			military_service = expanded_volunteer_army
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 900
+		modifier = {
+			factor = 0.5
+			military_service = abbreviated_volunteer_army
+		}
+		modifier = {
+			factor = 2
+			military_service = expanded_volunteer_army
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.50
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50222"		
+	desc = "EVTDESC50222"		
+	picture = "1960_boot_camp"
+	
+	option = {
+	name = "EVTOPTA50222"		# Good news.
+		popularity = 1
+		war_exhaustion = -1
+		prestige_change = 5
+	}
+}
+
+#Bad events
+country_event = {
+	
+	id = 50223		#Worry that the volunteer army is becoming too independent and a political force of its own
+
+	trigger = {
+		OR = {
+			military_service = abbreviated_volunteer_army
+			military_service = conventional_volunteer_army
+			military_service = expanded_volunteer_army
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1200
+		modifier = {
+			factor = 0.5
+			military_service = abbreviated_volunteer_army
+		}
+		modifier = {
+			factor = 2
+			military_service = expanded_volunteer_army
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.50
+			war = yes
+		}
+	}
+	
+	title = "EVTNAME50223"		
+	desc = "EVTDESC50223"		
+	picture = "1960_boot_camp"
+	
+	option = {
+		name = "EVTOPTA50223"		#Intervene
+		ai_chance = { factor = 40 }
+		random_list = {
+			25 = { national_unity = -2 }
+			25 = { national_unity = -1 }
+			25 = { national_unity = 1 }
+			25 = { popularity = -2 }
+		}
+		add_province_modifier = {
+			name = emasculated_military
+			duration = 365
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50223"		#Let it be
+		ai_chance = { factor = 60 }
+		national_unity = -1
+		add_country_modifier = {
+			name = ambitious_military
+			duration = 730
+		}
+	}
+}

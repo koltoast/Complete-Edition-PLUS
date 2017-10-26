@@ -1,0 +1,1299 @@
+#USA - USA
+#354030 - The Tripartite Agreement 	
+#354031 - UN Resolution 95 	
+#354032 - First Tripartite Talks
+#354033 - First Tripartite Proposal
+
+#FRA - France
+#194020 - Egypt seizes Suez Canal!
+#194021 - First Tripartite Talks
+#194022 - Second Tripartite Talks
+
+#ENG - United Kingdom
+#181050 - Anglo-Egyptian Treaty Repealed! 
+#181051 - Suez Canal Company
+#181052 - The Sudanese Question
+#181053 - Egypt seizes Suez Canal!
+#181054 - First Tripartite Talks
+#181055 - Second Tripartite Talks
+
+#ISR - Israel
+#222010 - Join the Tripartite?
+#222011 - Second Tripartite Talks
+#222012 - Return Sinai
+#222013	- Claim the Golan Heights?
+#222014	- Claim the West Bank?
+#222015	- This could be our Casus Belli!
+#222016 - War Cabinet
+#222017 - Military Coup and DoW on Egypt!
+#222018 - End of the Third Arab Israeli War
+
+#EGY - Egypt
+#180020 - The Suez Question 				
+#180021 - Britain refuses to leave Suez! 	
+#180022 - Britain returns Suez 				
+#180023 - Military Coup! 					
+#180024 - Suez Canal Company A
+#180025 - Suez Canal Company B
+#180026 - The Sudanese Question A
+#180027 - The Sudanese Question B
+#180028 - Israeli Tensions
+#180029	- Draft Resolution 997
+#180030	- Closing the Straights of Tiran
+
+#IRQ - Iraq
+#221010 - Jordan invites us to form a Defensive Pact
+
+#JOR - Jordan
+#226010 - Egypt invites us to form an Alliance
+
+### Suez Crisis ###
+
+country_event = {
+	
+	id = 354030		#Event 01 for USA – The Tripartite Agreement
+
+	trigger = {
+		tag = USA
+		OR = {
+			exists = ISR
+			exists = PAL
+		}
+		ISR = { war = no }
+		PAL = { war = no }
+		NOT = {
+			has_global_flag = tripartite_agreement
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	title = "EVTNAME354030"
+	desc = "EVTDESC354030"
+	picture = "1956_tripartite_meeting"
+
+	option = {
+		name = "EVTOPTA354030"			    			# Very well
+		set_global_flag = tripartite_agreement
+		# Tripartite agreement created: USA, FRA and ENG join the community	#Commented out currently as adding communities makes the game crash
+	}
+}
+
+country_event = {
+	
+	id = 354031		#Event 02 for USA – UN Resolution 95
+
+	trigger = {
+		tag = USA
+		OR = {
+			exists = ISR
+			exists = PAL
+		}
+		ISR = { war = no }
+		PAL = { war = no }
+		# EGY has ISR embargoed #Commented out as no such trigger exists yet
+		NOT = {
+			has_global_flag = resolution_95
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	title = "EVTNAME354031"
+	desc = "EVTDESC354031"
+	picture = "1954_Suez_Egypt_seizes_Bat_Galim"
+
+	option = {
+		name = "EVTOPTA354031"			    			# Very well
+		set_global_flag = tripartite_agreement
+		#o	UN resolution 95 – Vote for Egypt to end Embargo of ISR
+		#	?	Following goes in “common\organisation_actions.txt”
+		#	•	definition = {
+		#	o	name = RESOLUTION_95
+		#	o	id = 8
+		#	o	organisation = 1
+		#	o	all = yes
+		#	o	effect = {
+		#	?	EGY = {
+		#	•	#END_EMBARGO = ISR – No effect yet.
+		#	?	}
+		#	o	description = RESOLUTION_95
+		#	•	}
+		set_global_flag = resolution_95
+	}
+}
+
+country_event = {
+	
+	id = 180020		#Event 01 for EGY – The Suez Question
+
+	is_triggered_only = yes
+
+	title = "EVTNAME180020"
+	desc = "EVTDESC180020"
+	picture = "1951_Anglo_Egyptian_Treaty_revoked"
+
+	option = {
+		name = "EVTOPTA180020"			    			# Repeal the Anglo-Egyptian Treaty
+		ai_chance = { factor = 90 }
+		ENG = { country_event = 181050 }
+		relation = { who = ENG value = -50 }
+	}
+	
+	option = {
+		name = "EVTOPTB180020"			    			# Let the Treaty run its course
+		ai_chance = { factor = 10 }
+		relation = { who = ENG value = 5 }
+	}
+}
+
+country_event = {
+	
+	id = 181050		#Event 01 for ENG – Anglo-Egyptian Treaty Repealed!
+
+	is_triggered_only = yes
+
+	title = "EVTNAME181050"
+	desc = "EVTDESC181050"
+	picture = "1951_Anglo_Egyptian_Treaty_revoked"
+
+	option = {
+		name = "EVTOPTA181050"			    			# Accept their demands
+		ai_chance = { factor = 10 }
+		EGY = { country_event = 180022 }
+		relation = { who = EGY value = 25 }
+		7515 = { secede_province = EGY }
+		end_military_access = EGY
+		set_country_flag = surrended_suez
+	}
+	
+	option = {
+		name = "EVTOPTB181050"			    			# We had a contract!
+		ai_chance = { factor = 90 }
+		EGY = { country_event = 180021 }
+		relation = { who = EGY value = -50 }
+	}
+}
+
+country_event = {
+	
+	id = 180021		#Event 02a for EGY – Britain refuses to leave Suez!
+
+	is_triggered_only = yes
+
+	title = "EVTNAME180021"
+	desc = "EVTDESC180021"
+	picture = "1952_Egypt_British_guard_Ismailia"
+
+	option = {
+		name = "EVTOPTA180021"			    			# This means war!
+		ai_chance = { factor = 10 }
+		EGY = { limited_war = ENG }
+		relation = { who = ENG value = -400 }
+		7515 = { secede_province = EGY }
+		end_military_access = EGY
+		set_country_flag = surrended_suez
+	}
+	
+	option = {
+		name = "EVTOPTB180021"			    			# They called our bluff
+		ai_chance = { factor = 90 }
+		dissent = 15
+		national_unity = -20
+		popularity = -10
+		prestige_change = -10
+		set_country_flag = stackelberg_follower
+	}
+}
+
+country_event = {
+	
+	id = 180022		#Event 02b for EGY – Britain returns Suez
+
+	is_triggered_only = yes
+
+	title = "EVTNAME180022"
+	desc = "EVTDESC180022"
+	picture = "1956_Egypt_nationalizes_Suez_Canal"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA180022"			    			# Good news
+		prestige_change = 20
+	}
+}
+
+country_event = {
+	
+	id = 180023		#Event 03 for EGY – Military Coup!
+
+	trigger = {
+		tag = EGY
+		war = no
+		dissent = 10
+		OR = {
+			exists = ISR
+			exists = PAL
+		}
+		ISR = { war = no }
+		PAL = { war = no }
+		# EGY is not embargoing ISR #Commented out as no such trigger exists yet
+		has_country_flag = stackelberg_follower
+		7515 = { controlled_by = ENG }
+		NOT = { has_country_flag = military_coup }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	title = "EVTNAME180023"
+	desc = "EVTDESC180023"
+	picture = "1952_Egyptian_coup"
+
+	option = {
+		name = "EVTOPTA180023"			    			# Oh well
+		government = authoritarian_gov
+		head_of_state = 1180003
+		head_of_government = 1180019
+		clr_country_flag = stackelberg_follower
+		set_country_flag = military_coup
+		relation = { who = ENG value = -25 }
+	}
+}
+
+country_event = {
+	
+	id = 181051		#Event 02 for ENG – Suez Canal Company
+
+	trigger = {
+		tag = ENG
+		NOT = {
+			has_country_flag = event_EGY_suez_relations
+		}
+		OR = {
+			has_country_flag = dec_EGY_suez_relations
+			EGY = { government = authoritarian_gov }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 18
+	}
+
+	title = "EVTNAME181051"
+	desc = "EVTDESC181051"
+	picture = "1954_Anglo_Egyptian_agreement"
+
+	option = {
+		name = "EVTOPTA181051"			    			# Offer our Military Bases!
+		ai_chance = { factor = 90 }
+		set_country_flag = event_EGY_suez_relations
+		set_country_flag = dec_EGY_suez_relations
+		relation = { who = EGY value = 25 }
+		EGY = { country_event = 180024 }
+	}
+	
+	option = {
+		name = "EVTOPTB181051"			    			# Threaten with our Military Might!
+		ai_chance = { factor = 10 }
+		set_country_flag = event_EGY_suez_relations
+		set_country_flag = dec_EGY_suez_relations
+		relation = { who = USA value = -50 }
+		relation = { who = SOV value = -100 }
+		neutrality = -10
+		EGY = { country_event = 180025 }
+	}
+}
+
+country_event = {
+	
+	id = 180024		#Event 04 for EGY – Suez Canal Company A
+
+	is_triggered_only = yes
+
+	title = "EVTNAME180024"
+	desc = "EVTDESC180024"
+	picture = "1954_Anglo_Egyptian_agreement"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA180024"			    			# Accept!
+		ai_chance = { factor = 99 }
+		national_unity = -2
+		popularity = -2
+		set_country_flag = suez_leased_out
+		relation = { who = ENG value = 25 }
+		relation = { who = FRA value = 25 }
+		7515 = { secede_province = EGY }
+	}
+	
+	option = {
+		name = "EVTOPTB180024"			    			# Decline!
+		ai_chance = { factor = 1 }
+		country_event = 180025
+	}
+}
+
+country_event = {
+	
+	id = 180025		#Event 05 for EGY – Suez Canal Company B
+
+	is_triggered_only = yes
+
+	title = "EVTNAME180025"
+	desc = "EVTDESC180025"
+	picture = "1954_Anglo_Egyptian_agreement"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA180025"			    			# Accept!
+		ai_chance = { factor = 90 }
+		national_unity = -2
+		set_country_flag = suez_leased_out
+		relation = { who = ENG value = 25 }
+		relation = { who = FRA value = 25 }
+		set_country_flag = suez_leased_out
+		dissent = 5
+		national_unity = -5
+		popularity = -2
+	}
+	
+	option = {
+		name = "EVTOPTB180025"			    			# Decline!
+		ai_chance = { factor = 10 }
+		ENG = { country_event = 181053 }
+		clr_country_flag = suez_leased_out
+		ENG = { clr_country_flag = suez_canal_company }
+		FRA = { clr_country_flag = suez_canal_company }
+	}
+}
+
+country_event = {
+	
+	id = 181052		#Event 03 for ENG – The Sudanese Question
+
+	trigger = {
+		tag = ENG
+		NOT = {
+			has_country_flag = event_EGY_sudan_relations
+		}
+		OR = {
+			has_country_flag = dec_EGY_sudan_relations
+			EGY = { government = authoritarian_gov }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 18
+	}
+
+	title = "EVTNAME181052"
+	desc = "EVTDESC181052"
+	picture = "1954_Anglo_Egyptian_agreement"
+
+	option = {
+		name = "EVTOPTA181052"			    			# Sudan shall be a part of Egypt
+		ai_chance = { factor = 10 }
+		EGY = { country_event = 180026 } 	#Event 06 for EGY – The Sudanese Question A
+		set_country_flag = event_EGY_sudan_relations
+		set_country_flag = dec_EGY_sudan_relations
+		neutrality = 10
+		prestige_change = 5
+	}
+	
+	option = {
+		name = "EVTOPTB181052"			    			# Sudan shall have its independence!
+		ai_chance = { factor = 60 }
+		relation = { who = EGY value = -50 }
+		EGY = { country_event = 180027 } 	#Event 07 for EGY – The Sudanese Question B
+		set_country_flag = event_EGY_sudan_relations
+		set_country_flag = dec_EGY_sudan_relations
+		prestige_change = 10
+	}
+	
+	option = {
+		name = "EVTOPTC181052"			    			# We shall not dismantle the Empire on Egypt's account!
+		ai_chance = { factor = 30 }
+		relation = { who = SOV value = -25 }
+		relation = { who = USA value = -25 }
+		relation = { who = EGY value = -50 }
+		set_country_flag = event_EGY_sudan_relations
+		set_country_flag = dec_EGY_sudan_relations
+		neutrality = -10
+		national_unity = -2
+	}
+}
+
+country_event = {
+	
+	id = 180026		#Event 06 for EGY – The Sudanese Question A
+
+	is_triggered_only = yes
+
+	title = "EVTNAME180026"
+	desc = "EVTDESC180026"
+	picture = "1956_sudan_independent"		
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA180026"			    			# Accept!
+		ai_chance = { factor = 99 }
+		ENG = {
+			any_owned = {
+				limit = {
+					is_core = SUD
+				}
+				remove_core = ENG
+				secede_province = EGY
+			}
+		}
+		relation = { who = ENG value = 100 }
+	}
+	
+	option = {
+		name = "EVTOPTB180026"			    			# Decline!
+		ai_chance = { factor = 1 }
+		country_event = 180027
+		dissent = 5
+		national_unity = -5
+		popularity = -5
+	}
+}
+
+country_event = {
+	
+	id = 180027		#Event 07 for EGY – The Sudanese Question B
+
+	is_triggered_only = yes
+
+	title = "EVTNAME180027"
+	desc = "EVTDESC180027"
+	picture = "1956_sudan_independent"	
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA180027"			    			# Accept!
+		ai_chance = { factor = 90 }
+		release = SUD
+		ENG = {
+			any_owned = {
+				limit = {
+					is_core = SUD
+				}
+				remove_core = ENG
+				secede_province = SUD
+			}
+		}
+		relation = { who = SUD value = 100 }
+		relation = { who = ENG value = 25 }
+	}
+	
+	option = {
+		name = "EVTOPTB180027"			    			# Decline!
+		ai_chance = { factor = 10 }
+		dissent = 5
+		national_unity = -5
+		popularity = -5
+	}
+}
+
+country_event = {
+	
+	id = 180028		#Event 08 for EGY – Israeli Tensions
+
+	trigger = {
+		tag = EGY
+		OR = {
+			exists = ISR
+			exists = PAL
+		}
+		ISR = { war = no }
+		PAL = { war = no }
+		NOT = {
+			has_country_flag = israeli_tensions
+		}
+		OR = {
+			ENG = { has_country_flag = dec_EGY_suez_relations }
+			ENG = { has_country_flag = dec_EGY_sudan_relations }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+
+	title = "EVTNAME180028"
+	desc = "EVTDESC180028"
+	picture = "1954_palistinian_infiltration"
+	
+	option = {
+		name = "EVTOPTA180028"			    			# Oh well
+		relation = { who = ISR value = -50 }
+		set_country_flag = israeli_tensions
+	}
+}
+
+
+
+country_event = {
+	
+	id = 181053		#Event 04 for ENG – Egypt seizes Suez Canal!
+
+	is_triggered_only = yes
+
+	title = "EVTNAME181053"
+	desc = "EVTDESC181053"
+	picture = "1956_Egyptian_flag_Port_Said"	
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA181053"			    			# This means War!	
+		ai_chance = { factor = 20 }
+		limited_war = EGY
+		set_country_flag = suez_crisis
+	}
+	
+	option = {
+		name = "EVTOPTB181053"			    			# Let us not act rashly...
+		ai_chance = { factor = 79 }		
+		money = 50000
+		set_country_flag = pre_suez_crisis
+		7515 = {
+			secede_province = EGY
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC181053"			    			# We shall forget the canal
+		ai_chance = { factor = 1 }
+		money = 50000
+		set_country_flag = post_suez_crisis
+		national_unity = -2
+		7515 = {
+			secede_province = EGY
+			remove_core = ENG
+		}
+	}
+}
+
+country_event = {
+	
+	id = 194020		#Event 01 for FRA – Egypt seizes Suez Canal!
+
+	is_triggered_only = yes
+
+	title = "EVTNAME194020"
+	desc = "EVTDESC194020"
+	picture = "1956_Egyptian_flag_Port_Said"
+
+	option = {
+		name = "EVTOPTA194020"			    			# This means War!
+		ai_chance = { factor = 20 }	
+		limited_war = EGY
+		set_country_flag = suez_crisis
+	}
+	
+	option = {
+		name = "EVTOPTB194020"			    			# Let us not act rashly...	
+		ai_chance = { factor = 79 }	
+		money = 50000
+		set_country_flag = pre_suez_crisis
+	}
+	
+	option = {
+		name = "EVTOPTC194020"			    			# We shall forget the canal
+		ai_chance = { factor = 1 }
+		money = 50000
+		set_country_flag = post_suez_crisis
+		national_unity = -2
+	}
+}
+
+
+### Tripartite Agreement ###
+
+country_event = {
+	
+	id = 181054		#Multi-event 1 for FRA/ENG/USA – ENG - First Tripartite Talks
+
+	trigger = {
+		#Is a tripartite agreement member
+		tag = ENG
+		USA = { is_major = yes }
+		NOT = { 
+			has_country_flag = tripartite_talks_ENG
+			has_country_flag = suez_crisis
+			has_country_flag = post_suez_crisis
+		}
+		has_country_flag = pre_suez_crisis
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	title = "EVTNAME180054"
+	desc = "EVTDESC180054"
+	picture = "1956_tripartite_meeting"
+
+	option = {
+		name = "EVTOPTA180054"			    			# Very well
+		USA = { country_event = 354033 }
+	}
+}
+
+country_event = {
+	
+	id = 194021		#Multi-event 1 for FRA/ENG/USA – FRA - First Tripartite Talks
+
+	trigger = {
+		#Is a tripartite agreement member
+		tag = FRA
+		USA = { is_major = yes }
+		NOT = { 
+			has_country_flag = tripartite_talks_ENG
+			has_country_flag = suez_crisis
+			has_country_flag = post_suez_crisis
+		}
+		has_country_flag = pre_suez_crisis
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	title = "EVTNAME194021"
+	desc = "EVTDESC194021"
+	picture = "1956_tripartite_meeting"
+
+	option = {
+		name = "EVTOPTA194021"			    			# Very well
+		USA = { country_event = 354033 }
+	}
+}
+
+country_event = {
+	
+	id = 354032		#Multi-event 1 for FRA/ENG/USA – USA - First Tripartite Talks
+
+	trigger = {
+		#Is a tripartite agreement member
+		tag = USA
+		is_major = yes
+		NOT = { 
+			has_country_flag = tripartite_talks_ENG
+			has_country_flag = suez_crisis
+			has_country_flag = post_suez_crisis
+		}
+		OR = {
+			has_country_flag = pre_suez_crisis
+			AND = {
+				ENG = { has_country_flag = pre_suez_crisis }
+				FRA = { has_country_flag = pre_suez_crisis }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	title = "EVTNAME354032"
+	desc = "EVTDESC354032"
+	picture = "1956_tripartite_meeting"
+
+	option = {
+		name = "EVTOPTA354032"			    			# Very well
+		country_event = 354033
+	}
+}
+
+country_event = {
+	
+	id = 354033		#Event 03 for USA – First Tripartite Proposal
+
+	is_triggered_only = yes
+
+	title = "EVTNAME354033"
+	desc = "EVTDESC354033"
+	picture = "1956_tripartite_meeting"
+
+	option = {
+		name = "EVTOPTA354033"			    			# We cannot agree to this
+		ai_chance = { factor = 99 }		
+		#USA leaves tripartite
+		ISR = { country_event = 222010 }
+	}
+	
+	option = { 
+		name = "EVTOPTB354033"			    			# Let there be war
+		ai_chance = { factor = 1 }
+		limited_war = EGY
+		set_country_flag = suez_crisis
+	}
+}
+
+country_event = {
+	
+	id = 222010		#Event 01 for ISR – Join the Tripartite?
+
+	is_triggered_only = yes
+
+	title = "EVTNAME222010"
+	desc = "EVTDESC222010"
+	picture = "1956_tripartite_meeting"
+
+	option = {
+		name = "EVTOPTA222010"			    			# Of course
+		set_global_flag = second_tripartite
+		ai_chance = { factor = 75 }		
+		#ISR joins Tripartite
+		relation = { who = ENG value = 50 }
+		relation = { who = FRA value = 50 }
+	}
+	
+	option = { 
+		name = "EVTOPTB222010"			    			# We can not take the chance
+		set_global_flag = second_tripartite
+		ai_chance = { factor = 25 }
+		popularity = -2
+		national_unity = -1
+	}
+}
+
+country_event = {
+	
+	id = 181055		#Multi-event 1 for FRA/ENG/ISR – ENG - Second Tripartite Talks
+
+	trigger = {
+		#Is a tripartite agreement member
+		tag = ENG
+		has_global_flag = second_tripartite
+		is_major = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	title = "EVTNAME180055"
+	desc = "EVTDESC180055"
+	picture = "1956_Sevres_Protocol"
+
+	option = {
+		name = "EVTOPTA180055"			    			# Very well
+		#To be implemented
+	}
+}
+
+country_event = {
+	
+	id = 194022		#Multi-event 1 for FRA/ENG/ISR – FRA - Second Tripartite Talks
+
+	trigger = {
+		#Is a tripartite agreement member
+		tag = FRA
+		has_global_flag = second_tripartite
+		is_major = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	title = "EVTNAME194022"
+	desc = "EVTDESC194022"
+	picture = "1956_Sevres_Protocol"
+
+	option = {
+		name = "EVTOPTA194022"			    			# Very well
+		#To be implemented
+	}
+}
+
+country_event = {
+	
+	id = 222011		#Multi-event 1 for FRA/ENG/ISR – ISR - Second Tripartite Talks
+
+	trigger = {
+		#Is a tripartite agreement member
+		tag = ISR
+		has_global_flag = second_tripartite
+		is_major = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	title = "EVTNAME222011"
+	desc = "EVTDESC222011"
+	picture = "1956_Sevres_Protocol"
+
+	option = {
+		name = "EVTOPTA222011"			    			# Very well
+		#To be implemented
+	}
+}
+
+country_event = {
+	
+	id = 222012		#Event 02 for ISR – Return Sanai
+
+	trigger = {
+		has_country_flag = first_sinai_occupation
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	title = "EVTNAME222012"
+	desc = "EVTDESC222012"
+	picture = "1956_Israeli_withdrawal"
+
+	option = {
+		name = "EVTOPTA222012"			    			# Very well
+		clr_country_flag = first_sinai_occupation
+		#To be implemented	#UN voting
+	}
+
+	option = {
+		name = "EVTOPTB222012"			    			# Very well
+		clr_country_flag = first_sinai_occupation
+		any_owned = {
+			limit = {
+				is_core = EGY
+				NOT = {
+					is_core = EGY
+				}
+			}
+			secede_province = EGY
+		}
+		relation = { who = EGY value = 50 }
+	}
+}
+
+country_event = {
+	
+	id = 180029		#Event 09 for EGY – Draft Resolution 997
+
+	trigger = {
+		has_global_flag = draft_resolution_997
+		NOT = { 
+			has_country_flag = draft_resolution_done
+			has_global_flag = draft_resolution_pass
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	title = "EVTNAME180029"
+	desc = "EVTDESC180029"
+	picture = "1956_UN_resolution_997"
+
+	option = {
+		name = "EVTOPTA180029"			    			# Very well
+		set_country_flag = draft_resolution_done
+		relation = { who = ENG value = 25 }
+		relation = { who = SOV value = 25 }
+		relation = { who = USA value = 25 }
+		#To be implemented	#UN voting
+	}
+}
+	
+	
+### Third Arab Israeli War (Six Day War) ###
+	
+country_event = {
+	
+	id = 222013		#Event 03 for ISR – Claim the Golan Heights?
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "EVTNAME222013"
+	desc = "EVTDESC222013"
+	picture = "Golan_heights"
+
+	option = {
+		name = "EVTOPTA222013"			    			# Claim the Golan Heights
+		ai_chance = { factor = 40 }
+		14882 = {
+			add_core = ISR
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+		}
+		SYR = {
+			dissent = 5
+		}
+		UAR = {
+			dissent = 5
+		}
+		neutrality = -15
+		relation = { who = XUN value = -50 }
+	}
+
+	option = {
+		name = "EVTOPTB222013"			    			# Perform border operations
+		ai_chance = { factor = 40 }
+		14882 = {
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+		}
+		SYR = {
+			dissent = 2.5
+		}
+		UAR = {
+			dissent = 2.5
+		}
+		neutrality = -5
+		relation = { who = XUN value = -10 }
+	}
+
+	option = {
+		name = "EVTOPTC222013"			    			# It is best not to
+		ai_chance = { factor = 20 }
+		dissent = 2
+	}
+}
+
+country_event = {
+	
+	id = 222014		#Event 04 for ISR – Claim the West Bank?
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "EVTNAME222014"
+	desc = "EVTDESC222014"
+	picture = "West_Bank"
+	
+	option = {
+		name = "EVTOPTA222014"			    			# Claim the West Bank
+		ai_chance = { factor = 40 }
+		14881 = {
+			add_core = ISR
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+		}
+		6520 = {
+			add_core = ISR
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+		}
+		JOR = {
+			dissent = 5
+		}
+		neutrality = -15
+		relation = { who = XUN value = -50 }
+	}
+
+	option = {
+		name = "EVTOPTB222014"			    			# Perform border operations
+		ai_chance = { factor = 40 }
+		14881 = {
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+		}
+		6520 = {
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+		}
+		JOR = {
+			dissent = 2.5
+		}
+		neutrality = -5
+		relation = { who = XUN value = -10 }
+	}
+
+	option = {
+		name = "EVTOPTC222014"			    			# It is best not to
+		ai_chance = { factor = 20 }
+		dissent = 2
+	}
+}
+
+country_event = {
+	
+	id = 180030		#Event 10 for EGY - Closing the Straights of Tiran
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "EVTNAME180030"
+	desc = "EVTDESC180030"
+	picture = "1967_Straits_of_Tiran"
+
+	option = {
+		name = "EVTOPTA180030"
+		ai_chance = { factor = 80 }
+		embargo = ISR
+		relation = { who = ISR value = -150 }
+		neutrality = -10
+		set_global_flag = tiran_closed
+		ISR = { country_event = 22015 }
+		national_unity = 15
+		money = 10000
+	}
+
+	option = {
+		name = "EVTOPTA180030"
+		relation = { who = ISR value = 25 }
+	}
+}
+
+country_event = {
+	
+	id = 222015		#Event 05 for ISR – This could be our Casus Belli!
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "EVTNAME222015"
+	desc = "EVTDESC222015"
+	picture = "1967_Straits_of_Tiran"
+	
+	option = {
+		name = "EVTOPTA222015"
+		set_country_flag = casus_belli_EGY
+	}
+}
+
+country_event = {
+	
+	id = 221010		#Event 01 for IRQ - Jordan invites us to form a Defensive Pact
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "EVTNAME221010"
+	desc = "EVTDESC221010"
+	picture = "1967_Jordanian_tanks_June_4"	
+
+	option = {
+		name = "EVTOPTA221010"		#Accept
+		ai_chance = { factor = 80 }
+		military_access = JOR
+		relation = { who = JOR value = 100 }
+		JOR = {
+			military_access = IRQ
+			#load_oob = #IRQ exp. Force OOB
+		}
+	}
+
+	option = {
+		name = "EVTOPTA221010"		#Decline
+		ai_chance = { factor = 20 }
+		relation = { who = JOR value = -50 }
+	}
+}
+
+country_event = {
+	
+	id = 226010		#Event 01 for JOR - Egypt invites us to form an Alliance
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "EVTNAME226010"
+	desc = "EVTDESC226010"
+	picture = "1967_Arab_Defence_Pact"	
+
+	option = {
+		name = "EVTOPTA226010"		#Accept
+		ai_chance = { factor = 95 }
+		military_access = EGY
+		relation = { who = EGY value = 100 }
+		EGY = {
+			military_access = IRQ
+			create_alliance = JOR
+		}
+	}
+
+	option = {
+		name = "EVTOPTB226010"		#Decline
+		ai_chance = { factor = 5 }
+		relation = { who = EGY value = -25 }
+	}
+}
+
+country_event = {
+	
+	id = 222016		#Event 06 for ISR - War Cabinet
+
+	trigger = {
+		tag = ISR
+		has_country_flag = casus_belli_EGY
+		NOT = { has_country_flag = war_cabinet }
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+
+	title = "EVTNAME222016"
+	desc = "EVTDESC222016"
+	picture = "1967_Israeli_war_cabinet"
+
+	option = {
+		name = "EVTOPTA222016"			    # War!
+		ai_chance = { factor = 40 }
+		limited_war = EGY
+		set_country_flag = war_cabinet
+		set_country_flag = third_arab_israeli_war_ongoing
+	}
+
+	option = {
+		name = "EVTOPTB222016"			    # Now is not the opportune moment
+		ai_chance = { factor = 40 }
+		dissent = 5
+		set_country_flag = war_cabinet
+		set_country_flag = third_arab_israeli_war_postponed
+	}
+
+	option = {
+		name = "EVTOPTC222016"			    # We shall not risk our sovereignty again!
+		ai_chance = { factor = 20 }
+		dissent = 10
+		national_unity = -15
+		set_country_flag = war_cabinet
+		set_country_flag = third_arab_israeli_war_avoided
+	}
+}
+
+country_event = {
+	
+	id = 222017		#Event 07 for ISR - Military Coup and DoW on Egypt!
+
+	trigger = {
+		tag = ISR
+		OR = {
+			has_country_flag = third_arab_israeli_war_postponed
+			has_country_flag = third_arab_israeli_war_avoided
+		}
+		NOT = { 
+			year = 1972
+			national_unity = 85
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 212
+		modifier = {
+			factor = 0.25
+			has_country_flag = third_arab_israeli_war_avoided
+		}
+		modifier = {
+			factor = 2
+			national_unity = 70
+		}
+		modifier = {
+			factor = 2
+			NOT = { dissent = 15 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { national_unity = 40 }
+		}
+		modifier = {
+			factor = 0.5
+			dissent = 30
+		}
+	}
+
+	title = "EVTNAME222017"
+	desc = "EVTDESC222017"
+	picture = "1967_Israeli_coup_ahistorical"
+
+	option = {
+		name = "EVTOPTA222017"			    # War!
+		limited_war = EGY
+		head_of_state = 1222022
+		head_of_government = 1222022
+	}
+}
+
+country_event = {
+	
+	id = 222018		#Event 08 for ISR - End of the Third Arab Israeli War
+
+	trigger = {
+		tag = ISR
+		controls = 14882
+		controls = 6520
+		controls = 14881
+		controls = 7710
+		controls = 7617
+		controls = 14877
+		controls = 7618
+		controls = 7711
+		controls = 7712
+		controls = 7713
+		national_unity = 25
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	title = "EVTNAME222018"
+	desc = "EVTDESC222018"
+	picture = "1967_Israeli_victory"
+
+	option = {
+		name = "EVTOPTA222018"			    # All of the Levant shall fall!
+		#Effects to be added later #doomsday clock advance, international stuff
+	}
+
+	option = {
+		name = "EVTOPTA222018"			    # Negotiate a peace
+		14882 = { secede_province = ISR }
+		6520 = { secede_province = ISR }
+		14881 = { secede_province = ISR }
+		7710 = { secede_province = ISR }
+		7617 = { secede_province = ISR }
+		14877 = { secede_province = ISR }
+		7618 = { secede_province = ISR }
+		7711 = { secede_province = ISR }
+		7712 = { secede_province = ISR }
+		7713 = { secede_province = ISR }
+		end_war = EGY
+		end_war = JOR
+		end_war = IRQ
+		end_war = SYR
+		clr_country_flag = third_arab_israeli_war_ongoing
+		set_country_flag = third_arab_israeli_war_done
+	}
+}

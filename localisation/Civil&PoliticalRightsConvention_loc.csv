@@ -1,0 +1,61 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+mod_UN_civil_and_political_rights_convention_failure_delay;UN Civil & Political Rights Convention Delay;;;;;;;;;;;;;x
+mod_UN_civil_and_political_rights_convention_ratifier_delay;UN Civil & Political Rights Convention Ratifier Delay;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+mod_UN_civil_and_political_rights_convention_revoked_recently;UN Civil & Political Rights Convention Revoked Recently;;;;;;;;;;;;;x
+mod_UN_civil_and_political_rights_convention_ratified;UN Civil & Political Rights Convention;;;;;;;;;;;;;x
+mod_UN_civil_and_political_rights_convention_ratified_recently;UN Civil & Political Rights Convention Ratified Recently;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+dec_UN_raise_civil_and_political_rights_convention_title;The UN Civil & Political Rights Convention;;;;;;;;;;;;;x
+dec_UN_raise_civil_and_political_rights_convention_desc;United Nations General Assembly Resolution 2200A, The International Covenant on Civil and Political Rights.;;;;;;;;;;;;;x
+dec_UN_civil_and_political_rights_convention_disable_voting_notifications_title;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+dec_UN_civil_and_political_rights_convention_disable_voting_notifications_desc;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+dec_UN_ratify_civil_and_political_rights_convention_title;Ratify UN Civil & Political Rights Convention;;;;;;;;;;;;;x
+dec_UN_ratify_civil_and_political_rights_convention_desc;Ratify The International Covenant on Civil and Political Rights.;;;;;;;;;;;;;x
+dec_UN_withdraw_from_civil_and_political_rights_convention_title;Withdraw from UN Civil & Political Rights Convention;;;;;;;;;;;;;x
+dec_UN_withdraw_from_civil_and_political_rights_convention_desc;Withdraw from The International Covenant on Civil and Political Rights.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+EVTNAME12400;The UN Civil & Political Rights Convention;;;;;;;;;;;;;x
+EVTDESC12400;United Nations General Assembly Resolution 2200A, The International Covenant on Civil and Political Rights has been opened for voting.;;;;;;;;;;;;;x
+EVTOPTA12400;Large Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTB12400;Small Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTC12400;No Diplomatic Investment.;;;;;;;;;;;;;x
+EVTNAME12401;UN Voting Notifications;;;;;;;;;;;;;x
+EVTDESC12401;Shall we receive notifications when nations decide their vote on the current UN Resolution undergoing a vote?\nThese can be turned off at any time by an international decision.;;;;;;;;;;;;;x
+EVTOPTA12401;Receive Notifications.;;;;;;;;;;;;;x
+EVTOPTB12401;No Notifications.;;;;;;;;;;;;;x
+EVTNAME12402;UN Civil & Political Rights Convention Fails Vote;;;;;;;;;;;;;x
+EVTDESC12402;United Nations General Assembly Resolution 2200A, The International Covenant on Civil and Political Rights, has been defeated by vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA12402;Unfortunate;;;;;;;;;;;;;x
+EVTNAME12403;UN Civil & Political Rights Convention Passes Vote;;;;;;;;;;;;;x
+EVTDESC12403;United Nations General Assembly Resolution 2200A, The International Covenant on Civil and Political Rights, has passed its vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA12403;Excellent;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+EVTNAME12410;Civil & Political Rights Convention UN Vote;;;;;;;;;;;;;x
+EVTDESC12410;We have the opportunity to vote on United Nations General Assembly Resolution 2200A, The International Covenant on Civil and Political Rights, at the UN General Assembly.\nWe can either vote For it, Abstain, or vote Against it.;;;;;;;;;;;;;x
+EVTOPTA12410;§GVote For;;;;;;;;;;;;;x
+EVTOPTB12410;Abstain;;;;;;;;;;;;;x
+EVTOPTC12410;§RVote Against;;;;;;;;;;;;;x
+EVTNAME12412;Ratified the Civil & Political Rights Convention;;;;;;;;;;;;;x
+EVTDESC12412;We have ratified the UN Civil & Political Rights Convention.;;;;;;;;;;;;;x
+EVTOPTA12412;Progress and civility will prevail.;;;;;;;;;;;;;x
+EVTNAME12414;Withdrawal from the Civil & Political Rights Convention;;;;;;;;;;;;;x
+EVTDESC12414;We have withdrawn from the UN Civil & Political Rights Convention.;;;;;;;;;;;;;x
+EVTOPTA12414;Good riddance.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

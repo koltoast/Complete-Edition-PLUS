@@ -1,0 +1,317 @@
+##################################################################################################################
+# NO  ESTAN   EN   GUERRA ########################################################################################
+##################################################################################################################
+
+#####################################
+#   INDEPENDIZAR NACIONES   #
+#####################################
+
+country_event = {
+
+	trigger = {
+		not = { tag = EUR }
+		is_subject = no		
+		not = { has_global_flag = CRISISNACIONAL }
+		year = 1946
+		war = no
+		not = { year = 1956 }
+			OR = {
+				THIS = { government = totalitarian_gov  }
+				THIS = { government = authoritarian_gov }
+				THIS = { government = absolute_monarchy_gov }
+			}
+		OR = {
+			not = { national_unity = 60 }
+			not = { popularity = 35 }
+		}
+		dissent = 25
+	}
+
+	id = 5555012
+	
+	title = "Independizar naciones"
+	desc = "Es necesario intentar concederles la independencia para mantener el estado nacional."
+	picture = "ANARKIA-2"	
+
+	mean_time_to_happen = {  months = -1 }
+
+	option = {
+		set_global_flag = CRISISNACIONAL
+		name = "No es necesario"	
+		ai_chance = { factor = 70 }	
+		national_unity = -5
+
+		random_list={
+		50 = {national_unity = 5}
+		35 = {national_unity = 0}
+		15 = {dissent = 5}
+		}
+		random_list={
+		50 = {popularity = -5}
+		35 = {popularity = 0}
+		15 = {popularity = 10}
+		}
+		random_list={
+		50 = {organisation = 10}
+		35 = {organisation = 0}
+		15 = {organisation = -5}
+		}
+
+		do_election = THIS
+		start_election = this
+     
+
+	}
+
+	option = {
+		set_global_flag = CRISISNACIONAL
+		name = "Negociemos"			
+		ai_chance = { factor = 30 }
+		dissent = 5
+		any_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}
+		 release_vassal = random
+
+		random_list={
+		50 = {dissent = -5}
+		35 = {dissent = 0}
+		15 = {national_unity = -5}
+		}
+		random_list={
+		50 = {popularity = 10}
+		35 = {popularity = 0}
+		15 = {popularity = -5}
+		}
+		random_list={
+		50 = {organisation = -5}
+		35 = {organisation = 0}
+		15 = {organisation = 10}
+		}
+        release_vassal = random
+      
+	}
+}
+
+
+
+####################################
+#   REVUELTAS Y ANARQUIA - YUGULO  #
+####################################
+
+country_event = {
+
+	trigger = {
+		not = { tag = EUR }
+		is_subject = no
+		year = 1956
+		war = no
+		not = { year = 1966 }
+		
+		not = { has_global_flag = CRISISNACIONAL }
+			OR = {
+				THIS = { government = totalitarian_gov  }
+				THIS = { government = authoritarian_gov }
+				THIS = { government = absolute_monarchy_gov }
+			}
+		OR = {
+			not = { national_unity = 70 }
+			not = { popularity = 40 }
+		}
+		dissent = 20
+	}
+
+	id = 5555013
+	
+	title = "Revuelta independentista"
+	desc = "Los rebeldes se han alzado en armas contra nuestra autoridad."
+	picture = "ANARKIA-3"	
+
+	mean_time_to_happen = {  months = -1 }
+
+	option = {
+		set_global_flag = CRISISNACIONAL
+		name = "Acabemos con la anarquía revolucionaria"	
+		ai_chance = { factor = 65 }	
+		national_unity = -5
+		any_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}
+		 release_vassal = random
+		 release_vassal = random
+		 release_vassal = random
+
+		random_list={
+		50 = {national_unity = 5}
+		35 = {national_unity = 0}
+		15 = {dissent = 5}
+		}
+		random_list={
+		50 = {popularity = -5}
+		35 = {popularity = 0}
+		15 = {popularity = 10}
+		}
+		random_list={
+		50 = {organisation = 10}
+		35 = {organisation = 0}
+		15 = {organisation = -5}
+		}
+
+		do_election = THIS
+		start_election = this
+		
+	}
+	
+	option = {
+		set_global_flag = CRISISNACIONAL
+		name = "Negociemos con los insurgentes"	
+		ai_chance = { factor = 35 }		
+		dissent = 5 
+		any_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}
+		release_vassal = random
+
+		random_list={
+		50 = {dissent = -5}
+		35 = {dissent = 0}
+		15 = {national_unity = -5}
+		}
+		random_list={
+		50 = {popularity = 10}
+		35 = {popularity = 0}
+		15 = {popularity = -5}
+		}
+		random_list={
+		50 = {organisation = -5}
+		35 = {organisation = 0}
+		15 = {organisation = 10}
+		}
+
+		release_vassal = random
+
+
+     
+	}
+
+}
+
+################################
+#   ULTIMAS COLONIAS -   #
+################################
+
+country_event = {
+
+	trigger = {
+		not = { tag = EUR }
+		is_subject = no
+		year = 1966
+		war = no
+		
+		not = { has_global_flag = CRISISNACIONAL }
+			OR = {
+				THIS = { government = totalitarian_gov  }
+				THIS = { government = authoritarian_gov }
+				THIS = { government = absolute_monarchy_gov }
+			}
+		OR = {
+			not = { national_unity = 80 }
+			not = { popularity = 45 }
+		}
+		dissent = 15
+	}
+
+	id = 5555014
+	
+	title = "Creación de nuevas naciones modernas"
+	desc = "Para preservar la unidad nacional es necesario intentar liberar territorios y negociar con insurgentes con el consecuente descontento de los sectores mas conservadores."
+	picture = "ANARKIA-4"
+	
+	mean_time_to_happen = {  months = -1 }
+
+	option = {
+		set_global_flag = CRISISNACIONAL
+		name = "Alea Jacta Est"	
+		ai_chance = { factor = 60 }	
+		national_unity = -5
+		any_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}
+		 release_vassal = random
+		 release_vassal = random
+		 release_vassal = random
+		 release_vassal = random
+
+		random_list={
+		50 = {national_unity = 5}
+		35 = {national_unity = 0}
+		15 = {dissent = 5}
+		}
+		random_list={
+		50 = {popularity = -5}
+		35 = {popularity = 0}
+		15 = {popularity = 10}
+		}
+		random_list={
+		50 = {organisation = 10}
+		35 = {organisation = 0}
+		15 = {organisation = -5}
+		}
+
+		do_election = THIS
+		start_election = this
+		
+	}
+
+
+	option = {
+		set_global_flag = CRISISNACIONAL
+		name = "¡Negociemos!"	
+		ai_chance = { factor = 40 }			
+		dissent = 5
+		any_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}		
+		release_vassal = random
+		
+		random_list={
+		50 = {dissent = -5}
+		35 = {dissent = 0}
+		15 = {national_unity = -5}
+		}
+		random_list={
+		50 = {popularity = 10}
+		35 = {popularity = 0}
+		15 = {popularity = -5}
+		}
+		random_list={
+		50 = {organisation = -5}
+		35 = {organisation = 0}
+		15 = {organisation = 10}
+		}
+		release_vassal = random
+
+    
+	}
+
+}

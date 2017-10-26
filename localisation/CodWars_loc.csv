@@ -1,0 +1,109 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#ENG;;;;;;;;;;;;;;x
+iceland_12nm_zone_reaction_ENG_title;Iceland's Expanded Fishing Grounds;;;;;;;;;;;;;x
+iceland_12nm_zone_reaction_ENG_desc;Iceland's seas are overfished, so the Icelandic government decided to simply expand their territorial waters and claim new fishing grounds – at the expense of our own fishermen who now need protection from the Navy in the 'new' Icelandic waters. It is unlikely that Iceland, which depends on the fishing industry, will give in here, but can we accept this provocation?;;;;;;;;;;;;;x
+iceland_50nm_zone_early_reaction_ENG_title;Iceland's Expanded Fishing Grounds;;;;;;;;;;;;;x
+iceland_50nm_zone_early_reaction_ENG_desc;Iceland's seas are overfished, so the Icelandic government decided to simply expand their territorial waters and claim new fishing grounds – by a full fifty nautical miles and at the expense of our own fishermen who now need protection from the Navy in the 'new' Icelandic waters! It is unlikely that Iceland, which depends on the fishing industry, will give in here, but can we accept this provocation?;;;;;;;;;;;;;x
+iceland_50nm_zone_reaction_ENG_title;Iceland and our Fishing Industry;;;;;;;;;;;;;x
+iceland_50nm_zone_reaction_ENG_desc;The Icelandic government has decided to extend its territorial water, like it has done it before, and British fishing zones now fall within the 'new' Icelandic waters. British trawlers are getting their nets cut and the fishermen are angry. The question is how much time and effort we can put into this - Iceland is unlikely to revoke its claim.;;;;;;;;;;;;;x
+iceland_200nm_zone_early_reaction_ENG_title;The Question of the Icelandic Territorial Waters;;;;;;;;;;;;;x
+iceland_200nm_zone_early_reaction_ENG_desc;Once more, British and Icelandic ships clash in a so-called 'Cod War'. The reason is the unilateral expansion of Iceland's territorial waters. What can we do about this?;;;;;;;;;;;;;x
+iceland_200nm_zone_reaction_ENG_title;The Question of the Icelandic Territorial Waters;;;;;;;;;;;;;x
+iceland_200nm_zone_reaction_ENG_desc;Once more, British and Icelandic ships clash in a so-called 'Cod War'. The reason is the unilateral expansion of Iceland's territorial waters. What can we do about this?;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#ICL;;;;;;;;;;;;;;x
+extend_zone_first_ICL_title;New Fishing Grounds for Iceland;;;;;;;;;;;;;x
+extend_zone_first_ICL_desc;To avoid overfishing our seas and the subsequent collapse of the vital fishing industry, we could extend our territorial waters. Iceland – at the time under Danish rule – has done this before in the 19th century and Britain agreed to it that time. If we don't overdo it, the British may once again show restraint and accept the loss for their own fishing industry, which is in decline anyway.;;;;;;;;;;;;;x
+extend_zone_second_50nm_ICL_title;More Help for the Fishing Industry;;;;;;;;;;;;;x
+extend_zone_second_50nm_ICL_desc;Once again, political measures are necessary to avoid the further delince of our fishing industry. Extending our national waters has been done successfully in the past, so maybe we should simply do it once again.;;;;;;;;;;;;;x
+extend_zone_second_200nm_ICL_title;The Future of the Fishing Industry;;;;;;;;;;;;;x
+extend_zone_second_200nm_ICL_desc;Despite all our efforts, the seas around Iceland are still overfished. It's unlikely that the fishermen will accept a reduction of their fishing quota and that would jeopardize their income and future. We need something else to save the fishing industry.;;;;;;;;;;;;;x
+pmod_50nm_fishing;6 Nautical Mile Territorial Waters;;;;;;;;;;;;;x
+pmod_50nm_fishing;50 Nautical Mile Territorial Waters;;;;;;;;;;;;;x
+pmod_200nm_fishing;200 Nautical Mile Territorial Waters;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ; REMOVE HASH FOR ACTIVE EVENTS AND OPTIONS;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#ENG;;;;;;;;;;;;;;x
+EVTNAME181002;The Cod War;;;;;;;;;;;;;x
+EVTDESC181002;Clashes continue to erupt between British and Icelandic vessels in Iceland's new territorial waters and have been dubbed the 'Cod War' by the press. While British fishermen appreciate the protection by the Navy, such protection is very expensive compared to its actual effect. Are fish really worth our time and money?;;;;;;;;;;;;;x
+EVTOPTA181002;Withdraw the fleet, this is becoming absurd;;;;;;;;;;;;;x
+EVTOPTB181002;Protect the fishing vessels for some time more to placate the public;;;;;;;;;;;;;x
+EVTOPTC181002;If they want the fish, make it costly!;;;;;;;;;;;;;x
+EVTNAME181003;The Cod War;;;;;;;;;;;;;x
+EVTDESC181003;Clashes continue to erupt between British and Icelandic vessels in Iceland's new territorial waters and have been dubbed the 'Cod War' by the press. While British fishermen appreciate the protection by the Navy, such protection is very expensive compared to its actual effect. Can we accept this impudent violation of international law? On the other hand, are fish really worth our time and money?;;;;;;;;;;;;;x
+EVTOPTA181003;Withdraw the fleet, this is becoming absurd;;;;;;;;;;;;;x
+EVTOPTB181003;Protect the fishing vessels for some time more to placate the public;;;;;;;;;;;;;x
+EVTOPTC181003;If they want the fish, make it costly!;;;;;;;;;;;;;x
+EVTNAME181004;The Cod War;;;;;;;;;;;;;x
+EVTDESC181004;The seas around Iceland – now considered territorial waters by that country – have become a battleground where British and Icelandic trawlers and their warship escorts prey on one another. The Icelanders systematically cut the nets of our trawlers and the Navy is the only thing currently preventing them from ousting all our vessels from the area. The fishermen want protection, but it will cost us – is it really worth our time and money?;;;;;;;;;;;;;x
+EVTOPTA181004;Retreat, it's not worth it;;;;;;;;;;;;;x
+EVTOPTB181004;We will remain as long as we can afford to;;;;;;;;;;;;;x
+EVTOPTC181004;The Icelander will pay. Stay as long as possible!;;;;;;;;;;;;;x
+EVTNAME181005;The Cod War;;;;;;;;;;;;;x
+EVTDESC181005;The seas around Iceland – now considered territorial waters by that country – have become a battleground where British and Icelandic trawlers and their warship escorts prey on one another. The Icelanders systematically cut the nets of our trawlers and the Navy is the only thing currently preventing them from ousting all our vessels from the area. The fishermen want protection, but is it really worth our time and money?;;;;;;;;;;;;;x
+EVTOPTA181005;Retreat, it's not worth it;;;;;;;;;;;;;x
+EVTOPTB181005;We will remain as long as we can afford to;;;;;;;;;;;;;x
+EVTOPTC181005;The Icelander will pay. Stay as long as possible!;;;;;;;;;;;;;x
+EVTNAME181006;War Over Fish;;;;;;;;;;;;;x
+EVTDESC181006;Once more, Iceland attempts to solve its economic problems by extending its territorial waters instead of instituting domestic reforms. Currently, British and Icelandic ships clash at sea almost daily. Protecting our ships from Icelandic net cutters will calm the public, but is it worth the expense?;;;;;;;;;;;;;x
+EVTOPTA181006;Leave now, they can have the fish;;;;;;;;;;;;;x
+EVTOPTB181006;Retreat slowly;;;;;;;;;;;;;x
+EVTOPTC181006;Harass them some more!;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#ICL;;;;;;;;;;;;;;x
+EVTNAME216000;The Overfishing Issue;;;;;;;;;;;;;x
+EVTDESC216000;Fishing has always been one of the pillars Iceland's of economy. However, the waters around our island nation have become overfished, threatening our traditional way of life. If we don't reduce our current fish production soon, our fishing industry is sure to collapse in the long term.;;;;;;;;;;;;;x
+EVTOPTA216000;OK;;;;;;;;;;;;;x
+EVTNAME216001;Extending Iceland's Territorial Waters;;;;;;;;;;;;;x
+EVTDESC216001;To save our fishing industry – an important source of income for us – we can either reduce fishing quotas or exploit new fishing grounds. If we don't expand our territorial waters and opt to reduce fishing quotas, our nation’s fishermen will react with anger. Another question is how far any expansion should reach. Drastically extending the territorial waters will secure our fishing industry for decades to come, but it would also provoke our largest regional competitor – Great Britain.;;;;;;;;;;;;;x
+EVTOPTA216001;Extend the zone to twelve miles;;;;;;;;;;;;;x
+EVTOPTB216001;Extend it to fifty miles. All the fish shall belong to us!;;;;;;;;;;;;;x
+EVTOPTC216001;That's not necessary;;;;;;;;;;;;;x
+EVTNAME216002;The Cod War is Over;;;;;;;;;;;;;x
+EVTDESC216002;The so-called 'Cod War' is over and Britain has accepted the expansion of our territorial waters. The British ships violating our sovereignty have been withdrawn and Icelandic fishermen can once more fish in peace.;;;;;;;;;;;;;x
+EVTOPTA216002;Excellent!;;;;;;;;;;;;;x
+EVTNAME216003;The Cod War is Over;;;;;;;;;;;;;x
+EVTDESC216003;The so-called 'Cod War' is almost over. Britain will soon officially accede to the expansion of our territorial waters. Although British shipping continues to violate our sovereignty for the time being, the British government has indicated that this adventure is becoming too expensive for them and they will soon withdraw their naval support from the British fishing fleet.;;;;;;;;;;;;;x
+EVTOPTA216003;We expected that...;;;;;;;;;;;;;x
+EVTNAME216004;The Cod War is Over;;;;;;;;;;;;;x
+EVTDESC216004;The so-called 'Cod War' is drags on, and the conflict shows no sign of coming to an end in the near future. We are certain that Britain will accept the expansion of our territorial waters eventually, but at this time British ships still stubbornly violate our sovereignty. Until the British ships leave, we will have to bear the expense of protecting our fishing fleet.;;;;;;;;;;;;;x
+EVTOPTA216004;Damn the British!;;;;;;;;;;;;;x
+EVTNAME216005;Our Seas are Overfished Once Again;;;;;;;;;;;;;x
+EVTDESC216005;Once more, too much fish is being pulled from the waters around our island. If this continues, we will completely run out of fish sooner or later.;;;;;;;;;;;;;x
+EVTOPTA216005;OK;;;;;;;;;;;;;x
+EVTNAME216006;The Fishing Industry Needs Support;;;;;;;;;;;;;x
+EVTDESC216006;It seems that all measures to slow the decline of our fishing industry have not been enough. If we sit idle now, the consequences will be severe.;;;;;;;;;;;;;x
+EVTOPTA216006;OK;;;;;;;;;;;;;x
+EVTNAME216007;Extending Iceland's Territorial Waters;;;;;;;;;;;;;x
+EVTDESC216007;Once more, our fishing industry is in danger. The obvious solution – and the one which assures that neither we nor our fishermen are left to bear the weight of our troubles – is to extend our territorial water, which has worked in the past.;;;;;;;;;;;;;x
+EVTOPTA216007;Extend the zone to fifty miles;;;;;;;;;;;;;x
+EVTOPTB216007;Go to 200 miles. We need the fish!;;;;;;;;;;;;;x
+EVTOPTC216007;That's not necessary;;;;;;;;;;;;;x
+EVTNAME216008;Extending Iceland's Territorial Waters;;;;;;;;;;;;;x
+EVTDESC216008;Once more, our fishing industry is in danger. The obvious solution – and the one which assures that neither we nor our fishermen are left to bear the weight of our troubles – is to extend our territorial water, which has worked in the past.;;;;;;;;;;;;;x
+EVTOPTA216008;Extend the zone to a whole 200 miles;;;;;;;;;;;;;x
+EVTOPTB216008;Not this time;;;;;;;;;;;;;x
+EVTNAME216009;The End of the Cod War;;;;;;;;;;;;;x
+EVTDESC216009;The quarrel with the British over the fishing zones has ended. The British will retreat and we can finally end the costly protection of our fishing fleet.;;;;;;;;;;;;;x
+EVTOPTA216009;Very good;;;;;;;;;;;;;x
+EVTNAME216010;The End of the Cod War;;;;;;;;;;;;;x
+EVTDESC216010;The quarrel with the British over the fishing zones will soon be over. In a few weeks, the British will retreat and we can finally end the costly protection of our fishing fleet.;;;;;;;;;;;;;x
+EVTOPTA216010;Very well;;;;;;;;;;;;;x
+EVTNAME216011;The End of the Cod War;;;;;;;;;;;;;x
+EVTDESC216011;The quarrel with the British over the fishing zones shows no sign of ending any time soon. The British will retreat eventually and the costly protection of our ships will end, but until then, our expensive venture here must continue.;;;;;;;;;;;;;x
+EVTOPTA216011;Damn it!;;;;;;;;;;;;;x
+EVTNAME216012;The Cod War Ends;;;;;;;;;;;;;x
+EVTDESC216012;We have the opportunity to enforce our aim of extending Iceland's territorial waters. Britain has accepted this and it is unlikely that tension will arise again any time soon.;;;;;;;;;;;;;x
+EVTOPTA216012;Excellent!;;;;;;;;;;;;;x
+EVTNAME216013;The Cod War Ends;;;;;;;;;;;;;x
+EVTDESC216013;We have the option of enforcing our aim of extending Iceland's territorial waters. Britain has accepted this and it is unlikely that tension will arise again any time soon.;;;;;;;;;;;;;x
+EVTOPTA216013;That is acceptable;;;;;;;;;;;;;x
+EVTNAME216014;The Cod War Ends;;;;;;;;;;;;;x
+EVTDESC216014;We could enforce our aim of extending our Iceland's territorial waters, but Britain has decided not to accept our expansion at this time. For now, our trawlers will require protection against the British Navy.;;;;;;;;;;;;;x
+EVTOPTA216014;That will get expensive...;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

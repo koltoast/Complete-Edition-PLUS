@@ -1,0 +1,451 @@
+#AlgerianWar_events.txt
+#1954 Algerian War
+
+#FRA:
+	#194008 - Unrest because FRA releases ALG early
+	#194009 - Red All-Saints' Day - ALG demands independence
+	#194010 - Café War attack (mild)
+	#194011 - Café War attack (medium)
+	#194012 - Café War attack (severe)
+	#194013 - The Battle of Philippeville - The Algerian rebels make an open move
+	#194014 - Local uprising in Algeria - FRA went hard-line
+	#194015 - Local uprising in Algeria
+	#194016 - Unrest because FRA releases ALG late and did not go the forgiving way
+	#194017 - Nation-wide uprising in Algeria
+	
+#ALG:
+	#112000 - National uprising in Algeria
+	
+
+## FRA ##
+country_event = {
+	
+	id = 194008			#Unrest because FRA releases ALG early
+
+	trigger = {
+		tag = FRA
+		exists = ALG
+		NOT = { has_country_flag = FRA194008_done }
+		NOT = {
+			ideology_group = comintern						#Communist France is allowed to release colonies
+			ideology = left_wing_radical_idolg
+		}
+	}
+
+	mean_time_to_happen = { days = 15 }
+
+	title = "EVTNAME194008"
+	desc = "EVTDESC194008"
+	picture = "1968_Paris_Riots"
+
+	option = {
+		name = "EVTOPTA194008"			    			#OK
+		dissent = 10									#The people are really unhappy - Algeria was a core part of the French Empire
+		national_unity = -3								#Smaller loss, as many people agree that the release was a mistake
+		popularity = -15
+		set_country_flag = FRA194008_done
+	}
+}
+
+country_event = {
+	
+	id = 194009			#Red All-Saints' Day - ALG demands independence
+
+	trigger = {
+		tag = FRA
+		is_subject = no
+		NOT = { exists = ALG }
+		OR = {
+			FRA = { lost_national = 0.3 }
+			FRA = { dissent = 25 }							#FRA has massive internal problems
+			NOT = { FRA = { national_unity = 85 } }			#The French people are divided
+		
+			exists = MOR									#FRA has given up some colonies/granted them independence
+			exists = TUN
+			exists = LAO
+			exists = VIE
+			exists = CMB
+			exists = CAM
+			exists = CAR									#Central African Republic
+			exists = CDI									#Ivory Coast
+			exists = CNG									#French Congo
+			exists = EQA									#Equatorial Africa
+			exists = BKN
+			exists = MAL
+			exists = MRA
+			exists = NGR
+			exists = SEN
+			exists = TOG
+			exists = CHA
+			exists = GAB
+			exists = MAD
+			exists = SCL									#Seychelles
+			exists = DJI									#French Somaliland
+		
+			FRA = { war_with = USA }						#You're in trouble, France
+			FRA = { war_with = ENG }
+			FRA = { war_with = SOV }
+			FRA = { war_with = CHC }
+		}
+		NOT = { has_country_flag = FRA194009_done }
+		FRA = { owns = 5019 }							#FRA has to own ALG core territory (the coast)
+		FRA = { owns = 5020 }
+		FRA = { owns = 5071 }
+		FRA = { owns = 5122 }
+		FRA = { owns = 5176 }
+		FRA = { owns = 5123 }
+		FRA = { owns = 5177 }
+		FRA = { owns = 5238 }
+		FRA = { owns = 5301 }
+		FRA = { owns = 5363 }
+		FRA = { owns = 4971 }
+		FRA = { owns = 4917 }
+		FRA = { owns = 4861 }
+		FRA = { owns = 4862 }
+	}
+
+	mean_time_to_happen = { days = 1095 }
+
+	title = "EVTNAME194009"
+	desc = "EVTDESC194009"
+	picture = "1954_Toussaint_Rouge_2"
+
+	option = {
+		name = "EVTOPTA194009"			    			#Send police forces
+		ai_chance = { factor = 85 }
+		money = -50										#FRA pays for forces
+		manpower = -5
+		supplies = -300
+		dissent = 5
+		set_country_flag = FRA194009_done
+		set_global_flag = algerianwar_ongoing
+	}
+	
+	option = {
+		name = "EVTOPTB194009"			    			#Grant them autonomy
+		ai_chance = { factor = 10 }
+		dissent = 15
+		national_unity = -3
+		prestige_change = -5
+		popularity = -10
+		release_vassal = ALG
+		set_country_flag = FRA194009_done
+		set_global_flag = algerianwar_ongoing
+	}
+	
+	option = {
+		name = "EVTOPTC194009"			    			#Grant them full independence
+		ai_chance = { factor = 5 }
+		dissent = 25									#The people are really unhappy - Algeria was a core part of the French Empire
+		national_unity = -5								#Smaller loss, was many peopel agree that the release was a mistake
+		prestige_change = -10
+		popularity = -20
+		release = ALG
+		set_country_flag = FRA194009_done
+		set_global_flag = algerianwar_ongoing
+		set_country_flag = FRA194008_done				#No Anger at ALG Release event
+	}
+}
+
+country_event = {
+	
+	id = 194010			#Café War attack (mild)
+
+	trigger = {
+		tag = FRA
+		has_global_flag = algerianwar_ongoing  
+		NOT = { exists = ALG }
+	}
+
+	mean_time_to_happen = { days = 122 }				#Thrice per year
+	is_triggered_only = no
+
+	title = "EVTNAME194010"
+	desc = "EVTDESC194010"
+	picture = "1962_Algiers_Bombing_2"
+
+	option = {
+		name = "EVTOPTA194010"
+		dissent = 1		
+	}
+}
+
+country_event = {
+	
+	id = 194011			#Café War attack (medium)
+
+	trigger = {
+		tag = FRA
+		has_global_flag = algerianwar_ongoing 
+		NOT = { exists = ALG }
+	}
+
+	mean_time_to_happen = { days = 365 }				#Once per year
+	is_triggered_only = no
+
+	title = "EVTNAME194011"
+	desc = "EVTDESC194011"
+	picture = "1962_Algiers_Bombing"
+
+	option = {
+		name = "EVTOPTA194011"
+		dissent = 2
+		national_unity = -1
+		popularity = -1
+	}
+}
+
+country_event = {
+	
+	id = 194012			#Café War attack (severe)
+
+	trigger = {
+		tag = FRA
+		has_global_flag = algerianwar_ongoing  
+		NOT = { exists = ALG }
+	}
+
+	mean_time_to_happen = { days = 730 }
+
+	title = "EVTNAME194012"
+	desc = "EVTDESC194012"
+	picture = "1954_Toussaint_Rouge"
+
+	option = {
+		name = "EVTOPTA194012"
+		dissent = 4
+		national_unity = -3
+		popularity = -4
+	}
+}
+
+country_event = {
+	
+	id = 194013			#The Battle of Philippeville - The Algerian rebels make an open move
+
+	trigger = {
+		tag = FRA
+		has_global_flag = algerianwar_ongoing 
+		NOT = { 
+			exists = ALG
+			has_country_flag = FRA194013_done
+		}
+		FRA = { owns = 5238 }								#Constantine/Philippeville
+	}
+
+	mean_time_to_happen = { days = 365 }
+
+	title = "EVTNAME194013"
+	desc = "EVTDESC194013"
+	picture = "1955_Philippeville"
+
+	option = {
+		name = "EVTOPTA194013"								#Fight with all means necessary! (hist.)
+		ai_chance = { factor = 70 }
+		money = -200										#FRA pays for operations
+		manpower = -15
+		supplies = -1500
+		dissent = 5											#People like the hard line
+		prestige_change = -2
+		relation = { who = XUN value = -25 }
+		set_global_flag = FRA_algerianwar_dirty
+		set_country_flag = FRA194013_done
+	}
+	
+	option = {
+		name = "EVTOPTB194013"								#Send more police forces
+		ai_chance = { factor = 20 }
+		money = -100										#FRA pays for operations
+		manpower = -10
+		supplies = -500
+		relation = { who = XUN value = -10 }
+		set_country_flag = FRA194013_done
+	}
+	
+	option = {
+		name = "EVTOPTC194013"								#Abandon Algeria
+		ai_chance = { factor = 10 }
+		relation = { who = XUN value = 25 }
+		dissent = 15
+		national_unity = -5	
+		prestige_change = -5
+		popularity = -5
+		release = ALG
+		set_country_flag = FRA194008_done					#No Anger at ALG Release event
+		set_country_flag = FRA194013_done
+	}
+}
+
+country_event = {
+	
+	id = 194014			#Local uprising in Algeria - FRA went hard-line
+
+	trigger = {
+		tag = FRA
+		has_global_flag = algerianwar_ongoing 
+		has_country_flag = FRA_algerianwar_dirty
+		NOT = { exists = ALG }
+	}
+
+	mean_time_to_happen = { days = 365 }					#Uprising only once per year
+
+	title = "EVTNAME194014"
+	desc = "EVTDESC194014"
+	picture = "1958_Algiers_Riots"
+
+	option = {
+		name = "EVTOPTA194014"
+		dissent = 4
+		national_unity = -2
+		random_list = {											#Nationalist rebel uprising @
+			50 = {
+				random_owned = {
+					limit = { is_core = ALG controlled_by = FRA }
+					create_revolt = 1
+					revolt_risk = 2
+				}
+				random_owned = {
+					limit = { is_core = ALG controlled_by = FRA }
+					create_revolt = 1
+					revolt_risk = 2
+				}
+				random_owned = {
+					limit = { is_core = ALG controlled_by = FRA }
+					create_revolt = 1
+					revolt_risk = 2
+				}
+			}
+			25 = {
+				random_owned = {
+					limit = { is_core = ALG controlled_by = FRA }
+					create_revolt = 2
+					revolt_risk = 4
+				}
+				random_owned = {
+					limit = { is_core = ALG controlled_by = FRA }
+					create_revolt = 2
+					revolt_risk = 4
+				}
+				random_owned = {
+					limit = { is_core = ALG controlled_by = FRA }
+					create_revolt = 1
+					revolt_risk = 4
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 194015			#Local uprising in Algeria
+
+	trigger = {
+		tag = FRA
+		has_global_flag = algerianwar_ongoing 
+		NOT = { has_country_flag = FRA_algerianwar_dirty }
+		NOT = { exists = ALG }
+	}
+
+	mean_time_to_happen = { days = 122 }					#Uprising thrice per year
+
+	title = "EVTNAME194015"
+	desc = "EVTDESC194015"
+	picture = "1956_clashes_algeria"
+
+	option = {
+		name = "EVTOPTA194015"
+		dissent = 2
+		national_unity = -1
+		random_list = {											#Nationalist rebel uprising @
+			33 = {
+				random_owned = {
+					limit = { is_core = ALG controlled_by = FRA }
+					create_revolt = 1
+					revolt_risk = 2
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 194016			#Unrest because FRA releases ALG late and did not go the forgiving way
+
+	trigger = {
+		tag = FRA
+		exists = ALG
+		NOT = { has_global_flag = algerianwar_ongoing }	#To avoid this triggering at an early release of ALG
+		NOT = { has_country_flag = FRA194016_done }
+		NOT = {
+			ideology_group = comintern						#Communist France is allowed to release colonies
+			ideology = left_wing_radical_idolg
+		}
+		#NOT = {  }										#de Gaulle is NOT head of state
+	}
+
+	mean_time_to_happen = { days = 15 }
+
+	title = "EVTNAME194016"
+	desc = "EVTDESC194016"
+	picture = "1968_Paris_Riots"
+
+	option = {
+		name = "EVTOPTA194016"			    			#OK
+		dissent = 12									#The people are really unhappy - FRA took the stony road
+		national_unity = -5								#Smaller loss, was many peopel agree that the release was a mistake
+		prestige_change = -8
+		popularity = -15
+		set_country_flag = FRA194016_done
+	}
+}
+
+country_event = {
+	
+	id = 194017			#Nation-wide uprising in Algeria
+
+	trigger = {
+		tag = FRA
+		has_global_flag = algerianwar_ongoing
+		NOT = { exists = ALG }
+		FRA = { owns = 5071 }								#Algiers
+	}
+
+	mean_time_to_happen = { days = 1095 }					#Uprising every three years
+
+	title = "EVTNAME194017"
+	desc = "EVTDESC194017"
+	picture = "1960_December_riots_Algeria"
+
+	option = {
+		name = "EVTOPTA194017"									
+		dissent = 8
+		national_unity = -5									#Left, right and military will argue
+		prestige_change = -10								#France is unable to keep its stuff together
+		popularity = -10									#Current government has failed
+		release = ALG										#Algeria becomes free as a non-puppet
+		limited_war = ALG											#Because it's an armed rebellion
+		ALG = { country_event = 112000 }
+	}
+}
+
+
+## ALG ##
+country_event = {
+	
+	id = 112000			#National uprising in Algeria
+
+	is_triggered_only = yes
+
+	title = "EVTNAME112000"
+	desc = "EVTDESC112000"
+	picture = "1954_fln_reb_algeria"
+
+	option = {
+		name = "EVTOPTA112000"
+		money = 500
+		supplies = 2500
+		load_oob = ALG_1954_rebel.txt					#ALG rebel OOB is loaded
+	}
+}

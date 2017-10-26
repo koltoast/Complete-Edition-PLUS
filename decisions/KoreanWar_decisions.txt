@@ -1,0 +1,412 @@
+#KoreanWar_decisions.txt
+#1946 Korean Independence & Korean War
+
+#SOV:
+	#dec_SOV_establish_DPRK 		- The Soviets grant North Korea independence
+	
+#USA:
+	#intervene_koreanwar_USA 		- The USA can help South Korea
+
+#PRK:
+	#invade_south_CHC_PRK			- PRK asks Communist China for support
+	#invade_south_SOV_PRK 			- PRK asks the USSR for support
+	#armistice_koreanwar_PRK 		- PRK ask for peace after the Korean War stalemate
+	
+#KOR:
+	#armistice_koreanwar_KOR 		- KOR ask for peace after the Korean War stalemate 	
+	
+#CHC:
+	#intervene_koreanwar_CHC 		- Communist China intervenes in the Korean War
+	
+diplomatic_decisions = {
+## SOV ##
+	dec_SOV_establish_DPRK = {		#The Soviets grant North Korea independence
+		category = national
+		picture = "1948_DPRK_established"
+		
+		potential = {
+			OR = {
+				PRK = { vassal_of = THIS }
+				owns = 13422
+			}
+			has_global_flag = gflag_north_korean_provisional_government
+			NOT = { has_global_flag = gflag_north_korean_self_governance }
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = { 
+			factor = 10
+			modifier = {
+				factor = 5
+				exists = KOR
+				NOT = { KOR = { alliance_with = USA } }
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_global_flag = gflag_UN_supervised_korean_elections_raised }
+			}
+			modifier = {
+				factor = 0.05
+				NOT = { has_global_flag = gflag_UN_supervised_korean_elections_passed }
+			}
+		}
+		
+		effect = {
+			set_global_flag = gflag_north_korean_self_governance
+			country_event = 326017
+		}
+	}
+
+
+## USA ##
+	korea_UN_resolution_USA = {
+		category = national
+		picture = "1950_United_Nations_vote_on_Korea"
+		
+		potential = {
+			tag = USA
+			owns = 13546
+			has_global_flag = gflag_korea_joint_commission_failure
+			NOT = { 
+				exists = KOR
+				has_global_flag = gflag_UN_supervised_korean_elections_raised
+			}
+		}
+		
+		allow = {
+			is_major = yes
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			prestige_change = 2
+			relation = { who = SOV value = -10 }
+			set_global_flag = gflag_UN_supervised_korean_elections_raised
+		}
+	}
+	
+	intervene_koreanwar_USA = {
+		category = national
+	    picture = "1950_korea_refugees"
+		
+		potential = {
+			tag = USA
+			NOT = { has_country_flag = intervene_koreanwar_USA_done }
+			KOR = { war_with = PRK }
+			is_subject = no
+			OR = {
+				KOR = { lost_national = 0.30 }										#To avoid human players simply driving around Seoul
+				13546 = { controlled_by = PRK }										#Seoul is in PRK hands
+				PRK = { alliance_with = CHC }										#PRK is allied to the main communist powers
+				PRK = { alliance_with = SOV }
+			}
+		}
+		
+		allow = {
+			NOT = { USA = { war_with = PRK } }
+			NOT = { USA = { war_with = KOR } }
+			NOT = {
+				AND = {
+					OR = {
+						USA = { ideology = maoist_idolg }							#USA is not left-wing and KOR right-wing
+						USA = { ideology = communist_idolg }
+						USA = { ideology = left_wing_radical_idolg }
+					}
+					OR = {
+						KOR = { ideology = fascistic_idolg }
+						KOR = { ideology = paternal_auto_idolg }
+					}	
+				}	
+			}
+			NOT = {
+				AND = {
+					OR = {
+						KOR = { ideology = maoist_idolg }							#KOR is not left-wing and USA right-wing
+						KOR = { ideology = communist_idolg }
+						KOR = { ideology = left_wing_radical_idolg }
+					}
+					OR = {
+						USA = { ideology = fascistic_idolg }
+						USA = { ideology = paternal_auto_idolg }
+					}	
+				}	
+			}
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			set_country_flag = intervene_koreanwar_USA_done
+			USA = { country_event = 354000 }										#Decision follow-up event
+		}
+	}
+
+
+## PRK ##
+	invade_south_SOV_PRK = {		#PRK asks the USSR for support
+		category = national
+	    picture = "1950_korean_war_begins"
+		
+		potential = {
+			tag = PRK
+			NOT = { has_country_flag = invade_south_SOV_PRK_done }
+			NOT = { has_global_flag = PRK_CHC_support }
+			NOT = { PRK = { war_with = KOR } }										#PRK is not involved in a regional war or at war with a major power
+			exists = KOR
+			exists = CHC
+			NOT = { neighbour = CHI }											#PRK won't attack with a victorious CHI lurking around
+		}
+		
+		allow = {
+			NOT = { PRK = { war_with = SOV }}
+			NOT = { PRK = { war_with = CHC }}
+			NOT = { PRK = { war_with = USA }}
+			NOT = { PRK = { war_with = CHI }}
+			NOT = { PRK = { war_with = ENG }}
+			
+			NOT = { ideology = fascistic_idolg }									#PRK is not rigth-wing or centre-right
+			NOT = { ideology = paternal_auto_idolg }
+			NOT = { ideology = social_cons_idolg }
+			NOT = { ideology = market_liberal_idolg }
+			
+			NOT = { PRK = { alliance_with = KOR }}
+			NOT = { PRK = { alliance_with = CHC }}
+			NOT = { PRK = { alliance_with = SOV }}
+			
+			is_subject = no
+			SOV = { is_subject = no }												#However that's supposed to be pulled off
+			NOT = { SOV = { war_with = KOR }}										#USSR isn't already involved in Korea
+			NOT = { SOV = { war_with = PRK }}
+			neighbour = KOR
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			set_country_flag = invade_south_SOV_PRK_done
+			PRK = { country_event = 291000 }										#Decision follow-up event
+		}
+	}
+	
+	invade_south_CHC_PRK = {		#PRK asks Communist China for support
+		category = national
+	    picture = "1950_korean_war_begins"
+		
+		potential = {
+			tag = PRK
+			NOT = { has_country_flag = invade_south_CHC_PRK_done }
+			NOT = { has_global_flag = PRK_SOV_support }
+			NOT = { PRK = { war_with = KOR }}										#PRK is not involved in a regional war or at war with a major power
+			exists = KOR
+			exists = CHC
+			NOT = { neighbour = CHI }												#Because that means the KMT won the civil war and will steamroll PRK
+		}
+		
+		allow = {
+			NOT = { PRK = { war_with = CHC }}
+			NOT = { PRK = { war_with = SOV }}
+			NOT = { PRK = { war_with = USA }}
+			NOT = { PRK = { war_with = CHI }}
+			NOT = { PRK = { war_with = ENG }}
+			
+			NOT = { ideology = fascistic_idolg }									#PRK is not rigth-wing or centre-right
+			NOT = { ideology = paternal_auto_idolg }
+			NOT = { ideology = social_cons_idolg }
+			NOT = { ideology = market_liberal_idolg }
+			
+			NOT = { PRK = { alliance_with = KOR }}
+			NOT = { PRK = { alliance_with = CHC }}
+			NOT = { PRK = { alliance_with = SOV }}
+			
+			is_subject = no
+			KOR = { is_subject = no }
+			CHC = { is_subject = no }												#However that's supposed to be pulled off
+			NOT = { CHC = { war_with = KOR }}										#USSR isn't already involved in Korea
+			NOT = { CHC = { war_with = PRK }}
+			neighbour = KOR
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			set_country_flag = invade_south_CHC_PRK_done
+			PRK = { country_event = 291001 }										#Decision follow-up event
+		}
+	}
+	
+	armistice_koreanwar_PRK = {		#PRK ask for peace after the Korean War stalemate
+		category = national
+		picture = "1950_burned_city_of_taejon"
+		
+		potential = {
+			tag = PRK
+			PRK = { war_with = KOR }
+			is_subject = no
+			OR = {
+				NOT = { has_country_modifier = "koreanwar_start"}				#At least 700 day have passed since start of the war
+				NOT = { has_country_modifier = "koreanwar_peace"}				#A hundreds days between each request for peace
+			}
+			NOT = { has_global_flag = armistice_koreanwar_KOR_done }			#None of the Koreas asked for peace
+			NOT = { has_global_flag = armistice_koreanwar_PRK_done }
+		}
+		
+		allow = {
+			AND = {
+				NOT = { 
+					USA = { war_with = SOV }								#If the Third World War has started and Korea is involved, there will be no peace
+				}
+				KOR = { alliance_with = USA }
+				}
+			AND = {
+				NOT = { 
+					USA = { war_with = CHC }							
+				}								#No Sino-American war
+				KOR = { alliance_with = USA }
+			}
+			NOT = { national_unity = 85 }
+			KOR = { NOT = { national_unity = 85 } }
+			NOT = { KOR = { lost_national = 0.75 } }							#None of the Koreas has lost too much territoy - it IS a stalemate
+			NOT = { PRK = { lost_national = 0.75 } }
+			NOT = { total_defensives = 3 }
+			NOT = { total_offensives = 3 }
+			NOT = {
+				AND = {
+					total_defensives = 2
+					total_offensives = 2
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			remove_country_modifier = "koreanwar_start"
+			remove_country_modifier = "koreanwar_peace"
+			set_country_flag = armistice_koreanwar_KOR_done
+			PRK = { country_event = 291008 }									#Decision follow-up event
+		}
+	}
+
+
+## KOR ##
+	armistice_koreanwar_KOR = {		#KOR ask for peace after the Korean War stalemate
+		category = national
+	    picture = "1950_seoul_in_ruins"
+		
+		potential = {
+			tag = KOR
+			KOR = { war_with = PRK }
+			is_subject = no
+			OR = {
+				NOT = { has_country_modifier = "koreanwar_start"}				#At least 700 day have passed since start of the war
+				NOT = { has_country_modifier = "koreanwar_peace"}				#A hundreds days between each request for peace
+			}
+			NOT = { has_global_flag = armistice_koreanwar_KOR_done }
+			NOT = { has_global_flag = armistice_koreanwar_PRK_done }
+		}
+		
+		allow = {
+			AND = {
+				NOT = { 
+					USA = { war_with = SOV }								#If the Third World War has started and Korea is involved, there will be no peace
+				}
+				KOR = { alliance_with = USA }
+			}
+			AND = {
+				NOT = {
+					USA = { war_with = CHC }								#No Sino-American war
+				}
+				KOR = { alliance_with = USA }
+			}
+			NOT = { national_unity = 85 }
+			PRK = { NOT = { national_unity = 85 } }
+			NOT = { KOR = { lost_national = 0.75 } }							#None of the Koreas has lost too much territoy - it IS a stalemate
+			NOT = { PRK = { lost_national = 0.75 } }
+			NOT = { total_defensives = 3 }
+			NOT = { total_offensives = 3 }
+			NOT = {
+				AND = {
+					total_defensives = 2
+					total_offensives = 2
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			remove_country_modifier = "koreanwar_start"
+			remove_country_modifier = "koreanwar_peace"
+			PRK = { country_event = 291007 }									#Decision follow-up event
+		}
+	}
+	
+
+## CHC ##
+	intervene_koreanwar_CHC = {		#Communist China intervenes in the Korean War
+		category = national
+		picture = "1950_ccf_first_campaign"
+		
+		potential = {
+			tag = CHC
+			NOT = { has_country_flag = intervene_koreanwar_CHC_done }
+			KOR = { war_with = PRK }
+			NOT = { CHC = { war_with = PRK } }
+			NOT = { CHC = { war_with = KOR } }
+			NOT = { CHC = { war_with = SOV } }
+			NOT = { CHC = { war_with = CHI } }									#Chinese Civil War is over
+			OR  = {
+				AND = {
+					PRK = { war_with = KOR }									#Either PRK has CHC backup and the USA are involved...
+					PRK = { war_with = USA }
+					KOR = { lost_national = 0.20 }
+					has_global_flag = PRK_CHC_support
+				}
+				AND = {
+					PRK = { war_with = KOR }									#...or no backup but severe losses
+					KOR = { lost_national = 0.40 }
+				}
+			}
+		}
+		
+		allow = {
+			NOT = {
+				AND = {
+					OR = {
+						CHC = { ideology = maoist_idolg }							#CHC is not left-wing and PRK right-wing
+						CHC = { ideology = communist_idolg }
+						CHC = { ideology = left_wing_radical_idolg }
+					}
+					OR = {
+						KOR = { ideology = fascistic_idolg }
+						KOR = { ideology = paternal_auto_idolg }
+					}	
+				}	
+			}
+			NOT = {
+				AND = {
+					OR = {
+						KOR = { ideology = maoist_idolg }							#CHC is not left-wing and PRK right-wing
+						KOR = { ideology = communist_idolg }
+						KOR = { ideology = left_wing_radical_idolg }
+					}
+					OR = {
+						CHC = { ideology = fascistic_idolg }
+						CHC = { ideology = paternal_auto_idolg }
+					}	
+				}	
+			}
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			set_country_flag = intervene_koreanwar_CHC_done
+			CHC = { country_event = 151051 }									#Decision follow-up event
+		}
+	}
+
+}

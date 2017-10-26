@@ -1,0 +1,131 @@
+
+
+diplomatic_decisions = {
+	
+	fuel_wp = {
+		category = national
+		potential = {	
+		        alignment = { faction = comintern value = 80 }		        
+	            not = { fuel = 1 }
+				money = 1000 
+                is_major = yes
+			    economy_rating_greater = 4				
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+            random_country = { limit = { not = { tag = this } not = { war_with = this } is_org_member = XWP NOT = { has_country_modifier = Gpfuel }
+		    fuel = 10000 } money = 100 fuel = -1000 this = { money = -100 } this = { fuel = 1000 }					
+			 add_country_modifier = {
+				name = "Gwfuel"				
+				duration = 30 }
+			  
+			}			
+			##add_country_modifier = {
+				#name = "fuel"				
+				#duration = 30
+			#}			
+		}
+	}
+
+	fuel_wp2 = {
+		category = national
+		potential = {	
+		        alignment = { faction = comintern value = 80 }
+	            not = { fuel = 1 }
+				money = 100 
+				is_major = no			
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+            random_country = { limit = { not = { tag = this } not = { war_with = this } is_org_member = XWP NOT = { has_country_modifier = Gwfuel2 }
+		    fuel = 1000 } money = 10 fuel = -100 this = { money = -10 } this = { fuel = 100 }					
+			 add_country_modifier = {
+				name = "Gwfuel2"				
+				duration = 15 }
+			  
+			}			
+			##add_country_modifier = {
+				#name = "fuel"				
+				#duration = 30
+			#}			
+		}
+	}
+
+	fuel_nato = {
+		category = national
+		potential = {	
+		        alignment = { faction = allies value = 80 }		        
+	            not = { fuel = 1 }
+				money = 1000 
+                is_major = yes
+			    economy_rating_greater = 4				
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+            random_country = { limit = { not = { tag = this } not = { war_with = this } is_org_member = XNA NOT = { has_country_modifier = Gnfuel }
+		    fuel = 10000 } money = 100 fuel = -1000 this = { money = -100 } this = { fuel = 1000 }					
+			 add_country_modifier = {
+				name = "Gnfuel"				
+				duration = 30 }
+			  
+			}			
+			##add_country_modifier = {
+				#name = "fuel"				
+				#duration = 30
+			#}			
+		}
+	}
+
+	fuel_nato2 = {
+		category = national
+		potential = {	
+		        alignment = { faction = allies value = 80 }
+	            not = { fuel = 1 }
+				money = 100 
+				is_major = no			
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100			
+		}
+		
+		effect = {
+            random_country = { limit = { not = { tag = this } not = { war_with = this } is_org_member = XNA NOT = { has_country_modifier = Gnfuel2 }
+		    fuel = 1000 } money = 10 fuel = -100 this = { money = -10 } this = { fuel = 100 }					
+			 add_country_modifier = {
+				name = "Gnfuel2"				
+				duration = 15 }
+			  
+			}			
+			##add_country_modifier = {
+				#name = "fuel"				
+				#duration = 30
+			#}			
+		}
+	}	
+		
+}

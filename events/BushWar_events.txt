@@ -1,0 +1,1567 @@
+#ENG:
+	#181010 - Referendum for Rhodesian Federation
+	#181011 - Successful Election for Independence in Northern Rhodesia (Zambia)
+	#181012 - MLW election for independence
+	#181013 - ZMB demands independence
+	#181014 - MLW demands independence
+	#181015	- RHO referendum for Independence
+	#181016	- RHO unilaterally declares its independence
+
+#MLW:
+	#254000 – Join the civil war?
+	
+#POR:
+	#289002 - Event 01 for POR – MOZ revolt risk
+	#289000 - POR – MOZ independence war start
+	#289001 - POR – MOZ independence war end
+
+#RHO:	
+	#181017 - Collapse of Rhodesia
+	
+#ZMB:
+	#366000 – Join the civil war?
+	#366001 - End of Bush War
+	
+#MOZ:
+	#263000 – Join the civil war?
+
+country_event = {
+	
+	id = 181010		#Referendum for Rhodesian Federation
+
+	trigger = {
+		tag = ENG
+		#Decolonisation has started
+		year = 1964 #temporary
+		NOT = {
+			exists = ZMB
+			exists = ZIM
+			has_country_flag = rhodesia_referendum_1
+			has_country_flag = rhodesia_referendum_2
+			has_country_flag = rhodesia_referendum_3
+			AND = {
+				war = yes
+				war_exhaustion = 5
+			}
+		}
+		owns = 7265	#Major Zambian cities
+		owns = 7263
+		owns = 7264
+			
+		owns = 7466 #Major Zimbabwean cities
+		owns = 7467
+		owns = 7269
+		
+		NOT = {
+			national_unity = 70
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.25
+			year = 1960
+		}
+	}
+
+	title = "EVTNAME181010"
+	desc = "EVTDESC181010"
+	picture = "1953_Referendum_for_Rhodesian_Federation"
+
+	option = {
+		name = "EVTOPTA181010"			    			# Rhodesia shall be a Commonwealth Nation! 
+		ai_chance = { 
+			factor = 15
+			modifier = {
+				factor = 1.1
+				dissent = 5
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 10
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 20
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 30
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 40
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 50
+			}
+			modifier = {
+				factor = 0.1
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 0.25
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.5
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 2
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 5
+				ideology_group = comintern
+			}
+		}
+		release = RHO
+		dissent = -2.5
+		national_unity = 5
+		fuel = 100
+		prestige_change = 20
+		RHO = {
+			set_country_flag = rhodesia_referendum_1
+		}
+	}
+
+	option = {
+		name = "EVTOPTB181010"			    			# Rhodesia shall be an Autonomous Dominion
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.5
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0.2
+				ideology_group = comintern
+			}
+		}
+		release_vassal = RHO
+		RHO = {
+			set_country_flag = rhodesia_referendum_2
+		}
+	}
+
+	option = {
+		name = "EVTOPTC181010"			    			# Enough of this Nonsense! 
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0.1
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0
+				ideology_group = comintern
+			}
+		}
+		dissent = 2.5
+		prestige_change = -50
+		any_owned = {
+			limit = {
+				is_core = RHO
+			}
+			#revolt_risk = 5
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+			
+		}
+		set_country_flag = rhodesia_referendum_3
+	}
+}
+
+country_event = {
+	
+	id = 181011		#Successful Election for Independence in Northern Rhodesia (Zambia)
+
+	trigger = {
+		#Decolonisation has started
+		year = 1964 #temporary
+		NOT = {
+			exists = ZMB
+		}
+		
+		owns = 7265	#Major Zambian cities
+		owns = 7263
+		owns = 7264
+			
+		OR = {	
+			has_country_flag = rhodesia_referendum_1
+			has_country_flag = rhodesia_referendum_2
+			has_country_flag = rhodesia_referendum_3
+		}
+		
+		NOT = {
+			has_country_flag = zambia_independence_accepted
+			has_country_flag = zambia_independence_dominion
+			has_country_flag = zambia_independence_rejected
+		}
+		
+		dissent = 5
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.25
+			year = 1965
+		}
+	}
+	
+	title = "EVTNAME181011"
+	desc = "EVTDESC181011"
+	picture = "1964_Zambian_Referendum"
+
+	option = {
+		name = "EVTOPTA181011"			    			# Zambia shall have its Independence
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 1.1
+				dissent = 5
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 10
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 20
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 30
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 40
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 50
+			}
+			modifier = {
+				factor = 0.1
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 0.25
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.5
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 2
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 5
+				ideology_group = comintern
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = ZMB
+			}
+			remove_core = RHO
+			remove_core = ENG
+		}
+		set_global_flag = zambia_independence_global
+		release = ZMB
+		set_global_flag = decolonisation_started
+		dissent = -1
+		prestige_change = 20
+		ZMB = {
+			load_oob = 181017-OPT1-ZMB.txt
+			supplies = 500
+			fuel = 200
+			money = 1000
+			manpower = 15
+		}
+		set_country_flag = zambia_independence_accepted
+	}
+
+	option = {
+		name = "EVTOPTB181011"			    			# Establish a Provincial government for later release
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				AND = {
+					tag = RHO
+					NOT = {
+						RHO = {
+							vassal_of = ENG
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0.2
+				ideology_group = comintern
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = ZMB
+			}
+			remove_core = RHO
+			remove_core = ENG
+		}
+		set_global_flag = zambia_independence_global
+		release = ZMB
+		set_global_flag = decolonisation_started
+		ENG = {
+			create_vassal = ZMB
+		}
+		ZMB = {
+			load_oob = 181017-OPT1-ZMB.txt
+			create_alliance = ENG
+		}
+		set_country_flag = zambia_independence_dominion
+	}
+
+	option = {
+		name = "EVTOPTC181011"			    			# They don’t know what they want!
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0.1
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0
+				ideology_group = comintern
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = ZMB
+			}
+			remove_core = RHO
+			remove_core = ENG
+		}
+		set_global_flag = zambia_independence_global
+		dissent = 2.5
+		any_owned = {
+			limit = {
+				is_core = ZMB
+			}
+			#revolt_risk = 5
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+		}
+		set_country_flag = zambia_independence_rejected
+	}
+}
+
+country_event = {
+	
+	id = 181012		#MLW election for independence:
+
+	trigger = {
+		#Decolonisation has started
+		year = 1964 #temporary
+		
+		NOT = {
+			exists = MLW
+		}
+		
+		owns = 7753	#Major Malawian cities
+		owns = 7845
+			
+		OR = {	
+			has_country_flag = rhodesia_referendum_1
+			has_country_flag = rhodesia_referendum_2
+			has_country_flag = rhodesia_referendum_3
+		}
+		
+		NOT = {
+			has_country_flag = malawi_independence_accepted
+			has_country_flag = malawi_independence_dominion
+			has_country_flag = malawi_independence_rejected
+		}
+		
+		dissent = 7.5
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.25
+			year = 1968
+		}
+	}
+	
+	title = "EVTNAME181012"
+	desc = "EVTDESC181012"
+	picture = "1960_Nyasaland_Conference"
+
+	option = {
+		name = "EVTOPTA181012"		    			# Malawi shall have its Independence 
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 1.1
+				dissent = 5
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 10
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 20
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 30
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 40
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 50
+			}
+			modifier = {
+				factor = 0.1
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 0.25
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.5
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 2
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 5
+				ideology_group = comintern
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = MLW
+			}
+			remove_core = RHO
+			remove_core = ENG
+		}
+		set_global_flag = malawi_independence_global
+		release = MLW
+		set_global_flag = decolonisation_started
+		dissent = -1
+		prestige_change = 20
+		MLW = {
+			load_oob = 181017-OPT1-MLW.txt
+			supplies = 500
+			fuel = 200
+			money = 1000
+			manpower = 15			
+		}
+		set_country_flag = malawi_independence_accepted
+	}
+
+	option = {
+		name = "EVTOPTB181012"			    			# Establish a Provincial government for later release
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 0
+				AND = {
+					tag = RHO
+					NOT = {
+						RHO = {
+							vassal_of = ENG
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0.2
+				ideology_group = comintern
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = MLW
+			}
+			remove_core = RHO
+			remove_core = ENG
+		}
+		set_global_flag = malawi_independence_global
+		release = MLW
+		set_global_flag = decolonisation_started
+		ENG = {
+			create_vassal = MLW
+		}
+		MLW = {
+			load_oob = 181017-OPT1-MLW.txt
+			create_alliance = ENG
+		}
+		set_country_flag = malawi_independence_dominion
+	}
+
+	option = {
+		name = "EVTOPTC181012"			    			# They don’t know what they want! 
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0.1
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0
+				ideology_group = comintern
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = MLW
+			}
+			remove_core = RHO
+			remove_core = ENG
+		}
+		set_global_flag = malawi_independence_global
+		dissent = 2.5
+		any_owned = {
+			limit = {
+				is_core = MLW
+			}
+			#revolt_risk = 5
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+		}
+		set_country_flag = malawi_independence_rejected
+	}
+}
+
+country_event = {
+	
+	id = 181013		# Dominion of ZMB demands independence
+
+	is_triggered_only = yes
+	
+	title = "EVTNAME181013"
+	desc = "EVTDESC181013"
+	picture = "1964_zambia-independence"
+
+	option = {
+		name = "EVTOPTA181013"		    			# Zambia shall have its Independence 
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 5
+				ideology_group = comintern
+			}
+			modifier = {
+				factor = 0.1
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 0.25
+				ideology = paternal_auto_idolg
+			}
+		}
+		liberate_puppet = ZMB
+		ZMB = {
+			supplies = 500
+			fuel = 200
+			money = 1000
+			manpower = 15
+			}
+	}
+
+	option = {
+		name = "EVTOPTB181013"			    			# Keep them under the thumb 
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0.2
+				ideology_group = comintern
+			}
+		}
+		dissent = 2.5
+		national_unity = -5
+		any_owned = {
+			limit = {
+				is_core = ZMB
+			}
+			#revolt_risk = 5
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 181014		# Dominion of MLW demands independence
+
+	is_triggered_only = yes
+	
+	title = "EVTNAME181014"
+	desc = "EVTDESC181014"
+	picture = "1960_Nyasaland_Conference"
+
+	option = {
+		name = "EVTOPTA181014"		    			# Malawi shall have its Independence 
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 5
+				ideology_group = comintern
+			}
+			modifier = {
+				factor = 0.1
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 0.25
+				ideology = paternal_auto_idolg
+			}
+		}
+		liberate_puppet = MLW
+		MLW = {
+			supplies = 500
+			fuel = 200
+			money = 1000
+			manpower = 15
+				}
+	}
+
+	option = {
+		name = "EVTOPTB181014"			    			# Keep them under the thumb 
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0.2
+				ideology_group = comintern
+			}
+		}
+		dissent = 2.5
+		national_unity = -5
+		any_owned = {
+			limit = {
+				is_core = MLW
+			}
+			#revolt_risk = 5
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 181015		# Rhodesian referendum for Independence
+
+	trigger = {
+		#Decolonisation has started
+		year = 1964 #temporary
+		
+		NOT = {
+			exists = RHO
+			exists = ZIM
+		}
+			
+		owns = 7466 #Major Zimbabwean cities
+		owns = 7467
+		owns = 7269
+			
+		OR = {	
+			has_country_flag = rhodesia_referendum_1
+			has_country_flag = rhodesia_referendum_2
+			has_country_flag = rhodesia_referendum_3
+		}
+		
+		NOT = {
+			has_country_flag = rhodesia_referendum_2_1
+			has_country_flag = rhodesia_referendum_2_2
+		}
+		
+		dissent = 12.5
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.25
+			year = 1969
+		}
+		modifier = {
+			factor = 0.5
+			exists = ZMB
+		}
+		modifier = {
+			factor = 0.5
+			exists = ZIM
+		}
+	}
+	
+	title = "EVTNAME181015"
+	desc = "EVTDESC181015"
+	picture = "1979_Rhodesian_Referendum"
+
+	option = {
+		name = "EVTOPTA181015"		    			# Rhodesia shall have its Independence
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 5
+				ideology_group = comintern
+			}
+			modifier = {
+				factor = 0.1
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 0.25
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 20
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 30
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 40
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 50
+			}
+		}
+		release = RHO
+		liberate_puppet = RHO
+		set_country_flag = rhodesia_referendum_2_1
+	}
+
+	option = {
+		name = "EVTOPTB181015"			    			# This is not the desire of the masses!
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.5
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0.2
+				ideology_group = comintern
+			}
+		}
+		dissent = 2.5
+		national_unity = -5
+		any_owned = {
+			limit = {
+				is_core = RHO
+			}
+			#revolt_risk = 5
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+		}
+		set_country_flag = rhodesia_referendum_2_2
+	}
+}
+
+country_event = {
+	
+	id = 181016		# Rhodesia unilaterally declares its independence
+
+	trigger = {
+		#Decolonisation has started
+		year = 1964 #temporary
+		
+		NOT = {
+			exists = RHO
+		}
+			
+		owns = 7466 #Major Zimbabwean cities
+		owns = 7467
+		owns = 7269
+			
+			has_country_flag = rhodesia_referendum_2_2
+		
+		NOT = {
+			has_country_flag = rhodesia_independence
+		}
+		
+		dissent = 6
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.25
+			year = 1970
+		}
+	}
+	
+	title = "EVTNAME181016"
+	desc = "EVTDESC181016"
+	picture = "1964_Rhodesian_Independence"
+	major = yes
+
+	option = {
+		name = "EVTOPTA181016"		    			# Condemn the traitors!
+		ai_chance = {
+			factor = 90
+		}
+		ENG = { 
+			liberate_puppet = RHO
+			release = RHO
+			relation = { who = RHO value = -100 }				
+			}
+		RHO = {
+			load_oob = 181016-OPT3-RHO.txt
+			government = authoritarian_gov
+			head_of_state = 1297003
+			head_of_government = 1297012
+			money = 12000
+			start_voting = {
+				organisation = 1
+				action = 1
+			}			
+		}
+		set_country_flag = rhodesia_independence
+		#UN sanction 216
+	}
+
+	option = {
+		name = "EVTOPTB181016"			    			# Let’s forget Rhodesia
+		ai_chance = {
+			factor = 9
+		}
+		ENG = { 
+			liberate_puppet = RHO
+			release = RHO
+			relation = { who = RHO value = 50 }			
+			}
+		RHO = {
+			money = 12000
+			load_oob = 181016-OPT3-RHO.txt
+			government = authoritarian_gov
+			head_of_state = 1297003
+			head_of_government = 1297012			
+		}
+		set_country_flag = rhodesia_independence
+	}
+
+	option = {
+		name = "EVTOPTC181016"			    			# We shall protect the interest of the Rhodesian masses 
+		ai_chance = {
+			factor = 1
+		}
+		ENG = { 
+			liberate_puppet = RHO
+			release = RHO
+			relation = { who = RHO value = -300 }			
+			}
+		RHO = {
+			money = 12000
+			load_oob = 181016-OPT3-RHO.txt
+			government = authoritarian_gov
+			head_of_state = 1297003
+			head_of_government = 1297012			
+		}
+		set_country_flag = rhodesia_independence
+		limited_war = RHO #temporary until proper war goal system in place
+		#war = {
+		#	target = RHO
+		#	attacker_goal = { casus_belli = puppet }	# War goal of establishing RHO as a Dominion, 
+		#} 
+	}
+}
+
+
+
+
+### Portugal - Mozambique Independence War
+
+country_event = {
+	
+	id = 289002		#Event 01 for POR – MOZ revolt risk
+
+	trigger = {
+		tag = POR
+		dissent = 10
+		NOT = {
+			exists = MOZ
+			national_unity = 70
+		}
+		owns = 7571	#Major Mozambique Cities
+		owns = 8189
+		owns = 7848
+		NOT = {
+			has_country_flag = POR_mozambican_uprising
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	title = "EVTNAME289002"
+	desc = "EVTDESC289002"
+	picture = "1964_Civil_War_in_Mozambique"
+
+	option = {
+		name = "EVTOPTA289002"			    			# Unfortunate
+		any_owned = {
+			limit = {
+				is_core = MOZ
+			}
+			remove_core = POR
+			#revolt_risk = 10
+			add_province_modifier = {
+				name = moderate_revolt_risk
+				duration = 1825
+			}
+		}
+		set_country_flag = POR_mozambican_uprising
+	}
+}
+
+country_event = {
+	
+	id = 289000		# POR – MOZ independence war start
+
+	trigger = {
+		NOT = {
+			exists = MOZ
+		}
+		
+		owns = 7571	#Major Mozambique Cities
+		owns = 8189
+		owns = 7848
+		
+		OR = {
+			dissent = 15
+			NOT = {
+				national_unity = 60
+			}
+		}
+		
+		7571 = {
+			controlled_by = REB
+		}
+		8189 = {
+			controlled_by = REB
+		}
+		7848 = {
+			controlled_by = REB
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	title = "EVTNAME289000"
+	desc = "EVTDESC289000"
+	picture = "1964_Mozambiquan_war_of_independence"
+
+	option = {
+		name = "EVTOPTA289000"		    			# Traitors!
+		any_owned = {
+			limit = {
+				is_core = MOZ
+				controlled_by = REB
+			}
+			secede_province = MOZ
+		}
+		any_owned = {
+			limit = {
+				is_core = MOZ
+			}
+			remove_core = POR
+		}
+		MOZ = {
+			load_oob = 289000-OPT1-MOZ.txt
+			limited_war = POR
+			supplies = 1000
+			fuel = 200
+			money = 1000
+			manpower = 50
+			#temporary until proper war goal system in place
+			#war = {
+			#	target = THIS
+			#	attacker_goal = { casus_belli = aquire_all_cores }	# Limited war goal of indepedence for MOZ
+			#} 
+		}
+	}
+}
+
+country_event = {
+	
+	id = 289001		# POR – MOZ independence war end
+
+	trigger = {
+		tag = MOZ
+		
+		war_with = POR
+		
+		NOT = {
+			lost_national = 0.1
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	title = "EVTNAME289001"
+	desc = "EVTDESC289001"
+	picture = "1974_Mozambique_Lusaka_Accord"
+
+	option = {
+		name = "EVTOPTA289001"		    			# Victory!
+		POR = {
+			end_war = MOZ
+			any_owned = {
+				limit = {
+					is_core = MOZ
+				}
+				secede_province = MOZ
+			}
+		}
+		prestige_change = 25
+	}
+}
+
+### Bush War ###
+
+country_event = {
+	
+	id = 181017		# Collapse of Rhodesia
+
+	trigger = {
+		tag = RHO
+		NOT = {
+			RHO = {
+				vassal_of = ENG
+				}
+			}
+		NOT = {
+			has_global_flag = collapse_of_rhodesia
+		}
+		OR = {
+			AND = {
+				NOT = {
+					exists = ZIM
+					national_unity = 50
+					popularity = 60
+				}
+			}
+			#RHO communist party pop >50%		#Trigger has not been implemented yet
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.75
+			exists = MOZ
+		}
+		modifier = {
+			factor = 1.5
+			AND = {
+				controls = 7265	#Major Zambian cities
+				controls = 7263
+				controls = 7264
+			}
+		}
+		modifier = {
+			factor = 1.5
+			AND = {
+				controls = 7753	#Major Malawian cities
+				controls = 7845
+			}
+		}
+		modifier = {
+			factor = 0.8
+			ZMB = {
+				has_country_flag = support_zapu
+			}
+		}
+		modifier = {
+			factor = 0.8
+			ZIM = {
+				has_country_flag = support_zapu
+			}
+		}
+		modifier = {
+			factor = 0.7
+			MOZ = {
+				has_country_flag = support_zapu
+			}
+		}
+		modifier = {
+			factor = 0.8
+			# RHO left wing is popular
+		}
+		modifier = {
+			factor = 0.95
+			civil_liberties = martial_law
+		}
+		modifier = {
+			factor = 0.90
+			civil_liberties = emergency_law
+		}
+		modifier = {
+			factor = 0.85
+			civil_liberties = suspended_indefinitely
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				government = authoritarian_gov
+				government = totalitarian_gov
+			}
+		}
+		modifier = {
+			factor = 0.9
+			dissent = 5
+		}
+		modifier = {
+			factor = 0.9
+			dissent = 10
+		}
+		modifier = {
+			factor = 0.8
+			dissent = 20
+		}
+		modifier = {
+			factor = 0.8
+			dissent = 30
+		}
+		modifier = {
+			factor = 0.5
+			dissent = 50
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				national_unity = 40
+			}
+		}
+		modifier = {
+			factor = 0.25
+			NOT = {
+				national_unity = 20
+			}
+		}
+		modifier = {
+			factor = 0.75
+			economy_unbalanced = yes
+		}
+	}
+	
+	title = "EVTNAME181017"
+	desc = "EVTDESC181017"
+	picture = "1979_Rhodesian_Referendum"
+	major = yes
+
+	option = {
+		name = "EVTOPTA181017"		    		# These insurgents shall be put down
+		7266 = {
+			secede_province = ZIM
+		}
+		7365 = {
+			secede_province = ZIM
+		}
+		7366 = {
+			secede_province = ZIM
+		}
+		7465 = {
+			secede_province = ZIM
+		}
+		7561 = {
+			secede_province = ZIM
+		}
+		7562 = {
+			secede_province = ZIM
+		}
+		7563 = {
+			secede_province = ZIM
+		}
+		7661 = {
+			secede_province = ZIM
+		}
+		7468 = {
+			secede_province = ZIM
+		}
+		7566 = {
+			secede_province = ZIM
+		}
+		7271 = {
+			secede_province = ZIM
+		}
+		7370 = {
+			secede_province = ZIM
+		}
+		7167 = {
+			secede_province = ZIM
+		}
+		7065 = {
+			secede_province = ZIM
+		}
+		6959 = {
+			secede_province = ZIM
+		}
+		7164 = {
+			secede_province = ZIM
+		}
+		7267 = {
+			secede_province = ZIM
+		}
+		set_global_flag = decolonisation_started
+		ZIM = {
+			load_oob = 181017-OPT1-ZIM.txt
+			capital = 7266
+			supplies = 500
+			fuel = 200
+			money = 1000
+			manpower = 15
+			head_of_state = 1365001
+			head_of_government = 1365002
+			war = RHO #temporary until proper war goal system in place
+			#war = {	
+			#	target = RHO
+			#	attacker_goal = { casus_belli = aquire_all_cores }
+			#}
+		}
+		
+		any_owned = {
+			limit = {
+				owns = 7265
+			}
+			release = ZMB
+			ZMB = {
+				military_access = ZIM
+				supplies = 500
+				fuel = 200
+				money = 1000
+				manpower = 25
+				create_alliance = ZIM
+				war = RHO
+				load_oob = 181017-OPT1-ZMB.txt
+				}
+			ZIM = {
+			military_access = ZMB
+			create_alliance = ZMB
+				}
+			}
+
+		any_owned = {
+			limit = {
+				owns = 7753
+			}
+			release = MLW			
+		MLW = {
+			military_access = ZMB
+			military_access = ZIM
+			create_alliance = ZIM
+			war = RHO			
+			supplies = 500
+			fuel = 200
+			money = 1000
+			manpower = 15
+			load_oob = 181017-OPT1-MLW.txt
+			}
+		ZIM = {
+			military_access = MLW
+			create_alliance = MLW
+			}
+		}
+			
+		set_global_flag = collapse_of_rhodesia
+	}
+	
+	option = {
+		name = "EVTOPTB181017"		    			# The end of white supremacy
+		#change_tag = ZIM 		# Commented out until effect is added
+		government = republic_gov
+		popularity = 5
+		set_global_flag = collapse_of_rhodesia
+	}
+}
+
+
+country_event = {
+	
+	id = 366000		# Event 01 for ZMB – Join the civil war?
+
+	trigger = {
+		tag = ZMB
+		exists = RHO
+		RHO = {
+			war_with = ZIM
+		}
+		NOT = {
+			has_country_flag = join_civil_war
+		}
+		has_country_flag = support_zapu
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	title = "EVTNAME366000"
+	desc = "EVTDESC366000"
+	picture = "1967_Rhodesia_Zambia_Joins_Civil_War"
+	
+	option = {
+		name = "EVTOPTA366000"		    			# Yes
+		create_alliance = ZIM
+		military_access = ZIM
+		ZIM = {
+			military_access = ZMB
+			}
+		join_war = ZIM #temp until Join war on side of ZIM
+		prestige_change = 10
+		set_country_flag = join_civil_war
+	}
+	
+	option = {
+		name = "EVTOPTB366000"		    			# Support
+		money = -1000
+		manpower = -5
+		military_access = ZIM
+		ZIM = {
+			military_access = ZMB
+			}
+		RHO = {
+			# 1 unit of militia rebels spawn in RHO along ZMB border – friendly to ZMB
+		}
+		set_country_flag = join_civil_war
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTC366000"		    			# No
+		dissent = 5
+		national_unity = -5
+		set_country_flag = join_civil_war
+	}
+}
+
+country_event = {
+	
+	id = 263000		# Event 01 for MOZ – Join the civil war?
+
+	trigger = {
+		tag = MOZ
+		exists = RHO
+		RHO = {
+			war_with = ZIM
+		}
+		NOT = {
+			has_country_flag = join_civil_war
+		}
+		has_country_flag = support_zapu
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	title = "EVTNAME263000"
+	desc = "EVTDESC263000"
+	picture = "1967_Rhodesia_Mozambique_Joins_Civil_War"
+	
+	option = {
+		name = "EVTOPTA263000"		    			# Yes
+		create_alliance = ZIM
+		military_access = ZIM
+		ZIM = {
+			military_access = MOZ
+			}
+		join_war = ZIM #temp until Join war on side of ZIM
+		prestige_change = 10
+		set_country_flag = join_civil_war
+	}
+	
+	option = {
+		name = "EVTOPTB263000"		    			# Support
+		supplies = -50
+		money = -1000
+		manpower = -5
+		military_access = ZIM
+		ZIM = {
+			military_access = MOZ
+			supplies = 50
+			money = 1000
+			manpower = 5
+			}
+		set_country_flag = join_civil_war
+	}
+	
+	option = {
+		name = "EVTOPTC263000"		    			# No
+		dissent = 5
+		national_unity = -5
+		set_country_flag = join_civil_war
+	}
+}
+
+
+country_event = {
+	
+	id = 254000		# Event 01 for MLW – Join the civil war?
+
+	trigger = {
+		tag = MLW
+		exists = RHO
+		RHO = {
+			war_with = ZIM
+		}
+		NOT = {
+			has_country_flag = join_civil_war
+		}
+		has_country_flag = support_zapu
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	title = "EVTNAME254000"
+	desc = "EVTDESC254000"
+	picture = "1967_Rhodesia_Zambia_Joins_Civil_War"
+	
+	option = {
+		name = "EVTOPTA254000"		    			# Yes
+		create_alliance = ZIM
+		military_access = ZIM
+		ZIM = {
+			military_access = MLW
+			}
+		join_war = ZIM #temp until Join war on side of ZIM
+		prestige_change = 10
+		set_country_flag = join_civil_war
+	}
+	
+	option = {
+		name = "EVTOPTB254000"		    			# Support
+		supplies = -50
+		money = -1000
+		manpower = -5
+		military_access = ZIM
+		ZIM = {
+			military_access = MLW
+			supplies = 50
+			money = 1000
+			manpower = 5
+			}
+		RHO = {
+			7064 = {
+				create_revolt = 1
+			}
+		}
+		set_country_flag = join_civil_war
+	}
+	
+	option = {
+		name = "EVTOPTC254000"		    			# No
+		dissent = 5
+		national_unity = -5
+		set_country_flag = join_civil_war
+	}
+}
+
+country_event = {
+	
+	id = 366001		# End of Bush War
+
+	trigger = {
+		tag = ZMB
+		exists = RHO
+		RHO = {
+			lost_national = 1
+			war_with = ZIM
+		}
+		NOT = {
+			has_country_flag = annex_rho
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	title = "EVTNAME181018"
+	desc = "EVTDESC181018"
+	picture = "1980_Zimbabwan_Independence"
+	
+	option = {
+		name = "EVTOPTA181018"		    			# Yes
+		inherit = RHO
+		end_war = RHO
+		capital = 7466
+		national_unity = 10
+		dissent = -10
+		set_country_flag = annex_rho
+	}
+}

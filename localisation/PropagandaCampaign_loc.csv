@@ -1,0 +1,167 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Global #;;;;;;;;;;;;;;x
+propaganda_campaign_outwards;Propaganda Campaign for the World Stage;;;;;;;;;;;;;x
+propaganda_campaign_inwards;National Propaganda Campaign;;;;;;;;;;;;;x
+propaganda_industry_triumphs;Industrial Productivity Propaganda;;;;;;;;;;;;;x
+propaganda_industrial_efficiency;Worker Productivity Propaganda;;;;;;;;;;;;;x
+propaganda_agricultural_efficiency;Agricultural Productivity Propaganda;;;;;;;;;;;;;x
+propaganda_capitalist_efficiency;Capitalist Productivity Propaganda;;;;;;;;;;;;;x
+propaganda_homemaker_efficiency;Caring Homemaker Propaganda;;;;;;;;;;;;;x
+propaganda_films_toured_nationally;Propaganda Films on National Tour;;;;;;;;;;;;;x
+propaganda_films_toured_internationally;Propaganda Films on International Tour;;;;;;;;;;;;;x
+propaganda_innovation_toured_nationally;Innovation Toured Nationally;;;;;;;;;;;;;x
+propaganda_innovation_toured_internationally;Innovation Toured Internationally;;;;;;;;;;;;;x
+propaganda_lectures;Propaganda Lectures;;;;;;;;;;;;;x
+propaganda_town_meetings;Propaganda Town Meetings;;;;;;;;;;;;;x
+propaganda_posters;Propaganda Posters;;;;;;;;;;;;;x
+propaganda_radio_stations_promoted;Propaganda Radio Stations Promoted;;;;;;;;;;;;;x
+propaganda_radio_stations_blocked;Propaganda Radio Stations Blocked;;;;;;;;;;;;;x
+propaganda_art_toured_internationally;Propaganda Art Toured Internationally;;;;;;;;;;;;;x
+propaganda_culture_toured_internationally;Propaganda Culture Toured Internationally;;;;;;;;;;;;;x
+propaganda_doctors_sent_overseas;Propaganda Doctors Send Overseas;;;;;;;;;;;;;x
+propaganda_school_textbooks;Propaganda School Textbooks;;;;;;;;;;;;;x
+propaganda_leader_achievements;Propaganda Leader Achievements;;;;;;;;;;;;;x
+propaganda_emigres_coopted;Propaganda Émigrés Coopted;;;;;;;;;;;;;x
+propaganda_trade_unions_coopted;Propaganda Trade Unions Coopted;;;;;;;;;;;;;x
+propaganda_campaign_delay;Propaganda Campaign Delay;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Global #;;;;;;;;;;;;;;x
+propaganda_campaign_title;Propaganda Campaign;;;;;;;;;;;;;x
+propaganda_campaign_desc;Organise a propaganda campaign to envigorate and education our populace about the benefits of our governance.;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Global #;;;;;;;;;;;;;x
+EVTNAME2071;Propaganda Campaign;;;;;;;;;;;;;x
+EVTDESC2071;$MONARCHTITLE$, the trusted members of your political inner-circle believe this is the ideal time for $COUNTRY$ to conduct a propaganda campaign to improve our image. We have key elements prepared to move forward with any campaign you choose, but the resources at our disposal are not without limits. \n\nSo $MONARCHTITLE$, you must choose the best direction for our efforts. Do we focus our propaganda inward, addressing our message to our domestic population to sway the opinions of the $COUNTRY_ADJ$ people? Or do we aim outward, projecting our message to the world stage to sway the opinions of the global community toward us?;;;;;;;;;;;;;x
+EVTOPTA2071;Focus on the World Stage;;;;;;;;;;;;;x
+EVTOPTB2071;Focus on Our Own People;;;;;;;;;;;;;x
+EVTNAME2106;Our Industrialists Praised;;;;;;;;;;;;;x
+EVTDESC2106;In the news today various media outlets reported on the state of our industry, noting, 'The industrial sector of $COUNTRY$ has demonstrated remarkable productivity that far surpasses that of other nations.' \n\n$MONARCHTITLE$, this is outstanding news. We will coordinate additional press releases to maximize exposure among all media outlets. Everyone will be talking about the industrial might of $COUNTRY$ and our leaders of industry will be centre stage. Let us endeavour to pursue our goals as strongly as our celebrated industrialists!;;;;;;;;;;;;;x
+EVTOPTA2106;$COUNTRY_ADJ$ Industry is Great!;;;;;;;;;;;;;x
+EVTNAME2072;Our Factory Workers Praised;;;;;;;;;;;;;x
+EVTDESC2072;Today in the news various media outlets reported on the output of $COUNTRY_ADJ$ factory workers, noting, 'When discussing the spirit and productivity of factory workers, the workers in $COUNTRY$ are without peer.' \n\n$MONARCHTITLE$, this is outstanding news! We will coordinate additional press releases with every media outlet to maximize exposure. Everyone shall know about of our inspiring examples of $COUNTRY_ADJ$ work-ethic in industry. Let us all recommit to working as hard as our nation’s celebrated factory workers!;;;;;;;;;;;;;x
+EVTOPTA2072;$COUNTRY_ADJ$ Workers are Solid!;;;;;;;;;;;;;x
+EVTNAME2073;Our Agricultural Workers Praised;;;;;;;;;;;;;x
+EVTDESC2073;Today several press outlets reported, 'The work ethic and productivity of modern-day $COUNTRY_ADJ$ farmers is unparalleled.' \n\n$MONARCHTITLE$, this is sensational news! We will flood the media outlets with this report and spotlight the inspiring life stories of our over-achieving farmers. Everyone will speak of the outstanding examples of agricultural success found in $COUNTRY$. Let us all be infused with the unbridled spirit of our nation’s hard-working farmers!;;;;;;;;;;;;;x
+EVTOPTA2073;$COUNTRY_ADJ$ Farmers are Wonderful!;;;;;;;;;;;;;x
+EVTNAME2074;Our Entrepreneurs Praised;;;;;;;;;;;;;x
+EVTDESC2074;In the press today it was reported that the entrepreneurial spirit of $COUNTRY_ADJ$ business leaders is remarkable. \n\n$MONARCHTITLE$, this is fantastic news! We will grab this story and send press releases to major media outlets to spotlight the inspiring lives of our bold visionaries of business. Everyone will be talking about the business excellence that can be found in $COUNTRY$. Let us all adopt the visionary outlook of our nation’s capitalists!;;;;;;;;;;;;;x
+EVTOPTA2074;$COUNTRY_ADJ$ Entrepreneurs are Incredible!;;;;;;;;;;;;;x
+EVTNAME2075;Our Homemakers Praised;;;;;;;;;;;;;x
+EVTDESC2075;Today, some prominent journals reported on family values in the modern era. One of them stated, 'The diligence, industriousness, and family-focus demonstrated by $COUNTRY_ADJ$ homemakers is unrivalled in our time.' \n\n$MONARCHTITLE$, this is excellent news! We will repackage this story and push it to all media outlets so they can spotlight the inspiring life stories of our caring $COUNTRY_ADJ$ spouses. Everyone will tell their friends and family about the wholesome family households found in $COUNTRY$. Let us all embrace the virtues of our nation’s homemakers!;;;;;;;;;;;;;x
+EVTOPTA2075;$COUNTRY_ADJ$ Homemakers are Dear to Us!;;;;;;;;;;;;;x
+EVTNAME2076;A Radio in Every Home;;;;;;;;;;;;;x
+EVTDESC2076;$MONARCHTITLE$, radios should be affordable for everyone. Radios reach into the home, helping the people of our great nation connect with current events. Of course, a radio in every $COUNTRY_ADJ$ home also allows us to reach into every home to speak to each $COUNTRY_ADJ$ family. \n\nTo make this a reality, several organizations have come together and organized a campaign to deliver a personal radio to any of our people that need one. This will certainly increase our political exposure while improving national unity and raising the political consciousness of our great nation.;;;;;;;;;;;;;x
+EVTOPTA2076;$COUNTRY_ADJ$ Generosity is Grand!;;;;;;;;;;;;;x
+EVTNAME2077;Our Films Tour the Nation;;;;;;;;;;;;;x
+EVTDESC2077;$MONARCHTITLE$, a series of invitational screenings of our 'independent' films has drawn favourable attention from several influential circles. \n\nTaking advantage of the media hype, we have graciously coordinated with the leaders of these circles and arranged a nationwide tour for our highly educational and motivational films. Initial showings have attracted great throngs of eager movie-goers. Viewers love the films and come away with a heightened sense of patriotism and national duty.;;;;;;;;;;;;;x
+EVTOPTA2077;We Look Great on Film!;;;;;;;;;;;;;x
+EVTNAME2078;Our Films Tour the World;;;;;;;;;;;;;x
+EVTDESC2078;$MONARCHTITLE$, a series of invitational screenings of our 'independent' films has drawn favourable attention at several international film festivals. Several $COUNTRY_ADJ$ films have won prestigious awards at these film festivals for their cinematic excellence. \n\nTaking advantage of the publicity, we have graciously coordinated with the leaders of these festivals and arranged several multi-national tours for our highly educational and motivational films. These awards reflect very well on intellectual and artistic life in $COUNTRY$!;;;;;;;;;;;;;x
+EVTOPTA2078;It's a wrap!;;;;;;;;;;;;;x
+EVTNAME2079;National Innovation Showcase;;;;;;;;;;;;;x
+EVTDESC2079;$MONARCHTITLE$, the brilliance of $COUNTRY_ADJ$ inventors, scientists and engineers is on display as a myriad of $COUNTRY_ADJ$ wonders are now touring the nation and receiving great public acclaim. Our people are in awe of the technology on display. The dazzling display has $COUNTRY_ADJ$ show-goers declaring their $COUNTRY_ADJ$ pride as they talk about our inventions as their own.;;;;;;;;;;;;;x
+EVTOPTA2079;$COUNTRY_ADJ$ Innovation is Fantastic!;;;;;;;;;;;;;x
+EVTNAME2080;Innovation Showcased Worldwide;;;;;;;;;;;;;x
+EVTDESC2080;$MONARCHTITLE$, the wonders of $COUNTRY_ADJ$ inventors, scientists and engineers are on display in a precocious array of $COUNTRY_ADJ$ ingenuity. This showcase of innovation is touring the world’s leading cities. The travelling show is receiving enormous international acclaim. Foreign spectators are in awe of the $COUNTRY_ADJ$ technology on display and envious of our nation’s ability to create the ideal environment to foster such innovative creations.;;;;;;;;;;;;;x
+EVTOPTA2080;$COUNTRY_ADJ$ Innovation is Awe Inspiring!;;;;;;;;;;;;;x
+EVTNAME2081;Our Propaganda Lectures;;;;;;;;;;;;;x
+EVTDESC2081;$MONARCHTITLE$, prominent public figures are giving a series of lectures discussing the overall positive impact of our administration. The lecture series favours our rule so significantly, we have seized the initiative to promote the tour across the country. Each venue attracts great throngs of eager $COUNTRY_ADJ$ listeners. Our audiences come away with a heightened sense of patriotism and national pride.;;;;;;;;;;;;;x
+EVTOPTA2081;Smart People Love Us!;;;;;;;;;;;;;x
+EVTNAME2082;Town Meeting Propaganda;;;;;;;;;;;;;x
+EVTDESC2082;$MONARCHTITLE$, numerous community organizations that support our goals have organized a series of town meetings across the nation to discuss our national policies. This grass roots venue has meeting halls filled to overflowing with local people eager to be part of our political process. $COUNTRY_ADJ$ ctizens have come away with a heightened sense of national awareness and civic involvement.;;;;;;;;;;;;;x
+EVTOPTA2082;Everyday Citizens Love Us!;;;;;;;;;;;;;x
+EVTNAME2083;Propaganda Posters Disseminated;;;;;;;;;;;;;x
+EVTDESC2083;$MONARCHTITLE$, our political machine has orchestrated a 'poster campaign' to boost our visibility. We can proceed with campaign posters on the roadside, full-page inserts in newspapers and journals, and large billboard 'marquee' posters. \n\nPrinted materials declaring our triumphs, asking provocative political questions, and promoting our policies are being designed now. The only thing remaining is to choose the option you prefer best.;;;;;;;;;;;;;x
+EVTOPTA2083;Campaign Posters;;;;;;;;;;;;;x
+EVTOPTB2083;Full Page Inserts in Print Media;;;;;;;;;;;;;x
+EVTOPTC2083;Billboard Marquee Posters.;;;;;;;;;;;;;x
+EVTNAME2084;Our Radio Stations Promoted;;;;;;;;;;;;;x
+EVTDESC2084;$MONARCHTITLE$, we have conducted a campaign to promote radio stations that are closely aligned with our political agenda. \n\nOur stations are being depicted as the most trustworthy sources of news and the best sources for up to date information on current events. \n\nOur efforts have met with success, the $COUNTRY_ADJ$ people are tuning-in and public opinion polls have revealed a much more favourable attitude toward our government and our radio stations.;;;;;;;;;;;;;x
+EVTOPTA2084;Our Message Rides The Airwaves!;;;;;;;;;;;;;x
+EVTNAME2085;Foreign Radio Stations Blocked;;;;;;;;;;;;;x
+EVTDESC2085;$MONARCHTITLE$, in an effort to stifle the voices of the malcontents who don't understand or appreciate our policies, we have stepped up efforts to deal with subversive radio transmissions. We have now implemented counter-measures to block radio stations that have been broadcasting damaging propaganda to the $COUNTRY_ADJ$ people. The success of our efforts will ensure we continue win-over the hearts and minds of our people and strengthen the unity of our great nation.;;;;;;;;;;;;;x
+EVTOPTA2085;We Rule the Airwaves!;;;;;;;;;;;;;x
+EVTNAME2086;Our Art Exhibited Worldwide;;;;;;;;;;;;;x
+EVTDESC2086;$MONARCHTITLE$, a committee of our closest political supporters has assembled a collection of artwork created by $COUNTRY_ADJ$ artists sympathetic to our cause. They are now exhibiting the collection through a worldwide tour of art galleries and museums. \n\nThe touring exhibit has received most encouraging acclaim from critics throughout the global art community. This display of $COUNTRY_ADJ$ contributions to the world of art has cultivated prestige for our country among all who appreciate the international art community.;;;;;;;;;;;;;x
+EVTOPTA2086;The World Appreciates $COUNTRY_ADJ$ Art!;;;;;;;;;;;;;x
+EVTNAME2087;Our Performers Are On Tour;;;;;;;;;;;;;x
+EVTDESC2087;$MONARCHTITLE$, a group of performing artists sympathetic to our views has assembled several troops of traditional $COUNTRY_ADJ$ performers and are touring the world. \n\nThis travelling display of traditional $COUNTRY_ADJ$ dancing and performance art showcases our country’s dance and heritage. The electrifying artistry and exquisite choreography have been met with great fanfare and critical acclaim within the international community.;;;;;;;;;;;;;x
+EVTOPTA2087;Bravo $COUNTRY_ADJ$ Performing Art!;;;;;;;;;;;;;x
+EVTNAME2088;Doctors Volunteer Overseas;;;;;;;;;;;;;x
+EVTDESC2088;$MONARCHTITLE$, we have implemented a project that allows $COUNTRY_ADJ$ doctors to volunteer time to help the people of other countries with their health needs. Throngs of doctors from our great nation answered the call. Many have already been dispatched overseas to vaccinate the world's children and heal the sick and infirmed - all in the name of $COUNTRY_ADJ$ goodwill. \n\nThis selfless display of state-sponsored altruism will raise our image in the eyes of the international community.;;;;;;;;;;;;;x
+EVTOPTA2088;$COUNTRY_ADJ$ Doctor's Heal the World!;;;;;;;;;;;;;x
+EVTNAME2089;Proverbs of Our $MONARCHTITLE$;;;;;;;;;;;;;x
+EVTDESC2089;$MONARCHTITLE$, our affiliated organizations have their presses running day and night to print millions of copies of your book, 'Proverbs of a $MONARCHTITLE$ - Teachings to Lead By.' \n\nCopies of your compilation are ready for distribution to the people. Now the undying wisdom of our beloved $MONARCHTITLE$ shall never fade from the people’s consciousness!;;;;;;;;;;;;;x
+EVTOPTA2089;It's Good to be the $MONARCHTITLE$!;;;;;;;;;;;;;x
+EVTNAME2090;New School Textbooks;;;;;;;;;;;;;x
+EVTDESC2090;$MONARCHTITLE$, your political reach now extends to the leading $COUNTRY_ADJ$ publishing houses, and we have convinced the leaders in publishing to use their printing presses to make our nation greater. They have agreed to help us impart knowledge of our great philosophies and accomplishment to the next generation of schoolchildren in $COUNTRY$. \n\nThrough these textbooks we will instil a valuable level of patriotism in our nation’s youth. The new generation will grow up with a wonderful love of $COUNTRY$.;;;;;;;;;;;;;x
+EVTOPTA2090;Conjunction Junction is Great!;;;;;;;;;;;;;x
+EVTNAME2091;$MONARCHTITLE$ Lauded;;;;;;;;;;;;;x
+EVTDESC2091;The press corps was abuzz today with talk of your accomplishments, $MONARCHTITLE$. One news outlet reported, 'The energy and positive change brought about by this $MONARCHTITLE$, enduring a time of great challenges and turmoil, is testament to the great minds, skilful planning, and tenacity of current leadership.' \n\nThis will elevate and inspire the nation to support our government. We have already prepared press junkets and media releases for the major media outlets to capitalize on this recognition.;;;;;;;;;;;;;x
+EVTOPTA2091;The $MONARCHTITLE$ Needs a Ticker-tape Parade!;;;;;;;;;;;;;x
+EVTNAME2092;Statue of $MONARCHTITLE$ Unveiled;;;;;;;;;;;;;x
+EVTDESC2092;In the news today, it was reported that the much-awaited unveiling of the new statue of our $MONARCHTITLE$ drew an enormous crowd of onlookers in our nation's capital, many weeping as they were overcome by its profound presence. \n\nOur in-house media personnel captured this great $COUNTRY_ADJ$ event in photographs and film. They have packaged the video documentary with a photo-laden expose' and this is currently being delivered by express courier to all international, national, and regional media outlets so people everywhere can bask in the splendour of the event.;;;;;;;;;;;;;x
+EVTOPTA2092;Our $MONARCHTITLE$ is a Glorious Leader!;;;;;;;;;;;;;x
+EVTNAME2093;Bust of Our Nation's Founder;;;;;;;;;;;;;x
+EVTDESC2093;$MONARCHTITLE$, the unveiling of a new bust of the great Founder of $COUNTRY$ drew throngs of appreciative onlookers. Many were moved by the solemn stature of our Founder. Nearly all were moved to patriotic fervour as $COUNTRY_ADJ$ flags waived in the streets and the national anthem was being sung in halls everywhere. \n\nOur in-house press correspondents have disseminated press reports of the bust’s unveiling to the national and international press corps. People everywhere will be able to reflect on our Founder’s contributions to building our nation.;;;;;;;;;;;;;x
+EVTOPTA2093;It's Good to be the Founder!;;;;;;;;;;;;;x
+EVTNAME2094;Street Name Honours Patriot;;;;;;;;;;;;;x
+EVTDESC2094;$MONARCHTITLE$, the contributions of the great $COUNTRY_ADJ$ Founders should never fade from the minds our our people. Keeping the thoughts of our glorious $COUNTRY_ADJ$ heritage ever-present in the minds of our citizens will reinforce a sense of patriotism that is healthy for our country. \n\nTo facilitate this, we  have renamed a well-trafficked thoroughfare in our nation's capital in honour of one of our Founding Figures. Now, all who use this street will remember an integral part of our nation's history.;;;;;;;;;;;;;x
+EVTOPTA2094;$COUNTRY_ADJ$ Founders Drive Onward!;;;;;;;;;;;;;x
+EVTNAME2095;War Heroes Memorialised;;;;;;;;;;;;;x
+EVTDESC2095;$MONARCHTITLE$, we have unveiled a moving tribute to the heroic soldiers who took part in our nation’s greatest military engagements. This new monument is a fitting memorial to the sacrifice made by our brave people and will certainly affect all who see it.;;;;;;;;;;;;;x
+EVTOPTA2095;We Shall Hold Vigil for the Fallen.;;;;;;;;;;;;;x
+EVTNAME2096;Foreign Academics Funded;;;;;;;;;;;;;x
+EVTDESC2096;$MONARCHTITLE$, we have authorized funding for foreign academic research in an effort to position $COUNTRY$ as a worldwide leader in academic philanthropy. In the highly competitive area of research grants, we are certain the foreign academics chosen to receive our funding will be extremely grateful for the generosity of the $COUNTRY_ADJ$ people.;;;;;;;;;;;;;x
+EVTOPTA2096;We Love to Help Academics!;;;;;;;;;;;;;x
+EVTNAME2097;Foreign Newspaper Funded;;;;;;;;;;;;;x
+EVTDESC2097;$MONARCHTITLE$, we have authorized funding for a foreign newspaper in an effort to deliver our message though outside media on foreign soil. Having $COUNTRY$ portrayed in a positive light by foreign media will do a great deal to boost our image abroad. We are confident that the paper will be very grateful for our financial support and articles written about $COUNTRY$ will be done in a most favourable fashion.;;;;;;;;;;;;;x
+EVTOPTA2097;The Foreign Press is Fantastic!;;;;;;;;;;;;;x
+EVTNAME2098;Foreign Protests Funded;;;;;;;;;;;;;x
+EVTDESC2098;$MONARCHTITLE$, we have identified a formerly dormant protest movement in a key foreign country, and it is ready to explode but has struggled to acquire the means to do so. Basically, it has been quiet for lack of funding, which we have rectified and graciously provided. As forecasted, that country is now experiencing significant social unrest and civil strife.;;;;;;;;;;;;;x
+EVTOPTA2098;The Forecast is Good!;;;;;;;;;;;;;x
+EVTNAME2099;Emigre Community Recruited;;;;;;;;;;;;;x
+EVTDESC2099;$MONARCHTITLE$, we have contacted various $COUNTRY_ADJ$ émigré communities abroad and successfully enlisted leaders among them to help improve our image in their host country. $COUNTRY_ADJ$ émigré leaders will organize the dissemination of propaganda we provide them to help gain international favour for our nation. We predict this grass-roots movement will improve our standing in the eyes of the international community.;;;;;;;;;;;;;x
+EVTOPTA2099;We Love $COUNTRY_ADJ$ Patriots Abroad!;;;;;;;;;;;;;x
+EVTNAME2100;Union Leaders Coopted;;;;;;;;;;;;;x
+EVTDESC2100;$MONARCHTITLE$, we have successfully won-over various trade union leaders in our country to help promote our vision. The union leaders will use their connections and organisation to disseminate propaganda in favour of our politics. \n\nThese leaders are trusted members of the community. We strongly believe if their peers hear them spread our message, this will heavily sway their opinions in favour of our agenda.;;;;;;;;;;;;;x
+EVTOPTA2100;Union Leaders Are a Great Help!;;;;;;;;;;;;;x
+EVTNAME2101;Foreign Front Pushes Prestige;;;;;;;;;;;;;x
+EVTDESC2101;$MONARCHTITLE$, we have quietly tapped one of our front organizations to promulgate our $COUNTRY_ADJ$ propaganda within their sphere of influence. Our affiliation with this group is not on anyone's radar. \n\nBecause of this, we believe their seemingly independent efforts will be much more effective at swaying opinion within their foreign community. We need only choose the type of message we want them to pursue.;;;;;;;;;;;;;x
+EVTOPTA2101;Focus Efforts on Increasing Our Prestige;;;;;;;;;;;;;x
+EVTOPTB2101;Focus on Decreasing the Foreign Nation's Prestige;;;;;;;;;;;;;x
+EVTNAME2102;Foreign Front Pushes Relations;;;;;;;;;;;;;x
+EVTDESC2102;$MONARCHTITLE$, we have covertly tapped one of our front organizations to promulgate the $COUNTRY_ADJ$ foreign policy agenda within their sphere of influence. Our affiliation with this group is almost completely unknown. \n\nBecause of this, we believe their seemingly independent efforts will be much more effective at swaying relations within their foreign community. We need only choose the type of message we want them to pursue.;;;;;;;;;;;;;x
+EVTOPTA2102;Focus on Improving Relations with Our Nation;;;;;;;;;;;;;x
+EVTOPTB2102;Focus on Diminishing Relations with Another Nation;;;;;;;;;;;;;x
+EVTNAME2103;Foreign Front Pushes Peace Talks;;;;;;;;;;;;;x
+EVTDESC2103;$MONARCHTITLE$, we have brokered a deal with a foreign organization that is not overtly associated with our government to promulgate our international peace initiative abroad. \n\nHaving no formally established ties to this organization, we believe the international community will be better-swayed by this organization’s efforts because of its historically independent stance. However, we must give them some guidance in their efforts.;;;;;;;;;;;;;x
+EVTOPTA2103;Focus on Promoting Our Peaceful Nature;;;;;;;;;;;;;x
+EVTOPTB2103;Focus on Our Adversary's Agressive Nature;;;;;;;;;;;;;x
+EVTNAME2104;$MONARCHTITLE$ has Radio Address;;;;;;;;;;;;;x
+EVTDESC2104;In an effort to reach a broad national audience in a relaxed manner, we have embraced a 'tried and true' approach. The $MONARCHTITLE$ will address the $COUNTRY_ADJ$ people via radio while they are in the comfort of their home, outlining his policies and vision for the country. \n\n$MONARCHTITLE$, you may choose to focus on domestic issues in an attempt to improve national unity or discuss the leading role of $COUNTRY$ in world events in an attempt to win support for our foreign policy. Which shall it be?;;;;;;;;;;;;;x
+EVTOPTA2104;Focus on Unifying the Nation;;;;;;;;;;;;;x
+EVTOPTB2104;Focus on Improving National Prestige;;;;;;;;;;;;;x
+EVTNAME2105;$MONARCHTITLE$ has Televised Address;;;;;;;;;;;;;x
+EVTDESC2105;In an effort to reach a contemporary national audience, we have setup a televised address. The $MONARCHTITLE$ will address the $COUNTRY_ADJ$ people via television while they are in the comfort of their home, outlining his policies and vision for the country. \n\n$MONARCHTITLE$, you may choose to focus on domestic issues in an attempt to improve national unity or discuss the leading role of $COUNTRY$ in world events in an attempt to win support for our foreign policy. Which shall it be?;;;;;;;;;;;;;x
+EVTOPTA2105;Focus on Unifying the Nation;;;;;;;;;;;;;x
+EVTOPTB2105;Focus on Improving National Prestige;;;;;;;;;;;;;x
+EVTNAME2110;Academics Obstruct Campaign;;;;;;;;;;;;;x
+EVTDESC2110;$MONARCHTITLE$, just when we thought our propaganda campaign was running smoothly, a number of academic malcontents have begun shouting 'foul' from their ivory towers. We have been smeared in a flurry of angry 'letters to the editor.' Among other things, we face allegations of riding roughshod over dissenters’ rights, manipulating media, and being generally ‘churlish!' How shall we respond to these critics?;;;;;;;;;;;;;x
+EVTOPTA2110;Silence Them;;;;;;;;;;;;;x
+EVTOPTB2110;Permit their Dissent;;;;;;;;;;;;;x
+EVTOPTC2110;End the Propaganda Campaign;;;;;;;;;;;;;x
+EVTNAME2111;End of Propaganda Campaign;;;;;;;;;;;;;x
+EVTDESC2111;$MONARCHTITLE$, our propaganda campaign has run its course, it's now time to bring it to an end and focus on other endeavors. The public is well-aware of how impressive we are!;;;;;;;;;;;;;x
+EVTOPTA2111;Propaganda Campaign Ends;;;;;;;;;;;;;x
+EVTNAME2112;War Halts Propaganda Campaign;;;;;;;;;;;;;x
+EVTDESC2112;$MONARCHTITLE$, the outbreak of war has abruptly ended our propaganda campaign. We can't tell if it has been effective or not, but we have much more pressing problems at the moment, regardless.;;;;;;;;;;;;;x
+EVTOPTA2112;Propaganda Campaign Ends Due to War;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

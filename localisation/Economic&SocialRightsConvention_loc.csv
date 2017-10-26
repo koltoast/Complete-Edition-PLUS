@@ -1,0 +1,61 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+mod_UN_economic_and_social_rights_convention_failure_delay;UN Economic & Social Rights Convention Delay;;;;;;;;;;;;;x
+mod_UN_economic_and_social_rights_convention_ratifier_delay;UN Economic & Social Rights Convention Ratifier Delay;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+mod_UN_economic_and_social_rights_convention_revoked_recently;UN Economic & Social Rights Convention Revoked Recently;;;;;;;;;;;;;x
+mod_UN_economic_and_social_rights_convention_ratified;UN Economic & Social Rights Convention;;;;;;;;;;;;;x
+mod_UN_economic_and_social_rights_convention_ratified_recently;UN Economic & Social Rights Convention Ratified Recently;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+dec_UN_raise_economic_and_social_rights_convention_title;The UN Economic & Social Rights Convention;;;;;;;;;;;;;x
+dec_UN_raise_economic_and_social_rights_convention_desc;United Nations General Assembly Resolution 2200A, The International Covenant on Economic, Social and Cultural Rights.;;;;;;;;;;;;;x
+dec_UN_economic_and_social_rights_convention_disable_voting_notifications_title;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+dec_UN_economic_and_social_rights_convention_disable_voting_notifications_desc;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+dec_UN_ratify_economic_and_social_rights_convention_title;Ratify UN Economic & Social Rights Convention;;;;;;;;;;;;;x
+dec_UN_ratify_economic_and_social_rights_convention_desc;Ratify The International Covenant on Economic, Social and Cultural Rights.;;;;;;;;;;;;;x
+dec_UN_withdraw_from_economic_and_social_rights_convention_title;Withdraw from UN Economic & Social Rights Convention;;;;;;;;;;;;;x
+dec_UN_withdraw_from_economic_and_social_rights_convention_desc;Withdraw from The International Covenant on Economic, Social and Cultural Rights.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+EVTNAME12300;The UN Economic & Social Rights Convention;;;;;;;;;;;;;x
+EVTDESC12300;United Nations General Assembly Resolution 2200A, The International Covenant on Economic, Social and Cultural Rights has been opened for voting.;;;;;;;;;;;;;x
+EVTOPTA12300;Large Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTB12300;Small Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTC12300;No Diplomatic Investment.;;;;;;;;;;;;;x
+EVTNAME12301;UN Voting Notifications;;;;;;;;;;;;;x
+EVTDESC12301;Shall we receive notifications when nations decide their vote on the current UN Resolution undergoing a vote?\nThese can be turned off at any time by an international decision.;;;;;;;;;;;;;x
+EVTOPTA12301;Receive Notifications.;;;;;;;;;;;;;x
+EVTOPTB12301;No Notifications.;;;;;;;;;;;;;x
+EVTNAME12302;UN Economic & Social Rights Convention Fails Vote;;;;;;;;;;;;;x
+EVTDESC12302;United Nations General Assembly Resolution 2200A, The International Covenant on Economic, Social and Cultural Rights, has been defeated by vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA12302;Unfortunate;;;;;;;;;;;;;x
+EVTNAME12303;UN Economic & Social Rights Convention Passes Vote;;;;;;;;;;;;;x
+EVTDESC12303;United Nations General Assembly Resolution 2200A, The International Covenant on Economic, Social and Cultural Rights, has passed its vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA12303;Excellent;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+EVTNAME12310;Economic & Social Rights Convention UN Vote;;;;;;;;;;;;;x
+EVTDESC12310;We have the opportunity to vote on United Nations General Assembly Resolution 2200A, The International Covenant on Economic, Social and Cultural Rights, at the UN General Assembly.\nWe can either vote For it, Abstain, or vote Against it.;;;;;;;;;;;;;x
+EVTOPTA12310;§GVote For;;;;;;;;;;;;;x
+EVTOPTB12310;Abstain;;;;;;;;;;;;;x
+EVTOPTC12310;§RVote Against;;;;;;;;;;;;;x
+EVTNAME12312;Ratified the Economic & Social Rights Convention;;;;;;;;;;;;;x
+EVTDESC12312;We have ratified the UN Economic & Social Rights Convention.;;;;;;;;;;;;;x
+EVTOPTA12312;Progress and civility will prevail.;;;;;;;;;;;;;x
+EVTNAME12314;Withdrawal from the Economic & Social Rights Convention;;;;;;;;;;;;;x
+EVTDESC12314;We have withdrawn from the UN Economic & Social Rights Convention.;;;;;;;;;;;;;x
+EVTOPTA12314;Good riddance.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

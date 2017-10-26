@@ -1,0 +1,859 @@
+#EnvironmentalModificationConvention_events.txt
+#UN Environmental Modification Convention
+
+#UN Secretary General:
+	#11900 - Raise the UN Environmental Modification Convention for Voting - Triggered by dec_UN_raise_environmental_modification_convention
+	#11901 - Should We Have Voting Notifications Or Not?
+	#11902 - UN Environmental Modification Convention Resolution Fails in the General Assembly
+	#11903 - UN Environmental Modification Convention Resolution Passes in the General Assembly
+	
+#Global:
+	#11910 - Vote on the UN Environmental Modification Convention - Notifications Off
+	#11911 - Vote on the UN Environmental Modification Convention - Notifications On (Major Event)
+	#11912 - We have ratified the UN Environmental Modification Convention - Triggered
+	#11913 - We have ratified the UN Environmental Modification Convention - Non-triggered
+	#11914 - We have revoked the UN Environmental Modification Convention
+	
+	
+## UN Secretary General ##
+	#11900 - Raise the UN Environmental Modification Convention for Voting
+	country_event = {
+	
+		id = 11900
+
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME11900"
+		desc = "EVTDESC11900"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA11900" 					#Large diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 40 }
+			#}
+			#XUN  = { prestige_change = -40 }
+			
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			country_event = 11901
+		}
+
+		option = {
+			name = "EVTOPTB11900" 					#Small diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 15 }
+			#}
+			#XUN  = { prestige_change = -15 }
+			
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			country_event = 11901
+		}
+
+		option = {
+			name = "EVTOPTC11900"					#No diplomatic investment
+			
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			country_event = 11901
+		}
+	}
+	
+	#11901 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 11901
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME11901"
+		desc = "EVTDESC11901"
+		picture = "xxxx"
+		
+		option = {
+			name = "EVTOPTA11901"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_environmental_modification_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_environmental_modification_convention_voting
+		}
+		
+		option = {
+			name = "EVTOPTB11901"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_environmental_modification_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_environmental_modification_convention_voting
+		}
+	}
+	
+	#11902 - UN Environmental Modification Convention Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 11902
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_environmental_modification_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME11902"
+		desc = "EVTDESC11902"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_environmental_modification_convention_voting
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_environmental_modification_convention_fails
+		}
+
+		option = {
+			name = "EVTOPTA11902"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			XUN  = { prestige_change = -50 }
+			
+			hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_environmental_modification_convention_failure_delay
+						duration = 1460
+					}
+				}
+			}
+			clr_global_flag = gflag_UN_environmental_modification_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#11903 - UN Environmental Modification Convention Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 11903
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_environmental_modification_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME11903"
+		desc = "EVTDESC11903"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_environmental_modification_convention_voting
+			clr_global_flag = gflag_UN_environmental_modification_convention_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_environmental_modification_convention_passes
+		}
+
+		option = {
+			name = "EVTOPTA11903"					#Excellent
+			clr_global_var = var_UN_votes_For
+			
+			XUN  = { prestige_change = 50 }
+			
+			any_country = {
+				limit = {
+					has_country_flag = flag_UN_environmental_modification_convention_supporter
+				}
+				set_country_flag = flag_UN_environmental_modification_convention_ratified
+				country_event = 11912
+			}
+			clr_global_flag = gflag_UN_environmental_modification_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+
+## Global ##
+	#11910 - Vote on the UN Environmental Modification Convention - Notifications Off
+	country_event = {
+	
+		id = 11910
+		
+		trigger = {
+			has_country_flag = flag_UN_environmental_modification_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_environmental_modification_convention_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME11910"
+		desc = "EVTDESC11910"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_environmental_modification_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_environmental_modification_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA11910"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_environmental_modification_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = substantively_defined
+						rule_of_law = well_defined
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						foreign_policy = dove_policy_pol
+						foreign_policy = detente_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_attitude = defensive
+						national_attitude = balance_of_power
+					}
+				}
+				modifier = {
+					factor = 1.25
+					is_major = no
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_environmental_modification_convention_supporter
+			
+			relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB11910"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+			clr_country_flag = flag_UN_environmental_modification_convention_supporter
+		}
+
+		option = {
+			name = "EVTOPTC11910"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = thinly_defined
+						rule_of_law = narrowly_defined
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						foreign_policy = hardline_pol
+						foreign_policy = containment_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					national_attitude = hegemony
+				}
+				modifier = {
+					factor = 1.1
+					greatest_warhead_owner = yes
+				}
+				modifier = {
+					factor = 1.25
+					doomsday_clock = 58
+				}
+				modifier = {
+					factor = 1.1
+					doomsday_clock = 55
+					NOT = { doomsday_clock = 58 }
+				}
+				modifier = {
+					factor = 1.25
+					industry_physics = 7
+					industry_chemistry = 5
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			clr_country_flag = flag_UN_environmental_modification_convention_supporter
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_environmental_modification_convention_revoked_recently
+					duration = 60
+				}
+			}
+			
+			relation = { who = XUN value = -5 }
+		}
+	}
+
+	#11911 - Vote on the UN Environmental Modification Convention - Notifications On
+	country_event = {
+	
+		id = 11911
+		
+		trigger = {
+			has_country_flag = flag_UN_environmental_modification_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_environmental_modification_convention_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME11910"
+		desc = "EVTDESC11910"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_environmental_modification_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_environmental_modification_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA11910"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_environmental_modification_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = substantively_defined
+						rule_of_law = well_defined
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						foreign_policy = dove_policy_pol
+						foreign_policy = detente_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_attitude = defensive
+						national_attitude = balance_of_power
+					}
+				}
+				modifier = {
+					factor = 1.25
+					is_major = no
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_environmental_modification_convention_supporter
+			
+			relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB11910"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC11910"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = thinly_defined
+						rule_of_law = narrowly_defined
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						foreign_policy = hardline_pol
+						foreign_policy = containment_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					national_attitude = hegemony
+				}
+				modifier = {
+					factor = 1.1
+					greatest_warhead_owner = yes
+				}
+				modifier = {
+					factor = 1.25
+					doomsday_clock = 58
+				}
+				modifier = {
+					factor = 1.1
+					doomsday_clock = 55
+					NOT = { doomsday_clock = 58 }
+				}
+				modifier = {
+					factor = 1.25
+					industry_physics = 7
+					industry_chemistry = 5
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_environmental_modification_convention_revoked_recently
+					duration = 60
+				}
+			}
+			
+			relation = { who = XUN value = -5 }
+		}
+	}
+
+	#11912 - We have ratified the UN Environmental Modification Convention - Triggered
+	country_event = {
+	
+		id = 11912
+
+		is_triggered_only = yes
+
+		title = "EVTNAME11912"
+		desc = "EVTDESC11912"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA11912"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_environmental_modification_convention_ratified
+				duration = -1
+			}
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_environmental_modification_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_environmental_modification_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			}
+			
+			XUN = { prestige_change = 2 }
+		}
+	}
+
+	#11913 - We have ratified the UN Environmental Modification Convention (Non-triggered)
+	country_event = {
+	
+		id = 11913
+
+		trigger = {
+			ai = yes
+			has_global_flag = gflag_UN_environmental_modification_convention_passes
+			NOT = { has_country_modifier = mod_UN_environmental_modification_convention_ratified }
+			NOT = { USA = { has_country_modifier = mod_UN_environmental_modification_convention_ratifier_delay } }
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			#Add more
+		}
+		
+		mean_time_to_happen = {
+			months = 40
+			modifier = {
+				factor = 0.6
+				is_org_leader = XUN
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					rule_of_law = substantively_defined
+					rule_of_law = well_defined
+				}
+			}
+			modifier = {
+				factor = 0.7
+				OR = {
+					foreign_policy = dove_policy_pol
+					foreign_policy = detente_pol
+				}
+			}
+			modifier = {
+				factor = 0.7
+				national_identity = humanitarian_focus
+			}
+			modifier = {
+				factor = 0.7
+				OR = {
+					national_attitude = defensive
+					national_attitude = balance_of_power
+				}
+			}
+			modifier = {
+				factor = 0.7
+				is_major = no
+			}
+			modifier = {
+				factor = 1.5
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.1
+				national_attitude = non-interventionism
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					rule_of_law = thinly_defined
+					rule_of_law = narrowly_defined
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					foreign_policy = hardline_pol
+					foreign_policy = containment_pol
+				}
+			}
+			modifier = {
+				factor = 1.5
+				national_attitude = hegemony
+			}
+			modifier = {
+				factor = 1.25
+				greatest_warhead_owner = yes
+			}
+			modifier = {
+				factor = 1.5
+				doomsday_clock = 58
+			}
+			modifier = {
+				factor = 1.25
+				doomsday_clock = 55
+				NOT = { doomsday_clock = 58 }
+			}
+			modifier = {
+				factor = 1.5
+				industry_physics = 7
+				industry_chemistry = 5
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME11912"
+		desc = "EVTDESC11912"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA11912"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_environmental_modification_convention_ratified
+				duration = -1
+			}
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_environmental_modification_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_environmental_modification_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			}
+			
+			XUN = { prestige_change = 2 }
+		}
+	}
+
+	#11914 - We have revoked the UN Environmental Modification Convention
+	country_event = {
+	
+		id = 11914
+
+		trigger = {
+			ai = yes
+			has_country_modifier = mod_UN_environmental_modification_convention_ratified
+			NOT = { has_country_modifier = mod_UN_environmental_modification_convention_ratified_recently }
+			NOT = { has_country_flag = flag_UN_environmental_modification_convention_supporter }
+			num_of_cities = 2
+			industry_physics = 7
+			industry_chemistry = 5
+			war_exhaustion = 5
+			OR = {
+				national_identity = territorial_focus
+				national_identity = cultural_bias_focus
+				national_identity = state_building_focus
+			}
+			OR = {
+				AND = {
+					war_exhaustion = 15
+					lost_national = 0.15
+				}
+				revolt_percentage = 0.35
+			}
+		}
+		
+		mean_time_to_happen = {
+			months = 9
+		}
+		
+		major = yes
+
+		title = "EVTNAME11914"
+		desc = "EVTDESC11914"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA11914"					#Good riddance
+			prestige_change = -8
+			remove_country_modifier = mod_UN_environmental_modification_convention_ratified
+			hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_environmental_modification_convention_revoked_recently
+					duration = 365
+				}
+			}
+			
+			XUN = { prestige_change = -3 }
+		}
+	}

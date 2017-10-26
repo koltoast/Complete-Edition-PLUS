@@ -1,0 +1,115 @@
+#EnvironmentalModificationConvention_decisions.txt
+#UN Environmental Modification Convention
+
+#UN Secretary General:
+	#dec_UN_raise_environmental_modification_convention - Raise the UN Environmental Modification Convention in the General Assembly
+	#dec_UN_environmental_modification_convention_disable_voting_notifications - Disable UN Voting Notifications
+	
+#Global:
+	#dec_UN_ratify_environmental_modification_convention - Ratify the UN Environmental Modification Convention
+	#dec_UN_withdraw_from_environmental_modification_convention - Withdraw from the UN Environmental Modification Convention
+	
+diplomatic_decisions = {
+## UN Secretary General ##
+	#dec_UN_raise_environmental_modification_convention - Raise the UN Environmental Modification Convention in the General Assembly
+	dec_UN_raise_environmental_modification_convention = {
+		category = international
+		picture = "xxxx"
+		potential = {
+			#year = 1978
+			NOT = { has_global_flag = gflag_UN_environmental_modification_convention_raised }
+			NOT = { has_global_flag = gflag_UN_resolution_active }
+			is_org_leader = XUN
+		}
+		
+		allow = {
+			NOT = { 
+				USA = { has_country_modifier = mod_UN_environmental_modification_convention_failure_delay }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			set_global_flag = gflag_UN_environmental_modification_convention_raised
+			set_global_flag = gflag_UN_resolution_active
+			country_event = 11900
+		}
+	}
+	
+	#dec_UN_environmental_modification_convention_disable_voting_notifications - Disable UN Voting Notifications
+	dec_UN_environmental_modification_convention_disable_voting_notifications = {
+		category = international
+		picture = "xxxx"
+		
+		potential = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_environmental_modification_convention_voting
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		effect = {
+			clr_global_flag = gflag_UN_voting_notifications
+		}
+	}
+	
+## Global ##
+	#dec_UN_ratify_environmental_modification_convention - Ratify the UN Environmental Modification Convention
+	dec_UN_ratify_environmental_modification_convention = {
+		category = international
+		picture = "xxxx"
+		potential = {
+			is_org_member = XUN
+			NOT = { has_country_flag = flag_UN_environmental_modification_convention_ratified }
+			has_global_flag = gflag_UN_environmental_modification_convention_passes
+		}
+		
+		allow = {
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			NOT = { intelligence_policy = wet_operations_pol }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			set_country_flag = flag_UN_environmental_modification_convention_ratified
+			country_event = 11912
+		}
+	}
+	
+	#dec_UN_withdraw_from_environmental_modification_convention - Withdraw from the UN Environmental Modification Convention
+	dec_UN_withdraw_from_environmental_modification_convention = {
+		category = international
+		picture = "xxxx"
+		potential = {
+			is_org_member = XUN
+			has_country_flag = flag_UN_environmental_modification_convention_ratified
+		}
+		
+		allow = {
+			NOT = { has_country_flag = "UN_EMBARGO" }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			clr_country_flag = flag_UN_environmental_modification_convention_ratified
+			country_event = 11914
+		}
+	}
+	
+
+}

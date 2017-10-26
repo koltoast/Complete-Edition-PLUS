@@ -1,0 +1,91 @@
+
+
+diplomatic_decisions = {
+
+	trigger_invasion = {
+		category = national
+		potential = {	
+               has_global_flag = invtriggermajh		
+               war = yes
+			   ai = yes
+			   NOT = { this = { lost_national = 1 } }
+			   fuel = 1000
+			   supplies = 1000	
+               money = 10000			   
+			   
+			   
+					  
+		}
+		allow = {
+		}	
+		ai_will_do = {
+			factor = 10
+		}	
+		effect = {	
+		any_country = { limit = { war_with = this }  country_event = 700124 }
+		
+
+		}
+		
+	}
+	
+	trig_invasion2 = {
+		category = national
+		potential = {	
+               has_global_flag = invtrigger		
+               war = yes
+			   ai = yes
+			   NOT = { this = { lost_national = 1 } }
+			   
+					  
+		}
+		allow = {
+		}	
+		ai_will_do = {
+			factor = 10
+		}	
+		effect = {	
+		any_country = { limit = { war_with = this fuel = 1000 supplies = 1000 money = 10000 }  country_event = 700136 }
+		
+
+		}
+		
+	}	
+
+	prepare_ground_for_an_invasion = {
+		category = national
+		potential = {	
+               war = yes
+			   not = { has_global_flag = invtriggermajh }		   
+		}
+		allow = {
+		}	
+		ai_will_do = {
+			factor = 70
+		}		
+		effect = {	
+		set_global_flag = invtriggermajh
+		}
+		
+	}
+	prepare_ground_for2 = {
+		category = national
+		potential = {	
+               war = yes
+			   not = { has_global_flag = invtrigger }		   
+		}
+		allow = {
+		}	
+		ai_will_do = {
+			factor = 70
+		}		
+		effect = {	
+		set_global_flag = invtrigger
+		}
+		
+	}	
+	
+ }
+ 
+		
+	

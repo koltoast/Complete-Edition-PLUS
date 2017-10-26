@@ -1,0 +1,40 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Country Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+arms_sales_enquiry;Arms Sales Enquiry;;;;;;;;;;;;;x
+arm_sales_1;Crackdown on Illegal Arms Exports;;;;;;;;;;;;;x
+cabinet_reorganisation;Cabinet Reorganisation;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;;x
+# Events ; REMOVE HASH FOR ACTIVE EVENTS AND OPTIONS;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;;x
+#For all countries;;;;;;;;;;;;;;;x
+EVTNAME50020;Arms being resold to foreign terrorist organizations;;;;;;;;;;;;;x;
+EVTDESC50020;The glut of surplus WWII arms has created quite a lucrative market for black market arms dealers who are willing to sell to the world’s more unsavory elements. The worldwide abundance of surplus firearms means that prices are low and demand is high wherever armed conflict rages. Our internal security has just uncovered an illicit arms trafficking ring operating out of our country, but has not made any moves against it yet. We are reasonably sure that the smugglers are supplying arms to various terrorist organizations. How shall we proceed?;;;;;;;;;;;;;x;
+EVTOPTA50020;None of our business;;;;;;;;;;;;;x;
+EVTOPTB50020;Organize an inquiry;;;;;;;;;;;;;x;
+EVTOPTC50020;We must put a stop to this immediately;;;;;;;;;;;;;x;
+EVTNAME50021;Arms being on-sold to embargoed nations;;;;;;;;;;;;;x;
+EVTDESC50021;The glut of surplus WWII arms has created quite a lucrative market for black market arms dealers who are willing to sell to the world’s more unsavory elements. The worldwide abundance of surplus firearms means that prices are low and demand is high wherever armed conflict rages. Our internal security has just uncovered an illicit arms trafficking ring operating out of our country, but has not made any moves against it yet. There is evidence that the smugglers are selling weapons to a nation that we are embargoing. How shall we proceed?;;;;;;;;;;;;;x;
+EVTOPTA50021;None of our business;;;;;;;;;;;;;x;
+EVTOPTB50021;Organize an inquiry;;;;;;;;;;;;;x;
+EVTOPTC50021;We must put a stop to this immediately;;;;;;;;;;;;;x;
+EVTNAME50022;Arms contracts linked to humanitarian aid;;;;;;;;;;;;;x;
+EVTDESC50022;The glut of surplus WWII arms has created quite a lucrative market for black market arms dealers who are willing to sell to the world’s more unsavory elements. The worldwide abundance of surplus firearms means that prices are low and demand is high wherever armed conflict rages. Our internal security has just uncovered an illicit arms trafficking ring operating out of our country, operating under the cover of humanitarian aid to a nation we are embargoing. How shall we proceed?;;;;;;;;;;;;;x;
+EVTOPTA50022;Cover up the affair;;;;;;;;;;;;;x;
+EVTOPTB50022;Organize an inquiry;;;;;;;;;;;;;x;
+EVTOPTC50022;We must put a stop to this immediately;;;;;;;;;;;;;x;
+EVTNAME50023;Arms sales inquiry absolves government of blame;;;;;;;;;;;;;x;
+EVTDESC50023;The recent inquiry into the criminal arms sales emanating from our country has found that our government had absolutely nothing to do with them, and that all smuggling operations were apparently the work of independent bad actors. Naturally, we have condemned these unlawful acts.;;;;;;;;;;;;;x;
+EVTOPTA50023;Excellent news;;;;;;;;;;;;;x;
+EVTNAME50024;Arms sales inquiry ends inconclusively;;;;;;;;;;;;;x;
+EVTDESC50024;The recent inquiry into the criminal arms sales emanating from our country has been unable to find any evidence linking our government to the smuggling operation, but neither has it found evidence to exonerate us. Lots of questions remain unanswered, but fortunately for us the situation is murky enough for us to enjoy full deniability.;;;;;;;;;;;;;x;
+EVTOPTA50024;Could have been worse;;;;;;;;;;;;;x;
+EVTNAME50025;Arms sales inquiry lays blame directly on government;;;;;;;;;;;;;x;
+EVTDESC50025;The recent inquiry into the criminal arms sales emanating from our country has traced the money trail directly back to our government – we’ve been caught red-handed handing weapons over to international terrorists. We might still be able to bottle this up, but there are no guarantees. What shall we do?;;;;;;;;;;;;;x;
+EVTOPTA50025;Cover the result up;;;;;;;;;;;;;x;
+EVTOPTB50025;Let it be released;;;;;;;;;;;;;x;
+EVTNAME50026;Arms sales inquiry lays blame on high-ranking minister;;;;;;;;;;;;;x;
+EVTDESC50026;The recent inquiry into the criminal arms sales emanating from our country has traced the money trail directly back to a very high-ranking minister in our government. This will severely damage our public image if the report gets out. We might still be able to bottle it up, but there are no guarantees. What shall we do?;;;;;;;;;;;;;x;
+EVTOPTA50026;Cover the result up;;;;;;;;;;;;;x;
+EVTOPTB50026;Sack the minister;;;;;;;;;;;;;x;

@@ -1,0 +1,391 @@
+diplomatic_decisions = {
+
+	dec_EGY_the_suez_question = {		#Decision 01 for EGY – The Suez Question
+		category = national
+		picture = "1951_Suez_Canal"
+		potential = {
+			tag = EGY
+			ENG = { owns = 7515 }
+			NOT = { has_country_flag = suez_question }
+		}
+		
+		allow = {
+			war = no
+			OR = {
+				has_global_flag = resolution_95
+				AND = {
+					dissent = 5
+					NOT = {
+						relation = { who = ENG value = 50 }
+					}
+					OR = {
+						exists = ISR
+						exists = PAL
+					}
+					ISR = { war = no }
+					PAL = { war = no }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		effect = {
+			country_event = 180020
+			set_country_flag = suez_question
+		}
+	}
+	
+	dec_EGY_suez_relations = {		#Decision 01 for ENG – Egyptian Relations – Suez Canal Company
+		category = national
+		picture = "1951_Suez_Canal"
+		potential = {
+			tag = ENG
+			EGY = {
+				has_country_flag = military_coup
+			}
+			NOT = {
+				has_country_flag = dec_EGY_sudan_relations
+			}
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		effect = {
+			country_event = 181051
+			set_country_flag = dec_EGY_suez_relations
+		}
+	}
+	
+	dec_EGY_sudan_relations = {		#Decision 02 for ENG – Egyptian Relations – The Sudanese Question
+		category = national
+		picture = "1956_Sudanese_Question"
+		potential = {
+			tag = ENG
+			EGY = {
+				has_country_flag = military_coup
+			}
+			has_country_flag = dec_EGY_suez_relations
+			NOT = {
+				has_country_flag = dec_EGY_sudan_relations
+			}
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		effect = {
+			country_event = 181052
+			set_country_flag = dec_EGY_sudan_relations
+		}
+	}
+	
+	dec_EGY_seize_suez_canal = {		#Decision 02 for EGY – Seize the Suez Canal
+		category = national
+		picture = "1956_Egypt_nationalizes_Suez_Canal"
+		potential = {
+			tag = EGY
+			ENG = { owns = 7515 }
+			has_country_flag = suez_leased_out
+			NOT = { has_country_flag = suez_seized }
+			ENG = {
+				owns = 7515
+				has_country_flag = dec_EGY_suez_relations
+				has_country_flag = dec_EGY_sudan_relations
+			}
+		}
+		
+		allow = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 5
+				has_country_flag = israeli_tensions
+			}
+			modifier = {
+				factor = 0.25
+				relation = { who = ISR value = 150 }
+			}
+			modifier = {
+				factor = 0.25
+				relation = { who = ENG value = 150 }
+			}
+			modifier = {
+				factor = 0
+				relation = { who = ENG value = 190 }
+			}
+		}
+		
+		effect = {
+			ENG = { country_event = 181053 }
+			FRA = { country_event = 194020 }
+			clr_country_flag = stackelberg_follower
+			clr_country_flag = suez_leased_out
+			set_global_flag = suez_seized
+		}
+	}
+	
+	dec_EGY_first_appeal_to_UN = {		#Decision 03 for EGY – First appeal to the UN!
+		category = national
+		picture = "1956_Suez_United_Nations"
+		potential = {
+			tag = EGY
+			OR = {
+				ENG = { has_country_flag = suez_crisis }
+				FRA = { has_country_flag = suez_crisis }
+				ISR = { has_country_flag = suez_crisis }
+			}
+			OR = {
+				war_with = ENG
+				war_with = FRA
+				war_with = ISR
+			}
+		}
+		
+		allow = {
+			OR = {
+				region_Egypt_North_Sina = {
+					NOT = {
+						controlled_by = EGY
+					}
+				}
+				region_Egypt_North_Sina = {
+					NOT = {
+						controlled_by = EGY
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 3
+				lost_national = 0.1
+			}
+			modifier = {
+				factor = 3
+				lost_national = 0.2
+			}
+		}
+		
+		effect = {
+			set_global_flag = draft_resolution_997
+			#o	UN start voting on:
+			#	-	End war
+			#	-	ISR gains Sinai
+			#	-	ISR gains country flag first_sanai_occupation
+			#	-	Global flag = draft_resolution_997_pass
+			#	-	All countries with “suez_crisis” clr, set to “post_suez_crisis”
+			#	-	Set_global_flag = suez_crisis_done
+		}
+	}
+	
+	
+	### Third Arab Israeli War (Six Day War) ###
+	
+	dec_ISR_golan_heights = {		#Decision 01 for ISR – The Golan Heights
+		category = national
+		picture = "Golan_heights"
+		potential = {
+			tag = ISR
+			year = 1965		#Temporary
+			NOT = { 
+				relation = { who = SYR value = 0 } 
+				relation = { who = UAR value = 0 }
+				has_country_flag = dec_ISR_golan_heights
+			}
+			has_global_flag = suez_crisis_done
+		}
+		
+		allow = {
+			6231 = {
+				controlled_by = ISR
+			}
+			14882 = {
+				OR = {
+					controlled_by = SYR
+					controlled_by = UAR
+				}
+			}
+			PAL = { war = no }
+			war = no
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		effect = {
+			country_event = 222013
+			set_country_flag = dec_ISR_golan_heights
+		}
+	}
+	
+	dec_ISR_west_bank = {		#Decision 02 for ISR – The West Bank
+		category = national
+		picture = "West_Bank"
+		potential = {
+			tag = ISR
+			year = 1965		#Temporary
+			NOT = { 
+				relation = { who = JOR value = 0 } 
+				has_country_flag = dec_ISR_west_bank
+			}
+			OR = {
+				14881 = { owned_by = JOR }
+				6520 = { owned_by = JOR }
+			}
+			has_global_flag = suez_crisis_done
+			PAL = { war = no }
+		}
+		
+		allow = {
+			PAL = { war = no }
+			war = no
+			total_amount_of_brigades = 4
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		effect = {
+			country_event = 222014
+			set_country_flag = dec_ISR_west_bank
+		}
+	}
+	
+	dec_EGY_tiran_straights = {		#Decision 04 for EGY – The Straights of Tiran
+		category = national
+		picture = "1967_Straits_of_Tiran"
+		potential = {
+			tag = EGY
+			NOT = { 
+				has_country_flag = dec_EGY_tiran_straights
+			}
+			has_global_flag = suez_crisis_done
+			ISR = {
+				OR = {
+					has_country_flag = dec_ISR_west_bank
+					has_country_flag = dec_ISR_golan_heights
+				}
+				owns = 7802
+			}
+			region_Egypt_North_Sina = {
+				owned_by = EGY
+			}
+			region_Egypt_South_Sina = {
+				owned_by = EGY
+			}
+			
+		}
+		
+		allow = {
+			NOT = { relation = { who = ISR value = 0 } }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		effect = {
+			country_event = 180030
+			set_country_flag = dec_EGY_tiran_straights
+		}
+	}
+	
+	dec_JOR_defensive_pact = {		#Decision 01 for JOR – Defensive Pact
+		category = national
+		picture = "1967_Jordanian_tanks_June_4"
+		potential = {
+			tag = JOR
+			NOT = { 
+				has_country_flag = dec_JOR_defensive_pact
+				has_country_flag = iraqi_alliance
+				alliance_with = IRQ
+				has_global_flag = third_arab_israeli_war_ongoing
+				has_global_flag = third_arab_israeli_war_done
+			}
+			OR = {
+				owns = 14881
+				owns = 6520
+			}
+			has_global_flag = tiran_closed
+		}
+		
+		allow = {
+			relation = { who = IRQ value = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		effect = {
+			IRQ = { country_event = 221010 }
+			set_country_flag = dec_JOR_defensive_pact
+		}
+	}
+	
+	dec_EGY_jordanian_alliance = {		#Decision 05 for EGY – Jordanian Alliance
+		category = national
+		picture = "1967_Arab_Defence_Pact"
+		potential = {
+			tag = EGY
+			ISR = { has_country_flag = dec_ISR_west_bank }
+			NOT = { has_country_flag = dec_EGY_jordanian_alliance }
+		}
+		
+		allow = {
+			relation = { who = IRQ value = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		effect = {
+			JOR = { country_event = 226010 }
+			set_country_flag = dec_EGY_jordanian_alliance
+		}
+	}
+	
+	dec_ISR_third_arab_israeli_war = {		#Decision 03 for ISR – The Third Arab-Israeli War
+		category = national
+		picture = "1967_Six_Day_War"
+		potential = {
+			tag = ISR
+			has_country_flag = third_arab_israeli_war_postponed
+			NOT = { has_country_flag = third_arab_israeli_war_ongoing }
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		effect = {
+			clr_country_flag = third_arab_israeli_war_postponed
+			set_country_flag = third_arab_israeli_war_ongoing
+			limited_war = EGY
+		}
+	}
+	
+}

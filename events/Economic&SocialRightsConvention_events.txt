@@ -1,0 +1,1053 @@
+#Economic&SocialRightsConvention_events.txt
+#UN Economic & Social Rights Convention
+
+#UN Secretary General:
+	#12300 - Raise the UN Economic & Social Rights Convention for Voting - Triggered by dec_UN_raise_economic_and_social_rights_convention
+	#12301 - Should We Have Voting Notifications Or Not?
+	#12302 - UN Economic & Social Rights Convention Resolution Fails in the General Assembly
+	#12303 - UN Economic & Social Rights Convention Resolution Passes in the General Assembly
+	
+#Global:
+	#12310 - Vote on the UN Economic & Social Rights Convention - Notifications Off
+	#12311 - Vote on the UN Economic & Social Rights Convention - Notifications On (Major Event)
+	#12312 - We have ratified the UN Economic & Social Rights Convention - Triggered
+	#12313 - We have ratified the UN Economic & Social Rights Convention - Non-triggered
+	#12314 - We have revoked the UN Economic & Social Rights Convention
+	
+	
+## UN Secretary General ##
+	#12300 - Raise the UN Economic & Social Rights Convention for Voting
+	country_event = {
+	
+		id = 12300
+
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME12300"
+		desc = "EVTDESC12300"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12300" 					#Large diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 40 }
+			#}
+			#XUN  = { prestige_change = -40 }
+			
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			country_event = 12301
+		}
+
+		option = {
+			name = "EVTOPTB12300" 					#Small diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 15 }
+			#}
+			#XUN  = { prestige_change = -15 }
+			
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			country_event = 12301
+		}
+
+		option = {
+			name = "EVTOPTC12300"					#No diplomatic investment
+			
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			country_event = 12301
+		}
+	}
+	
+	#12301 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 12301
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME12301"
+		desc = "EVTDESC12301"
+		picture = "xxxx"
+		
+		option = {
+			name = "EVTOPTA12301"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_economic_and_social_rights_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_economic_and_social_rights_convention_voting
+		}
+		
+		option = {
+			name = "EVTOPTB12301"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_economic_and_social_rights_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_economic_and_social_rights_convention_voting
+		}
+	}
+	
+	#12302 - UN Economic & Social Rights Convention Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 12302
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_economic_and_social_rights_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME12302"
+		desc = "EVTDESC12302"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_economic_and_social_rights_convention_voting
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_economic_and_social_rights_convention_fails
+		}
+
+		option = {
+			name = "EVTOPTA12302"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			#XUN  = { prestige_change = -50 }
+			
+			#hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_economic_and_social_rights_convention_failure_delay
+						duration = 1460
+					}
+				}
+			#}
+			clr_global_flag = gflag_UN_economic_and_social_rights_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#12303 - UN Economic & Social Rights Convention Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 12303
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_economic_and_social_rights_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME12303"
+		desc = "EVTDESC12303"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_economic_and_social_rights_convention_voting
+			clr_global_flag = gflag_UN_economic_and_social_rights_convention_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_economic_and_social_rights_convention_passes
+		}
+
+		option = {
+			name = "EVTOPTA12303"					#Excellent
+			clr_global_var = var_UN_votes_For
+			
+			#XUN  = { prestige_change = 50 }
+			
+			any_country = {
+				limit = {
+					has_country_flag = flag_UN_economic_and_social_rights_convention_supporter
+				}
+				set_country_flag = flag_UN_economic_and_social_rights_convention_ratified
+				country_event = 12312
+			}
+			clr_global_flag = gflag_UN_economic_and_social_rights_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+
+## Global ##
+	#12310 - Vote on the UN Economic & Social Rights Convention - Notifications Off
+	country_event = {
+	
+		id = 12310
+		
+		trigger = {
+			has_country_flag = flag_UN_economic_and_social_rights_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_economic_and_social_rights_convention_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME12310"
+		desc = "EVTDESC12310"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_economic_and_social_rights_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_economic_and_social_rights_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA12310"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_economic_and_social_rights_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = substantively_defined
+						rule_of_law = well_defined
+					}
+				}
+				modifier = {
+					factor = 1.1
+					civil_liberties = fully_granted_liberties
+				}
+				modifier = {
+					factor = 1.5
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.5
+					economic_policy = welfare_state_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						economic_policy = development_eco_pol
+						economic_policy = indicative_planning_pol
+						economic_policy = five-year_planning_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						domestic_policy = educational_focus_pol
+						domestic_policy = social_focus_pol
+						domestic_policy = health_focus_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						internal_policy = liberal_aff_pol
+						internal_policy = democratic_aff_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					national_identity = equality_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = state_building_focus
+						national_identity = civic_focus
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						education_policy = very_low_funding_edu_pol
+						education_policy = low_funding_edu_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						ideology_group = comintern
+						ideology = left_wing_radical_idolg
+					}
+				}
+				modifier = {
+					factor = 1.25
+					ideology = social_democrat_idolg
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_economic_and_social_rights_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB12310"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+			clr_country_flag = flag_UN_economic_and_social_rights_convention_supporter
+		}
+
+		option = {
+			name = "EVTOPTC12310"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = thinly_defined
+						rule_of_law = narrowly_defined
+					}
+				}
+				modifier = {
+					factor = 1.25
+					civil_liberties = suspended_indefinitely
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						civil_liberties = martial_law
+						civil_liberties = emergency_law
+					}
+				}
+				modifier = {
+					factor = 2
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.5
+					economic_policy = supply_side_eco_pol
+				}
+				modifier = {
+					factor = 1.25
+					domestic_policy = commercial_focus_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						internal_policy = repressive_aff_pol
+						internal_policy = state_controlled_aff_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = corporate_focus
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						education_policy = very_low_funding_edu_pol
+						education_policy = low_funding_edu_pol
+					}
+				}
+				modifier = {
+					factor = 2
+					ideology = fascistic_idolg
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						ideology = market_liberal_idolg
+						ideology = paternal_auto_idolg
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			clr_country_flag = flag_UN_economic_and_social_rights_convention_supporter
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_economic_and_social_rights_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#12311 - Vote on the UN Economic & Social Rights Convention - Notifications On
+	country_event = {
+	
+		id = 12311
+		
+		trigger = {
+			has_country_flag = flag_UN_economic_and_social_rights_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_economic_and_social_rights_convention_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME12310"
+		desc = "EVTDESC12310"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_economic_and_social_rights_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_economic_and_social_rights_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA12310"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_economic_and_social_rights_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = substantively_defined
+						rule_of_law = well_defined
+					}
+				}
+				modifier = {
+					factor = 1.1
+					civil_liberties = fully_granted_liberties
+				}
+				modifier = {
+					factor = 1.5
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.5
+					economic_policy = welfare_state_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						economic_policy = development_eco_pol
+						economic_policy = indicative_planning_pol
+						economic_policy = five-year_planning_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						domestic_policy = educational_focus_pol
+						domestic_policy = social_focus_pol
+						domestic_policy = health_focus_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						internal_policy = liberal_aff_pol
+						internal_policy = democratic_aff_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					national_identity = equality_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = state_building_focus
+						national_identity = civic_focus
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						education_policy = very_low_funding_edu_pol
+						education_policy = low_funding_edu_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						ideology_group = comintern
+						ideology = left_wing_radical_idolg
+					}
+				}
+				modifier = {
+					factor = 1.25
+					ideology = social_democrat_idolg
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_economic_and_social_rights_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB12310"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC12310"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = thinly_defined
+						rule_of_law = narrowly_defined
+					}
+				}
+				modifier = {
+					factor = 1.25
+					civil_liberties = suspended_indefinitely
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						civil_liberties = martial_law
+						civil_liberties = emergency_law
+					}
+				}
+				modifier = {
+					factor = 2
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.5
+					economic_policy = supply_side_eco_pol
+				}
+				modifier = {
+					factor = 1.25
+					domestic_policy = commercial_focus_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						internal_policy = repressive_aff_pol
+						internal_policy = state_controlled_aff_pol
+					}
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = corporate_focus
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						education_policy = very_low_funding_edu_pol
+						education_policy = low_funding_edu_pol
+					}
+				}
+				modifier = {
+					factor = 2
+					ideology = fascistic_idolg
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						ideology = market_liberal_idolg
+						ideology = paternal_auto_idolg
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_economic_and_social_rights_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#12312 - We have ratified the UN Economic & Social Rights Convention - Triggered
+	country_event = {
+	
+		id = 12312
+
+		is_triggered_only = yes
+
+		title = "EVTNAME12312"
+		desc = "EVTDESC12312"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12312"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_economic_and_social_rights_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_economic_and_social_rights_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_economic_and_social_rights_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#12313 - We have ratified the UN Economic & Social Rights Convention (Non-triggered)
+	country_event = {
+	
+		id = 12313
+
+		trigger = {
+			ai = yes
+			has_global_flag = gflag_UN_economic_and_social_rights_convention_passes
+			NOT = { has_country_modifier = mod_UN_economic_and_social_rights_convention_ratified }
+			NOT = { USA = { has_country_modifier = mod_UN_economic_and_social_rights_convention_ratifier_delay } }
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			NOT = { human_rights = not_recognized }
+			NOT = { ideology = fascistic_idolg }
+			#Add more
+		}
+		
+		mean_time_to_happen = {
+			months = 40
+			modifier = {
+				factor = 0.6
+				is_org_leader = XUN
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					rule_of_law = substantively_defined
+					rule_of_law = well_defined
+				}
+			}
+			modifier = {
+				factor = 0.8
+				civil_liberties = fully_granted_liberties
+			}
+			modifier = {
+				factor = 0.6
+				human_rights = universal_rights
+			}
+			modifier = {
+				factor = 0.6
+				economic_policy = welfare_state_pol
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					economic_policy = development_eco_pol
+					economic_policy = indicative_planning_pol
+					economic_policy = five-year_planning_pol
+				}
+			}
+			modifier = {
+				factor = 0.7
+				OR = {
+					domestic_policy = educational_focus_pol
+					domestic_policy = social_focus_pol
+					domestic_policy = health_focus_pol
+				}
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					internal_policy = liberal_aff_pol
+					internal_policy = democratic_aff_pol
+				}
+			}
+			modifier = {
+				factor = 0.6
+				national_identity = equality_focus
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					national_identity = state_building_focus
+					national_identity = civic_focus
+				}
+			}
+			modifier = {
+				factor = 0.7
+				OR = {
+					education_policy = very_low_funding_edu_pol
+					education_policy = low_funding_edu_pol
+				}
+			}
+			modifier = {
+				factor = 0.6
+				OR = {
+					ideology_group = comintern
+					ideology = left_wing_radical_idolg
+				}
+			}
+			modifier = {
+				factor = 0.7
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 1.5
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.1
+				national_attitude = non-interventionism
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					rule_of_law = thinly_defined
+					rule_of_law = narrowly_defined
+				}
+			}
+			modifier = {
+				factor = 1.5
+				civil_liberties = suspended_indefinitely
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					civil_liberties = martial_law
+					civil_liberties = emergency_law
+				}
+			}
+			modifier = {
+				factor = 2
+				economic_policy = supply_side_eco_pol
+			}
+			modifier = {
+				factor = 1.5
+				domestic_policy = commercial_focus_pol
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					internal_policy = repressive_aff_pol
+					internal_policy = state_controlled_aff_pol
+				}
+			}
+			modifier = {
+				factor = 1.5
+				national_identity = corporate_focus
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					education_policy = very_low_funding_edu_pol
+					education_policy = low_funding_edu_pol
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ideology = market_liberal_idolg
+					ideology = paternal_auto_idolg
+				}
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME12312"
+		desc = "EVTDESC12312"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12312"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_economic_and_social_rights_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_economic_and_social_rights_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_economic_and_social_rights_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#12314 - We have revoked the UN Economic & Social Rights Convention
+	country_event = {
+	
+		id = 12314
+
+		trigger = {
+			ai = yes
+			has_country_modifier = mod_UN_economic_and_social_rights_convention_ratified
+			NOT = { has_country_modifier = mod_UN_economic_and_social_rights_convention_ratified_recently }
+			NOT = { has_country_flag = flag_UN_economic_and_social_rights_convention_supporter }
+			NOT = { human_rights = universal_rights }
+			NOT = { human_rights = fully_granted_liberties }
+			OR = {
+				human_rights = not_recognized
+				AND = {
+					civil_liberties = suspended_indefinitely
+					OR = {
+						internal_policy = repressive_aff_pol
+						internal_policy = state_controlled_aff_pol
+					}
+				}
+				ideology = fascistic_idolg
+			}
+		}
+		
+		mean_time_to_happen = {
+			months = 9
+			modifier = {
+				factor = 0.5
+				has_country_flag = "UN_EMBARGO"
+			}
+			modifier = {
+				factor = 0.75
+				human_rights = not_recognized
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME12314"
+		desc = "EVTDESC12314"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12314"					#Good riddance
+			prestige_change = -8
+			remove_country_modifier = mod_UN_economic_and_social_rights_convention_ratified
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_economic_and_social_rights_convention_revoked_recently
+					duration = 365
+				}
+			#}
+			
+			#XUN = { prestige_change = -3 }
+		}
+	}

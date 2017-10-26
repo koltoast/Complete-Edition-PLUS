@@ -1,0 +1,27 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+signed_the_geneva_convention;Ratified the Fourth Geneva Convention;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+dec_sign_geneva_conventions_title;Ratify the Fourth Geneva Convention;;;;;;;;;;;;;x
+dec_sign_geneva_conventions_desc;The Fourth Geneva Convention, drafted in light of the disastrous experiences of World War II, defined humanitarian protections for civilians in a war zone, and outlawed the practice of total war.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+EVTNAME10000;Ratify the Fourth Geneva Convention;;;;;;;;;;;;;x
+EVTDESC10000;The Fourth Geneva Convention, drafted in light of the disastrous experiences of World War II, defined humanitarian protections for civilians in a war zone, and outlawed the practice of total war. We have now ratified this treaty, making us bound by its tenets.;;;;;;;;;;;;;x
+EVTOPTA10000;Progress and civility shall prevail;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## SCH ##;;;;;;;;;;;;;;x
+EVTNAME306000;The Fourth Geneva Convention;;;;;;;;;;;;;x
+EVTDESC306000;The previous Geneva Conventions have proved themselves vital instruments of international humanitarianism. However, they were designed in an era before 'total war' and the blurring of the line between home front and war front we have witnessed in recent decades, and as such the protections they afforded did not extend adequately to civilian populaces.\nThe time has come for a further step, the Fourth Geneva Convention, drafted in light of the disastrous experiences and unprecedented civilian suffering of World War II, which is to define humanitarian protections for civilians in a war zone and outlawed the practice of total war.;;;;;;;;;;;;;x
+EVTOPTA306000;An idea long overdue.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

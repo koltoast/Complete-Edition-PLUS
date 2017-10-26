@@ -1,0 +1,28 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+ratified_the_law_of_treaties_convention;Ratified the Vienna Convention on the Law of Treaties;;;;;;;;;;;;;x
+law_of_treaties_convention_delay;Vienna Convention on the Law of Treaties Delay;;;;;;;;;;;;x;
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+dec_ratify_law_of_treaties_convention_title;Ratify the Convention on the Law of Treaties;;;;;;;;;;;;;x
+dec_ratify_law_of_treaties_convention_desc;Ratify the Vienna Convention on the Law of Treaties. The Convention codifies numerous bedrock principles of customary international law. It defines a treaty as an international agreement concluded between states in written form and governed by international law, as well as affirming that every state possesses the capacity to conclude treaties. Moreover, it codifies fundamental principles such as the notion that states must uphold their treaty obligations, and that tangible consequences should result for states who fail to do so. The Convention’s aim is to bring order and a semblance of predictability to the conclusion of treaties among states.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+EVTNAME10200;Vienna Convention on the Law of Treaties;;;;;;;;;;;;;x
+EVTDESC10200;We have ratified the Vienna Convention on the Law of Treaties. The Convention codifies several bedrocks of contemporary international law. It defines a treaty as an international agreement concluded between states in written form and governed by international law, as well as affirming that every state possesses the capacity to conclude treaties.;;;;;;;;;;;;;x
+EVTOPTA10200;Progress and civility shall prevail.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## AUS ##;;;;;;;;;;;;;;x
+EVTNAME119010;Vienna Convention on the Law of Treaties;;;;;;;;;;;;;x
+EVTDESC119010;Ratify the Vienna Convention on the Law of Treaties. The Convention codifies numerous bedrock principles of customary international law. It defines a treaty as an international agreement concluded between states in written form and governed by international law, as well as affirming that every state possesses the capacity to conclude treaties. Moreover, it codifies fundamental principles such as the notion that states must uphold their treaty obligations, and that tangible consequences should result for states who fail to do so. The Convention’s aim is to bring order and a semblance of predictability to the conclusion of treaties among states.;;;;;;;;;;;;;x
+EVTOPTA119010;An idea long overdue.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

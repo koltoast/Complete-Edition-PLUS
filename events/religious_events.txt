@@ -1,0 +1,1090 @@
+#ID Ranges for this file are 50300-50399.
+#Chains: 50300-50301, 50303-50306
+#
+country_event = {
+	id = 50300 #Our state is a de-facto theocracy but we have a de-jure secular state... 
+	title = "EVTNAME50300"		
+	desc = "EVTDESC50300"		
+	picture = "Shariah_law"
+	trigger = {
+		government = theocracy_gov
+		organized_religions_law = secular_state
+		NOT = { has_country_modifier = theocracy_in_transition }
+		NOT = { has_country_modifier = secular_plans_theoc }
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "EVTOPTA50300" #Amend the constitution in due time, after deliberation
+		add_country_modifier = {
+			name = theocracy_in_transition
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB50300" #Force through necessary changes
+		random_list = {
+			80 = { country_event = 50301 }
+			20 = {
+				organized_religions_law = state_religion
+				add_country_modifier = {
+					name = angry_secularists
+					duration = 90
+				}
+			}
+		}
+		prestige_change = -1
+	}
+}
+
+country_event = {
+	id = 50301 #Secularists and supporters have defeated our attempts at constitutional change.
+	title = "EVTNAME50301"		
+	desc = "EVTDESC50301"		
+	picture = "Shariah_law_revoked"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA50301" #Damn them!
+		add_country_modifier = {
+			name = angry_secularists
+			duration = 90
+		}
+		add_country_modifier = {
+			name = theocracy_in_transition
+			duration = -1
+		}
+		prestige_change = -1
+	}
+}
+
+country_event = {
+	id = 50302 #Religious law is now synonomous with our constitution. We are a full-fledged theocracy now.
+	title = "EVTNAME50302"		
+	desc = "EVTDESC50302"		
+	picture = "Shariah_law"
+	trigger = {
+		organized_religions_law = state_religion
+		has_country_modifier = theocracy_in_transition
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA50302" #OK
+		remove_country_modifier = theocracy_in_transition
+	}
+}
+
+country_event = {
+	id = 50303 #Establishment of a theocracy as a response to crisis.
+	title = "EVTNAME50303"		
+	desc = "EVTDESC50303"		
+	picture = "Shariah_law"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50303" #OK
+		random_list = {
+			10 = { country_event = 50304 }
+			60 = { country_event = 50305 }
+			30 = { country_event = 50306 }
+		}
+	}
+}
+country_event = {
+	id = 50304 #The people don't care about our changes.
+	title = "EVTNAME50304"		
+	desc = "EVTDESC50304"		
+	picture = "Shariah_law"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50304" #OK
+	}
+}
+country_event = {
+	id = 50305 #The people are angry.
+	title = "EVTNAME50305"		
+	desc = "EVTDESC50305"		
+	picture = "1955_morocco_riots"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50305" #OK
+		prestige_change = -1
+		dissent = 10
+		add_country_modifier = {
+			name = theocratic_cons_crisis
+			duration = 90
+		}
+	}
+}
+country_event = {
+	id = 50306 #The clergy supports us and helps calm down the public.
+	title = "EVTNAME50306"		
+	desc = "EVTDESC50306"		
+	picture = "1927_Grand_Mufti_of_Jerusalem"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50306" #GREAT
+		prestige_change = 1
+		dissent = -5
+		add_country_modifier = {
+			name = clerical_support
+			duration = 90
+		}
+	}
+}
+
+country_event = {
+	id = 50307 #Establishment of a theocracy via public support.
+	title = "EVTNAME50307"		
+	desc = "EVTDESC50307"		
+	picture = "1954_Syrian_congregation_in_Aleppo"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50307" #EXCELLENT!
+		prestige_change = 2
+	}
+	option = {
+		name = "EVTOPTB50307" #Let's solidify our rule...
+		elections_and_voting = hereditary_rule
+		public_oversight = moral_code_of_conduct
+		random_list = {
+			20 = { country_event = 50308 }
+			50 = { country_event = 50309 }
+			30 = { country_event = 50310 }
+		}
+	}
+}
+
+country_event = {
+	id = 50308 #The people accept our party's eternal rule.
+	title = "EVTNAME50308"		
+	desc = "EVTDESC50308"		
+	picture = "Shariah_law"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50308" #MWAHAHAHAHA!
+		prestige_change = 2
+	}
+}
+
+country_event = {
+	id = 50309 #The people are outraged by our breach of their trust
+	title = "EVTNAME50309"		
+	desc = "EVTDESC50309"		
+	picture = "1955_morocco_riots"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50309" #Damn!
+		popularity = -20
+		add_country_modifier = {
+			name = theoc_breach_of_trust
+			duration = 60
+		}
+	}
+	option = {
+		name = "EVTOPTB50309" #Fine, we'll loosen up elections...
+		elections_and_voting = gerrymandering
+		popularity = -10
+		add_country_modifier = {
+			name = theoc_breach_of_trust
+			duration = 30
+		}
+		add_country_modifier = {
+			name = flip_flopper
+			duration = 90
+		}
+	}
+}
+
+country_event = {
+	id = 50310 #The people are outraged by our actions and demand that we revert changes or suffer revolution.
+	title = "EVTNAME50310"		
+	desc = "EVTDESC50310"		
+	picture = "1954_Insurgents"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50310" #No
+		popularity = -30
+		dissent = 20
+		add_country_modifier  {
+			name = theocratic_cons_crisis
+			duration = 90
+		}
+	}
+	option = {
+		name = "EVTOPTB50310" #Accept demands
+		prestige_change = -2
+		elections_and_voting = gerrymandering
+		popularity = -15
+		add_country_modifier = {
+			name = theoc_breach_of_trust
+			duration = 30
+		}
+		add_country_modifier = {
+			name = flip_flopper
+			duration = 90
+		}
+	}
+}
+
+country_event = {
+	id = 50311 #The government of [FROM] has banned our religion.
+	title = "EVTNAME50311"		
+	desc = "EVTDESC50311"		
+	picture = "religion_banned"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50311" #This will surely hurt our relations
+		relation = { who = FROM value = -30 }
+	}
+}
+
+country_event = {
+	id = 50312 #The government of [FROM] has lifted the ban on our religion.
+	title = "EVTNAME50312"		
+	desc = "EVTDESC50312"		
+	picture = "religion_ban_lifted"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50311" #This will help mend our relations
+		relation = { who = FROM value = 10 }
+	}
+}
+
+country_event = {
+	id = 50313 #The old theocracy failed to achieve their goals. We are now a new state and no longer a theocracy in transition.
+	title = "EVTNAME50313"		
+	desc = "EVTDESC50313"
+	picture = "Shariah_law_revoked"
+	trigger = {
+		has_country_modifier = theocracy_in_transition
+		NOT = { government = theocracy_gov }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "EVTOPTA50313" #This will help mend our relations
+		remove_country_modifier = theocracy_in_transition
+	}
+}
+
+country_event = {
+	id = 50314 #Our clergy is concerned: we call ourselves a theocracy, so why is our constitution secular?
+	title = "EVTNAME50314"		
+	desc = "EVTDESC50314"
+	picture = "Shariah_law"
+	trigger = {
+		has_country_modifier = theocracy_in_transition
+		organized_religions_law = secular_state
+		NOT = { has_country_modifier = secular_plans_theoc }
+	}
+	mean_time_to_happen = {
+		years = 5
+	}
+	option = {
+		name = "EVTOPTA50314" #Because we're still working on it
+		ai_chance = { factor = 2 }
+		add_country_modifier = {
+			name = lagging_theoc_transition
+			duration = 100
+		}
+	}
+	option = {
+		name = "EVTOPTB50314" #We'll try and force through some changes.
+		ai_chance = { factor = 20 }
+		random_list = {
+			70 = { country_event = 50301 }
+			30 = {
+				organized_religions_law = state_religion
+				add_country_modifier = {
+					name = angry_secularists
+					duration = 90
+				}
+			}
+		}
+		prestige_change = -1
+	}
+	option = {
+		name = "EVTOPTC50314" #Work to re-establish a secular state
+		ai_chance = { factor = 1 }
+		national_unity = -5
+		random_list = {
+			20 = { country_event = 50317 } #Popular support
+			50 = { country_event = 50315 } #Clerical condemnation.
+			30 = { country_event = 50316 } #Clergy excommunicates us and considers us heretics.
+		}
+		remove_country_modifier = theocracy_in_transition
+		add_country_modifier = {
+			name = secular_plans_theoc
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = 50315 #The clergy condemns us.
+	title = "EVTNAME50315"		
+	desc = "EVTDESC50315"
+	picture = "1927_Grand_Mufti_of_Jerusalem"
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA50315" #Darn!
+		prestige_change = -1
+		add_country_modifier = {
+			name = clerical_condemnation
+			duration = 150
+		}
+	}
+}
+country_event = {
+	id = 50316 #The clergy/HoS threatens to excommunicate our head of government and supporters! Potentially begins a civil war.
+	title = "EVTNAME50316"
+	desc = "EVTDESC50316"
+	picture = "1927_Grand_Mufti_of_Jerusalem"
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA50316" #We'll take our chances.
+		random = {
+			chance = 20
+			country_event = 50318
+		}
+		add_country_modifier = {
+			name = heretical_leaders
+			duration = 180
+		}
+	}
+	option = {
+		name = "EVTOPTB50316" #Reconsider our plans
+		add_country_modifier = {
+			name = flip_flopper
+			duration = 90
+		}
+		remove_country_modifier = secular_plans_theoc
+	}
+	option = {
+		name = "EVTOPTC50316" #Resign from office and apologize. 
+		#assassinate_hog = yes
+		remove_country_modifier = secular_plans_theoc
+	}
+}
+country_event = {
+	id = 50317 #The people support our decision to become secular.
+	title = "EVTNAME50317"
+	desc = "EVTDESC50317"
+	picture = "1954_Syrian_congregation_in_Aleppo"
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA50317" #Thank you!
+		add_country_modifier = {
+			name = pro_secular_populace
+			duration = 90
+		}
+	}
+}
+country_event = {
+	id = 50318 #The majority of our people support our decision to become secular. Our excommunication is met with less disapproval.
+	title = "EVTNAME50318"
+	desc = "EVTDESC50318"
+	picture = "1954_Syrian_congregation_in_Aleppo"
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA50318" #Thank you!
+		add_country_modifier = {
+			name = pro_secular_populace
+			duration = 180
+		}
+	}
+}
+country_event = {
+	id = 50319 #Head of government is assassinated by pro-theocracy extremists.
+	title = "EVTNAME50319"
+	desc = "EVTDESC50319"
+	picture = "1951_burial_of_King_Abdullah_I"
+	trigger = {
+		has_country_modifier = heretical_leaders
+	}
+	mean_time_to_happen = {
+		years = 2 #~25% base chance
+		modifier = {
+			factor = 2
+			NOT = { dissent = 10 }
+		}
+		modifier = {
+			factor = 0.5
+			dissent = 30
+		}
+		modifier = {
+			factor = 0.5
+			dissent = 50
+		}
+		modifier = {
+			factor = 5
+			has_country_modifier = pro_secular_populace
+		}
+	}
+	option = {
+		name = "EVTOPTA50319" #A SAD DAY
+		assassinate_hog = yes
+	}
+}
+country_event = {
+	id = 50320 #We've conquered some new non-core areas. We'll begin converting them to [our specific branch of] the one true faith.
+	title = "EVTNAME50320"
+	desc = "EVTDESC50320"
+	picture = "1942_Muslims_praying_Delhi"
+	trigger = {
+		has_country_modifier = banned_other_religions
+		any_owned_province = {
+			NOT = { has_province_modifier = local_religions_banned }
+			NOT = { has_province_modifier = converted_populace }
+			NOT = { is_core = THIS }
+		}
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	option = {
+		name = "EVTOPTA50320" #Please do.
+		any_owned = {
+			limit = {	
+				NOT = { has_province_modifier = local_religions_banned }
+				NOT = { has_province_modifier = converted_populace }
+				NOT = { is_core = THIS }
+			}
+			add_province_modifier = { 
+				name = local_religions_banned 
+				duration = -1 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 50321 #We've liberated some provinces and lifted the local bans held in place by the previous gov't.
+	title = "EVTNAME50321"
+	desc = "EVTDESC50321"
+	picture = "religion_ban_lifted"
+	trigger = {
+		NOT = { has_country_modifier = banned_other_religions }
+		any_owned_province = {
+			OR = { 
+				has_province_modifier = local_religions_banned
+				has_province_modifier = converted_populace
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	option = {
+		name = "EVTOPTA50321" #OK
+		any_owned = {
+			limit = {
+				OR = { 
+					has_province_modifier = local_religions_banned
+					has_province_modifier = converted_populace
+				}
+			}
+			remove_province_modifier = local_religions_banned
+			remove_province_modifier = converted_populace
+		}
+	}
+}
+country_event = {
+	id = 50322 #The vast majority of the population in a province now follows the true faith.
+	title = "EVTNAME50322"
+	desc = "EVTDESC50322"
+	picture = "1942_Muslims_praying_Delhi"
+	trigger = {
+		has_country_modifier = banned_other_religions
+		any_owned_province = {
+			OR = {
+				has_province_modifier = local_religions_banned
+				AND = {
+					is_core = yes
+					NOT = { has_province_modifier = converted_populace }
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		years = 30 #30 years for ONE province to change, without modifiers.
+		modifier = {
+			factor = 5
+			NOT = { government = theocracy_gov }
+		}
+		modifier = {
+			factor = 0.9
+			has_country_modifier = moral_police
+		}
+		modifier = {
+			factor = 0.9
+			national_unity = 90
+		}
+		modifier = {
+			factor = 0.85
+			national_identity = cultural_bias_focus
+		}
+		modifier = { #Proselytizing religions
+			factor = 0.9
+			OR = { 
+				national_religion = islam
+				national_religion = christianity
+			}
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { national_unity = 70 }
+		}
+	}
+	option = {
+		name = "EVTOPTA50322" #Please do.
+		random_owned = {
+			limit = {	
+				OR = {
+					has_province_modifier = local_religions_banned
+					AND = {
+						is_core = yes
+						NOT = { has_province_modifier = converted_populace }
+					}
+				}
+			}
+			add_province_modifier = { 
+				name = converted_populace 
+				duration = -1 
+			}
+			remove_province_modifier = local_religions_banned
+		}
+	}
+}
+country_event = {
+	id = 50323 #The ban on other religions to encourage adoption of the national religion has been removed, due to a change to secularism.
+	title = "EVTNAME50323"
+	desc = "EVTDESC50323"
+	picture = "religion_ban_lifted"
+	trigger = {
+		organized_religions_law = secular_state
+		has_country_modifier = banned_other_religions
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	option = {
+		name = "EVTOPTA50323" #OK
+		remove_country_modifier = banned_other_religions
+	}
+}
+
+country_event = {
+	id = 50324 #Our state is now secular and republican
+	title = "EVTNAME50324"
+	desc = "EVTDESC50324"
+	picture = "Shariah_law_revoked"
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA50324" #This is a new beginning
+		remove_country_modifier = secular_plans_theoc
+		election = yes
+		random = {
+			chance = 70
+			country_event = 50325 #Our religious leader [HOS] resigns in outrage.
+		}
+	}
+}
+country_event = {
+	id = 50325 #Our religious leader resigns in outrage.
+	title = "EVTNAME50325"
+	desc = "EVTDESC50325"
+	picture = "1927_Grand_Mufti_of_Jerusalem"
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA50325" #What a shame...
+		assassinate_hos = yes
+		prestige_change = -1
+		random = {
+			chance = 70
+			country_event = 50326
+		}
+	}
+}
+
+country_event = {
+	id = 50326 #Fanatical supporters of old HoS are out for blood and call for revolution.
+	title = "EVTNAME50326"
+	desc = "EVTDESC50326"
+	picture = "1954_Insurgents"
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA50326" #What a shame...
+		dissent = 10
+		random = {
+			chance = 40
+			dissent = 10
+		}
+		add_country_modifier = {
+			name = fundamentalist_old_guard
+			duration = 500
+		}
+	}
+}
+country_event = {
+	id = 50327 #Our state is now a secular cons. monarchy, but the HoS remains a religious leader.
+	title = "EVTNAME50327"
+	desc = "EVTDESC50327"
+	picture = ""
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA50327" #We hope this will be a satisfactory arrangement
+		random = {
+			chance = 20
+			country_event = 50325 #Our religious leader [HOS] resigns in outrage.
+		}
+	}
+}
+country_event = {
+	id = 50328 #Our state is now a secular authoritarian state, but the HoS remains a religious leader.
+	title = "EVTNAME50328"
+	desc = "EVTDESC50328"
+	picture = ""
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA50328" #We hope this will be a satisfactory arrangement
+		random = {
+			chance = 10
+			country_event = 50325 #Our religious leader [HOS] resigns in outrage.
+		}
+	}
+}
+
+country_event = {
+	id = 50329 #The moral police is acting immorally
+	title = "EVTNAME50329"
+	desc = "EVTDESC50329"
+	picture = ""
+	trigger = {
+		has_country_modifier = moral_police
+		NOT = { has_country_modifier = immoral_moral_police }
+		NOT = { has_country_modifier = reforming_moral_police }
+	}
+	mean_time_to_happen = {
+		years = 20 #30 years for ONE province to change, without modifiers.
+		modifier = {
+			factor = 0.5
+			NOT = { national_unity = 70 }
+		}
+		modifier = {
+			factor = 1.5
+			national_unity = 90
+		}
+	}
+	option = {
+		name = "EVTOPTA50329" #Some spoiled eggs do not ruin the bunch.
+		add_country_modifier = {
+			name = immoral_moral_police
+			duration = 167
+		}
+	}
+	option = {
+		name = "EVTOPTB50329" #Punish the offenders and re-educate our officers to ensure compliance
+		add_country_modifier = {
+			name = reforming_moral_police
+			duration = 365
+		}
+		add_country_modifier = {
+			name = immoral_moral_police
+			duration = 90
+		}
+	}
+}
+
+country_event = {
+	id = 50330 #People trust our moral police.
+	title = "EVTNAME50330"
+	desc = "EVTDESC50330"
+	picture = ""
+	trigger = {
+		has_country_modifier = moral_police
+		OR = {
+			ideology = social_cons_idolg
+			ideology = paternal_auto_idolg
+			ideology = fascistic_idolg
+		}
+		civil_liberties = fully_granted_liberties
+		national_unity = 85
+		NOT = { has_country_modifier = moral_police_trust }
+		NOT = { dissent = 10 }
+		NOT = { government = totalitarian_gov }
+	}
+	mean_time_to_happen = {
+		years = 10 
+		modifier = {
+			factor = 0.75
+			public_oversight = moral_code_of_conduct
+		}
+	}
+	option = {
+		name = "EVTOPTA50330" #Great!
+		add_country_modifier = {
+			name = moral_police_trust
+			duration = 167
+		}
+	}
+}
+
+country_event = {
+	id = 50331 #Some of our gov't officals are behaving immorally according to religious law.
+	title = "EVTNAME50331"
+	desc = "EVTDESC50331"
+	picture = ""
+	trigger = {
+		OR = {
+			ideology = social_cons_idolg
+			ideology = paternal_auto_idolg
+			ideology = fascistic_idolg
+		}
+		organized_religions_law = state_religion
+		NOT = { government = authoritarian_gov }
+		NOT = { government = totalitarian_gov }
+		NOT = { government = absolute_monarchy_gov }
+		NOT = { has_country_modifier = immoral_ministers }
+	}
+	mean_time_to_happen = {
+		years = 20
+		modifier = {
+			factor = 0.5
+			public_oversight = moral_code_of_conduct
+		}
+		modifier = {
+			factor = 0.8
+			public_oversight = limited_oversight
+		}
+		modifier = {
+			factor = 1.5
+			public_oversight = transparent_public_oversight
+		}
+	}
+	option = {
+		name = "EVTOPTA50331" #There is little we can do right now except apologize.
+		add_country_modifier = {
+			name = immoral_ministers
+			duration = 167
+		}
+	}
+	option = {
+		name = "EVTOPTB50331" #Rally for public support and try to remove them from office.
+		random_list = {
+			50 = { country_event = 50332 } #We suceed
+			50 = { country_event = 50333 } #We fail
+		}
+	}
+}
+
+country_event = {
+	id = 50332 #We have succeeded in ousting the immoral ministers, though we've gotten some secularists angry in the process...
+	title = "EVTNAME50332"
+	desc = "EVTDESC50332"
+	picture = ""
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA50332" #Great
+		add_country_modifier = {
+			name = angry_secularists
+			duration = 167
+		}
+	}
+}
+
+country_event = {
+	id = 50333 #We've failed to oust the immoral ministers, and secularists have succeeded in turning people agaisnt us.
+	title = "EVTNAME50333"
+	desc = "EVTDESC50333"
+	picture = ""
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA50333" #CURSES!
+		national_unity = -5
+		add_country_modifier = {
+			name = immoral_ministers
+			duration = 167
+		}
+		add_country_modifier = {
+			name = angry_secularists
+			duration = 167
+		}
+	}
+}
+country_event = {
+	id = 50334 #Religious Awakening
+	title = "EVTNAME50334"
+	desc = "EVTDESC50334"
+	picture = ""
+	trigger = {
+		NOT = { has_country_modifier = new_age_spirituality }
+		#NOT = { has_country_modifier = religious_decline }
+		NOT = { has_country_modifier = religious_awakening }
+		NOT = { ideology = communist_idolg }
+		NOT = { ideology = maoist_idolg }
+	}
+	mean_time_to_happen = {
+		years = 100
+		modifier = {
+			factor = 0.25
+			any_neighbor_country = {
+				has_country_modifier = religious_awakening
+				NOT = { war_with = THIS }
+				same_religion = THIS
+			}
+		}
+		modifier = {
+			factor = 0.5
+			organized_religions_law = state_religion
+		}
+		modifier = {
+			factor = 0.85
+			national_unity = 90
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				ideology = left_wing_radical_idolg
+				ideology = social_democrat_idolg
+				ideology = social_liberal_idolg
+			}
+		}
+		modifier = {
+			factor = 0.5
+			government = theocracy_gov
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				ideology = social_cons_idolg
+				ideology = paternal_auto_idolg
+			}
+		}
+		#Charismatic christianity/jesus people/neoconservatism
+		modifier = {
+			factor = 0.85
+			national_religion = christianity
+			year = 1970
+		}
+		#Islamic revival
+		modifier = {
+			factor = 0.5
+			national_religion = islam
+			year = 1970
+		}
+	}
+	option = {
+		name = "EVTOPTA50334" #OK
+		add_country_modifier = {
+			name = religious_awakening
+			duration = 3650 #Lasts a decade
+		}
+	}
+}
+
+country_event = {
+	id = 50335 #Support boost to social cons/paternal auto parties during religious awakenings
+	title = "EVTNAME50335"
+	desc = "EVTDESC50335"
+	picture = ""
+	trigger = {
+		has_country_modifier = religious_awakening
+		OR = {
+			ideology = social_cons_idolg
+			ideology = paternal_auto_idolg
+		}
+		national_unity = 70
+		NOT = { dissent = 10 }
+	}
+	mean_time_to_happen = {
+		years = 5
+	}
+	option = {
+		name = "EVTOPTA50335" #Great
+		add_country_modifier = {
+			name = religious_awakening_party_support
+			duration = 365
+		}
+	}
+}
+
+country_event = {
+	id = 50336 #Support for left wing parties declines during religious awakenings
+	title = "EVTNAME50336"
+	desc = "EVTDESC50336"
+	picture = ""
+	trigger = {
+		has_country_modifier = religious_awakening
+		NOT = { ideology = market_liberal_idolg }
+		NOT = { ideology = social_cons_idolg }
+		NOT = { ideology = paternal_auto_idolg }
+		NOT = { ideology = fascistic_idolg }
+		OR = {
+			NOT = { national_unity = 90 }
+			dissent = 5
+		}
+	}
+	mean_time_to_happen = {
+		years = 5
+	}
+	option = {
+		name = "EVTOPTA50336" #Damn!
+		add_country_modifier = {
+			name = religious_awakening_party_detract
+			duration = 365
+		}
+	}
+}
+
+country_event = {
+	id = 50337 #Rise of new age spirituality and/or eastern religions/neopaganism particularly amongst the youth (could be tied to counterculture events if/when implemented)
+	title = "EVTNAME50337"
+	desc = "EVTDESC50337"
+	picture = ""
+	trigger = {
+		#NOT = { has_country_modifier = religious_decline }
+		NOT = { has_country_modifier = religious_awakening }
+		NOT = { has_country_modifier = new_age_spirituality }
+		NOT = { ideology = fascistic_idolg }
+		NOT = { ideology = paternal_auto_idolg }
+		NOT = { government = totalitarian_gov }
+		NOT = { government = authoritarian_gov }
+		NOT = { government = absolute_monarchy_gov }
+		NOT = { government = theocracy_gov }
+		OR = {
+			national_religion = christianity
+			organized_religions_law = secular_state
+		}
+	}
+	mean_time_to_happen = {
+		years = 100
+		modifier = {
+			factor = 0.05
+			any_neighbor_country = {
+				has_country_modifier = new_age_spirituality
+			}
+		}
+		modifier = {
+			factor = 5
+			organized_religions_law = state_religion
+		}
+		modifier = {
+			factor = 0.67
+			NOT = { year = 1970 }
+			OR = {
+				AND = {
+					war = yes
+					NOT = { national_identity = territorial_focus }
+					NOT = { national_identity = cultural_bias_focus }
+				}
+				national_identity = humanitarian_focus
+			}
+		}
+		modifier = {
+			factor = 0.4
+			OR = {
+				ideology = communist_idolg
+				ideology = maoist_idolg
+				ideology = left_wing_radical_idolg
+				ideology = social_democrat_idolg
+				ideology = social_liberal_idolg
+			}
+		}
+		modifier = {
+			factor = 1.25
+			ideology = social_cons_idolg
+		}
+		#More likely to occur in Europe/NA between 1955-1965
+		modifier = {
+			factor = 0.15
+			year = 1955
+			NOT = { year = 1965 }
+			OR = {
+				capital_scope = { continent = europe }
+				capital_scope = { continent = north_america }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTA50337" #OK
+		add_country_modifier = {
+			name = new_age_spirituality
+			duration = 3650 #Lasts a decade
+		}
+	}
+}
+
+country_event = {
+	id = 50338 #A generation influenced by new age spirituality becomes more and more pacifist.
+	title = "EVTNAME50338"
+	desc = "EVTDESC50338"
+	picture = ""
+	trigger = {
+		has_country_modifier = new_age_spirituality
+		NOT = { has_country_modifier = new_age_pacifists }
+	}
+	mean_time_to_happen = {
+		years = 5
+		modifier = {
+			factor = 0.5
+			war = yes
+		}
+	}
+	option = {
+		name = "EVTOPTA50338" #Damned Hippies!
+		add_country_modifier = {
+			name = new_age_pacifists
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = 50339 #The younger generation opposes our war and conscription. Many are opting out of our draft by claiming to be conscientious objectors
+	title = "EVTNAME50339"
+	desc = "EVTDESC50339"
+	picture = ""
+	trigger = {
+		has_country_modifier = new_age_spirituality
+		war = yes
+		NOT = { has_country_modifier = new_age_war_objectors }
+		OR = {
+			military_service = conventional_drafted_army
+			military_service = expanded_drafted_army
+			military_service = limited_conscription_army
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			has_country_modifier = new_age_pacifists
+		}
+	}
+	option = {
+		name = "EVTOPTA50339" #Damned Hippies! (Let them moan)
+		add_country_modifier = {
+			name = new_age_war_objectors
+			duration = 500
+		}
+	}
+}

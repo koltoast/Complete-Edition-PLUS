@@ -1,0 +1,599 @@
+#SettlementOfDisputesDeclaration_events.txt
+#UN Settlement Of Disputes Declaration
+
+#UN Secretary General:
+	#13200 - Raise the UN Settlement Of Disputes Declaration for Voting - Triggered by dec_UN_raise_settlement_of_disputes_declaration
+	#13201 - Should We Have Voting Notifications Or Not?
+	#13202 - UN Settlement Of Disputes Declaration Resolution Fails in the General Assembly
+	#13203 - UN Settlement Of Disputes Declaration Resolution Passes in the General Assembly
+	
+#Global:
+	#13210 - Vote on the UN Settlement Of Disputes Declaration - Notifications Off
+	#13211 - Vote on the UN Settlement Of Disputes Declaration - Notifications On (Major Event)
+	
+	
+## UN Secretary General ##
+	#13200 - Raise the UN Settlement Of Disputes Declaration for Voting
+	country_event = {
+	
+		id = 13200
+		
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME13200"
+		desc = "EVTDESC13200"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA13200" 					#Large diplomatic investment
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			
+			#trigger = {
+			#	XUN = { prestige = 40 }
+			#}
+			#XUN  = { prestige_change = -40 }
+			
+			country_event = 13201
+		}
+
+		option = {
+			name = "EVTOPTB13200" 					#Small diplomatic investment
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			
+			#trigger = {
+			#	XUN = { prestige = 15 }
+			#}
+			#XUN  = { prestige_change = -15 }
+			
+			country_event = 13201
+		}
+
+		option = {
+			name = "EVTOPTC13200"					#No diplomatic investment
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			
+			country_event = 13201
+		}
+	}
+	
+	#13201 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 13201
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME13201"
+		desc = "EVTDESC13201"
+		picture = "xxxx"
+		
+		option = {
+			name = "EVTOPTA13201"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_decolonisation_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_settlement_of_disputes_declaration_voting
+		}
+		
+		option = {
+			name = "EVTOPTB13201"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_decolonisation_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_settlement_of_disputes_declaration_voting
+		}
+	
+	}
+	
+	#13202 - UN Settlement Of Disputes Declaration Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 13202
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_settlement_of_disputes_declaration_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME13202"
+		desc = "EVTDESC13202"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_settlement_of_disputes_declaration_voting
+			set_global_flag = gflag_UN_settlement_of_disputes_declaration_fails
+		}
+
+		option = {
+			name = "EVTOPTA13202"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			#XUN  = { prestige_change = -50 }
+			
+			#hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_settlement_of_disputes_declaration_failure_delay
+						duration = 1460
+					}
+				}
+			#}
+			clr_global_flag = gflag_UN_settlement_of_disputes_declaration_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#13203 - UN Settlement Of Disputes Declaration Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 13203
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_settlement_of_disputes_declaration_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME13203"
+		desc = "EVTDESC13203"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_settlement_of_disputes_declaration_voting
+			clr_global_flag = gflag_UN_settlement_of_disputes_declaration_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_settlement_of_disputes_declaration_passes
+		}
+
+		option = {
+			name = "EVTOPTA13203"					#Excellent
+			clr_global_var = var_UN_votes_Total
+			
+			any_country = {
+				limit = {
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				add_country_modifier = {
+					name = mod_UN_settlement_of_disputes_declaration
+					duration = -1
+				}
+			}
+			
+			#XUN  = { prestige_change = 50 }
+			
+			clr_global_flag = gflag_UN_settlement_of_disputes_declaration_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+
+## Global ##
+	#13210 - Vote on the UN Settlement Of Disputes Declaration - Notifications Off
+	country_event = {
+	
+		id = 13210
+		
+		trigger = {
+			has_country_flag = flag_UN_decolonisation_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_settlement_of_disputes_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME13210"
+		desc = "EVTDESC13210"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_decolonisation_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_settlement_of_disputes_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA13210"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.25
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.1
+					human_rights = separate_but_equal
+				}
+				modifier = {
+					factor = 2
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.5
+					foreign_policy = detente_pol
+				}
+				modifier = {
+					factor = 1.25
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.5
+					national_attitude = defensive
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB13210"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC13210"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.25
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.1
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 1.5
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.25
+					foreign_policy = containment_pol
+				}
+				modifier = {
+					factor = 1.25
+					national_attitude = imperialism
+				}
+				modifier = {
+					factor = 1.25
+					military_policy = sustained_military_service_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						military_policy = three_y_service_pol
+						military_policy = two_half_y_service_pol
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+	
+	#13211 - Vote on the UN Settlement Of Disputes Declaration - Notifications On
+	country_event = {
+	
+		id = 13211
+		
+		trigger = {
+			has_country_flag = flag_UN_decolonisation_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_settlement_of_disputes_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME13210"
+		desc = "EVTDESC13210"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_decolonisation_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_settlement_of_disputes_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA13210"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.25
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.1
+					human_rights = separate_but_equal
+				}
+				modifier = {
+					factor = 2
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.5
+					foreign_policy = detente_pol
+				}
+				modifier = {
+					factor = 1.25
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.5
+					national_attitude = defensive
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB13210"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC13210"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.25
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.1
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 1.5
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.25
+					foreign_policy = containment_pol
+				}
+				modifier = {
+					factor = 1.25
+					national_attitude = imperialism
+				}
+				modifier = {
+					factor = 1.25
+					military_policy = sustained_military_service_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						military_policy = three_y_service_pol
+						military_policy = two_half_y_service_pol
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}	

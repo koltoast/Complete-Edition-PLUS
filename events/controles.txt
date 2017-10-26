@@ -1,0 +1,59 @@
+##############################################
+#  CONTROL  VARIABLE  DESTROZO NACIONAL #
+##############################################
+
+country_event = {
+
+	trigger = {
+		ai = yes
+		has_global_flag = DESTROZONACIONAL
+	}
+
+	id = 700062
+	
+	mean_time_to_happen = {  months = 1 }
+
+	option = {
+		clr_global_flag = DESTROZONACIONAL
+		ai_chance = { factor = 100 }	
+	}
+}
+ 
+country_event = {
+
+	trigger = {
+		ai = yes
+		has_global_flag = DESTROZONACIONAL3
+	}
+
+	id = 700063
+	
+	mean_time_to_happen = {  months = 1 }
+
+	option = {
+		clr_global_flag = DESTROZONACIONAL3
+		ai_chance = { factor = 100 }	
+	}
+}
+
+
+#########################################
+#  CONTROL  VARIABLE  CRISIS NACIONAL #
+#########################################
+
+country_event = {
+
+	trigger = {
+		ai = yes
+		has_global_flag = CRISISNACIONAL
+	}
+
+	id = 5555020
+	
+	mean_time_to_happen = {  months = -1 }
+
+	option = {
+		clr_global_flag = CRISISNACIONAL
+		ai_chance = { factor = 100 }	
+	}
+}

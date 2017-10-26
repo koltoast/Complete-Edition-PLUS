@@ -1,0 +1,666 @@
+#Index:
+	#6030 - colony is owned		- 3 options
+	#6031 - colony is a puppet	- 2 options
+	#6032 – rebel reinforcements - if BOT exists			- 2 options
+	#6033 – rebel reinforcements - if BOT does not exist	- 2 options
+
+country_event = {
+	
+	id = 6030										#Colony is owned
+	
+	trigger = {
+		owns = 6965
+		controls = 6965
+		NOT = { national_unity = 69 }
+		NOT = { exists = BOT }
+		NOT = { has_country_flag = colonial_war_BOT }
+		NOT = { national_culture = cul_sub_saharan_africa }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 1.00						#60 months		
+			not = { national_unity = 69 }
+		}
+		modifier = {
+			factor = 0.75						#45 months
+			not = { national_unity = 59 }
+		}
+		modifier = {
+			factor = 0.80						#36 months
+			not = { national_unity = 49 }
+		}
+		modifier = {
+			factor = 0.75						#27 months
+			not = { national_unity = 39 }
+		}
+		modifier = {
+			factor = 0.25
+			ideology = maoist_idolg
+		}
+		modifier = {
+			factor = 0.25
+			ideology = communist_idolg
+		}
+	}
+	
+	immediate = {
+		region_Botswana_Ghanzi = { remove_core = ENG }
+		region_Botswana_Ghanzi = { remove_core = THIS }
+		region_Botswana_Kweneng = { remove_core = ENG }
+		region_Botswana_Kweneng = { remove_core = THIS }
+		region_Botswana_Ngamiland = { remove_core = ENG }
+		region_Botswana_Ngamiland = { remove_core = THIS }
+		region_Botswana_Kgalagadi = { remove_core = ENG }
+		region_Botswana_Kgalagadi = { remove_core = THIS }
+		region_Botswana_Central_Botswana = { remove_core = ENG }
+		region_Botswana_Central_Botswana = { remove_core = THIS }
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6030"
+	desc = "EVTDESC6030"
+	picture = "1966_Botswana"
+	
+	option = {											#chance to release immediatly
+		name = "EVTOPTA6030"
+		trigger = {
+			NOT = {
+			ideology = fascist_idolg
+			ideology = paternal_auto_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5							#25% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 0.8							#40% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 1								#50% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 1.2							#60% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 1.5							#75% chance
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 1.7							#85% chance
+				ideology = maoist_idolg
+			}
+			modifier = {
+				factor = 1.9							#95% chance
+				ideology = communist_idolg
+			}
+		}
+		release = BOT
+		recognize = BOT
+		relation = { who = BOT value = 100 }
+	}
+	
+	option = {											#chance to puppet
+		name = "EVTOPTB6030"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0								#0% chance
+				ideology = fascist_idolg
+			}
+			modifier = {
+				factor = 0								#0% chance
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.5							#75% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 1.2							#60% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 1								#50% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 0.8							#40% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0.5							#25% chance
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0.3							#15% chance
+				ideology = maoist_idolg
+			}
+			modifier = {
+				factor = 0.1							#5% chance
+				ideology = communist_idolg
+			}
+		}
+		release_vassal = BOT
+		recognize = BOT
+	}
+	
+	option = {											#chance to start a colonial war
+		name = "EVTOPTC6030"
+		trigger = {
+			NOT = {
+			ideology = maoist_idolg
+			ideology = communist_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0								#100% chance
+				ideology = fascist_idolg
+			}
+			modifier = {
+				factor = 0								#95% chance
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.5							#0% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 1.2							#0% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 1								#0% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 0.8							#0% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0.5							#0% chance
+				ideology = left_wing_radical_idolg
+			}
+		}
+		random_owned = {
+			limit = { region = region_Botswana_Ghanzi }
+			add_province_modifier = { name = nationalist_revolt duration = 800 }
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Botswana_Kweneng }
+			add_province_modifier = { name = nationalist_revolt duration = 800 }
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Botswana_Ngamiland }
+			add_province_modifier = { name = nationalist_revolt duration = 800 }
+			create_revolt = 5		
+		}
+		random_owned = {
+			limit = { region = region_Botswana_Kgalagadi }
+			add_province_modifier = { name = nationalist_revolt duration = 800 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Botswana_Central_Botswana }
+			add_province_modifier = { name = nationalist_revolt duration = 800 } 
+			create_revolt = 5
+		}
+		set_country_flag = colonial_war_BOT
+	}
+}
+
+country_event = {
+	
+	id = 6031										#Colony is a puppet
+	
+	trigger = {
+		NOT = { national_unity = 69 }
+		exists = BOT
+		BOT = { vassal_of = THIS }
+		NOT = { national_culture = cul_sub_saharan_africa }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 1.00						#60 months		
+			not = { national_unity = 69 }
+		}
+		modifier = {
+			factor = 0.75						#45 months
+			not = { national_unity = 59 }
+		}
+		modifier = {
+			factor = 0.80						#36 months
+			not = { national_unity = 49 }
+		}
+		modifier = {
+			factor = 0.75						#27 months
+			not = { national_unity = 39 }
+		}
+		modifier = {
+			factor = 0.25
+			ideology = maoist_idolg
+		}
+		modifier = {
+			factor = 0.25
+			ideology = communist_idolg
+		}
+	}
+	
+	immediate = {
+		region_Botswana_Ghanzi = { remove_core = ENG }
+		region_Botswana_Ghanzi = { remove_core = THIS }
+		region_Botswana_Kweneng = { remove_core = ENG }
+		region_Botswana_Kweneng = { remove_core = THIS }
+		region_Botswana_Ngamiland = { remove_core = ENG }
+		region_Botswana_Ngamiland = { remove_core = THIS }
+		region_Botswana_Kgalagadi = { remove_core = ENG }
+		region_Botswana_Kgalagadi = { remove_core = THIS }
+		region_Botswana_Central_Botswana = { remove_core = ENG }
+		region_Botswana_Central_Botswana = { remove_core = THIS }
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6031"
+	desc = "EVTDESC6031"
+	picture = "1966_Botswana"
+	
+	option = {											#chance to release immediatly
+		name = "EVTOPTA6031"
+		trigger = {
+			NOT = {
+			ideology = fascist_idolg
+			ideology = paternal_auto_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2							#100% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = maoist_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = communist_idolg
+			}
+		}
+		release = BOT
+		recognize = BOT
+		relation = { who = BOT value = 100 }
+	}
+		
+	option = {											#auto release puppet and declare war
+		name = "EVTOPTB6031"
+		trigger = { 
+			not = {
+			ideology = maoist_idolg
+			ideology = communist_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2							#100% chance
+				ideology = fascist_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = left_wing_radical_idolg
+			}
+		}
+		liberate_puppet = BOT
+		war = BOT
+		BOT = {
+			supplies = 1000	
+			random_owned = {
+				limit = { region = region_Botswana_Ghanzi }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Botswana_Kweneng }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Botswana_Ngamiland }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Botswana_Kgalagadi }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Botswana_Central_Botswana }
+				militia_brigade = current
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 6032										#War continues - rebel reinforcements - if BOT does not exist
+	
+	trigger = {
+		owns = 6965
+		NOT = { national_unity = 69 }
+		NOT = { exists = BOT }
+		has_country_flag = colonial_war_BOT
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 1.00
+			not = { national_unity = 69 }
+			national_unity = 60
+		}
+		modifier = {
+			factor = 0.75
+			not = { national_unity = 59 }
+			national_unity = 50
+		}
+		modifier = {
+			factor = 0.50
+			not = { national_unity = 49 }
+			national_unity = 40
+		}
+		modifier = {
+			factor = 0.25
+			not = { national_unity = 39 }
+			national_unity = 30
+		}
+		modifier = {
+			factor = 0.10
+			not = { national_unity = 29 }
+		}
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6032"
+	desc = "EVTDESC6032"
+	picture = "1966_Botswana"
+
+	option = {
+		name = "EVTOPTA6032"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0								#0% chance
+				dissent = 0
+				not = { dissent = 9 }	
+			}
+			modifier = {
+				factor = 0.1							#5% chance
+				dissent = 10
+				not = { dissent = 19 }	
+			}
+			modifier = {
+				factor = 0.2							#10% chance
+				dissent = 20
+				not = { dissent = 29 }
+			}
+			modifier = {
+				factor = 0.4							#20% chance
+				dissent = 30
+				not = { dissent = 39 }
+			}
+			modifier = {
+				factor = 0.8							#40% chance
+				dissent = 40
+				not = { dissent = 49 }
+			}
+			modifier = {
+				factor = 0.6							#80% chance
+				dissent = 50
+			}
+		}
+		release = BOT
+		recognize = BOT
+		dissent = -5								#People are happy because the war ended
+		clr_country_flag = colonial_war_BOT
+	}
+	
+	option = {
+		name = "EVTOPTB6032"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2								#100% chance
+				dissent = 0
+				not = { dissent = 9 }
+			}
+			modifier = {
+				factor = 1.9							#95% chance
+				dissent = 10
+				not = { dissent = 19 }
+			}
+			modifier = {
+				factor = 1.8							#90% chance
+				dissent = 20
+				not = { dissent = 29 }
+			}
+			modifier = {
+				factor = 1.6							#80% chance
+				dissent = 30
+				not = { dissent = 39 }
+			}
+			modifier = {
+				factor = 1.2							#60% chance
+				dissent = 40
+				not = { dissent = 49 }	
+			}
+			modifier = {
+				factor = 0.4							#20% chance
+				dissent = 50	
+			}
+		}	
+		random_owned = {
+			limit = { region = region_Botswana_Ghanzi NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 }
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Botswana_Kweneng NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 }
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Botswana_Ngamiland NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 }
+			create_revolt = 5		
+		}
+		random_owned = {
+			limit = { region = region_Botswana_Kgalagadi NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Botswana_Central_Botswana NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 } 
+			create_revolt = 5
+		}
+	}
+}
+
+country_event = {
+	
+	id = 6033										#War continues - rebel reinforcements - if BOT exists
+	
+	trigger = {
+		owns = 6965
+		NOT = { national_unity = 69 }
+		exists = BOT
+		has_country_flag = colonial_war_BOT
+		war_with = BOT
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 1.00
+			not = { national_unity = 69 }
+			national_unity = 60
+		}
+		modifier = {
+			factor = 0.75
+			not = { national_unity = 59 }
+			national_unity = 50
+		}
+		modifier = {
+			factor = 0.50
+			not = { national_unity = 49 }
+			national_unity = 40
+		}
+		modifier = {
+			factor = 0.25
+			not = { national_unity = 39 }
+			national_unity = 30
+		}
+		modifier = {
+			factor = 0.10
+			not = { national_unity = 29 }
+		}
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6033"
+	desc = "EVTDESC6033"
+	picture = "1966_Botswana"
+
+	option = {
+		name = "EVTOPTA6033"
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1								#5% chance
+				dissent = 10
+			}
+			modifier = {
+				factor = 2								#10% chance
+				dissent = 20
+			}
+			modifier = {
+				factor = 2								#20% chance
+				dissent = 30
+			}
+			modifier = {
+				factor = 2								#40% chance
+				dissent = 40
+			}
+			modifier = {
+				factor = 2								#80% chance
+				dissent = 50
+			}
+		}
+		THIS = { end_war = BOT }
+		recognize = BOT
+		dissent = -5								#People are happy because the war ended
+		clr_country_flag = colonial_war_BOT
+	}
+	
+	option = {
+		name = "EVTOPTB6033"
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1								#5% chance
+				not = { dissent = 10 }
+			}
+			modifier = {
+				factor = 2								#10% chance
+				not = { dissent = 20 }
+			}
+			modifier = {
+				factor = 2								#20% chance
+				not = { dissent = 30 }
+			}
+			modifier = {
+				factor = 2								#40% chance
+				not = { dissent = 40 }
+			}
+			modifier = {
+				factor = 2								#80% chance
+				not = { dissent = 50 }
+			}
+		}
+		BOT = {
+			supplies = 1000
+			random_owned = {
+				limit = { region = region_Botswana_Ghanzi }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Botswana_Kweneng }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Botswana_Ngamiland }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Botswana_Kgalagadi }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Botswana_Central_Botswana }
+				militia_brigade = current
+			}
+		}
+	}
+}

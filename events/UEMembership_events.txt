@@ -1,0 +1,316 @@
+
+	country_event = {
+		
+		id = 700238
+
+		is_triggered_only = yes
+
+		title = "EVTNAME700238"
+		desc = "EVTDESC700238"
+		picture = "1945_UN_charter"
+
+		option = {
+			name = "EVTOPTA700238"					#Okay
+			neutrality = 2
+			prestige_change = 2
+			set_variable = {
+				name = var_temp_UE_member_count
+				value = 0
+			}
+			any_country = {
+				limit = {
+					is_org_member = XUE
+					is_major = yes
+					NOT = { has_country_flag = "XUE_EMBARGO" }
+				}
+				chg_global_var = {
+					name = var_UE_member_count
+					value = 1
+				}
+				country_event = 700239
+			}
+		}
+	}
+				
+				
+
+	#700239 - Shall we veto the admission to the United Nations of a country currently seeking membership
+	country_event = {
+	
+		id = 700239
+
+		is_triggered_only = yes
+
+		title = "EVTNAME700239"
+		desc = "EVTDESC700239"
+		picture = "1950_UN_voting"
+
+		option = {
+			name = "EVTOPTA700239"					#Veto
+			ai_chance = {
+				factor = 2
+				modifier = {
+					factor = 0
+					alliance_with = FROM
+				}
+				modifier = {
+					factor = 0
+					relation = { who = FROM value = 100 }
+				}
+				modifier = {
+					factor = 0
+					relation = { who = FROM value = 50 }
+					military_access = FROM
+				}
+				modifier = {
+					factor = 0
+					relation = { who = FROM value = 50 }
+					same_party = FROM
+				}
+				modifier = {
+					factor = 0
+					relation = { who = FROM value = -50 }
+					same_faction = FROM
+				}
+				modifier = {
+					factor = 0
+					national_attitude = non-interventionism
+				}
+				modifier = {
+					factor = 0
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { relation = { who = FROM value = -75 } }
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { relation = { who = FROM value = -150 } }
+				}
+				modifier = {
+					factor = 2
+					truce_with = FROM
+				}
+				modifier = {
+					factor = 1.5
+					national_attitude = hegemony
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						foreign_policy = hardline_pol
+						foreign_policy = containment_pol
+					}
+				}
+				modifier = {
+					factor = 40
+					AND = {
+						prestige = 20
+						NOT = { recognized = FROM }
+					}
+				}
+			}
+			prestige_change = -20
+			FROM = {
+				random_owned = {
+					limit = {
+						owner = { NOT = { has_country_flag = UE_membership_vetoed } }
+					}
+					owner = {
+						clr_country_flag = UE_membership_process
+						set_country_flag = UE_membership_vetoed
+						country_event = 700240
+					}
+				}
+			}
+		}
+		
+		option = {
+			name = "EVTOPTB700239"					#Don't Veto
+			ai_chance = {
+				factor = 98
+				modifier = {
+					factor = 0
+					war_with = FROM
+				}
+				modifier = {
+					factor = 1.33
+					relation = { who = FROM value = 75 }
+				}
+			}
+			change_variable = {
+				name = var_temp_UE_council_member_count
+				value = -1
+			}
+		}
+	}
+	
+	#700240 - Our UN membership application has been vetoed
+	country_event = {
+	
+		id = 700240
+
+		is_triggered_only = yes
+
+		title = "EVTNAME700240"
+		desc = "EVTDESC700240"
+		picture = "1948_UN_veto"
+
+		option = {
+			name = "EVTOPTA700240"					#Unfortunate
+			relation = { who = FROM value = -30 }
+			clr_country_flag = UE_membership_vetoed
+			add_country_modifier = {
+				name = UE_vetoed_delay
+				duration = 730
+			}
+		}
+	}
+	
+	#700241 - Our UN membership application has not been vetoed
+	country_event = {
+	
+		id = 700241
+
+		trigger = {
+			has_country_flag = UE_membership_process
+			NOT = { has_country_flag = UE_membership_vetoed }
+			NOT = {
+				check_variable = {
+					name = var_temp_UE_member_count
+					value = 1
+				}
+			}
+			NOT = { has_country_flag = UE_membership_not_vetoed }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME700241"
+		desc = "EVTDESC700241"
+		picture = "1973_General_Assembly_voting"
+
+		option = {
+			name = "EVTOPTA700241"					#Good news
+			set_country_flag = UE_membership_not_vetoed
+			random_country = {
+				limit = { is_org_leader = XUE }
+				country_event = 700243
+			}
+		}
+	}
+
+	#700242 - We have been admitted to the United Nations
+	country_event = {
+	
+		id = 700242
+
+		trigger = {
+			has_country_flag = WP_membership_process
+			OR = {
+				has_country_flag = UE_MFD
+				has_country_flag = UE_membership_slow_delay
+			}
+			NOT = { has_country_modifier = UE_mpfd }
+			NOT = { has_country_modifier = UE_membership_process_slow_delay }
+			NOT = { has_country_flag = "UE_EMBARGO" }
+			NOT = {
+				AND = {
+					war_exhaustion = 10 
+					war = yes
+				}
+			}
+			national_unity = 90
+			SOV = {
+				NOT = { has_country_modifier = UE_mad }
+			}
+		}
+		
+		mean_time_to_happen = {
+			months = 3
+			modifier = {
+				factor = 0.67
+				has_country_flag = WP_MFD
+			}
+		}
+
+		title = "EVTNAME700242"
+		desc = "EVTDESC700242"
+		picture = "1960_new_UN_members"
+		
+		major = yes
+
+		option = {
+			name = "EVTOPTA700242"					#Excellent
+			prestige_change = 5
+			join_faction = comintern
+			add_country_modifier = {
+				name = UE_member_state
+				duration = -1
+			}
+			##any_country = { limit = { not = { is_org_member = XNA }  NOT = { is_org_member = XWP } }
+			##add_country_modifier = { 
+			    ##name = waiting_WP 
+			    ##duration = 1 }##para pruebas luego 365 }
+			clr_country_flag = UE_membership_process
+			clr_country_flag = UE_MFD
+			clr_country_flag = UE_membership_slow_delay
+			SOV = {
+				add_country_modifier = {
+					name = UE_mad
+					duration = 30
+				}
+			}
+		}
+	}
+	
+## UN Secretary General ##
+	#700156 - Nation applies for membership in the United Nations
+	country_event = {
+	
+		id = 700243
+
+		is_triggered_only = yes
+
+		title = "EVTNAME700243"
+		desc = "EVTDESC700243"
+		picture = "1945_UN_charter"
+
+		option = {
+			name = "EVTOPTA700243"					#Fast track the process
+			ai_chance = {
+				factor = 10
+			}
+			FROM = {
+				set_country_flag = UE_MFD
+				add_country_modifier = {
+					name = UE_mpfd
+					duration = 92
+				}
+			}
+			
+			LUX = {
+				add_country_modifier = {
+					name = UE_sgfta
+					duration = 183
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTB700243"					#Let the process run its course
+			ai_chance = {
+				factor = 90
+			}
+			FROM = {
+				set_country_flag = UE_membership_slow_delay
+				add_country_modifier = {
+					name = UE_membership_process_slow_delay
+					duration = 183
+				}
+			}
+		}
+	}

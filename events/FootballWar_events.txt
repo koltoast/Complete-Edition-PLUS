@@ -1,0 +1,366 @@
+#FootballWar_events.txt
+#1969 Football War
+
+#HON:
+	#214000 - Salvadoran Immigration
+	#214001 - Honduran Land Reform
+	#214002 - Demand Response (HON)
+	
+#SAL:
+	#303000 - Honduran Land Reform (SAL)
+	#303001 - Violence at the FIFA world cup!
+	#303002 - Demands Rejected (SAL)
+	#303003 - OAS Votes to stop the war, SAL response
+
+
+## HON ##	
+	#214000 - Salvadoran Immigration
+	country_event = {
+		
+		id = 214000		# Salvadoran Immigration
+
+		trigger = {
+			tag = HON
+			exists = SAL
+			national_unity = 30
+			NOT = {
+				has_country_flag = football_war_done
+				has_country_flag = salvadoran_immigration
+				war_exhaustion = 10
+			}
+		}
+		
+		mean_time_to_happen = {
+			years = 20
+			modifier = {
+				factor = 0.8
+				SAL = { war_exhaustion = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				SAL = { war_exhaustion = 20 }
+			}
+			modifier = {
+				factor = 0.8
+				SAL = { NOT = { national_unity = 40 } }
+			}
+			modifier = {
+				factor = 0.8
+				SAL = { economy_unbalanced = yes }
+			}
+			modifier = {
+				factor = 1.25
+				SAL = { national_unity = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				economy_unbalanced = yes
+			}
+			modifier = {
+				factor = 0.2
+				year = 1965
+			}
+		}
+		
+		title = "EVTNAME214000"
+		desc = "EVTDESC214000"
+		picture = "1960_Salvadoran_Immigrants"
+
+		option = {
+			name = "EVTOPTA214000"			    			# Let them stay
+			ai_chance = {
+				factor = 80
+			}
+			manpower = 5
+			set_country_flag = salvadoran_immigration
+			relation = { who = SAL value = 10 }
+			any_owned = {
+				limit = {
+					any_neighbor_province = {
+						owned_by = SAL
+					}
+				}
+				add_province_modifier = {
+					name = pmod_salvadoran_immigration
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mod_salvadoran_immigration_delay
+				duration = 730
+			}
+		}
+
+		option = {
+			name = "EVTOPTB214000"			    			# Send them packing!
+			ai_chance = {
+				factor = 20
+			}
+			set_country_flag = salvadoran_immigration
+			relation = { who = SAL value = -25 }
+		}
+	}
+
+	#214001 - Honduran Land Reform
+	country_event = {
+		
+		id = 214001		# Honduran Land Reform
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME214001"
+		desc = "EVTDESC214001"
+		picture = "1967_Honduras_Land_Reform"
+
+		option = {
+			name = "EVTOPTA214001"			    			# To our future prosperity!
+			money = 1000
+			set_country_flag = salvadoran_exploitation
+			relation = { who = SAL value = -40 }
+			SAL = { country_event = 303000 }
+			any_owned = {
+				add_province_modifier = {
+					name = pmod_land_reform
+					duration = -1
+				}
+			}
+		}
+	}
+
+	#214002 - Demand Response (HON)
+	country_event = {
+		
+		id = 214002		# Demand Response (HON)
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME214002"
+		desc = "EVTDESC214002"
+		picture = "1969_Football_War_3rd_playoff_match"
+
+		option = {
+			name = "EVTOPTA214002"			    			# This time, we went too far.
+			ai_chance = {
+				factor = 30
+			}
+			money = -1500
+			clr_country_flag = salvadoran_exploitation
+			relation = { who = SAL value = 50 }
+			any_owned = {
+				remove_province_modifier = pmod_land_reform
+			}
+		}
+
+		option = {
+			name = "EVTOPTB214002"			    			# Our Country, Our Rules.
+			ai_chance = {
+				factor = 70
+			}
+			dissent = -10
+			relation = { who = HON value = -25 }
+			SAL = { country_event = 303002 }
+		}	
+	}
+	
+## SAL ##
+	#303000 - Honduran Land Reform (SAL)
+	country_event = {
+		
+		id = 303000		# Honduran Land Reform - SAL
+
+		is_triggered_only = yes
+			
+		title = "EVTNAME303000"
+		desc = "EVTDESC303000"
+		picture = "1967_Honduras_Land_Reform"
+
+
+		option = {
+			name = "EVTOPTA303000"			    			# Their country, Their rules.
+			ai_chance = {
+				factor = 10
+			}
+			dissent = 10
+			national_unity = -5
+		}
+
+		option = {
+			name = "EVTOPTB303000"			    			# This is an Outrage!
+			ai_chance = {
+				factor = 90
+			}
+			set_country_flag = honduran_tensions
+			national_unity = 5
+			relation = { who = SAL value = -40 }
+			HON = { 		
+				add_country_modifier = {
+					name = g_minor_revolt_risk
+					duration = 1095					
+				} 
+			}
+		}
+	}
+
+	#303001 - Violence at the FIFA world cup!
+	country_event = {
+		
+		id = 303001		#Violence at the FIFA world cup!
+
+		trigger = {
+			tag = SAL
+			NOT = {
+				has_country_flag = football_war_opt1
+				has_country_flag = football_war_opt2
+				has_country_flag = football_war_done
+			}
+		}
+		
+		mean_time_to_happen = {
+			years = 20
+			modifier = {
+				factor = 0.2
+				year = 1969
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					HON = { has_country_flag = salvadoran_peasants }
+					HON = { has_country_flag = salvadoran_exploitation }
+					}
+			}
+			modifier = {
+				factor = 0.5
+				has_country_flag = honduran_tensions
+			}
+		}
+		
+		title = "EVTNAME303001"
+		desc = "EVTDESC303001"
+		picture = "1969_Football_War_3rd_playoff_match"
+
+		option = {
+			name = "EVTOPTA303001"			    			# Demand Justice!
+			ai_chance = {
+				factor = 90
+			}
+			national_unity = 5
+			relation = { who = SAL value = -100 }		
+			HON = { country_event = 214002 }
+			set_country_flag = football_war_opt1
+		}
+
+		option = {
+			name = "EVTOPTB303001"			    			# It's football, violence happens.
+			ai_chance = {
+				factor = 10
+			}
+			national_unity = -5
+			dissent = 10
+			relation = { who = SAL value = -50 }
+			set_country_flag = football_war_opt2
+		}
+	}
+
+	#303002 - Demands Rejected (SAL)
+	country_event = {
+		
+		id = 303002		# Demands Rejected (SAL)
+		
+		trigger = {
+			tag = SAL
+			has_country_flag = football_war_opt2
+			NOT = {
+				has_country_flag = football_war_done
+			}
+			OR = {
+				AND = {
+					HON = { has_country_flag = salvadoran_peasants }
+					HON = { has_country_flag = salvadoran_exploitation }
+				}
+				AND = {
+					SAL = { has_country_flag = honduran_tensions }
+					HON = { has_country_flag = salvadoran_exploitation }
+				}
+				AND = {
+					SAL = { has_country_flag = honduran_tensions }
+					HON = { has_country_flag = salvadoran_peasants }
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			years = 4
+		}
+		
+		title = "EVTNAME303002"
+		desc = "EVTDESC303002"
+		picture = "1969_Football_War"
+
+
+		option = {
+			name = "EVTOPTA303002"			    			#This means War!
+			ai_chance = {
+				factor = 65
+			}
+			limited_war = HON
+			national_unity = 5
+			HON = { set_country_flag = football_war_done }
+			SAL = { set_country_flag = football_war_done }
+			any_owned = {
+				remove_province_modifier = pmod_salvadoran_immigration
+			}
+		}
+
+		option = {
+			name = "EVTOPTB303002"			    			# Back down.
+			ai_chance = {
+				factor = 35
+			}
+			dissent = 20
+			national_unity = -15
+			set_country_flag = stackelberg_follower
+			HON = { set_country_flag = football_war_done }
+			SAL = { set_country_flag = football_war_done }
+		}
+	}
+
+	#303003 - OAS Votes to stop the war, SAL response
+	country_event = {
+
+		id = 303003		#OAS Votes to stop the war - SAL response
+
+		trigger = {
+			tag = SAL
+			war_with = HON
+		}
+		
+		mean_time_to_happen = {
+			days = 4
+			modifier = {
+				factor = 0.25
+				lost_national = 0.2
+			}
+		}
+		
+		title = "EVTNAME303003"
+		desc = "EVTDESC303003"
+		picture = "1969_Football_War_Peace"	
+		
+		option = {
+			name = "EVTOPTA303003"		#Agree to negotiations to repatriate Salvadorans
+			ai_chance = {
+				factor = 70
+			}
+			end_war = HON
+			national_unity = 10
+		}
+			
+		option = {
+			name = "EVTOPTB303003"		#These terms are unacceptable!
+			ai_chance = {
+				factor = 30
+			}
+			dissent = 20
+			#possible OAS consequences
+		}
+	}	

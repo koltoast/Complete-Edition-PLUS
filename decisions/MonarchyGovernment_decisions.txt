@@ -1,0 +1,105 @@
+#MonarchyGovernment_decisions.txt
+#Monarchy Government Decisions
+
+#Global:
+	#Monarch abdicates
+
+	
+diplomatic_decisions = {
+## Global ##
+	#dec_MonarchyGovernment_monarchAbdicates - Monarch Abdicates
+	dec_MonarchyGovernment_monarchAbdicates = {
+		category = national
+	    picture = ""
+
+		potential = {
+			OR = {
+				government = absolute_monarchy_gov
+				AND = {
+					government = constitutional_monarchy_gov
+					NOT = {
+						elections_and_voting = winner_takes_it_all
+						elections_and_voting = semi-proportional
+						elections_and_voting = proportional
+					}
+				}
+			}
+			NOT = {
+				head_of_state = supreme_leader
+				head_of_state = iron_lady
+				head_of_state = zealous_type
+				head_of_state = visionary_type
+			}
+		}
+		
+		allow = {
+			NOT = { national_unity = 80 }												#High national unity
+			NOT = {
+				AND = {
+					war_exhaustion = 10
+					war = yes
+				}
+			}
+			NOT = {
+				OR = {
+					has_country_modifier = mod_monarchyGovernment_royalStability_delay
+					has_country_modifier = mod_monarchyGovernment_royalCelebration_delay
+					has_country_modifier = mod_monarchyGovernment_royalStrategy_delay
+					has_country_modifier = mod_monarchyGovernment_royalFued
+				}
+			}
+		}
+		
+		ai_will_do = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				national_unity = 50
+			}
+			modifier = {
+				factor = 0
+				popularity = 40
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_country_modifier = mod_monarchyGovernment_royalEditorial_delay
+						has_country_modifier = mod_monarchyGovernment_royalNepotism_delay
+						has_country_modifier = mod_monarchyGovernment_royalTitles_delay
+						has_country_modifier = mod_monarchyGovernment_royalTax_delay
+						has_country_modifier = mod_monarchyGovernment_royalEmbarressment_delay
+						has_country_modifier = mod_monarchyGovernment_royalGaffe_delay
+						has_country_modifier = mod_monarchyGovernment_royalDivorce_delay
+						has_country_modifier = mod_monarchyGovernment_royalWealth_delay
+						has_country_modifier = mod_monarchyGovernment_royalBlackmail_delay
+						has_country_modifier = mod_monarchyGovernment_royalHealth_delay
+						has_country_modifier = mod_monarchyGovernment_royalCharity_delay
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					head_of_state = extremist_type
+					head_of_state = hardliner_type
+					head_of_state = reformer_type
+					head_of_state = ambitious_type
+					head_of_state = visionary_type
+					head_of_state = zealous_type
+					head_of_state = religious_type
+					head_of_state = moral_type
+					head_of_state = parental_type
+					head_of_state = courageous_type
+					head_of_state = loyal_type
+					head_of_state = iron_lady
+					head_of_state = supreme_leader
+				}
+			}
+		}
+		
+		effect = {
+			country_event = 53036
+		}
+	}
+}

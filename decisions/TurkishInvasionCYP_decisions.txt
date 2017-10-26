@@ -1,0 +1,185 @@
+diplomatic_decisions = {
+
+	CYP_demand_independence = {
+		category = national
+		picture = "1959_Cyprus_Independence"
+		potential = {
+			vassal_of = ENG
+			tag = CYP
+			NOT = {
+				has_country_flag = cyp_demand_independence
+			}
+			national_unity = 60 		#Check this
+
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = { 
+			factor = 100
+			modifier = {
+				factor = 10
+				ENG = {
+					dissent = 10
+				}
+				OR = {
+					NOT = {
+						dissent = 5
+					}
+					economy_unbalanced = no
+				}
+			}
+			modifier = {
+				factor = 2
+				dissent = 15
+			}
+			modifier = {
+				factor = 2
+				exists = ISR
+			}
+			modifier = {
+				factor = 2
+				exists = JOR
+			}
+			modifier = {
+				factor = 2
+				exists = SYR
+			}
+			modifier = {
+				factor = 2
+				exists = MLT
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					neighbour = ENG 		#Check this
+					}
+			}
+
+		}
+		
+		effect = {
+			ENG = {
+				country_event = 181041
+				set_country_flag = cyp_demand_independence
+			}
+		}
+	}
+
+	CYP_UDI = {
+		category = national
+		picture = "1960_Cyprus_Flag_Raised"
+		potential = {
+			vassal_of = ENG
+			tag = CYP
+			ENG = {
+					has_country_flag = cyprus_question_2_3
+			}
+			NOT = {
+				has_country_flag = cyp_form_udi
+			}
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				AND = {
+					NOT = {
+						dissent = 5
+					}
+					economy_unbalanced = no
+				}
+			}
+		}
+		
+		effect = {
+			ENG = {
+				country_event = 181042
+			}
+			set_country_flag = cyp_form_udi
+		}
+	}
+
+	dec_GRE_cypriot_unionists = {
+		category = national
+		potential = {
+			NOT = { has_global_flag = cypriot_question_done }	
+			war = no
+			tag = GRE
+			CYP = {
+				NOT = { vassal_of = ENG }
+				NOT = { has_country_flag = auth_coup_detat }
+				NOT = { has_country_flag = greek_auth_support }
+				}
+		}
+		
+		allow = {
+			money = 1000
+			NOT = { government = totalitarian_gov }
+		}
+			
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = { money = 1100 }
+			}
+		}
+
+		effect = {
+			relation = { 
+				who = CYP 
+				value = 50 
+			}
+			CYP = { country_event = 167001 }
+		}
+	}
+					
+	dec_TUR_cypriot_issue = {
+		category = national
+		picture = "1974_Cyprus_Botched_Greek_Coup"
+		potential = {
+			NOT = { has_global_flag = cypriot_question_done }	
+			war = no
+			tag = TUR
+			CYP = {
+				has_country_flag = auth_coup_detat
+			}
+			NOT = {
+				has_country_flag = cypriot_issue
+			}
+		}
+		
+		allow = {
+			money = 1000
+			supplies = 200
+			manpower = 20
+		}
+		
+		
+		ai_will_do = { 
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					money = 1000
+					supplies = 200
+					manpower = 20
+					#fuel = 200		#Does not exist as a trigger for some reason
+				}
+			}
+		}
+		
+		effect = {
+			country_event = 347000		# Event 01 for TUR
+			set_country_flag = cypriot_question
+			set_global_flag = cypriot_question_done
+		}
+	}	
+		
+}

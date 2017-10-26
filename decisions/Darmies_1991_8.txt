@@ -1,0 +1,841 @@
+diplomatic_decisions = {	
+	ZIM_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ZIM
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ZIM_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+	ZMB_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ZMB
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ZMB_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+ 	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ANG_1991 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ANG
+		  year = 1991
+		  
+		  not = { has_country_modifier = tropas_1991 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ANG_1991.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1991"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  
+  
+ }  

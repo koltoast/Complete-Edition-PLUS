@@ -1,0 +1,663 @@
+
+
+##### Cyprus Independence Events #####
+
+country_event = {
+	
+	id = 181040			#Event 01 for ENG: The Cypriot Question (Optional Release)
+
+	trigger = {
+		#has_global_flag = decolonisation_started  Setting this modifier still to be implemented
+		owns = 7616
+		owns = 7709
+		tag = ENG
+		NOT = {
+			national_unity = 80
+		}
+		dissent = 5
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			OR = {
+				ideology = left_wing_radical_idolg
+				ideology_group = comintern
+			}
+		}
+	}
+	
+	title = "EVTNAME181040"
+	desc = "EVTDESC181040"
+	picture = "1959_Cyprus_Independence"
+	
+	option = {
+		name = "EVTOPTA181040"					#Cyprus shall have its complete independence! 
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 1.25
+				dissent = 10
+			}
+			modifier = {
+				factor = 1.25
+				dissent = 20
+			}
+			modifier = {
+				factor = 1.25
+				dissent = 30
+			}
+			modifier = {
+				factor = 2
+				dissent = 50
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = CYP
+			}
+			remove_core = ENG
+		}
+		release = CYP
+		dissent = -5
+		national_unity = 10
+		set_country_flag = cyprus_question_1
+		#fuel = 500						#No such effect yet
+	}
+	
+	#option = {
+	#	name = "EVTOPTD181040"					#Cyprus shall have its independence, but we will keep our military bases there. 
+	#	ai_chance = {
+	#		factor = 60
+	#		modifier = {
+	#			factor = 1.25
+	#			dissent = 10
+	#		}
+	#		modifier = {
+	#			factor = 1.25
+	#			dissent = 20
+	#		}
+	#		modifier = {
+	#			factor = 1.25
+	#			dissent = 30
+	#		}
+	#		modifier = {
+	#			factor = 2
+	#			dissent = 50
+	#		}
+	#	}
+	#	release = CYP
+	#	dissent = -5
+	#	national_unity = 10
+	#	military_access = CYP
+	#	set_country_flag = cyprus_question_4
+	#	#fuel = 500						#No such effect yet
+	#	any_owned = {
+	#		limit = {
+	#			is_core = CYP
+	#		}
+	#		remove_core = ENG
+	#	}
+	#}
+	
+	option = {
+		name = "EVTOPTB181040"					#Cyprus shall be an Autonomous Dominion 
+		ai_chance = {
+			factor = 15
+		}
+		any_owned = {
+			limit = {
+				is_core = CYP
+			}
+			remove_core = ENG
+		}
+		release = CYP
+		create_vassal = CYP
+		set_country_flag = cyprus_question_2
+	}
+	
+	option = {
+		name = "EVTOPTC181040"					#Enough of this Nonsense
+		ai_chance = {
+			factor = 5
+		}
+		
+		dissent = 5
+		any_owned = {
+			limit = {
+				is_core = CYP
+			}
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+			remove_core = ENG
+		}
+		set_country_flag = cyprus_question_3	
+	}
+}
+
+country_event = {
+	
+	id = 181041		# Event 02 for ENG: Cyprus demands independence (Demanded Release)
+
+	trigger = {
+		#Decolonisation has started
+		year = 1955 #temporary
+		NOT = {
+			exists = CYP
+		}
+		tag = ENG
+		owns = 7616
+		owns = 7709
+		has_country_flag = cyprus_question_3
+		dissent = 10
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.8
+			exists = ISR
+		}
+		modifier = {
+			factor = 0.8
+			exists = SYR
+		}
+		modifier = {
+			factor = 0.8
+			exists = JOR
+		}
+		modifier = {
+			factor = 0.8
+			exists = MLT
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				national_unity = 70
+			}
+		}			
+	}
+	
+	title = "EVTNAME181041"
+	desc = "EVTDESC181041"
+	picture = "1956_Cyprus_Riots"
+
+	option = {
+		name = "EVTOPTA181041"		    			# Cyprus shall have its Independence 
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 5
+				ideology_group = comintern
+			}
+			modifier = {
+				factor = 0.1
+				ideology = fascistic_idolg
+			}
+			modifier = {
+				factor = 0.25
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 20
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 30
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 40
+			}
+			modifier = {
+				factor = 1.2
+				dissent = 50
+			}
+		}
+		release = CYP
+		liberate_puppet = CYP
+		set_country_flag = cyprus_question_2_1
+	}
+
+	option = {
+		name = "EVTOPTB181041"			    			# This is not the desire of the masses!
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0.5
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0.2
+				ideology_group = comintern
+			}
+		}
+		dissent = 10
+		national_unity = -5
+		any_owned = {
+			limit = {
+				is_core = CYP
+			}
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1825
+			}
+		}
+		set_country_flag = cyprus_question_2_3
+	}
+}
+
+country_event = {
+	
+	id = 181042		#Event 03 for ENG: Cyprus unilaterally declares its independence
+
+	trigger = {
+		#Decolonisation has started
+		year = 1955 #temporary
+		NOT = {
+			exists = CYP
+		}
+		tag = ENG
+		owns = 7616
+		owns = 7709
+		dissent = 12.5
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	title = "EVTNAME181042"
+	desc = "EVTDESC181042"
+	picture = "1960_Cyprus_Flag_Raised"
+	major = yes
+
+
+	option = {
+		name = "EVTOPTA181042"			    			# Let’s forget Cyprus
+		ai_chance = {
+			factor = 100
+		}
+		release = CYP
+		CYP = {
+			load_oob = CYP_1961.txt
+			government = republic_gov
+		}
+		set_country_flag = cyprus_independence
+	}
+
+	option = {
+		name = "EVTOPTB181042"			    			# We shall protect the interest of the Cypriot masses 
+		ai_chance = {
+			factor = 0
+		}
+		release = CYP
+		CYP = {
+			load_oob = CYP_1961.txt
+			government = republic_gov
+		}
+		set_country_flag = cyprus_independence
+		limited_war = CYP #temporary until proper war goal system in place
+		#war = {
+		#	target = CYP
+		#	attacker_goal = { casus_belli = puppet }	# War goal of establishing CYP as a Dominion
+		#} 
+	}
+}
+
+country_event = {
+	
+	id = 167000		#Event 01 for Cyprus: Authoritarian Coup d’état!
+
+	trigger = {
+	NOT = { has_global_flag = cypriot_question_done }
+	tag = CYP
+	government = republic_gov
+	NOT = { vassal_of = ENG }
+	OR = {
+		AND = {
+			NOT = {
+				national_unity = 80
+			}
+			dissent = 5
+		}
+		year = 1965
+		}
+	NOT = {
+		has_country_flag = auth_coup_detat
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 15
+		modifier = {
+			factor = 0.5
+			year = 1974
+		}
+		modifier = {
+			factor = 0.75
+		NOT = {	
+			national_unity = 70
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_country_flag = greek_auth_support
+		}	
+	}
+	
+	title = "EVTNAME167000"
+	desc = "EVTDESC167000"
+	picture = "1974_Cyprus_Botched_Greek_Coup"
+
+
+	option = {
+		name = "EVTOPTA167000"			    			# The Scoundrel!
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = auth_coup_detat
+		government = authoritarian_gov
+		# head_of_state = Nikos Sampson
+		# head_of_government = Nikos Sampson
+		dissent = 20
+		national_unity = -10
+		any_owned = {
+			limit = {
+				is_core = CYP
+			}
+			add_province_modifier = {
+				name = minor_revolt_risk
+				duration = 1095
+			}
+			
+		}
+		
+	}
+
+}
+
+country_event = {
+	
+	id = 167001		#Event 02 for Cyprus: Greek Support for Unionists
+
+	is_triggered_only = yes
+		
+	title = "EVTNAME167001"
+	desc = "EVTDESC167001"
+	picture = "1967_George_Grivas"
+
+	option = {
+		name = "EVTOPTA167001"			    			#How will this unfold?
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = greek_auth_support
+		#popularity = {
+		#	who = paternal_auto_idolg
+		#	factor = 20
+		#}
+		
+	}
+
+}
+
+country_event = {
+	
+	id = 347000		#Event 01 for TUR - The Cypriot Question
+
+	is_triggered_only = yes
+
+	title = "EVTNAME347000"
+	desc = "EVTDESC347000"
+	picture = "1974_Cyprus_Turkish_Invasion_alternate"
+
+		
+	option = {
+		name = "EVTOPTA347000"			    			#Launch Operation Atilla!
+		ai_chance = { factor = 80 }
+		limited_war = CYP
+		GRE = { country_event = 201000 }	# Event 01 for GRE
+		relation = { 
+			who = CYP 
+			value = -100 
+		}
+		relation = { 
+			who = GRE 
+			value = -100 
+		}
+		national_unity = 5
+	}
+	
+	option = {
+		name = "EVTOPTB347000"			    			#Appeal to the UN
+		ai_chance = { factor = 15 }
+		relation = { 
+			who = CYP 
+			value = -50 
+		}
+		
+		#UN Vote to force elections
+		
+	}
+	
+	option = {
+		name = "EVTOPTC347000"			    			#Do not get involved
+		ai_chance = { factor = 5 }
+		prestige_change = -15
+		dissent = 15
+		national_unity = -10
+	}
+}
+
+country_event = {
+	
+	id = 201000		#Event 01 for GRE - The Cypriot Question
+
+	is_triggered_only = yes
+
+	title = "EVTNAME201000"
+	desc = "EVTDESC201000"
+	picture = "1974_Cyprus_Turkish_Invasion"
+
+		
+	option = {
+		name = "EVTOPTA201000"			    			# We shall protect the Greek Cypriots
+		ai_chance = { factor = 20 }
+		join_war = CYP
+		relation = { 
+			who = TUR 
+			value = -100 
+		}
+		relation = { 
+			who = CYP 
+			value = 100 
+		}
+		national_unity = 5
+	}
+	
+	option = {
+		name = "EVTOPTB201000"			    			#Send an expeditionary force
+		ai_chance = { factor = 60 }
+		relation = { 
+			who = CYP 
+			value = 50 
+		}
+		money = -200
+		manpower = -2
+		supplies = -10
+		fuel = -5
+		
+		CYP = { load_oob = GRE_exp_CYP.txt }
+		
+	}
+	
+	option = {
+		name = "EVTOPTC201000"			    			#Do not get involved
+		ai_chance = { factor = 20 }
+		prestige_change = -15
+		dissent = 5
+		national_unity = -10
+		relation = { 
+			who = CYP 
+			value = -50 
+		}		
+	}
+}
+
+country_event = {
+	
+	id = 201001		#Event 02 for GRE - Student Revolt
+
+	trigger = {
+		
+		tag = GRE
+		OR = {
+			AND = {
+				NOT = { war_with = TUR }
+				CYP = { 
+					war_with = TUR
+					lost_national = 0.1 
+				}
+			}
+			lost_national = 0.1
+			7709 = { controlled_by = TUR }
+		}
+		
+		NOT = { national_unity = 90 }
+		dissent = 5
+		
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.5
+			dissent = 15
+		}
+		modifier = {
+			factor = 0.5
+		NOT = {	
+			NOT = { national_unity = 70 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { national_unity = 50 }
+		}	
+	}	
+
+	title = "EVTNAME201001"
+	desc = "EVTDESC201001"
+	picture = "1973_Greek_Student_Revolt"
+
+		
+	option = {
+		name = "EVTOPTA201001"			    			#Democracy shall prevail!
+		ai_chance = { factor = 100 }
+
+		government = republic_gov
+		start_election = GRE
+		
+		set_country_flag = junta_fallen
+		
+		national_unity = 5
+		
+		random_owned = {
+			limit = {
+				owner = {
+					war_with = TUR
+				}
+			}
+			owner = {
+				country_event = 201002
+			}
+		}
+		
+	}
+	
+}
+
+country_event = {
+	
+	id = 201002		#Event 03 for GRE - A chance for peace
+
+	is_triggered_only = yes
+
+	title = "EVTNAME201002"
+	desc = "EVTDESC201002"
+	picture = "1979_Cyprus_Peace_Talks"
+
+		
+	option = {
+		name = "EVTOPTA201002"			    			#Greece shall continue to support Cyprus
+		ai_chance = { factor = 50 }
+
+		national_unity = 5
+		dissent = 5
+
+	}
+	
+		option = {
+		name = "EVTOPTB201002"			    			#The Greek Republic only desires peace!
+		ai_chance = { factor = 50 }
+
+		end_war = TUR
+		dissent = -5
+		
+	}
+	
+}
+
+country_event = {
+	
+	id = 347001		#Event 02 for TUR - The Turkish Republic of Northern Cyprus
+
+	trigger = {
+		
+		tag = TUR
+		war_with = CYP
+		7709 = { controlled_by = TUR }
+		
+	}
+		
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	title = "EVTNAME347001"
+	desc = "EVTDESC347001"
+	picture = "1975_Republic_Northern_Cyprus"
+
+		
+	option = {
+		name = "EVTOPTA347001"			    			#Establish the Turkish Republic of Northern Cyprus 
+		ai_chance = { factor = 90 }
+		national_unity = 10
+		dissent = -10
+		end_war = CYP
+		CYP = { 
+			7709 = {
+				secede_province = TUR
+				add_province_modifier = {
+					name = minor_revolt_risk
+					duration = 1825	
+				}
+			}
+		}
+		
+	}
+	
+		option = {
+		name = "EVTOPTB347001"			    			#All of Cyprus shall bow to us!
+		ai_chance = { factor = 10 }
+
+		dissent = 20
+		
+	}
+	
+}

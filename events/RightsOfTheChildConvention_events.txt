@@ -1,0 +1,1038 @@
+#RightsOfTheChildConvention_events.txt
+#UN Rights of the Child Convention
+
+#UN Secretary General:
+	#12100 - Raise the UN Rights of the Child Convention for Voting - Triggered by dec_UN_raise_rights_of_the_child_convention
+	#12101 - Should We Have Voting Notifications Or Not?
+	#12102 - UN Rights of the Child Convention Resolution Fails in the General Assembly
+	#12103 - UN Rights of the Child Convention Resolution Passes in the General Assembly
+	
+#Global:
+	#12110 - Vote on the UN Rights of the Child Convention - Notifications Off
+	#12111 - Vote on the UN Rights of the Child Convention - Notifications On (Major Event)
+	#12112 - We have ratified the UN Rights of the Child Convention - Triggered
+	#12113 - We have ratified the UN Rights of the Child Convention - Non-triggered
+	#12114 - We have revoked the UN Rights of the Child Convention
+	
+	
+## UN Secretary General ##
+	#12100 - Raise the UN Rights of the Child Convention for Voting
+	country_event = {
+	
+		id = 12100
+
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME12100"
+		desc = "EVTDESC12100"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12100" 					#Large diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 40 }
+			#}
+			#XUN  = { prestige_change = -40 }
+			
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			country_event = 12101
+		}
+
+		option = {
+			name = "EVTOPTB12100" 					#Small diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 15 }
+			#}
+			#XUN  = { prestige_change = -15 }
+			
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			country_event = 12101
+		}
+
+		option = {
+			name = "EVTOPTC12100"					#No diplomatic investment
+			
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			country_event = 12101
+		}
+	}
+	
+	#12101 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 12101
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME12101"
+		desc = "EVTDESC12101"
+		picture = "xxxx"
+		
+		option = {
+			name = "EVTOPTA12101"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_rights_of_the_child_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_rights_of_the_child_convention_voting
+		}
+		
+		option = {
+			name = "EVTOPTB12101"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_rights_of_the_child_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_rights_of_the_child_convention_voting
+		}
+	}
+	
+	#12102 - UN Rights of the Child Convention Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 12102
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_rights_of_the_child_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME12102"
+		desc = "EVTDESC12102"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_rights_of_the_child_convention_voting
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_rights_of_the_child_convention_fails
+		}
+
+		option = {
+			name = "EVTOPTA12102"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			#XUN  = { prestige_change = -50 }
+			
+			#hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_rights_of_the_child_convention_failure_delay
+						duration = 1460
+					}
+				}
+			#}
+			clr_global_flag = gflag_UN_rights_of_the_child_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#12103 - UN Rights of the Child Convention Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 12103
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_rights_of_the_child_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME12103"
+		desc = "EVTDESC12103"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_rights_of_the_child_convention_voting
+			clr_global_flag = gflag_UN_rights_of_the_child_convention_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_rights_of_the_child_convention_passes
+		}
+
+		option = {
+			name = "EVTOPTA12103"					#Excellent
+			clr_global_var = var_UN_votes_For
+			
+			#XUN  = { prestige_change = 50 }
+			
+			any_country = {
+				limit = {
+					has_country_flag = flag_UN_rights_of_the_child_convention_supporter
+				}
+				set_country_flag = flag_UN_rights_of_the_child_convention_ratified
+				country_event = 12112
+			}
+			clr_global_flag = gflag_UN_rights_of_the_child_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+
+## Global ##
+	#12110 - Vote on the UN Rights of the Child Convention - Notifications Off
+	country_event = {
+	
+		id = 12110
+		
+		trigger = {
+			has_country_flag = flag_UN_rights_of_the_child_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_rights_of_the_child_convention_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME12110"
+		desc = "EVTDESC12110"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_rights_of_the_child_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_rights_of_the_child_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA12110"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_rights_of_the_child_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.25
+					civil_liberties = fully_granted_liberties
+				}
+				modifier = {
+					factor = 3
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.5
+					internal_policy = democratic_aff_pol
+				}
+				modifier = {
+					factor = 1.25
+					internal_policy = liberal_aff_pol
+				}
+				modifier = {
+					factor = 1.25
+					organized_religions_law = secular_state
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						domestic_policy = educational_focus_pol
+						domestic_policy = health_focus_pol
+						domestic_policy = social_focus_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					economic_policy = welfare_state_pol
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						national_identity = equality_focus
+						national_identity = humanitarian_focus
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = civic_focus
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						ideology = social_liberal_idolg
+						ideology = market_liberal_idolg
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						ideology_group = comintern
+						ideology = left_wing_radical_idolg
+						ideology = social_democrat_idolg
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_rights_of_the_child_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB12110"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+			clr_country_flag = flag_UN_rights_of_the_child_convention_supporter
+		}
+
+		option = {
+			name = "EVTOPTC12110"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					civil_liberties = suspended_indefinitely
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						civil_liberties = martial_law
+						civil_liberties = emergency_law
+					}
+				}
+				modifier = {
+					factor = 5
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 2
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						internal_policy = state_controlled_aff_pol
+						internal_policy = repressive_aff_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					internal_policy = oppressive_aff_pol
+				}
+				modifier = {
+					factor = 1.5
+					organized_religions_law = state_religion
+				}
+				modifier = {
+					factor = 1.5
+					military_service = expanded_drafted_army
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = cultural_bias_focus
+						national_identity = state_building_focus
+					}
+				}
+				modifier = {
+					factor = 1.25
+					education_policy = very_low_funding_edu_pol
+				}
+				modifier = {
+					factor = 1.1
+					education_policy = low_funding_edu_pol
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						ideology = fascistic_idolg
+						ideology = paternal_auto_idolg
+					}
+				}
+				modifier = {
+					factor = 1.5
+					ideology = social_cons_idolg
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			clr_country_flag = flag_UN_rights_of_the_child_convention_supporter
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_rights_of_the_child_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#12111 - Vote on the UN Rights of the Child Convention - Notifications On
+	country_event = {
+	
+		id = 12111
+		
+		trigger = {
+			has_country_flag = flag_UN_rights_of_the_child_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_rights_of_the_child_convention_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME12110"
+		desc = "EVTDESC12110"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_rights_of_the_child_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_rights_of_the_child_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA12110"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_rights_of_the_child_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.25
+					civil_liberties = fully_granted_liberties
+				}
+				modifier = {
+					factor = 2
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 2
+					internal_policy = democratic_aff_pol
+				}
+				modifier = {
+					factor = 1.5
+					internal_policy = liberal_aff_pol
+				}
+				modifier = {
+					factor = 3
+					OR = {
+						elections_and_voting = proportional
+						elections_and_voting = semi-proportional
+					}
+				}
+				modifier = {
+					factor = 2
+					elections_and_voting = winner_takes_it_all
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_identity = equality_focus
+						national_identity = civic_focus
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						ideology = social_democrat_idolg
+						ideology = social_liberal_idolg
+						ideology = market_liberal_idolg
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						ideology = left_wing_radical_idolg
+						ideology = social_cons_idolg
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_rights_of_the_child_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB12110"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC12110"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = narrowly_defined
+						rule_of_law = thinly_defined
+					}
+				}
+				modifier = {
+					factor = 2
+					civil_liberties = suspended_indefinitely
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						civil_liberties = emergency_law
+						civil_liberties = martial_law
+					}
+				}
+				modifier = {
+					factor = 3
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.5
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 2
+					internal_policy = state_controlled_aff_pol
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						internal_policy = repressive_aff_pol
+						internal_policy = oppressive_aff_pol
+					}
+				}
+				modifier = {
+					factor = 5
+					elections_and_voting = hereditary_rule
+				}
+				modifier = {
+					factor = 3
+					elections_and_voting = single_party_system
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_attitude = imperialism
+						national_attitude = colonialism
+					}
+				}
+				modifier = {
+					factor = 2
+					ideology = fascistic_idolg
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						ideology = paternal_auto_idolg
+						ideology_group = comintern
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_rights_of_the_child_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#12112 - We have ratified the UN Rights of the Child Convention - Triggered
+	country_event = {
+	
+		id = 12112
+
+		is_triggered_only = yes
+
+		title = "EVTNAME12112"
+		desc = "EVTDESC12112"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12112"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_rights_of_the_child_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_rights_of_the_child_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_rights_of_the_child_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#12113 - We have ratified the UN Rights of the Child Convention (Non-triggered)
+	country_event = {
+	
+		id = 12113
+
+		trigger = {
+			ai = yes
+			has_global_flag = gflag_UN_rights_of_the_child_convention_passes
+			NOT = { has_country_modifier = mod_UN_rights_of_the_child_convention_ratified }
+			NOT = { USA = { has_country_modifier = mod_UN_rights_of_the_child_convention_ratifier_delay } }
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			NOT = { human_rights = not_recognized }
+			NOT = {
+				AND = {
+					OR = {
+						ideology = fascistic_idolg
+						ideology = paternal_auto_idolg
+					}
+					human_rights = cultural_relativism
+				}
+			}
+			#Add more
+		}
+		
+		mean_time_to_happen = {
+			months = 40
+			modifier = {
+				factor = 0.6
+				is_org_leader = XUN
+			}
+			modifier = {
+				factor = 0.7
+				civil_liberties = fully_granted_liberties
+			}
+			modifier = {
+				factor = 0.3
+				human_rights = universal_rights
+			}
+			modifier = {
+				factor = 0.6
+				internal_policy = democratic_aff_pol
+			}
+			modifier = {
+				factor = 0.7
+				internal_policy = liberal_aff_pol
+			}
+			modifier = {
+				factor = 0.7
+				organized_religions_law = secular_state
+			}
+			modifier = {
+				factor = 0.7
+				OR = {
+					domestic_policy = educational_focus_pol
+					domestic_policy = health_focus_pol
+					domestic_policy = social_focus_pol
+				}
+			}
+			modifier = {
+				factor = 0.8
+				economic_policy = welfare_state_pol
+			}
+			modifier = {
+				factor = 0.6
+				OR = {
+					national_identity = equality_focus
+					national_identity = humanitarian_focus
+				}
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					national_identity = civic_focus
+				}
+			}
+			modifier = {
+				factor = 0.7
+				OR = {
+					ideology = social_liberal_idolg
+					ideology = market_liberal_idolg
+				}
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					ideology_group = comintern
+					ideology = left_wing_radical_idolg
+					ideology = social_democrat_idolg
+				}
+			}
+			modifier = {
+				factor = 1.5
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.1
+				national_attitude = non-interventionism
+			}
+			
+			
+			modifier = {
+				factor = 2
+				civil_liberties = suspended_indefinitely
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					civil_liberties = martial_law
+					civil_liberties = emergency_law
+				}
+			}
+			modifier = {
+				factor = 10
+				human_rights = not_recognized
+			}
+			modifier = {
+				factor = 3
+				human_rights = cultural_relativism
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					internal_policy = state_controlled_aff_pol
+					internal_policy = repressive_aff_pol
+				}
+			}
+			modifier = {
+				factor = 1.25
+				internal_policy = oppressive_aff_pol
+			}
+			modifier = {
+				factor = 2
+				organized_religions_law = state_religion
+			}
+			modifier = {
+				factor = 2
+				military_service = expanded_drafted_army
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					national_identity = cultural_bias_focus
+					national_identity = state_building_focus
+				}
+			}
+			modifier = {
+				factor = 1.5
+				education_policy = very_low_funding_edu_pol
+			}
+			modifier = {
+				factor = 1.25
+				education_policy = low_funding_edu_pol
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					ideology = fascistic_idolg
+					ideology = paternal_auto_idolg
+				}
+			}
+			modifier = {
+				factor = 2
+				ideology = social_cons_idolg
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME12112"
+		desc = "EVTDESC12112"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12112"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_rights_of_the_child_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_rights_of_the_child_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_rights_of_the_child_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#12114 - We have revoked the UN Rights of the Child Convention
+	country_event = {
+	
+		id = 12114
+
+		trigger = {
+			ai = yes
+			has_country_modifier = mod_UN_rights_of_the_child_convention_ratified
+			NOT = { has_country_modifier = mod_UN_rights_of_the_child_convention_ratified_recently }
+			NOT = { has_country_flag = flag_UN_rights_of_the_child_convention_supporter }
+			OR = {
+				human_rights = not_recognized
+				AND = {
+					OR = {
+						ideology = fascistic_idolg
+						ideology = paternal_auto_idolg
+					}
+					human_rights = cultural_relativism
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			months = 9
+			modifier = {
+				factor = 0.5
+				has_country_flag = "UN_EMBARGO"
+			}
+			modifier = {
+				factor = 0.75
+				human_rights = not_recognized
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME12114"
+		desc = "EVTDESC12114"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12114"					#Good riddance
+			prestige_change = -8
+			remove_country_modifier = mod_UN_rights_of_the_child_convention_ratified
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_rights_of_the_child_convention_revoked_recently
+					duration = 365
+				}
+			#}
+			
+			#XUN = { prestige_change = -3 }
+		}
+	}

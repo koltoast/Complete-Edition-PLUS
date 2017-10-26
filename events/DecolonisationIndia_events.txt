@@ -1,0 +1,742 @@
+#DecolonisationIndia_decisions.txt
+#1947 Decolonisation of India
+
+#ENG:
+	#181061 - Royal Indian Navy mutinies
+	#181062 - Direct Action Day
+	#181063 - Follow up to may_plan_ENG - decide whether to ask for united or split India
+	#181064	- India has refused the May plan
+	#181065 - India has accepted the May plan
+	#181066 - India has refused the June plan
+	#181067 - India has accepted the June plan
+	#181068 - Follow up to june_plan_ENG - decide second proposal for India
+	#181069 - Follow up to mountbatten_plan_ENG - decide Mountbatten proposal for India
+	#181070 - India has decided to stay united
+	#181071 - India has decided to partition
+	#181072 - Riots in India
+	#181073 - Prevention of puppet India
+	#181074 - Prevention of puppet Pakistan
+	#181075 - General Mayhem - hypothetical chaos in the event the UK tries to hold onto India
+	
+#FSM (Flying Spaghetti Monster who decides random events with His noodly appendage):
+	#181077 - Randomize United India
+	#181078 - Randomize Divided India
+	#181079 - Randomize Mountbatten Plan India
+
+#IND:
+	#218041 - Population transfer IND
+	#218042 - Riots against united India
+	#218043 - Assassination of Gandhi
+
+#PAK:
+	#282021 - Population transfer PAK	
+	
+## ENG ##
+country_event = {
+	
+	id = 181061			#Royal Indian navy mutiny
+	
+	trigger = {
+		tag = ENG
+		NOT = { has_country_flag = RIN_revolt }
+		NOT = { exists = IND }
+		OR = {
+			ENG = { any_owned_province = { is_core = IND } }
+			ENG = { any_owned_province = { is_core = PAK } }
+		}
+	}
+
+	mean_time_to_happen = { months = 2 }
+	
+	title = "EVTNAME181061"
+	desc = "EVTDESC181061"
+	picture = "1946_Indian_Navy_Mutiny"
+
+	option = {
+		name = "EVTOPTA181061"
+		dissent = 4		
+		set_country_flag = RIN_revolt
+		national_unity = -2
+		random_owned = {
+			limit = { is_core = IND NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = indian_rebels duration = 800 } 
+		}		
+		random_owned = {
+			limit = { is_core = IND NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = indian_rebels duration = 800 } 
+		}		
+		random_owned = {
+			limit = { is_core = PAK NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = pakistani_rebels duration = 800 } 
+		}
+		any_owned = { 
+			limit = {
+				OR = {
+					is_core = PAK 
+					is_core = IND 
+				} 
+			} 
+			revolt_risk = 5 
+		}
+	}
+}
+
+country_event = {
+	
+	id = 181062			#Direct Action Day
+	
+	trigger = {
+		tag = ENG
+		has_country_flag = RIN_revolt
+		NOT = { has_country_flag = IND_direct_action }
+		NOT = { exists = IND }
+		OR = {
+			ENG = { any_owned_province = { is_core = IND } }
+			ENG = { any_owned_province = { is_core = PAK } }
+		}
+	}
+
+	mean_time_to_happen = { months = 6 }
+	
+	title = "EVTNAME181062"
+	desc = "EVTDESC181062"
+	picture = "1946_Direct_Action_Day"
+
+	option = {
+		name = "EVTOPTA181062"
+		set_country_flag = IND_direct_action
+		dissent = 5
+		national_unity = -2	
+		random_owned = {
+			limit = { is_core = IND NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = indian_rebels duration = 800 } 
+		}		
+		random_owned = {
+			limit = { is_core = IND NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = indian_rebels duration = 800 } 
+		}		
+		random_owned = {
+			limit = { is_core = IND NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = indian_rebels duration = 800 } 
+		}		
+		random_owned = {
+			limit = { is_core = IND NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = indian_rebels duration = 800 } 
+		}		
+		random_owned = {
+			limit = { is_core = PAK NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = pakistani_rebels duration = 800 } 
+		}
+		any_owned = { 
+			limit = {
+				OR = {
+					is_core = PAK 
+					is_core = IND 
+				} 
+			}
+			population_change = { age_from = 20 age_to = 70 percent = -0.01 }
+			revolt_risk = 5
+		}
+	}
+}
+
+country_event = {
+	
+	id = 181063			#Decide first proposal for India
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME181063"
+	desc = "EVTDESC181063"
+	picture = "1946_Cabinet_Mission_India"
+
+	option = {
+		name = "EVTOPTA181063"			    				
+		ai_chance = { factor = 100 }
+		dissent = 1
+		#hidden_effects = {
+			random_country = {
+				limit = { ai = yes }
+				country_event = 181077	
+			}
+		#}
+	}
+	option = {
+		name = "EVTOPTB181063"			    				
+		ai_chance = { factor = 0 }
+		dissent = 1
+		#hidden_effects = {
+			random_country = {
+				limit = { ai = yes }
+				country_event = 181078	
+			}
+		#}
+	}
+}
+
+country_event = {
+	
+	id = 181064			#India has refused the May plan
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME181064"
+	desc = "EVTDESC181064"
+	picture = "1946_Cabinet_Mission_India_3"
+
+	option = {
+		name = "EVTOPTA181064"
+		set_country_flag = may_plan_rejected
+		dissent = 2
+	}
+}
+
+country_event = {
+	
+	id = 181065			#India has accepted the May plan
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	title = "EVTNAME181065"
+	desc = "EVTDESC181065"
+	picture = "1946_Cabinet_Mission_India_2"
+
+	option = {
+		name = "EVTOPTA181065"
+		dissent = -5
+		national_unity = 3
+		release = IND
+		any_owned = { 
+			limit = {
+				OR = {
+					is_core = PAK 
+					is_core = IND 
+				} 
+			}
+			secede_province = IND
+		}
+		IND = { 
+			any_owned = { limit = { is_core = PAK } add_core = IND }
+			any_owned = { limit = { is_core = ENG } remove_core = ENG }
+		}
+	}
+}
+
+country_event = {
+	
+	id = 181066			#India has refused the June plan
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME181066"
+	desc = "EVTDESC181066"
+	picture = "1946_Cabinet_Mission_India_3"
+
+	option = {
+		name = "EVTOPTA181066"
+		set_country_flag = june_plan_rejected
+		dissent = 5		
+		any_owned = { 
+			limit = { is_core = PAK } 
+			revolt_risk = 5 
+		}
+	}
+}
+
+country_event = {
+	
+	id = 181067			#India has accepted the June plan
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	title = "EVTNAME181067"
+	desc = "EVTDESC181067"
+	picture = "1946_Cabinet_Mission_India_2"
+
+	option = {
+		name = "EVTOPTA181067"
+		dissent = -5
+		national_unity = 3
+		release = IND
+		release = PAK
+		any_owned = { limit = { is_core = PAK } secede_province = PAK }
+		any_owned = { limit = { is_core = IND } secede_province = IND }
+		IND = { any_owned = { limit = { is_core = ENG } remove_core = ENG } }
+		PAK = { any_owned = { limit = { is_core = ENG } remove_core = ENG } }
+	}
+}
+
+country_event = {
+	
+	id = 181068			#Decide second proposal for India
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME181068"
+	desc = "EVTDESC181068"
+	picture = "1946_Cabinet_Mission_India_4"
+
+	option = {
+		name = "EVTOPTA181068"
+		dissent = 1
+		#hidden_effects = {
+			random_country = {
+				limit = { ai = yes }
+				country_event = 181078	
+			}
+		#}
+	}
+}
+
+country_event = {
+	
+	id = 181069			#Decide mountbatten proposal for India
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME181069"
+	desc = "EVTDESC181069"
+	picture = "1947_Mountbatten_proposal"
+
+	option = {
+		name = "EVTOPTA181069"
+		dissent = 1		
+		#hidden_effects = {
+			random_country = {
+				limit = { ai = yes }
+				country_event = 181079	
+			}
+		#}
+	}
+}
+
+country_event = {
+	
+	id = 181070			#India has decided to stay united
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	title = "EVTNAME181070"
+	desc = "EVTDESC181070"
+	picture = "1946_India"
+
+	option = {
+		name = "EVTOPTA181070"
+		dissent = -5
+		national_unity = 3
+		release = IND
+		any_owned = { limit = { is_core = PAK } secede_province = IND }
+		any_owned = { limit = { is_core = IND } secede_province = IND }
+		IND = { 
+			any_owned = { limit = { is_core = PAK } add_core = IND }
+			any_owned = { limit = { is_core = ENG } remove_core = ENG }
+		}
+	}
+}
+
+country_event = {
+	
+	id = 181071			#India has decided to partition
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	title = "EVTNAME181071"
+	desc = "EVTDESC181071"
+	picture = "1947_India"
+
+	option = {
+		name = "EVTOPTA181071"
+		dissent = -5
+		national_unity = 3
+		release = IND
+		release = PAK
+		any_owned = { limit = { is_core = PAK } secede_province = PAK }
+		any_owned = { limit = { is_core = IND } secede_province = IND }
+		IND = { any_owned = { limit = { is_core = ENG } remove_core = ENG } }
+		PAK = { any_owned = { limit = { is_core = ENG } remove_core = ENG } }
+	}
+}
+
+country_event = {
+	
+	id = 181072			#Riots in India
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME181072"
+	desc = "EVTDESC181072"
+	picture = "1946_Calcutta_riots"
+
+	option = {
+		name = "EVTOPTA181072"
+		prestige_change = -10
+		relation = { who = XUN value = -20 }
+	}
+}
+
+country_event = {
+	
+	id = 181073			#India refuses to be a puppet
+	
+	trigger = {
+		tag = ENG
+		exists = IND
+		IND = { vassal_of = ENG }
+	}
+
+	mean_time_to_happen = { months = 2 }
+	
+	title = "EVTNAME181073"
+	desc = "EVTDESC181073"
+	picture = "1946_India_barricade"
+
+	option = {
+		name = "EVTOPTA181073"
+		dissent = 2		
+		national_unity = -1
+		IND = { any_owned = { secede_province = ENG } }
+		ENG = { any_owned = { limit = { is_core = IND } revolt_risk = 2 } }
+	}
+}
+
+country_event = {
+	
+	id = 181074			#Pakistan refuses to be a puppet
+	
+	trigger = {
+		tag = ENG
+		exists = PAK
+		PAK = { vassal_of = ENG }
+	}
+
+	mean_time_to_happen = { months = 2 }
+	
+	title = "EVTNAME181074"
+	desc = "EVTDESC181074"
+	picture = "1946_India_barricade"
+
+	option = {
+		name = "EVTOPTA181074"
+		dissent = 2		
+		national_unity = -1
+		PAK = { any_owned = { secede_province = ENG } }
+		ENG = { any_owned = { limit = { is_core = PAK } revolt_risk = 2 } }
+	}
+}
+
+country_event = {
+	
+	id = 181075			#General Mayhem - hypothetical chaos in the event the UK tries to hold onto India
+	
+	trigger = {
+		tag = ENG
+		has_country_flag = IND_direct_action
+		NOT = { has_country_flag = IND_general_mayhem }
+		NOT = { exists = IND }
+		OR = {
+			ENG = { any_owned_province = { is_core = IND } }
+			ENG = { any_owned_province = { is_core = PAK } }
+		}
+	}
+
+	mean_time_to_happen = { months = 36 }
+	
+	major = yes
+	
+	title = "EVTNAME181075"
+	desc = "EVTDESC181075"
+	picture = "1946_Calcutta_riots_2"
+
+	option = {
+		name = "EVTOPTA181075"
+		dissent = 15		
+		set_country_flag = IND_general_mayhem
+		national_unity = -5
+		relation = { who = XUN value = -30 }
+		random_owned = {
+			limit = { is_core = IND NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = indian_rebels duration = 800 } 
+		}		
+		random_owned = {
+			limit = { is_core = IND NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = indian_rebels duration = 800 } 
+		}		
+		random_owned = {
+			limit = { is_core = IND NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = indian_rebels duration = 800 } 
+		}		
+		random_owned = {
+			limit = { is_core = IND NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = indian_rebels duration = 800 } 
+		}			
+		random_owned = {
+			limit = { is_core = IND NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = indian_rebels duration = 800 } 
+		}		
+		random_owned = {
+			limit = { is_core = IND NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = indian_rebels duration = 800 } 
+		}		
+		random_owned = {
+			limit = { is_core = IND NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = indian_rebels duration = 800 } 
+		}		
+		random_owned = {
+			limit = { is_core = IND NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = indian_rebels duration = 800 } 
+		}		
+		random_owned = {
+			limit = { is_core = PAK NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = pakistani_rebels duration = 800 } 
+		}	
+		random_owned = {
+			limit = { is_core = PAK NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = pakistani_rebels duration = 800 } 
+		}	
+		random_owned = {
+			limit = { is_core = PAK NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = pakistani_rebels duration = 800 } 
+		}	
+		random_owned = {
+			limit = { is_core = PAK NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = pakistani_rebels duration = 800 } 
+		}	
+		random_owned = {
+			limit = { is_core = PAK NOT = { has_province_modifier = indian_rebels } NOT = { has_province_modifier = pakistani_rebels } }
+			add_province_modifier = { name = pakistani_rebels duration = 800 } 
+		}
+		any_owned = { 
+			limit = {
+				OR = {
+					is_core = PAK 
+					is_core = IND 
+				} 
+			} 
+			revolt_risk = 15
+			population_change = { age_from = 20 age_to = 70 percent = -0.075 }
+		}
+	}
+}
+
+## FSM ##
+country_event = {
+	
+	id = 181077			#Randomize acceptance/rejection of united India
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME181077"
+	desc = "EVTDESC181077"
+	picture = "1946_India"
+
+	option = {
+		name = "EVTOPTA181077"			    				
+		ai_chance = { factor = 95 }
+		ENG = { country_event = 181064 }
+	}
+	option = {
+		name = "EVTOPTB181077"			    				
+		ai_chance = { factor = 5 }
+		ENG = { country_event = 181065 }
+	}
+}
+
+country_event = {
+	
+	id = 181078			#Randomize acceptance/rejection of divided India
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME181078"
+	desc = "EVTDESC181078"
+	picture = "1947_India"
+
+	option = {
+		name = "EVTOPTA181078"			    				
+		ai_chance = { factor = 75 }
+		ENG = { country_event = 181066 }
+	}
+	option = {
+		name = "EVTOPTB181078"			    				
+		ai_chance = { factor = 25 }
+		ENG = { country_event = 181067 }
+	}
+}
+
+country_event = {
+	
+	id = 181079			#Randomize acceptance/rejection of Mountbatten plan
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME181079"
+	desc = "EVTDESC181079"
+	picture = "1947_Mountbatten_proposal"
+
+	option = {
+		name = "EVTOPTA181079"			    				
+		ai_chance = { factor = 25 }
+		ENG = { country_event = 181070 }
+	}
+	option = {
+		name = "EVTOPTB181079"			    				
+		ai_chance = { factor = 75 }
+		ENG = { country_event = 181071 }
+	}
+}
+
+## IND ##
+country_event = {
+	
+	id = 218041			#Population transfer IND
+	
+	trigger = {
+		tag = IND
+		exists = IND
+		exists = PAK
+		NOT = { has_country_flag = IND_population_transfer }
+	}
+
+	mean_time_to_happen = { months = 1 }
+	
+	title = "EVTNAME218041"
+	desc = "EVTDESC218041"
+	picture = "1947_India_partitioned"
+
+	option = {
+		name = "EVTOPTA218041"
+		set_country_flag = IND_population_transfer
+		dissent = 15
+		national_unity = -10
+		relation = { who = XUN value = -40 }
+		relation = { who = PAK value = -100 }
+		PAK = { country_event = 282021 }
+		ENG = { country_event = 181072 }
+		any_owned = { 
+			limit = {
+				OR = {
+					is_core = PAK 
+					is_core = IND 
+				} 
+			}
+			revolt_risk = 15
+		}
+		any_owned = { 
+			limit = {
+				OR = {
+					is_core = PAK 
+					is_core = IND 
+				} 
+			} 
+			population_change = { age_from = 20 age_to = 70 percent = 0.05 }
+		}
+	}
+}
+
+country_event = {
+	
+	id = 218042			#Riots against united India
+	
+	trigger = {
+		tag = IND
+		exists = IND
+		NOT = { exists = PAK }
+		NOT = { has_country_flag = IND_pakistan_riots }
+	}
+
+	mean_time_to_happen = { months = 3 }
+	
+	title = "EVTNAME218042"
+	desc = "EVTDESC218042"
+	picture = "1946_Calcutta_riots"
+
+	option = {
+		name = "EVTOPTA218042"
+		set_country_flag = IND_pakistan_riots
+		dissent = 15
+		national_unity = -10
+		any_owned = { limit = { is_core = IND } revolt_risk = 10 }
+		any_owned = { limit = { is_core = PAK } revolt_risk = 25 }
+		relation = { who = XUN value = -40 }
+		ENG = { country_event = 181072 }
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = PAK 
+					is_core = IND 
+				} 
+			} 
+			population_change = { age_from = 20 age_to = 70 percent = -0.03 }
+		}
+	}
+}
+
+country_event = {
+	
+	id = 218043			#Assassination of Gandhi
+	
+	trigger = {
+		tag = IND
+		NOT = { has_country_flag = IND_gandhi }
+	}
+
+	mean_time_to_happen = { months = 12 }
+	
+	major = yes
+	
+	title = "EVTNAME218043"
+	desc = "EVTDESC218043"
+	picture = "1948_Gandhi_assassinated"
+
+	option = {
+		name = "EVTOPTA218043"
+		set_country_flag = IND_gandhi
+		dissent = 5
+		national_unity = -5
+	}
+}
+
+## PAK ##
+country_event = {
+	
+	id = 282021			#Population transfer PAK
+	
+	is_triggered_only = yes
+	title = "EVTNAME282021"
+	desc = "EVTDESC282021"
+	picture = "1947_India_partitioned"
+
+	option = {
+		name = "EVTOPTA282021"
+		dissent = 15		
+		national_unity = -10
+		relation = { who = XUN value = -40 }
+		relation = { who = IND value = -100 }
+		any_owned = { 
+			limit = {
+				OR = {
+					is_core = PAK 
+					is_core = IND 
+				} 
+			}
+			revolt_risk = 15
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = PAK 
+					is_core = IND 
+				} 
+			} 
+			population_change = { age_from = 20 age_to = 70 percent = -0.05 }
+		} 
+	}
+}

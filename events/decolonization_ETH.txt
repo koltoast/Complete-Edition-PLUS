@@ -1,0 +1,820 @@
+#Index:
+	#6170 - colony is owned		- 3 options
+	#6171 - colony is a puppet	- 2 options
+	#6172 – rebel reinforcements - if ETH exists			- 2 options
+	#6173 – rebel reinforcements - if ETH does not exist	- 2 options
+
+country_event = {
+	
+	id = 6170										#Colony is owned
+	
+	trigger = {
+		owns = 8166
+		controls = 8166
+		NOT = { national_unity = 79 }
+		NOT = { exists = ETH }
+		NOT = { has_country_flag = colonial_war_ETH }
+		NOT = { national_culture = cul_sub_saharan_africa }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 1.00						#60 months		
+			not = { national_unity = 79 }
+		}
+		modifier = {
+			factor = 0.75						#45 months
+			not = { national_unity = 69 }
+		}
+		modifier = {
+			factor = 0.80						#36 months
+			not = { national_unity = 59 }
+		}
+		modifier = {
+			factor = 0.75						#27 months
+			not = { national_unity = 49 }
+		}
+		modifier = {
+			factor = 0.25
+			ideology = maoist_idolg
+		}
+		modifier = {
+			factor = 0.25
+			ideology = communist_idolg
+		}
+	}
+	
+	immediate = {
+		region_Ethiopia_Tigray = { remove_core = ITA }
+		region_Ethiopia_Tigray = { remove_core = THIS }
+		region_Ethiopia_South_Oromia = { remove_core = ITA }
+		region_Ethiopia_South_Oromia = { remove_core = THIS }
+		region_Ethiopia_North_Oromia = { remove_core = ITA }
+		region_Ethiopia_North_Oromia = { remove_core = THIS }			
+		region_Ethiopia_Afar = { remove_core = ITA }
+		region_Ethiopia_Afar = { remove_core = THIS }
+		region_Ethiopia_South_Somali = { remove_core = ITA }
+		region_Ethiopia_South_Somali = { remove_core = THIS }
+		region_Ethiopia_North_Somali = { remove_core = ITA }
+		region_Ethiopia_North_Somali = { remove_core = THIS }
+		region_Ethiopia_Center_Somali = { remove_core = ITA }
+		region_Ethiopia_Center_Somali = { remove_core = THIS }
+		region_Ethiopia_Gambela = { remove_core = ITA }		
+		region_Ethiopia_Gambela = { remove_core = THIS }
+		region_Ethiopia_Benshangul-Gumaz = { remove_core = ITA }
+		region_Ethiopia_Benshangul-Gumaz = { remove_core = THIS }
+		region_Ethiopia_Addis_Ababa = { remove_core = ITA }
+		region_Ethiopia_Addis_Ababa = { remove_core = THIS }
+		region_Ethiopia_Amhara = { remove_core = ITA }		
+		region_Ethiopia_Amhara = { remove_core = THIS }
+		region_Ethiopia_Ethiopian_Southern_Nations = { remove_core = ITA }
+		region_Ethiopia_Ethiopian_Southern_Nations = { remove_core = THIS }
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6170"
+	desc = "EVTDESC6170"
+	picture = "1974_Mozambique_Lusaka_Accord"
+	
+	option = {											#chance to release immediatly
+		name = "EVTOPTA6170"
+		trigger = {
+			NOT = {
+			ideology = fascist_idolg
+			ideology = paternal_auto_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5							#25% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 0.8							#40% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 1								#50% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 1.2							#60% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 1.5							#75% chance
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 1.7							#85% chance
+				ideology = maoist_idolg
+			}
+			modifier = {
+				factor = 1.9							#95% chance
+				ideology = communist_idolg
+			}
+		}
+		release = ETH
+		recognize = ETH
+		relation = { who = ETH value = 100 }
+	}
+		
+	option = {											#chance to puppet
+		name = "EVTOPTB6170"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0								#0% chance
+				ideology = fascist_idolg
+			}
+			modifier = {
+				factor = 0								#0% chance
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.5							#75% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 1.2							#60% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 1								#50% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 0.8							#40% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0.5							#25% chance
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0.3							#15% chance
+				ideology = maoist_idolg
+			}
+			modifier = {
+				factor = 0.1							#5% chance
+				ideology = communist_idolg
+			}
+		}
+		release_vassal = ETH
+		recognize = ETH
+	}
+	
+	option = {											#chance to start a colonial war
+		name = "EVTOPTC6170"
+		trigger = {
+			NOT = {
+			ideology = maoist_idolg
+			ideology = communist_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0								#100% chance
+				ideology = fascist_idolg
+			}
+			modifier = {
+				factor = 0								#95% chance
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.5							#0% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 1.2							#0% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 1								#0% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 0.8							#0% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0.5							#0% chance
+				ideology = left_wing_radical_idolg
+			}
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_Tigray }
+			add_province_modifier = { name = nationalist_revolt duration = 800 }
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_South_Oromia }
+			add_province_modifier = { name = nationalist_revolt duration = 800 }
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_North_Oromia }
+			add_province_modifier = { name = nationalist_revolt duration = 800 }
+			create_revolt = 5		
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_Afar }
+			add_province_modifier = { name = nationalist_revolt duration = 800 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_South_Somali }
+			add_province_modifier = { name = nationalist_revolt duration = 800 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_North_Somali }
+			add_province_modifier = { name = nationalist_revolt duration = 800 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_Center_Somali }
+			add_province_modifier = { name = nationalist_revolt duration = 800 }		
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_Gambela }
+			add_province_modifier = { name = nationalist_revolt duration = 800 }
+			create_revolt = 5			
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_Benshangul-Gumaz }
+			add_province_modifier = { name = nationalist_revolt duration = 800 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region_Ethiopia_Addis_Ababa }
+			add_province_modifier = { name = nationalist_revolt duration = 800 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_Amhara }
+			add_province_modifier = { name = nationalist_revolt duration = 800 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region_Ethiopia_Ethiopian_Southern_Nations }
+			add_province_modifier = { name = nationalist_revolt duration = 800 } 
+			create_revolt = 5
+		}
+		set_country_flag = colonial_war_ETH
+	}
+}
+
+country_event = {
+	
+	id = 6171										#Colony is a puppet
+	
+	trigger = {
+		NOT = { national_unity = 79 }
+		exists = ETH
+		ETH = { vassal_of = THIS }
+		NOT = { national_culture = cul_sub_saharan_africa }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 1.00						#60 months		
+			not = { national_unity = 79 }
+		}
+		modifier = {
+			factor = 0.75						#45 months
+			not = { national_unity = 69 }
+		}
+		modifier = {
+			factor = 0.80						#36 months
+			not = { national_unity = 59 }
+		}
+		modifier = {
+			factor = 0.75						#27 months
+			not = { national_unity = 49 }
+		}
+		modifier = {
+			factor = 0.25
+			ideology = maoist_idolg
+		}
+		modifier = {
+			factor = 0.25
+			ideology = communist_idolg
+		}
+	}
+	
+	immediate = {
+		region_Ethiopia_Tigray = { remove_core = ITA }
+		region_Ethiopia_Tigray = { remove_core = THIS }
+		region_Ethiopia_South_Oromia = { remove_core = ITA }
+		region_Ethiopia_South_Oromia = { remove_core = THIS }
+		region_Ethiopia_North_Oromia = { remove_core = ITA }
+		region_Ethiopia_North_Oromia = { remove_core = THIS }			
+		region_Ethiopia_Afar = { remove_core = ITA }
+		region_Ethiopia_Afar = { remove_core = THIS }
+		region_Ethiopia_South_Somali = { remove_core = ITA }
+		region_Ethiopia_South_Somali = { remove_core = THIS }
+		region_Ethiopia_North_Somali = { remove_core = ITA }
+		region_Ethiopia_North_Somali = { remove_core = THIS }
+		region_Ethiopia_Center_Somali = { remove_core = ITA }
+		region_Ethiopia_Center_Somali = { remove_core = THIS }
+		region_Ethiopia_Gambela = { remove_core = ITA }		
+		region_Ethiopia_Gambela = { remove_core = THIS }
+		region_Ethiopia_Benshangul-Gumaz = { remove_core = ITA }
+		region_Ethiopia_Benshangul-Gumaz = { remove_core = THIS }
+		region_Ethiopia_Addis_Ababa = { remove_core = ITA }
+		region_Ethiopia_Addis_Ababa = { remove_core = THIS }
+		region_Ethiopia_Amhara = { remove_core = ITA }		
+		region_Ethiopia_Amhara = { remove_core = THIS }
+		region_Ethiopia_Ethiopian_Southern_Nations = { remove_core = ITA }
+		region_Ethiopia_Ethiopian_Southern_Nations = { remove_core = THIS }
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6171"
+	desc = "EVTDESC6171"
+	picture = "1974_Mozambique_Lusaka_Accord"
+	
+	option = {											#chance to release immediatly
+		name = "EVTOPTA6171"
+		trigger = {
+			NOT = {
+			ideology = fascist_idolg
+			ideology = paternal_auto_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2							#100% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = maoist_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = communist_idolg
+			}
+		}
+		release = ETH
+		recognize = ETH
+		relation = { who = ETH value = 100 }
+	}
+		
+	option = {											#auto release puppet and declare war
+		name = "EVTOPTB6171"
+		trigger = { 
+			not = {
+			ideology = maoist_idolg
+			ideology = communist_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2							#100% chance
+				ideology = fascist_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = left_wing_radical_idolg
+			}
+		}
+		liberate_puppet = ETH
+		war = ETH
+		ETH = {
+			supplies = 1000
+			random_owned = {
+				limit = { region = region_Ethiopia_Tigray }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_South_Oromia }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_North_Oromia }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_Afar }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_South_Somali }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_North_Somali }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_Center_Somali }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_Gambela }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_Benshangul-Gumaz  }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_Addis_Ababa }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_Amhara }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_Ethiopian_Southern_Nations }
+				militia_brigade = current
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 6172										#War continues - rebel reinforcements - if ETH does not exist
+	
+	trigger = {
+		owns = 8166
+		NOT = { national_unity = 79 }
+		NOT = { exists = ETH }
+		has_country_flag = colonial_war_ETH
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 1.00
+			not = { national_unity = 79 }
+			national_unity = 70
+		}
+		modifier = {
+			factor = 0.75
+			not = { national_unity = 69 }
+			national_unity = 60
+		}
+		modifier = {
+			factor = 0.50
+			not = { national_unity = 59 }
+			national_unity = 50
+		}
+		modifier = {
+			factor = 0.25
+			not = { national_unity = 49 }
+			national_unity = 40
+		}
+		modifier = {
+			factor = 0.10
+			not = { national_unity = 39 }
+		}
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6172"
+	desc = "EVTDESC6172"
+	picture = "1974_Mozambique_Lusaka_Accord"
+
+	option = {
+		name = "EVTOPTA6172"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0								#0% chance
+				dissent = 0
+				not = { dissent = 9 }	
+			}
+			modifier = {
+				factor = 0.1							#5% chance
+				dissent = 10
+				not = { dissent = 19 }	
+			}
+			modifier = {
+				factor = 0.2							#10% chance
+				dissent = 20
+				not = { dissent = 29 }
+			}
+			modifier = {
+				factor = 0.4							#20% chance
+				dissent = 30
+				not = { dissent = 39 }
+			}
+			modifier = {
+				factor = 0.8							#40% chance
+				dissent = 40
+				not = { dissent = 49 }
+			}
+			modifier = {
+				factor = 0.6							#80% chance
+				dissent = 50
+			}
+		}
+		release = ETH
+		recognize = ETH
+		dissent = -5								#People are happy because the war ended
+		clr_country_flag = colonial_war_ETH
+	}
+	
+	option = {
+		name = "EVTOPTB6172"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2								#100% chance
+				dissent = 0
+				not = { dissent = 9 }
+			}
+			modifier = {
+				factor = 1.9							#95% chance
+				dissent = 10
+				not = { dissent = 19 }
+			}
+			modifier = {
+				factor = 1.8							#90% chance
+				dissent = 20
+				not = { dissent = 29 }
+			}
+			modifier = {
+				factor = 1.6							#80% chance
+				dissent = 30
+				not = { dissent = 39 }
+			}
+			modifier = {
+				factor = 1.2							#60% chance
+				dissent = 40
+				not = { dissent = 49 }	
+			}
+			modifier = {
+				factor = 0.4							#20% chance
+				dissent = 50	
+			}
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_Tigray NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 }
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_South_Oromia NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 }
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_North_Oromia NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 }
+			create_revolt = 5		
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_Afar NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_South_Somali NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_North_Somali NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_Center_Somali NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_Gambela NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 }
+			create_revolt = 5			
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_Benshangul-Gumaz NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_Addis_Ababa NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_Amhara NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 } 
+			create_revolt = 5
+		}
+		random_owned = {
+			limit = { region = region_Ethiopia_Ethiopian_Southern_Nations NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 } 
+			create_revolt = 5
+		}
+	}
+}
+
+country_event = {
+	
+	id = 6173										#War continues - rebel reinforcements - if ETH exists
+	
+	trigger = {
+		owns = 8166
+		NOT = { national_unity = 79 }
+		exists = ETH
+		has_country_flag = colonial_war_ETH
+		war_with = ETH
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 1.00
+			not = { national_unity = 79 }
+			national_unity = 70
+		}
+		modifier = {
+			factor = 0.75
+			not = { national_unity = 69 }
+			national_unity = 60
+		}
+		modifier = {
+			factor = 0.50
+			not = { national_unity = 59 }
+			national_unity = 50
+		}
+		modifier = {
+			factor = 0.25
+			not = { national_unity = 49 }
+			national_unity = 40
+		}
+		modifier = {
+			factor = 0.10
+			not = { national_unity = 39 }
+		}
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6173"
+	desc = "EVTDESC6173"
+	picture = "1974_Mozambique_Lusaka_Accord"
+
+	option = {
+		name = "EVTOPTA6173"
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1								#5% chance
+				dissent = 10
+			}
+			modifier = {
+				factor = 2								#10% chance
+				dissent = 20
+			}
+			modifier = {
+				factor = 2								#20% chance
+				dissent = 30
+			}
+			modifier = {
+				factor = 2								#40% chance
+				dissent = 40
+			}
+			modifier = {
+				factor = 2								#80% chance
+				dissent = 50
+			}
+		}
+		THIS = { end_war = ETH }
+		recognize = ETH
+		dissent = -5								#People are happy because the war ended
+		clr_country_flag = colonial_war_ETH
+	}
+	
+	option = {
+		name = "EVTOPTB6173"
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1								#5% chance
+				not = { dissent = 10 }
+			}
+			modifier = {
+				factor = 2								#10% chance
+				not = { dissent = 20 }
+			}
+			modifier = {
+				factor = 2								#20% chance
+				not = { dissent = 30 }
+			}
+			modifier = {
+				factor = 2								#40% chance
+				not = { dissent = 40 }
+			}
+			modifier = {
+				factor = 2								#80% chance
+				not = { dissent = 50 }
+			}
+		}
+		ETH = {
+			supplies = 1000
+			random_owned = {
+				limit = { region = region_Ethiopia_Tigray }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_South_Oromia }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_North_Oromia }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_Afar }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_South_Somali }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_North_Somali }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_Center_Somali }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_Gambela }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_Benshangul-Gumaz }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region_Ethiopia_Addis_Ababa }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_Amhara  }
+				militia_brigade = current
+			}
+			random_owned = {
+				limit = { region = region_Ethiopia_Ethiopian_Southern_Nations }
+				militia_brigade = current
+			}
+		}
+	}
+}

@@ -1,0 +1,227 @@
+
+
+
+country_event = {               ###Principios de desestabilización por crisis interna
+	id = 888888
+
+	trigger = {	
+            ai = yes
+			has_global_flag = CONTROLTF        		
+	}
+	   
+	mean_time_to_happen = { months = 4 }
+
+	title = "CRISIS"
+	desc = "Parece que se esta gestando una crisis dentro del gobierno"
+	picture = "Krisis"
+
+	option = {
+			name = "OK"
+			ai_chance = { factor = 100 }
+     			
+		random_country = {
+				random_list={
+					20 = { 
+						country_event = 670004
+					}
+					20 = { 
+						country_event = 670005
+					}
+					20 = { 
+						country_event = 670006
+					}
+					20 = { 
+						country_event = 670007
+					}
+					20 = { 
+						country_event = 670008
+					}
+				}
+							
+			}
+            clr_global_flag = CONTROLTF
+			   
+		}				
+					
+    }
+ 
+ 
+##### INFORMACION CRISIS 1 ####
+country_event = {
+	id = 670004
+
+	title = "Tribunal Supremo"
+	desc = "Un importante político cercano a la presidencia del gobierno está siendo investigado por cohecho, trafico de influencias y apropiacion indebida."
+	picture = "CRISIS-1"
+
+	is_triggered_only = yes
+
+	option = {
+		random_list={
+			10 = { national_unity = -1 }
+			10 = { national_unity = -2 }
+			10 = { national_unity = -3 }
+			10 = { national_unity = -5 }
+			10 = { national_unity = -7 }
+			10 = { national_unity = -11 }
+			10 = { popularity = -13 }
+			10 = { popularity = -17 }
+			10 = { popularity = -19 }
+			10 = { popularity = -23 }
+		}
+		ai_chance = { factor = 100 }
+		name = "OK"
+	}
+}
+
+##### INFORMACION CRISIS 2 ####
+country_event = {
+	id = 670005
+
+	title = "Paparazzi"
+	desc = "Salen publicadas en prensa internacional conductas inapropiadas por parte de varios miembros del gabinete en casas de apuestas."
+	picture = "CRISIS-2"
+
+	is_triggered_only = yes
+
+	option = {
+		random_list={
+			10 = { popularity = -1 }
+			10 = { popularity = -2 }
+			10 = { popularity = -3 }
+			10 = { popularity = -5 }
+			10 = { popularity = -7 }
+			10 = { popularity = -11 }
+			10 = { popularity = -13 }
+			10 = { popularity = -17 }
+			10 = { popularity = -19 }
+			10 = { popularity = -23 }
+		}
+		ai_chance = { factor = 100 }
+		name = "OK"
+	}
+}
+
+##### INFORMACION CRISIS 3 ####
+country_event = {
+	id = 670006
+
+	title = "Macroeconomia"
+	desc = "La bolsa ha sufrido una severa caida y el Banco Central se ha visto obligado a cambiar los tipos de interés para frenar el efecto de la especulacion."
+	picture = "CRISIS-3"
+
+	is_triggered_only = yes
+
+	option = {
+		random_list={
+			10 = { money = -10000 }
+			10 = { money = -20000 }
+			10 = { money = -30000 }
+			10 = { money = -50000 }
+			10 = { money = -70000 }
+			10 = { money = -110000 }
+			10 = { money = -130000 }
+			10 = { money = -170000 }
+			10 = { money = -190000 }
+			10 = { money = -230000 }
+		}
+		ai_chance = { factor = 100 }
+		name = "OK"
+	}
+}
+
+##### INFORMACION CRISIS 4 ####
+country_event = {
+	id = 670007
+
+	title = "Temporales"
+	desc = "Miles de personas deben ser atendidas por los devastadores efectos del clima. Nuestros almacenes deben sufragar el coste social de la operación."
+	picture = "CRISIS-4"
+
+	is_triggered_only = yes
+
+	option = {
+		random_list={
+			10 = { fuel = -10000 }
+			10 = { fuel = -20000 }
+			10 = { fuel = -30000 }
+			10 = { fuel = -50000 }
+			10 = { fuel = -70000 }
+			10 = { supplies = -110000 }
+			10 = { supplies = -130000 }
+			10 = { supplies = -170000 }
+			10 = { supplies = -190000 }
+			10 = { supplies = -230000 }
+		}
+		ramdom_owned = { 
+			limit = {
+				controlled_by = THIS
+				owned_by = THIS
+			}
+			change_controller = REB
+		}
+		ai_chance = { factor = 100 }
+		name = "OK"
+	}
+}
+
+##### INFORMACION CRISIS 5 ####
+country_event = {
+	id = 670008
+
+	title = "Huelga nacional"
+	desc = "Los principales sindicatos obreros han convocado huelgas por todo el pais para protestar por el salario minimo."
+	picture = "CRISIS-5"
+
+	is_triggered_only = yes
+
+	option = {
+		random_list={
+			10 = { dissent = 1 }
+			10 = { dissent = 2 }
+			10 = { dissent = 3 }
+			10 = { dissent = 5 }
+			10 = { dissent = 7 }
+			10 = { dissent = 11 }
+			10 = { dissent = 13 }
+			10 = { dissent = 17 }
+			10 = { dissent = 19 }
+			10 = { dissent = 23 }
+		}
+		ai_chance = { factor = 100 }
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = 700203
+
+	trigger = {
+			ai = yes
+			not = { has_global_flag = CONTROLTIEMPO }
+			not = { has_global_flag = CONTROLTF }			
+		}
+
+	mean_time_to_happen = { months = -1 }
+	option = {
+		set_global_flag = CONTROLTIEMPO
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = 700204
+	trigger = {
+			ai = yes
+			has_global_flag = CONTROLTIEMPO
+		}
+
+	mean_time_to_happen = { months = -1 }
+	option = {
+	ai_chance = { factor = 100 }
+		clr_global_flag = CONTROLTIEMPO
+		set_global_flag = CONTROLTF		
+	}
+}
+
+

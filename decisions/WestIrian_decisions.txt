@@ -1,0 +1,168 @@
+#WestIrian_decisions.txt
+#1962 Indonesia moves into West Irian
+	
+#INO - Indonesia:
+	#demand_WPA_from_HOL_INO - Indonesia demands authority over West Papua from the Netherlands
+	#demand_WPA_INO - Indonesia demands authority over (independent) West Papua
+	
+#USA - United States of America:
+	#pressure_HOL_westpapua_USA - The USA put pressure on HOL to give up West Papua
+
+
+diplomatic_decisions = {
+## INO ##
+	#demand_WPA_from_HOL_INO - Indonesia demands authority over West Papua from the Netherlands
+	demand_WPA_from_HOL_INO = {
+		category = international
+	    picture = "1960_Sukarno"
+
+		potential = {
+			year = 1960		#Temporary
+			tag = INO
+			NOT = { has_country_flag = demand_WPA_from_HOL_INO_done }
+			NOT = { has_country_flag = demand_WPA_INO_done }
+			OR = {
+				HOL = { owns = 14243 }										#Jayapura/Hollandia, capital of Dutch West Papua
+				WPA = { vassal_of = INO }
+			}
+		}
+		
+		allow = {
+			NOT = {
+				war_with = WPA												#No war with someone involved or a local power
+				war_with = HOL
+				war_with = AST
+				war_with = JAP
+				lost_national = 0.2											#No unification if INO is not unified
+				dissent = 10												#Low unrest
+				military_access = WPA
+				guarantee = WPA
+				alliance_with = HOL											#You wouldn't mess with your allies, wouldn't you?
+			}
+			is_subject = no	
+			national_unity = 50												#High national unity
+		}
+		
+		ai_will_do = { 
+			factor = 5
+			modifier = {
+				factor = 0
+				war = yes
+			}
+			modifier = {
+				factor = 0
+				relation = { who = HOL value = 175 }
+			}
+		}
+		
+		effect = {
+			INO = { country_event = 219000 } 								#Decision follow-up event
+			set_country_flag = demand_WPA_from_HOL_INO_done
+		}
+	}
+
+	#demand_WPA_INO - Indonesia demands authority over (independent) West Papua
+	demand_WPA_INO = {
+		category = international
+	    picture = "1960_Sukarno"
+
+		potential = {
+			tag = INO
+			NOT = { has_country_flag = demand_WPA_INO_done }
+			NOT = { has_country_flag = demand_WPA_from_HOL_INO_done }
+			WPA = { vassal_of = INO }
+			exists = WPA
+		}
+		
+		allow = {
+			NOT = {
+				war_with = WPA												#No war with someone involved or a local power
+				war_with = AST
+				war_with = JAP
+				lost_national = 0.2											#No unification is INO is not unified
+				dissent = 10												#Low unrest
+				military_access = WPA
+				guarantee = WPA
+				alliance_with = WPA											#You wouldn't mess with your allies, wouldn't you?
+			}	
+			is_subject = no	
+			national_unity = 50												#High national unity
+			WPA = { is_subject = no	}
+		}
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			INO = { country_event = 219004 } 								#Decision follow-up event
+			set_country_flag = demand_WPA_INO_done
+		}
+	}
+
+## USA ##
+	#pressure_HOL_westpapua_USA - The USA put pressure on HOL to give up West Papua
+	pressure_HOL_westpapua_USA = {
+		category = international
+	    picture = "1962_New_York_Accords"
+		
+		potential = {
+			tag = USA
+			NOT = { has_country_flag = pressure_HOL_westpapua_USA_done }
+			has_global_flag = HOL_keep_WPA												#HOL kept West Papua
+			is_subject = no
+			OR = {
+				HOL = { owns = 14243 }													#Jayapura/Hollandia, capital of Dutch West Papua
+				WPA = { vassal_of = INO }												#HOL didn't liberate WPA in-between
+			}
+		}
+		
+		allow = {
+			NOT = {
+				AND = {
+					OR = {
+						USA = { ideology = maoist_idolg }									#USA is not left-wing and INO right-wing
+						USA = { ideology = communist_idolg }
+						USA = { ideology = left_wing_radical_idolg }
+					}
+					OR = {
+						INO = { ideology = fascistic_idolg }
+						INO = { ideology = paternal_auto_idolg }
+					}	
+				}
+			}
+			
+			NOT = {
+				AND = {
+					OR = {
+						INO = { ideology = maoist_idolg }									#INO is not left-wing and USA right-wing
+						INO = { ideology = communist_idolg }
+						INO = { ideology = left_wing_radical_idolg }
+					}
+					OR = {
+						USA = { ideology = fascistic_idolg }
+						USA = { ideology = paternal_auto_idolg }
+					}	
+				}	
+			}
+			NOT = {
+				war_with = WPA															#No war with someone involved or a local power
+				war_with = HOL
+				war_with = INO
+				military_access = WPA
+				guarantee = WPA
+				alliance_with = INO														#Why appease INO if they are already in the same alliance?
+				CHC = { alliance_with = INO }											#INO isn't allied to the others side
+				SOV = { alliance_with = INO }
+			}
+		}
+		
+		
+		ai_will_do = { factor = 10 }
+		
+		effect = {
+			set_country_flag = pressure_HOL_westpapua_USA_done
+			USA = { country_event = 354230 }											#Decision follow-up event
+		}
+	}
+
+	
+}

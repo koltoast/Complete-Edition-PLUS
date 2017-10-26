@@ -1,0 +1,918 @@
+#RacialDiscriminationConvention_events.txt
+#UN Racial Discrimination Convention
+
+#UN Secretary General:
+	#11800 - Raise the UN Racial Discrimination Convention for Voting - Triggered by dec_UN_raise_racial_discrimination_convention
+	#11801 - Should We Have Voting Notifications Or Not?
+	#11802 - UN Racial Discrimination Convention Resolution Fails in the General Assembly
+	#11803 - UN Racial Discrimination Convention Resolution Passes in the General Assembly
+	
+#Global:
+	#11810 - Vote on the UN Racial Discrimination Convention - Notifications Off
+	#11811 - Vote on the UN Racial Discrimination Convention - Notifications On (Major Event)
+	#11812 - We have ratified the UN Racial Discrimination Convention - Triggered
+	#11813 - We have ratified the UN Racial Discrimination Convention - Non-triggered
+	#11814 - We have revoked the UN Racial Discrimination Convention
+	
+	
+## UN Secretary General ##
+	#11800 - Raise the UN Racial Discrimination Convention for Voting
+	country_event = {
+	
+		id = 11800
+
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME11800"
+		desc = "EVTDESC11800"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA11800" 					#Large diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 40 }
+			#}
+			#XUN  = { prestige_change = -40 }
+			
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			country_event = 11801
+		}
+
+		option = {
+			name = "EVTOPTB11800" 					#Small diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 15 }
+			#}
+			#XUN  = { prestige_change = -15 }
+			
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			country_event = 11801
+		}
+
+		option = {
+			name = "EVTOPTC11800"					#No diplomatic investment
+			
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			country_event = 11801
+		}
+	}
+	
+	#11801 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 11801
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME11801"
+		desc = "EVTDESC11801"
+		picture = "xxxx"
+		
+		option = {
+			name = "EVTOPTA11801"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_racial_discrimination_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_racial_discrimination_convention_voting
+		}
+		
+		option = {
+			name = "EVTOPTB11801"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_racial_discrimination_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_racial_discrimination_convention_voting
+		}
+	}
+	
+	#11802 - UN Racial Discrimination Convention Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 11802
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_racial_discrimination_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME11802"
+		desc = "EVTDESC11802"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_racial_discrimination_convention_voting
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_racial_discrimination_convention_fails
+		}
+
+		option = {
+			name = "EVTOPTA11802"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			#XUN  = { prestige_change = -50 }
+			
+			#hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_racial_discrimination_convention_failure_delay
+						duration = 1460
+					}
+				}
+			#}
+			clr_global_flag = gflag_UN_racial_discrimination_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#11803 - UN Racial Discrimination Convention Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 11803
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_racial_discrimination_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME11803"
+		desc = "EVTDESC11803"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_racial_discrimination_convention_voting
+			clr_global_flag = gflag_UN_racial_discrimination_convention_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_racial_discrimination_convention_passes
+		}
+
+		option = {
+			name = "EVTOPTA11803"					#Excellent
+			clr_global_var = var_UN_votes_For
+			
+			#XUN  = { prestige_change = 50 }
+			
+			any_country = {
+				limit = {
+					has_country_flag = flag_UN_racial_discrimination_convention_supporter
+				}
+				set_country_flag = flag_UN_racial_discrimination_convention_ratified
+				country_event = 11812
+			}
+			clr_global_flag = gflag_UN_racial_discrimination_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+
+## Global ##
+	#11810 - Vote on the UN Racial Discrimination Convention - Notifications Off
+	country_event = {
+	
+		id = 11810
+		
+		trigger = {
+			has_country_flag = flag_UN_racial_discrimination_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_racial_discrimination_convention_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME11810"
+		desc = "EVTDESC11810"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_racial_discrimination_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_racial_discrimination_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA11810"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_racial_discrimination_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = substantively_defined
+						rule_of_law = well_defined
+					}
+				}
+				modifier = {
+					factor = 1.1
+					civil_liberties = fully_granted_liberties
+				}
+				modifier = {
+					factor = 2
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 2
+					national_identity = equality_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = humanitarian_focus
+						national_identity = civic_focus
+					}
+				}
+				modifier = {
+					factor = 2
+					ideology_group = comintern
+				}
+				modifier = {
+					factor = 1.5
+					ideology = left_wing_radical_idolg
+				}
+				modifier = {
+					factor = 1.25
+					ideology = social_democrat_idolg
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						ideology = social_liberal_idolg
+						ideology = market_liberal_idolg
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_racial_discrimination_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB11810"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+			clr_country_flag = flag_UN_racial_discrimination_convention_supporter
+		}
+
+		option = {
+			name = "EVTOPTC11810"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					rule_of_law = thinly_defined
+				}
+				modifier = {
+					factor = 1.1
+					civil_liberties = suspended_indefinitely
+				}
+				modifier = {
+					factor = 5
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.5
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 1.1
+					economic_policy = agrarian_based_policy_pol
+				}
+				modifier = {
+					factor = 1.25
+					public_oversight = moral_code_of_conduct
+				}
+				modifier = {
+					factor = 1.5
+					organized_religions_law = state_religion
+				}
+				modifier = {
+					factor = 1.1
+					national_identity = cultural_bias_focus
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_culture = cul_middle_east
+						national_culture = cul_sub_saharan_africa
+					}
+				}
+				modifier = {
+					factor = 1.1
+					national_culture = cul_south_asia
+				}
+				modifier = {
+					factor = 5
+					ideology = fascistic_idolg
+				}
+				modifier = {
+					factor = 1.25
+					ideology = paternal_auto_idolg
+				}
+				modifier = {
+					factor = 1.1
+					ideology = social_cons_idolg
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			clr_country_flag = flag_UN_racial_discrimination_convention_supporter
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_racial_discrimination_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#11811 - Vote on the UN Racial Discrimination Convention - Notifications On
+	country_event = {
+	
+		id = 11811
+		
+		trigger = {
+			has_country_flag = flag_UN_racial_discrimination_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_racial_discrimination_convention_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME11810"
+		desc = "EVTDESC11810"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_racial_discrimination_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_racial_discrimination_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA11810"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_racial_discrimination_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						rule_of_law = substantively_defined
+						rule_of_law = well_defined
+					}
+				}
+				modifier = {
+					factor = 1.1
+					civil_liberties = fully_granted_liberties
+				}
+				modifier = {
+					factor = 2
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 2
+					national_identity = equality_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_identity = humanitarian_focus
+						national_identity = civic_focus
+					}
+				}
+				modifier = {
+					factor = 2
+					ideology_group = comintern
+				}
+				modifier = {
+					factor = 1.5
+					ideology = left_wing_radical_idolg
+				}
+				modifier = {
+					factor = 1.25
+					ideology = social_democrat_idolg
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						ideology = social_liberal_idolg
+						ideology = market_liberal_idolg
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_racial_discrimination_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB11810"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC11810"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.1
+					rule_of_law = thinly_defined
+				}
+				modifier = {
+					factor = 1.1
+					civil_liberties = suspended_indefinitely
+				}
+				modifier = {
+					factor = 4
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 2
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 1.25
+					human_rights = separate_but_equal
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = cultural_bias_focus
+				}
+				modifier = {
+					factor = 10
+					ideology = fascistic_idolg
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						ideology = paternal_auto_idolg
+						ideology = social_cons_idolg
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_racial_discrimination_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#11812 - We have ratified the UN Racial Discrimination Convention - Triggered
+	country_event = {
+	
+		id = 11812
+
+		is_triggered_only = yes
+
+		title = "EVTNAME11812"
+		desc = "EVTDESC11812"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA11812"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_racial_discrimination_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_racial_discrimination_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_racial_discrimination_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#11813 - We have ratified the UN Racial Discrimination Convention (Non-triggered)
+	country_event = {
+	
+		id = 11813
+
+		trigger = {
+			ai = yes
+			has_global_flag = gflag_UN_racial_discrimination_convention_passes
+			NOT = { has_country_modifier = mod_UN_racial_discrimination_convention_ratified }
+			NOT = { USA = { has_country_modifier = mod_UN_racial_discrimination_convention_ratifier_delay } }
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			NOT = { ideology = fascistic_idolg }
+			NOT = { human_rights = not_recognized }
+			#Add more
+		}
+		
+		mean_time_to_happen = {
+			months = 40
+			modifier = {
+				factor = 0.6
+				is_org_leader = XUN
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					rule_of_law = substantively_defined
+					rule_of_law = well_defined
+				}
+			}
+			modifier = {
+				factor = 0.8
+				civil_liberties = fully_granted_liberties
+			}
+			modifier = {
+				factor = 0.2
+				human_rights = universal_rights
+			}
+			modifier = {
+				factor = 0.2
+				national_identity = equality_focus
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					national_identity = humanitarian_focus
+					national_identity = civic_focus
+				}
+			}
+			modifier = {
+				factor = 0.4
+				ideology_group = comintern
+			}
+			modifier = {
+				factor = 0.6
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0.7
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					ideology = social_liberal_idolg
+					ideology = market_liberal_idolg
+				}
+			}
+			modifier = {
+				factor = 1.5
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.25
+				national_attitude = non-interventionism
+			}
+			modifier = {
+				factor = 1.25
+				rule_of_law = thinly_defined
+			}
+			modifier = {
+				factor = 1.25
+				civil_liberties = suspended_indefinitely
+			}
+			modifier = {
+				factor = 3
+				human_rights = cultural_relativism
+			}
+			modifier = {
+				factor = 1.5
+				human_rights = separate_but_equal
+			}
+			modifier = {
+				factor = 1.5
+				national_identity = cultural_bias_focus
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					ideology = paternal_auto_idolg
+					ideology = social_cons_idolg
+				}
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME11812"
+		desc = "EVTDESC11812"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA11812"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_racial_discrimination_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_racial_discrimination_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_racial_discrimination_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#11814 - We have revoked the UN Racial Discrimination Convention
+	country_event = {
+	
+		id = 11814
+
+		trigger = {
+			ai = yes
+			has_country_modifier = mod_UN_racial_discrimination_convention_ratified
+			NOT = { has_country_modifier = mod_UN_racial_discrimination_convention_ratified_recently }
+			NOT = { has_country_flag = flag_UN_racial_discrimination_convention_supporter }
+			OR = {
+				human_rights = not_recognized
+				ideology = fascistic_idolg
+			}
+		}
+		
+		mean_time_to_happen = {
+			months = 9
+			modifier = {
+				factor = 0.75
+				national_identity = cultural_bias_focus
+			}
+			modifier = {
+				factor = 0.8
+				rule_of_law = thinly_defined
+			}
+			modifier = {
+				factor = 0.25
+				has_country_flag = "UN_EMBARGO"
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME11814"
+		desc = "EVTDESC11814"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA11814"					#Good riddance
+			prestige_change = -8
+			remove_country_modifier = mod_UN_racial_discrimination_convention_ratified
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_racial_discrimination_convention_revoked_recently
+					duration = 365
+				}
+			#}
+			
+			#XUN = { prestige_change = -3 }
+		}
+	}

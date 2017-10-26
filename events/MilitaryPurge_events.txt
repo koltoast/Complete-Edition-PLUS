@@ -1,0 +1,477 @@
+### Military Purge ###
+
+country_event = {
+	
+	id = 2001
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2001"
+	desc = "EVTDESC2001"
+	picture = "1943_purge_trial"
+
+	option = {
+		name = "EVTOPTA2001"			    			# Political purge
+		clr_country_flag = military_purge_start
+		set_country_flag = military_purge
+		add_country_modifier = {
+			name = military_purge_political
+			duration = 182
+		}
+	}
+
+	option = {
+		name = "EVTOPTB2001"			    			# Operational purge
+		clr_country_flag = military_purge_start
+		set_country_flag = military_purge
+		add_country_modifier = {
+			name = military_purge_operational
+			duration = 182
+		}		
+	}
+}
+
+
+
+country_event = {
+	
+	id = 2002			#Corrupt general exposed
+
+	trigger = {
+		has_country_flag = military_purge
+		NOT = { has_country_modifier = corrupt_general_exposed }
+	}
+	
+	mean_time_to_happen = {
+		days = 182
+	}
+
+	title = "EVTNAME2002"
+	desc = "EVTDESC2002"
+	picture = "1943_purge_trial"
+	
+	option = {
+		name = "EVTOPTA2002"			    			# O.K.
+		add_country_modifier = {
+			name = corrupt_general_exposed
+			duration = 365
+		}
+		random_list = {
+			50 = { kill_random_leaders = 2 }
+			50 = { kill_random_leaders = 4 }
+		}
+	}
+	
+}
+
+
+
+country_event = {
+	
+	id = 2003			#Military incompetence punished
+
+	trigger = {
+		has_country_flag = military_purge
+		NOT = { has_country_modifier = military_incompetence_punished }
+	}
+	
+	mean_time_to_happen = {
+		days = 182
+		modifier = {
+			factor = 0.5
+			has_country_modifier = military_purge_operational
+		}
+		modifier = {
+			factor = 4
+			has_country_modifier = military_purge_political
+		}
+	}
+
+	title = "EVTNAME2003"
+	desc = "EVTDESC2003"
+	picture = "1943_purge_trial"
+	
+	option = {
+		name = "EVTOPTA2003"			    			# O.K.
+		money = 20
+		add_country_modifier = {
+			name = military_incompetence_punished
+			duration = 182
+		}		
+		kill_random_leaders = 4
+	}
+	
+}
+
+country_event = {
+	
+	id = 2004			#Insubordinate general deposed
+
+	trigger = {
+		has_country_flag = military_purge
+		NOT = { has_country_modifier = insubordinate_general_deposed }
+	}
+	
+	mean_time_to_happen = {
+		days = 182
+		modifier = {
+			factor = 4
+			has_country_modifier = military_purge_operational
+		}
+		modifier = {
+			factor = 0.5
+			has_country_modifier = military_purge_political
+		}
+	}
+
+	title = "EVTNAME2004"
+	desc = "EVTDESC2004"
+	picture = "1951_MacArthur_retirement_speech"
+	
+	option = {
+		name = "EVTOPTA2003"			    			# O.K.
+		add_country_modifier = {
+			name = insubordinate_general_deposed
+			duration = 182
+		}
+		kill_random_leaders = 1
+		
+	}
+	
+}
+
+country_event = {
+	
+	id = 2005			#Treasonous general exposed
+
+	trigger = {
+		has_country_flag = military_purge
+		NOT = { has_country_modifier = treasonous_general_exposed }
+	}
+	
+	mean_time_to_happen = {
+		days = 365
+	}
+
+	title = "EVTNAME2005"
+	desc = "EVTDESC2005"
+	picture = "1943_purge_trial"
+	
+	option = {
+		name = "EVTOPTA2003"			    			# O.K.
+		add_country_modifier = {
+			name = treasonous_general_exposed
+			duration = 182
+		}
+		kill_random_leaders = 1
+	}
+	
+}
+
+country_event = {
+	
+	id = 2006			#New recruits flock to recruiting centres
+
+	trigger = {
+		has_country_flag = military_purge
+		NOT = { has_country_modifier = recruitment_drive }
+	}
+	
+	mean_time_to_happen = {
+		days = 182
+		modifier = {
+			factor = 0.5
+			has_country_modifier = military_purge_operational
+		}
+		modifier = {
+			factor = 2
+			has_country_modifier = military_purge_political
+		}
+	}
+
+	title = "EVTNAME2006"
+	desc = "EVTDESC2006"
+	picture = "1960_boot_camp"
+	
+	option = {
+		name = "EVTOPTA2006"			    			# O.K.
+		add_country_modifier = {
+			name = recruitment_drive
+			duration = 182
+		}
+	}
+	
+}
+
+country_event = {
+	
+	id = 2007			#Rank-and-file morale increases
+
+	trigger = {
+		has_country_flag = military_purge
+		NOT = { has_country_modifier = military_morale_increases }
+	}
+	
+	mean_time_to_happen = {
+		days = 182
+		modifier = {
+			factor = 0.5
+			has_country_modifier = military_purge_operational
+		}
+		modifier = {
+			factor = 2
+			has_country_modifier = military_purge_political
+		}
+	}
+
+	title = "EVTNAME2007"
+	desc = "EVTDESC2007"
+	picture = "soldiers_cheering"
+	
+	option = {
+		name = "EVTOPTA2007"			    			# O.K.
+		add_country_modifier = {
+			name = military_morale_increases
+			duration = 182
+		}
+	}
+	
+}
+
+country_event = {
+	
+	id = 2008			#Public distrust of military grows
+
+	trigger = {
+		has_country_flag = military_purge
+		NOT = { has_country_modifier = public_distrust_military }
+	}
+	
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 4
+			has_country_modifier = military_purge_operational
+		}
+		modifier = {
+			factor = 0.25
+			has_country_modifier = military_purge_political
+		}
+	}
+
+	title = "EVTNAME2008"
+	desc = "EVTDESC2008"
+	picture = "1967_Vietnam_protest"
+	
+	option = {
+		name = "EVTOPTA2008"			    			# O.K.
+		add_country_modifier = {
+			name = public_distrust_military
+			duration = 182
+		}
+	}
+	
+}
+
+country_event = {
+	
+	id = 2009			#Notorious general deposed
+
+	trigger = {
+		has_country_flag = military_purge
+		NOT = { has_country_modifier = notorious_general_deposed }
+	}
+	
+	mean_time_to_happen = {
+		days = 365
+	}
+
+	title = "EVTNAME2009"
+	desc = "EVTDESC2009"
+	picture = "1943_purge_trial"
+	
+	option = {
+		name = "EVTOPTA2009"			    			# O.K.
+		add_country_modifier = {
+			name = notorious_general_deposed
+			duration = 182
+		}
+		kill_random_leaders = 1
+	}
+	
+}
+
+country_event = {
+	
+	id = 2010			#Loyal officers rewarded
+
+	trigger = {
+		has_country_flag = military_purge
+		NOT = { has_country_modifier = loyal_officers_rewarded }
+	}
+	
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 10
+			has_country_modifier = military_purge_operational
+		}
+		modifier = {
+			factor = 0.25
+			has_country_modifier = military_purge_political
+		}
+	}
+
+	title = "EVTNAME2010"
+	desc = "EVTDESC2010"
+	picture = "1966_Johnson_awards_medal"
+	
+	option = {
+		name = "EVTOPTA2010"			    			# O.K.
+		add_country_modifier = {
+			name = loyal_officers_rewarded
+			duration = 182
+		}		
+	}
+	
+}
+
+country_event = {
+	
+	id = 2011			#Member of the old guard urged into retirement
+
+	trigger = {
+		has_country_flag = military_purge
+		NOT = { has_country_modifier = old_guard_retirement }
+	}
+	
+	mean_time_to_happen = {
+		days = 182
+		modifier = {
+			factor = 0.5
+			has_country_modifier = military_purge_operational
+		}
+		modifier = {
+			factor = 4
+			has_country_modifier = military_purge_political
+		}
+	}
+
+	title = "EVTNAME2011"
+	desc = "EVTDESC2011"
+	picture = "1951_MacArthur_retirement_speech"
+	
+	option = {
+		name = "EVTOPTA2011"			    			# O.K.
+		add_country_modifier = {
+			name = old_guard_retirement
+			duration = 182
+		}
+		kill_random_leaders = 1	
+	}
+	
+}
+
+country_event = {
+	
+	id = 2012			#Purge devolves into witch hunt
+
+	trigger = {
+		has_country_flag = military_purge
+		NOT = { has_country_modifier = military_witchhunt }
+	}
+	
+	mean_time_to_happen = {
+		days = 1095
+		modifier = {
+			factor = 2
+			has_country_modifier = military_purge_operational
+		}
+		modifier = {
+			factor = 0.33
+			has_country_modifier = military_purge_political
+		}
+	}
+
+	title = "EVTNAME2012"
+	desc = "EVTDESC2012"
+	picture = "1945_show_trial"
+	
+	option = {
+		name = "EVTOPTA2012"			    			# O.K.
+		add_country_modifier = {
+			name = military_witchhunt
+			duration = 182
+		}
+		random_list = {
+			33 = { kill_random_leaders = 5 }
+			33 = { kill_random_leaders = 10 }
+			33 = { kill_random_leaders = 15 }
+		}
+	}
+	
+}
+
+country_event = {
+	
+	id = 2021
+	
+	trigger = {
+		has_country_flag = military_purge
+		NOT = {
+			has_country_modifier = military_purge_political
+			has_country_modifier = military_purge_operational
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	title = "EVTNAME2021"
+	desc = "EVTDESC2021"
+	picture = "1943_purge_trial"
+
+	option = {
+		name = "EVTOPTA2021"			    			# Purge over
+		clr_country_flag = military_purge
+		add_country_modifier = {
+			name = military_purge_delay
+			duration = 1825
+		}	
+	}
+	
+}
+
+country_event = {
+	
+	id = 2022
+	
+	trigger = {
+		OR = {
+			has_country_modifier = military_purge_political
+			has_country_modifier = military_purge_operational
+		}
+		war = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	title = "EVTNAME2022"
+	desc = "EVTDESC2022"
+	picture = "1943_purge_trial"
+	
+	immediate = { clr_country_flag = military_purge }
+
+	option = {
+		name = "EVTOPTA2022"			    			# War Games Over due to war
+		remove_country_modifier = military_purge_political
+		remove_country_modifier = military_purge_operational
+		add_country_modifier = {
+			name = military_purge_delay
+			duration = 1825
+		}
+	}
+}

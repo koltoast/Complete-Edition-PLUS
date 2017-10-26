@@ -1,0 +1,780 @@
+diplomatic_decisions = {	
+
+	DDR_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = DDR
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = DDR_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+	DEN_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = DEN
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = DEN_1946.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	DJI_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = DJI
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = DJI_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	DMN_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = DMN
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = DMN_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	DOM_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = DOM
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = DOM_1946.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	DRC_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = DRC
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = DRC_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	DRV_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = DRV
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = DRV_1946.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ECU_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ECU
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ECU_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	EGY_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = EGY
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = EGY_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ENG_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ENG
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ENG_1946.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	EQG_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = EQG
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = EQG_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ERI_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ERI
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ERI_1946.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	EST_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = EST
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = EST_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	ETH_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = ETH
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = ETH_1946.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	FIN_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = FIN
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = FIN_1946.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	FJI_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = FJI
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = FJI_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	FRA_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = FRA
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = FRA_1946.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	FRG_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = FRG
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = FRG_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	GAB_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = GAB
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = GAB_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	GER_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = GER
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = GER_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	GHN_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = GHN
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = GHN_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	GRE_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = GRE
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = GRE_1946.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	GUA_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = GUA
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = GUA_1946.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	GUB_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = GUB
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = GUB_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  	GUI_1946 = {
+		category = national
+		potential = {	
+        ai = yes
+          war = yes
+		  tag = GUI
+		  year = 1946
+		  not = { year = 1948 }
+		  not = { has_country_modifier = tropas_1946 }
+          		  
+		}
+		allow = {
+		}
+		
+		
+		ai_will_do = { 
+            factor = 100			
+		}
+		
+   effect = {
+				
+             load_oob = GUI_1946_a.txt		 		
+		     add_country_modifier = {
+				name = "tropas_1946"				
+				duration = 1460
+			}	
+                        money = -10000	
+							
+	}		
+
+  }
+  
+  
+ }  

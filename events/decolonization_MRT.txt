@@ -1,0 +1,578 @@
+#Index:
+	#6360 - colony is owned		- 3 options
+	#6361 - colony is a puppet	- 2 options
+	#6362 – rebel reinforcements - if MRT exists			- 2 options
+	#6363 – rebel reinforcements - if MRT does not exist	- 2 options
+
+country_event = {
+	
+	id = 6360										#Colony is owned
+	
+	trigger = {
+		owns = 9438
+		controls = 9438
+		NOT = { national_unity = 69 }
+		NOT = { exists = MRT }
+		NOT = { has_country_flag = colonial_war_MRT }
+		NOT = { national_culture = cul_sub_saharan_africa }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 1.00						#60 months		
+			not = { national_unity = 69 }
+		}
+		modifier = {
+			factor = 0.75						#45 months
+			not = { national_unity = 59 }
+		}
+		modifier = {
+			factor = 0.80						#36 months
+			not = { national_unity = 49 }
+		}
+		modifier = {
+			factor = 0.75						#27 months
+			not = { national_unity = 39 }
+		}
+		modifier = {
+			factor = 0.25
+			ideology = maoist_idolg
+		}
+		modifier = {
+			factor = 0.25
+			ideology = communist_idolg
+		}
+	}
+	
+	immediate = {
+		region_Mauritius_Mauritius = { remove_core = ENG }
+		region_Mauritius_Mauritius = { remove_core = THIS }
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6360"
+	desc = "EVTDESC6360"
+	picture = "1974_Mozambique_Lusaka_Accord"
+	
+	option = {											#chance to release immediatly
+		name = "EVTOPTA6360"
+		trigger = {
+			NOT = {
+			ideology = fascist_idolg
+			ideology = paternal_auto_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5							#25% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 0.8							#40% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 1								#50% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 1.2							#60% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 1.5							#75% chance
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 1.7							#85% chance
+				ideology = maoist_idolg
+			}
+			modifier = {
+				factor = 1.9							#95% chance
+				ideology = communist_idolg
+			}
+		}
+		release = MRT
+		recognize = MRT
+		relation = { who = MRT value = 100 }
+	}
+		
+	option = {											#chance to puppet
+		name = "EVTOPTB6360"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0								#0% chance
+				ideology = fascist_idolg
+			}
+			modifier = {
+				factor = 0								#0% chance
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.5							#75% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 1.2							#60% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 1								#50% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 0.8							#40% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0.5							#25% chance
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 0.3							#15% chance
+				ideology = maoist_idolg
+			}
+			modifier = {
+				factor = 0.1							#5% chance
+				ideology = communist_idolg
+			}
+		}
+		release_vassal = MRT
+		recognize = MRT
+	}
+	
+	option = {											#chance to start a colonial war
+		name = "EVTOPTC6360"
+		trigger = {
+			NOT = {
+			ideology = maoist_idolg
+			ideology = communist_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0								#100% chance
+				ideology = fascist_idolg
+			}
+			modifier = {
+				factor = 0								#95% chance
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 1.5							#0% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 1.2							#0% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 1								#0% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 0.8							#0% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0.5							#0% chance
+				ideology = left_wing_radical_idolg
+			}
+		}
+		random_owned = {
+			limit = { region = region_Mauritius_Mauritius }
+			add_province_modifier = { name = nationalist_revolt duration = 800 }
+			create_revolt = 5
+		}
+		set_country_flag = colonial_war_MRT
+	}
+}
+
+country_event = {
+	
+	id = 6361										#Colony is a puppet
+	
+	trigger = {
+		NOT = { national_unity = 69 }
+		exists = MRT
+		MRT = { vassal_of = THIS }
+		NOT = { national_culture = cul_sub_saharan_africa }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 1.00						#60 months		
+			not = { national_unity = 69 }
+		}
+		modifier = {
+			factor = 0.75						#45 months
+			not = { national_unity = 59 }
+		}
+		modifier = {
+			factor = 0.80						#36 months
+			not = { national_unity = 49 }
+		}
+		modifier = {
+			factor = 0.75						#27 months
+			not = { national_unity = 39 }
+		}
+		modifier = {
+			factor = 0.25
+			ideology = maoist_idolg
+		}
+		modifier = {
+			factor = 0.25
+			ideology = communist_idolg
+		}
+	}
+	
+	immediate = {
+		region_Mauritius_Mauritius = { remove_core = ENG }
+		region_Mauritius_Mauritius = { remove_core = THIS }
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6361"
+	desc = "EVTDESC6361"
+	picture = "1974_Mozambique_Lusaka_Accord"
+	
+	option = {											#chance to release immediatly
+		name = "EVTOPTA6361"
+		trigger = {
+			NOT = {
+			ideology = fascist_idolg
+			ideology = paternal_auto_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2							#100% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = left_wing_radical_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = maoist_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = communist_idolg
+			}
+		}
+		release = MRT
+		recognize = MRT
+		relation = { who = MRT value = 100 }
+	}
+		
+	option = {											#auto release puppet and declare war
+		name = "EVTOPTB6361"
+		trigger = { 
+			not = {
+			ideology = maoist_idolg
+			ideology = communist_idolg
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2							#100% chance
+				ideology = fascist_idolg
+			}
+			modifier = {
+				factor = 2							#100% chance
+				ideology = paternal_auto_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = social_cons_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = market_liberal_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = social_liberal_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = social_democrat_idolg
+			}
+			modifier = {
+				factor = 0							#0% chance
+				ideology = left_wing_radical_idolg
+			}
+		}
+		liberate_puppet = MRT
+		war = MRT
+		MRT = {
+			supplies = 250
+			random_owned = {
+				limit = { region = region_Mauritius_Mauritius }
+				militia_brigade = current
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 6362										#War continues - rebel reinforcements - if MRT does not exist
+	
+	trigger = {
+		owns = 9438
+		NOT = { national_unity = 69 }
+		NOT = { exists = MRT }
+		has_country_flag = colonial_war_MRT
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 1.00
+			not = { national_unity = 69 }
+			national_unity = 60
+		}
+		modifier = {
+			factor = 0.75
+			not = { national_unity = 59 }
+			national_unity = 50
+		}
+		modifier = {
+			factor = 0.50
+			not = { national_unity = 49 }
+			national_unity = 40
+		}
+		modifier = {
+			factor = 0.25
+			not = { national_unity = 39 }
+			national_unity = 30
+		}
+		modifier = {
+			factor = 0.10
+			not = { national_unity = 29 }
+		}
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6362"
+	desc = "EVTDESC6362"
+	picture = "1974_Mozambique_Lusaka_Accord"
+
+	option = {
+		name = "EVTOPTA6362"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0								#0% chance
+				dissent = 0
+				not = { dissent = 9 }	
+			}
+			modifier = {
+				factor = 0.1							#5% chance
+				dissent = 10
+				not = { dissent = 19 }	
+			}
+			modifier = {
+				factor = 0.2							#10% chance
+				dissent = 20
+				not = { dissent = 29 }
+			}
+			modifier = {
+				factor = 0.4							#20% chance
+				dissent = 30
+				not = { dissent = 39 }
+			}
+			modifier = {
+				factor = 0.8							#40% chance
+				dissent = 40
+				not = { dissent = 49 }
+			}
+			modifier = {
+				factor = 0.6							#80% chance
+				dissent = 50
+			}
+		}
+		release = MRT
+		recognize = MRT
+		dissent = -5								#People are happy because the war ended
+		clr_country_flag = colonial_war_MRT
+	}
+	
+	option = {
+		name = "EVTOPTB6362"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2								#100% chance
+				dissent = 0
+				not = { dissent = 9 }
+			}
+			modifier = {
+				factor = 1.9							#95% chance
+				dissent = 10
+				not = { dissent = 19 }
+			}
+			modifier = {
+				factor = 1.8							#90% chance
+				dissent = 20
+				not = { dissent = 29 }
+			}
+			modifier = {
+				factor = 1.6							#80% chance
+				dissent = 30
+				not = { dissent = 39 }
+			}
+			modifier = {
+				factor = 1.2							#60% chance
+				dissent = 40
+				not = { dissent = 49 }	
+			}
+			modifier = {
+				factor = 0.4							#20% chance
+				dissent = 50	
+			}
+		}
+		random_owned = {
+			limit = { region = region_Mauritius_Mauritius NOT = { has_province_modifier = nationalist_revolt } }
+			add_province_modifier = { name = nationalist_revolt duration = 400 }
+			create_revolt = 5
+		}
+	}
+}
+
+country_event = {
+	
+	id = 6363										#War continues - rebel reinforcements - if MRT exists
+	
+	trigger = {
+		owns = 9438
+		NOT = { national_unity = 69 }
+		exists = MRT
+		has_country_flag = colonial_war_MRT
+		war_with = MRT
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 1.00
+			not = { national_unity = 69 }
+			national_unity = 60
+		}
+		modifier = {
+			factor = 0.75
+			not = { national_unity = 59 }
+			national_unity = 50
+		}
+		modifier = {
+			factor = 0.50
+			not = { national_unity = 49 }
+			national_unity = 40
+		}
+		modifier = {
+			factor = 0.25
+			not = { national_unity = 39 }
+			national_unity = 30
+		}
+		modifier = {
+			factor = 0.10
+			not = { national_unity = 29 }
+		}
+	}
+
+	is_triggered_only = no
+	
+	title = "EVTNAME6363"
+	desc = "EVTDESC6363"
+	picture = "1974_Mozambique_Lusaka_Accord"
+
+	option = {
+		name = "EVTOPTA6363"
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1								#5% chance
+				dissent = 10
+			}
+			modifier = {
+				factor = 2								#10% chance
+				dissent = 20
+			}
+			modifier = {
+				factor = 2								#20% chance
+				dissent = 30
+			}
+			modifier = {
+				factor = 2								#40% chance
+				dissent = 40
+			}
+			modifier = {
+				factor = 2								#80% chance
+				dissent = 50
+			}
+		}
+		THIS = { end_war = MRT }
+		recognize = MRT
+		dissent = -5								#People are happy because the war ended
+		clr_country_flag = colonial_war_MRT
+	}
+	
+	option = {
+		name = "EVTOPTB6363"
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1								#5% chance
+				not = { dissent = 10 }
+			}
+			modifier = {
+				factor = 2								#10% chance
+				not = { dissent = 20 }
+			}
+			modifier = {
+				factor = 2								#20% chance
+				not = { dissent = 30 }
+			}
+			modifier = {
+				factor = 2								#40% chance
+				not = { dissent = 40 }
+			}
+			modifier = {
+				factor = 2								#80% chance
+				not = { dissent = 50 }
+			}
+		}
+		MRT = {
+			supplies = 250
+			random_owned = {
+				limit = { region = region_Mauritius_Mauritius }
+				militia_brigade = current
+			}
+		}
+	}
+}

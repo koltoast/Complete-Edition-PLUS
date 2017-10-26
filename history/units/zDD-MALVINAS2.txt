@@ -1,0 +1,7 @@
+	division= {
+		location = 4087
+		regiment = { type = infantry_brigade experience = 40 historical_model = 6 }
+		regiment = { type = infantry_brigade experience = 40 historical_model = 6 }
+		regiment = { type = infantry_brigade experience = 40 historical_model = 6 }
+		regiment = { type = engineer_brigade experience = 40 historical_model = 1 }
+	}

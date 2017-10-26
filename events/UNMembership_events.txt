@@ -1,0 +1,352 @@
+#Economic&SocialRightsConvention_events.txt
+#UN Economic & Social Rights Convention
+
+#Global:
+	#9000 - We have begun the process of joining the United Nations
+	#9001 - Shall we veto the admission to the United Nations of a country currently seeking membership
+	#9002 - Our UN membership application has been vetoed
+	#9003 - Our UN membership application has not been vetoed
+	#9004 - We have been admitted to the United Nations
+
+#UN Secretary General:
+	#9010 - Nation applies for membership in the United Nations 
+
+	
+## Global ##	
+	#9000 - We have begun the process of joining the United Nations
+	country_event = {
+		
+		id = 9000
+
+		is_triggered_only = yes
+
+		title = "EVTNAME9000"
+		desc = "EVTDESC9000"
+		picture = "1945_UN_charter"
+
+		option = {
+			name = "EVTOPTA9000"					#Okay
+			neutrality = 2
+			prestige_change = 2
+			set_variable = {
+				name = var_temp_UN_security_council_member_count
+				value = 0
+			}
+			any_country = {
+				limit = {
+					is_org_member = XUN
+					is_major = yes
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				chg_global_var = {
+					name = var_temp_UN_security_council_member_count
+					value = 1
+				}
+				country_event = 9001
+			}
+		}
+	}
+				
+				
+
+	#9001 - Shall we veto the admission to the United Nations of a country currently seeking membership
+	country_event = {
+	
+		id = 9001
+
+		is_triggered_only = yes
+
+		title = "EVTNAME9001"
+		desc = "EVTDESC9001"
+		picture = "1950_UN_voting"
+
+		option = {
+			name = "EVTOPTA9001"					#Veto
+			ai_chance = {
+				factor = 2
+				modifier = {
+					factor = 0
+					alliance_with = FROM
+				}
+				modifier = {
+					factor = 0
+					relation = { who = FROM value = 100 }
+				}
+				modifier = {
+					factor = 0
+					relation = { who = FROM value = 50 }
+					military_access = FROM
+				}
+				modifier = {
+					factor = 0
+					relation = { who = FROM value = 50 }
+					same_party = FROM
+				}
+				modifier = {
+					factor = 0
+					relation = { who = FROM value = -50 }
+					same_faction = FROM
+				}
+				modifier = {
+					factor = 0
+					national_attitude = non-interventionism
+				}
+				modifier = {
+					factor = 0
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { relation = { who = FROM value = -75 } }
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { relation = { who = FROM value = -150 } }
+				}
+				modifier = {
+					factor = 2
+					truce_with = FROM
+				}
+				modifier = {
+					factor = 3
+					is_org_member = XNA
+					FROM = { 
+						is_org_member = XWP
+						is_subject = yes
+					}
+				}
+				modifier = {
+					factor = 3
+					is_org_member = XWP
+					FROM = { 
+						is_org_member = XNA
+						is_subject = yes
+					}
+				}
+				modifier = {
+					factor = 1.5
+					national_attitude = hegemony
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						foreign_policy = hardline_pol
+						foreign_policy = containment_pol
+					}
+				}
+				modifier = {
+					factor = 40
+					AND = {
+						prestige = 20
+						NOT = { recognized = FROM }
+					}
+				}
+			}
+			prestige_change = -20
+			FROM = {
+				random_owned = {
+					limit = {
+						owner = { NOT = { has_country_flag = flag_UN_membership_vetoed } }
+					}
+					owner = {
+						clr_country_flag = flag_UN_membership_process
+						set_country_flag = flag_UN_membership_vetoed
+						country_event = 9002
+					}
+				}
+			}
+		}
+		
+		option = {
+			name = "EVTOPTB9001"					#Don't Veto
+			ai_chance = {
+				factor = 98
+				modifier = {
+					factor = 0
+					war_with = FROM
+				}
+				modifier = {
+					factor = 1.33
+					relation = { who = FROM value = 75 }
+				}
+			}
+			change_variable = {
+				name = var_temp_UN_security_council_member_count
+				value = -1
+			}
+		}
+	}
+	
+	#9002 - Our UN membership application has been vetoed
+	country_event = {
+	
+		id = 9002
+
+		is_triggered_only = yes
+
+		title = "EVTNAME9002"
+		desc = "EVTDESC9002"
+		picture = "1948_UN_veto"
+
+		option = {
+			name = "EVTOPTA9002"					#Unfortunate
+			relation = { who = FROM value = -30 }
+			clr_country_flag = flag_UN_membership_vetoed
+			add_country_modifier = {
+				name = mod_vetoed_delay
+				duration = 730
+			}
+		}
+	}
+	
+	#9003 - Our UN membership application has not been vetoed
+	country_event = {
+	
+		id = 9003
+
+		trigger = {
+			has_country_flag = flag_UN_membership_process
+			NOT = { has_country_flag = flag_UN_membership_vetoed }
+			NOT = {
+				check_variable = {
+					name = var_temp_UN_security_council_member_count
+					value = 1
+				}
+			}
+			NOT = { has_country_flag = flag_UN_membership_not_vetoed }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME9003"
+		desc = "EVTDESC9003"
+		picture = "1973_General_Assembly_voting"
+
+		option = {
+			name = "EVTOPTA9003"					#Good news
+			set_country_flag = flag_UN_membership_not_vetoed
+			random_country = {
+				limit = { is_org_leader = XUN }
+				country_event = 9010
+			}
+		}
+	}
+
+	#9004 - We have been admitted to the United Nations
+	country_event = {
+	
+		id = 9004
+
+		trigger = {
+			has_country_flag = flag_UN_membership_process
+			OR = {
+				has_country_flag = flag_UN_membership_fast_delay
+				has_country_flag = flag_UN_membership_slow_delay
+			}
+			NOT = { has_country_modifier = mod_UN_membership_process_fast_delay }
+			NOT = { has_country_modifier = mod_UN_membership_process_slow_delay }
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			NOT = {
+				AND = {
+					war_exhaustion = 10 
+					war = yes
+				}
+			}
+			national_unity = 30
+			USA = {
+				NOT = { has_country_modifier = mod_UN_membership_acceptance_delay }
+			}
+		}
+		
+		mean_time_to_happen = {
+			months = 3
+			modifier = {
+				factor = 0.67
+				has_country_flag = flag_UN_membership_fast_delay
+			}
+		}
+
+		title = "EVTNAME9004"
+		desc = "EVTDESC9004"
+		picture = "1960_new_UN_members"
+		
+		major = yes
+
+		option = {
+			name = "EVTOPTA9004"					#Excellent
+			prestige_change = 5
+			join_organisation = XUN
+			add_country_modifier = {
+				name = mod_united_nations_member_state
+				duration = -1
+			}
+			clr_country_flag = flag_UN_membership_process
+			clr_country_flag = flag_UN_membership_fast_delay
+			clr_country_flag = flag_UN_membership_slow_delay
+			USA = {
+				add_country_modifier = {
+					name = mod_UN_membership_acceptance_delay
+					duration = 30
+				}
+			}
+		}
+	}
+	
+## UN Secretary General ##
+	#9010 - Nation applies for membership in the United Nations
+	country_event = {
+	
+		id = 9010
+
+		is_triggered_only = yes
+
+		title = "EVTNAME9010"
+		desc = "EVTDESC9010"
+		picture = "1945_UN_charter"
+
+		option = {
+			name = "EVTOPTA9010"					#Fast track the process
+			ai_chance = {
+				factor = 10
+			}
+			
+			#trigger = {
+				#XUN = { prestige = 100 }
+				#NOT = { USA = { has_country_modifier = mod_UN_secretary_general_fast_track_application_delay } }
+			#}
+			
+			#XUN = { prestige_change = -25 }
+			#FROM = { relation = { who = XUN value = 10 } }
+			
+			FROM = {
+				set_country_flag = flag_UN_membership_fast_delay
+				add_country_modifier = {
+					name = mod_UN_membership_process_fast_delay
+					duration = 92
+				}
+			}
+			
+			USA = {
+				add_country_modifier = {
+					name = mod_UN_secretary_general_fast_track_application_delay
+					duration = 183
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTB9010"					#Let the process run its course
+			ai_chance = {
+				factor = 90
+			}
+			FROM = {
+				set_country_flag = flag_UN_membership_slow_delay
+				add_country_modifier = {
+					name = mod_UN_membership_process_slow_delay
+					duration = 183
+				}
+			}
+		}
+	}

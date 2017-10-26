@@ -1,0 +1,45 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+dec_join_WP;We have begun the process of joining UE;;;;;;;;;;;;;x
+EVTNAME700238;Joining the  European Union;;;;;;;;;;;;;x
+EVTDESC700238;We have begun the process of joining the Warsaw pact as a member state. Whether we are permitted into the organisation at this time or not will depend on the opinions held by the UE's Permanent Members.\nThrough the UE we hope to gain a voice on the international diplomatic stage, shape the creation of new international law, and benefit from the collective security the organisation provides.\n;;;;;;;;;;;;;x
+EVTOPTA700238;Okay;;;;;;;;;;;;;x
+EVTNAME700239;A New UE Member?;;;;;;;;;;;;;x
+EVTDESC700239;$FROMCOUNTRY$ has begun the process of joining the European Union as a member state. As a UE Permanent Member we have the option of vetoing this application but doing so would come at the cost of some of our international prestige.;;;;;;;;;;;;;x
+EVTOPTA700239;Veto;;;;;;;;;;;;;x
+EVTOPTB700239;Don't Veto;;;;;;;;;;;;;x
+EVTNAME700240;UE Application Vetoed;;;;;;;;;;;;;x
+EVTDESC700240;$FROMCOUNTRY$, that is a UE Permanent Member state has chosen to veto our current application to the  European Union. We will be able to attempt this process again in two years time.;;;;;;;;;;;;;x
+EVTOPTA700240;Unfortunate;;;;;;;;;;;;;x
+EVTNAME700241;UE Application Progresses;;;;;;;;;;;;;x
+EVTDESC700241;None of the UE Permanent Member states have chosen to veto our application to the  European Union and thus our membership application will now move forward through the UE's legal processes by being forwarded to the Secretary General.;;;;;;;;;;;;;x
+EVTOPTA700241;Good things take time.;;;;;;;;;;;;;x
+EVTNAME700242;Admitted to the  European Union;;;;;;;;;;;;;x
+EVTDESC700242;We have recieved word that the  European Union Security Council has formally accepted our application to join the UE as a member state. We can now fully participate in the organisation.;;;;;;;;;;;;;x
+EVTOPTA700242;Good news;;;;;;;;;;;;;x
+EVTNAME700243; European Union Membership Application;;;;;;;;;;;;;x
+EVTDESC700243;$FROMCOUNTRY$ has begun the process of joining the  European Union, and has not had its application vetoed by any of the UE's Permanent Members.\nAs the current Secretary General of the  European Union we will now progress this application through the relevant legal processes, although we may have the option of fast-tracking it.;;;;;;;;;;;;;x
+EVTOPTA700243;Fast track the process;;;;;;;;;;;;;x
+EVTOPTB700243;Let the process run its course;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

@@ -1,0 +1,612 @@
+#ReligiousIntoleranceDeclaration_events.txt
+#UN Religious Intolerance Declaration
+
+#UN Secretary General:
+	#13400 - Raise the UN Religious Intolerance Declaration for Voting - Triggered by dec_UN_raise_religious_intolerance_declaration
+	#13401 - Should We Have Voting Notifications Or Not?
+	#13402 - UN Religious Intolerance Declaration Resolution Fails in the General Assembly
+	#13403 - UN Religious Intolerance Declaration Resolution Passes in the General Assembly
+	
+#Global:
+	#13410 - Vote on the UN Religious Intolerance Declaration - Notifications Off
+	#13411 - Vote on the UN Religious Intolerance Declaration - Notifications On (Major Event)
+	
+	
+## UN Secretary General ##
+	#13400 - Raise the UN Religious Intolerance Declaration for Voting
+	country_event = {
+	
+		id = 13400
+		
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME13400"
+		desc = "EVTDESC13400"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA13400" 					#Large diplomatic investment
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			
+			#trigger = {
+			#	XUN = { prestige = 40 }
+			#}
+			#XUN  = { prestige_change = -40 }
+			
+			country_event = 13401
+		}
+
+		option = {
+			name = "EVTOPTB13400" 					#Small diplomatic investment
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			
+			#trigger = {
+			#	XUN = { prestige = 15 }
+			#}
+			#XUN  = { prestige_change = -15 }
+			
+			country_event = 13401
+		}
+
+		option = {
+			name = "EVTOPTC13400"					#No diplomatic investment
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			
+			country_event = 13401
+		}
+	}
+	
+	#13401 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 13401
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME13401"
+		desc = "EVTDESC13401"
+		picture = "xxxx"
+		
+		option = {
+			name = "EVTOPTA13401"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_religious_intolerance_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_religious_intolerance_declaration_voting
+		}
+		
+		option = {
+			name = "EVTOPTB13401"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_religious_intolerance_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_religious_intolerance_declaration_voting
+		}
+	
+	}
+	
+	#13402 - UN Religious Intolerance Declaration Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 13402
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_religious_intolerance_declaration_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME13402"
+		desc = "EVTDESC13402"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_religious_intolerance_declaration_voting
+			set_global_flag = gflag_UN_religious_intolerance_declaration_fails
+		}
+
+		option = {
+			name = "EVTOPTA13402"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			#XUN  = { prestige_change = -50 }
+			
+			#hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_religious_intolerance_declaration_failure_delay
+						duration = 1460
+					}
+				}
+			#}
+			clr_global_flag = gflag_UN_religious_intolerance_declaration_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#13403 - UN Religious Intolerance Declaration Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 13403
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_religious_intolerance_declaration_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME13403"
+		desc = "EVTDESC13403"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_religious_intolerance_declaration_voting
+			clr_global_flag = gflag_UN_religious_intolerance_declaration_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_religious_intolerance_declaration_passes
+		}
+
+		option = {
+			name = "EVTOPTA13403"					#Excellent
+			clr_global_var = var_UN_votes_Total
+			
+			any_country = {
+				limit = {
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				add_country_modifier = {
+					name = mod_UN_religious_intolerance_declaration
+					duration = -1
+				}
+			}
+			
+			#XUN  = { prestige_change = 50 }
+			
+			clr_global_flag = gflag_UN_religious_intolerance_declaration_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+		}
+	}
+
+## Global ##
+	#13410 - Vote on the UN Religious Intolerance Declaration - Notifications Off
+	country_event = {
+	
+		id = 13410
+		
+		trigger = {
+			has_country_flag = flag_UN_religious_intolerance_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_religious_intolerance_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME13410"
+		desc = "EVTDESC13410"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_religious_intolerance_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_religious_intolerance_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA13410"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.5
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.5
+					civil_liberties = fully_granted_liberties
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 2
+					organized_religions_law = secular_state
+				}
+				modifier = {
+					factor = 1.5
+					national_identity = equality_focus
+				}
+				modifier = {
+					factor = 1.1
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_culture = cul_western_europe
+						national_culture = cul_north_america
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB13410"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC13410"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 2
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.5
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 1.1
+					civil_liberties = suspended_indefinitely
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.1
+					public_oversight = moral_code_of_conduct
+				}
+				modifier = {
+					factor = 3
+					organized_religions_law = state_religion
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = cultural_bias_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_attitude = imperialism
+						national_attitude = colonialism
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+	
+	#13411 - Vote on the UN Religious Intolerance Declaration - Notifications On
+	country_event = {
+	
+		id = 13411
+		
+		trigger = {
+			has_country_flag = flag_UN_religious_intolerance_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_religious_intolerance_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME13410"
+		desc = "EVTDESC13410"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_religious_intolerance_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_religious_intolerance_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA13410"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.5
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.5
+					civil_liberties = fully_granted_liberties
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 2
+					organized_religions_law = secular_state
+				}
+				modifier = {
+					factor = 1.5
+					national_identity = equality_focus
+				}
+				modifier = {
+					factor = 1.1
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_culture = cul_western_europe
+						national_culture = cul_north_america
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB13410"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC13410"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 2
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.5
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 1.1
+					civil_liberties = suspended_indefinitely
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.1
+					public_oversight = moral_code_of_conduct
+				}
+				modifier = {
+					factor = 3
+					organized_religions_law = state_religion
+				}
+				modifier = {
+					factor = 1.25
+					national_identity = cultural_bias_focus
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						national_attitude = imperialism
+						national_attitude = colonialism
+					}
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}	

@@ -1,0 +1,53 @@
+theatre =
+{
+	name = "Teatrul Romanesc"
+	location = 6902
+	regiment = { type = hq_brigade name = "Sediul Teatrului" historical_model = 0 }
+
+	army =
+	{
+		name = "Armata 1"
+		location = 6902
+		regiment = { type = hq_brigade name = "Sediul Armatei" historical_model = 0 }
+
+		division =
+		{
+			name = "Divizia 1 Infanterie"
+			location = 6902
+			regiment = { type = infantry_brigade name = "Regimentul 1 Infanterie" historical_model = 0 strength = 37 experience = 14 }
+			regiment = { type = artillery_brigade name = "Regimentul 1 Artilerie" historical_model = 0 strength = 21 experience = 15 }
+			regiment = { type = infantry_brigade name = "Regimentul 2 Infanterie" historical_model = 0 strength = 35 experience = 15 }
+		}
+		division =
+		{
+			name = "Divizia 3 Infanterie"
+			location = 6690
+			regiment = { type = infantry_brigade name = "Regimentul 5 Infanterie" historical_model = 0 strength = 36 experience = 5 }
+			regiment = { type = anti_air_brigade name = "Regimentul 1 Artilerie AA" historical_model = 0 strength = 18 experience = 4 }
+			regiment = { type = infantry_brigade name = "Regimentul 6 Infanterie" historical_model = 0 strength = 34 experience = 4 }
+		}
+		division =
+		{
+			name = "Divizia 4 Infanterie"
+			location = 6691
+			regiment = { type = infantry_brigade name = "Regimentul 7 Infanterie" historical_model = 0 strength = 35 experience = 4 }
+			regiment = { type = infantry_brigade name = "Regimentul 8 Infanterie" historical_model = 0 strength = 37 experience = 5 }
+			regiment = { type = infantry_brigade name = "Regimentul 9 Infanterie" historical_model = 0 strength = 34 experience = 5 }
+		}
+	}
+	navy = {
+		name = "Flotila Marea Neagra"
+		base = 7214 # Constanta (m)
+		location = 7214
+		ship = { type = destroyer name = "1. Distrugator Flotila" historical_model = 0 strength = 40}	
+	}
+}
+division =
+{
+	name = "Divizia 2 Infanterie"
+	location = 7214
+	pool = yes
+	regiment = { type = infantry_brigade name = "Regimentul 3 Infanterie" historical_model = 0 strength = 36 experience = 4 }
+	regiment = { type = artillery_brigade name = "Regimentul 2 Artilerie" historical_model = 0 strength = 23 experience = 4 }
+	regiment = { type = infantry_brigade name = "Regimentul 4 Infanterie" historical_model = 0 strength = 34 experience = 4 }
+}

@@ -1,0 +1,460 @@
+#TibetInvasion_decisions.txt
+#1950 Tibet Invasion
+
+#CHC:
+	#demand_tibet_CHC 			- decide whether to demand Tibet
+	#seventeen_point_CHC		- Communists decide to demand 17 point agreement, annexing Tibet
+	#tibet_land_reform_CHC 		- whether to proceed with land reform, removing autonomy modifiers in provinces
+	#intervene_tibet_CHI_CHC	- decide whether to intervene in rebellion in nationalist held Tibet
+#CHI:
+	#demand_tibet_CHI 			- decide whether to demand Tibet
+	#seventeen_point_CHI 		- Nationalists decide to demand 17 point agreement, annexing Tibet
+	#tibet_land_reform_CHI 		- whether to proceed with land reform, removing autonomy modifiers in provinces
+	#intervene_tibet_CHC_CHI 	- decide whether to intervene in rebellion in communist held Tibet
+#IND:
+	#intervene_tibet_CHC_IND 	- decide whether to intervene in rebellion in communist held Tibet
+	#intervene_tibet_CHI_IND 	- decide whether to intervene in rebellion in nationalist held Tibet
+#SOV:
+	#intervene_tibet_CHC_SOV 	- decide whether to intervene in rebellion in communist held Tibet
+	#intervene_tibet_CHI_SOV 	- decide whether to intervene in rebellion in nationalist held Tibet
+#USA:
+	#intervene_tibet_CHC_USA 	- decide whether to intervene in rebellion in communist held Tibet
+	#intervene_tibet_CHI_USA 	- decide whether to intervene in rebellion in nationalist held Tibet
+
+
+diplomatic_decisions = {
+## CHC ##
+	demand_tibet_CHC = {		#Communists decide whether to demand Tibet
+		category = national
+		picture = "1950_Tibet"
+		potential = {
+			TIB = { 
+				is_subject = no 
+				war = no 
+			}
+			exists = TIB
+			NOT = { TIB = { alliance_with = SOV } }
+			NOT = { TIB = { alliance_with = FRA } }
+			NOT = { TIB = { alliance_with = USA } }
+			NOT = { TIB = { alliance_with = ENG } }
+			tag = CHC
+			NOT = { has_country_flag = demand_tibet }
+			NOT = { CHC = { war_with = TIB } }
+			NOT = { CHC = { lost_national = 0.2 } }	
+			NOT = { CHC = { war_with = ENG } }
+			NOT = { CHC = { war_with = SOV } }
+			NOT = { CHC = { war_with = USA } }
+			NOT = { CHC = { war_with = FRA } }
+			is_subject = no
+		}
+		
+		allow = {
+			controls = 10673	#Kashitashi
+			controls = 11720	#Gongshan
+			controls = 11715	#Qiwuxiang
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = demand_tibet
+			country_event = 151101
+		}
+	}
+	seventeen_point_CHC = {		#Communists decide to demand 17 point agreement, annexing Tibet
+		category = national
+		picture = "1950_Tibet"
+		potential = {
+			exists = TIB
+			tag = CHC
+			NOT = { has_country_flag = seventeen_point }
+			war_with = TIB	
+			is_subject = no
+		}
+		
+		allow = {
+			NOT = { lost_national = 0.2 }
+			TIB = {
+				lost_national = 0.2
+				OR = {
+					11313 = { controlled_by = THIS }
+					lost_national = 0.4
+					war_exhaustion = 15
+					NOT = { national_unity = 50 }
+				}
+			}
+		}
+		
+		ai_will_do = { 
+			factor = 10
+			modifier = {
+				factor = 5
+				TIB = { lost_national = 0.5 }
+			}
+		}
+		
+		effect = {
+			set_country_flag = seventeen_point
+			TIB = { country_event = 338002 }
+		}
+	}
+	tibet_land_reform_CHC = {		#whether to proceed with land reform in tibet
+		category = national
+		picture = "1959_Tibet_Land_reform"
+		potential = {
+			NOT = { exists = TIB }
+			tag = CHC
+			NOT = { has_country_flag = land_reform_tibet }
+			war = no
+			CHC = { any_owned_province = { is_core = TIB has_province_modifier = pmod_tibetan_local_customs } }
+		}
+		
+		allow = {
+			NOT = { CHC = { any_owned_province = { is_core = TIB controlled_by = REB } } }
+			NOT = { CHC = { any_owned_province = { is_core = TIB revolt_risk = 5 } } }
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = land_reform_tibet
+			country_event = 151106
+		}
+	}
+	intervene_tibet_CHI_CHC = {	#decide whether to intervene in rebellion in Nationalist held Tibet
+		category = national
+		picture = "1958_Chushi_Defend_Tibet_Volunteer"
+		potential = {
+			NOT = { exists = TIB }
+			tag = CHC
+			NOT = { has_country_flag = intervene_tibet }
+			CHI = { 
+				any_owned_province = { 
+					is_core = TIB 
+					controlled_by = REB 
+				}
+			}
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = intervene_tibet
+			country_event = 151107
+		}
+	}
+## CHI ##
+	demand_tibet_CHI = {		#Nationaists decide whether to demand Tibet
+		category = national
+		picture = "1950_Tibet"
+		potential = {
+			TIB = { 
+				is_subject = no 
+				war = no 
+			}
+			exists = TIB
+			NOT = { TIB = { alliance_with = SOV } }
+			NOT = { TIB = { alliance_with = FRA } }
+			NOT = { TIB = { alliance_with = USA } }
+			NOT = { TIB = { alliance_with = ENG } }
+			tag = CHI
+			NOT = { has_country_flag = demand_tibet }
+			NOT = { CHI = { war_with = TIB } }
+			NOT = { CHI = { lost_national = 0.2 } }	
+			NOT = { CHI = { war_with = ENG } }
+			NOT = { CHI = { war_with = SOV } }
+			NOT = { CHI = { war_with = USA } }
+			NOT = { CHI = { war_with = FRA } }
+			is_subject = no
+		}
+		
+		allow = {
+			controls = 10673	#Kashitashi
+			controls = 11720	#Gongshan
+			controls = 11715	#Qiwuxiang
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = demand_tibet
+			country_event = 152101
+		}
+	}
+	seventeen_point_CHI = {		#Nationaists decide to demand 17 point agreement, annexing Tibet
+		category = national
+		picture = "1950_Tibet"
+		potential = {
+			exists = TIB
+			tag = CHI
+			NOT = { has_country_flag = seventeen_point }
+			war_with = TIB	
+			is_subject = no
+		}
+		
+		allow = {
+			NOT = { lost_national = 0.2 }
+			TIB = {
+				lost_national = 0.2
+				OR = {
+					11313 = { controlled_by = THIS }
+					lost_national = 0.4
+					war_exhaustion = 15
+					NOT = { national_unity = 50 }
+				}
+			}
+		}
+		
+		ai_will_do = { 
+			factor = 10
+			modifier = {
+				factor = 5
+				TIB = { lost_national = 0.5 }
+			}
+		}
+		
+		effect = {
+			set_country_flag = seventeen_point
+			TIB = { country_event = 338004 }
+		}
+	}
+	tibet_land_reform_CHI = {		#whether to proceed with land reform in tibet
+		category = national
+		picture = "1959_Tibet_Land_reform"
+		potential = {
+			NOT = { exists = TIB }
+			tag = CHI
+			NOT = { has_country_flag = land_reform_tibet }
+			war = no
+			CHI = { 
+				any_owned_province = { 
+					is_core = TIB 
+					has_province_modifier = pmod_tibetan_local_customs 
+				}
+			}
+		}
+		
+		allow = {
+			NOT = { CHI = { any_owned_province = { is_core = TIB controlled_by = REB } } }
+			NOT = { CHI = { any_owned_province = { is_core = TIB revolt_risk = 5 } } }
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = land_reform_tibet
+			country_event = 152106
+		}
+	}
+	intervene_tibet_CHC_CHI = {	#decide whether to intervene in rebellion in Communist held Tibet
+		category = national
+		picture = "1958_Chushi_Defend_Tibet_Volunteer"
+		potential = {
+			NOT = { exists = TIB }
+			tag = CHI
+			NOT = { has_country_flag = intervene_tibet }
+			CHC = { 
+				any_owned_province = { 
+					is_core = TIB 
+					controlled_by = REB 
+				} 
+			}
+		}
+		
+		allow = {
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = intervene_tibet
+			country_event = 152107
+		}
+	}
+## IND ##
+	intervene_tibet_CHC_IND = {	#decide whether to intervene in rebellion in Communist held Tibet
+		category = national
+		picture = "1958_Chushi_Defend_Tibet_Volunteer"
+		potential = {
+			NOT = { exists = TIB }
+			tag = IND
+			NOT = { has_country_flag = intervene_tibet }
+			CHC = { 
+				any_owned_province = { 
+					is_core = TIB 
+					controlled_by = REB 
+				} 
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = intervene_tibet
+			country_event = 218001
+		}
+	}
+	intervene_tibet_CHI_IND = {	#decide whether to intervene in rebellion in Nationalist held Tibet
+		category = national
+		picture = "1958_Chushi_Defend_Tibet_Volunteer"
+		potential = {
+			NOT = { exists = TIB }
+			tag = IND
+			NOT = { has_country_flag = intervene_tibet }
+			CHI = {
+				any_owned_province = { 
+					is_core = TIB 
+					controlled_by = REB 
+				} 
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = intervene_tibet
+			country_event = 218002
+		}
+	}
+## SOV ##
+	intervene_tibet_CHC_SOV = {	#decide whether to intervene in rebellion in communist held Tibet
+		category = national
+		picture = "1958_Chushi_Defend_Tibet_Volunteer"
+		potential = {
+			NOT = { exists = TIB }
+			tag = SOV
+			NOT = { has_country_flag = intervene_tibet }
+			CHC = { 
+				any_owned_province = { 
+					is_core = TIB 
+					controlled_by = REB 
+				} 
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = intervene_tibet
+			country_event = 326101
+		}
+	}
+	intervene_tibet_CHI_SOV = {	#decide whether to intervene in rebellion in nationalist held Tibet
+		category = national
+		picture = "1958_Chushi_Defend_Tibet_Volunteer"
+		potential = {
+			NOT = { exists = TIB }
+			tag = SOV
+			NOT = { has_country_flag = intervene_tibet }
+			CHI = { 
+				any_owned_province = { 
+					is_core = TIB 
+					controlled_by = REB 
+				} 
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = intervene_tibet
+			country_event = 326102
+		}
+	}
+## USA ##
+	intervene_tibet_CHC_USA = {	#decide whether to intervene in rebellion in communist held Tibet
+		category = national
+		picture = "1958_Chushi_Defend_Tibet_Volunteer"
+		potential = {
+			NOT = { exists = TIB }
+			tag = USA
+			NOT = { has_country_flag = intervene_tibet }
+			CHC = { 
+				any_owned_province = { 
+					is_core = TIB 
+					controlled_by = REB 
+				}  
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = intervene_tibet
+			country_event = 354001
+		}
+	}
+	intervene_tibet_CHI_USA = {	#decide whether to intervene in rebellion in nationalist held Tibet
+		category = national
+		picture = "1958_Chushi_Defend_Tibet_Volunteer"
+		potential = {
+			NOT = { exists = TIB }
+			tag = USA
+			NOT = { has_country_flag = intervene_tibet }
+			CHI = { 
+				any_owned_province = { 
+					is_core = TIB 
+					controlled_by = REB 
+				}
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+		effect = {
+			set_country_flag = intervene_tibet
+			country_event = 354002
+		}
+	}
+}

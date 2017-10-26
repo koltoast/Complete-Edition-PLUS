@@ -1,0 +1,1091 @@
+#ID Ranges for this file are 52100-52199.
+#Event chains: 52100-52102, 52104-52108
+
+#LOW HUMAN RIGHTS AND HIGH OVERSIGHT/FREEDOM OF THE PRESS
+country_event = {
+	id = 52100 #People are angered by low human rights and high public oversight [The people see how bad the gov't screws them]
+	title = "EVTNAME52100"		
+	desc = "EVTDESC52100"		
+	picture = "1956_Hungarian_revolution_2"
+	trigger = {
+		OR = {
+			public_oversight = transparent_public_oversight
+			public_oversight = systematic_oversight
+			freedom_of_the_press = free_press
+		}
+		OR = {
+			human_rights = not_recognized
+			AND = {
+				human_rights = cultural_relativism
+				NOT = { national_unity = 70 }
+			}
+		}
+		dissent = 10
+		NOT = { has_country_modifier = human_rights_agitation_timer }
+		#NOT = { has_country_modifier = human_rights_agitation_dissent }
+	}
+	
+	mean_time_to_happen = {
+		days = 2000
+		modifier = {
+			factor = 1.5
+			freedom_of_the_press = propaganda_press
+		}
+		modifier = {
+			factor = 1.25
+			freedom_of_the_press = state_press
+		}
+		modifier = {
+			factor = 1.1
+			freedom_of_the_press = censored_press
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { national_unity = 65 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { national_unity = 50 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { national_unity = 40 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { national_unity = 30 }
+		}
+		modifier = {
+			factor = 0.8
+			freedom_of_the_press = free_press
+		}
+		modifier = {
+			factor = 0.8
+			dissent = 20
+		}
+		modifier = {
+			factor = 0.9
+			civil_liberties = fully_granted_liberties
+		}
+		modifier = {
+			factor = 1.1
+			OR = {
+				rule_of_law = well_defined
+				rule_of_law = substantively_defined
+			}
+		}
+		modifier = {
+			factor = 0.9
+			OR = {
+				rule_of_law = thinly_defined
+				rule_of_law = narrowly_defined
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA52100" #Notify the player that people demand reform.
+		add_country_modifier = {
+			name = human_rights_agitation_timer
+			duration = 700
+		}
+	}
+}
+
+country_event = {
+	id = 52101 #The people are getting restless
+	title = "EVTNAME52101"
+	desc = "EVTDESC52101"		
+	picture = "1956_Hungarian_revolution"
+	trigger = {
+		OR = {
+			human_rights = not_recognized
+			AND = {
+				human_rights = cultural_relativism
+				NOT = { national_unity = 70 }
+			}
+		}
+		has_country_modifier = human_rights_agitation_timer
+	}
+	
+	mean_time_to_happen = {
+		days = 500
+		modifier = {
+			factor = 1.25
+			NOT = { dissent = 10 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { national_unity = 60 }
+		}
+		modifier = {
+			factor = 1.1
+			national_unity = 80
+		}
+		modifier = {
+			factor = 1.1
+			national_unity = 90
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA52101" #Notify the player that the people are now angry
+		remove_country_modifier = human_rights_agitation_timer
+		add_country_modifier = {
+			name = human_rights_dissent
+			duration = 180
+		}
+	}
+}
+
+country_event = {
+	id = 52102 #The people are happy that the government listed to them
+	title = "EVTNAME52102"
+	desc = "EVTDESC52102"		
+	picture = "1985_WWII_aniversary"
+	trigger = {
+		OR = {
+			human_rights = separate_but_equal
+			human_rights = universal_rights
+		}
+		OR = {
+			has_country_modifier = human_rights_agitation_timer
+			has_country_modifier = human_rights_dissent
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+		modifier = {
+			factor = 1.5
+			dissent = 5
+		}
+		modifier = {
+			factor = 2
+			dissent = 10
+		}
+		modifier = {
+			factor = 2
+			dissent = 20
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA52102" #Notify the player that the people are happy
+		remove_country_modifier = human_rights_agitation_timer
+		remove_country_modifier = human_rights_dissent
+		add_country_modifier = {
+			name = human_rights_reform_happiness
+			duration = 365
+		}
+	}
+}
+
+country_event = {
+	id = 52103 #Our excellent human rights record garners trust with the people, despite our low public oversight.
+	title = "EVTNAME52103"
+	desc = "EVTDESC52103"
+	picture = "1965_anti_war_rally"
+	trigger = {
+		human_rights = universal_rights
+		OR = {
+			public_oversight = limited_oversight
+			public_oversight = moral_code_of_conduct
+		}
+		national_unity = 80
+		NOT = { dissent = 10 }
+		civil_liberties = fully_granted_liberties
+		NOT = { has_country_modifier = human_rights_trust }
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.85
+			OR = {
+				government = republic_gov
+				government = constitutional_republic_gov
+				government = constitutional_monarchy_gov
+			}
+		}
+		modifier = {
+			factor = 0.9
+			rule_of_law = substantively_defined
+		}
+		modifier = {
+			factor = 0.8
+			national_identity = humanitarian_focus
+		}
+		modifier = {
+			factor = 0.85
+			freedom_of_the_press = free_press
+		}
+		modifier = {
+			factor = 1.3
+			freedom_of_the_press = censored_press
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				freedom_of_the_press = state_press
+				freedom_of_the_press = propaganda_press
+			}
+		}
+		modifier = {
+			factor = 1.25
+			rule_of_law = thinly_defined
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				government = totalitarian_gov
+				government = authoritarian_gov
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA52103" #EXCELLENT!
+		add_country_modifier = {
+			name = human_rights_trust
+			duration = 365
+		}
+	}
+}
+
+#GENERAL DEFECTION CHAIN
+country_event = {
+	id = 52104 #A general defects to a neighbouring country.
+	title = "EVTNAME52104"
+	desc = "EVTDESC52104"
+	picture = "1954_Soviet_defector"
+	trigger = {
+		human_rights = not_recognized
+		OR = {
+			dissent = 5
+			NOT = { national_unity = 70 }
+		}
+		any_neighbor_country = {
+			NOT = { human_rights = not_recognized }
+			OR = {
+				NOT = { human_rights = cultural_relativism }
+				AND = {
+					same_culture = THIS
+					OR = {
+						same_religion = THIS
+						organized_religions_law = secular_state
+					}
+				}
+			}
+			OR = {
+				NOT = { relation = { who = THIS value = 50 } }
+				freedom_of_the_press = free_press
+				freedom_of_the_press = limited_restrictions
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 30
+		modifier = {
+			factor = 0.8
+			NOT = { national_unity = 60 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { national_unity = 50 }
+		}
+		modifier = {
+			factor = 1.5
+			national_identity = territorial_focus
+		}
+		modifier = {
+			factor = 0.8
+			elections_and_voting = hereditary_rule
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				national_attitude = colonialism
+				national_attitude = imperialism
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA52104" #CURSES!
+		kill_random_leaders = 1
+		random_country = {
+			limit = {
+				neighbour = THIS
+				NOT = { human_rights = not_recognized }
+				OR = {
+					NOT = { relation = { who = THIS value = 50 } }
+					freedom_of_the_press = free_press
+					freedom_of_the_press = limited_restrictions
+				}
+				OR = {
+					NOT = { human_rights = cultural_relativism }
+					AND = {
+						same_culture = THIS
+						OR = {
+							same_religion = THIS
+							organized_religions_law = secular_state
+						}
+					}
+				}
+			}
+			country_event = 52105
+		}
+	}
+}
+
+country_event = {
+	id = 52105 #A general defects to us from [FROM] and wants to denounce them.
+	title = "EVTNAME52105"
+	desc = "EVTDESC52105"
+	picture = "1954_Soviet_defector"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA52105" #Grant him an audience and inform the presses
+		FROM = {
+			country_event = 52106
+		}
+		prestige_change = 2
+		random = {
+			chance = 50
+			#spies = 1		#Disabled until such an event effect is added
+		}
+	}
+	option = {
+		name = "EVTOPTB52105" #Grant him asylum and question him
+		FROM = {
+			random_list = {
+				70 = { country_event = 52107 }
+				30 = { country_event = 52111 }
+			}
+		}
+		#spies = 1		#Disabled until such an event effect is added
+	}
+	option = {
+		name = "EVTOPTC52105" #Deport him back to [FROM]
+		FROM = {
+			country_event = 52112
+		}
+	}
+}
+
+country_event = {
+	id = 52106 #The defecting general has denounced us.
+	title = "EVTNAME52106"
+	desc = "EVTDESC52106"
+	picture = "1954_Soviet_defector"
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA52106" #
+		relation = { who = FROM value = -15 }
+		prestige_change = -1
+		national_unity = -5
+		add_country_modifier = {
+			name = defecting_general_intel
+			duration = 167
+		}
+	}
+}
+
+country_event = {
+	id = 52107 #The defecting general is nowhere to be found, but we know he's somewhere in FROM.
+	title = "EVTNAME52107"
+	desc = "EVTDESC52107"
+	picture = "1954_Soviet_defector"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA52107" #Demand his extradition
+		FROM = {
+			country_event = 52108
+		}		
+	}
+	option = {
+		name = "EVTOPTB52107" #Let him be
+		add_country_modifier = {
+			name = defecting_general_intel
+			duration = 167
+		}
+	}
+}
+
+
+country_event = {
+	id = 52108 #[FROM] demands we extradite the general
+	title = "EVTNAME52108"
+	desc = "EVTDESC52108"
+	picture = "1954_Soviet_defector"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA52108" #Extradite
+		FROM = {
+			country_event = 52109
+		}		
+	}
+	option = {
+		name = "EVTOPTB52108" #Decline
+		prestige_change = 2
+		FROM = {
+			country_event = 52110
+		}		
+	}
+}
+
+country_event = {
+	id = 52109 #[FROM] returns our general
+	title = "EVTNAME52109"
+	desc = "EVTDESC52109"
+	picture = "1954_Soviet_defector"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA52109" #THANK YOU
+		relation = { who = FROM value = 5 }
+	}
+}
+
+country_event = {
+	id = 52110 #[FROM] refuses to return our general
+	title = "EVTNAME52110"
+	desc = "EVTDESC52110"
+	picture = "1954_Soviet_defector"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA52110" #THEY'LL REGRET THIS LATER
+		relation = { who = FROM value = -20 }
+		add_country_modifier = {
+			name = defecting_general_intel
+			duration = 167
+		}
+	}
+}
+
+country_event = {
+	id = 52111 #Our general has evaded us and doesn't appear to be in [FROM]
+	title = "EVTNAME52111"
+	desc = "EVTDESC52111"
+	picture = "1954_Soviet_defector"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA52111" #DAMN!
+		add_country_modifier = {
+			name = defecting_general_intel
+			duration = 167
+		}
+	}
+}
+
+country_event = {
+	id = 52112 #[FROM] has returned our defected general
+	title = "EVTNAME52112"
+	desc = "EVTDESC52112"
+	picture = "1954_Soviet_defector"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA52112" #THANK YOU!
+		relation = { who = FROM value = 10 }
+	}
+}
+
+#HUMAN POPULATION DISPLACEMENTS/ASYLUM SEEKERS
+country_event = {
+	id = 52113 #People in a border province are leaving us.
+	title = "EVTNAME52113"
+	desc = "EVTDESC52113"		
+	picture = "1948_Jewish_refugees"
+	trigger = {
+		OR = {
+			human_rights = not_recognized
+			AND = {
+				human_rights = cultural_relativism
+				NOT = { national_unity = 70 }
+			}
+		}
+		OR = {
+			NOT = { national_unity = 80 }
+			dissent = 5
+		}
+		NOT = { has_country_modifier = preventing_migration }
+		any_neighbor_country = {
+			NOT = { government = totalitarian_gov }
+			NOT = { human_rights = not_recognized }
+			OR = {
+				NOT = { human_rights = cultural_relativism }
+				AND = {
+					same_culture = THIS
+					OR = {
+						same_religion = THIS
+						organized_religions_law = secular_state
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 20
+		modifier = {
+			factor = 1.3
+			government = totalitarian_gov
+		}
+		modifier = {
+			factor = 1.25
+			government = authoritarian_gov
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { national_unity = 60 }
+		}
+		modifier = {
+			factor = 0.75
+			capital_scope = {
+				OR = {
+					continent = africa
+					continent = asia
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			capital_scope = {
+				OR = {
+					continent = europe
+					continent = north_america
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA52113" #Fine, they're someone else's problem now.
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 10
+				capital_scope = { continent = africa }
+			}
+		}
+		random_country = {
+			limit = {
+				neighbour = THIS
+				NOT = { government = totalitarian_gov }
+				NOT = { human_rights = not_recognized }
+				OR = {
+					NOT = { human_rights = cultural_relativism }
+					AND = {
+						same_culture = THIS
+						OR = {
+							same_religion = THIS
+							organized_religions_law = secular_state
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					any_neighbor_province = {
+						owned_by = THIS
+					}
+				}
+				#add_province_modifier = { 
+				#	name = asylum_seekers
+				#	duration = 365
+				#}
+				random_neighbor_province = {
+					limit = { owned_by = THIS }
+					#ADD ABSOLUTE POP LOSS EFFECT (AGES 16-35)
+					add_province_modifier = {
+						name = border_migration_hr
+						duration = 365
+					}
+				}
+			}
+			country_event = 52114
+		}
+	}
+	option = {
+		name = "EVTOPTB52113" #No one gets out alive/Prevent them from leaving.
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 10
+				government = totalitarian_gov
+			}
+			modifier = {
+				factor = 2
+				national_identity = territorial_focus
+			}
+			modifier = {
+				factor = 3
+				national_identity = cultural_bias_focus
+			}
+		}
+		add_country_modifier = {
+			name = preventing_migration
+			duration = 1095
+		}
+		random_owned = {
+			limit = {
+				any_neighbor_province = {
+					NOT = { owned_by = THIS }
+				}
+			}
+			add_province_modifier = { 
+				name = forced_to_stay
+				duration = 730
+			} #To be done
+		}
+	}
+}
+
+country_event = {
+	id = 52114 #Displaced persons seek asylum
+	title = "EVTNAME52114"
+	desc = "EVTDESC52114"		
+	picture = "1948_Jewish_refugees"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA52114" #Welcome them
+		prestige_change = 1
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 100
+				national_identity = humanitarian_focus
+			}
+		}
+		random_owned = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = FROM
+					has_province_modifier = border_migration_hr
+				}
+			}
+			#ADD ABSOLUTE POP GAIN EFFECT (Age groups 16-35)
+			add_province_modifier = { 
+				name = asylum_seekers
+				duration = 365
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB52114" #Send them back.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				ideology = fascistic_idolg
+				OR = {
+					NOT = { same_culture = FROM }
+					AND = {
+						NOT = { same_religion = FROM }
+						NOT = { organized_religions_law = secular_state }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				capital_scope = { continent = africa}
+			}
+			modifier = {
+				factor = 3
+				government = authoritarian_gov
+			}
+			modifier = {
+				factor = 5
+				national_identity = territorial_focus
+			}
+			modifier = {
+				factor = 10
+				national_identity = cultural_bias_focus
+				OR = {
+					NOT = { same_culture = FROM }
+					AND = {
+						NOT = { same_religion = FROM }
+						NOT = { organized_religions_law = secular_state }
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = FROM
+					has_province_modifier = border_migration_hr
+				}
+			}
+			random_neighbor_province = {
+				limit = {
+					owned_by = FROM
+					has_province_modifier = border_migration_hr
+				}	
+				#ADD ABSOLUTE POP GAIN EFFECT (Age groups 16-35)
+				remove_province_modifier = border_migration_hr
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 52115 #Brain drain
+	title = "EVTNAME52115"
+	desc = "EVTDESC52115"		
+	picture = "2011_brain_drain"
+	trigger = {
+		OR = {
+			human_rights = not_recognized
+			human_rights = cultural_relativism
+		}
+		OR = {
+			NOT = { national_unity = 80 }
+			dissent = 5
+		}
+		OR = {
+			education_policy = very_high_funding_edu_pol
+			education_policy = high_funding_edu_pol
+			domestic_policy = educational_focus_pol
+		}
+		NOT = { has_global_flag = gflag_brain_drain }
+		NOT = { has_country_modifier = preventing_migration }
+	}
+	
+	mean_time_to_happen = {
+		years = 20
+		modifier = {
+			factor = 0.9
+			government = totalitarian_gov
+		}
+		modifier = {
+			factor = 0.85
+			government = authoritarian_gov
+		}
+		modifier = {
+			factor = 0.75
+			capital_scope = {
+				OR = {
+					continent = africa
+					continent = asia
+				}
+			}
+		}
+		modifier = {
+			factor = 1.05
+			organized_religions_law = secular_state
+		}
+		modifier = {
+			factor = 1.1
+			national_unity = 90
+		}
+		modifier = {
+			factor = 1.2
+			freedom_of_the_press = free_press
+		}
+		modifier = {
+			factor = 1.5
+			domestic_policy = educational_focus_pol
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA52115" #Fine, we don't need them.
+		set_global_flag = gflag_brain_drain
+		ai_chance = {
+			factor = 5
+		}
+		add_country_modifier = {
+			name = brain_drain
+			duration = 365
+		}
+		#Later remove some POP (ages 16-25) from a random province.
+		random_owned = {
+			add_province_modifier = {
+				name = people_are_leaving
+				duration = 365
+			}
+		}
+		random_country = {
+			limit = {
+				OR = {
+					human_rights = universal_rights
+					AND = {
+						human_rights = separate_but_equal
+						same_culture = THIS
+						OR = {
+							same_religion = THIS
+							organized_religions_law = secular_state
+						}
+					}
+				}
+				NOT = { elections_and_voting = single_party_system }
+				NOT = { elections_and_voting = hereditary_rule }
+				OR = {
+					freedom_of_the_press = free_press
+					freedom_of_the_press = limited_restrictions
+				}
+				NOT = { dissent = 5 }
+				national_unity = 80
+				OR = {
+					education_policy = very_high_funding_edu_pol
+					education_policy = high_funding_edu_pol
+				}
+			}
+			country_event = 52116
+		}
+	}
+	option = {
+		name = "EVTOPTB52115" #No one gets out alive/Prevent them from leaving.
+		set_global_flag = gflag_brain_drain
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 10
+				government = totalitarian_gov
+			}
+			modifier = {
+				factor = 2
+				national_identity = cultural_bias_focus
+			}
+		}
+		add_country_modifier = {
+			name = preventing_migration
+			duration = 1095
+		}
+		random_owned = {
+			add_province_modifier = { 
+				name = forced_to_stay
+				duration = 730
+			} #To be done
+		}
+	}
+}
+
+country_event = {
+	id = 52116 #Educated immigrants from [FROM] come to our shores.
+	title = "EVTNAME52116"
+	desc = "EVTDESC52116"
+	picture = "1956_Hungarian_refugees_2"
+	
+	trigger = {
+		has_global_flag = gflag_brain_drain
+		national_unity = 60
+		OR = {
+			human_rights = universal_rights
+			human_rights = separate_but_equal
+		}
+		OR = {
+			freedom_of_the_press = free_press
+			freedom_of_the_press = limited_restrictions
+			freedom_of_the_press = censored_press
+		}
+		OR = {
+			education_policy = very_high_funding_edu_pol
+			education_policy = high_funding_edu_pol
+			education_policy = medium_funding_edu_pol
+		}
+		NOT = {
+			has_country_modifier = preventing_migration
+			has_country_modifier = brain_drain
+			elections_and_voting = hereditary_rule
+			dissent = 15
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 62
+		modifier = {
+			factor = 0.25
+			education_policy = very_high_funding_edu_pol
+		}
+		modifier = {
+			factor = 4
+			education_policy = medium_funding_edu_pol
+		}
+		modifier = {
+			factor = 2
+			dissent = 10
+		}
+		modifier = {
+			factor = 1.5
+			dissent = 5
+		}
+		modifier = {
+			factor = 0.67
+			freedom_of_the_press = free_press
+		}
+		modifier = {
+			factor = 2
+			freedom_of_the_press = censored_press
+		}
+		modifier = {
+			factor = 0.67
+			human_rights = universal_rights
+		}
+		modifier = {
+			factor = 0.67
+			national_unity = 90
+		}
+		modifier = {
+			factor = 2
+			NOT = { national_unity = 70 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA52116" #Great!/We can put them to good use here
+		add_country_modifier = {
+			name = educated_immigrants
+			duration = 365
+		}
+		random_owned = {
+			#ADD ABSOLUTE POP GAIN EFFECT (Age groups 16-35)
+			add_province_modifier = { 
+				name = migration_hotspot
+				duration = 365
+			}
+		}
+		clr_global_flag = gflag_brain_drain
+	}
+}
+
+country_event = {
+	id = 52117 #People are leaving us for a humanitarian state due to our disregard for human rights.
+	title = "EVTNAME52117"
+	desc = "EVTDESC52117"		
+	picture = "1956_Hungarian_refugees_2"
+	trigger = {
+		OR = {
+			human_rights = not_recognized
+			AND = {
+				human_rights = cultural_relativism
+				NOT = { national_unity = 70 }
+			}
+		}
+		OR = {
+			NOT = { national_unity = 80 }
+			dissent = 10
+		}
+		NOT = { has_country_modifier = preventing_migration }
+	}
+	
+	mean_time_to_happen = {
+		years = 25
+		modifier = {
+			factor = 1.3
+			government = totalitarian_gov
+		}
+		modifier = {
+			factor = 1.25
+			government = authoritarian_gov
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { national_unity = 60 }
+		}
+		modifier = {
+			factor = 0.7
+			capital_scope = {
+				OR = {
+					continent = africa
+					continent = asia
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			capital_scope = {
+				OR = {
+					continent = europe
+					continent = north_america
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA52117" #Fine, they're someone else's problem now.
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 12
+				capital_scope = { continent = africa }
+			}
+		}
+		random_owned = {
+			#Remove pop effect
+			add_province_modifier = {
+				name = people_are_leaving
+				duration = 365
+			}
+		}
+		random_country = {
+			limit = {
+				national_identity = humanitarian_focus
+			}
+			country_event = 52118
+		}
+	}
+	option = {
+		name = "EVTOPTB52117" #No one gets out alive/Prevent them from leaving.
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 10
+				government = totalitarian_gov
+			}
+			modifier = {
+				factor = 2
+				national_identity = cultural_bias_focus
+			}
+		}
+		add_country_modifier = {
+			name = preventing_migration
+			duration = 1095
+		}
+		random_owned = {
+			limit = {
+				any_neighbor_province = {
+					NOT = { owned_by = THIS }
+				}
+			}
+			add_province_modifier = { 
+				name = forced_to_stay
+				duration = 730
+			} #To be done
+		}
+	}
+}
+
+country_event = {
+	id = 52118 #Asylum seekers come to us from [FROM].
+	title = "EVTNAME52118"
+	desc = "EVTDESC52118"
+	picture = "1956_Hungarian_refugees"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA52118" #Welcome them
+		prestige_change = 1
+		random_owned = {
+			#ADD ABSOLUTE POP GAIN EFFECT (Age groups 16-35)
+			add_province_modifier = { 
+				name = asylum_seekers
+				duration = 365
+			}
+		}
+	}
+}
+

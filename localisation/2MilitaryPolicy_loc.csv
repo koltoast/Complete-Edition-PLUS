@@ -1,0 +1,45 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+dec_Global_veterans_education_title;Veterans Assistance;;;;;;;;;;;;;x
+dec_Global_veterans_education_desc;By providing higher educational scholarships and tutition to veterans of our wars, for the benefit of social cohesion and future economic strength.;;;;;;;;;;;;;x
+EVTNAME50400;Our Airforce Inspires Awe;;;;;;;;;;;;;x
+EVTDESC50400;The military might and professionalism of our airforce is recognised across the world.\nThey are considered some of the best of their kind across the world, striking fear into our enemies and serving as a fine example for our allies.;;;;;;;;;;;;;x
+EVTOPTA50400;Great news;;;;;;;;;;;;;x
+EVTNAME50401;Our Navy Inspires Awe;;;;;;;;;;;;;x
+EVTDESC50401;The military might and professionalism of our navy is recognised across the world.\nThey are considered some of the best of their kind across the world, striking fear into our enemies and serving as a fine example for our allies.;;;;;;;;;;;;;x
+EVTOPTA50401;Great news;;;;;;;;;;;;;x
+EVTNAME50402;Our Army Inspires Awe;;;;;;;;;;;;;x
+EVTDESC50402;The military might and professionalism of our army is recognised across the world.\nThey are considered some of the best of their kind across the world, striking fear into our enemies and serving as a fine example for our allies.;;;;;;;;;;;;;x
+EVTOPTA50402;Great news;;;;;;;;;;;;;x
+EVTNAME50403;Desertions!;;;;;;;;;;;;;x
+EVTDESC50403;Stricken by low morale and carrying the burden of exhausting warfare, significant but small scale desertions are taking place across our military forces.;;;;;;;;;;;;;x
+EVTOPTA50403;Dreadful;;;;;;;;;;;;;x
+EVTNAME50404;Officer Graduates Excel;;;;;;;;;;;;;x
+EVTDESC50404;The most recent graduate class of military officers have excelled in their examinations, and their future is seen as promising.\nWe will keep an eager eye on their future achievements.;;;;;;;;;;;;;x
+EVTOPTA50404;Great news;;;;;;;;;;;;;x
+EVTNAME50405;Military Training Positives;;;;;;;;;;;;;x
+EVTDESC50405;Our policy of long-term training of our military recruits has yielded positive results.\nThe professionalism and quality of our troops has never been better.;;;;;;;;;;;;;x
+EVTOPTA50405;Great news;;;;;;;;;;;;;x
+EVTNAME50406;Military Training Negatives;;;;;;;;;;;;;x
+EVTDESC50406;Our policy of long-term training of our military recruits has yielded negative results.\nEx-soldiers are finding difficulty when re-entering civilian life and the workforce.;;;;;;;;;;;;;x
+EVTOPTA50406;Bad news;;;;;;;;;;;;;x
+airforce_awe;Airforce Awe;;;;;;;;;;;;;x
+navy_awe;Airforce Awe;;;;;;;;;;;;;x
+army_awe;Airforce Awe;;;;;;;;;;;;;x
+desertions;Desertions!;;;;;;;;;;;;;x
+graduate_officers;Promising officer graduates;;;;;;;;;;;;;x
+military_training_readjustment;Military training causes problems;;;;;;;;;;;;;x
+military_training_results;Military training yields results;;;;;;;;;;;;;x
+mod_Global_veterans_education;Veterans Assistance;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

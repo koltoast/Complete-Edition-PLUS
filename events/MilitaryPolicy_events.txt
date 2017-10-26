@@ -1,0 +1,473 @@
+
+
+#50400-50499 (50406)
+#Armed Forces Events
+
+country_event = {
+
+	id =  50400	#Our airforce inspires awe
+	
+	trigger = {
+		NOT = { has_country_modifier = airforce_awe }
+		OR = {
+			total_amount_of_planes = 120
+			biggest_air = yes
+		}
+		national_unity = 40
+		NOT = {
+			dissent = 50
+			lost_national = 0.75
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1000
+		modifier = {
+			factor = 0.95
+			war = yes
+		}
+		modifier = {
+			factor = 0.90
+			national_unity = 80 
+		}
+		modifier = {
+			factor = 0.90
+			air_battles_fought = 50
+		}
+		modifier = {
+			factor = 0.75
+			total_amount_of_planes = 180
+		}
+		modifier = {
+			factor = 0.75
+			total_amount_of_planes = 240
+		}
+		modifier = {
+			factor = 0.75
+			total_amount_of_planes = 360
+		}
+		modifier = {
+			factor = 0.50
+			biggest_air = yes 
+		}
+	}
+
+	title = "EVTNAME50400"
+	desc = "EVTDESC50400"
+	picture = "1960_Thunderbirds"
+		
+	option = {
+		name = "EVTOPTA50400"
+		add_country_modifier = {
+			name = "airforce_awe"
+			duration = 183
+		}
+	}
+}
+
+country_event = {
+
+	id =  50401	#Our navy inspires awe
+	
+	trigger = {
+		NOT = { has_country_modifier = navy_awe }
+		OR = {
+			total_amount_of_ships = 180
+			biggest_naval = yes
+		}
+		national_unity = 40
+		NOT = {
+			dissent = 50
+			lost_national = 0.75
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1000
+		modifier = {
+			factor = 0.95
+			war = yes 
+		}
+		modifier = {
+			factor = 0.90
+			national_unity = 80 
+		}
+		modifier = {
+			factor = 0.90
+			OR = {
+				naval_battles_fought = 50
+				total_sunk_by_us = 100
+			}
+		}
+		modifier = {
+			factor = 0.90
+		}
+		modifier = {
+			factor = 0.75
+			total_amount_of_ships = 270
+		}
+		modifier = {
+			factor = 0.75
+			total_amount_of_ships = 360
+		}
+		modifier = {
+			factor = 0.75
+			total_amount_of_ships = 540
+		}
+		modifier = {
+			factor = 0.50
+			biggest_naval = yes 
+		}
+	}
+
+	title = "EVTNAME50401"
+	desc = "EVTDESC50401"
+	picture = "carrier_display"
+		
+	option = {
+		name = "EVTOPTA50401"
+		add_country_modifier = {
+			name = "navy_awe"
+			duration = 183
+		}
+	}
+}
+
+country_event = {
+
+	id =  50402	#Our army inspires awe
+	
+	trigger = {
+		NOT = { has_country_modifier = army_awe }
+		OR = {
+			total_amount_of_divisions = 240
+			biggest_army = yes
+		}
+		national_unity = 40
+		NOT = {
+			dissent = 50
+			lost_national = 0.75
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1000
+		modifier = {
+			factor = 0.95
+			war = yes 
+		}
+		modifier = {
+			factor = 0.90
+			national_unity = 80 
+		}
+		modifier = {
+			factor = 0.90
+			naval_battles_fought = 50
+		}
+		modifier = {
+			factor = 0.75
+			total_amount_of_divisions = 360
+		}
+		modifier = {
+			factor = 0.75
+			total_amount_of_divisions = 480
+		}
+		modifier = {
+			factor = 0.75
+			total_amount_of_divisions = 720
+		}
+		modifier = {
+			factor = 0.50
+			biggest_army = yes 
+		}
+	}
+
+	title = "EVTNAME50402"
+	desc = "EVTDESC50402"
+	picture = "1960_Parade_Red_square"
+	
+	option = {
+		name = "EVTOPTA50402"
+		add_country_modifier = {
+			name = "army_awe"
+			duration = 183
+		}
+	}
+}
+
+
+country_event = {
+
+	id =  50403	#Desertions!
+	
+	trigger = {
+		NOT = { has_country_modifier = desertions }
+		war_exhaustion = 10
+		NOT = { national_unity = 95 }
+	}
+
+	mean_time_to_happen = {
+		months = 1000
+		modifier = {
+			factor = 0.20
+			war = yes
+		}
+		modifier = {
+			factor = 1.5
+			national_unity = 80
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { national_unity = 60 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { national_unity = 40 }
+		}
+		modifier = {
+			factor = 0.50
+			NOT = { national_unity = 20 }
+		}
+		modifier = {
+			factor = 0.75
+			lost_national = 0.25
+		}
+		modifier = {
+			factor = 0.75
+			lost_national = 0.50
+		}
+		modifier = {
+			factor = 0.50
+			lost_national = 0.75
+		}
+		modifier = {
+			factor = 0.75
+			revolt_percentage = 0.25
+		}
+		modifier = {
+			factor = 0.75
+			revolt_percentage = 0.50
+		}
+		modifier = {
+			factor = 0.50
+			revolt_percentage = 0.75
+		}
+	}
+
+	title = "EVTNAME50403"
+	desc = "EVTDESC50403"
+	picture = "depressed_soldier"
+		
+	option = {
+		name = "EVTOPTA50403"
+		add_country_modifier = {
+			name = "desertions"
+			duration = 183
+		}
+	}
+}
+
+
+
+country_event = {
+
+	id =  50404	#A promising graduate class of officers
+	
+	trigger = {
+		NOT = { has_country_modifier = graduate_officers }
+		OR = {
+			total_amount_of_divisions = 15
+			total_amount_of_planes = 10
+			total_amount_of_ships = 15
+		}
+		#Something to do with officers
+	}
+
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 0.75
+			national_unity = 80
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { national_unity = 60 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { national_unity = 40 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { national_unity = 20 }
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				military_service = expanded_drafted_army
+				military_service = abbreviated_volunteer_army
+			}
+		}
+		modifier = {
+			factor = 2
+			military_policy = basic_combat_training_pol
+		}
+		modifier = {
+			factor = 1.5
+			military_policy = half_y_service_pol
+		}
+		modifier = {
+			factor = 1.25
+			military_policy = one_y_service_pol
+		}
+		modifier = {
+			factor = 1.1
+			military_policy = one_half_y_service_pol
+		}
+		modifier = {
+			factor = 0.9
+			military_policy = two_half_y_service_pol
+		}
+		modifier = {
+			factor = 0.75
+			military_policy = three_y_service_pol
+		}
+		modifier = {
+			factor = 0.50
+			military_policy = sustained_military_service_pol
+		}
+		#Add something to do with officers or research
+	}
+
+	title = "EVTNAME50404"
+	desc = "EVTDESC50404"
+	picture = "1952_West_Point"
+		
+	option = {
+		name = "EVTOPTA50404"
+		add_country_modifier = {
+			name = "graduate_officers"
+			duration = 183
+		}
+	}
+}
+
+country_event = {
+
+	id =  50405	#Comprehensive military training yields results
+	
+	trigger = {
+		NOT = { 
+			has_country_modifier = military_training_readjustment 
+			has_country_modifier = military_training_results
+		}
+		OR = { 
+			military_policy = two_y_service_pol
+			military_policy = two_half_y_service_pol
+			military_policy = three_y_service_pol
+			military_policy = sustained_military_service_pol
+		}
+		OR = {
+			total_amount_of_divisions = 15
+			total_amount_of_planes = 10
+			total_amount_of_ships = 15
+		}
+		#Something to do with officers
+	}
+
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 0.5
+			war = yes
+		}
+		modifier = {
+			factor = 2
+			war = no
+		}
+		modifier = {
+			factor = 2.25
+			military_policy = two_y_service_pol
+		}
+		modifier = {
+			factor = 1.5
+			military_policy = two_half_y_service_pol
+		}
+		modifier = {
+			factor = 0.67
+			military_policy = sustained_military_service_pol
+		}
+	}
+
+	title = "EVTNAME50405"
+	desc = "EVTDESC50405"
+	picture = "1960_Fort_Dix"
+		
+	option = {
+		name = "EVTOPTA50405"
+		add_country_modifier = {
+			name = "military_training_results"
+			duration = 183
+		}
+	}
+}
+
+country_event = {
+
+	id =  50406	#Long military training causes difficulty for ex-soldiers readjusting to civilian life
+	
+	trigger = {
+		NOT = { 
+			has_country_modifier = military_training_readjustment 
+			has_country_modifier = military_training_results
+		}
+		OR = { 
+			military_policy = two_y_service_pol
+			military_policy = two_half_y_service_pol
+			military_policy = three_y_service_pol
+			military_policy = sustained_military_service_pol
+		}
+		OR = {
+			total_amount_of_divisions = 15
+			total_amount_of_planes = 10
+			total_amount_of_ships = 15
+		}
+		#Something to do with officers
+	}
+
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 0.5
+			war = no
+		}
+		modifier = {
+			factor = 2
+			war = yes
+		}
+		modifier = {
+			factor = 2.25
+			military_policy = two_y_service_pol
+		}
+		modifier = {
+			factor = 1.5
+			military_policy = two_half_y_service_pol
+		}
+		modifier = {
+			factor = 0.67
+			military_policy = sustained_military_service_pol
+		}
+	}
+
+	title = "EVTNAME50406"
+	desc = "EVTDESC50406"
+	picture = "1946_delisting"
+		
+	option = {
+		name = "EVTOPTA50406"
+		add_country_modifier = {
+			name = "military_training_readjustment"
+			duration = 183
+		}
+	}
+}

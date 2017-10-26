@@ -1,0 +1,104 @@
+#FourthGenevaConvention_decisions.txt
+#Fourth Geneva Convention
+
+#Global:
+	#dec_sign_geneva_conventions 			- Sign the Fourth Geneva Convention of 1949
+
+
+diplomatic_decisions = {
+## Global ##
+	#dec_sign_geneva_conventions 			- Sign the Fourth Geneva Convention of 1949
+	dec_sign_geneva_conventions = {
+		category = international
+		picture = "1949_Geneva_Convention"
+		potential = {
+			NOT = {
+				has_country_modifier = signed_the_geneva_convention
+			}
+			has_global_flag = geneva_convention_held
+		}
+		
+		allow = {
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			national_unity = 25
+			NOT = {
+				AND = {
+					war = yes
+					OR = {
+						war_exhaustion = 15
+						lost_national = 0.15
+					}
+				}
+			}
+			NOT = {
+				civil_liberties = martial_law
+				civil_liberties = suspended_indefinitely
+			}
+			NOT = { human_rights = not_recognized }
+			NOT = { war_with = SCH }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.50
+				OR = {
+					foreign_policy = isolationism_pol
+					foreign_policy = hardline_pol
+				}
+			}
+			modifier = {
+				factor = 0.33
+				OR = {
+					government = totalitarian_gov
+					government = authoritarian_gov
+					government = theocracy_gov
+				}
+			}
+			modifier = {
+				factor = 0.33
+				civil_liberties = emergency_law
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					government = absolute_monarchy_gov
+					ideology = fascistic_idolg
+				}
+			}
+			modifier = {
+				factor = 0.1
+				war = yes
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					domestic_policy = health_focus_pol
+					domestic_policy = social_focus_pol
+				}
+			}
+			modifier = {
+				factor = 3
+				human_rights = universal_rights
+			}
+			modifier = {
+				factor = 3
+				national_identity = humanitarian_focus
+			}
+			
+			modifier = {
+				factor = 0
+				SCH = { has_country_modifier = geneva_convention_delay }
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = signed_the_geneva_convention
+				duration = -1
+			}
+			country_event = 10000
+		}
+	}
+
+}

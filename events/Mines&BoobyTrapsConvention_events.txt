@@ -1,0 +1,1111 @@
+#Mines&BoobyTrapsConvention_events.txt
+#UN Mines & Booby Traps Convention
+
+#UN Secretary General:
+	#12500 - Raise the UN Mines & Booby Traps Convention for Voting - Triggered by dec_UN_raise_mines_and_booby_traps_convention
+	#12501 - Should We Have Voting Notifications Or Not?
+	#12502 - UN Mines & Booby Traps Convention Resolution Fails in the General Assembly
+	#12503 - UN Mines & Booby Traps Convention Resolution Passes in the General Assembly
+	
+#Global:
+	#12510 - Vote on the UN Mines & Booby Traps Convention - Notifications Off
+	#12511 - Vote on the UN Mines & Booby Traps Convention - Notifications On (Major Event)
+	#12512 - We have ratified the UN Mines & Booby Traps Convention - Triggered
+	#12513 - We have ratified the UN Mines & Booby Traps Convention - Non-triggered
+	#12514 - We have revoked the UN Mines & Booby Traps Convention
+	
+	
+## UN Secretary General ##
+	#12500 - Raise the UN Mines & Booby Traps Convention for Voting
+	country_event = {
+	
+		id = 12500
+
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME12500"
+		desc = "EVTDESC12500"
+		picture = "1980_UN_CCW_convention"
+
+		option = {
+			name = "EVTOPTA12500" 					#Large diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 40 }
+			#}
+			#XUN  = { prestige_change = -40 }
+			
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			country_event = 12501
+		}
+
+		option = {
+			name = "EVTOPTB12500" 					#Small diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 15 }
+			#}
+			#XUN  = { prestige_change = -15 }
+			
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			country_event = 12501
+		}
+
+		option = {
+			name = "EVTOPTC12500"					#No diplomatic investment
+			
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			country_event = 12501
+		}
+	}
+	
+	#12501 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 12501
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME12501"
+		desc = "EVTDESC12501"
+		picture = "1973_General_Assembly_voting"
+		
+		option = {
+			name = "EVTOPTA12501"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_mines_and_booby_traps_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_mines_and_booby_traps_convention_voting
+		}
+		
+		option = {
+			name = "EVTOPTB12501"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_mines_and_booby_traps_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_mines_and_booby_traps_convention_voting
+		}
+	}
+	
+	#12502 - UN Mines & Booby Traps Convention Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 12502
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_mines_and_booby_traps_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME12502"
+		desc = "EVTDESC12502"
+		picture = "1980_UN_CCW_convention"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_mines_and_booby_traps_convention_voting
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_mines_and_booby_traps_convention_fails
+		}
+
+		option = {
+			name = "EVTOPTA12502"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			#XUN  = { prestige_change = -50 }
+			
+			#hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_mines_and_booby_traps_convention_failure_delay
+						duration = 1460
+					}
+				}
+			#}
+			clr_global_flag = gflag_UN_mines_and_booby_traps_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#12503 - UN Mines & Booby Traps Convention Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 12503
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_mines_and_booby_traps_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME12503"
+		desc = "EVTDESC12503"
+		picture = "1980_UN_CCW_convention"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_mines_and_booby_traps_convention_voting
+			clr_global_flag = gflag_UN_mines_and_booby_traps_convention_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_mines_and_booby_traps_convention_passes
+		}
+
+		option = {
+			name = "EVTOPTA12503"					#Excellent
+			clr_global_var = var_UN_votes_For
+			
+			#XUN  = { prestige_change = 50 }
+			
+			any_country = {
+				limit = {
+					has_country_flag = flag_UN_mines_and_booby_traps_convention_supporter
+				}
+				set_country_flag = flag_UN_mines_and_booby_traps_convention_ratified
+				country_event = 12512
+			}
+			clr_global_flag = gflag_UN_mines_and_booby_traps_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+
+## Global ##
+	#12510 - Vote on the UN Mines & Booby Traps Convention - Notifications Off
+	country_event = {
+	
+		id = 12510
+		
+		trigger = {
+			has_country_flag = flag_UN_mines_and_booby_traps_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_mines_and_booby_traps_convention_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME12510"
+		desc = "EVTDESC12510"
+		picture = "1973_General_Assembly_voting"
+		
+		immediate = {
+			clr_country_flag = flag_UN_mines_and_booby_traps_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_mines_and_booby_traps_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA12510"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_mines_and_booby_traps_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.5
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						rule_of_law = substantively_defined
+						rule_of_law = well_defined
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						freedom_of_the_press = limited_restrictions
+						freedom_of_the_press = free_press
+					}
+				}
+				modifier = {
+					factor = 1.1
+					civil_liberties = fully_granted_liberties
+				}
+				modifier = {
+					factor = 1.25
+					military_policy = basic_combat_training_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						military_policy = half_y_service_pol
+						military_policy = one_y_service_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						domestic_policy = health_focus_pol
+						domestic_policy = agricultural_focus_pol
+					}
+				}
+				modifier = {
+					factor = 2
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.5
+					foreign_policy = detente_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						armaments_policy = blue_waters_focus_pol
+						armaments_policy = fighter_focus_pol
+						armaments_policy = astronautical_focus_pol
+					}
+				}
+				modifier = {
+					factor = 2
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.5
+					explosives = 2
+					NOT = { explosives = 3 }
+				}
+				modifier = {
+					factor = 2
+					NOT = { explosives = 2 }
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_mines_and_booby_traps_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB12510"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+			clr_country_flag = flag_UN_mines_and_booby_traps_convention_supporter
+		}
+
+		option = {
+			name = "EVTOPTC12510"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 2
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.25
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						rule_of_law = thinly_defined
+						rule_of_law = narrowly_defined
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						civil_liberties = suspended_indefinitely
+						civil_liberties = martial_law
+						civil_liberties = emergency_law
+					}
+				}
+				modifier = {
+					factor = 1.25
+					military_policy = sustained_military_service_pol
+				}
+				modifier = {
+					factor = 1.5
+					domestic_policy = defence_focus_pol
+				}
+				modifier = {
+					factor = 2
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.25
+					foreign_policy = containment_pol
+				}
+				modifier = {
+					factor = 2
+					armaments_policy = assymetric_warfare_focus_pol
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						armaments_policy = bomber_focus_pol
+						armaments_policy = nuclear_armaments_focus_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					national_attitude = imperialism
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_attitude = colonialism
+						national_attitude = hegemony
+					}
+				}
+				modifier = {
+					factor = 1.5
+					explosives = 3
+					NOT = { explosives = 4 }
+				}
+				modifier = {
+					factor = 2
+					explosives = 4
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			clr_country_flag = flag_UN_mines_and_booby_traps_convention_supporter
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_mines_and_booby_traps_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#12511 - Vote on the UN Mines & Booby Traps Convention - Notifications On
+	country_event = {
+	
+		id = 12511
+		
+		trigger = {
+			has_country_flag = flag_UN_mines_and_booby_traps_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_mines_and_booby_traps_convention_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME12510"
+		desc = "EVTDESC12510"
+		picture = "1973_General_Assembly_voting"
+		
+		immediate = {
+			clr_country_flag = flag_UN_mines_and_booby_traps_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_mines_and_booby_traps_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA12510"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_mines_and_booby_traps_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.5
+					human_rights = universal_rights
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						rule_of_law = substantively_defined
+						rule_of_law = well_defined
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						freedom_of_the_press = limited_restrictions
+						freedom_of_the_press = free_press
+					}
+				}
+				modifier = {
+					factor = 1.1
+					civil_liberties = fully_granted_liberties
+				}
+				modifier = {
+					factor = 1.25
+					military_policy = basic_combat_training_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						military_policy = half_y_service_pol
+						military_policy = one_y_service_pol
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						domestic_policy = health_focus_pol
+						domestic_policy = agricultural_focus_pol
+					}
+				}
+				modifier = {
+					factor = 2
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.5
+					foreign_policy = detente_pol
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						armaments_policy = blue_waters_focus_pol
+						armaments_policy = fighter_focus_pol
+						armaments_policy = astronautical_focus_pol
+					}
+				}
+				modifier = {
+					factor = 2
+					national_identity = humanitarian_focus
+				}
+				modifier = {
+					factor = 1.5
+					explosives = 2
+					NOT = { explosives = 3 }
+				}
+				modifier = {
+					factor = 2
+					NOT = { explosives = 2 }
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_mines_and_booby_traps_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB12510"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC12510"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 2
+					human_rights = not_recognized
+				}
+				modifier = {
+					factor = 1.25
+					human_rights = cultural_relativism
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						rule_of_law = thinly_defined
+						rule_of_law = narrowly_defined
+					}
+				}
+				modifier = {
+					factor = 1.1
+					OR = {
+						civil_liberties = suspended_indefinitely
+						civil_liberties = martial_law
+						civil_liberties = emergency_law
+					}
+				}
+				modifier = {
+					factor = 1.25
+					military_policy = sustained_military_service_pol
+				}
+				modifier = {
+					factor = 1.5
+					domestic_policy = defence_focus_pol
+				}
+				modifier = {
+					factor = 2
+					foreign_policy = hardline_pol
+				}
+				modifier = {
+					factor = 1.25
+					foreign_policy = containment_pol
+				}
+				modifier = {
+					factor = 2
+					armaments_policy = assymetric_warfare_focus_pol
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						armaments_policy = bomber_focus_pol
+						armaments_policy = nuclear_armaments_focus_pol
+					}
+				}
+				modifier = {
+					factor = 1.5
+					national_attitude = imperialism
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						national_attitude = colonialism
+						national_attitude = hegemony
+					}
+				}
+				modifier = {
+					factor = 1.5
+					explosives = 3
+					NOT = { explosives = 4 }
+				}
+				modifier = {
+					factor = 2
+					explosives = 4
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_mines_and_booby_traps_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#12512 - We have ratified the UN Mines & Booby Traps Convention - Triggered
+	country_event = {
+	
+		id = 12512
+
+		is_triggered_only = yes
+
+		title = "EVTNAME12512"
+		desc = "EVTDESC12512"
+		picture = "1980_UN_CCW_convention"
+
+		option = {
+			name = "EVTOPTA12512"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_mines_and_booby_traps_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_mines_and_booby_traps_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_mines_and_booby_traps_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#12513 - We have ratified the UN Mines & Booby Traps Convention (Non-triggered)
+	country_event = {
+	
+		id = 12513
+
+		trigger = {
+			ai = yes
+			has_global_flag = gflag_UN_mines_and_booby_traps_convention_passes
+			NOT = { has_country_modifier = mod_UN_mines_and_booby_traps_convention_ratified }
+			NOT = { USA = { has_country_modifier = mod_UN_mines_and_booby_traps_convention_ratifier_delay } }
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			NOT = { human_rights = not_recognized }
+			NOT = { 
+				AND = {
+					armaments_policy = assymetric_warfare_focus_pol
+					OR = {
+						foreign_policy = hardline_pol
+						foreign_policy = containment_pol
+					}
+				}
+			}
+			NOT = {
+				AND = {
+					foreign_policy = hardline_pol
+					human_rights = cultural_relativism
+					OR = {
+						armaments_policy = bomber_focus_pol
+						armaments_policy = nuclear_armaments_focus_pol
+					}
+				}
+			}
+			#Add more
+		}
+		
+		mean_time_to_happen = {
+			months = 40
+			modifier = {
+				factor = 0.6
+				is_org_leader = XUN
+			}
+			modifier = {
+				factor = 0.6
+				human_rights = universal_rights
+			}
+			modifier = {
+				factor = 0.7
+				OR = {
+					rule_of_law = substantively_defined
+					rule_of_law = well_defined
+				}
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					freedom_of_the_press = limited_restrictions
+					freedom_of_the_press = free_press
+				}
+			}
+			modifier = {
+				factor = 0.8
+				civil_liberties = fully_granted_liberties
+			}
+			modifier = {
+				factor = 0.7
+				military_policy = basic_combat_training_pol
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					military_policy = half_y_service_pol
+					military_policy = one_y_service_pol
+				}
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					domestic_policy = health_focus_pol
+					domestic_policy = agricultural_focus_pol
+				}
+			}
+			modifier = {
+				factor = 0.4
+				foreign_policy = dove_policy_pol
+			}
+			modifier = {
+				factor = 0.6
+				foreign_policy = detente_pol
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					armaments_policy = blue_waters_focus_pol
+					armaments_policy = fighter_focus_pol
+					armaments_policy = astronautical_focus_pol
+				}
+			}
+			modifier = {
+				factor = 0.4
+				national_identity = humanitarian_focus
+			}
+			modifier = {
+				factor = 0.6
+				explosives = 2
+				NOT = { explosives = 3 }
+			}
+			modifier = {
+				factor = 0.4
+				NOT = { explosives = 2 }
+			}
+			modifier = {
+				factor = 1.5
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.1
+				national_attitude = non-interventionism
+			}
+			modifier = {
+				factor = 3
+				human_rights = not_recognized
+			}
+			modifier = {
+				factor = 1.5
+				human_rights = cultural_relativism
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					rule_of_law = thinly_defined
+					rule_of_law = narrowly_defined
+				}
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					civil_liberties = suspended_indefinitely
+					civil_liberties = martial_law
+					civil_liberties = emergency_law
+				}
+			}
+			modifier = {
+				factor = 1.5
+				military_policy = sustained_military_service_pol
+			}
+			modifier = {
+				factor = 2
+				domestic_policy = defence_focus_pol
+			}
+			modifier = {
+				factor = 3
+				foreign_policy = hardline_pol
+			}
+			modifier = {
+				factor = 1.5
+				foreign_policy = containment_pol
+			}
+			modifier = {
+				factor = 3
+				armaments_policy = assymetric_warfare_focus_pol
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					armaments_policy = bomber_focus_pol
+					armaments_policy = nuclear_armaments_focus_pol
+				}
+			}
+			modifier = {
+				factor = 2
+				national_attitude = imperialism
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					national_attitude = colonialism
+					national_attitude = hegemony
+				}
+			}
+			modifier = {
+				factor = 2
+				explosives = 3
+				NOT = { explosives = 4 }
+			}
+			modifier = {
+				factor = 3
+				explosives = 4
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME12512"
+		desc = "EVTDESC12512"
+		picture = "1980_UN_CCW_convention"
+
+		option = {
+			name = "EVTOPTA12512"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_mines_and_booby_traps_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_mines_and_booby_traps_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_mines_and_booby_traps_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#12514 - We have revoked the UN Mines & Booby Traps Convention
+	country_event = {
+	
+		id = 12514
+
+		trigger = {
+			ai = yes
+			has_country_modifier = mod_UN_mines_and_booby_traps_convention_ratified
+			NOT = { has_country_modifier = mod_UN_mines_and_booby_traps_convention_ratified_recently }
+			NOT = { has_country_flag = flag_UN_mines_and_booby_traps_convention_supporter }
+			OR = {
+				human_rights = not_recognized
+				AND = {
+					armaments_policy = assymetric_warfare_focus_pol
+					OR = {
+						foreign_policy = hardline_pol
+						foreign_policy = containment_pol
+					}
+				}
+				AND = {
+					foreign_policy = hardline_pol
+					human_rights = cultural_relativism
+					OR = {
+						armaments_policy = bomber_focus_pol
+						armaments_policy = nuclear_armaments_focus_pol
+					}
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			months = 9
+			modifier = {
+				factor = 0.5
+				has_country_flag = "UN_EMBARGO"
+			}
+			modifier = {
+				factor = 0.75
+				armaments_policy = assymetric_warfare_focus_pol
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME12514"
+		desc = "EVTDESC12514"
+		picture = "1980_UN_CCW_convention"
+
+		option = {
+			name = "EVTOPTA12514"					#Good riddance
+			prestige_change = -8
+			remove_country_modifier = mod_UN_mines_and_booby_traps_convention_ratified
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_mines_and_booby_traps_convention_revoked_recently
+					duration = 365
+				}
+			#}
+			
+			#XUN = { prestige_change = -3 }
+		}
+	}

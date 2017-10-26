@@ -1,0 +1,236 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#SAF;;;;;;;;;;;;;;x
+dec_SAF_border_war_title;South African Border War;;;;;;;;;;;;;x
+dec_SAF_border_war_desc;With the peace treaty for the Angolan War for Independence now officially signed, the left-wing MPLA party has seized control of Luanda and has formed a government for the people. UNITA and the military arm of the autocratic SWAPO party, PLAN, have risen up against the new government, stating that they have the only true right to rule. Given our close ties to UNITA – as well as our ideological similarities – it is our duty to join their cause and depose the illegitimate SWAPO party!;;;;;;;;;;;;;x
+#USSR;;;;;;;;;;;;;;x
+dec_SOV_angolan_issue_title;The Angolan Issue;;;;;;;;;;;;;x
+dec_SOV_angolan_issue_desc;With the Angolan Civil War raging, the South Africans have declared war on the left-wing MPLA, the current ruling Angolan government. It is now time for us to decide where our interests lie in this conflict.;;;;;;;;;;;;;x
+#DDR;;;;;;;;;;;;;;x
+dec_DDR_angolan_issue_title;The Angolan Issue;;;;;;;;;;;;;x
+dec_DDR_angolan_issue_desc;With the Angolan Civil War raging, the South Africans have declared war on the left-wing MPLA - the current ruling Angolan government. It is now time for us to decide where our interests lie in this conflict.;;;;;;;;;;;;;x
+#USA;;;;;;;;;;;;;;x
+dec_USA_angolan_issue_title;The Angolan Issue;;;;;;;;;;;;;x
+dec_USA_angolan_issue_desc;With the Angolan Civil War raging, the South Africans have declared war on the left-wing MPLA - the current ruling Angolan government. It is now time for us to decide where our interests lie in this conflict.;;;;;;;;;;;;;x
+#CHC;;;;;;;;;;;;;;x
+dec_CHC_angolan_issue_title;The Angolan Issue;;;;;;;;;;;;;x
+dec_CHC_angolan_issue_desc;With the Angolan Civil War raging, the South Africans have declared war on the left-wing MPLA - the current ruling Angolan government. It is now time for us to decide where our interests lie in this conflict.;;;;;;;;;;;;;x
+#Minors;;;;;;;;;;;;;;x
+dec_minors_angolan_issue_title;The Angolan Issue;;;;;;;;;;;;;x
+dec_minors_angolan_issue_desc;With the Angolan Civil War raging, the South Africans have declared war on the left-wing MPLA - the current ruling Angolan government. It is now time for us to decide where our interests lie in this conflict.;;;;;;;;;;;;;x
+dec_minors_angolan_issue_2_title;The Angolan Issue;;;;;;;;;;;;;x
+dec_minors_angolan_issue_2_desc;With the Angolan Civil War raging, the South Africans have declared war on the left-wing MPLA - the current ruling Angolan government. It is now time for us to decide where our interests lie in this conflict.;;;;;;;;;;;;;x
+#CUB;;;;;;;;;;;;;;x
+dec_CUB_angolan_issue_title;The Angolan Issue;;;;;;;;;;;;;x
+dec_CUB_angolan_issue_desc;With the Angolan Civil War raging, the South Africans have declared war on the left-wing MPLA - the current ruling Angolan government. It is now time for us to decide where our interests lie in this conflict.;;;;;;;;;;;;;x
+#MOZ;;;;;;;;;;;;;;x
+dec_MOZ_angolan_issue_title;The Angolan Issue;;;;;;;;;;;;;x
+dec_MOZ_angolan_issue_desc;With the Angolan Civil War raging, the South Africans have declared war on the left-wing MPLA - the current ruling Angolan government. It is now time for us to decide where our interests lie in this conflict.;;;;;;;;;;;;;x
+#ZMB;;;;;;;;;;;;;;x
+dec_ZMB_angolan_issue_title;The Angolan Issue;;;;;;;;;;;;;x
+dec_ZMB_angolan_issue_desc;With the Angolan Civil War raging, the South Africans have declared war on the left-wing MPLA - the current ruling Angolan government. It is now time for us to decide where our interests lie in this conflict.;;;;;;;;;;;;;x
+#NAM;;;;;;;;;;;;;;x
+dec_NAM_angolan_issue_title;The Angolan Issue;;;;;;;;;;;;;x
+dec_NAM_angolan_issue_desc;With the Angolan Civil War raging, the South Africans have declared war on the left-wing MPLA - the current ruling Angolan government. It is now time for us to decide where our interests lie in this conflict.;;;;;;;;;;;;;x
+#KON;;;;;;;;;;;;;;x
+dec_KON_angolan_issue_title;The Angolan Issue;;;;;;;;;;;;;x
+dec_KON_angolan_issue_desc;With the Angolan Civil War raging, the South Africans have declared war on the left-wing MPLA - the current ruling Angolan government. It is now time for us to decide where our interests lie in this conflict.;;;;;;;;;;;;;x
+#RHO;;;;;;;;;;;;;;x
+dec_RHO_angolan_issue_title;The Angolan Issue;;;;;;;;;;;;;x
+dec_RHO_angolan_issue_desc;With the Angolan Civil War raging, the South Africans have declared war on the left-wing MPLA - the current ruling Angolan government. It is now time for us to decide where our interests lie in this conflict.;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ; REMOVE HASH FOR ACTIVE EVENTS AND OPTIONS;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#POR;;;;;;;;;;;;;;x
+EVTNAME289010;Angolan Uprising;;;;;;;;;;;;;x
+EVTDESC289010;Laboring under endemic oppression, Angolan peasants who have been forced to work in cotton fields for the profit of European companies have burned their identification cards in an act of civil disobedience. Moreover, militants of the left-wing Movimento Popular de Libertação de Angola (MPLA) have staged an attack on a police station in our Angolan possession, killing seven officers. Our forces of order have cracked down on these illegitimate acts. However, our government fears that this signals the beginning of a time of troubles for our rule over Angola.;;;;;;;;;;;;;x
+EVTOPTA289010;Ungrateful Anarchists!;;;;;;;;;;;;;x
+EVTNAME289011;Angolan War for Independence;;;;;;;;;;;;;x
+EVTDESC289011;The unrest in Angola has erupted into open war. The Union of Peoples of Angola (UPA) has crossed into the country from its bases in Zaire, taking government posts, trade centers, and massacring Africans and whites alike. Our sparse occupation forces stood no chance and have been routed, leaving the territory in the hands of the rebels. Fearing the rebel advance, our citizens and colonial subjects have taken to the road, abandoning their property and fleeing their homes ahead of the rebel forces. Though currently on the defensive, we have the ability to deploy troops to reinforce the threatened areas and mount a counterattack posthaste. Such a move by us would signal the beginning of the Angolan War for Independence.;;;;;;;;;;;;;x
+EVTOPTA289011;Then war it is!;;;;;;;;;;;;;x
+EVTOPTB289011;The age of Empire is over.;;;;;;;;;;;;;x
+EVTNAME289012;End of Angolan War;;;;;;;;;;;;;x
+EVTDESC289012;The Angolan war has been bitterly fought and blood has flowed freely on all sides. However, despite the best efforts of our military and heroic resolve of our people, the despicable rebels have finally clawed away a majority of Angola’s territory from our control, murdering and pillaging as they went. As it stands, we are compelled to renounce our claims on our long-held possession of Angola. It is a bitter pill to swallow.;;;;;;;;;;;;;x
+EVTOPTA289012;It was not to be.;;;;;;;;;;;;;x
+#SAF;;;;;;;;;;;;;;x
+EVTNAME302000;International Court Ruling;;;;;;;;;;;;;x
+EVTDESC302000;Our territory of South-West Africa, won through legitimate force of arms from Imperial Germany for the cause of Freedom, whose ownership was subsequently recognized by the international community, and which rightfully belongs to us, is being pried from the body of our nation by the UN and their lackeys at the International Court of Justice. That court has ruled that our rightful claim is invalid and that we should renounce our possession of the territory. We can ignore the dictate of the UN – as is our right – or accept it and negotiate with whichever new regime takes over South-West Africa.;;;;;;;;;;;;;x
+EVTOPTA302000;South-West Africa is ours, won by conquest!;;;;;;;;;;;;;x
+EVTOPTB302000;We shall accept this ruling.;;;;;;;;;;;;;x
+EVTNAME302001;Namibian War for Independence;;;;;;;;;;;;;x
+EVTDESC302001;The ungrateful opponents of our rule in South-West Africa have accreted enough strength to begin mounting worryingly-sophisticated attacks from their bush hideouts. We have noticed an uptick in attacks along our northern border, but our helicopter-supported police forces have proven to be outgunned by the insurgents who have some sponsor trafficking weapons to them. We need to consider sending in our armed forces to put down this unlawful insurrection once and for all.;;;;;;;;;;;;;x
+EVTOPTA302001;There shall be no quarter.;;;;;;;;;;;;;x
+EVTOPTB302001;We have more pressing concerns.;;;;;;;;;;;;;x
+EVTNAME302010;USA sends men!;;;;;;;;;;;;;x
+EVTDESC302010;Great news – The United States has dispatched troops to aid our anti-insurgency operation in North-West Africa. They obviously understand the importance of maintaining law and order in the region.;;;;;;;;;;;;;x
+EVTOPTA302010;Great!;;;;;;;;;;;;;x
+EVTNAME302011;Rhodesia sends men!;;;;;;;;;;;;;x
+EVTDESC302011;Great news – Rhodesia has dispatched troops to aid our anti-insurgency operation in North-West Africa. They obviously understand the importance of maintaining law and order in the region.;;;;;;;;;;;;;x
+EVTOPTA302011;Great!;;;;;;;;;;;;;x
+EVTNAME302012;Mozambique sends men!;;;;;;;;;;;;;x
+EVTDESC302012;Great news – Mozambique has dispatched troops to aid our anti-insurgency operation in North-West Africa. They obviously understand the importance of maintaining law and order in the region.;;;;;;;;;;;;;x
+EVTOPTA302012;Great!;;;;;;;;;;;;;x
+EVTNAME302013;Zaire sends men!;;;;;;;;;;;;;x
+EVTDESC302013;Great news – Zaire has dispatched troops to aid our anti-insurgency operation in North-West Africa. They obviously understand the importance of maintaining law and order on their borders.;;;;;;;;;;;;;x
+EVTOPTA302013;Great!;;;;;;;;;;;;;x
+EVTNAME302014;USA sends aid!;;;;;;;;;;;;;x
+EVTDESC302014;Good news – The United States has shipped material aid to assist our anti-insurgency operation in North-West Africa. Their contribution to our efforts is much appreciated.;;;;;;;;;;;;;x
+EVTOPTA302014;Acceptable...;;;;;;;;;;;;;x
+EVTNAME302015;Rhodesia sends aid!;;;;;;;;;;;;;x
+EVTDESC302015;Good news – Rhodesia has shipped material aid to assist our anti-insurgency operation in North-West Africa. Their contribution to our efforts is much appreciated.;;;;;;;;;;;;;x
+EVTOPTA302015;Acceptable...;;;;;;;;;;;;;x
+EVTNAME302016;Mozambique sends aid!;;;;;;;;;;;;;x
+EVTDESC302016;Good news – Mozambique has shipped material aid to assist our anti-insurgency operation in North-West Africa. Their contribution to our efforts is much appreciated.;;;;;;;;;;;;;x
+EVTOPTA302016;Acceptable...;;;;;;;;;;;;;x
+EVTNAME302017;Zaire sends aid!;;;;;;;;;;;;;x
+EVTDESC302017;Good news – Zaire has shipped material aid to assist our anti-insurgency operation in North-West Africa. Their contribution to our efforts is much appreciated.;;;;;;;;;;;;;x
+EVTOPTA302017;Acceptable...;;;;;;;;;;;;;x
+EVTNAME302018;Rhodesia joins the war!;;;;;;;;;;;;;x
+EVTDESC302018;Excellent news – Rhodesia has mobilized its armed forces to assist our anti-insurgency operation in North-West Africa. They obviously understand the importance of maintaining law and order in the region.;;;;;;;;;;;;;x
+EVTOPTA302018;Fantastic!;;;;;;;;;;;;;x
+EVTNAME302019;Mozambique joins the war!;;;;;;;;;;;;;x
+EVTDESC302019;Excellent news – Mozambique has mobilized its armed forces to assist our anti-insurgency operation in North-West Africa. They obviously understand the importance of maintaining law and order in the region.;;;;;;;;;;;;;x
+EVTOPTA302019;Fantastic!;;;;;;;;;;;;;x
+EVTNAME302020;Zaire joins the war!;;;;;;;;;;;;;x
+EVTDESC302020;Excellent news – Zaire has mobilized its armed forces to assist our anti-insurgency operation in North-West Africa. They obviously understand the importance of maintaining law and order on their borders.;;;;;;;;;;;;;x
+EVTOPTA302020;Fantastic!;;;;;;;;;;;;;x
+EVTNAME302021;Communist China sends aid!;;;;;;;;;;;;;x
+EVTDESC302021;Good news – Communist China has shipped material aid to assist our anti-insurgency operation in North-West Africa. Their contribution to our efforts is much appreciated.;;;;;;;;;;;;;x
+EVTOPTA302021;Acceptable...;;;;;;;;;;;;;x
+#ANG;;;;;;;;;;;;;;x
+EVTNAME113000;Civil War!;;;;;;;;;;;;;x
+EVTDESC113000;Finally, after shedding rivers of blood and enduring endless hardship, the people of Angola have cast off the shackles of imperialism and driven the occupiers out of their country. However, the Angolan people’s struggle with rightist reactionaries is not yet over. The UNITA are claiming power for themselves and are enforcing their dictate with the gun. We shall not stand for it! We shall drive the forces of colonialism out of Angola once and for all! Death to the enemies of free Angola, death to UNITA!;;;;;;;;;;;;;x
+EVTOPTA113000;Rightist Scum!;;;;;;;;;;;;;x
+EVTNAME113014;Cuba joins the war!;;;;;;;;;;;;;x
+EVTDESC113014;Excellent news! Our Cuban comrades have joined the war against the UNITA rightists. We shall stand shoulder to shoulder with our socialist brothers!;;;;;;;;;;;;;x
+EVTOPTA113014;Fantastic!;;;;;;;;;;;;;x
+EVTNAME113015;Momzambique joins the war!;;;;;;;;;;;;;x
+EVTDESC113015;Excellent news! Our Mozambique comrades have joined the war against the UNITA rightists. We shall stand shoulder to shoulder with our socialist brothers!;;;;;;;;;;;;;x
+EVTOPTA113015;Fantastic!;;;;;;;;;;;;;x
+EVTNAME113016;Zambia joins the war!;;;;;;;;;;;;;x
+EVTDESC113016;Excellent news! Our Mozambique comrades have joined the war against the UNITA rightists. We shall stand shoulder to shoulder with our socialist brothers!;;;;;;;;;;;;;x
+EVTOPTA113016;Fantastic!;;;;;;;;;;;;;x
+EVTNAME113017;Namibia joins the war!;;;;;;;;;;;;;x
+EVTDESC113017;Excellent news! Our Namibian comrades have joined the war against the UNITA rightists. We shall stand shoulder to shoulder with our socialist brothers!;;;;;;;;;;;;;x
+EVTOPTA113017;Fantastic!;;;;;;;;;;;;;x
+EVTNAME113001;USSR sends men!;;;;;;;;;;;;;x
+EVTDESC113001;Great news! Our Soviet comrades have dispatched troops to aid our war against the UNITA rightists. We shall stand shoulder to shoulder with our socialist brothers!;;;;;;;;;;;;;x
+EVTOPTA113001;Great!;;;;;;;;;;;;;x
+EVTNAME113006;DDR sends men!;;;;;;;;;;;;;x
+EVTDESC113006;Great news! Our German comrades have dispatched troops to aid our war against the UNITA rightists. We shall stand shoulder to shoulder with our socialist brothers!;;;;;;;;;;;;;x
+EVTOPTA113006;Great!;;;;;;;;;;;;;x
+EVTNAME113002;Cuba sends men!;;;;;;;;;;;;;x
+EVTDESC113002;Great news! Our Cuban comrades have dispatched troops to aid our war against the UNITA rightists. We shall stand shoulder to shoulder with our socialist brothers!;;;;;;;;;;;;;x
+EVTOPTA113002;Great!;;;;;;;;;;;;;x
+EVTNAME113003;Momzambique sends men!;;;;;;;;;;;;;x
+EVTDESC113003;Great news! Our Mozambique comrades have dispatched troops to aid our war against the UNITA rightists. We shall stand shoulder to shoulder with our socialist brothers!;;;;;;;;;;;;;x
+EVTOPTA113003;Great!;;;;;;;;;;;;;x
+EVTNAME113004;Zambia sends men!;;;;;;;;;;;;;x
+EVTDESC113004;Great news! Our Zambian comrades have dispatched troops to aid our war against the UNITA rightists. We shall stand shoulder to shoulder with our socialist brothers!;;;;;;;;;;;;;x
+EVTOPTA113004;Great!;;;;;;;;;;;;;x
+EVTNAME113005;Namibia sends men!;;;;;;;;;;;;;x
+EVTDESC113005;Great news! Our Zambian comrades have dispatched troops to aid our war against the UNITA rightists. We shall stand shoulder to shoulder with our socialist brothers!;;;;;;;;;;;;;x
+EVTOPTA113005;Great!;;;;;;;;;;;;;x
+EVTNAME113007;USSR sends aid!;;;;;;;;;;;;;x
+EVTDESC113007;Good news! Our Soviet comrades have shipped material aid for our war against the UNITA rightists. Socialist solidarity truly knows no limits.;;;;;;;;;;;;;x
+EVTOPTA113007;Acceptable...;;;;;;;;;;;;;x
+EVTNAME113008;DDR sends aid!;;;;;;;;;;;;;x
+EVTDESC113008;Good news! Our German comrades have shipped material aid for our war against the UNITA rightists. Socialist solidarity truly knows no limits.;;;;;;;;;;;;;x
+EVTOPTA113008;Acceptable...;;;;;;;;;;;;;x
+EVTNAME113009;Communist China sends aid!;;;;;;;;;;;;;x
+EVTDESC113009;Good news! Our Chinese comrades have shipped material aid for our war against the UNITA rightists. Socialist solidarity truly knows no limits.;;;;;;;;;;;;;x
+EVTOPTA113009;Acceptable...;;;;;;;;;;;;;x
+EVTNAME113010;Cuba sends aid!;;;;;;;;;;;;;x
+EVTDESC113010;Good news! Our Cuban comrades have shipped material aid for our war against the UNITA rightists. Socialist solidarity truly knows no limits.;;;;;;;;;;;;;x
+EVTOPTA113010;Acceptable...;;;;;;;;;;;;;x
+EVTNAME113011;Momzambique sends aid!;;;;;;;;;;;;;x
+EVTDESC113011;Good news! Our Mozambique comrades have shipped material aid for our war against the UNITA rightists. Socialist solidarity truly knows no limits.;;;;;;;;;;;;;x
+EVTOPTA113011;Acceptable...;;;;;;;;;;;;;x
+EVTNAME113012;Zambia sends aid!;;;;;;;;;;;;;x
+EVTDESC113012;Good news! Our Zambian comrades have shipped material aid for our war against the UNITA rightists. Socialist solidarity truly knows no limits.;;;;;;;;;;;;;x
+EVTOPTA113012;Acceptable...;;;;;;;;;;;;;x
+EVTNAME113013;Namibia sends aid!;;;;;;;;;;;;;x
+EVTDESC113013;Good news! Our Namibian comrades have shipped material aid for our war against the UNITA rightists. Socialist solidarity truly knows no limits.;;;;;;;;;;;;;x
+EVTOPTA113013;Acceptable...;;;;;;;;;;;;;x
+#USSR - Supports ANG;;;;;;;;;;;;;;x
+EVTNAME326020;The Angolan Issue;;;;;;;;;;;;;x
+EVTDESC326020;The situation in Angola post-Portuguese withdrawal had become grim. Civil War has erupted between the two factions of UNITA and the MPLA. Moreover, we have good intelligence that UNITA is a capitalist front and is receiving aid from the United States, South Africa, and probably others. UNITA’s takes a rightist line and if they are allowed to seize power in Angola, it will be a defeat for socialism worldwide. We have some options for how to proceed: We could send a force of socialist volunteers to aid our Angolan comrades on the battlefield, or to buffer ourselves from the conflict but still help socialism succeed in Africa, we could send material aid and supplies. The time is ripe to decide.;;;;;;;;;;;;;x
+EVTOPTA326020;Send an Expeditionary Force.;;;;;;;;;;;;;x
+EVTOPTB326020;Send Military Aid.;;;;;;;;;;;;;x
+EVTOPTC326020;Do not get involved.;;;;;;;;;;;;;x
+#DDR - Supports ANG;;;;;;;;;;;;;;x
+EVTNAME170000;The Angolan Issue;;;;;;;;;;;;;x
+EVTDESC170000;The situation in Angola post-Portuguese withdrawal had become grim. Civil War has erupted between the two factions of UNITA and the MPLA. Moreover, we have good intelligence that UNITA is a capitalist front and is receiving aid from the United States, South Africa, and probably others. UNITA’s takes a rightist line and if they are allowed to seize power in Angola, it will be a defeat for socialism worldwide. We have some options for how to proceed: We could send a force of socialist volunteers to aid our Angolan comrades on the battlefield, or to buffer ourselves from the conflict but still help socialism succeed in Africa, we could send material aid and supplies. The time is ripe to decide.;;;;;;;;;;;;;x
+EVTOPTA170000;Send an Expeditionary Force.;;;;;;;;;;;;;x
+EVTOPTB170000;Send Military Aid.;;;;;;;;;;;;;x
+EVTOPTC170000;Do not get involved.;;;;;;;;;;;;;x
+#USA - Supports SAF;;;;;;;;;;;;;;x
+EVTNAME354020;The Angolan Issue;;;;;;;;;;;;;x
+EVTDESC354020;With the signing of the Alvor agreement, the mess that was Angola has taken one further step down the road to Communism. MPLA, the Marxist-Leninist guerrilla group has formed a government in Luanda, sparking strife, both internal and external. The MPLA are now at war with South Africa, who are backing the UNITA party for the presidential palace. Whilst strictly speaking, UNITA are about as Fascist as it goes, better a dictator we can control than one that Moscow can.;;;;;;;;;;;;;x
+EVTOPTA354020;Send an Expeditionary Force.;;;;;;;;;;;;;x
+EVTOPTB354020;Send Military Aid.;;;;;;;;;;;;;x
+EVTOPTC354020;Do not get involved.;;;;;;;;;;;;;x
+#CHC;;;;;;;;;;;;;;x
+EVTNAME151040;The Angolan Issue;;;;;;;;;;;;;x
+EVTDESC151040;As both Civil and International War rage on in Angola, our Soviet brothers are calling on us to send aid to the ruling MPLA party. Technically, they share a similar ideology to us, however, it may be more economically viable in the long run to back the Nationalist Socialist UNITA Party...;;;;;;;;;;;;;x
+EVTOPTA151040;Support the Angolans!;;;;;;;;;;;;;x
+EVTOPTB151040;Support the South Africans!;;;;;;;;;;;;;x
+EVTOPTC151040;Do not get involved.;;;;;;;;;;;;;x
+#CUB - Supports ANG;;;;;;;;;;;;;;x
+EVTNAME164000;The Angolan Issue;;;;;;;;;;;;;x
+EVTDESC164000;The situation in Angola post-Portuguese withdrawal had become grim. Civil War has erupted between the two factions of UNITA and the MPLA. Moreover, we have good intelligence that UNITA is a capitalist front and is receiving aid from the United States, South Africa, and probably others. UNITA’s takes a rightist line and if they are allowed to seize power in Angola, it will be a defeat for socialism worldwide. We have some options for how to proceed: We could declare war directly against the rightist bands, but this will undoubtedly infuriate the capitalist powers. Or, we could send a force of socialist volunteers to aid our Angolan comrades on the battlefield. To further buffer ourselves from the conflict but still help socialism succeed in Africa, we could send material aid and supplies. The time is ripe to decide.;;;;;;;;;;;;;x
+EVTOPTA164000;To War!;;;;;;;;;;;;;x
+EVTOPTB164000;Send an Expeditionary Force.;;;;;;;;;;;;;x
+EVTOPTC164000;Send Military Aid.;;;;;;;;;;;;;x
+EVTOPTD164000;Do not get involved.;;;;;;;;;;;;;x
+#MOZ (Left Wing Government) - Supports ANG;;;;;;;;;;;;;;x
+#EVTNAMEXXXXXX;The Angolan Issue;;;;;;;;;;;;;x
+#EVTDESCXXXXXX;The situation in Angola post-Portuguese withdrawal had become grim. Civil War has erupted between the two factions of UNITA and the MPLA. Moreover, we have good intelligence that UNITA is a capitalist front and is receiving aid from the United States, South Africa, and probably others. UNITA’s takes a rightist line and if they are allowed to seize power in Angola, it will be a defeat for socialism worldwide. We have some options for how to proceed: We could declare war directly against the rightist bands, but this will undoubtedly infuriate the capitalist powers. Or, we could send a force of socialist volunteers to aid our Angolan comrades on the battlefield. To further buffer ourselves from the conflict but still help socialism succeed in Africa, we could send material aid and supplies. The time is ripe to decide.;;;;;;;;;;;;;x
+#EVTOPTAXXXXXX;To War!;;;;;;;;;;;;;x
+#EVTOPTBXXXXXX;Send an Expeditionary Force.;;;;;;;;;;;;;x
+#EVTOPTCXXXXXX;Send Military Aid.;;;;;;;;;;;;;x
+#EVTOPTDXXXXXX;Do not get involved.;;;;;;;;;;;;;x
+#MOZ (Right Wing Government) - Supports SAF;;;;;;;;;;;;;;x
+EVTNAMEXXXXXX;The Angolan Issue;;;;;;;;;;;;;x
+EVTDESCXXXXXX;The situation in Angola post-Portuguese withdrawal had become grim. Civil War has erupted between the two factions of UNITA and the MPLA. Moreover,MPLA, the current ruling Angolan Government , is a heavily leftist regime backed by the USSR,DDR, and probably others. UNITA’s takes a rightist line and if they are allowed to seize power in Angola, it will be a defeat for socialism worldwide! We have some options for how to proceed: We could declare war directly against the leftist bands, but this will undoubtedly infuriate the socialist powers. Or, we could send a force of socialist volunteers to aid our Angolan comrades on the battlefield. To further buffer ourselves from the conflict but still help socialism fall in Africa, we could send material aid and supplies. The time is ripe to decide.;;;;;;;;;;;;;x
+EVTOPTAXXXXXX;To War!;;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,,,,,;;;;;;;;;;;;;;;,,
+EVTOPTBXXXXXX;Send an Expeditionary Force.;;;;;;;;;;;;;x
+EVTOPTCXXXXXX;Send Military Aid.;;;;;;;;;;;;;x
+EVTOPTDXXXXXX;Do not get involved.;;;;;;;;;;;;;x
+#ZMB - Supports ANG;;;;;;;;;;;;;;x
+EVTNAMEXXXXXX;The Angolan Issue;;;;;;;;;;;;;x
+EVTDESCXXXXXX;The situation in Angola post-Portuguese withdrawal had become grim. Civil War has erupted between the two factions of UNITA and the MPLA. Moreover, we have good intelligence that UNITA is a capitalist front and is receiving aid from the United States, South Africa, and probably others. UNITA’s takes a rightist line and if they are allowed to seize power in Angola, it will be a defeat for socialism worldwide. We have some options for how to proceed: We could declare war directly against the rightist bands, but this will undoubtedly infuriate the capitalist powers. Or, we could send a force of socialist volunteers to aid our Angolan comrades on the battlefield. To further buffer ourselves from the conflict but still help socialism succeed in Africa, we could send material aid and supplies. The time is ripe to decide.;;;;;;;;;;;;;x
+EVTOPTAXXXXXX;To War!;;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,,,,,;;;;;;;;;;;;;;;,,
+EVTOPTBXXXXXX;Send an Expeditionary Force.;;;;;;;;;;;;;x
+EVTOPTCXXXXXX;Send Military Aid.;;;;;;;;;;;;;x
+EVTOPTDXXXXXX;Do not get involved.;;;;;;;;;;;;;x
+#NAM - Supports ANG;;;;;;;;;;;;;;x
+EVTNAMEXXXXXX;The Angolan Issue;;;;;;;;;;;;;x
+EVTDESCXXXXXX;The situation in Angola post-Portuguese withdrawal had become grim. Civil War has erupted between the two factions of UNITA and the MPLA. Moreover, we have good intelligence that UNITA is a capitalist front and is receiving aid from the United States, South Africa, and probably others. UNITA’s takes a rightist line and if they are allowed to seize power in Angola, it will be a defeat for socialism worldwide. We have some options for how to proceed: We could declare war directly against the rightist bands, but this will undoubtedly infuriate the capitalist powers. Or, we could send a force of socialist volunteers to aid our Angolan comrades on the battlefield. To further buffer ourselves from the conflict but still help socialism succeed in Africa, we could send material aid and supplies. The time is ripe to decide.;;;;;;;;;;;;;x
+EVTOPTAXXXXXX;To War!;;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,,,,,;;;;;;;;;;;;;;;,,
+EVTOPTBXXXXXX;Send an Expeditionary Force.;;;;;;;;;;;;;x
+EVTOPTCXXXXXX;Send Military Aid.;;;;;;;;;;;;;x
+EVTOPTDXXXXXX;Do not get involved.;;;;;;;;;;;;;x
+#KON - Supports SAF;;;;;;;;;;;;;;x
+EVTNAME232000;The Angolan Issue;;;;;;;;;;;;;x
+EVTDESC232000;The situation in Angola post-Portuguese withdrawal had become grim. Civil War has erupted between the two factions of UNITA and the MPLA. Moreover,MPLA, the current ruling Angolan Government , is a heavily leftist regime backed by the USSR,DDR, and probably others. UNITA’s takes a rightist line and if they are allowed to seize power in Angola, it will be a defeat for socialism worldwide! We have some options for how to proceed: We could declare war directly against the leftist bands, but this will undoubtedly infuriate the socialist powers. Or, we could send a force of socialist volunteers to aid our Angolan comrades on the battlefield. To further buffer ourselves from the conflict but still help socialism fall in Africa, we could send material aid and supplies. The time is ripe to decide.;;;;;;;;;;;;;x
+EVTOPTA232000;To War!;;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,,,,,;;;;;;;;;;;;;;;,,
+EVTOPTB232000;Send an Expeditionary Force.;;;;;;;;;;;;;x
+EVTOPTC232000;Send Military Aid.;;;;;;;;;;;;;x
+EVTOPTD232000;Do not get involved.;;;;;;;;;;;;;x
+#RHO - Supports SAF;;;;;;;;;;;;;;x
+EVTNAMEXXXXXX;The Angolan Issue;;;;;;;;;;;;;x
+EVTDESCXXXXXX;The situation in Angola post-Portuguese withdrawal had become grim. Civil War has erupted between the two factions of UNITA and the MPLA. Moreover,MPLA, the current ruling Angolan Government , is a heavily leftist regime backed by the USSR,DDR, and probably others. UNITA’s takes a rightist line and if they are allowed to seize power in Angola, it will be a defeat for socialism worldwide! We have some options for how to proceed: We could declare war directly against the leftist bands, but this will undoubtedly infuriate the socialist powers. Or, we could send a force of socialist volunteers to aid our Angolan comrades on the battlefield. To further buffer ourselves from the conflict but still help socialism fall in Africa, we could send material aid and supplies. The time is ripe to decide.;;;;;;;;;;;;;x
+EVTOPTAXXXXXX;To War!;;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,,,,,;;;;;;;;;;;;;;;,,
+EVTOPTBXXXXXX;Send an Expeditionary Force.;;;;;;;;;;;;;x
+EVTOPTCXXXXXX;Send Military Aid.;;;;;;;;;;;;;x
+EVTOPTDXXXXXX;Do not get involved.;;;;;;;;;;;;;x
+#International events;;;;;;;;;;;;;;x
+#EVTNAMEXXXXXX;Event Name goes here;;;;;;;;;;;;;x
+#EVTDESCXXXXXX;Event description goes here.;;;;;;;;;;;;;x
+#EVTOPTAXXXXXX;Event option A goes here.;;;;;;;;;;;;;x
+#EVTOPTBXXXXXX;Event option B goes here.;;;;;;;;;;;;;x
+#EVTOPTCXXXXXX;Event Option C goes here;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

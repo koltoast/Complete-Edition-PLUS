@@ -1,0 +1,460 @@
+
+#################################################################
+##################  Principios de Crisis  #####################
+#################################################################
+
+### CONTROL DE ECONOMIA - CRISIS ALEATORIAS ###
+country_event = {
+	id = 670003
+	trigger = {
+			ai = yes
+			has_global_flag = CONTROLECONTIEX
+		}
+
+	mean_time_to_happen = { months = -1 }
+	option = {
+		random_country = {
+				random_list={
+					20 = { 
+						country_event = 700113
+					}
+					20 = { 
+						country_event = 700114
+					}
+					20 = { 
+						country_event = 700115
+					}
+					20 = { 
+						country_event = 700116
+					}
+					20 = { 
+						country_event = 700117
+					}
+				}
+			}				
+		clr_global_flag = CONTROLECONTIEX			   
+		}
+
+	}
+
+##### INFORMACION ANTICRISIS 1 ####
+country_event = {
+	id = 700113
+
+	title = "Tribunal Supremo"
+	desc = "Se esta produciendo signos importantes de regeneracion dentro de la Justicia."
+	picture = "CRISIS-1"
+
+	is_triggered_only = yes
+
+	option = {
+		random_list={
+			10 = { national_unity = 1 
+			random_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}
+			random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			}
+			
+		}
+			10 = { national_unity = 2 
+			random_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}
+			random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			}
+			
+		}
+			10 = { national_unity = 3
+               random_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}
+			random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			}
+		}
+			10 = { national_unity = 5  
+            random_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}
+			random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			}
+		}
+			10 = { national_unity = 7 
+			    random_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}
+			   random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			}
+			
+		}
+			10 = { national_unity = 11 
+			    random_owned = { 
+				limit = {
+					controlled_by = REB
+					owned_by = THIS
+				}
+				change_controller = THIS
+			}
+			   random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			}
+		}
+			10 = { popularity = 13 }
+			10 = { popularity = 17 }
+			10 = { popularity = 19 }
+			10 = { popularity = 23 }
+		}
+		ai_chance = { factor = 100 }
+		name = "OK"
+	}
+}
+
+##### INFORMACION ANTICRISIS 2 ####
+country_event = {
+	id = 700114
+
+	title = "Integridad"
+	desc = "Se esta produciendo signos importantes de regeneracion dentro de la del partido político en el poder"
+	picture = "CRISIS-2"
+
+	is_triggered_only = yes
+
+	option = {
+		random_list={
+			10 = { popularity = 1 }
+			10 = { popularity = 2 }
+			10 = { popularity = 3 }
+			10 = { popularity = 5 }
+			10 = { popularity = 7 }
+			10 = { popularity = 11 }
+			10 = { popularity = 13 }
+			10 = { popularity = 17 }
+			10 = { popularity = 19 }
+			10 = { popularity = 23 }
+		}
+		ai_chance = { factor = 100 }
+		name = "OK"
+	}
+}
+
+##### INFORMACION ANTICRISIS 3 ####
+country_event = {
+	id = 700115
+
+	title = "Macroeconomia"
+	desc = "la bolsa y la economia estan pasando un tendencia evidente de recuperacion."
+	picture = "CRISIS-3"
+
+	is_triggered_only = yes
+
+	option = {
+		random_list={
+			10 = { money = 10000 }
+			10 = { money = 20000 }
+			10 = { money = 30000 }
+			10 = { money = 50000 }
+			10 = { money = 70000 }
+			10 = { money = 110000 }
+			10 = { money = 130000 }
+			10 = { money = 170000 }
+			10 = { money = 190000 }
+			10 = { money = 230000 }
+		}
+		ai_chance = { factor = 100 }
+		name = "OK"
+	}
+}
+
+##### INFORMACION ANTICRISIS 4 ####
+country_event = {
+	id = 700116
+
+	title = "Turismo"
+	desc = "El turismo y el flujo interno de poblacion de otros paises desarrollado esta generando una considerable inyeccion de capital."
+	picture = "CRISIS-4"
+
+	is_triggered_only = yes
+
+	option = {
+		random_list={
+			10 = { supplies = 1000 }
+			10 = { supplies = 2000 }
+			10 = { supplies = 3000 }
+			10 = { supplies = 5000 }
+			10 = { supplies = 7000 }
+			10 = { supplies = 11000 }
+			10 = { supplies = 13000 }
+			10 = { supplies = 17000 }
+			10 = { supplies = 19000 }
+			10 = { supplies = 23000 }
+		}
+		ramdom_owned = { 
+			limit = {
+				controlled_by = THIS
+				owned_by = THIS
+			}
+			change_controller = REB
+		}
+		ai_chance = { factor = 100 }
+		name = "OK"
+	}
+}
+
+##### INFORMACION ANTICRISIS 5 ####
+country_event = {
+	id = 700117
+
+	title = "productividad"
+	desc = "La acertada politica del gobierno esta generando un clima de bienestar social."
+	picture = "CRISIS-5"
+
+	is_triggered_only = yes
+
+	option = {
+		random_list={
+			10 = { dissent = -1 
+		       random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			}
+			
+		    }
+			10 = { dissent = -2 
+			   random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			  }
+			
+			}
+			10 = { dissent = -3 
+			  random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			  }			
+			}
+			10 = { dissent = -5 
+			  random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			 }			
+			}
+			10 = { dissent = -7 
+			   random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			  }			
+			}
+			10 = { dissent = -11
+                random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			  }
+			}
+			10 = { dissent = -13 
+                random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			  }			
+			}
+			10 = { dissent = -17
+                random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			  }
+			}
+			10 = { dissent = -19 
+               	random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			  }		
+			}
+			10 = { dissent = -23 
+	           	random_owned = { 
+				limit = { 
+					controlled_by = REB
+					is_core = THIS
+				}
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+				militia_brigade = current
+			  }	
+			}
+		}
+		ai_chance = { factor = 100 }
+		name = "OK"
+	}
+}
+
+
+country_event = {
+	id = 670001
+
+	trigger = {
+			ai = yes
+			not = { has_global_flag = CONTROLECONOMIATIEMPO }
+			not = { has_global_flag = CONTROLECONTIEX }			
+		}
+
+	mean_time_to_happen = { days = -15 }
+	option = {
+		set_global_flag = CONTROLECONOMIATIEMPO
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = 670002
+	trigger = {
+			ai = yes
+			has_global_flag = CONTROLECONOMIATIEMPO
+		}
+
+	mean_time_to_happen = { days = -15 }
+	option = {
+	ai_chance = { factor = 100 }
+		clr_global_flag = CONTROLECONOMIATIEMPO
+		set_global_flag = CONTROLECONTIEX		
+	}
+}
+
+

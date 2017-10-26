@@ -1,0 +1,101 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+war_games_expensive;Elaborate War Games;;;;;;;;;;;;;x
+war_games_cheap;Budget War Games;;;;;;;;;;;;;x
+war_games_naval_lessons;War Games Naval Lessons;;;;;;;;;;;;;x
+war_games_army_lessons;War Games Army Lessons;;;;;;;;;;;;;x
+war_games_airforce_lessons;War Games Air Force Lessons;;;;;;;;;;;;;x
+war_games_combined_lessons;War Games Combined Arms Lessons;;;;;;;;;;;;;x
+war_games_military_embarrassment;War Games Military Embarrassment;;;;;;;;;;;;;x
+war_games_military_excel;War Games Military Excellence;;;;;;;;;;;;;x
+war_games_environmental_damage;War Games Environmental Damage;;;;;;;;;;;;;x
+war_games_conscripts_disappear;War Games Conscripts Disappear;;;;;;;;;;;;;x
+war_games_recruitment_boosted;War Games Recruitment Boost;;;;;;;;;;;;;x
+land_technology_improved;Land Technology Improved;;;;;;;;;;;;;x
+naval_technology_improved;Naval Technology Improved;;;;;;;;;;;;;x
+air_technology_improved;Air Technology Improved;;;;;;;;;;;;;x
+war_games_delay;War Games Delay;;;;;;;;;;;;;x
+war_games_title;War Games;;;;;;;;;;;;;x
+war_games_desc;Large-scale military exercises intended to maintain our military readiness in times of relative peace.;;;;;;;;;;;;;x
+EVTNAME2031;War Games;;;;;;;;;;;;;x
+EVTDESC2031;We have decided to stage large-scale military exercises in order to maintain organization and experience in our armed forces during times of relative peace. We need to decide how much we will spend on these preparations.;;;;;;;;;;;;;x
+EVTOPTA2031;Spare no expense.;;;;;;;;;;;;;x
+EVTOPTB2031;Spend moderately.;;;;;;;;;;;;;x
+EVTNAME2032;Naval Lessons;;;;;;;;;;;;;x
+EVTDESC2032;Our fleet positioning, communication, and naval gunnery training exercises have yielded tremendous dividends for our naval forces!;;;;;;;;;;;;;x
+EVTOPTA2032;Excellent!;;;;;;;;;;;;;x
+EVTNAME2033;Army Lessons;;;;;;;;;;;;;x
+EVTDESC2033;Our investment in land-based weapons and maneuver training has resulted in an increase in our ability to wage sustained land warfare!;;;;;;;;;;;;;x
+EVTOPTA2033;Excellent!;;;;;;;;;;;;;x
+EVTNAME2034;Airforce Lessons;;;;;;;;;;;;;x
+EVTDESC2034;While no doubt challenging for our pilots and ground crews, the benefits of our training exercises are already being seen by our commanders in the field!;;;;;;;;;;;;;x
+EVTOPTA2034;Excellent!;;;;;;;;;;;;;x
+EVTNAME2035;Combined-arms Lessons;;;;;;;;;;;;;x
+EVTDESC2035;By undertaking joint training exercises between the various branches of our military, our forces, particularly our officers, have gained invaluable insights into the benefits of combined-arms warfare.;;;;;;;;;;;;;x
+EVTOPTA2035;It's all coming together nicely!;;;;;;;;;;;;;x
+EVTNAME2036;Army Officers Gain Experience;;;;;;;;;;;;;x
+EVTDESC2036;It is one thing to complete our Officer Training Program, but it is quite another to gain practical experience in leading men during land-based operations.  Our officers have reported that our training initiatives have served them well in this capacity!;;;;;;;;;;;;;x
+EVTOPTA2036;Money well spent!;;;;;;;;;;;;;x
+EVTNAME2037;Naval Officers Gain Experience;;;;;;;;;;;;;x
+EVTDESC2037;Through constant onboard drills, fleet maneuver training, and naval gunnery practice, our Admiralty reports that our naval officers have clearly demonstrated improvements in almost every conceivable area of leadership!;;;;;;;;;;;;;x
+EVTOPTA2037;Most excellent!;;;;;;;;;;;;;x
+EVTNAME2038;Air Force Officers Gain Experience;;;;;;;;;;;;;x
+EVTDESC2038;From dogfighting and bombing runs, to squadron logistics and resupply, our air force officers have gained invaluable experience that will serve our nation well as we continue to navigate a very uncertain world.;;;;;;;;;;;;;x
+EVTOPTA2038;The sky is the limit!;;;;;;;;;;;;;x
+EVTNAME2039;Movements Concern Neighbor;;;;;;;;;;;;;x
+EVTDESC2039;Although peaceful in nature, our training drills and maneuvers have evidently given our neighbors cause for concern. While it is doubtful that anything of consequence should arise from it, we should be cautious nonetheless.;;;;;;;;;;;;;x
+EVTOPTA2039;They'll get over it.;;;;;;;;;;;;;x
+EVTNAME2040;Cold War Tensions Increase;;;;;;;;;;;;;x
+EVTDESC2040;Although it is imperative that we continue to maintain a high-level of operational readiness among our forces, our recent exercises have also served to ratchet up global tensions.;;;;;;;;;;;;;x
+EVTOPTA2040;A natural progression, obviously.;;;;;;;;;;;;;x
+EVTNAME2041;Embarrassing Drill Performance;;;;;;;;;;;;;x
+EVTDESC2041;Despite putting our best foot forward during these exercises, our troops have demonstrated that they have a long way to go before they are truly combat ready. 'Practice makes perfect' as they say, and we need a lot more of it.;;;;;;;;;;;;;x
+EVTOPTA2041;Disheartening, but we must move on.;;;;;;;;;;;;;x
+EVTNAME2042;War Games Bolster Prestige;;;;;;;;;;;;;x
+EVTDESC2042;In addition to performing incredibly well during our recent field training exercises, global perception of our armed forces has also risen! Hopefully this will be a signal to any would-be aggressors that we have the capability to decisively prevail in any future global conflict.;;;;;;;;;;;;;x
+EVTOPTA2042;A worthwhile investment!;;;;;;;;;;;;;x
+EVTNAME2043;Military Excels in Exercises;;;;;;;;;;;;;x
+EVTDESC2043;Throughout the duration of our recent field training exercises, our forces have proven that their equipment, training, and leadership are of the highest quality. We could not be more pleased with the outcome!;;;;;;;;;;;;;x
+EVTOPTA2043;This is wonderful news!;;;;;;;;;;;;;x
+EVTNAME2044;Environmental Concerns;;;;;;;;;;;;;x
+EVTDESC2044;Despite remaining keenly aware of the importance of minimizing environmental damage, our recent training exercise has left some very visible scars on the landscape.\n\nThis will no doubt foster a view in some that such critical exercises are wasteful and unnecessary.;;;;;;;;;;;;;x
+EVTOPTA2044;We must be more careful!;;;;;;;;;;;;;x
+EVTNAME2045;Conscripts Fail to Report In;;;;;;;;;;;;;x
+EVTDESC2045;We've gone to great lengths to prepare for our new military training exercises, but it would appear that we've done a poor job in emphasizing their importance to the troops.  Quite a number of our conscripts have failed to report for duty!;;;;;;;;;;;;;x
+EVTOPTA2045;The nerve!;;;;;;;;;;;;;x
+EVTNAME2046;Recruitment Efforts Bolstered;;;;;;;;;;;;;x
+EVTDESC2046;Stemming from wide media coverage, the success of our recent training exercises has been a boon for our military recruiting offices around the country! A great many of our young men and women yearn for adventure, and we are that outlet!;;;;;;;;;;;;;x
+EVTOPTA2046;Sign them up!;;;;;;;;;;;;;x
+EVTNAME2047;Munitions Explosion;;;;;;;;;;;;;x
+EVTDESC2047;Although every safety precaution was taken, an unfortunate incident has occurred during our training exercises. A large munitions explosion injured several individuals and caused some collateral environmental damage.;;;;;;;;;;;;;x
+EVTOPTA2047;We must be more careful!;;;;;;;;;;;;;x
+EVTNAME2048;Equipment Shortcoming in Exercise;;;;;;;;;;;;;x
+EVTDESC2048;The results of our field maneuvers were average at best, but we were able to identify an immediate need to upgrade both the quantity and quality of equipment used by our land forces. We're working diligently to rectify this as quickly as possible!;;;;;;;;;;;;;x
+EVTOPTA2048;Make sure our boys have what they need!;;;;;;;;;;;;;x
+EVTNAME2049;Fleet Revamp Needed!;;;;;;;;;;;;;x
+EVTDESC2049;Our naval leadership has reported that as a result of the recent naval maneuvers, there is an immediate need to improve the quality and quantity of the equipment and systems on board our ships.  We must act on this as quickly as possible if we are to ensure adequate naval force projection!;;;;;;;;;;;;;x
+EVTOPTA2049;Make it so!;;;;;;;;;;;;;x
+EVTNAME2050;Air Force Modernization Needed!;;;;;;;;;;;;;x
+EVTDESC2050;There was one thing that was clearly evident during our recent air force exercises - our equipment is quickly becoming outdated.  Planes, fuel trucks, flight equipment, and weaponry all need to be modernized if we are to maintain a high state of operational readiness!;;;;;;;;;;;;;x
+EVTOPTA2050;Make it so!;;;;;;;;;;;;;x
+EVTNAME2051;Fatal Training Accident;;;;;;;;;;;;;x
+EVTDESC2051;We have received early reports of a most disturbing occurrence during our field exercises. We understand that a training accident has resulted in at least one friendly fatality, and possibly others.;;;;;;;;;;;;;x
+EVTOPTA2051;We must investigate and be better prepared!;;;;;;;;;;;;;x
+EVTNAME2061;War Games Finish;;;;;;;;;;;;;x
+EVTDESC2061;Our field training exercises have concluded.  Our men are tired, but we are confident that they have gained invaluable experience nonetheless.  It will take time before the full return on this investment can be measured.;;;;;;;;;;;;;x
+EVTOPTA2061;Excellent;;;;;;;;;;;;;x
+EVTNAME2062;Training Interrupted!;;;;;;;;;;;;;x
+EVTDESC2062;Due to the initiation of hostilities, we have had to cancel the remainder of our training exercise schedule.  The good news is that our forces are field-ready with their equipment, and are standing by to accomplish whatever mission is put before them.;;;;;;;;;;;;;x
+EVTOPTA2062;We can only hope their training was sufficient!;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

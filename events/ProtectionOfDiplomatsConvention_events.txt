@@ -1,0 +1,749 @@
+#ProtectionOfDiplomatsConvention_events.txt
+#UN Protection of Diplomats Convention
+
+#UN Secretary General:
+	#12200 - Raise the UN Protection of Diplomats Convention for Voting - Triggered by dec_UN_raise_protection_of_diplomats_convention
+	#12201 - Should We Have Voting Notifications Or Not?
+	#12202 - UN Protection of Diplomats Convention Resolution Fails in the General Assembly
+	#12203 - UN Protection of Diplomats Convention Resolution Passes in the General Assembly
+	
+#Global:
+	#12210 - Vote on the UN Protection of Diplomats Convention - Notifications Off
+	#12211 - Vote on the UN Protection of Diplomats Convention - Notifications On (Major Event)
+	#12212 - We have ratified the UN Protection of Diplomats Convention - Triggered
+	#12213 - We have ratified the UN Protection of Diplomats Convention - Non-triggered
+	#12214 - We have revoked the UN Protection of Diplomats Convention
+	
+	
+## UN Secretary General ##
+	#12200 - Raise the UN Protection of Diplomats Convention for Voting
+	country_event = {
+	
+		id = 12200
+
+		is_triggered_only = yes
+		
+		major = yes
+
+		title = "EVTNAME12200"
+		desc = "EVTDESC12200"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12200" 					#Large diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 40 }
+			#}
+			#XUN  = { prestige_change = -40 }
+			
+			set_global_flag = gflag_UN_large_diplomatic_investment
+			country_event = 12201
+		}
+
+		option = {
+			name = "EVTOPTB12200" 					#Small diplomatic investment
+			
+			#trigger = {
+			#	XUN = { prestige = 15 }
+			#}
+			#XUN  = { prestige_change = -15 }
+			
+			set_global_flag = gflag_UN_small_diplomatic_investment
+			country_event = 12201
+		}
+
+		option = {
+			name = "EVTOPTC12200"					#No diplomatic investment
+			
+			set_global_flag = gflag_UN_no_diplomatic_investment
+			country_event = 12201
+		}
+	}
+	
+	#12201 - Should We Have Voting Notifications Or Not?
+	country_event = {
+	
+		id = 12201
+		
+		is_triggered_only = yes
+
+		title = "EVTNAME12201"
+		desc = "EVTDESC12201"
+		picture = "xxxx"
+		
+		option = {
+			name = "EVTOPTA12201"		#Show Notifications	
+			set_global_flag = gflag_UN_voting_notifications
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_protection_of_diplomats_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_protection_of_diplomats_convention_voting
+		}
+		
+		option = {
+			name = "EVTOPTB12201"		#Don't Show Notifications	
+			
+			set_global_var = {
+				name = var_UN_still_voting_member_count
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Total
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_For
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Against
+				value = 0
+			}
+			set_global_var = {
+				name = var_UN_votes_Abstained
+				value = 0
+			}
+			any_country = {
+				limit = {
+					num_of_cities = 1
+					is_org_member = XUN
+					NOT = { has_country_flag = "UN_EMBARGO" }
+				}
+				set_country_flag = flag_UN_protection_of_diplomats_convention_voting_member
+				chg_global_var = {
+					name = var_UN_still_voting_member_count
+					value = 1
+				}
+			}
+			set_global_flag = gflag_UN_protection_of_diplomats_convention_voting
+		}
+	}
+	
+	#12202 - UN Protection of Diplomats Convention Resolution Fails in the General Assembly
+	country_event = {
+	
+		id = 12202
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_protection_of_diplomats_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_votes_Total
+					value = 0
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME12202"
+		desc = "EVTDESC12202"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_protection_of_diplomats_convention_voting
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_protection_of_diplomats_convention_fails
+		}
+
+		option = {
+			name = "EVTOPTA12202"					#Unfortunate
+			clr_global_var = var_UN_votes_Total
+			clr_global_var = var_UN_votes_For
+			clr_global_var = var_UN_votes_Abstained
+			clr_global_var = var_UN_votes_Against
+			clr_global_var = var_UN_still_voting_member_count
+			
+			#XUN  = { prestige_change = -50 }
+			
+			#hidden_effects = {
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_protection_of_diplomats_convention_failure_delay
+						duration = 1460
+					}
+				}
+			#}
+			clr_global_flag = gflag_UN_protection_of_diplomats_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+	
+	#12203 - UN Protection of Diplomats Convention Resolution Passes in the General Assembly
+	country_event = {
+	
+		id = 12203
+
+		trigger = {
+			is_org_leader = XUN
+			has_global_flag = gflag_UN_protection_of_diplomats_convention_voting
+			NOT = {
+				has_global_var_gt = { 
+					name = var_UN_still_voting_member_count
+					value = 0
+				}
+			}
+			has_global_var_gt = { 
+				name = var_UN_votes_Total
+				value = 0
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		major = yes
+
+		title = "EVTNAME12203"
+		desc = "EVTDESC12203"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_global_flag = gflag_UN_protection_of_diplomats_convention_voting
+			clr_global_flag = gflag_UN_protection_of_diplomats_convention_fails
+			clr_global_flag = gflag_UN_voting_notifications
+			set_global_flag = gflag_UN_protection_of_diplomats_convention_passes
+		}
+
+		option = {
+			name = "EVTOPTA12203"					#Excellent
+			clr_global_var = var_UN_votes_For
+			
+			#XUN  = { prestige_change = 50 }
+			
+			any_country = {
+				limit = {
+					has_country_flag = flag_UN_protection_of_diplomats_convention_supporter
+				}
+				set_country_flag = flag_UN_protection_of_diplomats_convention_ratified
+				country_event = 12212
+			}
+			clr_global_flag = gflag_UN_protection_of_diplomats_convention_raised
+			clr_global_flag = gflag_UN_no_diplomatic_investment
+			clr_global_flag = gflag_UN_small_diplomatic_investment
+			clr_global_flag = gflag_UN_large_diplomatic_investment
+			clr_global_flag = gflag_UN_resolution_active
+		}
+	}
+
+## Global ##
+	#12210 - Vote on the UN Protection of Diplomats Convention - Notifications Off
+	country_event = {
+	
+		id = 12210
+		
+		trigger = {
+			has_country_flag = flag_UN_protection_of_diplomats_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_protection_of_diplomats_convention_voting_delay
+				}
+			}
+			NOT = { has_global_flag = gflag_UN_voting_notifications }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		title = "EVTNAME12210"
+		desc = "EVTDESC12210"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_protection_of_diplomats_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_protection_of_diplomats_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA12210"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_protection_of_diplomats_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.25
+					rule_of_law = substantively_defined
+				}
+				modifier = {
+					factor = 1.1
+					rule_of_law = well_defined
+				}
+				modifier = {
+					factor = 1.5
+					intelligence_policy = intelligence_gathering_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						intelligence_policy = industrial_espionage_focus_pol
+						intelligence_policy = coup_facilitating_ops_pol
+						intelligence_policy = signals_intelligence_pol
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_protection_of_diplomats_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB12210"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+			clr_country_flag = flag_UN_protection_of_diplomats_convention_supporter
+		}
+
+		option = {
+			name = "EVTOPTC12210"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.25
+					rule_of_law = thinly_defined
+				}
+				modifier = {
+					factor = 1.1
+					rule_of_law = narrowly_defined
+				}
+				modifier = {
+					factor = 1.1
+					intelligence_policy = wet_operations_pol
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			clr_country_flag = flag_UN_protection_of_diplomats_convention_supporter
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_protection_of_diplomats_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#12211 - Vote on the UN Protection of Diplomats Convention - Notifications On
+	country_event = {
+	
+		id = 12211
+		
+		trigger = {
+			has_country_flag = flag_UN_protection_of_diplomats_convention_voting_member
+			NOT = {
+				USA = {
+					has_country_modifier = mod_UN_protection_of_diplomats_convention_voting_delay
+				}
+			}
+			has_global_flag = gflag_UN_voting_notifications
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		major = yes
+
+		title = "EVTNAME12210"
+		desc = "EVTDESC12210"
+		picture = "xxxx"
+		
+		immediate = {
+			clr_country_flag = flag_UN_protection_of_diplomats_convention_voting_member
+			chg_global_var = {
+				name = var_UN_still_voting_member_count
+				value = -1
+			}
+			USA = { 
+				add_country_modifier = {
+					name = mod_UN_protection_of_diplomats_convention_voting_delay
+					duration = 0
+				}
+			}
+		}
+
+		option = {
+			name = "EVTOPTA12210"				#For
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					is_org_leader = XUN
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = flag_UN_protection_of_diplomats_convention_supporter
+				}
+				modifier = {
+					factor = 1.25
+					has_global_flag = gflag_UN_large_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.1
+					has_global_flag = gflag_UN_small_diplomatic_investment
+				}
+				modifier = {
+					factor = 1.25
+					rule_of_law = substantively_defined
+				}
+				modifier = {
+					factor = 1.1
+					rule_of_law = well_defined
+				}
+				modifier = {
+					factor = 1.5
+					intelligence_policy = intelligence_gathering_pol
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						intelligence_policy = industrial_espionage_focus_pol
+						intelligence_policy = coup_facilitating_ops_pol
+						intelligence_policy = signals_intelligence_pol
+					}
+				}
+			}
+			
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = 1
+			}
+			chg_global_var = {
+				name = var_UN_votes_For
+				value = 1
+			}
+			set_country_flag = flag_UN_protection_of_diplomats_convention_supporter
+			
+			#relation = { who = XUN value = 5 }
+		}
+
+		option = {
+			name = "EVTOPTB12210"					#Abstain
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.5
+					foreign_policy = isolationism_pol
+				}
+				modifier = {
+					factor = 1.1
+					foreign_policy = dove_policy_pol
+				}
+				modifier = {
+					factor = 1.1
+					national_attitude = non-interventionism
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Abstained
+				value = 1
+			}
+		}
+
+		option = {
+			name = "EVTOPTC12210"					#Against
+			ai_chance = {
+				factor = 33
+				modifier = {
+					factor = 1.25
+					rule_of_law = thinly_defined
+				}
+				modifier = {
+					factor = 1.1
+					rule_of_law = narrowly_defined
+				}
+				modifier = {
+					factor = 1.1
+					intelligence_policy = wet_operations_pol
+				}
+			}
+			chg_global_var = {
+				name = var_UN_votes_Total
+				value = -1
+			}
+			chg_global_var = {
+				name = var_UN_votes_Against
+				value = 1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_protection_of_diplomats_convention_revoked_recently
+					duration = 60
+				}
+			#}
+			
+			#relation = { who = XUN value = -5 }
+		}
+	}
+
+	#12212 - We have ratified the UN Protection of Diplomats Convention - Triggered
+	country_event = {
+	
+		id = 12212
+
+		is_triggered_only = yes
+
+		title = "EVTNAME12212"
+		desc = "EVTDESC12212"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12212"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_protection_of_diplomats_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_protection_of_diplomats_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_protection_of_diplomats_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#12213 - We have ratified the UN Protection of Diplomats Convention (Non-triggered)
+	country_event = {
+	
+		id = 12213
+
+		trigger = {
+			ai = yes
+			has_global_flag = gflag_UN_protection_of_diplomats_convention_passes
+			NOT = { has_country_modifier = mod_UN_protection_of_diplomats_convention_ratified }
+			NOT = { USA = { has_country_modifier = mod_UN_protection_of_diplomats_convention_ratifier_delay } }
+			NOT = { has_country_flag = "UN_EMBARGO" }
+			#Add more
+		}
+		
+		mean_time_to_happen = {
+			months = 40
+			modifier = {
+				factor = 0.6
+				is_org_leader = XUN
+			}
+			modifier = {
+				factor = 0.7
+				rule_of_law = substantively_defined
+			}
+			modifier = {
+				factor = 0.8
+				rule_of_law = well_defined
+			}
+			modifier = {
+				factor = 0.6
+				intelligence_policy = intelligence_gathering_pol
+			}
+			modifier = {
+				factor = 0.7
+				OR = {
+					intelligence_policy = industrial_espionage_focus_pol
+					intelligence_policy = coup_facilitating_ops_pol
+					intelligence_policy = signals_intelligence_pol
+				}
+			}
+			modifier = {
+				factor = 1.5
+				foreign_policy = isolationism_pol
+			}
+			modifier = {
+				factor = 1.1
+				national_attitude = non-interventionism
+			}
+			modifier = {
+				factor = 1.5
+				rule_of_law = thinly_defined
+			}
+			modifier = {
+				factor = 1.25
+				rule_of_law = narrowly_defined
+			}
+			modifier = {
+				factor = 1.25
+				intelligence_policy = wet_operations_pol
+			}
+		}
+		
+		major = yes
+
+		title = "EVTNAME12212"
+		desc = "EVTDESC12212"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12212"					#Good news
+			prestige_change = 8
+			add_country_modifier = {
+				name = mod_UN_protection_of_diplomats_convention_ratified
+				duration = -1
+			}
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_protection_of_diplomats_convention_ratified_recently
+					duration = 60
+				}
+				USA = {
+					add_country_modifier = {
+						name = mod_UN_protection_of_diplomats_convention_ratifier_delay
+						duration = 15
+					}
+				}
+			#}
+			
+			#XUN = { prestige_change = 2 }
+		}
+	}
+
+	#12214 - We have revoked the UN Protection of Diplomats Convention
+	country_event = {
+	
+		id = 12214
+
+		trigger = {
+			ai = yes
+			has_country_modifier = mod_UN_protection_of_diplomats_convention_ratified
+			NOT = { has_country_modifier = mod_UN_protection_of_diplomats_convention_ratified_recently }
+			NOT = { has_country_flag = flag_UN_protection_of_diplomats_convention_supporter }
+			AND = {
+				rule_of_law = thinly_defined
+				intelligence_policy = wet_operations_pol
+				has_country_flag = "UN_EMBARGO"
+			}
+		}
+		
+		mean_time_to_happen = {
+			months = 9
+		}
+		
+		major = yes
+
+		title = "EVTNAME12214"
+		desc = "EVTDESC12214"
+		picture = "xxxx"
+
+		option = {
+			name = "EVTOPTA12214"					#Good riddance
+			prestige_change = -8
+			remove_country_modifier = mod_UN_protection_of_diplomats_convention_ratified
+			#hidden_effects = {
+				add_country_modifier = {
+					name = mod_UN_protection_of_diplomats_convention_revoked_recently
+					duration = 365
+				}
+			#}
+			
+			#XUN = { prestige_change = -3 }
+		}
+	}

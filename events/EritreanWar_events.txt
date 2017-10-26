@@ -1,0 +1,307 @@
+#EritreanWar_events.txt
+#1961 Eritrean War of Independence
+
+#ETH:
+	#186000 - release_eritrea_ETH follow-up event
+	#186001 - Eritreans demand independence – Democratic Ethiopia
+	#186002 - Eritreans demand independence – Autocratic Ethiopia
+	#186003 - Eritrean rebel attack (light)
+	#186004 - Eritrean rebel attack (heavy)
+	#186005 - Eritrean national uprising - Democratic Ethiopia
+	#186006 - Eritrean national uprising - Autocratic Ethiopia
+	
+
+## ETH ##
+country_event = {
+	
+	id = 186000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME186000"
+	desc = "EVTDESC186000"
+	picture = "Eritrea"
+
+	option = {
+		name = "EVTOPTA186000"								#Let them go
+		ai_chance = { factor = 10 }
+		dissent = 5											#Only a little bit of dissent, as ETH can only have this decision if non-totalitarian
+		relation = { who = XUN value = 50 }					#The UN likes this a lot
+		release = ERI
+	}
+	
+	option = {
+		name = "EVTOPTB186000"								#Grant them limited autonomy
+		ai_chance = { factor = 5 }
+		dissent = 2
+		relation = { who = XUN value = 25 }					#The UN likes this
+		release_vassal = ERI								#ERI puppet
+	}
+	
+	option = {
+		name = "EVTOPTC186000"								#ERI belongs to us!
+		ai_chance = { factor = 85 }
+		dissent = -5
+		national_unity = 10									#That refers to the Ethiopians outnumbering the Eritreans	
+		prestige_change = 5									#ETH takes a strong position
+	}
+}
+
+country_event = {
+	
+	id = 186001			#Eritreans demand independence – Democratic Ethiopia
+
+	trigger = {
+		tag = ETH
+		ETH = { owns = 8073 }									#Asmara
+		NOT = { has_country_flag = release_eritrea_ETH_done }	#ETH can't have released ERI at an earlier date
+		NOT = { exists = ERI }
+		NOT = {
+			ideology = fascistic_idolg
+			ideology = paternal_auto_idolg
+			ideology = left_wing_radical_idolg
+			ideology_group = comintern
+		}
+	}
+
+	mean_time_to_happen = { days = 3650 }						#Ten years to go, Ethiopia
+
+	title = "EVTNAME186001"
+	desc = "EVTDESC186001"
+	picture = "1988_Eritrean_fighters_3"
+
+	option = {
+		name = "EVTOPTA186001"								#Let them go
+		ai_chance = { factor = 30 }							#ETH is democratic - high chance
+		dissent = 2
+		prestige_change = 10								#ETH prooves it respects the right of others
+		relation = { who = XUN value = 50 }					#The UN likes this a lot
+		release = ERI
+		set_country_flag = ETH_ERI_independence
+	}
+	
+	option = {
+		name = "EVTOPTB186001"								#Grant them limited autonomy
+		ai_chance = { factor = 20 }
+		dissent = 1
+		prestige_change = 10								#ETH prooves it respects the right of others
+		relation = { who = XUN value = 25 }					#The UN likes this
+		release_vassal = ERI								#ERI puppet
+		set_country_flag = ETH_ERI_independence
+	}
+	
+	option = {
+		name = "EVTOPTC186001"								#ERI belongs to us!
+		ai_chance = { factor = 50 }							#Red Sea access is important
+		dissent = -3
+		prestige_change = -5								#ETH is a bad democracy
+		relation = { who = XUN value = -25 }
+		set_country_flag = ETH_ERI_independence
+		set_global_flag = ERI_independencewar				#Eritrea will fight from now on
+	}
+}
+
+country_event = {
+	
+	id = 186002			#Eritreans demand independence – Autocratic Ethiopia
+
+	trigger = {
+		tag = ETH
+		ETH = { owns = 8073 }									#Asmara
+		NOT = { has_country_flag = release_eritrea_ETH_done }	#ETH can't have released ERI at an earlier date
+		NOT = { has_country_flag = ETH_ERI_independence }
+		NOT = { exists = ERI }
+		OR = {
+			ideology = fascistic_idolg
+			ideology = paternal_auto_idolg
+			ideology = left_wing_radical_idolg
+			ideology_group = comintern
+		}
+	}
+
+	mean_time_to_happen = { days = 3650 }						#Ten years to go, Ethiopia
+
+	title = "EVTNAME186002"
+	desc = "EVTDESC186002"
+	picture = "1988_Eritrean_fighters_3"
+
+	option = {
+		name = "EVTOPTA186002"								#Let them go
+		ai_chance = { factor = 5 }							#ETH is autocratic - low chance
+		dissent = 10
+		prestige_change = -5								#ETH is weak
+		relation = { who = XUN value = 50 }					#The UN likes this a lot
+		release = ERI
+		set_country_flag = ETH_ERI_independence
+	}
+	
+	option = {
+		name = "EVTOPTB186002"								#Grant them limited autonomy
+		ai_chance = { factor = 5 }
+		dissent = 5
+		prestige_change = 10								#ETH prooves it respects the right of others
+		relation = { who = XUN value = 25 }					#The UN likes this
+		release_vassal = ERI								#ERI puppet
+		set_country_flag = ETH_ERI_independence
+	}
+	
+	option = {
+		name = "EVTOPTC186002"								#ERI belongs to us!
+		ai_chance = { factor = 90 }							#Red Sea access is important
+		dissent = -5
+		prestige_change = 10								#ETH is strong!
+		relation = { who = XUN value = -25 }
+		set_country_flag = ETH_ERI_independence
+		set_global_flag = ERI_independencewar				#Eritrea will fight from now on
+	}
+}	
+
+country_event = {
+	
+	id = 186003			#Eritrean rebel attack (light)
+
+	trigger = {
+		tag = ETH
+		ETH = { owns = 8073 }									#Asmara
+		has_global_flag = ERI_independencewar  
+		NOT = { exists = ERI }
+	}
+
+	mean_time_to_happen = { days = 180 }						#Twice per year
+
+	title = "EVTNAME186003"
+	desc = "EVTDESC186003"
+	picture = "1988_Eritrean_fighters"
+
+	option = {
+		name = "EVTOPTA186003"
+		dissent = 3
+		national_unity = -3
+		popularity = -2
+																#Nationalist rebels pop up @
+	}
+}
+
+country_event = {
+	
+	id = 186004			#Eritrean rebel attack (heavy)
+
+	trigger = {
+		tag = ETH
+		ETH = { owns = 8073 }									#Asmara
+		has_global_flag = ERI_independencewar  
+		NOT = { exists = ERI }
+	}
+
+	mean_time_to_happen = { days = 365 }						#Once per year
+
+	title = "EVTNAME186004"
+	desc = "EVTDESC186004"
+	picture = "1988_Eritrean_fighters_2"
+
+	option = {
+		name = "EVTOPTA186004"
+		dissent = 5
+		national_unity = -5
+		popularity = -5
+		prestige_change = -1									#ETH doesn't get its stuff together									
+																#Nationalist rebels pop up @
+	}
+}
+
+country_event = {
+	
+	id = 186005			#Eritrean national uprising - Democratic Ethiopia
+
+	trigger = {
+		tag = ETH
+		ETH = { owns = 8073 }									#Asmara
+		has_global_flag = ERI_independencewar  
+		NOT = { exists = ERI }
+		NOT = {
+			ideology = fascistic_idolg						#ETH is democratic
+			ideology = paternal_auto_idolg
+			ideology = left_wing_radical_idolg
+			ideology_group = comintern
+		}
+	}
+
+	mean_time_to_happen = { days = 3650 }						#Every ten years
+
+	title = "EVTNAME186005"
+	desc = "EVTDESC186005"
+	picture = "1988_Eritrean_fighters_4"
+
+	option = {
+		name = "EVTOPTA186005"									#Crush them!
+		ai_chance = { factor = 50 }
+		dissent = 5												#Now that didn't went well
+		national_unity = -5
+		popularity = -5											#Current government has failed
+		prestige_change = -10									#ETH can't keep order (elected party)
+		release = ERI											#Eritrea becomes free as a non-puppet
+		ERI = { load_oob = ERI_1946.txt }						#Load the ERI rebel OOB	@
+		war = ERI
+	}
+	
+	option = {
+		name = "EVTOPTB186005"									#Let them go
+		ai_chance = { factor = 50 }
+		dissent = 5												#Some will never be happy
+		national_unity = 5
+		popularity = 5											#Current government shows responsibility
+		prestige_change = 15									#ETH respects other nations
+		release = ERI											#Eritrea becomes free as a non-puppet
+		ERI = { load_oob = ERI_1946.txt }						#Load the ERI rebel OOB	@
+																#ETH regonsises ERI @
+		clr_global_flag = ERI_independencewar
+	}
+}
+
+country_event = {
+	
+	id = 186006			#Eritrean national uprising - Autocratic Ethiopia
+
+	trigger = {
+		tag = ETH
+		ETH = { owns = 8073 }									#Asmara
+		has_global_flag = ERI_independencewar  
+		NOT = { exists = ERI }
+		OR = {
+			ideology = fascistic_idolg						#ETH is autocratic
+			ideology = paternal_auto_idolg
+			ideology = left_wing_radical_idolg
+			ideology_group = comintern
+		}
+	}
+
+	mean_time_to_happen = { days = 3650 }						#Every ten years
+
+	title = "EVTNAME186006"
+	desc = "EVTDESC186006"
+	picture = "Eritrea"
+
+	option = {
+		name = "EVTOPTA186006"									#Crush them!
+		ai_chance = { factor = 90 }
+		dissent = -10											#Now that didn't went well
+		national_unity = -5
+		popularity = 5											#Current government has failed
+		prestige_change = 5										#ETH shows strength
+		release = ERI											#Eritrea becomes free as a non-puppet
+		ERI = { load_oob = ERI_1946.txt }						#Load the ERI rebel OOB	@
+		war = ERI
+	}
+	
+	option = {
+		name = "EVTOPTB186006"									#Let them go
+		ai_chance = { factor = 10 }
+		dissent = 5												#Some will never be happy
+		national_unity = -10
+		prestige_change = -5
+		release = ERI											#Eritrea becomes free as a non-puppet
+		ERI = { load_oob = ERI_1946.txt }						#Load the ERI rebel OOB	@
+																#ETH regonsises ERI @
+		clr_global_flag = ERI_independencewar
+	}
+}

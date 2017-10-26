@@ -1,0 +1,166 @@
+CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Country Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+mod_SOV_korea_joint_commission;Korea Joint Commission;;;;;;;;;;;;;x
+mod_USA_korea_joint_commission;Korea Joint Commission;;;;;;;;;;;;;x
+koreanwar_start;Korean War Begins;;;;;;;;;;;;;x
+koreanwar_peace;Korean War Armistice Failure;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#USA;;;;;;;;;;;;;;x
+korea_UN_resolution_USA_title;UN-supervised Korean elections;;;;;;;;;;;;;x
+korea_UN_resolution_USA_desc;UN-supervised Korean elections.;;;;;;;;;;;;;x
+intervene_koreanwar_USA_title;The War in Korea;;;;;;;;;;;;;x
+intervene_koreanwar_USA_desc;Japan's rise to power at the beginning of the 20th century began with the Japanese victory over Russia in 1905. Shortly afterwards, Japan invaded Korea and annexed it 1910. Korea was a part of Japan until its defeat in World War II, when the annexation treaty was declared void and the country was divided in a Soviet and an American occupation zone. Later, this resulted in not one but two Korean states emerging, which both claimed the whole of the Korean peninsula. Now, the North has invaded the South to unify Korea by force. The situation is looking grim and if South Korea falls, it is unlikely that we will ever set a foot on Korean soil again. Currently, Korea is not part of our strategy plan for East Asia, but this the right moment to show that the United States do not tolerate aggression against their partners.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#CHC;;;;;;;;;;;;;;x
+intervene_koreanwar_CHC_title;Help for the Koreans;;;;;;;;;;;;;x
+intervene_koreanwar_CHC_desc;The plans for a forced unification of Korea did not work quite as the North thought it would. If the fortunes of war don't shift soon, we might end up with yet another hostile neighbor. Korea is small, so moving some troops there should not pose a problem and will show that China is once more a force to reckon with.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#PRK;;;;;;;;;;;;;;x
+invade_south_SOV_PRK_title;Korean Liberation – Ask for Soviet Support;;;;;;;;;;;;;x
+invade_south_SOV_PRK_desc;Japan's rise to power at the beginning of the 20th century began with the Japanese victory over Russia in 1905. Shortly afterwards, Japan invaded Korea and annexed it 1910. Korea was a part of Japan until its defeat in World War II, when the annexation treaty was declared void and the country was divided in a Soviet and an American occupation zone. However, instead of releasing a unified Korea, both occupation powers installed a friendly government in their respective half of the country. Now the time has come to unify Korea once more. While our troops are without doubt capable of defeating the reactionary forces, it will be a good idea to ask the Soviet Union for support to ensure we have the backing of a regional power and avoid foreign intervention on the enemy's side.;;;;;;;;;;;;;x
+invade_south_CHC_PRK_title;Korean Liberation – Ask for Chinese Support;;;;;;;;;;;;;x
+invade_south_CHC_PRK_desc;Japan's rise to power at the beginning of the 20th century began with the Japanese victory over Russia in 1905. Shortly afterwards, Japan invaded Korea and annexed it 1910. Korea was a part of Japan until its defeat in World War II, when the annexation treaty was declared void and the country was divided in a Soviet and an American occupation zone. However, instead of releasing a unified Korea, both occupation powers installed a friendly government in their respective half of the country. Now the time has come to unify Korea once more. While our troops are without doubt capable of defeating the reactionary forces, it will be a good idea to ask China for support to ensure we have the backing of a regional power and avoid foreign intervention on the enemy's side.;;;;;;;;;;;;;x
+armistice_koreanwar_PRK_title;The Korean War – Negotiate with the South;;;;;;;;;;;;;x
+armistice_koreanwar_PRK_desc;The war between the Koreas has lasted for months and months, with no side turning the tide in its favor. To avoid further bloodshed, we can propose a move back to pre-war borders and an exchange of prisoners;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#KOR;;;;;;;;;;;;;;x
+armistice_koreanwar_KOR_title;The Korean War – Negotiate with the North;;;;;;;;;;;;;x
+armistice_koreanwar_KOR_desc;The war between the Koreas has lasted for months and months, with no side turning the tide in its favor. To avoid further bloodshed, we can propose a move back to pre-war borders and an exchange of prisoners;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ; REMOVE HASH FOR ACTIVE EVENTS AND OPTIONS;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+#USA;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#SOV;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#CHC;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+#PRK;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;
+#KOR;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

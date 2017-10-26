@@ -1,0 +1,61 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Modifiers ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+mod_UN_rights_of_the_child_convention_failure_delay;UN Rights of the Child Convention Delay;;;;;;;;;;;;;x
+mod_UN_rights_of_the_child_convention_ratifier_delay;UN Rights of the Child Convention Ratifier Delay;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+mod_UN_rights_of_the_child_convention_revoked_recently;UN Rights of the Child Convention Revoked Recently;;;;;;;;;;;;;x
+mod_UN_rights_of_the_child_convention_ratified;UN Rights of the Child Convention;;;;;;;;;;;;;x
+mod_UN_rights_of_the_child_convention_ratified_recently;UN Rights of the Child Convention Ratified Recently;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+dec_UN_raise_rights_of_the_child_convention_title;The UN Rights of the Child Convention;;;;;;;;;;;;;x
+dec_UN_raise_rights_of_the_child_convention_desc;United Nations General Assembly Resolution 44/25, The Convention on the Rights of the Child.;;;;;;;;;;;;;x
+dec_UN_rights_of_the_child_convention_disable_voting_notifications_title;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+dec_UN_rights_of_the_child_convention_disable_voting_notifications_desc;Disable Current UN Voting Notifications;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+dec_UN_ratify_rights_of_the_child_convention_title;Ratify UN Rights of the Child Convention;;;;;;;;;;;;;x
+dec_UN_ratify_rights_of_the_child_convention_desc;Ratify The Convention on the Rights of the Child.;;;;;;;;;;;;;x
+dec_UN_withdraw_from_rights_of_the_child_convention_title;Withdraw from UN Rights of the Child Convention;;;;;;;;;;;;;x
+dec_UN_withdraw_from_rights_of_the_child_convention_desc;Withdraw from The Convention on the Rights of the Child.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+# Events ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+## UN Secretary General ##;;;;;;;;;;;;;;x
+EVTNAME12100;The UN Rights of the Child Convention;;;;;;;;;;;;;x
+EVTDESC12100;United Nations General Assembly Resolution 44/25, The Convention on the Rights of the Child has been opened for voting.;;;;;;;;;;;;;x
+EVTOPTA12100;Large Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTB12100;Small Diplomatic Investment.;;;;;;;;;;;;;x
+EVTOPTC12100;No Diplomatic Investment.;;;;;;;;;;;;;x
+EVTNAME12101;UN Voting Notifications;;;;;;;;;;;;;x
+EVTDESC12101;Shall we receive notifications when nations decide their vote on the current UN Resolution undergoing a vote?\nThese can be turned off at any time by an international decision.;;;;;;;;;;;;;x
+EVTOPTA12101;Receive Notifications.;;;;;;;;;;;;;x
+EVTOPTB12101;No Notifications.;;;;;;;;;;;;;x
+EVTNAME12102;UN Rights of the Child Convention Fails Vote;;;;;;;;;;;;;x
+EVTDESC12102;United Nations General Assembly Resolution 44/25, The Convention on the Rights of the Child, has been defeated by vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA12102;Unfortunate;;;;;;;;;;;;;x
+EVTNAME12103;UN Rights of the Child Convention Passes Vote;;;;;;;;;;;;;x
+EVTDESC12103;United Nations General Assembly Resolution 44/25, The Convention on the Rights of the Child, has passed its vote in the United Nations General Assembly.;;;;;;;;;;;;;x
+EVTOPTA12103;Excellent;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x
+## Global ##;;;;;;;;;;;;;;x
+EVTNAME12110;Rights of the Child Convention UN Vote;;;;;;;;;;;;;x
+EVTDESC12110;We have the opportunity to vote on United Nations General Assembly Resolution 44/25, The Convention on the Rights of the Child, at the UN General Assembly.\nWe can either vote For it, Abstain, or vote Against it.;;;;;;;;;;;;;x
+EVTOPTA12110;§GVote For;;;;;;;;;;;;;x
+EVTOPTB12110;Abstain;;;;;;;;;;;;;x
+EVTOPTC12110;§RVote Against;;;;;;;;;;;;;x
+EVTNAME12112;Ratified the Rights of the Child Convention;;;;;;;;;;;;;x
+EVTDESC12112;We have ratified the UN Rights of the Child Convention.;;;;;;;;;;;;;x
+EVTOPTA12112;Progress and civility will prevail.;;;;;;;;;;;;;x
+EVTNAME12114;Withdrawal from the Rights of the Child Convention;;;;;;;;;;;;;x
+EVTDESC12114;We have withdrawn from the UN Rights of the Child Convention.;;;;;;;;;;;;;x
+EVTOPTA12114;Good riddance.;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;x

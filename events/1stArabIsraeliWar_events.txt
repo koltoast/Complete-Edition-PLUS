@@ -1,0 +1,2409 @@
+#1stArabIsraeliWar_events.txt
+#1948 1st Arab-Israeli War
+
+#Asia:
+	#103000 - 1948_war_arab_minors follow-up event - Whether to intervene in the war in Palestine or not - for YEM/OMN/BAH/KWT/LBY/NYE/SYA/SDR
+	#103001 - 1948 Arab-Israeli War - Arab minors drop out after Arab majors and PAL have failed to defeat ISR
+	
+#EGY - Egypt:
+	#180000 - 1948_war_EGY follow-up event - EGY has to decide what to do about Israel
+	#180001 - 1948 War - First chance for a cease-fire
+	#180002 - 1948 War - Second chance for a cease-fire
+	#180003 - EGY hands over Palestine territories to PAL
+	#180004 - 1948_war_EGY follow-up event - Egypt has to decide what to do about Israel
+	#180005 - Palestine is divided among the Egypt, Jordan and Syria - EGY is not the main victor
+	
+#ENG - United Kingdom:
+	#181000 - ENG releases Israel
+	#181001 - ENG releases Jordan
+	
+#IRQ - Iraq:
+	#221000 - 1948_war_IRQ follow-up event - the Iraq has to decide what to do about Israel
+	
+#ISR - Israel:
+	#222000 - ISR becomes independent from Britain - triggered by ENG event 181000
+	#222001 - Veteran troops arrive
+	#222002 - 1948 Early armistice with Egypt
+	#222003 - 1948 Late armistice with Egypt
+	#222004 - 1948 Early armistice with Jordan
+	#222005 - 1948 Late armistice with Jordan
+	#222006 - 1948 Early armistice with Syria
+	#222007 - 1948 Late armistice with Syria
+	#222008 - An Arab minor offers a truce
+	
+#SYR - Syria:
+	#335000 - 1948_war_SYR follow-up event - SYR has to decide what to do about Israel
+	#335001 - 1948 War - First chance for a ceace-fire
+	#335002 - 1948 War - Second chance for a ceace-fire
+	#335003 - SYR hands over Palestine territories to PAL
+	#335004 - Palestine is divided among the Egypt, Jordan and Syria - SYR is not the main victor
+	#335005 - 1948_war_SYR follow-up event - Syria has to decide what to do about Israel
+	
+#JOR - Jordan:
+	#226000 - 1948_war_JOR follow-up event - JOR has to decide what to do about Israel
+	#226001 - 1948 War - First chance for a cease-fire
+	#226002 - 1948 War - Second chance for a cease-fire
+	#226003 - JOR hands over Palestine territories to PAL
+	#226004 - Palestine is divided among the Egypt, Jordan and Syria - SYR is not the main victor
+	#226005 - 1948_war_JOR follow-up event - Jordan has to decide what to do about Israel
+	#226006 - JOR becomes independent from Britain - triggered by ENG event 181001
+	
+#LEB - Lebanon:
+	#242000 - 1948_war_LEB follow-up event - LEB has to decide what to do about Israel
+		
+#PAL - Palestine:
+	#283000 - PAL becomes independent from Britain - triggered by ENG event 181000
+	#283001 - JOR joins the war against Israel
+	#283002 - JOR sends support against Israel
+	#283003 - SYR joins the war against Israel
+	#283004 - SYR sends support against Israel
+	#283005 - EGY joins the war against Israel
+	#283006 - EGY sends support against Israel
+	#283007 - IRQ sends support against Israel
+	#283008 - SAU sends support against Israel
+	#283009 - An Arab minor sends support against Israel
+	#283010 - LEB sends support against Israel
+	#283011 - Israel is defeated with PAL as the major victor
+	#283012 - LEB joins the war against Israel
+
+#SAU - Saudi Arabia:
+	#305000 - 1948_war_SAU follow-up event - Saudi Arabia has to decide what to do about Israel
+
+
+## Asia ##
+#103000 - 1948_war_arab_minors follow-up event - Whether to intervene in the war in Palestine or not - for YEM/OMN/BAH/KWT/LBY/NYE/SYA/SDR
+country_event = {
+	
+	id = 103000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME103000"
+	desc = "EVTDESC103000"
+	picture = "1948_Arab_volunteers"
+
+	option = {
+		name = "EVTOPTA103000"			    				#Send material support
+		ai_chance = { factor = 50 }
+		
+		manpower = -2										#Volunteers					
+		supplies = -100
+		dissent = -1										#The country concentrates on the war
+		national_unity = 1									#The country us unified
+		relation = { who = PAL value = 50 }
+		relation = { who = ISR value = -50 }
+		PAL = { country_event = 283009 }					#PAL gets a stability boost for new allies
+	}
+	
+	option = {
+		name = "EVTOPTB103000"								#Don't intervene
+		ai_chance = { factor = 49 }
+		relation = { who = PAL value = -25 }
+		relation = { who = ISR value = 25 }
+	}
+	
+	option = {
+		name = "EVTOPTC103000"								#Recognise Israel diplomatically
+		ai_chance = { factor = 1 }							#Ahistorical choice and very unlikely
+		dissent = 10										#The people won't like that
+		national_unity = -3
+		relation = { who = PAL value = -100 }
+		relation = { who = ISR value = 100 }
+															#Recognition of Israel @
+		non_aggression_pact = ISR							#To prevent exploitation by manual DOW
+	}
+}
+
+#103001 - 1948 Arab-Israeli War - Arab minors drop out after Arab majors and PAL have failed to defeat ISR
+country_event = {
+	
+	id = 103001
+	
+	trigger = {
+		OR = {
+			tag = YEM
+			tag = OMN
+			tag = BAH
+			tag = KWT			#Kuwait
+			tag = LBY
+			tag = NYE			#North Yemen
+			tag = SYA			#South Yemen
+			tag = SDR			#Sahrawi Arab Democratic Republic
+			tag = UAE
+			tag = SUD
+			tag = IRQ
+			tag = SAU
+			tag = LEB
+		}
+		NOT = { ISR = { war_with = EGY } }				#The major Arab states made a true with ISR or never joined the war to beging with
+		NOT = { ISR = { war_with = SYR } }
+		NOT = { ISR = { war_with = JOR } }
+		NOT = { exists = PAL }							#PAL is gone
+		exists = ISR									#ISR exists
+		war_with = ISR									#Trigger state is at war with ISR
+	}
+	
+	mean_time_to_happen = { days = 15 }
+
+	title = "EVTNAME103001"
+	desc = "EVTDESC103001"
+	picture = "1948_arab_israeli_war"
+
+	option = {
+		name = "EVTOPTA103001"							#Accept an armistice
+		ai_chance = { factor = 100 }	
+		end_war = ISR
+		leave_alliance = PAL							#All alliances with Israeli neighbours end
+		leave_alliance = JOR
+		leave_alliance = SYR
+		leave_alliance = LEB
+		dissent = 3										#Due to propaganda, people didn't see that one coming
+		ISR = { country_event = 222008 }				#ISR Arab minor drops out of the war
+	}
+
+	option = {
+		name = "EVTOPTB103001"							#Fight on
+		ai_chance = { factor = 0 }						#To avoid endless wars of countries without common borders
+		relation = { who = ISR value = -50 }
+		dissent = 5
+		national_unity = -1								#People are unified in their rage - less unity loss
+	}
+}
+
+## EGY ##
+country_event = {
+	
+	id = 180000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME180000"
+	desc = "EVTDESC180000"
+	picture = "1948_Egypt_Invades"
+
+	option = {
+		name = "EVTOPTA180000"			    				#Join the war against Israel
+		ai_chance = { factor = 90 }							#Historical choice
+		
+		dissent = -5										#The country concentrates on the war
+		national_unity = 5									#The country us unified
+		
+		relation = { who = PAL value = 100 }
+		relation = { who = ISR value = -200 }				#EGY wants to destroy them, after all
+		
+		create_alliance = PAL
+		join_war = PAL
+		PAL = { country_event = 283005 }					#PAL gets a stability boost for new allies
+		set_global_flag = 1948_palestine_war_EGY_joins
+	}
+	
+	option = {
+		name = "EVTOPTB180000"								#Send supplies
+		ai_chance = { factor = 10 }							#Ahistorical choice
+		money = -60								
+		manpower = -50								
+		supplies = -1000				
+
+		relation = { who = PAL value = 50 }
+		relation = { who = ISR value = -50 }
+		
+		dissent = 1
+		PAL = { country_event = 283006 }
+	}
+	
+	option = {
+		name = "EVTOPTC180000"								#Recognise Israel diplomatically
+		ai_chance = { factor = 0 }							#Ahistorical choice and very unlikely
+		dissent = 15										#The people won't like that
+		national_unity = -5
+		relation = { who = PAL value = -100 }
+		relation = { who = ISR value = 100 }
+															#Recognition of Israel @
+		non_aggression_pact = ISR							#To prevent exploitation by manual DOW
+	}
+}
+
+#180001 - 1948 War - First chance for a cease-fire
+country_event = {
+	
+	id = 180001
+
+	trigger = {
+		tag = EGY
+		EGY = { war_with = ISR }
+		has_global_flag = 1948_palestine_war_start		#This goes only for the historical/semi-historical conflict
+		OR = {
+			lost_national = 0.075								#Should trigger if Israel conquers Egyptian territory
+			ISR = {
+				controls = 7516
+				controls = 14869
+				controls = 14877
+			}
+		}
+		war_exhaustion = 3
+		NOT = { lost_national = 0.5 }
+		NOT = { ISR = { lost_national = 0.75 } }			#ISR is not close to collapsing 
+		NOT = { has_country_flag = EGY180001triggered }
+	}
+	
+	mean_time_to_happen = { days = 3 }					#Will happen quickly once Israel marches into Egypt
+
+	title = "EVTNAME180001"
+	desc = "EVTDESC180001"
+	picture = "1949_israel_egypt_armistice"
+
+	option = {
+		name = "EVTOPTA180001"							#Accept an armistice
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 1.25
+				ISR = { controls = 7516 }
+			}
+			modifier = {
+				factor = 1.25
+				ISR = { controls = 14887 }
+			}
+			modifier = {
+				factor = 1.5
+				ISR = { controls = 14869 }
+			}
+			modifier = {
+				factor = 1.25
+				war_exhaustion = 5
+			}
+			modifier = {
+				factor = 1.25
+				war_exhaustion = 10
+			}
+			modifier = {
+				factor = 1.25
+				war_exhaustion = 15
+			}
+			modifier = {
+				factor = 1.25
+				war_exhaustion = 20
+			}
+			modifier = {
+				factor = 1.5
+				war_exhaustion = 30
+			}
+			
+			modifier = {
+				factor = 1.5
+				lost_national = 0.20
+			}
+			
+			modifier = {
+				factor = 1.25
+				NOT = { total_amount_of_brigades = 8 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { total_amount_of_brigades = 5 }
+			}
+			modifier = {
+				factor = 10
+				NOT = { total_amount_of_brigades = 2 }
+			}
+			
+			modifier = {
+				factor = 1.25
+				ISR = { total_amount_of_brigades = 11 }
+			}
+			
+		}	
+		ISR = { end_war = EGY }
+		leave_alliance = PAL							#All alliances with Israeli neighbours end
+		leave_alliance = JOR
+		leave_alliance = SYR
+		leave_alliance = LEB
+		relation = { who = PAL value = -50 }
+		relation = { who = ISR value = 25 }
+		14879 = { secede_province = EGY }				#EGY occupies the Gaza strip
+		PAL = { 14879 = { secede_province = EGY } }
+		ISR = { 14879 = { secede_province = EGY } }
+		dissent = 10									#Due to propaganda, people didn't see that one coming
+		national_unity = -5
+		set_country_flag = EGY180001triggered
+		ISR = { country_event = 222002 }				#ISR victory
+	}
+
+	option = {
+		name = "EVTOPTB180001"							#Fight on
+		ai_chance = {
+			factor = 67
+			modifier = {
+				factor = 1.1
+				ISR = { NOT = { total_amount_of_brigades = 8 } }
+			}
+			modifier = {
+				factor = 1.5
+				ISR = { NOT = { total_amount_of_brigades = 5 } }
+			}
+			modifier = {
+				factor = 3
+				ISR = { NOT = { total_amount_of_brigades = 2 } }
+			}
+			
+			modifier = {
+				factor = 1.25
+				ISR = { war_exhaustion = 5 }
+			}
+			modifier = {
+				factor = 1.25
+				ISR = { war_exhaustion = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				ISR = { war_exhaustion = 15 }
+			}
+			modifier = {
+				factor = 1.25
+				ISR = { war_exhaustion = 20 }
+			}
+			modifier = {
+				factor = 1.5
+				ISR = { war_exhaustion = 30 }
+			}
+			
+			modifier = {
+				factor = 2
+				ISR = { lost_national = 0.20 }
+			}
+			modifier = {
+				factor = 5
+				ISR = { lost_national = 0.50 }
+			}
+			
+			modifier = {
+				factor = 1.5
+				ISR = { war_with = PAL }
+			}
+			modifier = {
+				factor = 1.25
+				ISR = { war_with = SYR }
+			}
+			modifier = {
+				factor = 1.25
+				ISR = { war_with = JOR }
+			}
+			modifier = {
+				factor = 1.1
+				ISR = { war_with = IRQ }
+			}
+			modifier = {
+				factor = 1.1
+				ISR = { war_with = LEB }
+			}
+			modifier = {
+				factor = 1.1
+				ISR = { war_with = SAU }
+			}
+		}
+		relation = { who = PAL value = 50 }
+		relation = { who = ISR value = -50 }
+		dissent = 2										#Israelis within our borders!?
+		national_unity = 2								#People are unified in their rage
+		set_country_flag = EGY180001triggered
+	}
+}
+
+#180002 - 1948 War - Second chance for a cease-fire
+country_event = {
+	
+	id = 180002
+
+	trigger = {
+		tag = EGY
+		war_with = ISR
+		has_global_flag = 1948_palestine_war_start		#This goes only for the historical/semi-historical conflict
+		war_exhaustion = 6
+		OR = {
+			lost_national = 0.4
+			AND = {
+				lost_national = 0.3
+				war_exhaustion = 20
+			}
+		}
+		NOT = { ISR = { lost_national = 0.6 } }			#ISR is not close to collapsing 
+		NOT = { has_country_flag = EGY180002triggered }
+	}
+	
+	mean_time_to_happen = { days = 15 }
+
+	title = "EVTNAME180002"
+	desc = "EVTDESC180002"
+	picture = "1949_egypt_israel_armistice"
+
+	option = {
+		name = "EVTOPTA180002"							#Accept an armistice
+		ai_chance = { factor = 98 }	
+		ISR = { end_war = EGY }
+		leave_alliance = PAL							#All alliances with Israeli neighbours end
+		leave_alliance = JOR
+		leave_alliance = SYR
+		leave_alliance = LEB
+		relation = { who = PAL value = -50 }
+		relation = { who = ISR value = 25 }
+		14879 = { secede_province = ISR }				#ISR fought hard - no Gaza for EGY
+		PAL = { 14879 = { secede_province = ISR } }
+		dissent = 15
+		national_unity = -5
+		set_country_flag = EGY180002triggered
+		ISR = { country_event = 222003 }				#ISR victory
+	}
+
+	option = {
+		name = "EVTOPTB180002"							#Fight to tha last man
+		ai_chance = { factor = 2 }						#Small chance - the AI is not supposed to be suicidal	
+		relation = { who = PAL value = 50 }
+		relation = { who = ISR value = -50 }
+		dissent = 30									#The people are seriously enraged now
+		national_unity = -10
+		set_country_flag = EGY180002triggered
+	}
+}
+
+#180003 - EGY hands over Palestine territories to PAL
+country_event = {
+	
+	id = 180003
+
+	is_triggered_only = yes
+
+	title = "EVTNAME180003"
+	desc = "EVTDESC180003"
+	picture = "1948_Gaza_strip"
+
+	option = {
+		name = "EVTOPTA180003"			
+		5955 = { secede_province = PAL }						#PAL gets all of Palestine
+		6138 = { secede_province = PAL }
+		6231 = { secede_province = PAL }
+		6327 = { secede_province = PAL }
+		6520 = { secede_province = PAL }
+		6231 = { secede_province = PAL }
+		7800 = { secede_province = PAL }
+        7801 = { secede_province = PAL }
+	    7802 = { secede_province = PAL }
+		12724 = { secede_province = PAL }
+		14112 = { secede_province = PAL }
+		14879 = { secede_province = PAL }
+		14881 = { secede_province = PAL }
+		
+		relation = { who = PAL value = 50 }						#Thank you!
+	}
+}
+
+#180004 - 1948_war_EGY follow-up event - Egypt has to decide what to do about Israel
+country_event = {
+	
+	id = 180004
+
+	is_triggered_only = yes
+
+	title = "EVTNAME180004"
+	desc = "EVTDESC180004"
+	picture = "1949_egypt_israel_armistice"
+
+	option = {
+		name = "EVTOPTA180004"			    				#Create an independent Palestine state
+		ai_chance = { factor = 70 }							#Likely
+		
+		release = PAL										#In case PAL was annexed during the war
+		5955 = { remove_core = ISR }						#No second chance for Israel
+		6138 = { remove_core = ISR }
+		6231 = { remove_core = ISR }
+		6327 = { remove_core = ISR }
+		6520 = { remove_core = ISR }
+		6231 = { remove_core = ISR }
+		7800 = { remove_core = ISR }
+        7801 = { remove_core = ISR }
+	    7802 = { remove_core = ISR }
+		12724 = { remove_core = ISR }
+		14112 = { remove_core = ISR }
+		14879 = { remove_core = ISR }
+		14881 = { remove_core = ISR }
+		14882 = { remove_core = ISR }
+		
+		 5955 = { secede_province = PAL }					#PAL gets all Palestine cores (but not the Golan Heights)
+		 6138 = { secede_province = PAL }
+		 6231 = { secede_province = PAL }
+		 6327 = { secede_province = PAL }
+		 6520 = { secede_province = PAL }
+		 6231 = { secede_province = PAL }
+		 7800 = { secede_province = PAL }
+         7801 = { secede_province = PAL }
+	     7802 = { secede_province = PAL }
+		12724 = { secede_province = PAL }
+		14112 = { secede_province = PAL }
+		14879 = { secede_province = PAL }
+		14881 = { secede_province = PAL }
+		
+		JOR = { country_event = 226003 }					#JOR hands over Palestine territories
+		SYR = { country_event = 335003 }					#SYR hands over Palestine territories
+		
+		national_unity = 3
+		dissent = -5
+		set_global_flag = 1948_war_israeli_defeat
+	}
+	
+	option = {
+		name = "EVTOPTB180004"								#Divide Palestine among the Arab states
+		ai_chance = { factor = 30 }							#Not unrealistic - Palestine as a state is a modern concept
+		
+		inherit = PAL	
+		 6231 = { add_core = SYR }							#Northern Palestine
+		12724 = { add_core = SYR }
+		14112 = { add_core = SYR }
+		
+		 6138 = { add_core = EGY }							#Southern Palestine
+		 6327 = { add_core = EGY }
+		 7801 = { add_core = EGY }
+		 7802 = { add_core = EGY }
+		14879 = { add_core = EGY }
+		
+		 5955 = { add_core = JOR }							#Central Palestine
+		 6520 = { add_core = JOR }
+		 7800 = { add_core = JOR }
+		14881 = { add_core = JOR }
+		
+		
+		 5955 = { remove_core = PAL }						#Palestine is dissolved
+		 6138 = { remove_core = PAL }
+		 6231 = { remove_core = PAL }
+		 6327 = { remove_core = PAL }
+		 6520 = { remove_core = PAL }
+		 6231 = { remove_core = PAL }
+		 7800 = { remove_core = PAL }
+         7801 = { remove_core = PAL }
+	     7802 = { remove_core = PAL }
+		12724 = { remove_core = PAL }
+		14112 = { remove_core = PAL }
+		14879 = { remove_core = PAL }
+		14881 = { remove_core = PAL }
+		14882 = { remove_core = PAL }
+		
+		 6231 = { secede_province = SYR }					#Give provinces to new owners
+		12724 = { secede_province = SYR }
+		14112 = { secede_province = SYR }
+		14882 = { secede_province = SYR }
+		 5955 = { secede_province = JOR }
+		 6520 = { secede_province = JOR }
+		 7800 = { secede_province = JOR }
+		14881 = { secede_province = JOR }
+		
+		JOR = { country_event = 226004 }					#JOR hands over Palestine territories to new owner
+		SYR = { country_event = 335004 }					#SYR hands over Palestine territories to new owner
+		
+															#Lower relations with UN @
+		national_unity = 5
+		dissent = -10
+		set_global_flag = 1948_war_israeli_defeat
+	}
+}
+
+#180005 - Palestine is divided among the Egypt, Jordan and Syria - EGY is not the main victor
+country_event = {
+	
+	id = 180005
+
+	is_triggered_only = yes
+
+	title = "EVTNAME180005"
+	desc = "EVTDESC180005"
+	picture = "1948_israel_unrwa_beach"
+
+	option = {
+		name = "EVTOPTA180005"			
+		6231 = { secede_province = SYR }					#Give provinces to new owners
+		12724 = { secede_province = SYR }
+		14112 = { secede_province = SYR }
+		14882 = { secede_province = SYR }
+		 5955 = { secede_province = JOR }
+		 6520 = { secede_province = JOR }
+		 7800 = { secede_province = JOR }
+		14881 = { secede_province = JOR }
+		national_unity = 1
+		dissent = -5
+	}
+}
+
+## ENG ##
+#181000 - ENG releases Israel
+country_event = {
+	
+	id = 181000
+
+	trigger = {
+		tag = ENG
+		owns = 5955
+		NOT = { 
+			has_global_flag = 1948_palestine_war_start
+			war_with = PAL
+			war_with = ISR
+		}
+		year = 1948		#British Mandate on Palestine has expired or is near expiring
+		month = 5		#Perhaps later replace with a country modifier in history/countries/ENG and has_country_modifier
+	}
+	
+	mean_time_to_happen = { days = 14 }
+
+	title = "EVTNAME181000"
+	desc = "EVTDESC181000"
+	picture = "1948_palestine_headline"
+
+	option = {
+		name = "EVTOPTA181000"			
+		 5955 = { remove_core = ENG }		#ENG loses its cores on Palestine
+		 6138 = { remove_core = ENG }
+		 6231 = { remove_core = ENG }
+		 6327 = { remove_core = ENG }
+		 6520 = { remove_core = ENG }
+		 6231 = { remove_core = ENG }
+		 7800 = { remove_core = ENG }
+         7801 = { remove_core = ENG }
+	     7802 = { remove_core = ENG }
+		12724 = { remove_core = ENG }
+		14112 = { remove_core = ENG }
+		14879 = { remove_core = ENG }
+		14881 = { remove_core = ENG }
+		
+		 6138 = { add_core = PAL }			#Ashdod
+		 6327 = { add_core = PAL }			#Bir Hadaj
+		 6520 = { add_core = PAL }			#Northern West Bank/Jenin
+		12724 = { add_core = PAL }			#Nazareth
+		14879 = { add_core = PAL }			#Gaza
+		14881 = { add_core = PAL }			#Southern West Bank/Herbon
+		
+		 5955 = { add_core = ISR }			#Jerusalem
+		 6231 = { add_core = ISR }			#Tiberias
+		 7800 = { add_core = ISR }			#Tel Aviv
+		 7801 = { add_core = ISR }			#Beer Sheva
+		 7802 = { add_core = ISR }			#Eilat
+		14112 = { add_core = ISR }			#Haifa
+	
+		release = ISR
+		release = PAL
+		ISR = { country_event = 222000 }	#ISR country setup
+		PAL = { country_event = 283000 }	#PAL country setup and DOW on Israel
+	}
+}
+
+#181001 - ENG releases Jordan
+country_event = {
+	
+	id = 181001
+
+	trigger = {
+		tag = ENG
+		owns = 7893
+		NOT = { has_global_flag = 1946_Jordan_released }
+		year = 1946
+		month = 5
+	}
+	
+	mean_time_to_happen = { days = 25 }
+	
+	major = yes
+
+	title = "EVTNAME181001"
+	desc = "EVTDESC181001"
+	picture = "1946_jordan_independence"
+
+	option = {
+		name = "EVTOPTA181001"
+		 7893 = { remove_core = ENG }		#ENG loses its cores on Jordan
+		 7892 = { remove_core = ENG }
+		 8062 = { remove_core = ENG }
+		 8061 = { remove_core = ENG }
+		 8144 = { remove_core = ENG }
+		 7978 = { remove_core = ENG }
+		 7894 = { remove_core = ENG }
+		 1789 = { remove_core = ENG }
+		 7895 = { remove_core = ENG }
+	
+		release = JOR
+		JOR = { country_event = 226006 }	#JOR country setup
+		military_access = JOR
+	}
+}
+
+## IRQ ##
+#221000 - 1948_war_IRQ follow-up event - Iraq has to decide what to do about Israel
+country_event = {
+	
+	id = 221000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME221000"
+	desc = "EVTDESC221000"
+	picture = "1948_Arab_volunteers"
+
+	option = {
+		name = "EVTOPTA221000"			    				#Send expeditionary forces
+		ai_chance = { factor = 99 }							#Historical choice
+		
+		dissent = -3										#The country concentrates on the war
+		national_unity = 3									#The country us unified
+		
+		relation = { who = PAL value = 100 }
+		relation = { who = ISR value = -150 }
+		
+		#create_alliance = PAL
+		#war = ISR
+		PAL = { country_event = 283007 }					#PAL gets a stability boost for new allies
+	}
+	
+	option = {
+		name = "EVTOPTB221000"								#Recognise Israel diplomatically
+		ai_chance = { factor = 1 }							#Ahistorical choice and very unlikely
+		dissent = 10										#The people won't like that
+		national_unity = -3
+		relation = { who = PAL value = -100 }
+		relation = { who = ISR value = 100 }
+															#Recognition of Israel @
+		non_aggression_pact = ISR							#To prevent exploitation by manual DOW
+	}
+}
+
+## ISR ##
+#222000 - ISR becomes independent from Britain - triggered by ENG event 181000
+country_event = {
+	
+	id = 222000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME222000"
+	desc = "EVTDESC222000"
+	picture = "1948_palestine_headline"
+
+	option = { #ISR gets cores on PAL territories
+		name = "EVTOPTA222000"
+		 6138 = { add_core = ISR }			#Ashdod
+		 6327 = { add_core = ISR }			#Bir Hadaj
+		 6520 = { add_core = ISR }			#Northern West Bank/Jenin
+		12724 = { add_core = ISR }			#Nazareth
+		14879 = { add_core = ISR }			#Gaza
+		14881 = { add_core = ISR }			#Southern West Bank/Herbon
+		supplies = 2500
+		money = 100
+		fuel = 50
+		load_oob = ISR_1948.txt		 		#Hagana, other Jewish militia and allied Bedouin tribes@
+		add_country_modifier = {
+			name = veteran_ISR_troops_delay
+			duration = 14
+		}
+	}
+}
+
+#222001 - Veteran troops arrive
+country_event = {
+	
+	id = 222001
+
+	trigger = {
+		tag = ISR
+		OR = {
+			war_with = PAL
+			AND = {
+				war_with = SYR
+				lost_national = 0.2
+			}
+			AND = {
+				war_with = JOR
+				lost_national = 0.2
+			}
+			AND = {
+				war_with = EGY
+				lost_national = 0.2
+			}
+			AND = {
+				war_with = IRQ
+				lost_national = 0.2
+			}
+			AND = {
+				war_with = LEB
+				lost_national = 0.2
+			}
+			AND = {
+				war_with = SAU
+				lost_national = 0.2
+			}
+		}
+		has_global_flag = 1948_palestine_war_start			#This goes only for the historical/semi-historical conflict
+		NOT = { has_country_flag = ISR222001triggered }
+		NOT = { has_country_modifier = veteran_ISR_troops_delay }
+	}
+	
+	mean_time_to_happen = { days = 45 }					#First ceasefire was aleady on May 22, 1948
+
+	title = "EVTNAME222001"
+	desc = "EVTDESC222001"
+	picture = "1948_Jewish_volunteers"
+
+	option = {
+		name = "EVTOPTA222001"			
+		supplies = 1500
+		fuel = 300
+		load_oob = ISR_1948_veteran_troops.txt			#The Israeli troops are expanded - the army grew from 35,000 to 65,000 soldiers Many WWII veterans, so only two militia divisions
+		set_country_flag = ISR222001triggered
+	}
+}
+
+#222002 - 1948 Early armistice with Egypt
+country_event = {
+	
+	id = 222002
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME222002"
+	desc = "EVTDESC222002"
+	picture = "1949_israel_egypt_armistice"
+
+	option = {
+		name = "EVTOPTA222002"					#Excellent!
+		dissent = -5
+		national_unity = 5
+	}
+}
+
+#222003 - 1948 Late armistice with Egypt
+country_event = {
+	
+	id = 222003
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME222003"
+	desc = "EVTDESC222003"
+	picture = "1949_israel_egypt_armistice"
+
+	option = {
+		name = "EVTOPTA222003"							#Excellent!
+		PAL = { 14879 = { secede_province = ISR } }		#ISR annexes the Gaza strip
+		EGY = { 14879 = { secede_province = ISR } }
+		dissent = -5
+		national_unity = 5
+	}
+}
+
+#222004 - 1948 Early armistice with Jordan
+country_event = {
+	
+	id = 222004
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME222004"
+	desc = "EVTDESC222004"
+	picture = "1949_Israel-Transjordan_armistice"
+
+	option = {
+		name = "EVTOPTA222004"					#Excellent!
+		dissent = -5
+		national_unity = 5
+	}
+}
+
+#222005 - 1948 Late armistice with Jordan
+country_event = {
+	
+	id = 222005
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME222005"
+	desc = "EVTDESC222005"
+	picture = "1949_Israel-Transjordan_armistice"
+
+	option = {
+		name = "EVTOPTA222005"							#Excellent!
+		PAL = { 14881 = { secede_province = ISR } }		#ISR annexes the West Bank
+		JOR = { 14881 = { secede_province = ISR } }
+		dissent = -5
+		national_unity = 5
+	}
+}
+
+#222006 - 1948 Early armistice with Syria
+country_event = {
+	
+	id = 222006
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME222006"
+	desc = "EVTDESC222006"
+	picture = "1949_israeli_syrian_armistice"
+
+	option = {
+		name = "EVTOPTA222006"					#Excellent!
+		dissent = -5
+		national_unity = 5
+	}
+}
+
+#222007 - 1948 Late armistice with Syria
+country_event = {
+	
+	id = 222007
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME222007"
+	desc = "EVTDESC222007"
+	picture = "1949_israeli_syrian_armistice"
+
+	option = {
+		name = "EVTOPTA222007"							#Excellent!
+		SYR = { 14882 = { secede_province = ISR } }		#ISR annexes the Golan Heights
+		14882 = { add_core = ISR }
+		dissent = -5
+		national_unity = 5
+	}
+}
+
+#222008 - An Arab minor offers a truce
+country_event = {
+	
+	id = 222008
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME222008"
+	desc = "EVTDESC222008"
+	picture = "1949_israeli_lebanese_armistice"
+
+	option = {
+		name = "EVTOPTA222008"					#Excellent!
+		dissent = -1
+	}
+}
+
+## JOR ##
+#226000 - 1948_war_JOR follow-up event - Transjordan has to decide what to do about Israel
+country_event = {
+	
+	id = 226000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME226000"
+	desc = "EVTDESC226000"
+	picture = "1948_Transjordan_Invades"
+
+	option = {
+		name = "EVTOPTA226000"			    				#Join the war against Israel and try to get the West Bank
+		ai_chance = { factor = 95 }							#Historical choice
+		
+		14881 = { add_core = JOR }							#JOR gets a core on the West Bank
+		dissent = -5										#The country concentrates on the war
+		national_unity = 5									#The country us unified
+		
+		relation = { who = PAL value = 100 }
+		relation = { who = ISR value = -200 }				#JOR wants to destroy them, after all
+		
+		create_alliance = PAL
+		join_war = PAL
+		PAL = { country_event = 283001 }					#PAL gets a stability boost for new allies
+		set_global_flag = 1948_palestine_war_JOR_joins
+	}
+	
+	option = {
+		name = "EVTOPTB226000"								#Send supplies
+		ai_chance = { factor = 5 }							#Ahistorical choice
+		money = -20								
+		manpower = -15								
+		supplies = -500				
+
+		relation = { who = PAL value = 50 }
+		relation = { who = ISR value = -50 }
+		
+		dissent = 1
+		PAL = { country_event = 283002 }
+	}
+	
+	option = {
+		name = "EVTOPTC226000"								#Recognise Israel diplomatically
+		ai_chance = { factor = 0 }							#Ahistorical choice and very unlikely
+		dissent = 15										#The people won't like that
+		national_unity = -5
+		relation = { who = PAL value = -100 }
+		relation = { who = ISR value = 100 }
+															#Recognition of Israel @
+															#The king is assassinated! @
+		non_aggression_pact = ISR							#To prevent exploitation by manual DOW
+	}
+}
+
+#226001 - 1948 War - First chance for a cease-fire
+country_event = {
+	
+	id = 226001
+
+	trigger = {
+		tag = JOR
+		JOR = { war_with = ISR }
+		has_global_flag = 1948_palestine_war_start		#This goes only for the historical/semi-historical conflict
+		lost_national = 0.15							#Should trigger if Israel conquers Jordanian territory 
+		NOT = { ISR = { lost_national = 0.75 } }			#ISR is not close to collapsing
+		NOT = { lost_national = 0.3 }
+		NOT = { has_country_flag = JOR226001triggered }
+	}
+	
+	mean_time_to_happen = { days = 3 }					#Will happen quickly once Israel marches into Jordan
+
+	title = "EVTNAME226001"
+	desc = "EVTDESC226001"
+	picture = "1949_Israel-Transjordan_armistice"
+
+	option = {
+		name = "EVTOPTA226001"							#Accept an armistice
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 1.25
+				war_exhaustion = 5
+			}
+			modifier = {
+				factor = 1.25
+				war_exhaustion = 10
+			}
+			modifier = {
+				factor = 1.25
+				war_exhaustion = 15
+			}
+			modifier = {
+				factor = 1.25
+				war_exhaustion = 20
+			}
+			modifier = {
+				factor = 1.5
+				war_exhaustion = 30
+			}
+			
+			modifier = {
+				factor = 1.5
+				lost_national = 0.20
+			}
+			
+			modifier = {
+				factor = 1.25
+				NOT = { total_amount_of_brigades = 8 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { total_amount_of_brigades = 5 }
+			}
+			modifier = {
+				factor = 10
+				NOT = { total_amount_of_brigades = 2 }
+			}
+			
+			modifier = {
+				factor = 1.25
+				ISR = { total_amount_of_brigades = 11 }
+			}
+		}
+		ISR = { end_war = JOR }
+		leave_alliance = PAL							#All alliances with Israeli neighbours end
+		leave_alliance = EGY
+		leave_alliance = SYR
+		leave_alliance = LEB
+		relation = { who = PAL value = -50 }
+		relation = { who = ISR value = 25 }
+		14881 = { secede_province = JOR }				#JOR occupies the West Bank
+		PAL = { 14881 = { secede_province = JOR } }
+		dissent = 10									#Due to propaganda, people didn't see that one coming
+		national_unity = -5
+		set_country_flag = JOR226001triggered
+		ISR = { country_event = 222004 }				#ISR victory over JOR
+	}
+
+	option = {
+		name = "EVTOPTB226001"							#Fight on
+		ai_chance = {
+			factor = 67
+			modifier = {
+				factor = 1.1
+				ISR = { NOT = { total_amount_of_brigades = 8 } }
+			}
+			modifier = {
+				factor = 1.5
+				ISR = { NOT = { total_amount_of_brigades = 5 } }
+			}
+			modifier = {
+				factor = 3
+				ISR = { NOT = { total_amount_of_brigades = 2 } }
+			}
+			
+			modifier = {
+				factor = 1.25
+				ISR = { war_exhaustion = 5 }
+			}
+			modifier = {
+				factor = 1.25
+				ISR = { war_exhaustion = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				ISR = { war_exhaustion = 15 }
+			}
+			modifier = {
+				factor = 1.25
+				ISR = { war_exhaustion = 20 }
+			}
+			modifier = {
+				factor = 1.5
+				ISR = { war_exhaustion = 30 }
+			}
+			
+			modifier = {
+				factor = 2
+				ISR = { lost_national = 0.20 }
+			}
+			modifier = {
+				factor = 5
+				ISR = { lost_national = 0.50 }
+			}
+			
+			modifier = {
+				factor = 1.5
+				ISR = { war_with = PAL }
+			}
+			modifier = {
+				factor = 1.33
+				ISR = { war_with = EGY }
+			}
+			modifier = {
+				factor = 1.25
+				ISR = { war_with = SYR }
+			}
+			modifier = {
+				factor = 1.1
+				ISR = { war_with = IRQ }
+			}
+			modifier = {
+				factor = 1.1
+				ISR = { war_with = LEB }
+			}
+			modifier = {
+				factor = 1.1
+				ISR = { war_with = SAU }
+			}
+		}
+		relation = { who = PAL value = 50 }
+		relation = { who = ISR value = -50 }
+		dissent = 2										#Israelis within our borders!?
+		national_unity = 2								#People are unified in their rage
+		set_country_flag = JOR226001triggered
+	}
+}
+
+#226002 - 1948 War - Second chance for a cease-fire
+country_event = {
+	
+	id = 226002
+
+	trigger = {
+		tag = JOR
+		war_with = ISR
+		has_global_flag = 1948_palestine_war_start			#This goes only for the historical/semi-historical conflict
+		war_exhaustion = 6
+		OR = {
+			lost_national = 0.5
+			AND = {
+				lost_national = 0.35
+				war_exhaustion = 20
+			}
+		}
+		NOT = { ISR = { lost_national = 0.5 } }				#ISR is not close to collapsing 
+		NOT = { has_country_flag = JOR226002triggered }
+	}
+	
+	mean_time_to_happen = { days = 15 }
+
+	title = "EVTNAME226002"
+	desc = "EVTDESC226002"
+	picture = "1949_Israel-Transjordan_armistice"
+
+	option = {
+		name = "EVTOPTA226002"							#Accept an armistice
+		ai_chance = { factor = 98 }	
+		ISR = { end_war = JOR }
+		leave_alliance = PAL							#All alliances with Israeli neighbours end
+		leave_alliance = EGY
+		leave_alliance = SYR
+		leave_alliance = LEB
+		relation = { who = PAL value = -50 }
+		relation = { who = ISR value = 25 }
+		14881 = { secede_province = ISR }				#ISR fought hard - no West Bank for JOR
+		PAL = { 14881 = { secede_province = ISR } }
+		dissent = 15
+		national_unity = -5
+		set_country_flag = JOR226002triggered
+		ISR = { country_event = 222005 }				#ISR victory
+	}
+
+	option = {
+		name = "EVTOPTB226002"							#Fight to tha last man
+		ai_chance = { factor = 2 }						#Small chance - the AI is not supposed to be suicidal	
+		relation = { who = PAL value = 50 }
+		relation = { who = ISR value = -50 }
+		dissent = 30									#The people are seriously enraged now
+		national_unity = -10
+		set_country_flag = JOR226002triggered
+	}
+}
+
+#226003 - JOR hands over Palestine territories to PAL
+country_event = {
+	
+	id = 226003
+
+	is_triggered_only = yes
+
+	title = "EVTNAME226003"
+	desc = "EVTDESC226003"
+	picture = "1949_Jericho_Conference"
+
+	option = {
+		name = "EVTOPTA226003"			
+		5955 = { secede_province = PAL }						#PAL gets all of Palestine
+		 6138 = { secede_province = PAL }
+		 6231 = { secede_province = PAL }
+		 6327 = { secede_province = PAL }
+		 6520 = { secede_province = PAL }
+		 6231 = { secede_province = PAL }
+		 7800 = { secede_province = PAL }
+         7801 = { secede_province = PAL }
+	     7802 = { secede_province = PAL }
+		12724 = { secede_province = PAL }
+		14112 = { secede_province = PAL }
+		14879 = { secede_province = PAL }
+		14881 = { secede_province = PAL }
+		14882 = { secede_province = PAL }
+		relation = { who = PAL value = 50 }						#Thank you!
+	}
+}
+
+#226004 - Palestine is divided among the Egypt, Jordan and Syria - SYR is not the main victor
+country_event = {
+	
+	id = 226004
+
+	is_triggered_only = yes
+
+	title = "EVTNAME226004"
+	desc = "EVTDESC226004"
+	picture = "1948_Palistinian_refugees"
+
+	option = {
+		name = "EVTOPTA226004"
+		12724 = { secede_province = SYR }
+		14112 = { secede_province = SYR }
+		14882 = { secede_province = SYR }
+		
+		 6138 = { secede_province = EGY }
+		 6327 = { secede_province = EGY }
+		 7801 = { secede_province = EGY }
+		 7802 = { secede_province = EGY }
+		14879 = { secede_province = EGY }
+		
+		national_unity = 1
+		dissent = -5
+	}
+}
+
+#226005 - 1948_war_JOR follow-up event - Jordan has to decide what to do about Israel
+country_event = {
+	
+	id = 226005
+
+	is_triggered_only = yes
+
+	title = "EVTNAME226005"
+	desc = "EVTDESC226005"
+	picture = "1951_Abdullah_Glubb"
+
+	option = {
+		name = "EVTOPTA226005"			    				#Create an independent Palestine state
+		ai_chance = { factor = 50 }							#JOR wants the West Bank
+		
+		release = PAL										#In case PAL was annexed during the war
+		 5955 = { remove_core = ISR }						#No second chance for Israel
+		 6138 = { remove_core = ISR }
+		 6231 = { remove_core = ISR }
+		 6327 = { remove_core = ISR }
+		 6520 = { remove_core = ISR }
+		 6231 = { remove_core = ISR }
+		 7800 = { remove_core = ISR }
+         7801 = { remove_core = ISR }
+	     7802 = { remove_core = ISR }
+		12724 = { remove_core = ISR }
+		14112 = { remove_core = ISR }
+		14879 = { remove_core = ISR }
+		14881 = { remove_core = ISR }
+		14882 = { remove_core = ISR }
+									
+		 5955 = { secede_province = PAL }					#PAL gets all Palestine cores (but not the Golan Heights)
+		 6138 = { secede_province = PAL }
+		 6231 = { secede_province = PAL }
+		 6327 = { secede_province = PAL }
+		 6520 = { secede_province = PAL }
+		 6231 = { secede_province = PAL }
+		 7800 = { secede_province = PAL }
+         7801 = { secede_province = PAL }
+	     7802 = { secede_province = PAL }
+		12724 = { secede_province = PAL }
+		14112 = { secede_province = PAL }
+		14879 = { secede_province = PAL }
+		14881 = { secede_province = PAL }
+		14882 = { secede_province = PAL }
+		SYR = { country_event = 335004 }					#SYR hands over Palestine territories
+		EGY = { country_event = 180003 }					#EGY hands over Palestine territories
+		
+		national_unity = 3
+		dissent = -5
+		set_global_flag = 1948_war_israeli_defeat
+	}
+	
+	option = {
+		name = "EVTOPTB226005"								#Divide Palestine among the Arab states
+		ai_chance = { factor = 50 }
+		
+		inherit = PAL
+		 6231 = { add_core = SYR }							#Northern Palestine
+		12724 = { add_core = SYR }
+		14112 = { add_core = SYR }
+		14882 = { add_core = SYR }
+		
+		 6138 = { add_core = EGY }							#Southern Palestine
+		 6327 = { add_core = EGY }
+		 7801 = { add_core = EGY }
+		 7802 = { add_core = EGY }
+		14879 = { add_core = EGY }
+		
+		 5955 = { add_core = JOR }							#Central Palestine
+		 6520 = { add_core = JOR }
+		 7800 = { add_core = JOR }
+		14881 = { add_core = JOR }
+		
+		 5955 = { remove_core = PAL }						#Palestine is dissolved
+		 6138 = { remove_core = PAL }
+		 6231 = { remove_core = PAL }
+		 6327 = { remove_core = PAL }
+		 6520 = { remove_core = PAL }
+		 6231 = { remove_core = PAL }
+		 7800 = { remove_core = PAL }
+         7801 = { remove_core = PAL }
+	     7802 = { remove_core = PAL }
+		12724 = { remove_core = PAL }
+		14112 = { remove_core = PAL }
+		14879 = { remove_core = PAL }
+		14881 = { remove_core = PAL }
+		14882 = { remove_core = PAL }
+		
+		12724 = { secede_province = SYR }
+		14112 = { secede_province = SYR }
+		14882 = { secede_province = SYR }
+		
+		 6138 = { secede_province = EGY }
+		 6327 = { secede_province = EGY }
+		 7801 = { secede_province = EGY }
+		 7802 = { secede_province = EGY }
+		14879 = { secede_province = EGY }
+		SYR = { country_event = 335004 }					#SYR hands over Palestine territories to new owner
+		EGY = { country_event = 180005 }					#EGY hands over Palestine territories to new owner
+		
+															#Lower relations with UN @
+		national_unity = 5
+		dissent = -10
+		set_global_flag = 1948_war_israeli_defeat
+	}
+}
+ 
+#226006 - JOR becomes independent from Britain - triggered by ENG event 181001
+country_event = {
+	
+	id = 226006
+
+	is_triggered_only = yes
+
+	title = "EVTNAME226006"
+	desc = "EVTDESC226006"
+	picture = "1946_jordan_independence"
+
+	option = {
+		name = "EVTOPTA226006"
+		 6520 = { add_core = JOR }					#JOR gets cores on the West Bank
+		14881 = { add_core = JOR }
+	
+		supplies = 1000
+		money = 50
+		fuel = 25
+		load_oob = JOR_1946_Arab_Legion.txt			#Arab Legion
+		set_global_flag = 1946_Jordan_released
+	}
+}
+
+## LEB ##
+#242000 - 1948_war_LEB follow-up event - LEB has to decide what to do about Israel
+country_event = {
+	
+	id = 242000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME242000"
+	desc = "EVTDESC242000"
+	picture = "1948_Lebanon_Joins"
+
+	option = {
+		name = "EVTOPTA242000"			    				#Join the war against Israel
+		ai_chance = { factor = 1 }							#Would be suicidal for AI and LEB didn'r really fight historically 
+		
+		relation = { who = PAL value = 100 }
+		relation = { who = ISR value = -200 }
+		
+		create_alliance = PAL
+		join_war = PAL
+		PAL = { country_event = 283012 }					#PAL gets a stability boost for new allies
+		set_global_flag = 1948_palestine_war_LEB_joins
+	}
+	
+	option = {
+		name = "EVTOPTB242000"								#Send supplies and a token force
+		
+		ai_chance = { factor = 98 }							#Historical choice
+		money = -10								
+		manpower = -2								
+		supplies = -100				
+
+		relation = { who = PAL value = 50 }
+		relation = { who = ISR value = -50 }
+		SYR =  { military_access = LEB }
+		dissent = 1
+		PAL = { country_event = 283010 }
+	}
+	
+	option = {
+		name = "EVTOPTC242000"								#Recognise Israel diplomatically
+		ai_chance = { factor = 1 }							#Ahistorical choice and very unlikely
+		dissent = 3											#The people won't like that
+		national_unity = -5
+		relation = { who = PAL value = -100 }
+		relation = { who = ISR value = 100 }
+															#Recognition of Israel @
+		non_aggression_pact = ISR							#To prevent exploitation by manual DOW
+	}
+}
+
+## PAL ##
+#283000 - PAL becomes independent from Britain - triggered by ENG event 181000
+country_event = {
+	
+	id = 283000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME283000"
+	desc = "EVTDESC283000"
+	picture = "1948_UN_vote_Palestine"
+
+	option = {
+		name = "EVTOPTA283000"
+		 5955 = { add_core = PAL }					#PAL gets cores on ISR territories
+		 6231 = { add_core = PAL }	
+		 7800 = { add_core = PAL }
+		 7801 = { add_core = PAL }
+		 7802 = { add_core = PAL }
+		14112 = { add_core = PAL }
+	
+		supplies = 1000
+		money = 50
+		fuel = 25
+		load_oob = PAL_1948_Army_of_the_Holy.txt		#Army of the Holy War @
+		PAL = { war = ISR }
+		set_global_flag = 1948_palestine_war_start
+	}
+}
+
+#283001 - JOR joins the war against Israel
+country_event = {
+	
+	id = 283001
+
+	is_triggered_only = yes
+
+	title = "EVTNAME283001"
+	desc = "EVTDESC283001"
+	picture = "1948_Transjordan_Joins"
+
+	option = {
+		name = "EVTOPTA283001"
+		national_unity = 3
+		dissent = -1
+	}
+}
+
+#283002 - JOR sends support against Israel
+country_event = {
+	
+	id = 283002
+
+	is_triggered_only = yes
+
+	title = "EVTNAME283002"
+	desc = "EVTDESC283002"
+	picture = "1948_Arab_volunteers"
+
+	option = {
+		name = "EVTOPTA283002"
+		ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 0
+				lost_national = 0.95
+			}
+		}
+		national_unity = 1
+		supplies = 200
+		money = 100
+		fuel = 10
+		capital_scope = { militia_brigade = current }
+	}
+
+	option = {
+		name = "EVTOPTB283002"
+		ai_chance = { 
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { total_amount_of_brigades = 2 }
+			}
+		}
+		national_unity = 2
+		supplies = 400
+		money = 200
+		fuel = 20
+		manpower = 4
+	}
+}
+
+#283003 - SYR joins the war against Israel
+country_event = {
+	
+	id = 283003
+
+	is_triggered_only = yes
+
+	title = "EVTNAME283003"
+	desc = "EVTDESC283003"
+	picture = "1948_Syria_Joins"
+
+	option = {
+		name = "EVTOPTA283003"
+		national_unity = 3
+		dissent = -1
+	}
+}
+
+#283004 - SYR sends support against Israel
+country_event = {
+	
+	id = 283004
+
+	is_triggered_only = yes
+
+	title = "EVTNAME283004"
+	desc = "EVTDESC283004"
+	picture = "1948_Arab_volunteers"
+
+	option = {
+		name = "EVTOPTA283004"
+		ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 0
+				lost_national = 0.95
+			}
+		}
+		national_unity = 2
+		supplies = 400
+		money = 200
+		fuel = 20
+		capital_scope = { militia_brigade = current }
+		capital_scope = { militia_brigade = current }
+	}
+
+	option = {
+		name = "EVTOPTB283004"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { total_amount_of_brigades = 2 }
+			}
+		}
+		national_unity = 2
+		supplies = 800
+		money = 400
+		fuel = 40
+		manpower = 8
+	}
+}
+
+#283005 - EGY joins the war against Israel
+country_event = {
+	
+	id = 283005
+
+	is_triggered_only = yes
+
+	title = "EVTNAME283005"
+	desc = "EVTDESC283005"
+	picture = "1948_Egypt_Joins"
+
+	option = {
+		name = "EVTOPTA283005"
+		national_unity = 5
+		dissent = -2
+	}
+}
+
+#283006 - EGY sends support against Israel
+country_event = {
+	
+	id = 283006
+
+	is_triggered_only = yes
+
+	title = "EVTNAME283006"
+	desc = "EVTDESC283006"
+	picture = "1950_unloading_supplies"
+
+	option = {
+		name = "EVTOPTA283006"
+		ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 0
+				lost_national = 0.95
+			}
+		}
+		national_unity = 2
+		supplies = 400
+		money = 200
+		fuel = 20
+		capital_scope = { militia_brigade = current }
+		capital_scope = { militia_brigade = current }
+	}
+
+	option = {
+		name = "EVTOPTB283006"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { total_amount_of_brigades = 2 }
+			}
+		}
+		national_unity = 2
+		supplies = 800
+		money = 400
+		fuel = 40
+		manpower = 8
+	}
+}
+
+#283007 - IRQ sends support against Israel
+country_event = {
+	
+	id = 283007
+
+	is_triggered_only = yes
+
+	title = "EVTNAME283007"
+	desc = "EVTDESC283007"
+	picture = "1948_Arab_volunteers"
+
+	option = {
+		name = "EVTOPTA283007"
+		ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 0
+				lost_national = 0.95
+			}
+		}
+		national_unity = 1
+		supplies = 200
+		money = 100
+		fuel = 10
+		capital_scope = { militia_brigade = current }
+	}
+
+	option = {
+		name = "EVTOPTB283007"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { total_amount_of_brigades = 2 }
+			}
+		}
+		national_unity = 2
+		supplies = 400
+		money = 200
+		fuel = 20
+		manpower = 4
+	}
+}
+
+#283008 - SAU sends support against Israel
+country_event = {
+	
+	id = 283008
+
+	is_triggered_only = yes
+
+	title = "EVTNAME283008"
+	desc = "EVTDESC283008"
+	picture = "1950_unloading_supplies"
+
+	option = {
+		name = "EVTOPTA283008"
+		ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 0
+				lost_national = 0.95
+			}
+		}
+		national_unity = 1
+		supplies = 200
+		money = 100
+		fuel = 10
+		capital_scope = { militia_brigade = current }
+	}
+
+	option = {
+		name = "EVTOPTB283008"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { total_amount_of_brigades = 2 }
+			}
+		}
+		national_unity = 2
+		supplies = 400
+		money = 200
+		fuel = 20
+		manpower = 4
+	}
+}
+
+#283009 - An Arab minor sends support against Israel
+country_event = {
+	
+	id = 283009
+
+	is_triggered_only = yes
+
+	title = "EVTNAME283009"
+	desc = "EVTDESC283009"
+	picture = "1950_unloading_supplies"
+
+	option = {
+		name = "EVTOPTA283009"	
+		manpower = 2
+		supplies = 100
+		money = 10
+	}
+}
+
+#283010 - LEB sends support against Israel
+country_event = {
+	
+	id = 283010
+
+	is_triggered_only = yes
+
+	title = "EVTNAME283010"
+	desc = "EVTDESC283010"
+	picture = "1948_Arab_volunteers"
+
+	option = {
+		name = "EVTOPTA283010"
+		ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 0
+				lost_national = 0.95
+			}
+		}
+		national_unity = 1
+		supplies = 200
+		money = 100
+		fuel = 10
+		capital_scope = { militia_brigade = current }
+	}
+
+	option = {
+		name = "EVTOPTB283010"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { total_amount_of_brigades = 2 }
+			}
+		}
+		national_unity = 2
+		supplies = 400
+		money = 200
+		fuel = 20
+		manpower = 4
+	}
+}
+
+#283011 - Israel is defeated with PAL as the major victor
+country_event = {
+	
+	id = 283011
+
+	trigger = {
+		tag = PAL
+		has_global_flag = 1948_palestine_war_start				#There WAS actually a war against Israel
+		NOT = { exists = ISR }									#Israel is gone
+		NOT = { has_global_flag = 1948_war_israeli_defeat }
+		OR = {
+		7800 = { controlled_by = PAL }							#PAL controls Tel Aviv and hence is the major victor
+			AND = {
+				NOT = {
+				7800 = { controlled_by = JOR }					#In case some non-major Arab state takes Tel Aviv
+				7800 = { controlled_by = EGY }
+				7800 = { controlled_by = SYR }
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 3 }
+
+	title = "EVTNAME283011"
+	desc = "EVTDESC283011"		
+	picture = "1949_egypt_israel_armistice"
+
+	option = {
+		name = "EVTOPTA283011"
+		national_unity = 20										#PAL has proven itself as a nation
+		dissent = -15
+		EGY = { country_event = 180003 }						#EGY hands over Palestine territories
+		JOR = { country_event = 226003 }						#JOR hands over Palestine territories
+		SYR = { country_event = 335003 }						#SYR hands over Palestine territories
+		capital = 14881											#Jerusalem becomes the captial		 
+		set_global_flag = 1948_war_israeli_defeat
+	}
+}
+
+#283012 - LEB joins the war against Israel
+country_event = {
+	
+	id = 283012
+
+	is_triggered_only = yes
+
+	title = "EVTNAME283012"
+	desc = "EVTDESC283012"
+	picture = "1948_Lebanon_Joins"
+
+	option = {
+		name = "EVTOPTA283012"
+		national_unity = 3
+		dissent = -1
+	}
+}
+
+## SAU ##
+#305000 - 1948_war_SAU follow-up event - the Saudi Arabia has to decide what to do about Israel
+country_event = {
+	
+	id = 305000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME305000"
+	desc = "EVTDESC305000"
+	picture = "1948_Arab_volunteers"
+
+	option = {
+		name = "EVTOPTA305000"			    				#Send expeditionary forces
+		ai_chance = { factor = 99 }							#Historical choice
+		
+		dissent = -3										#The country concentrates on the war
+		national_unity = 3									#The country us unified
+		
+		relation = { who = PAL value = 100 }
+		relation = { who = ISR value = -150 }
+		
+		#create_alliance = PAL
+		#war = ISR
+		PAL = { country_event = 283008 }					#PAL gets a stability boost for new allies
+	}
+	
+	option = {
+		name = "EVTOPTB305000"								#Recognise Israel diplomatically
+		ai_chance = { factor = 1 }							#Ahistorical choice and very unlikely
+		dissent = 10										#The people won't like that
+		national_unity = -3
+		relation = { who = PAL value = -100 }
+		relation = { who = ISR value = 100 }
+															#Recognition of Israel @
+		non_aggression_pact = ISR							#To prevent exploitation by manual DOW
+	}
+}
+
+## SYR ##
+#335000 - 1948_war_SYR follow-up event - Syria has to decide what to do about Israel
+country_event = {
+	
+	id = 335000
+
+	is_triggered_only = yes
+
+	title = "EVTNAME335000"
+	desc = "EVTDESC335000"
+	picture = "1948_Syria_decides"
+
+	option = {
+		name = "EVTOPTA335000"			    				#Join the war against Israel
+		ai_chance = { factor = 90 }							#Historical choice
+		
+		dissent = -5										#The country concentrates on the war
+		national_unity = 5									#The country us unified
+		
+		relation = { who = PAL value = 100 }
+		relation = { who = ISR value = -200 }				#SYR wants to destroy them, after all
+		
+		create_alliance = PAL
+		join_war = PAL
+		PAL = { country_event = 283003 }					#PAL gets a stability boost for new allies
+		set_global_flag = 1948_palestine_war_SYR_joins
+	}
+	
+	option = {
+		name = "EVTOPTB335000"									#Send supplies
+		ai_chance = { factor = 10 }							#Ahistorical choice
+		money = -40								
+		manpower = -25								
+		supplies = -800				
+
+		relation = { who = PAL value = 50 }
+		relation = { who = ISR value = -50 }
+		
+		dissent = 1
+		PAL = { country_event = 283004 }
+	}
+	
+	option = {
+		name = "EVTOPTC335000"								#Recognise Israel diplomatically
+		ai_chance = { factor = 0 }							#Ahistorical choice and very unlikely
+		dissent = 15										#The people won't like that
+		national_unity = -5
+		relation = { who = PAL value = -100 }
+		relation = { who = ISR value = 100 }
+															#Recognition of Israel @
+		non_aggression_pact = ISR							#To prevent exploitation by manual DOW
+	}
+}
+
+#335001 - 1948 War - First chance for a cease-fire
+country_event = {
+	
+	id = 335001
+
+	trigger = {
+		tag = SYR
+		SYR = { war_with = ISR }
+		has_global_flag = 1948_palestine_war_start		#This goes only for the historical/semi-historical conflict
+		lost_national = 0.10							#Should trigger if Israel conquers Syrian territory 
+		NOT = { lost_national = 0.5 }
+		NOT = { ISR = { lost_national = 0.75 } }			#ISR is not close to collapsing 
+		NOT = { has_country_flag = SYR335001triggered }
+	}
+	
+	mean_time_to_happen = { days = 3 }					#Will happen quickly once Israel marches into Syria
+
+	title = "EVTNAME335001"
+	desc = "EVTDESC335001"
+	picture = "1949_israeli_syrian_armistice"
+
+	option = {
+		name = "EVTOPTA335001"							#Accept an armistice
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 1.25
+				war_exhaustion = 5
+			}
+			modifier = {
+				factor = 1.25
+				war_exhaustion = 10
+			}
+			modifier = {
+				factor = 1.25
+				war_exhaustion = 15
+			}
+			modifier = {
+				factor = 1.25
+				war_exhaustion = 20
+			}
+			modifier = {
+				factor = 1.5
+				war_exhaustion = 30
+			}
+			
+			modifier = {
+				factor = 1.5
+				lost_national = 0.20
+			}
+			
+			modifier = {
+				factor = 1.25
+				NOT = { total_amount_of_brigades = 8 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { total_amount_of_brigades = 5 }
+			}
+			modifier = {
+				factor = 10
+				NOT = { total_amount_of_brigades = 2 }
+			}
+			
+			modifier = {
+				factor = 1.25
+				ISR = { total_amount_of_brigades = 11 }
+			}
+		}
+		ISR = { end_war = SYR }
+		leave_alliance = PAL							#All alliances with Israeli neighbours end
+		leave_alliance = EGY
+		leave_alliance = JOR
+		leave_alliance = LEB
+		relation = { who = PAL value = -50 }
+		relation = { who = ISR value = 25 }
+		dissent = 10									#Due to propaganda, people didn't see that one coming
+		national_unity = -5
+		set_country_flag = SYR335001triggered
+		ISR = { country_event = 222006 }				#ISR victory over SYR
+	}
+
+	option = {
+		name = "EVTOPTB335001"							#Fight on
+		ai_chance = {
+			factor = 67
+			modifier = {
+				factor = 1.1
+				ISR = { NOT = { total_amount_of_brigades = 8 } }
+			}
+			modifier = {
+				factor = 1.5
+				ISR = { NOT = { total_amount_of_brigades = 5 } }
+			}
+			modifier = {
+				factor = 3
+				ISR = { NOT = { total_amount_of_brigades = 2 } }
+			}
+			
+			modifier = {
+				factor = 1.25
+				ISR = { war_exhaustion = 5 }
+			}
+			modifier = {
+				factor = 1.25
+				ISR = { war_exhaustion = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				ISR = { war_exhaustion = 15 }
+			}
+			modifier = {
+				factor = 1.25
+				ISR = { war_exhaustion = 20 }
+			}
+			modifier = {
+				factor = 1.5
+				ISR = { war_exhaustion = 30 }
+			}
+			
+			modifier = {
+				factor = 2
+				ISR = { lost_national = 0.20 }
+			}
+			modifier = {
+				factor = 5
+				ISR = { lost_national = 0.50 }
+			}
+			
+			modifier = {
+				factor = 1.5
+				ISR = { war_with = PAL }
+			}
+			modifier = {
+				factor = 1.33
+				ISR = { war_with = EGY }
+			}
+			modifier = {
+				factor = 1.25
+				ISR = { war_with = JOR }
+			}
+			modifier = {
+				factor = 1.1
+				ISR = { war_with = IRQ }
+			}
+			modifier = {
+				factor = 1.1
+				ISR = { war_with = LEB }
+			}
+			modifier = {
+				factor = 1.1
+				ISR = { war_with = SAU }
+			}
+		}
+		relation = { who = PAL value = 50 }
+		relation = { who = ISR value = -50 }
+		dissent = 2										#Israelis within our borders!?
+		national_unity = 2								#People are unified in their rage
+		set_country_flag = SYR335001triggered
+	}
+}
+
+#335002 - 1948 War - Second chance for a cease-fire
+country_event = {
+	
+	id = 335002
+
+	trigger = {
+		tag = SYR
+		war_with = ISR
+		has_global_flag = 1948_palestine_war_start		#This goes only for the historical/semi-historical conflict
+		war_exhaustion = 6
+		OR = {
+			lost_national = 0.5
+			AND = {
+				lost_national = 0.35
+				war_exhaustion = 20
+			}
+		}
+		NOT = { ISR = { lost_national = 0.6 } }			#ISR is not close to collapsing 
+		NOT = { has_country_flag = SYR335002triggered }
+	}
+	
+	mean_time_to_happen = { days = 15 }
+
+	title = "EVTNAME335002"
+	desc = "EVTDESC335002"
+	picture = "1949_israeli_syrian_armistice"
+
+	option = {
+		name = "EVTOPTA335002"							#Accept an armistice
+		ai_chance = { factor = 98 }	
+		ISR = { end_war = SYR }
+		leave_alliance = PAL							#All alliances with Israeli neighbours end
+		leave_alliance = EGY
+		leave_alliance = SYR
+		leave_alliance = LEB
+		relation = { who = PAL value = -50 }
+		relation = { who = ISR value = 25 }
+		14882 = { secede_province = ISR }				#ISR fought hard - SYR has to give up the Golan Heights
+		dissent = 15
+		national_unity = -5
+		set_country_flag = SYR335002triggered
+		ISR = { country_event = 222007 }				#ISR victory
+	}
+
+	option = {
+		name = "EVTOPTB335002"							#Fight to tha last man
+		ai_chance = { factor = 2 }						#Small chance - the AI is not supposed to be suicidal	
+		relation = { who = PAL value = 50 }
+		relation = { who = ISR value = -50 }
+		dissent = 30									#The people are seriously enraged now
+		national_unity = -10
+		set_country_flag = SYR335002triggered
+	}
+}
+
+#335003 - SYR hands over Palestine territories to PAL
+country_event = {
+	
+	id = 335003
+
+	is_triggered_only = yes
+
+	title = "EVTNAME335003"
+	desc = "EVTDESC335003"
+	picture = "1948_Gaza_strip"
+
+	option = {
+		name = "EVTOPTA335003"			
+		 5955 = { secede_province = PAL }					#PAL gets all Palestine cores (but not the Golan Heights)
+		 6138 = { secede_province = PAL }
+		 6231 = { secede_province = PAL }
+		 6327 = { secede_province = PAL }
+		 6520 = { secede_province = PAL }
+		 6231 = { secede_province = PAL }
+		 7800 = { secede_province = PAL }
+         7801 = { secede_province = PAL }
+	     7802 = { secede_province = PAL }
+		12724 = { secede_province = PAL }
+		14112 = { secede_province = PAL }
+		14879 = { secede_province = PAL }
+		14881 = { secede_province = PAL }
+		14882 = { secede_province = PAL }
+		relation = { who = PAL value = 50 }						#Thank you!
+	}
+}
+
+#335004 - Palestine is divided among the Egypt, Jordan and Syria - SYR is not the main victor
+country_event = {
+	
+	id = 335004
+
+	is_triggered_only = yes
+
+	title = "EVTNAME335004"
+	desc = "EVTDESC335004"
+	picture = "1948_Palistinian_refugees"
+
+	option = {
+		name = "EVTOPTA335004"			
+		 6138 = { secede_province = EGY }
+		 6327 = { secede_province = EGY }
+		 7801 = { secede_province = EGY }
+		 7802 = { secede_province = EGY }
+		14879 = { secede_province = EGY }
+		 5955 = { secede_province = JOR }
+		 6520 = { secede_province = JOR }
+		 7800 = { secede_province = JOR }
+		14881 = { secede_province = JOR }
+		national_unity = 5
+		dissent = -5
+	}
+}
+
+#335005 - 1948_war_SYR follow-up event - Syria has to decide what to do about Israel
+country_event = {
+	
+	id = 335005
+
+	is_triggered_only = yes
+
+	title = "EVTNAME335005"
+	desc = "EVTDESC335005"
+	picture = "1949_Syria_decides"
+
+	option = {
+		name = "EVTOPTA335005"			    				#Create an independent Palestine state
+		ai_chance = { factor = 70 }							#Likely
+		
+		release = PAL										#In case PAL was annexed during the war
+		 5955 = { remove_core = ISR }						#No second chance for Israel
+		 6138 = { remove_core = ISR }
+		 6231 = { remove_core = ISR }
+		 6327 = { remove_core = ISR }
+		 6520 = { remove_core = ISR }
+		 6231 = { remove_core = ISR }
+		 7800 = { remove_core = ISR }
+         7801 = { remove_core = ISR }
+	     7802 = { remove_core = ISR }
+		12724 = { remove_core = ISR }
+		14112 = { remove_core = ISR }
+		14879 = { remove_core = ISR }
+		14881 = { remove_core = ISR }
+		14882 = { remove_core = ISR }
+									
+		 5955 = { secede_province = PAL }					#PAL gets all Palestine cores (but not the Golan Heights)
+		 6138 = { secede_province = PAL }
+		 6231 = { secede_province = PAL }
+		 6327 = { secede_province = PAL }
+		 6520 = { secede_province = PAL }
+		 6231 = { secede_province = PAL }
+		 7800 = { secede_province = PAL }
+         7801 = { secede_province = PAL }
+	     7802 = { secede_province = PAL }
+		12724 = { secede_province = PAL }
+		14112 = { secede_province = PAL }
+		14879 = { secede_province = PAL }
+		14881 = { secede_province = PAL }
+		14882 = { secede_province = PAL }
+		JOR = { country_event = 226003 }					#JOR hands over Palestine territories
+		EGY = { country_event = 180003 }					#EGY hands over Palestine territories
+		
+		national_unity = 3
+		dissent = -5
+		set_global_flag = 1948_war_israeli_defeat
+	}
+	
+	option = {
+		name = "EVTOPTB335005"								#Divide Palestine among the Arab states
+		ai_chance = { factor = 30 }							#Not unrealistic - Palestine as a state is a modern concept
+		
+		inherit = PAL
+		6231 = { add_core = SYR }							#Northern Palestine
+		12724 = { add_core = SYR }
+		14112 = { add_core = SYR }
+		14882 = { add_core = SYR }
+		
+		 6138 = { add_core = EGY }							#Southern Palestine
+		 6327 = { add_core = EGY }
+		 7801 = { add_core = EGY }
+		 7802 = { add_core = EGY }
+		14879 = { add_core = EGY }
+		
+		 5955 = { add_core = JOR }							#Central Palestine
+		 6520 = { add_core = JOR }
+		 7800 = { add_core = JOR }
+		14881 = { add_core = JOR }
+		
+		 5955 = { remove_core = PAL }						#Palestine is dissolved
+		 6138 = { remove_core = PAL }
+		 6231 = { remove_core = PAL }
+		 6327 = { remove_core = PAL }
+		 6520 = { remove_core = PAL }
+		 6231 = { remove_core = PAL }
+		 7800 = { remove_core = PAL }
+         7801 = { remove_core = PAL }
+	     7802 = { remove_core = PAL }
+		12724 = { remove_core = PAL }
+		14112 = { remove_core = PAL }
+		14879 = { remove_core = PAL }
+		14881 = { remove_core = PAL }
+		14882 = { remove_core = PAL }
+		
+		 6138 = { secede_province = EGY }
+		 6327 = { secede_province = EGY }
+		 7801 = { secede_province = EGY }
+		 7802 = { secede_province = EGY }
+		14879 = { secede_province = EGY }
+		
+		 5955 = { secede_province = JOR }
+		 6520 = { secede_province = JOR }
+		 7800 = { secede_province = JOR }
+		14881 = { secede_province = JOR }
+		JOR = { country_event = 226004 }					#JOR hands over Palestine territories to new owner
+		EGY = { country_event = 180005 }					#EGY hands over Palestine territories to new owner
+		
+															#Lower relations with UN @
+		national_unity = 5
+		dissent = -10
+		set_global_flag = 1948_war_israeli_defeat
+	}
+}

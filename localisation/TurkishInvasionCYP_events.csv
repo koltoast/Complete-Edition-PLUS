@@ -1,0 +1,66 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;;x
+# Decisions ;;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;;x
+#CYP;;;;;;;;;;;;;;;x
+CYP_demand_independence_title;Put title here;Demand Independence;;;;;;;;;;;;;x
+CYP_demand_independence_desc;Put desc here;Today, the Cypriot people have submitted a formal demand to Westminster, backed by a majority vote from the Dominion of Cyprus. Now we can only hope that our British benefactors do the right thing.;;;;;;;;;;;;;x
+CYP_UDI_title;Unilaterally declare Independence;;;;;;;;;;;;;;x
+CYP_UDI_desc;The Cypriot people have suffered under the British thumb for far too long. It is time to forge our own destiny, with or without their blessing!;;;;;;;;;;;;;;x
+#GRE;;;;;;;;;;;;;;;x
+dec_GRE_cypriot_unionists_title;Support Cypriot Pro-Unionists;;;;;;;;;;;;;;x
+dec_GRE_cypriot_unionists_desc;Now that Greece is free from British Imperialism, we have the opportunity to support the Greek Nationalist EOKA organisastion. By doing so, there is every possibility that Cyprus will once again become a territory of the glorious Hellenic Republic!;;;;;;;;;;;;;;x
+#TUR;;;;;;;;;;;;;;;x
+dec_TUR_cypriot_issue_title;The Cypriot Issue;;;;;;;;;;;;;;x
+dec_TUR_cypriot_issue_desc;With Cyprus now under the rule of the Pro-Greek unionist Nikos Sampson after a military coup, it is now well within the realms of possibility that the nation will secede into the Hellenic Republic. For the good of our citizens in Cyprus, it is important that we take an official stance on the issue.;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;;x
+# Events ; REMOVE HASH FOR ACTIVE EVENTS AND OPTIONS;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;;x
+#ENG;;;;;;;;;;;;;;;x
+EVTNAME181040;The Cypriot Question;;;;;;;;;;;;;x
+EVTDESC181040;With the Second Great War finally over, the question has arisen as to the status of our Mediterranean Holdings. Recent riots in Cyprus spurred by nationalist sentiment suggests it may be time to start considering the possibility of an independent Cypriot State.;;;;;;;;;;;;;x
+EVTOPTA181040;Cyprus shall have complete independence.;;;;;;;;;;;;;x
+#EVTOPTD181040;They must buy their independence with military bases.;;;;;;;;;;;;;x
+EVTOPTB181040;Cyprus shall be an Autonomous Dominion;;;;;;;;;;;;;x
+EVTOPTC181040;Enough of this nonsense!;;;;;;;;;;;;;x
+EVTNAME181041;Cyprus demands independence!;;;;;;;;;;;;;x
+EVTDESC181041;We have received demands from the governors in Cyprus for Britain to officially recognise Cyprus as a fully independent sovereign state. Doing so would definitely decrease tensions across the United Kingdom, but by allow Cyprus their independence, our presence in the Med would decline significantly.;;;;;;;;;;;;;x
+EVTOPTA181041;Cyprus shall have its Independence;;;;;;;;;;;;;x
+EVTOPTB181041;This is not the desire of the Cypriot people!;;;;;;;;;;;;;x
+EVTNAME181042;Cyprus Unilaterally declares its Independence!;;;;;;;;;;;;;x
+EVTDESC181042;The Cypriot Government has made a Unilateral Declaration of Independence, officially denouncing any allegiance to the crown! Whilst, diplomatically speaking, pressing the issue any further may strain our relations with the international community, it may not be wise to abandon our Cypriot bases without a fight.;;;;;;;;;;;;;x
+EVTOPTA181042;Let's forget Cyprus;;;;;;;;;;;;;x
+EVTOPTB181042;We shall protect the interests of the Cypriot people!;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;;x
+#CYP;;;;;;;;;;;;;;;x
+EVTNAME167000;Authoritarian Coup d'etat!;;;;;;;;;;;;;x
+EVTDESC167000;The pro-Enosis nationalist Nikos Sampson, with the help of the Cypriot National Guard and the Greek Military Junta, has seized power and declared himself "President". This man has no intent to hold further elections, and instead intends to commit our nation to a union with Greece.;;;;;;;;;;;;;x
+EVTOPTA167000;The Scoundrel!;;;;;;;;;;;;;x
+EVTNAME167001;Greek Support for Unionists;;;;;;;;;;;;;x
+EVTDESC167001;Event description goes here.;;;;;;;;;;;;;x
+EVTOPTA167001;How will this unfold?;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;;x
+#TUR;;;;;;;;;;;;;;;x
+EVTNAME347000;The Cypriot Question;;;;;;;;;;;;;x
+EVTDESC347000;With Cyprus now under the rule of the Pro-Greek unionist Nikos Sampson after a military coup, it is now well within the realms of possibility that the nation will secede into the Greek State. For the good of all Turkish citizens in Cyprus, it is important that we take an official stance on the issue. Our generals assure us that, should we will it, our armed forces are ready to Launch 'Operation Atilla' - A full scale invasion onto Cypriot Shores.;;;;;;;;;;;;;x
+EVTOPTA347000;Operation Attila is a go!;;;;;;;;;;;;;x
+EVTOPTB347000;Appeal to the UN;;;;;;;;;;;;;x
+EVTOPTC347000;Do not get involved;;;;;;;;;;;;;x
+EVTNAME347001;The Turkish Republic of North Cyprus;;;;;;;;;;;;;x
+EVTDESC347001;With our armed forces heavily entrenched in the Northern Half of the Island of Cyprus, and our citizens' safety secured, the question now rises as to what actions we should take next. In order to curb any potential international outrage, it is suggested that we mark an occupation line, and establish a new Turkish Republic in the North. However, if we willed it, Nicosia would fall by nightfall...;;;;;;;;;;;;;x
+EVTOPTA347001;Establish the Turkish Republic;;;;;;;;;;;;;x
+EVTOPTB347001;All your Cyprus is belonging to us!;;;;;;;;;;;;;x
+;;;;;;;;;;;;;;;x
+#GRE;;;;;;;;;;;;;;;x
+EVTNAME201000;The Cypriot Question;;;;;;;;;;;;;x
+EVTDESC201000;With Turkish Forces landing in Northern Cyprus, attempting to foil all our efforts for a political union, we must now determine whether the Island of Cyprus is worth a full scale war with Turkey.;;;;;;;;;;;;;x
+EVTOPTA201000;We shall protect the Greek Cypriots;;;;;;;;;;;;;x
+EVTOPTB201000;Send an expeditionary force;;;;;;;;;;;;;x
+EVTOPTC201000;Do not get involved;;;;;;;;;;;;;x
+EVTNAME201001;Greek Student Revolt;;;;;;;;;;;;;x
+EVTDESC201001;With the situation in Cyprus swinging against us, the Greek citizens have risen up in outrage to dispose of our Ruling Strata. On this day, Elections shall be held, and Greece shall once again be a Republic.;;;;;;;;;;;;;x
+EVTOPTA201001;Democracy shall prevail!;;;;;;;;;;;;;x
+EVTNAME201002;A chance for Peace?;;;;;;;;;;;;;x
+EVTDESC201002;Now that the Military Junta has fallen, we have the perfect opportunity to suggest a white peace with Turkey. Whilst we are in no situation to bargain for the same terms for the Cypriots, it may be best to cut our losses before the war sees the Ottomans consume the Hellenic peoples entirely!;;;;;;;;;;;;;x
+EVTOPTA201002;Greece shall continue to support Cyprus;;;;;;;;;;;;;x
+EVTOPTB201002;There shall be peace in our time!;;;;;;;;;;;;;x

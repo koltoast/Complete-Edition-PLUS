@@ -1,0 +1,43 @@
+diplomatic_decisions = {
+
+	propaganda_campaign = {
+		category = national
+		picture = "propaganda_poster"
+		potential = {
+			NOT = {
+				public_oversight = transparent_public_oversight
+				internal_policy = democratic_aff_pol
+			}
+		}
+		
+		allow = {
+			prestige = 30
+			national_unity = 25
+			NOT = { 
+				has_country_flag = war_games
+				has_country_flag = war_games_start
+				has_country_flag = military_purge
+				has_country_flag = military_purge_start
+				has_country_flag = propaganda_campaign
+				has_country_flag = propaganda_campaign_start
+				has_country_flag = cultural_revolution #Communist China will have its own unique event chain
+				has_country_flag = government_junket
+				has_country_flag = government_junket_start
+				has_country_flag = anticorruption_campaign
+				has_country_flag = anticorruption_campaign_start
+				has_country_modifier = propaganda_campaign_delay
+			}
+			war = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		effect = {
+			set_country_flag = propaganda_campaign_start
+			country_event = 2071
+		}
+	}
+	
+}

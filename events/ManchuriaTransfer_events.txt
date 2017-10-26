@@ -1,0 +1,303 @@
+#ManchuriaTransfer_events.txt
+#1946 Transfer of Manchuria
+
+#SOV:
+	#326001 - manchurian_transfer_SOV follow-up event
+	#326002 - manchurian_transfer_SOV follow-up event
+	#326003 - Mao won the Civil War - Give back Manchuria
+	#326004 - The Kuomintang won the Civil War - Give back Manchuria
+	
+#CHI:
+	#152007	- The Soviets hand over Manchuria
+	
+#CHC:
+	#151013 - The Soviets hand over Manchuria
+	#151014 - The Soviets hand over Manchuria... to the Nationalists
+	
+
+## SOV ##
+country_event = {
+	
+	id = 326001			#manchurian_transfer_SOV follow-up event
+
+	is_triggered_only = yes
+
+	title = "EVTNAME326001"
+	desc = "EVTDESC326001"
+	picture = "1950_Sino-Soviet_Treaty"
+
+	option = {
+		name = "EVTOPTA326001"											#Hand it over (hist.)
+		ai_chance = { factor = 95 }
+		
+		region_Manchukuo_Hulunbuir = { secede_province = CHC }			#Transfer the provinces
+		region_Manchukuo_Xingan = { secede_province = CHC }
+		region_Manchukuo_Tongliao = { secede_province = CHC }
+		region_Manchukuo_North_Liaoning = { secede_province = CHC }
+		region_Manchukuo_South_Liaoning = { secede_province = CHC }
+		region_Manchukuo_Daxinganling = { secede_province = CHC }
+		region_Manchukuo_North_Jilin = { secede_province = CHC }
+		region_Manchukuo_South_Jilin = { secede_province = CHC }
+		region_Manchukuo_East_Jilin = { secede_province = CHC }
+		region_Manchukuo_Daqing = { secede_province = CHC }
+		region_Manchukuo_Heihe = { secede_province = CHC }
+		region_Manchukuo_North_Heilongjiang = { secede_province = CHC }
+		region_Manchukuo_North-East_Heilongjiang = { secede_province = CHC }
+		region_Manchukuo_East_Heilongjiang = { secede_province = CHC }
+		region_Manchukuo_Harbin = { secede_province = CHC }
+		region_Manchukuo_Mudanjiang = { secede_province = CHC }
+		region_Manchukuo_Hulunbuir = { secede_province = CHC }
+		region_Manchukuo_Xingan = { secede_province = CHC }
+		region_Manchukuo_Tongliao = { secede_province = CHC }
+		
+		CHC = { country_event = 151013 }
+	}
+	
+	option = {
+		name = "EVTOPTB326001"
+		ai_chance = { factor = 5 }
+		money = 500														#Manchurian factories for the Rodina
+		supplies = 3500	
+		relation = { who = CHC value = -75 }							#Chairman Mao is not amused
+	}
+}
+
+country_event = {
+	
+	id = 326002		#manchurian_transfer_SOV follow-up event
+
+	is_triggered_only = yes
+
+	title = "EVTNAME326002"
+	desc = "EVTDESC326002"
+	picture = "1945_Sino-Soviet_Treaty"
+
+	option = {
+		name = "EVTOPTA326002"											#Give it to the KMT
+		ai_chance = { factor = 70 }
+		
+		region_Manchukuo_Hulunbuir = { secede_province = CHI }
+		region_Manchukuo_Xingan = { secede_province = CHI }
+		region_Manchukuo_Tongliao = { secede_province = CHI }
+		region_Manchukuo_North_Liaoning = { secede_province = CHI }
+		region_Manchukuo_South_Liaoning = { secede_province = CHI }
+		region_Manchukuo_Daxinganling = { secede_province = CHI }
+		region_Manchukuo_North_Jilin = { secede_province = CHI }
+		region_Manchukuo_South_Jilin = { secede_province = CHI }
+		region_Manchukuo_East_Jilin = { secede_province = CHI }
+		region_Manchukuo_Daqing = { secede_province = CHI }
+		region_Manchukuo_Heihe = { secede_province = CHI }
+		region_Manchukuo_North_Heilongjiang = { secede_province = CHI }
+		region_Manchukuo_North-East_Heilongjiang = { secede_province = CHI }
+		region_Manchukuo_East_Heilongjiang = { secede_province = CHI }
+		region_Manchukuo_Harbin = { secede_province = CHI }
+		region_Manchukuo_Mudanjiang = { secede_province = CHI }
+		region_Manchukuo_Hulunbuir = { secede_province = CHI }
+		region_Manchukuo_Xingan = { secede_province = CHI }
+		region_Manchukuo_Tongliao = { secede_province = CHI }
+		
+		CHI = { country_event = 152007 }
+		CHC = { country_event = 151014 }
+	}
+	
+	option = {
+		name = "EVTOPTB326002"
+		ai_chance = { factor = 25 }
+		
+		region_Manchukuo_Hulunbuir = { secede_province = CHC }			#Transfer the provinces
+		region_Manchukuo_Xingan = { secede_province = CHC }
+		region_Manchukuo_Tongliao = { secede_province = CHC }
+		region_Manchukuo_North_Liaoning = { secede_province = CHC }
+		region_Manchukuo_South_Liaoning = { secede_province = CHC }
+		region_Manchukuo_Daxinganling = { secede_province = CHC }
+		region_Manchukuo_North_Jilin = { secede_province = CHC }
+		region_Manchukuo_South_Jilin = { secede_province = CHC }
+		region_Manchukuo_East_Jilin = { secede_province = CHC }
+		region_Manchukuo_Daqing = { secede_province = CHC }
+		region_Manchukuo_Heihe = { secede_province = CHC }
+		region_Manchukuo_North_Heilongjiang = { secede_province = CHC }
+		region_Manchukuo_North-East_Heilongjiang = { secede_province = CHC }
+		region_Manchukuo_East_Heilongjiang = { secede_province = CHC }
+		region_Manchukuo_Harbin = { secede_province = CHC }
+		region_Manchukuo_Mudanjiang = { secede_province = CHC }
+		region_Manchukuo_Hulunbuir = { secede_province = CHC }
+		region_Manchukuo_Xingan = { secede_province = CHC }
+		region_Manchukuo_Tongliao = { secede_province = CHC }
+		
+		relation = { who = CHI value = -100 }
+		CHC = { country_event = 151013 }
+	}
+	
+	option = {
+		name = "EVTOPTC326002"
+		ai_chance = { factor = 5 }
+		money = 500														#Manchurian factories for the Rodina
+		supplies = 3500	
+	}
+}
+
+country_event = {
+	
+	id = 326003			#Mao won the Civil War - Give back Manchuria
+
+	trigger = {
+		tag = SOV
+		exists = CHC
+		controls = 13357													#Qiqihar representitive for Manchuria
+		NOT = {
+			exists = CHI
+			war_with = CHC
+		}
+	}
+
+	is_triggered_only = no
+	mean_time_to_happen = { days = 30 }
+
+	title = "EVTNAME326003"
+	desc = "EVTDESC326003"
+	picture = "1950_Sino-Soviet_Treaty"
+
+	option = {
+		name = "EVTOPTA326003"			    							#Hand it over
+		ai_chance = { factor = 100 }
+		
+		region_Manchukuo_Hulunbuir = { secede_province = CHC }			#Transfer the provinces
+		region_Manchukuo_Xingan = { secede_province = CHC }
+		region_Manchukuo_Tongliao = { secede_province = CHC }
+		region_Manchukuo_North_Liaoning = { secede_province = CHC }
+		region_Manchukuo_South_Liaoning = { secede_province = CHC }
+		region_Manchukuo_Daxinganling = { secede_province = CHC }
+		region_Manchukuo_North_Jilin = { secede_province = CHC }
+		region_Manchukuo_South_Jilin = { secede_province = CHC }
+		region_Manchukuo_East_Jilin = { secede_province = CHC }
+		region_Manchukuo_Daqing = { secede_province = CHC }
+		region_Manchukuo_Heihe = { secede_province = CHC }
+		region_Manchukuo_North_Heilongjiang = { secede_province = CHC }
+		region_Manchukuo_North-East_Heilongjiang = { secede_province = CHC }
+		region_Manchukuo_East_Heilongjiang = { secede_province = CHC }
+		region_Manchukuo_Harbin = { secede_province = CHC }
+		region_Manchukuo_Mudanjiang = { secede_province = CHC }
+		region_Manchukuo_Hulunbuir = { secede_province = CHC }
+		region_Manchukuo_Xingan = { secede_province = CHC }
+		region_Manchukuo_Tongliao = { secede_province = CHC }
+		
+		CHC = { country_event = 151013 }
+	}
+}
+
+country_event = {
+	
+	id = 326004			#The Kuomintang won the Civil War - Give back Manchuria
+
+	trigger = {
+		tag = SOV
+		exists = CHI
+		controls = 13357													#Qiqihar representitive for Manchuria
+		NOT = {
+			exists = CHC
+			war_with = CHI
+		}
+	}
+
+	is_triggered_only = no
+	mean_time_to_happen = { days = 30 }
+
+	title = "EVTNAME326004"
+	desc = "EVTDESC326004"
+	picture = "1945_Sino-Soviet_Treaty"
+
+	option = {
+		name = "EVTOPTA326004"			    							#Hand it over
+		ai_chance = { factor = 100 }
+		
+		region_Manchukuo_Hulunbuir = { secede_province = CHI }			#Transfer the provinces
+		region_Manchukuo_Xingan = { secede_province = CHI }
+		region_Manchukuo_Tongliao = { secede_province = CHI }
+		region_Manchukuo_North_Liaoning = { secede_province = CHI }
+		region_Manchukuo_South_Liaoning = { secede_province = CHI }
+		region_Manchukuo_Daxinganling = { secede_province = CHI }
+		region_Manchukuo_North_Jilin = { secede_province = CHI }
+		region_Manchukuo_South_Jilin = { secede_province = CHI }
+		region_Manchukuo_East_Jilin = { secede_province = CHI }
+		region_Manchukuo_Daqing = { secede_province = CHI }
+		region_Manchukuo_Heihe = { secede_province = CHI }
+		region_Manchukuo_North_Heilongjiang = { secede_province = CHI }
+		region_Manchukuo_North-East_Heilongjiang = { secede_province = CHI }
+		region_Manchukuo_East_Heilongjiang = { secede_province = CHI }
+		region_Manchukuo_Harbin = { secede_province = CHI }
+		region_Manchukuo_Mudanjiang = { secede_province = CHI }
+		region_Manchukuo_Hulunbuir = { secede_province = CHI }
+		region_Manchukuo_Xingan = { secede_province = CHI }
+		region_Manchukuo_Tongliao = { secede_province = CHI }
+		
+		CHI = { country_event = 152007 }
+	}
+}
+
+
+## CHI ##
+country_event = {
+	
+	id = 152007			#The Soviets hand over Manchuria
+
+	is_triggered_only = yes
+
+	title = "EVTNAME152007"
+	desc = "EVTDESC152007"
+	picture = "1949_transfer_signing"
+
+	option = {
+		name = "1945_Sino-Soviet_Treaty"							#Excellent!			
+		national_unity = 10
+		prestige_change = 5
+		relation = { who = SOV value = 75 }
+		money = 250										#Weapons and supplies from Manchuria
+		manpower = 25
+		supplies = 4500
+		fuel = 500
+	}
+}
+
+
+## CHC ##
+country_event = {
+	
+	id = 151013			#The Soviets hand over Manchuria
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151013"
+	desc = "EVTDESC151013"
+	picture = "1950_Sino-Soviet_Treaty"
+
+	option = {
+		name = "EVTOPTA151013"					
+		national_unity = 5
+		prestige_change = 5
+		relation = { who = SOV value = 75 }
+		money = 250										#Weapons and supplies from Manchuria
+		manpower = 25
+		supplies = 4500
+		fuel = 500
+	}
+}
+
+country_event = {
+	
+	id = 151014			#The Soviets hand over Manchuria... to the Nationalists
+
+	is_triggered_only = yes
+
+	title = "EVTNAME151014"
+	desc = "EVTDESC151014"
+	picture = "1946_war_in_china"
+
+	option = {
+		name = "EVTOPTA151014"					
+		national_unity = -10
+		prestige_change = -5
+		relation = { who = SOV value = -150 }
+		money = -100
+		supplies = -1000
+	}
+}
