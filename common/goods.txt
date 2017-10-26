@@ -1,0 +1,192 @@
+food = {
+	fish = {
+		base_production = 0.1
+		infra_production = 0.9
+		base_pop = 3000.00
+		infra_pop = -2900.00
+
+		cost = 2.00
+		color = { 222 221 220 }
+	}
+	grain = {
+		base_production = 0.04
+		infra_production = 0.16
+		base_pop = 3000.00
+		infra_pop = -2900.00		
+
+		cost = 0.5
+		color = { 222 221 220 }
+	}
+	vegetables = {
+		base_production = 0.008
+		infra_production = 0.064
+		base_pop = 3000.00
+		infra_pop = -2900.00		
+
+		cost = 1.00
+		color = { 222 221 220 }
+	}
+	fruits = {
+		base_production = 0.02
+		infra_production = 0.08
+		base_pop = 3000.00
+		infra_pop = -2900.00		
+
+		cost = 2.00
+		color = { 222 221 220 }
+	}
+	meat = {
+		base_production = 0.004
+		infra_production = 0.016
+		base_pop = 5000.00
+		infra_pop = -4900.00		
+
+		cost = 3.00
+		color = { 222 221 220 }
+	}
+}
+
+natural_resources = {
+	oil = {
+		base_production = 0.2
+		infra_product0ion = 0.8
+		base_pop = 200.00
+		infra_pop = -50.00
+
+		cost = 1.00
+		color = { 222 221 220 }
+		priority = 100
+	}
+	coal = {
+		base_production = 1.0
+		infra_production = 2.0
+		base_pop = 1000.00
+		infra_pop = -500.00
+
+		cost = 1.00
+		color = { 222 221 220 }
+		priority = 50
+	}
+	wood = {
+		base_production = 10.0
+		infra_production = 2.0
+		base_pop = 1000.00
+		infra_pop = -900.00
+
+		cost = 2.00
+		color = { 222 221 220 }
+	}
+	renewable_energy = {
+		  base_production = 0.6
+		  infra_production = 0.4
+		  base_pop = 100.00
+		  infra_pop = -100.00
+
+		  cost = 1.00
+		  color = { 222 221 220 }
+		  priority = 20
+	}
+	uranium = {
+		base_production = 0.5
+		infra_production = 0.8
+		base_pop = 5000.00
+		infra_pop = -3000.00
+
+		cost = 10.00
+		color = { 222 221 220 }
+		priority = 75
+	}
+	iron = {
+		base_production = 0.6
+		infra_production = 1.4
+		base_pop = 3000.00
+		infra_pop = -2900.00
+
+		cost = 2.00
+		color = { 222 221 220 }
+		priority = 10
+	}
+	precious_metals = {
+		base_production = 0.126
+		infra_production = 0.08
+		base_pop = 5000.00
+		infra_pop = -4900.00
+
+		cost = 10.00
+		color = { 222 221 220 }
+		priority = 20
+	}
+	rare_metals = {
+		base_production = 0.02
+		infra_production = 0.08
+		base_pop = 5000.00
+		infra_pop = -4900.00
+
+		cost = 5.00
+		color = { 222 221 220 }
+		priority = 20
+	}
+}
+
+energy = {
+	fuel = {
+		cost = 2.00
+		color = { 222 221 220 }
+	}
+	
+	electricity = {
+		cost = 4.00
+		color = { 222 221 220 }
+	}
+	
+}
+
+consumer_goods = {
+	light_industry = {
+		cost = 10.00
+		color = { 222 221 220 }
+	}
+	heavy_industry = {
+		cost = 20.00
+		color = { 222 221 220 }
+	}
+	aviation_industry = {
+		cost = 30.00
+		color = { 222 221 220 }
+	}
+	naval_yards = {
+		cost = 30.00
+		color = { 222 221 220 }
+	}
+	high_tech = {
+		cost = 50.00
+		color = { 222 221 220 }
+	}
+	services = {
+		cost = 30.00
+		base_pop = 10000.00
+		color = { 222 221 220 }
+	}
+}
+
+military_supplies = {
+	military_goods = {
+		cost = 1.25
+		color = { 222 221 220 }
+	}
+	centrifuges = {
+		pool_resource = uranium
+		cost = 2500.00
+		color = { 222 221 220 }
+	}
+	military_satellites = {
+		cost = 1000.00
+		pool_resource = satellites
+		color = { 222 221 220 }
+	}
+}
+
+conversion = {
+  military_goods = supplies
+  fuel = fuel
+}

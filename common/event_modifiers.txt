@@ -1,3 +1,3005 @@
+##################################################################################################
+# scriptable and usable for event-system below.
+##################################################################################################
+
+
+# - Decisions - #
+disorganized_officer_corps = {
+}
+UN_EMBARGO_DELAY = {
+}
+# - Political Events - #
+
+parliamentary_scandal = {
+	dissent_increase = 0.1
+}
+
+great_war_manifestation = {
+	ruling_party_support = 0.02
+}
+
+great_peace_manifestation = {
+	ruling_party_support = 0.02
+}
+
+critique_against_the_war = {
+	dissent_increase = 0.1
+}
+
+major_worker_strike = {
+	dissent_increase = 0.1
+}
+
+communist_manifestation = {
+	drift_speed = -0.08
+}
+
+nationalization_of_private_sector = {
+	dissent_increase = 0.05
+}
+
+rogue_politician = {
+    global_leadership_modifier = -0.05
+}
+
+secret_police_force = {
+	dissent_decrease = 0.1
+	global_money = -0.1
+}
+
+paramilitary_forces = {
+	dissent_increase = 0.1
+	dissent_decrease = -0.1
+	global_money = -0.1
+	global_manpower_modifier = 0.05
+}
+
+reorganization_of_war_ministry = {
+	dissent_increase = 0.1
+	dissent_decrease = -0.1
+}
+
+forced_conscription_policy = {
+	unit_recruitment_time = -0.1
+	dissent_increase = 0.1
+}
+
+control_of_extremist_movements = {
+	dissent_increase = 0.12
+	dissent_decrease = -0.12
+}
+
+emergency_legislations = {
+	production_tax = 0.25
+	consumption_tax = 0.25
+	services_tax = 0.25
+	dissent_increase = 0.1
+	global_money = 0.1
+}
+
+prohibit_new_parties = {
+	dissent_increase = 0.12
+	dissent_decrease = -0.12
+}
+
+political_feuds = {
+	dissent_increase = 0.12
+	dissent_decrease = -0.12
+}
+
+assassination_attempt = {
+	dissent_increase = 0.08
+}
+
+illegal_printing = {
+	global_money = -0.1
+}
+
+intelligence_network = {
+	espionage_bonus = 0.05
+	global_money = -0.1
+	spies_stockpile = 0.1
+}
+
+revolutionary_movements = {
+	drift_speed = -0.08
+}
+
+resistance_movement = {
+	#global_ic = -0.05
+}
+
+resistance_movement_laid_open = {
+	espionage_bonus = 0.05
+	dissent_increase = 0.1
+}
+
+resistance_movement_infiltrated = {
+	espionage_bonus = 0.05
+	dissent_increase = 0.05
+	global_money = -0.06
+}
+
+restructuring_the_foreign_ministry = {
+	dissent_increase = 0.1
+}
+
+troublesome_ministry = {
+	drift_speed = -0.08
+}
+
+resistance_leader_caught = {
+	dissent_increase = 0.01
+	dissent_decrease = -0.01
+}
+
+assassination_attempt_of_opposition_leader = {
+	drift_speed = -0.08
+	global_money = -0.1
+}
+
+riots_in_the_street = {
+	dissent_increase = 0.1
+}
+
+weapons_transport = {
+	dissent_increase = 0.1
+}
+
+political_mistake = {
+	ruling_party_support = -0.04
+}
+
+investigation_of_opposition_party = {
+	global_money = -0.12
+	espionage_bonus = 0.05
+}
+
+opposition_gains_support = {
+	ruling_party_support = -0.05
+	drift_speed = -0.05
+}
+
+retaliation = {
+	global_money = -0.1
+}
+
+corruption_within_the_police_force = {
+	global_money = -0.2
+}
+
+restructuring_of_the_police_force = {
+	dissent_increase = 0.8
+}
+
+reinforcements = {
+	dissent_increase = 0.008
+	global_money = -0.8
+}
+
+riots = {
+	dissent_increase = 0.1
+}
+
+##
+
+economic_boost = {
+	global_ic = 0.05
+}
+
+volunteer_surge = {
+	global_manpower_modifier = 0.1
+}
+
+### BATTLE WON ###
+battle_won = {
+	dissent_decrease = 0.1
+}
+
+### BATTLE LOST ###
+battle_lost = {
+	dissent_increase = 0.1
+}
+
+### AIR BATTLE WON ###
+big_bomb_won = {
+	dissent_decrease = 0.1
+}
+
+### AIR BATTLE LOST ###
+big_bomb_lost = {
+	dissent_increase = 0.2
+}
+
+### NAVAL BATTLE WON ###
+navalattack_won = {
+	dissent_decrease = 0.12
+}
+
+### NAVAL BATTLE LOST ###
+navalattack_lost = {
+	dissent_increase = 0.12
+}
+
+
+#### ENCIRCLEMENT ###
+encirclement_siege = {
+	dissent_increase = 0.12
+}
+
+
+### UPRISINGS ###	#modifier localization in rebels.csv
+IDC_communist_rebellion_modifier = {
+	dissent_increase = 0.15
+	national_unity = -3
+}
+
+
+
+
+### Country modifiers - even if they have no direct effect, they are needed for war counters ###
+veteran_ISR_troops_delay = {
+	dissent_increase = 0.02
+	supply_consumption = 0.25
+	fuel_consumption = 0.25
+}
+
+koreanwar_start = {
+	dissent_increase = 0.15
+	national_unity = -3
+	ruling_party_support = -0.02
+	prestige = 0.02
+	neutrality = -0.02
+}
+
+koreanwar_peace = {
+	dissent_increase = -0.15
+	national_unity = 3
+	ruling_party_support = 0.02
+	prestige = 0.02
+	neutrality = 0.02
+}
+
+mod_SOV_korea_joint_commission = {
+	dissent_increase = 0.15
+	national_unity = -3
+	ruling_party_support = -0.02
+	prestige = 0.02
+	neutrality = -0.02
+}
+
+mod_USA_korea_joint_commission = {
+	dissent_increase = 0.15 ##verificar resultados
+	national_unity = -3
+	ruling_party_support = -0.02
+	prestige = 0.02
+	neutrality = -0.02
+}
+
+sinoindianwar_start = {
+	dissent_increase = 0.15
+	national_unity = -3
+	ruling_party_support = -0.02
+	prestige = 0.02
+	neutrality = -0.02
+}
+
+falklandswar_start = {
+	dissent_increase = 0.15
+	national_unity = -3
+	ruling_party_support = -0.02
+	prestige = 0.02
+	neutrality = -0.02
+}
+
+del_reb = {
+	dissent_increase = -1
+    dissent_decrease = 1	
+	national_unity = -1
+	ruling_party_support = -0.01
+	prestige = 0.01
+	neutrality = -0.01
+}
+
+
+### Political modifers ###
+constitutional_legistlation = {
+	national_unity = -3
+	dissent_increase = 0.3
+}
+
+constitutional_changes = {
+	national_unity = -3
+	dissent_increase = 0.3
+}
+
+recent_policy_changes = {
+	national_unity = -3
+	dissent_increase = 0.3
+}
+
+recent_law_changes = {
+	national_unity = -3
+	dissent_increase = 0.3
+}
+
+
+
+###########################
+minor_disaster_test = {
+	global_manpower_modifier = -0.1
+}
+major_disaster_test = {
+	global_manpower_modifier = -0.2
+}
+
+
+### Global Decision Modifiers ###
+
+## Suspend Elections ##
+suspended_elections_timer = {
+	prestige = -0.1
+	dissent_increase = 0.35	
+	national_unity = -0.5	
+	ruling_party_support = -0.02	
+}
+
+event_reinforce_the_police = {
+	dissent_increase = 0.25	
+	national_unity = -1	
+	ruling_party_support = -0.05  
+}
+
+event_send_in_the_army_internal = {
+	dissent_increase = 0.15	
+	national_unity = -2	
+	ruling_party_support = -0.25
+}
+
+event_civil_disorder = {
+	local_revolt_risk = 5
+	local_resources = -0.20
+}
+
+event_opposition_rallies = {
+	local_revolt_risk = 3
+	local_resources = -0.05
+	ruling_party_support = -0.05	
+}
+
+### Military Purge ###
+military_purge_delay = {
+	national_unity = 1
+	ruling_party_support = -0.025	
+	peacetime_manpower_rotation = -0.05
+	unit_repair = -0.1
+	land_organisation = 0.1
+	air_organisation = 0.1
+	naval_organisation = 0.1
+}
+
+military_purge_political = {
+	national_unity = -1
+	ruling_party_support = 0.025	
+	peacetime_manpower_rotation = 0.05
+	unit_repair = -0.1
+	land_organisation = -0.1
+	air_organisation = -0.1
+	naval_organisation = -0.1
+}
+
+military_purge_operational = {
+	national_unity = -0.5
+	peacetime_manpower_rotation = 0.05
+	unit_repair = -0.05
+	land_organisation = -0.05
+	air_organisation = -0.05
+	naval_organisation = -0.05
+}
+
+corrupt_general_exposed = {
+	national_unity = 0.5
+	land_organisation = 0.05
+	air_organisation = 0.01
+	naval_organisation = 0.01
+	dissent_decrease = 0.1
+}
+
+military_incompetence_punished = {
+	land_organisation = 0.01
+	air_organisation = 0.05
+	naval_organisation = 0.05
+}
+
+insubordinate_general_deposed = {
+	land_organisation = 0.05	
+}
+
+treasonous_general_exposed = {
+	flexible_modifier = {
+		expose_spy_chance_modifier = {
+			name = pol_expose_spy_chance_modifier_desc
+			value = 0.05
+		}
+	}
+}
+
+recruitment_drive = {
+	unit_repair = 0.05
+	unit_recruitment_time = -0.1
+}
+
+military_morale_increases = {
+	org_regain = 0.1
+	land_organisation = 0.1
+	air_organisation = 0.1
+	naval_organisation = 0.1
+	war_exhaustion = -0.1
+}
+
+public_distrust_military = {
+	dissent_increase = 0.05
+}
+
+notorious_general_deposed = {
+	dissent_decrease = 0.025
+	ruling_party_support = 0.025
+}
+
+loyal_officers_rewarded = {
+	national_unity = 0.25
+	ruling_party_support = 0.025
+	party_size_bonus = 0.02
+}
+
+old_guard_retirement = {
+	land_organisation = 0.05
+	air_organisation = 0.05
+	naval_organisation = 0.05
+	peacetime_manpower_rotation = 0.025
+}
+
+military_witchhunt = {
+	national_unity = -1
+	unit_repair = -0.2
+	land_organisation = -0.2
+	air_organisation = -0.2
+	naval_organisation = -0.2
+	prestige = -0.1
+}
+
+
+## War Games ##
+war_games_delay = {
+	naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+
+war_games_expensive = {
+	global_money = -0.1
+	org_regain = 0.1
+	land_organisation = 0.05
+	air_organisation = 0.05
+	naval_organisation = 0.05
+}
+
+war_games_cheap = {
+	global_money = -0.05
+	org_regain = 0.05
+	land_organisation = 0.025
+}
+
+war_games_naval_lessons = {
+	naval_organisation = 0.10
+	unit_start_experience = 0.05
+}
+
+war_games_army_lessons = {
+	land_organisation = 0.10
+	unit_start_experience = 0.05
+}
+
+war_games_airforce_lessons = {
+	air_organisation = 0.10
+	unit_start_experience = 0.05
+}
+
+war_games_combined_lessons = {
+	naval_organisation = 0.05
+	air_organisation = 0.05
+	air_organisation = 0.05
+	unit_start_experience = 0.05
+}
+
+war_games_military_embarrassment = {
+	naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+
+war_games_military_excel = {
+	prestige = 0.2
+	suseptibility = -0.1
+}
+
+war_games_environmental_damage = {
+	dissent_increase = 0.01
+	prestige = -0.1
+}
+
+war_games_conscripts_disappear = {
+	unit_recruitment_time = 0.1
+	org_regain = -0.1
+	prestige = -0.1
+}
+
+war_games_recruitment_boosted = {
+	unit_recruitment_time = -0.1
+	org_regain = 0.1
+	prestige = 0.1
+}
+
+war_games_delay_1 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_2 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_3 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_4 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_5 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_6 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_7 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_8 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_9 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_10 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_11 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_12 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_13 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_14 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_15 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_16 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_17 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_18 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_19 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+war_games_delay_20 = {
+    naval_organisation = -0.05
+	air_organisation = -0.05
+	air_organisation = -0.05
+	prestige = -0.1
+}
+
+## Propaganda Campaign ##
+propaganda_campaign_delay = {
+	prestige = -0.02
+	suseptibility = 0.01
+	drift_speed = 0.01
+	production_tax = 0.10
+	consumption_tax = 0.10
+	services_tax = 0.10
+}
+
+propaganda_campaign_outwards = {
+	prestige = 0.02
+	suseptibility = -0.01
+	drift_speed = -0.01
+	production_tax = -0.10
+	consumption_tax = -0.10
+	services_tax = -0.10
+}
+
+propaganda_campaign_inwards = {
+	ruling_party_support = 0.01
+	suseptibility = -0.01
+	drift_speed = -0.01
+	production_tax = -0.10
+	consumption_tax = -0.10
+	services_tax = -0.10
+}
+
+propaganda_industry_triumphs = {
+	flexible_modifier = {
+		production_income_modifier = {
+			name = propaganda_industry_triumphs
+			value = 0.025
+			duration = 182
+		}
+	}
+}
+
+propaganda_industrial_efficiency = {
+	flexible_modifier = {
+		production_income_modifier = {
+			name = propaganda_industrial_efficiency
+			value = 0.05
+			duration = 91
+		}
+	}
+}
+
+propaganda_agricultural_efficiency = {
+	flexible_modifier = {
+		production_income_modifier = {
+			name = propaganda_agricultural_efficiency
+			value = 0.05
+			duration = 91
+		}
+	}
+}
+
+propaganda_capitalist_efficiency = {
+	flexible_modifier = {
+		production_income_modifier = {
+			name = propaganda_capitalist_efficiency
+			value = 0.05
+			duration = 91
+		}
+	}
+}
+
+propaganda_homemaker_efficiency = {
+	flexible_modifier = {
+		production_income_modifier = {
+			name = propaganda_homemaker_efficiency
+			value = 0.05
+			duration = 91
+		}
+	}
+}
+
+propaganda_films_toured_nationally = {
+	national_unity = 0.2
+	ruling_party_support = 0.02
+}
+
+propaganda_films_toured_internationally = {
+	espionage_bonus = 0.01
+	prestige = 0.02
+}
+
+propaganda_innovation_toured_nationally = {
+	ruling_party_support = 0.01
+	prestige = 0.01
+}
+
+propaganda_innovation_toured_internationally = {
+	prestige = 0.02
+}
+
+propaganda_lectures = {
+	suseptibility = -0.02
+	national_unity = 0.1
+}
+
+propaganda_town_meetings = {
+	ruling_party_support = 0.02
+	dissent_increase = 0.03
+	dissent_decrease = 0.02
+}
+
+propaganda_posters_1 = {
+	ruling_party_support = 0.02
+}
+
+propaganda_posters_2 = {
+	national_unity = 0.2
+}
+
+propaganda_posters_3 = {
+	ruling_party_support = 0.01
+	national_unity = 0.1
+}
+
+propaganda_radio_stations_promoted = {
+	ruling_party_support = 0.02
+	suseptibility = -0.02
+}
+
+propaganda_radio_stations_blocked = {
+	suseptibility = -0.05
+	espionage_bonus = 0.01
+	dissent_increase = 0.01
+}
+
+propaganda_art_toured_internationally = {
+	prestige = 0.02
+}
+
+propaganda_culture_toured_internationally = {
+	prestige = 0.03
+}
+
+propaganda_doctors_sent_overseas = {
+	global_money = -0.0025
+	prestige = 0.05
+}
+
+propaganda_school_textbooks = {
+	national_unity = 0.1
+	ruling_party_support = 0.01
+}
+
+propaganda_leader_achievements = {
+	ruling_party_support = 0.03
+}
+
+propaganda_emigres_coopted = {
+	espionage_bonus = 0.01
+	prestige = 0.01
+}
+
+propaganda_trade_unions_coopted = {
+	national_unity = 0.1
+	production_tax = 0.02
+}
+
+## Government Junket ##
+government_junket_delay = {
+	global_money = 0.05
+	org_regain = -0.05
+	land_organisation = -0.025
+}
+
+government_junket_nonallies = {
+	global_money = -0.1
+	org_regain = 0.1
+	land_organisation = 0.05
+	air_organisation = 0.05
+	naval_organisation = 0.05
+}
+
+government_junket_allies = {
+	global_money = -0.05
+	org_regain = 0.05
+	land_organisation = 0.025
+}
+
+hos_abroad = {
+	
+}
+
+hos_abroad_preparations_rejected = {
+}
+
+hosting_foreign_hos = {
+
+}
+
+hosting_foreign_hos_business_visitor_modifier = {
+
+}
+
+hosting_foreign_hos_business_host_modifier = {
+
+}
+
+hosting_foreign_hos_trade_visitor_modifier = {
+
+}
+
+hosting_foreign_hos_trade_host_modifier = {
+
+}
+
+
+hosting_foreign_hos_research_visitor_modifier = {
+
+}
+
+hosting_foreign_hos_research_host_modifier = {
+
+}
+
+hosting_foreign_hos_repairs_done = {
+}
+
+government_junket_bonds = {
+}
+
+
+### Fourth Geneva Convention ###
+signed_the_geneva_convention = {
+	war_exhaustion = -0.01
+	org_regain = 0.01
+	supply_consumption = 0.01
+}
+geneva_convention_delay = {
+	war_exhaustion = 0.01
+	org_regain = -0.01
+	supply_consumption = -0.01
+}
+
+### Vienna Convention on Diplomatic Relations ###
+ratified_the_diplomatic_relations_convention = {
+	#Increase diplomacy point generation
+	prestige = 0.01
+	espionage_bonus = -0.02
+	counter_espionage = 0.02
+}
+diplomatic_relations_convention_delay = {
+	prestige = -0.01
+	espionage_bonus = 0.02
+	counter_espionage = -0.02
+}
+
+### Vienna Convention on the Law of Treaties ###
+ratified_the_law_of_treaties_convention = {
+	#Increase diplomacy point generation slightly
+	prestige = 0.02
+	neutrality = 0.01
+}
+law_of_treaties_convention_delay = {
+	prestige = -0.02
+	neutrality = -0.01
+}
+
+
+### Minister Death ###
+cabinet_reorganisation = {
+	prestige = -0.02
+	national_unity = -0.2
+	suseptibility = 0.02
+}
+
+hog_ill = {
+	ruling_party_support = -0.05
+}
+
+hos_ill = {
+	national_unity = -0.5
+	prestige = -0.10
+}
+
+
+### Arms Sale Scandal ###
+arms_sales_enquiry = {
+	national_unity = -0.2
+	flexible_modifier = {
+		factory_military_goods_modifier = {
+			name = factory_military_goods_modifier_desc
+			value = -0.05
+		}
+	}
+}
+
+arm_sales_1 = {
+	flexible_modifier = {
+		factory_military_goods_modifier = {
+			name = factory_military_goods_modifier_desc
+			value = -0.05
+		}
+	}
+}
+
+
+### Policies ###
+
+## Military Policy ##
+airforce_awe = {
+	attack_reinforce_chance = 0.05
+	defend_reinforce_chance = 0.05
+	air_organisation = 0.05
+	prestige = 0.02
+}
+
+navy_awe = {
+	attack_reinforce_chance = 0.05
+	defend_reinforce_chance = 0.05
+	naval_organisation = 0.05
+	prestige = 0.02
+}
+
+army_awe = {
+	attack_reinforce_chance = 0.05
+	defend_reinforce_chance = 0.05
+	land_organisation = 0.05
+	prestige = 0.02
+}
+
+desertions = {
+	org_regain = -0.05
+	global_manpower_modifier = -0.02
+}
+
+graduate_officers = {
+	unit_start_experience = 0.05
+	attack_reinforce_chance = 0.05
+	defend_reinforce_chance = 0.05
+}
+
+military_training_readjustment = {
+	dissent_increase = 0.02
+	supply_consumption = 0.25
+	#fuel_consumption = 0.25
+}
+
+military_training_results = {
+	land_organisation = 0.05
+	naval_organisation = 0.05
+	air_organisation = 0.05
+	unit_start_experience = 0.05
+}
+
+mod_Global_veterans_education = {
+	research_efficiency = 0.01
+	dissent_decrease = 0.005
+}
+
+
+
+#Draft events#
+conscripts_politician_son_inquiry = {
+	national_unity = -0.2
+}
+
+conscripts_champagne_unit_disbanded = {
+	land_organisation = -0.02
+	naval_organisation = -0.02
+	air_organisation = -0.02
+	org_regain = -0.1
+}
+
+conscripts_research_setback = {
+	research_efficiency = -0.01
+}
+
+conscripts_industrial_setback = {
+	flexible_modifier = {
+		production_income_modifier = {
+			name = conscripts_industrial_inefficiency
+			value = -0.05
+		}
+	}
+}
+
+conscripts_labour_experience = {
+	flexible_modifier = {
+		production_income_modifier = {
+			name = conscripts_industrial_efficiency
+			value = 0.025
+		}
+	}
+}
+
+conscripts_peaceful_demonstration = {
+	dissent_increase = 0.01
+}
+
+conscripts_widespread_demonstrations = {
+	dissent_increase = 0.05
+}
+
+conscripts_poor_condition = {
+	land_organisation = -0.01
+	naval_organisation = -0.01
+	air_organisation = -0.01
+	org_regain = -0.2
+}
+
+conscripts_callup_falls_short = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+
+conscripts_callup_above_target_military = {
+	global_manpower_modifier = 0.05
+}
+
+conscripts_callup_above_target_returned = {
+	dissent_decrease = 0.01
+}
+
+conscripts_callup_above_target_construction = {
+	flexible_modifier = {
+		production_income_modifier = {
+			name = conscripts_industrial_efficiency_2
+			value = 0.025
+		}
+	}
+}
+
+draft_dodgers_minor = {
+	global_manpower_modifier = -0.02
+}
+
+draft_dodgers_moderate = {
+	global_manpower_modifier = -0.05
+}
+
+conscription_memoirs_published = {
+	dissent_increase = 0.01
+}
+
+conscription_memoirs_distributed = {
+	dissent_increase = 0.02
+}
+
+conscription_lampooning_film = {
+	dissent_increase = 0.01
+	prestige = -0.01
+}
+
+conscription_critical_editorial = {
+	national_unity = -0.3
+}
+
+conscription_religious_opposition = {
+	national_unity = -0.2
+	dissent_increase = 0.01
+}
+
+conscription_union_strike = {
+	dissent_increase = 0.01
+	flexible_modifier = {
+		production_income_modifier = {
+			name = conscripts_industrial_inefficiency
+			value = -0.05
+		}
+	}
+}
+
+emasculated_military = {
+	land_organisation = -0.025
+	naval_organisation = -0.025
+	air_organisation = -0.025
+	global_manpower_modifier = -0.01
+}
+
+ambitious_military = {
+	national_unity = -0.2
+	ruling_party_support = -0.01
+}
+
+mod_draft_delay_1 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_2 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_3 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_4 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_5 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_6 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_7 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_8 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_9 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_10 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_11 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_12 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_13 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_14 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_15 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_16 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_17 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_18 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_19 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_20 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_21 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_22 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_23 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_24 = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+}
+mod_draft_delay_general = {
+	global_manpower_modifier = -0.04
+	unit_recruitment_time = 0.01
+	land_organisation = -0.01
+	naval_organisation = -0.01
+	air_organisation = -0.01
+	org_regain = -0.2
+}
+
+
+## Monarchy Government ##
+mod_monarchyGovernment_royalBaby = {
+	dissent_increase = -0.025
+	dissent_decrease = 0.025
+}
+
+mod_monarchyGovernment_royalMarriage_delay = {
+	dissent_increase = 0.025
+	dissent_decrease = -0.025
+}
+
+mod_monarchyGovernment_royalBonds_delay = {
+	dissent_increase = 0.025
+	dissent_decrease = -0.025
+}
+
+mod_monarchyGovernment_royalNegotiation_delay = {
+	dissent_increase = 0.025
+	dissent_decrease = -0.025
+}
+
+mod_monarchyGovernment_royalStability_delay = {
+	national_unity_effect = -0.25
+	dissent_increase = -0.01
+	dissent_decrease = 0.01
+}
+
+mod_monarchyGovernment_royalCelebration_delay = {
+	national_unity_effect = -0.25
+	dissent_increase = -0.01
+	dissent_decrease = 0.01
+}
+
+mod_monarchyGovernment_royalTourism = {
+	prestige = 0.025
+	extra_income = 0.025
+}
+
+mod_monarchyGovernment_royalActivism = {
+	prestige = 0.05
+	dissent_decrease = -0.01
+}
+
+mod_monarchyGovernment_royalStrategy_delay = {
+	prestige = -0.05
+	dissent_decrease = 0.1
+}
+
+mod_monarchyGovernment_royalEditorial_delay = {
+	prestige = -0.05
+	dissent_decrease = 0.01
+}
+
+mod_monarchyGovernment_royalNepotism_delay = {
+	prestige = -0.05
+	dissent_decrease = 0.01
+}
+
+mod_monarchyGovernment_royalTitles = {
+	extra_income = 0.01
+	prestige = -0.025
+}
+
+mod_monarchyGovernment_royalTitles_delay = {
+	extra_income = -0.01
+	prestige = 0.025
+}
+
+mod_monarchyGovernment_royalTax_delay = {
+	extra_income = 0.025
+}
+
+mod_monarchyGovernment_royalTax = {
+	extra_income = -0.025
+}
+
+mod_monarchyGovernment_royalEmbarressment_delay = {
+	prestige = -0.05
+	dissent_increase = 0.025
+}
+
+mod_monarchyGovernment_royalGaffe_delay = {
+	prestige = -0.05
+	dissent_increase = 0.025
+}
+
+mod_monarchyGovernment_royalDivorce_delay = {
+	prestige = -0.05
+	dissent_increase = 0.025
+}
+
+mod_monarchyGovernment_royalWealth_delay = {
+	prestige = -0.05
+	dissent_increase = 0.025
+}
+
+mod_monarchyGovernment_royalBlackmail_delay = {
+	prestige = -0.05
+	dissent_increase = 0.025
+}
+
+mod_monarchyGovernment_royalFued = {
+	national_unity_effect = 0.25
+	dissent_increase = 0.01
+	dissent_decrease = -0.01
+}
+
+mod_monarchyGovernment_royalHealth_delay = {
+	prestige = -0.05
+	dissent_increase = 0.025
+}
+
+mod_monarchyGovernment_royalHealth = {
+	national_unity_effect = 0.25
+}
+
+mod_monarchyGovernment_royalCharity_delay = {
+	prestige = -0.05
+	dissent_increase = 0.025
+}
+
+
+### Bush War ###
+
+major_revolt_risk = {
+	local_revolt_risk = 15
+}
+moderate_revolt_risk = {
+	local_revolt_risk = 10
+}
+minor_revolt_risk = {
+	local_revolt_risk = 5
+}
+
+g_major_revolt_risk = {
+	global_revolt_risk = 15
+}
+g_moderate_revolt_risk = {
+	global_revolt_risk = 10
+}
+g_minor_revolt_risk = {
+	global_revolt_risk = 5
+}
+g_rebel_support = {
+	global_revolt_risk = 2
+}
+
+
+### Flavour Events ###
+
+festival_of_britain = {
+	research_efficiency = 0.02
+	prestige = 0.05
+	national_unity = 0.5
+}
+
+### Pakistani War ###
+
+mod_defensive_war = {
+	defend_reinforce_chance = 0.2
+}
+
+IND_claims_on_kutch_delayed = {
+	dissent_increase = 0.1
+	national_unity = -0.2
+}
+
+###Space Race###
+
+mod_space_program_ongoing = {
+	prestige = 0.2
+}
+
+mod_space_program_established = {
+	prestige = 0.3
+}
+
+###Moroccan Independence###
+
+corrupt_caids = {
+	dissent_increase = 0.1
+	national_unity = -0.2
+}
+
+evt_FRA_moroccan_ringleaders_arrested = {
+	dissent_increase = 0.1
+	national_unity = -0.2
+}
+
+evt_FRA_moroccan_ringleaders_kidnapped = {
+	dissent_increase = 0.1
+	national_unity = -0.2
+}
+
+moroccan_independence_delayed = {
+	dissent_increase = 0.1
+	national_unity = -0.2
+}
+
+voice_of_the_arabs_incitement = {
+	local_revolt_risk = 2
+}
+
+## Human Rights Global Events ##
+
+#COUNTRY MODIFIERS
+human_rights_agitation_timer = { }
+human_rights_dissent = { 
+	ruling_party_support = -0.05
+	dissent_increase = 0.05
+}
+human_rights_reform_happiness = { 
+	ruling_party_support = 0.05
+	national_unity = 0.2
+	dissent_decrease = 0.05
+}
+defecting_general_intel = {
+	counter_espionage = -0.05
+}
+preventing_migration = {
+	dissent_increase = 0.05
+	ruling_party_support = -0.01
+}
+human_rights_trust = {
+	national_unity = 0.1
+	ruling_party_support = 0.02
+}
+brain_drain = {
+	research_efficiency = -0.05
+}
+educated_immigrants = {
+	research_efficiency = 0.02
+}
+#PROVINCE MODIFIERS
+forced_to_stay = {
+	local_revolt_risk = 3 #was 0.03
+}
+asylum_seekers = {
+	population_growth = 0.01
+	local_revolt_risk = 1 #0.01
+}
+border_migration_hr = {
+	population_growth = -0.01
+	local_revolt_risk = 1 #Potential increase in crime (ie human trafficking) - was 0.01
+}
+people_are_leaving = {
+	population_growth = -0.01
+}
+migration_hotspot = {
+	population_growth = 0.01
+}
+
+del_risk = {
+	local_revolt_risk = -1
+}
+## State Religion and Secularism Global Events ##
+
+#COUNTRY MODIFIERS
+moral_police = {
+	national_unity = 0.2
+	dissent_increase = 0.02
+}
+moral_police_recruitment = {
+	dissent_increase = 0.01
+	global_manpower_modifier = -0.05
+}
+moral_police_demobilize = {
+	dissent_decrease = 0.01
+	global_revolt_risk = 1
+	global_manpower_modifier = 0.025
+}
+alcohol_ban = {
+	dissent_increase = 0.05
+	dissent_decrease = -0.05
+	global_revolt_risk = 2
+	ruling_party_support = -0.03
+	consumption_tax = -0.05
+	services_tax = -0.15
+}
+banned_other_religions = {
+	dissent_increase = 0.1
+	national_unity = 0.5
+}
+state_atheism = {
+	dissent_increase = 0.05
+	national_unity = 0.5
+	global_revolt_risk = 2
+}
+banned_contraceptives = {
+	dissent_decrease = -0.01
+	population_growth = 0.01
+}
+one_child_law = {
+	population_growth = -0.02
+	dissent_increase = 0.01
+}
+theocracy_in_transition = {
+	national_unity = -0.2
+}
+angry_secularists = {
+	dissent_increase = 0.01
+	ruling_party_support = -0.03
+}
+theocratic_cons_crisis = {
+	ruling_party_support = -0.2
+	national_unity = -1
+	dissent_increase = 0.1
+	dissent_decrease = -0.1
+	global_revolt_risk = 5
+}
+clerical_support = {
+	ruling_party_support = 0.05
+	national_unity = 0.5
+	dissent_increase = -0.05
+	dissent_decrease = 0.1
+	global_revolt_risk = -2
+}
+clerical_condemnation = {
+	ruling_party_support = -0.04
+	national_unity = -0.2
+	dissent_increase = 0.01
+	dissent_decrease = -0.05
+}
+
+fundamentalist_old_guard = {
+	global_revolt_risk = 2
+	national_unity = -0.25
+	dissent_increase = 0.03
+	dissent_decrease = -0.03
+}
+heretical_leaders = {
+	global_revolt_risk = 5
+	ruling_party_support = -0.05
+	national_unity = -0.5
+	dissent_increase = 0.02
+	dissent_decrease = -0.1
+}
+theoc_breach_of_trust = {
+	ruling_party_support = -0.05
+	global_revolt_risk = 1
+}
+flip_flopper = {
+	ruling_party_support = -0.03
+	prestige = -0.01
+}
+lagging_theoc_transition = {
+	national_unity = -0.3
+	dissent_increase = 0.01
+	dissent_decrease = -0.01
+	prestige = -0.01
+}
+secular_plans_theoc = {
+	national_unity = -0.3
+	dissent_increase = 0.01
+	dissent_decrease = -0.01
+	prestige = -0.01
+}
+pro_secular_populace = {
+	national_unity = 0.2
+	global_revolt_risk = -2
+	ruling_party_support = 0.03
+}
+immoral_moral_police = {
+	dissent_increase = 0.025
+	ruling_party_support = -0.05
+}
+reforming_moral_police = {
+	national_unity = -0.5
+}
+moral_police_trust = {
+	national_unity = 0.5
+}
+immoral_ministers = {
+	dissent_increase = 0.025
+	national_unity = -0.25
+}
+religious_awakening = {
+	research_efficiency = -0.01
+	national_unity = 0.1
+	dissent_decrease = 0.01
+}
+religious_awakening_party_support = {
+	research_efficiency = -0.01
+	national_unity = 0.1
+	dissent_decrease = 0.01
+}
+religious_awakening_party_detract = {
+	research_efficiency = 0.01
+	national_unity = -0.1
+	dissent_decrease = -0.01
+}
+new_age_spirituality = {
+	suseptibility = -0.01
+	national_unity = -0.1
+	dissent_increase = 0.01
+}
+new_age_pacifists = {
+	neutrality_change = 0.025
+}
+new_age_war_objectors = {
+	war_exhaustion = 0.01
+	global_manpower_modifier = -0.025
+}
+#PROVINCE MODIFIERS
+local_religions_banned = {
+	local_revolt_risk = 5
+}
+converted_populace = {
+	local_revolt_risk = 5
+}
+underground_churches = {
+	local_revolt_risk = 2
+}
+
+## 1946 Operation Paperclip ##
+mod_Global_operation_paperclip_large = {
+	research_efficiency = 0.05
+	prestige = -0.02
+}
+
+mod_Global_operation_paperclip_moderate = {
+	research_efficiency = 0.03
+	prestige = -0.01
+}
+
+mod_Global_operation_paperclip_destruction = {
+	research_efficiency = -0.02
+}
+
+mod_Global_operation_paperclip_time_check = {
+    research_efficiency = -0.02
+}
+
+mod_Global_operation_paperclip_scientist_nuclear_bonus_1 = {
+	flexible_modifier = {
+		nuclear_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.03
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_nuclear_bonus_2 = {
+	flexible_modifier = {
+		nuclear_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.06
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_nuclear_bonus_3 = {
+	flexible_modifier = {
+		nuclear_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.09
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_nuclear_bonus_4 = {
+	flexible_modifier = {
+		nuclear_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.12
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_nuclear_bonus_5 = {
+	flexible_modifier = {
+		nuclear_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.15
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_aeronautical_bonus_1 = {
+	flexible_modifier = {
+		air_tech2_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.03
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_aeronautical_bonus_2 = {
+	flexible_modifier = {
+		air_tech2_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.06
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_aeronautical_bonus_3 = {
+	flexible_modifier = {
+		air_tech2_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.09
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_aeronautical_bonus_4 = {
+	flexible_modifier = {
+		air_tech2_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.12
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_aeronautical_bonus_5 = {
+	flexible_modifier = {
+		air_tech2_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.15
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_cryptography_bonus_1 = {
+	flexible_modifier = {
+		general_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.03
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_cryptography_bonus_2 = {
+	flexible_modifier = {
+		general_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.06
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_cryptography_bonus_3 = {
+	flexible_modifier = {
+		general_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.09
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_cryptography_bonus_4 = {
+	flexible_modifier = {
+		general_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.12
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_cryptography_bonus_5 = {
+	flexible_modifier = {
+		general_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.15
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_industrial_bonus_1 = {
+	flexible_modifier = {
+		industrial_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.03
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_industrial_bonus_2 = {
+	flexible_modifier = {
+		industrial_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.06
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_industrial_bonus_3 = {
+	flexible_modifier = {
+		industrial_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.09
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_industrial_bonus_4 = {
+	flexible_modifier = {
+		industrial_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.12
+		}
+	}
+}
+
+mod_Global_operation_paperclip_scientist_industrial_bonus_5 = {
+	flexible_modifier = {
+		industrial_tech1_folder_speed_cost = {
+			name = research_bonus_desc
+			value = 0.15
+		}
+	}
+}
+
+
+## 1948 Newfoundland Referendum ##
+mod_ENG_Newfoundland_offer_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+	ruling_party_support = -0.01
+	national_unity = -0.1
+    suseptibility = 0.01
+}
+
+mod_CAN_Newfoundland_demand_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+	ruling_party_support = -0.01
+	national_unity = -0.1
+	suseptibility = 0.01
+}
+
+pmod_CAN_newfoundland_fishing_rights_expanded = {
+	flexible_modifier = {
+		province_food_modifier = {
+			name = pol_province_food_modifier_desc
+			value = 0.025
+		}
+	}
+}
+
+pmod_USA_newfoundland_fishing_rights_curtailed = {
+	flexible_modifier = {
+		province_food_modifier = {
+			name = pol_province_food_modifier_desc
+			value = -0.10
+		}
+	}
+}
+
+
+## Cod War ##
+pmod_6nm_fishing = {
+	flexible_modifier = {
+		province_food_modifier = {
+			name = pol_province_food_modifier_desc
+			value = -0.025
+		}
+	}
+}
+
+pmod_50nm_fishing = {
+	flexible_modifier = {
+		province_food_modifier = {
+			name = pol_province_food_modifier_desc
+			value = 0.025
+		}
+	}
+}
+
+pmod_200nm_fishing = {
+	flexible_modifier = {
+		province_food_modifier = {
+			name = pol_province_food_modifier_desc
+			value = 0.05
+		}
+	}
+}
+
+## 1969 Football War ##
+pmod_salvadoran_immigration = {
+	flexible_modifier = {
+		province_food_modifier = {
+			name = pol_province_food_modifier_desc
+			value = 0.02
+		}
+	}
+	local_manpower_modifier = 0.02
+}
+mod_salvadoran_immigration_delay = {
+	flexible_modifier = {
+		province_food_modifier = {
+			name = pol_province_food_modifier_desc
+			value = -0.02
+		}
+	}
+}
+pmod_land_reform = {
+	flexible_modifier = {
+		province_food_modifier = {
+			name = pol_province_food_modifier_desc
+			value = 0.04
+		}
+		
+	}
+}
+
+pmod_tibetan_local_customs = {
+	flexible_modifier = {
+		province_consumer_goods_modifier = {
+			name = pol_province_consumer_goods_modifier_desc
+			value = -0.20
+		}
+	}
+	flexible_modifier = {
+		province_natural_resources_modifier = {
+			name = pol_province_natural_resources_modifier_desc
+			value = -0.20
+		}
+	}
+	flexible_modifier = {
+		province_food_modifier = {
+			name = pol_province_food_modifier_desc
+			value = -0.20
+		}
+	}
+}
+tibetan_rebels = {
+	local_revolt_risk = 4
+}
+indian_rebels = {
+	local_revolt_risk = 5
+}
+pakistani_rebels = {
+	local_revolt_risk = 5
+}
+
+
+## 1980 Iran-Iraq War ##
+revolutionary_disarry = {
+	land_organisation = -0.20
+}
+
+airforce_topguns = {
+	air_organisation = 0.20
+}
+
+Iran_fights = {
+	territorial_pride = 0.2
+}
+
+fight_kurds = {
+	global_revolt_risk = 4
+}
+ignore_kurds = {
+	global_revolt_risk = 8
+}
+
+placate_kurds = {
+	global_revolt_risk = 2
+	global_money = -0.2
+}
+
+Syrian_oilpipeline = {
+	global_money = -0.6
+}
+
+KWT_Iraq_cost = {
+	global_money = -0.2
+}
+
+KWT_Iraq_money = {
+	global_money = 0.2
+}
+
+Sau_Iraq_cost = {
+	global_money = -0.3
+}
+
+Sau_Iraq_money = {
+	global_money = 0.3
+}
+
+USA_Iraq_cost = {
+	global_money = -0.1
+	global_supplies = -0.1
+}
+
+USA_Iraq_support = {
+	global_money = 0.1
+	global_supplies = 0.1
+	offmap_land_intel = 0.1
+}
+
+Fra_Iraq_cost = {
+	global_supplies = -0.05
+}
+
+FRA_Iraq_support = {
+	global_supplies = 0.05
+}
+
+SOV_Iraq_cost = {
+	global_supplies = -0.05
+}
+
+SOV_Iraq_support = {
+	global_supplies = 0.05
+}
+
+GER_Iraq_cost = {
+	global_supplies = -0.05
+}
+
+GER_Iraq_support = {
+	global_supplies = 0.05
+}
+
+China_Iran_cost = {
+	global_supplies = -0.05
+}
+
+China_Iran_support = {
+	global_supplies = 0.05
+}
+
+Iraq_Totalwar = {
+	global_supplies = 0.05
+	global_manpower_modifier = 0.05
+}
+
+Tanker_losses = {
+	global_money = -0.1
+}
+
+Fatwa_on_Iraq = {
+	global_manpower_modifier = 0.05
+	land_organisation = 0.10
+}
+
+Iraqi_rally = {
+	territorial_pride = 0.2
+}
+
+# Cooldown timer
+Iranian_crisis = {
+	national_unity = -0.3
+	dissent_increase = 0.01
+	dissent_decrease = -0.01
+	ruling_party_support = -0.01
+	
+}
+
+Iran_Airforce_purge = {
+	air_organisation = -0.10
+}
+
+Iraq_militaryCrisis = {
+	land_organisation = -0.10
+	air_organisation = -0.10
+}
+
+Iran_militaryCrisis = {
+	land_organisation = -0.10
+	air_organisation = -0.10
+}
+
+Iran_militaryCrisis_II = {
+	land_organisation = -0.10
+	air_organisation = -0.10
+}
+Iran_Navy_losses = {
+	naval_organisation = -0.10
+}
+Iran_oilrig_losses  = { 
+	global_crude_oil = 0.1
+}
+
+UN_EMBARGO_DELAY = {
+    neutrality = -0.05
+	prestige = -0.05
+	suseptibility = 0.05
+}
+
+NATO_EMBARGO_DELAY = {
+    neutrality = -0.05
+	prestige = -0.05
+	suseptibility = 0.05
+}
+
+WP_EMBARGO_DELAY = {
+    neutrality = -0.05
+	prestige = -0.05
+	suseptibility = 0.05
+}
+
+## 1956 Malta Independence ##
+mod_ENG_malta_integration_promised_timer = {
+national_unity = -0.05
+}
+
+mod_ENG_malta_independence_promised_timer = {
+national_unity = -0.05
+}
+
+mod_MLT_integration_referendum_delay = {
+national_unity = -0.5
+}
+
+mod_MLT_independence_referendum_delay = {
+national_unity = -0.5
+}
+
+## 1953 Cuban Revolution ##
+mod_CUB_moncada_barracks_attacked = {
+	espionage_bonus = 0.05
+	dissent_increase = 0.1
+}
+
+mod_CUB_serious_rebellion = {
+	dissent_increase = 0.15
+	national_unity = -3
+}
+
+## UN Membership Process ##
+mod_UN_membership_vetoed_delay = {
+    neutrality = -0.05
+	prestige = -0.05
+	suseptibility = 0.05
+}
+
+mod_vetoed_delay = {
+    neutrality = -0.05
+	prestige = -0.5
+	suseptibility = 0.05
+}
+
+mod_UN_membership_started_delay = {
+    neutrality = -0.05
+	prestige = -0.05
+	suseptibility = 0.05
+}
+mod_UN_membership_acceptance_delay = {
+    neutrality = -0.05
+	prestige = -0.05
+	suseptibility = 0.05
+
+}
+mod_UN_membership_process_fast_delay = {
+    neutrality = -0.06
+	prestige = -0.06
+	suseptibility = 0.06
+}
+mod_UN_membership_process_slow_delay = {
+    neutrality = -0.08
+	prestige = -0.08
+	suseptibility = 0.08
+}
+mod_UN_secretary_general_fast_track_application_delay = {
+    neutrality = -0.08
+	prestige = -0.08
+	suseptibility = 0.08
+}
+mod_united_nations_member_state = {
+	neutrality = 0.05
+	prestige = 0.05
+	suseptibility = -0.05
+}
+
+
+#UN Conventions
+
+mod_UN_mercenary_convention_failure_delay = {
+    prestige = -0.05
+	neutrality = -0.02
+}
+mod_UN_mercenary_convention_ratifier_delay = {
+    prestige = -0.05
+	neutrality = -0.02
+}
+mod_UN_mercenary_convention_revoked_recently = {
+    prestige = -0.05
+	neutrality = -0.02
+}
+mod_UN_mercenary_convention_ratified_recently = {
+    prestige = 0.05
+	neutrality = 0.02
+}
+mod_UN_mercenary_convention_ratified = {
+	#Positive
+	prestige = 0.05
+	neutrality = 0.02
+	#Negative (effects # in event file)
+	flexible_modifier = {
+		population_manpower = {
+			name = pol_population_manpower_desc
+			value = -0.02
+		}
+	}
+	 militia_brigade = {
+		 default_organisation = -5
+		 unit_money_cost = 0.5
+		 build_time = 30
+	 }
+}
+mod_UN_mercenary_convention_voting_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+	ruling_party_support = -0.01
+	national_unity = -0.1
+}
+
+mod_UN_womens_rights_convention_failure_delay = {
+	prestige = -0.07
+	dissent_increase = 0.07
+	ruling_party_support = -0.03
+	national_unity = -0.3
+}
+mod_UN_womens_rights_convention_ratifier_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+	ruling_party_support = -0.01
+	national_unity = -0.1
+}
+mod_UN_womens_rights_convention_revoked_recently = {
+	prestige = -0.07
+	dissent_increase = 0.07
+	ruling_party_support = -0.03
+	national_unity = -0.3
+}
+mod_UN_womens_rights_convention_ratified_recently = {
+	prestige = 0.06
+	dissent_increase = -0.06
+	ruling_party_support = 0.02
+	national_unity = 0.2
+}
+mod_UN_womens_rights_convention_ratified = {
+	prestige = 0.05
+	dissent_increase = -0.05
+	ruling_party_support = 0.01
+	national_unity = 0.1
+}
+mod_UN_womens_rights_convention_voting_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+	ruling_party_support = -0.01
+	national_unity = -0.1
+}
+
+mod_UN_racial_discrimination_convention_failure_delay = {
+	prestige = -0.06
+	dissent_increase = 0.06
+}
+mod_UN_racial_discrimination_convention_ratifier_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+}
+mod_UN_racial_discrimination_convention_revoked_recently = {
+	prestige = -0.07
+	dissent_increase = 0.07
+}
+mod_UN_racial_discrimination_convention_ratified_recently = {
+	prestige = 0.06
+	dissent_increase = -0.06
+}
+mod_UN_racial_discrimination_convention_ratified = {
+	prestige = 0.05
+	dissent_increase = -0.05
+}
+mod_UN_racial_discrimination_convention_voting_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+}
+
+mod_UN_environmental_modification_convention_failure_delay = {
+	prestige = -0.06
+	dissent_increase = 0.06
+}
+mod_UN_environmental_modification_convention_ratifier_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+}
+mod_UN_environmental_modification_convention_revoked_recently = {
+	prestige = -0.07
+	dissent_increase = 0.07
+}
+mod_UN_environmental_modification_convention_ratified_recently = {
+	prestige = 0.06
+	dissent_increase = -0.06
+}
+mod_UN_environmental_modification_convention_ratified = {
+	prestige = 0.05
+	dissent_increase = -0.05
+}
+mod_UN_environmental_modification_convention_voting_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+}
+
+mod_UN_prevention_of_torture_convention_failure_delay = {
+	prestige = -0.06
+	dissent_increase = 0.06
+}
+mod_UN_prevention_of_torture_convention_ratifier_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+}
+mod_UN_prevention_of_torture_convention_revoked_recently = {
+	prestige = -0.07
+	dissent_increase = 0.07
+}
+mod_UN_prevention_of_torture_convention_ratified_recently = {
+    prestige = 0.06
+	dissent_increase = -0.06
+}
+mod_UN_prevention_of_torture_convention_ratified = {
+	prestige = 0.05
+	dissent_increase = -0.05
+}
+mod_UN_prevention_of_torture_convention_voting_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+}
+mod_UN_rights_of_the_child_convention_failure_delay = {
+	prestige = -0.06
+	dissent_increase = 0.06
+}
+mod_UN_rights_of_the_child_convention_ratifier_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+}
+mod_UN_rights_of_the_child_convention_revoked_recently = {
+	prestige = -0.07
+	dissent_increase = 0.07
+}
+mod_UN_rights_of_the_child_convention_ratified_recently = {
+    prestige = 0.06
+	dissent_increase = -0.06
+}
+mod_UN_rights_of_the_child_convention_ratified = {
+	prestige = 0.05
+	dissent_increase = -0.05
+}
+mod_UN_rights_of_the_child_convention_voting_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+}
+
+mod_UN_protection_of_diplomats_convention_failure_delay = {
+	neutrality = -0.06
+	prestige = -0.06
+	suseptibility = 0.06
+}
+mod_UN_protection_of_diplomats_convention_ratifier_delay = {
+	neutrality = -0.05
+	prestige = -0.05
+	suseptibility = 0.05
+}
+mod_UN_protection_of_diplomats_convention_revoked_recently = {
+	neutrality = -0.06
+	prestige = -0.06
+	suseptibility = 0.06
+}
+mod_UN_protection_of_diplomats_convention_ratified_recently = {
+	neutrality = 0.06
+	prestige = 0.06
+	suseptibility = -0.06
+}
+mod_UN_protection_of_diplomats_convention_ratified = {
+	neutrality = 0.05
+	prestige = 0.05
+	suseptibility = -0.05
+}
+mod_UN_protection_of_diplomats_convention_voting_delay = {
+	neutrality = -0.05
+	prestige = -0.05
+	suseptibility = 0.05
+}
+
+mod_UN_economic_and_social_rights_convention_failure_delay = {
+	prestige = -0.06
+	dissent_increase = 0.06
+	ruling_party_support = -0.02
+	national_unity = -0.2
+}
+mod_UN_economic_and_social_rights_convention_ratifier_delay = {
+	prestige = 0.05
+	dissent_increase = -0.05
+	ruling_party_support = 0.01
+	national_unity = 0.1
+}
+mod_UN_economic_and_social_rights_convention_revoked_recently = {
+	prestige = -0.07
+	dissent_increase = 0.07
+	ruling_party_support = -0.03
+	national_unity = -0.3
+}
+mod_UN_economic_and_social_rights_convention_ratified_recently = {
+	prestige = 0.06
+	dissent_increase = -0.06
+	ruling_party_support = 0.02
+	national_unity = 0.2
+}
+mod_UN_economic_and_social_rights_convention_ratified = {
+	prestige = 0.05
+	dissent_increase = -0.05
+	ruling_party_support = 0.01
+	national_unity = 0.1
+}
+mod_UN_economic_and_social_rights_convention_voting_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+	ruling_party_support = -0.01
+	national_unity = -0.1
+}
+
+mod_UN_civil_and_political_rights_convention_failure_delay = {
+	prestige = -0.06
+	dissent_increase = 0.06
+	ruling_party_support = -0.02
+	national_unity = -0.2
+}
+mod_UN_civil_and_political_rights_convention_ratifier_delay = {
+	prestige = 0.05
+	dissent_increase = -0.05
+	ruling_party_support = 0.01
+	national_unity = 0.1
+}
+mod_UN_civil_and_political_rights_convention_revoked_recently = {
+	prestige = -0.07
+	dissent_increase = 0.07
+	ruling_party_support = -0.03
+	national_unity = -0.3
+}
+mod_UN_civil_and_political_rights_convention_ratified_recently = {
+	prestige = 0.06
+	dissent_increase = -0.06
+	ruling_party_support = 0.02
+	national_unity = 0.2
+}
+mod_UN_civil_and_political_rights_convention_ratified = {
+	prestige = 0.05
+	dissent_increase = -0.05
+	ruling_party_support = 0.01
+	national_unity = 0.1
+}
+mod_UN_civil_and_political_rights_convention_voting_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+	ruling_party_support = -0.01
+	national_unity = -0.1
+}
+
+mod_UN_mines_and_booby_traps_convention_failure_delay = {
+	#Negative
+	prestige = -0.06
+	neutrality = -0.03
+	#Positive(effects # in event file)
+	 air_cav_brigade = { soft_attack = 0.05 }
+	 cavalry_brigade = { soft_attack = 0.02 }
+	 engineer_brigade = { soft_attack = 0.01 }
+	 hq_brigade = { soft_attack = 0.02 }
+	 infantry_brigade = { soft_attack = 0.01 }
+	 light_mechanized_brigade = { soft_attack = 0.03 }
+	 marine_brigade = { soft_attack = 0.02 }
+	 militia_brigade = { soft_attack = 0.01 }
+	 partisan_brigade = { soft_attack = 0.01 }	
+	 motorized_brigade = { soft_attack = 0.02 }	
+	 bergsjaeger_brigade = { soft_attack = 0.02 }
+}
+mod_UN_mines_and_booby_traps_convention_ratifier_delay = {
+	#Negative
+	prestige = -0.05
+	neutrality = -0.02
+	#Positive(effects # in event file)
+	 air_cav_brigade = { soft_attack = 0.05 }
+	 cavalry_brigade = { soft_attack = 0.02 }
+	 engineer_brigade = { soft_attack = 0.01 }
+	 hq_brigade = { soft_attack = 0.02 }
+	 infantry_brigade = { soft_attack = 0.01 }
+	 light_mechanized_brigade = { soft_attack = 0.03 }
+	 marine_brigade = { soft_attack = 0.02 }
+	 militia_brigade = { soft_attack = 0.01 }
+	 partisan_brigade = { soft_attack = 0.01 }	
+	 motorized_brigade = { soft_attack = 0.02 }	
+	 bergsjaeger_brigade = { soft_attack = 0.02 }
+}
+mod_UN_mines_and_booby_traps_convention_revoked_recently = {
+	#Negative
+	prestige = -0.06
+	neutrality = -0.03
+	#Positive(effects # in event file)
+	 air_cav_brigade = { soft_attack = 0.05 }
+	 cavalry_brigade = { soft_attack = 0.02 }
+	 engineer_brigade = { soft_attack = 0.01 }
+	 hq_brigade = { soft_attack = 0.02 }
+	 infantry_brigade = { soft_attack = 0.01 }
+	 light_mechanized_brigade = { soft_attack = 0.03 }
+	 marine_brigade = { soft_attack = 0.02 }
+	 militia_brigade = { soft_attack = 0.01 }
+	 partisan_brigade = { soft_attack = 0.01 }	
+	 motorized_brigade = { soft_attack = 0.02 }	
+	 bergsjaeger_brigade = { soft_attack = 0.02 }
+}
+mod_UN_mines_and_booby_traps_convention_ratified_recently = {
+	#Positive
+	prestige = 0.06
+	neutrality = 0.03
+	#Negative (effects # in event file)
+	 air_cav_brigade = { soft_attack = -0.05 }
+	 cavalry_brigade = { soft_attack = -0.02 }
+	 engineer_brigade = { soft_attack = -0.01 }
+	 hq_brigade = { soft_attack = -0.02 }
+	 infantry_brigade = { soft_attack = -0.01 }
+	 light_mechanized_brigade = { soft_attack = -0.03 }
+	 marine_brigade = { soft_attack = -0.02 }
+	 militia_brigade = { soft_attack = -0.01 }
+	 partisan_brigade = { soft_attack = -0.01 }	
+	 motorized_brigade = { soft_attack = -0.02 }	
+	 bergsjaeger_brigade = { soft_attack = -0.02 }
+}
+mod_UN_mines_and_booby_traps_convention_ratified = {
+	#Positive
+	prestige = 0.05
+	neutrality = 0.02
+	#Negative (effects # in event file)
+	 air_cav_brigade = { soft_attack = -0.05 }
+	 cavalry_brigade = { soft_attack = -0.02 }
+	 engineer_brigade = { soft_attack = -0.01 }
+	 hq_brigade = { soft_attack = -0.02 }
+	 infantry_brigade = { soft_attack = -0.01 }
+	 light_mechanized_brigade = { soft_attack = -0.03 }
+	 marine_brigade = { soft_attack = -0.02 }
+	 militia_brigade = { soft_attack = -0.01 }
+	 partisan_brigade = { soft_attack = -0.01 }	
+	 motorized_brigade = { soft_attack = -0.02 }	
+	 bergsjaeger_brigade = { soft_attack = -0.02 }
+}
+mod_UN_mines_and_booby_traps_convention_voting_delay = {
+	#Negative
+	prestige = -0.05
+	neutrality = -0.02
+	#Positive(effects # in event file)
+	 air_cav_brigade = { soft_attack = 0.05 }
+	 cavalry_brigade = { soft_attack = 0.02 }
+	 engineer_brigade = { soft_attack = 0.01 }
+	 hq_brigade = { soft_attack = 0.02 }
+	 infantry_brigade = { soft_attack = 0.01 }
+	 light_mechanized_brigade = { soft_attack = 0.03 }
+	 marine_brigade = { soft_attack = 0.02 }
+	 militia_brigade = { soft_attack = 0.01 }
+	 partisan_brigade = { soft_attack = 0.01 }	
+	 motorized_brigade = { soft_attack = 0.02 }	
+	 bergsjaeger_brigade = { soft_attack = 0.02 }
+}
+
+mod_UN_incendiary_weapons_convention_failure_delay = {
+	#Negative
+	prestige = -0.07
+	neutrality = -0.04
+	#Positive (effects # in event file)
+	 bomber_strike = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.2
+	 }
+	 cas = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.1
+	 }
+	 cag_attack = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.1
+	 }
+	 cag_vtol = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.1
+	 }
+}
+mod_UN_incendiary_weapons_convention_ratifier_delay = {
+	#Negative
+	prestige = -0.06
+	neutrality = -0.03
+	#Positive (effects # in event file)
+	 bomber_strike = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.2
+	 }
+	 cas = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.1
+	 }
+	 cag_attack = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.1
+	 }
+	 cag_vtol = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.1
+	 }
+ }
+
+mod_UN_incendiary_weapons_convention_revoked_recently = {
+	#Negative
+	prestige = -0.07
+	neutrality = -0.04
+	#Positive (effects # in event file)
+	 bomber_strike = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.2
+	 }
+	 cas = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.1
+	 }
+	 cag_attack = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.1
+	 }
+	 cag_vtol = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.1
+	 }
+}
+mod_UN_incendiary_weapons_convention_ratified_recently = {
+	#Positive
+	prestige = 0.06
+	neutrality = 0.03
+	#Negative (effects # in event file)
+	 bomber_strike = {
+		 woods = { attack = -0.1 }
+		 forest = { attack = -0.2 }
+		 jungle = { attack = -0.2 }
+		 supply_consumption = 0.2
+	 }
+	 cas = {
+		 woods = { attack = -0.1 }
+		 forest = { attack = -0.2 }
+		 jungle = { attack = -0.2 }
+		 supply_consumption = 0.1
+	 }
+	 cag_attack = {
+		 woods = { attack = -0.1 }
+		 forest = { attack = -0.2 }
+		 jungle = { attack = -0.2 }
+		 supply_consumption = 0.1
+	 }
+	 cag_vtol = {
+		 woods = { attack = -0.1 }
+		 forest = { attack = -0.2 }
+		 jungle = { attack = -0.2 }
+		 supply_consumption = 0.1
+	 }
+}
+mod_UN_incendiary_weapons_convention_ratified = {
+	#Positive
+	prestige = 0.05
+	neutrality = 0.02
+	#Negative (effects # in event file)
+	 bomber_strike = {
+		 woods = { attack = -0.1 }
+		 forest = { attack = -0.2 }
+		 jungle = { attack = -0.2 }
+		 supply_consumption = 0.2
+	 }
+	 cas = {
+		 woods = { attack = -0.1 }
+		 forest = { attack = -0.2 }
+		 jungle = { attack = -0.2 }
+		 supply_consumption = 0.1
+	 }
+	 cag_attack = {
+		 woods = { attack = -0.1 }
+		 forest = { attack = -0.2 }
+		 jungle = { attack = -0.2 }
+		 supply_consumption = 0.1
+	 }
+	 cag_vtol = {
+		 woods = { attack = -0.1 }
+		 forest = { attack = -0.2 }
+		 jungle = { attack = -0.2 }
+		 supply_consumption = 0.1
+	 }
+}
+mod_UN_incendiary_weapons_convention_voting_delay = {
+	#Negative
+	prestige = -0.06
+	neutrality = -0.03
+	#Positive (effects # in event file)
+	 bomber_strike = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.2
+	 }
+	 cas = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.1
+	 }
+	 cag_attack = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.1
+	 }
+	 cag_vtol = {
+		 woods = { attack = 0.1 }
+		 forest = { attack = 0.2 }
+		 jungle = { attack = 0.2 }
+		 supply_consumption = -0.1
+	 }
+}
+
+
+#UN Declarations
+
+mod_UN_decolonisation_declaration_failure_delay = {
+    neutrality = -0.08
+	prestige = -0.08
+	suseptibility = 0.08
+}
+mod_UN_decolonisation_declaration = {
+	neutrality = 0.05
+	prestige = 0.05
+	suseptibility = -0.05
+}
+mod_UN_decolonisation_voting_delay = {
+    neutrality = -0.05
+	prestige = -0.05
+	suseptibility = 0.05
+}
+
+mod_UN_women_and_children_in_war_declaration_failure_delay = {
+	prestige = -0.06
+	dissent_increase = 0.06
+}
+mod_UN_women_and_children_in_war_declaration = {
+	prestige = 0.05
+	dissent_increase = -0.05
+}
+mod_UN_women_and_children_in_war_voting_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+}
+
+mod_UN_settlement_of_disputes_declaration_failure_delay = {
+	prestige = -0.06
+	dissent_increase = 0.06
+}
+mod_UN_settlement_of_disputes_declaration = {
+	prestige = 0.05
+	dissent_increase = -0.05
+}
+mod_UN_settlement_of_disputes_voting_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+}
+
+mod_UN_minority_rights_declaration_failure_delay = {
+	prestige = -0.06
+	dissent_increase = 0.06
+	ruling_party_support = -0.02
+	national_unity = -0.2
+}
+mod_UN_minority_rights_declaration = {
+	prestige = 0.05
+	dissent_increase = -0.05
+	ruling_party_support = 0.01
+	national_unity = 0.1
+}
+mod_UN_minority_rights_voting_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+	ruling_party_support = -0.01
+	national_unity = -0.1
+}
+
+mod_UN_religious_intolerance_declaration_failure_delay = {
+	prestige = -0.06
+	dissent_increase = 0.06
+	ruling_party_support = -0.02
+	national_unity = -0.2
+}
+mod_UN_religious_intolerance_declaration = {
+	prestige = 0.05
+	dissent_increase = -0.05
+	ruling_party_support = 0.01
+	national_unity = 0.1
+}
+mod_UN_religious_intolerance_voting_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+	ruling_party_support = -0.01
+	national_unity = -0.1
+}
+
+mod_UN_right_to_development_declaration_failure_delay = {
+	prestige = 0.06
+	dissent_increase = -0.06
+}
+mod_UN_right_to_development_declaration = {
+	prestige = 0.05
+	dissent_increase = -0.05
+}
+mod_UN_right_to_development_voting_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+}
+
+mod_UN_human_environment_declaration_failure_delay = {
+	prestige = -0.06
+	dissent_increase = 0.06
+}
+mod_UN_human_environment_declaration = {
+	prestige = 0.05
+	dissent_increase = -0.05
+}
+mod_UN_human_environment_voting_delay = {
+	prestige = -0.05
+	dissent_increase = 0.05
+}
+
+
+#UN GATT
+
+mod_UN_general_agreement_on_tariffs_and_trade_failure_delay = {
+	national_unity = -0.3
+	production_tax = -0.04
+	global_money = -0.3
+}
+mod_UN_general_agreement_on_tariffs_and_trade_ratifier_delay = {
+	national_unity = -0.1
+	production_tax = -0.02
+	global_money = -0.1
+}
+mod_UN_general_agreement_on_tariffs_and_trade_revoked_recently = {
+	national_unity = -0.3
+	production_tax = -0.04
+	global_money = -0.3
+}
+mod_UN_general_agreement_on_tariffs_and_trade_ratified_recently = {
+	national_unity = 0.1
+	production_tax = 0.02
+	global_money = 0.1
+}
+mod_UN_general_agreement_on_tariffs_and_trade_ratified = {
+	national_unity = 0.1
+	production_tax = 0.02
+	global_money = 0.1
+}
+mod_UN_general_agreement_on_tariffs_and_trade_voting_delay = {
+	national_unity = -0.1
+	production_tax = -0.02
+	global_money = -0.1
+}
+
+
+
+mod_ai_chance_test_delay = {
+}
+
+mod_DDR_joins_FRG_delay = {
+	national_unity = -3
+	dissent_increase = 0.3
+}
+mod_DDR_joins_FRG_delay_longer = {
+	national_unity = -6
+	dissent_increase = 0.6
+}
+mod_DDR_demand_west_german_integration_delay = {
+    neutrality = -0.06
+	prestige = -0.06
+	suseptibility = 0.06
+	national_unity = -3
+	dissent_increase = 0.3
+}
+mod_FRG_joins_DDR_delay = {
+	national_unity = -3
+	dissent_increase = 0.3
+}
+mod_FRG_joins_DDR_delay_longer = {
+	national_unity = -6
+	dissent_increase = 0.6
+}
+mod_FRG_demand_east_german_integration_delay = {
+    neutrality = -0.06
+	prestige = -0.06
+	suseptibility = 0.06
+	national_unity = -3
+	dissent_increase = 0.3
+}
+
+mod_Global_UN_funding_minimum = {
+	global_money = -0.003
+	prestige = -0.01
+}
+
+mod_Global_UN_funding_moderate = {
+	global_money = -0.005
+	prestige = 0.01
+}
+
+mod_Global_UN_funding_high = {
+	global_money = -0.0075
+	prestige = 0.02
+}
+
+mod_UN_funding_duration = {
+	global_money = -0.0075
+	prestige = 0.02
+
+}
+
+UN_memberD = {
+    neutrality = -0.05
+	prestige = -0.05
+	suseptibility = 0.05
+}
+
+## Pride of the fleet
+pride_of_the_fleet_dead = {
+	dissent_increase = 0.07
+}
+
+##Complete Edition Event Modifiers##
+
 revolutionary_disarry = {
 	land_organisation = -0.20
 }
@@ -3618,4 +6620,3 @@ tropas_1979= {
 tropas_1991= { 
 
 }
-

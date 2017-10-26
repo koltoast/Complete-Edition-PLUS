@@ -1,0 +1,297 @@
+# National Ideas
+
+national_culture = {
+	changeable = no
+	title = yes
+
+	cul_north_america = {
+			cost = 0.5
+	}
+	cul_latin_america = {
+			cost = 0.5
+	}
+	cul_western_europe = {
+			cost = 0.5
+	}
+	cul_pacific = {
+			cost = 0.5
+	}
+	cul_east_europe = {
+			cost = 0.5
+	}
+	cul_middle_east = {
+			cost = 0.5
+	}
+	cul_sub_saharan_africa = {
+			cost = 0.5
+	}
+	cul_east_asia = {
+			cost = 0.5
+	}
+	cul_south_asia = {
+			cost = 0.5
+	}
+
+#end of culture
+}
+
+
+national_religion = {
+	changeable = no
+
+	hinduism = {
+		supply_consumption = -0.005
+		peace_consumer_goods_demand = -0.005
+		war_exhaustion = -0.05
+		max_war_exhaustion 0.005
+		land_organisation = 0.005
+
+	}
+	confucianism = {
+		daoism
+		supply_consumption = -0.005
+		peace_consumer_goods_demand = -0.005
+		war_exhaustion = -0.05
+		max_war_exhaustion 0.005
+		land_organisation = 0.005		
+	}
+	buddhism = {
+		supply_consumption = -0.005
+		peace_consumer_goods_demand = -0.005
+	}
+	shintoism = {
+		supply_consumption = -0.005
+		peace_consumer_goods_demand = -0.005
+		war_exhaustion = -0.05
+		max_war_exhaustion 0.005
+		land_organisation = 0.005
+		prestige = 0.01
+		national_unity = 0.02
+		territorial_pride = 0.005
+		research_efficiency = 0.002
+
+	}
+	judaism = {
+		dissent_decrease = 0.004
+		territorial_pride = 0.005
+		research_efficiency = 0.002
+		supply_consumption = -0.005
+		peace_consumer_goods_demand = -0.005
+		war_exhaustion = -0.0025
+        national_unity = 0.02
+		prestige = 0.01
+		unit_recruitment_time = -0.001
+
+	}
+	christianity = {
+		dissent_decrease = 0.004
+		global_revolt_risk = -0.2
+		espionage_bonus = 0.002
+		suseptibility = 0.001
+		neutrality_change = 0.02
+		prestige = 0.01
+
+	}
+	islam = {
+		supply_consumption = -0.005
+		peace_consumer_goods_demand = -0.005
+		war_exhaustion = -0.05
+		max_war_exhaustion 0.005
+		territorial_pride = 0.005
+		land_organisation = 0.005
+	
+
+	}
+	folk_religions = {
+		supply_consumption = -0.005
+		peace_consumer_goods_demand = -0.005
+		war_exhaustion = -0.05
+		max_war_exhaustion 0.005
+		land_organisation = 0.005
+
+		}
+		
+	#atheism_religion = {
+		dissent_decrease = 0.05
+		max_war_exhaustion 0.005
+		territorial_pride = 0.005	
+	}	
+		
+	}
+
+#end of religion
+}
+
+national_identity = {
+
+	territorial_focus = {
+    	cost = 0.5
+        allow = {
+			ideology_group = allies
+			
+        }
+		supply_consumption = -0.05
+		peace_consumer_goods_demand = -0.05
+		war_exhaustion = -0.5
+		max_war_exhaustion 0.05
+		territorial_pride = 0.05
+		land_organisation = 0.05
+		
+    }
+    cultural_bias_focus = {
+    	cost = 0.5
+        allow = {
+			ideology_group = allies
+			
+        }
+		supply_consumption = -0.025
+		peace_consumer_goods_demand = -0.05
+		war_exhaustion = -0.025
+		national_unity = 0.2
+		prestige = 0.01
+		unit_recruitment_time = -0.01
+
+    }
+	state_building_focus = {
+    	cost = 0.5
+        allow = {
+			ideology_group = allies
+			
+        }
+
+		dissent_decrease = 0.04
+		factory building cost decreased = 0.01
+		research_efficiency = 0.02
+		supply_consumption = -0.05
+
+    }
+	corporate_focus = {
+    	cost = 0.5
+        allow = {
+			ideology_group = allies
+			
+        }
+
+		factory building cost decreased = 0.01
+		global_resources = 0.01
+		research_efficiency = 0.01
+		diplomatic points increase = 0.01
+		
+    }
+	civic_focus = {
+    	cost = 0.5
+        allow = {
+			ideology_group = allies
+			
+        }
+
+		dissent_decrease = 0.04
+		factory building cost decreased = 0.01
+		diplomatic points increase = 0.01
+		global_revolt_risk = -0.02
+		
+    }
+	equality_focus = {
+    	cost = 0.5
+        allow = {
+			ideology_group = allies
+			
+        }
+
+		dissent_decrease = 0.04
+		global_revolt_risk = -0.02
+		prestige = 0.01
+		espionage_bonus = 0.02
+		
+    }
+	humanitarian_focus = {
+    	cost = 0.5
+        allow = {
+			ideology_group = allies
+			
+        }
+
+		spy_daily = 0.01
+		social_pension = -0.01
+		national_unity = 0.3
+		prestige = 0.03
+		
+		
+    }
+#end of identity
+}
+
+
+national_attitude = {
+
+	imperialism = {
+    	cost = 0.5
+        allow = {
+			#ideology_group = comintern
+			
+        }
+
+		neutrality_change = -0.05
+		threat_impact = 0.01
+
+    }
+	colonialism = {
+    	cost = 0.5
+        allow = {
+			#ideology_group = comintern
+
+        }
+
+		neutrality_change = -0.03
+		threat_impact = 0.01
+
+    }
+	hegemony = {
+    	cost = 0.5
+        allow = {
+			#ideology_group = comintern
+			
+        }
+
+		neutrality_change = -0.01
+		threat_impact = 0.01
+
+    }
+	balance_of_power = {
+    	cost = 0.5
+        allow = {
+			#ideology_group = comintern
+			
+        }
+
+		diplomatic points increase = 0.01
+
+    }
+	defensive = {
+    	cost = 0.5
+        allow = {
+			#ideology_group = comintern
+
+         }
+
+		neutrality_change = 0.01
+		threat_impact = -0.01
+
+    }
+	non-interventionism = {
+    	cost = 0.5
+        allow = {
+			#ideology_group = comintern
+
+        }
+
+		neutrality_change = 0.03
+		threat_impact = -0.01
+
+    }
+
+#end of attitude
+}
+
+
+#EOF
