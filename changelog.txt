@@ -2,3 +2,5 @@ v1 by koltoast:
 added ROM, BUL, HUN, POL, CZE, DDR, MON to comintern
 renamed some romanian units for more accuracy, but only for 1946
 added missing localisation for INTERFACE_DIPLO_FACTIONS_DISABLED
+
+v1.1 by Roshindow

@@ -1,0 +1,5726 @@
+3401054 = {
+	name = "Paul O'Donnell"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = ranger
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1948.4.1 = { rank = 0 }
+	}
+}
+3401020 = {
+	name = "Allan J. Probin"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	add_trait = offensive_doctrine
+	add_trait = winter_specialist 	
+	history = {
+		1946.1.1 = { rank = 1 }
+		1950.1.1 = { rank = 2 }
+		1955.1.1 = { rank = 3 }
+		1960.3.1 = { rank = 0 }
+	}
+}
+3401042 = {
+	name = "Sean Davidson"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1949.1.1 = { rank = 0 }
+	}
+}
+3401021 = {
+	name = "Garrett Long"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1950.4.1 = { rank = 0 }
+	}
+}
+3401033 = {
+	name = "Bryan Farmer"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1950.10.1 = { rank = 0 }
+	}
+}
+3401044 = {
+	name = "Jason Rowley"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1951.12.1 = { rank = 0 }
+	}
+}
+3401038 = {
+	name = "Jonathan Little"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	add_trait = defensive_doctrine
+	history = {
+		1946.1.1 = { rank = 1 }
+		1951.12.1 = { rank = 0 }
+	}
+}
+3401027 = {
+	name = "Casey Fuller"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1946.1.1 = { rank = 1 }
+		1951.12.1 = { rank = 0 }
+	}
+}
+3401002 = {
+	name = "Eric Howe"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1951.12.1 = { rank = 0 }
+	}
+}
+3401030 = {
+	name = "Peter Cook"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1946.1.1 = { rank = 1 }
+		1952.4.1 = { rank = 0 }
+	}
+}
+3401063 = {
+	name = "Casey Murray"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1951.12.1 = { rank = 1 }
+		1952.1.1 = { rank = 0 }
+	}
+}
+3401039 = {
+	name = "Matthew Hancock"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1952.12.1 = { rank = 0 }
+	}
+}
+3401007 = {
+	name = "Kyle Whitehouse"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1946.1.1 = { rank = 1 }
+		1952.11.1 = { rank = 0 }
+	}
+}
+3401032 = {
+	name = "Edgar Chan"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = offensive_doctrine
+	history = {
+		1946.1.1 = { rank = 1 }
+		1952.1.1 = { rank = 0 }
+	}
+}
+3401012 = {
+	name = "Alexander Lynch"
+	type = land
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1946.1.1 = { rank = 1 }
+		1952.9.1 = { rank = 0 }
+	}
+}
+3401058 = {
+	name = "Robert Turnbull"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1948.7.1 = { rank = 1 }
+		1951.12.1 = { rank = 2 }
+		1952.3.1 = { rank = 0 }
+	}
+}
+3401016 = {
+	name = "Paul Andrews"
+	type = land
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1953.4.1 = { rank = 0 }
+	}
+}
+3401057 = {
+	name = "Adrian Reed"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1948.4.1 = { rank = 1 }
+		1953.9.1 = { rank = 0 }
+	}
+}
+3401064 = {
+	name = "Scott Mason"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1951.12.1 = { rank = 1 }
+		1953.12.1 = { rank = 0 }
+	}
+}
+3401051 = {
+	name = "Raymond Lynch"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1948.4.1 = { rank = 3 }
+		1953.9.1 = { rank = 0 }
+	}
+}
+3401069 = {
+	name = "Christopher Wade"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1952.11.1 = { rank = 1 }
+		1953.10.1 = { rank = 0 }
+	}
+}
+3401034 = {
+	name = "Casey Shah"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = panzer_leader
+	history = {
+		1946.1.1 = { rank = 1 }
+		1954.7.1 = { rank = 0 }
+	}
+}
+3401025 = {
+	name = "Robert Byrne"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	add_trait = logistics_wizard
+	add_trait = trickster
+	history = {
+		1946.1.1 = { rank = 1 }
+		1954.3.1 = { rank = 0 }
+	}
+}
+3401023 = {
+	name = "Ryan Newton"
+	type = land
+	country = ENG
+	skill = 10
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = ranger
+	history = {
+		1946.1.1 = { rank = 1 }
+		1954.8.1 = { rank = 0 }
+	}
+}
+3401022 = {
+	name = "Joseph Reeves"
+	type = land
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1946.1.1 = { rank = 1 }
+		1954.9.1 = { rank = 0 }
+	}
+}
+3401040 = {
+	name = "Christian Cole"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1954.11.1 = { rank = 0 }
+	}
+}
+3401001 = {
+	name = "James Metcalfe"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1953.9.1 = { rank = 2 }
+		1954.6.1 = { rank = 0 }
+	}
+}
+3401055 = {
+	name = "Derek O'Connor"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1955.11.1 = { rank = 0 }
+	}
+}
+3401047 = {
+	name = "Cody Kent"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1955.11.1 = { rank = 0 }
+	}
+}
+3401035 = {
+	name = "Alexander Daniels"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1946.1.1 = { rank = 1 }
+		1952.12.1 = { rank = 2 }
+		1956.12.1 = { rank = 0 }
+	}
+}
+3401045 = {
+	name = "Adam Watkins"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = ranger
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1957.2.1 = { rank = 0 }
+	}
+}
+3401011 = {
+	name = "Corey Daly"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1954.6.1 = { rank = 2 }
+		1958.3.1 = { rank = 0 }
+	}
+}
+3401046 = {
+	name = "William Swift"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1955.11.1 = { rank = 3 }
+		1958.7.1 = { rank = 0 }
+	}
+}
+3401083 = {
+	name = "Erik Griffin"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1954.6.1 = { rank = 1 }
+		1958.8.1 = { rank = 0 }
+	}
+}
+3401062 = {
+	name = "Gregory Martin"
+	type = land
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1951.12.1 = { rank = 1 }
+		1958.1.1 = { rank = 0 }
+	}
+}
+3401041 = {
+	name = "Corey Parry"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1958.3.1 = { rank = 0 }
+	}
+}
+3401081 = {
+	name = "Edgar Parry"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1954.9.1 = { rank = 1 }
+		1958.3.1 = { rank = 0 }
+	}
+}
+3401048 = {
+	name = "Benjamin Henry"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	add_trait = panzer_leader
+	add_trait = logistics_wizard
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1959.7.1 = { rank = 0 }
+	}
+}
+3401086 = {
+	name = "Carlos Howe"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1956.12.1 = { rank = 1 }
+		1959.1.1 = { rank = 0 }
+	}
+}
+3401078 = {
+	name = "Stephen Lynch"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = panzer_leader
+	history = {
+		1954.7.1 = { rank = 1 }
+		1959.8.1 = { rank = 0 }
+	}
+}
+3401066 = {
+	name = "Carlos Pearce"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1952.4.1 = { rank = 1 }
+		1956.12.1 = { rank = 2 }
+		1960.12.1 = { rank = 0 }
+	}
+}
+3401084 = {
+	name = "Jesse Bradley"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	history = {
+		1955.11.1 = { rank = 1 }
+		1960.6.1 = { rank = 0 }
+	}
+}
+3401015 = {
+	name = "Timothy Briggs"
+	type = land
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1960.3.1 = { rank = 0 }
+	}
+}
+3401092 = {
+	name = "Spencer Yates"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1958.3.1 = { rank = 1 }
+		1961.7.1 = { rank = 0 }
+	}
+}
+3401053 = {
+	name = "Jason Law"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	add_trait = ranger
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1961.3.1 = { rank = 0 }
+	}
+}
+3401060 = {
+	name = "Scott Todd"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	add_trait = logistics_wizard
+	history = {
+		1950.4.1 = { rank = 1 }
+		1952.3.1 = { rank = 2 }
+		1961.6.1 = { rank = 0 }
+	}
+}
+3401096 = {
+	name = "Francisco Watson"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1959.8.1 = { rank = 1 }
+		1961.2.1 = { rank = 0 }
+	}
+}
+3401073 = {
+	name = "Patrick Howard"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1953.4.1 = { rank = 1 }
+		1961.1.1 = { rank = 0 }
+	}
+}
+3401077 = {
+	name = "Christopher Pugh"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1953.10.1 = { rank = 1 }
+		1962.8.1 = { rank = 0 }
+	}
+}
+3401095 = {
+	name = "Stephen Skinner"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1959.1.1 = { rank = 1 }
+		1962.11.1 = { rank = 0 }
+	}
+}
+3401050 = {
+	name = "Phillip Metcalfe"
+	type = land
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1953.9.1 = { rank = 3 }
+		1962.11.1 = { rank = 0 }
+	}
+}
+3401013 = {
+	name = "Jordan Powell"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1963.2.1 = { rank = 0 }
+	}
+}
+3401082 = {
+	name = "Spencer Flynn"
+	type = land
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1954.11.1 = { rank = 1 }
+		1963.4.1 = { rank = 0 }
+	}
+}
+3401059 = {
+	name = "Jesse Miah"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	add_trait = logistics_wizard
+	history = {
+		1949.1.1 = { rank = 1 }
+		1963.7.1 = { rank = 0 }
+	}
+}
+3401031 = {
+	name = "Sean Perkins"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1948.4.1 = { rank = 2 }
+		1963.9.1 = { rank = 0 }
+	}
+}
+3401101 = {
+	name = "Kevin Stewart"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1961.3.1 = { rank = 1 }
+		1963.2.1 = { rank = 0 }
+	}
+}
+3401106 = {
+	name = "Brett Hill"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	history = {
+		1962.11.1 = { rank = 1 }
+		1964.4.1 = { rank = 0 }
+	}
+}
+3401089 = {
+	name = "Brett Holland"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1958.7.1 = { rank = 1 }
+		1964.12.1 = { rank = 0 }
+	}
+}
+3401026 = {
+	name = "Daniel Browne"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = engineer
+	history = {
+		1946.1.1 = { rank = 1 }
+		1964.10.1 = { rank = 0 }
+	}
+}
+3401088 = {
+	name = "Luis McLean"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	history = {
+		1958.3.1 = { rank = 1 }
+		1963.9.1 = { rank = 2 }
+		1964.6.1 = { rank = 0 }
+	}
+}
+3401028 = {
+	name = "William Barlow"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1946.1.1 = { rank = 1 }
+		1958.3.1 = { rank = 2 }
+		1962.11.1 = { rank = 3 }
+		1964.10.1 = { rank = 0 }
+	}
+}
+3401109 = {
+	name = "Kenneth Power"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1963.4.1 = { rank = 1 }
+		1965.6.1 = { rank = 0 }
+	}
+}
+3401102 = {
+	name = "Shane Gibson"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = engineer
+	add_trait = logistics_wizard
+	history = {
+		1961.6.1 = { rank = 1 }
+		1966.4.1 = { rank = 0 }
+	}
+}
+3401065 = {
+	name = "Brian Stevens"
+	type = land
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1951.12.1 = { rank = 1 }
+		1966.2.1 = { rank = 0 }
+	}
+}
+3401114 = {
+	name = "Jeremy Baxter"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1964.12.1 = { rank = 1 }
+		1966.9.1 = { rank = 0 }
+	}
+}
+3401049 = {
+	name = "Matthew James"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = engineer
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1966.7.1 = { rank = 0 }
+	}
+}
+3401093 = {
+	name = "John Ali"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1958.3.1 = { rank = 1 }
+		1966.11.1 = { rank = 0 }
+	}
+}
+3401076 = {
+	name = "Phillip Godfrey"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1953.9.1 = { rank = 1 }
+		1966.3.1 = { rank = 0 }
+	}
+}
+3401104 = {
+	name = "Michael Howard"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1961.1.1 = { rank = 1 }
+		1967.1.1 = { rank = 0 }
+	}
+}
+3401115 = {
+	name = "Peter Doyle"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1964.10.1 = { rank = 1 }
+		1968.5.1 = { rank = 0 }
+	}
+}
+3401099 = {
+	name = "Carlos Short"
+	type = land
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1960.3.1 = { rank = 1 }
+		1968.6.1 = { rank = 0 }
+	}
+}
+3401070 = {
+	name = "Aaron Armstrong"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1952.1.1 = { rank = 1 }
+		1955.11.1 = { rank = 2 }
+		1958.7.1 = { rank = 3 }
+		1968.12.1 = { rank = 0 }
+	}
+}
+3401120 = {
+	name = "Phillip Bradshaw"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1966.2.1 = { rank = 1 }
+		1968.12.1 = { rank = 0 }
+	}
+}
+3401091 = {
+	name = "Edgar Fleming"
+	type = land
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1958.1.1 = { rank = 1 }
+		1969.11.1 = { rank = 0 }
+	}
+}
+3401123 = {
+	name = "Patrick Nicholls"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1966.11.1 = { rank = 1 }
+		1969.2.1 = { rank = 0 }
+	}
+}
+3401052 = {
+	name = "Spencer Lambert"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1969.10.1 = { rank = 0 }
+	}
+}
+3401122 = {
+	name = "Steven Smith"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1966.7.1 = { rank = 1 }
+		1969.5.1 = { rank = 0 }
+	}
+}
+3401094 = {
+	name = "Bryan Morgan"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1959.7.1 = { rank = 1 }
+		1961.3.1 = { rank = 2 }
+		1969.10.1 = { rank = 0 }
+	}
+}
+3401103 = {
+	name = "Casey Bryan"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1961.2.1 = { rank = 1 }
+		1969.8.1 = { rank = 0 }
+	}
+}
+3401014 = {
+	name = "Christopher Lynch"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1955.11.1 = { rank = 2 }
+		1969.10.1 = { rank = 0 }
+	}
+}
+3401098 = {
+	name = "Chad Foster"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1960.6.1 = { rank = 1 }
+		1969.3.1 = { rank = 0 }
+	}
+}
+3401097 = {
+	name = "Kyle Holloway"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1960.12.1 = { rank = 1 }
+		1970.8.1 = { rank = 0 }
+	}
+}
+3401134 = {
+	name = "Eric Ross"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	history = {
+		1969.10.1 = { rank = 1 }
+		1970.4.1 = { rank = 0 }
+	}
+}
+3401117 = {
+	name = "Luis Warren"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1964.10.1 = { rank = 1 }
+		1970.3.1 = { rank = 0 }
+	}
+}
+3401017 = {
+	name = "Casey Harding"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1970.10.1 = { rank = 0 }
+	}
+}
+3401079 = {
+	name = "Zachary Bradley"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1954.3.1 = { rank = 1 }
+		1970.12.1 = { rank = 0 }
+	}
+}
+3401005 = {
+	name = "Matthew Hardy"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	history = {
+		1946.1.1 = { rank = 1 }
+		1966.7.1 = { rank = 2 }
+		1971.4.1 = { rank = 0 }
+	}
+}
+3401118 = {
+	name = "James Wade"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1965.6.1 = { rank = 1 }
+		1972.6.1 = { rank = 0 }
+	}
+}
+3401085 = {
+	name = "Nathan Clarke"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = ranger
+	history = {
+		1955.11.1 = { rank = 1 }
+		1959.7.1 = { rank = 2 }
+		1972.1.1 = { rank = 0 }
+	}
+}
+3401143 = {
+	name = "Richard Ali"
+	type = land
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1971.4.1 = { rank = 1 }
+		1972.6.1 = { rank = 0 }
+	}
+}
+3401127 = {
+	name = "Casey Daly"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1968.6.1 = { rank = 1 }
+		1971.4.1 = { rank = 2 }
+		1972.2.1 = { rank = 0 }
+	}
+}
+3401113 = {
+	name = "Phillip Gibbons"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1964.4.1 = { rank = 1 }
+		1972.1.1 = { rank = 0 }
+	}
+}
+3401137 = {
+	name = "John Cooper"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1969.3.1 = { rank = 1 }
+		1973.4.1 = { rank = 0 }
+	}
+}
+3401119 = {
+	name = "Dustin Bruce"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1966.4.1 = { rank = 1 }
+		1973.6.1 = { rank = 0 }
+	}
+}
+3401135 = {
+	name = "Jacob Kirk"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1969.8.1 = { rank = 1 }
+		1972.1.1 = { rank = 2 }
+		1973.10.1 = { rank = 0 }
+	}
+}
+3401111 = {
+	name = "Marcus Cook"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1963.9.1 = { rank = 1 }
+		1964.6.1 = { rank = 2 }
+		1973.8.1 = { rank = 0 }
+	}
+}
+3401126 = {
+	name = "Bradley Daly"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1968.5.1 = { rank = 1 }
+		1974.2.1 = { rank = 0 }
+	}
+}
+3401072 = {
+	name = "Evan King"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	history = {
+		1952.3.1 = { rank = 1 }
+		1974.4.1 = { rank = 0 }
+	}
+}
+3401136 = {
+	name = "Casey McLean"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1969.10.1 = { rank = 1 }
+		1975.11.1 = { rank = 0 }
+	}
+}
+3401004 = {
+	name = "Charles Browne"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = engineer
+	history = {
+		1946.1.1 = { rank = 1 }
+		1975.5.1 = { rank = 0 }
+	}
+}
+3401132 = {
+	name = "Justin Collier"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1969.10.1 = { rank = 1 }
+		1975.7.1 = { rank = 0 }
+	}
+}
+3401153 = {
+	name = "Travis Whitehouse"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1974.2.1 = { rank = 1 }
+		1975.10.1 = { rank = 0 }
+	}
+}
+3401146 = {
+	name = "Daniel Metcalfe"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1972.6.1 = { rank = 1 }
+		1975.1.1 = { rank = 0 }
+	}
+}
+3401148 = {
+	name = "Phillip Hill"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1972.1.1 = { rank = 1 }
+		1975.9.1 = { rank = 0 }
+	}
+}
+3401142 = {
+	name = "Kyle Bentley"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1970.12.1 = { rank = 1 }
+		1975.3.1 = { rank = 0 }
+	}
+}
+3401019 = {
+	name = "Nathan Middleton"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	add_trait = trickster
+	history = {
+		1946.1.1 = { rank = 1 }
+		1962.11.1 = { rank = 2 }
+		1964.10.1 = { rank = 3 }
+		1975.1.1 = { rank = 0 }
+	}
+}
+3401056 = {
+	name = "Victor Dickinson"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 4 }
+		1975.8.1 = { rank = 0 }
+	}
+}
+3401150 = {
+	name = "Alexander Allen"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1973.6.1 = { rank = 1 }
+		1975.1.1 = { rank = 2 }
+		1976.4.1 = { rank = 0 }
+	}
+}
+3401110 = {
+	name = "Daniel Howard"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1963.7.1 = { rank = 1 }
+		1976.12.1 = { rank = 0 }
+	}
+}
+3401125 = {
+	name = "Alex Brady"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1967.1.1 = { rank = 1 }
+		1976.5.1 = { rank = 0 }
+	}
+}
+3401155 = {
+	name = "Matthew Hutchinson"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1975.11.1 = { rank = 1 }
+		1976.3.1 = { rank = 0 }
+	}
+}
+3401145 = {
+	name = "Corey Harding"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1972.1.1 = { rank = 1 }
+		1977.1.1 = { rank = 0 }
+	}
+}
+3401129 = {
+	name = "Bryan Roberts"
+	type = land
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1968.12.1 = { rank = 1 }
+		1977.5.1 = { rank = 0 }
+	}
+}
+3401156 = {
+	name = "Kenneth Kelly"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1975.5.1 = { rank = 1 }
+		1977.1.1 = { rank = 0 }
+	}
+}
+3401140 = {
+	name = "Christian Nicholson"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1970.3.1 = { rank = 1 }
+		1977.3.1 = { rank = 0 }
+	}
+}
+3401068 = {
+	name = "Martin Lewis"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	history = {
+		1952.12.1 = { rank = 1 }
+		1969.10.1 = { rank = 2 }
+		1977.6.1 = { rank = 0 }
+	}
+}
+3401138 = {
+	name = "Victor Crawford"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1970.8.1 = { rank = 1 }
+		1977.3.1 = { rank = 0 }
+	}
+}
+3401107 = {
+	name = "Garrett Curtis"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1962.11.1 = { rank = 1 }
+		1973.10.1 = { rank = 2 }
+		1978.3.1 = { rank = 0 }
+	}
+}
+3401061 = {
+	name = "Jesse Baldwin"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1950.10.1 = { rank = 1 }
+		1978.6.1 = { rank = 0 }
+	}
+}
+3401169 = {
+	name = "Marcus O'Sullivan"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1977.5.1 = { rank = 1 }
+		1978.12.1 = { rank = 0 }
+	}
+}
+3401166 = {
+	name = "Brandon Benson"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1976.5.1 = { rank = 1 }
+		1978.7.1 = { rank = 0 }
+	}
+}
+3401159 = {
+	name = "Spencer Douglas"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1975.1.1 = { rank = 1 }
+		1978.2.1 = { rank = 0 }
+	}
+}
+3401075 = {
+	name = "Patrick Hammond"
+	type = land
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1953.12.1 = { rank = 1 }
+		1954.11.1 = { rank = 2 }
+		1968.12.1 = { rank = 3 }
+		1975.8.1 = { rank = 4 }
+		1978.5.1 = { rank = 0 }
+	}
+}
+3401036 = {
+	name = "Erik Moss"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1946.1.1 = { rank = 1 }
+		1949.1.1 = { rank = 2 }
+		1969.10.1 = { rank = 3 }
+		1978.5.1 = { rank = 4 }
+		1979.4.1 = { rank = 0 }
+	}
+}
+3401144 = {
+	name = "Nathan Palmer"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	add_trait = defensive_doctrine
+	history = {
+		1972.6.1 = { rank = 1 }
+		1973.8.1 = { rank = 2 }
+		1975.1.1 = { rank = 3 }
+		1979.1.1 = { rank = 0 }
+	}
+}
+3401018 = {
+	name = "Aaron Gordon"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1979.11.1 = { rank = 0 }
+	}
+}
+3401037 = {
+	name = "Edward Marsden"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1958.3.1 = { rank = 2 }
+		1979.11.1 = { rank = 0 }
+	}
+}
+3401141 = {
+	name = "Brandon Myers"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1970.10.1 = { rank = 1 }
+		1975.8.1 = { rank = 2 }
+		1979.7.1 = { rank = 0 }
+	}
+}
+3401178 = {
+	name = "Edward Cooke"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1978.2.1 = { rank = 1 }
+		1979.10.1 = { rank = 0 }
+	}
+}
+3401130 = {
+	name = "Alex Hammond"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	add_trait = logistics_wizard
+	history = {
+		1969.11.1 = { rank = 1 }
+		1979.7.1 = { rank = 0 }
+	}
+}
+3401172 = {
+	name = "Corey Collins"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1977.6.1 = { rank = 1 }
+		1979.9.1 = { rank = 0 }
+	}
+}
+3401131 = {
+	name = "William Hooper"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1969.2.1 = { rank = 1 }
+		1980.2.1 = { rank = 0 }
+	}
+}
+3401139 = {
+	name = "Jesse Booth"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1970.4.1 = { rank = 1 }
+		1980.11.1 = { rank = 0 }
+	}
+}
+3401187 = {
+	name = "Ian Lawrence"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	add_trait = defensive_doctrine
+	history = {
+		1979.9.1 = { rank = 1 }
+		1980.7.1 = { rank = 0 }
+	}
+}
+3401180 = {
+	name = "Charles Herbert"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	history = {
+		1979.4.1 = { rank = 1 }
+		1980.3.1 = { rank = 0 }
+	}
+}
+3401171 = {
+	name = "Christian Cook"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1977.3.1 = { rank = 1 }
+		1980.11.1 = { rank = 0 }
+	}
+}
+3401147 = {
+	name = "Kyle Barrett"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1972.2.1 = { rank = 1 }
+		1980.7.1 = { rank = 0 }
+	}
+}
+3401071 = {
+	name = "Bradley Summers"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1952.9.1 = { rank = 1 }
+		1980.7.1 = { rank = 0 }
+	}
+}
+3401164 = {
+	name = "Justin Brady"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1976.4.1 = { rank = 1 }
+		1981.10.1 = { rank = 0 }
+	}
+}
+3401186 = {
+	name = "Alexander Crawford"
+	type = land
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1979.7.1 = { rank = 1 }
+		1981.4.1 = { rank = 0 }
+	}
+}
+3401121 = {
+	name = "Francisco Barnett"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1966.9.1 = { rank = 1 }
+		1972.2.1 = { rank = 2 }
+		1981.12.1 = { rank = 0 }
+	}
+}
+3401167 = {
+	name = "Brandon Atkinson"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1976.3.1 = { rank = 1 }
+		1982.7.1 = { rank = 0 }
+	}
+}
+3401162 = {
+	name = "Jared Burrows"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1975.1.1 = { rank = 1 }
+		1982.2.1 = { rank = 0 }
+	}
+}
+3401185 = {
+	name = "Erik Watson"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	add_trait = defensive_doctrine
+	add_trait = offensive_doctrine
+	history = {
+		1979.10.1 = { rank = 1 }
+		1982.2.1 = { rank = 0 }
+	}
+}
+3401190 = {
+	name = "Martin Pollard"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1980.7.1 = { rank = 1 }
+		1983.4.1 = { rank = 0 }
+	}
+}
+3401176 = {
+	name = "Luis Gregory"
+	type = land
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1978.12.1 = { rank = 1 }
+		1983.4.1 = { rank = 0 }
+	}
+}
+3401189 = {
+	name = "Richard Russell"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1980.11.1 = { rank = 1 }
+		1983.3.1 = { rank = 0 }
+	}
+}
+3401154 = {
+	name = "Bryan Lawrence"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1974.4.1 = { rank = 1 }
+		1983.3.1 = { rank = 0 }
+	}
+}
+3401008 = {
+	name = "Steven Turnbull"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = ranger
+	history = {
+		1946.1.1 = { rank = 1 }
+		1958.7.1 = { rank = 2 }
+		1983.3.1 = { rank = 0 }
+	}
+}
+3401009 = {
+	name = "Matthew Frost"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = panzer_leader
+	history = {
+		1946.1.1 = { rank = 1 }
+		1983.11.1 = { rank = 0 }
+	}
+}
+3401161 = {
+	name = "Benjamin Scott"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1975.3.1 = { rank = 1 }
+		1984.2.1 = { rank = 0 }
+	}
+}
+3401128 = {
+	name = "Jared Franklin"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	add_trait = commando
+	history = {
+		1968.12.1 = { rank = 1 }
+		1985.7.1 = { rank = 0 }
+	}
+}
+3401043 = {
+	name = "Edward Russell"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1961.3.1 = { rank = 3 }
+		1985.6.1 = { rank = 0 }
+	}
+}
+3401204 = {
+	name = "Samuel Johnson"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1983.3.1 = { rank = 1 }
+		1985.2.1 = { rank = 0 }
+	}
+}
+3401010 = {
+	name = "Jeremy Hooper"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	add_trait = logistics_wizard
+	add_trait = commando
+	history = {
+		1946.1.1 = { rank = 1 }
+		1960.12.1 = { rank = 2 }
+		1979.1.1 = { rank = 3 }
+		1986.8.1 = { rank = 0 }
+	}
+}
+3401206 = {
+	name = "Sean Khan"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1983.11.1 = { rank = 1 }
+		1987.1.1 = { rank = 0 }
+	}
+}
+3401207 = {
+	name = "Samuel Whittaker"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1984.2.1 = { rank = 1 }
+		1987.5.1 = { rank = 0 }
+	}
+}
+3401116 = {
+	name = "Jacob Jordan"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1964.6.1 = { rank = 1 }
+		1964.10.1 = { rank = 2 }
+		1987.11.1 = { rank = 0 }
+	}
+}
+3401090 = {
+	name = "Jonathan Baldwin"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1958.8.1 = { rank = 1 }
+		1988.5.1 = { rank = 0 }
+	}
+}
+3401133 = {
+	name = "Evan Stewart"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1969.5.1 = { rank = 1 }
+		1988.4.1 = { rank = 0 }
+	}
+}
+3401160 = {
+	name = "Nicholas Clements"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1975.9.1 = { rank = 1 }
+		1976.4.1 = { rank = 2 }
+		1979.4.1 = { rank = 3 }
+		1988.6.1 = { rank = 0 }
+	}
+}
+3401210 = {
+	name = "Richard Chambers"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = offensive_doctrine
+	add_trait = trickster
+	history = {
+		1985.2.1 = { rank = 1 }
+		1988.7.1 = { rank = 0 }
+	}
+}
+3401080 = {
+	name = "Andrew Kelly"
+	type = land
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1954.8.1 = { rank = 1 }
+		1957.2.1 = { rank = 2 }
+		1988.10.1 = { rank = 0 }
+	}
+}
+3401215 = {
+	name = "Benjamin Ali"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	history = {
+		1988.5.1 = { rank = 1 }
+		1989.8.1 = { rank = 0 }
+	}
+}
+3401175 = {
+	name = "John Ellis"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1978.6.1 = { rank = 1 }
+		1989.1.1 = { rank = 0 }
+	}
+}
+3401067 = {
+	name = "Samuel Cook"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1952.1.1 = { rank = 1 }
+		1979.1.1 = { rank = 2 }
+		1989.8.1 = { rank = 0 }
+	}
+}
+3401181 = {
+	name = "Peter Iqbal"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	add_trait = ranger
+	history = {
+		1979.1.1 = { rank = 1 }
+		1989.9.1 = { rank = 0 }
+	}
+}
+3401157 = {
+	name = "Shawn Johnson"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1975.7.1 = { rank = 1 }
+		1979.11.1 = { rank = 2 }
+		1988.6.1 = { rank = 3 }
+		1989.10.1 = { rank = 0 }
+	}
+}
+3401024 = {
+	name = "Cory Hope"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1961.6.1 = { rank = 2 }
+		1978.5.1 = { rank = 3 }
+		1989.11.1 = { rank = 0 }
+	}
+}
+3401124 = {
+	name = "Adam Cooper"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1966.3.1 = { rank = 1 }
+		1978.3.1 = { rank = 2 }
+		1990.10.1 = { rank = 0 }
+	}
+}
+3401218 = {
+	name = "Robert Todd"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1988.7.1 = { rank = 1 }
+		1990.8.1 = { rank = 0 }
+	}
+}
+3401212 = {
+	name = "Christopher Nicholson"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1987.1.1 = { rank = 1 }
+		1990.6.1 = { rank = 0 }
+	}
+}
+3401152 = {
+	name = "Jesse Edwards"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1973.8.1 = { rank = 1 }
+		1979.7.1 = { rank = 2 }
+		1990.5.1 = { rank = 0 }
+	}
+}
+3401087 = {
+	name = "Dustin Jordan"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	add_trait = defensive_doctrine
+	history = {
+		1957.2.1 = { rank = 1 }
+		1990.12.1 = { rank = 0 }
+	}
+}
+3401000 = {
+	name = "Gregory Baldwin"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1990.10.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401003 = {
+	name = "Jordan Warren"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1969.10.1 = { rank = 2 }
+		1989.11.1 = { rank = 3 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401006 = {
+	name = "Thomas Leonard"
+	type = land
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1986.8.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401029 = {
+	name = "Erik Evans"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	history = {
+		1946.1.1 = { rank = 1 }
+		1968.12.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401074 = {
+	name = "Thomas Black"
+	type = land
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1953.9.1 = { rank = 1 }
+		1979.4.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401100 = {
+	name = "Jacob Todd"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1961.7.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401105 = {
+	name = "Joseph Farmer"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1962.8.1 = { rank = 1 }
+		1989.11.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401108 = {
+	name = "Shawn Walters"
+	type = land
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = commando
+	history = {
+		1963.2.1 = { rank = 1 }
+		1969.10.1 = { rank = 2 }
+		1975.8.1 = { rank = 3 }
+		1979.4.1 = { rank = 4 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401112 = {
+	name = "Thomas Howard"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1963.2.1 = { rank = 1 }
+		1989.8.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401149 = {
+	name = "Brian Potter"
+	type = land
+	country = ENG
+	skill = 0
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1973.4.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401151 = {
+	name = "Aaron Tyler"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	add_trait = engineer
+	history = {
+		1973.10.1 = { rank = 1 }
+		1977.6.1 = { rank = 2 }
+		1986.8.1 = { rank = 3 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401158 = {
+	name = "Robert Herbert"
+	type = land
+	country = ENG
+	skill = 0
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1975.10.1 = { rank = 1 }
+		1978.5.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401163 = {
+	name = "Corey Harris"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = offensive_doctrine
+	history = {
+		1975.8.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401165 = {
+	name = "Michael Baldwin"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1976.12.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401168 = {
+	name = "Carlos Pollard"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1977.1.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401170 = {
+	name = "William Dennis"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1977.1.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401173 = {
+	name = "George Morris"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1977.3.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401174 = {
+	name = "Stephen Cooke"
+	type = land
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1978.3.1 = { rank = 1 }
+		1987.11.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401177 = {
+	name = "Daniel Mistry"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1978.7.1 = { rank = 1 }
+		1981.12.1 = { rank = 2 }
+		1989.10.1 = { rank = 3 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401179 = {
+	name = "Raymond Gill"
+	type = land
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1978.5.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401182 = {
+	name = "David Harris"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = ranger
+	history = {
+		1979.11.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401183 = {
+	name = "Charles Ford"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1979.11.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401184 = {
+	name = "Kyle O'Connor"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1979.7.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401188 = {
+	name = "Francisco Sullivan"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1980.2.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401191 = {
+	name = "Samuel Sinclair"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1980.3.1 = { rank = 1 }
+		1988.6.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401192 = {
+	name = "Christian Duncan"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	add_trait = defensive_doctrine
+	history = {
+		1980.11.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401193 = {
+	name = "Gabriel Hill"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1980.7.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401194 = {
+	name = "Ryan Mills"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1980.7.1 = { rank = 1 }
+		1983.3.1 = { rank = 2 }
+		1985.6.1 = { rank = 3 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401195 = {
+	name = "Edward Cooke"
+	type = land
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1981.10.1 = { rank = 1 }
+		1988.10.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401196 = {
+	name = "David Griffin"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1981.4.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401197 = {
+	name = "Kevin Todd"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1981.12.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401198 = {
+	name = "Mark Lyons"
+	type = land
+	country = ENG
+	skill = 0
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1982.7.1 = { rank = 1 }
+		1985.6.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401199 = {
+	name = "Martin Gardner"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1982.2.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401200 = {
+	name = "Kenneth Bradshaw"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1982.2.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401201 = {
+	name = "Francisco Hobbs"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1983.4.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401202 = {
+	name = "Francisco Humphreys"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1983.4.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401203 = {
+	name = "Ryan Cook"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1983.3.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401205 = {
+	name = "Edward Collins"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1983.3.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401208 = {
+	name = "Bradley Douglas"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1985.7.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401209 = {
+	name = "Michael Brady"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	add_trait = logistics_wizard
+	history = {
+		1985.6.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401211 = {
+	name = "Richard Metcalfe"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1986.8.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401213 = {
+	name = "Jonathan Kirk"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1987.5.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401214 = {
+	name = "Nicholas Hill"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	add_trait = defensive_doctrine
+	add_trait = trickster
+	history = {
+		1987.11.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401216 = {
+	name = "Nathan Wallace"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = defensive_doctrine
+	history = {
+		1988.4.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401217 = {
+	name = "Edward Power"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1988.6.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401219 = {
+	name = "Nicholas Curtis"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1988.10.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401220 = {
+	name = "Christian Morrison"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1989.8.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401221 = {
+	name = "Miguel Webster"
+	type = land
+	country = ENG
+	skill = 9
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1989.1.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401222 = {
+	name = "Peter Wilkins"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1989.8.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401223 = {
+	name = "Kevin Humphreys"
+	type = land
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1989.9.1 = { rank = 1 }
+		1989.10.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401224 = {
+	name = "Kenneth Abbott"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1989.10.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401225 = {
+	name = "Edgar Hamilton"
+	type = land
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1989.11.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401226 = {
+	name = "Derek Williams"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1990.10.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401227 = {
+	name = "Gregory Jarvis"
+	type = land
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = trickster
+	history = {
+		1990.8.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401228 = {
+	name = "Mark Wallace"
+	type = land
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1990.6.1 = { rank = 1 }
+		1990.6.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401229 = {
+	name = "Richard Fisher"
+	type = land
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1990.5.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401230 = {
+	name = "Dustin Peacock"
+	type = land
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = logistics_wizard
+	history = {
+		1990.12.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401245 = {
+	name = "Francisco Ellis"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1948.12.1 = { rank = 0 }
+	}
+}
+3401233 = {
+	name = "Jordan Burgess"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1946.1.1 = { rank = 1 }
+		1948.6.1 = { rank = 0 }
+	}
+}
+3401243 = {
+	name = "Stephen Dodd"
+	type = sea
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1946.1.1 = { rank = 1 }
+		1948.11.1 = { rank = 0 }
+	}
+}
+3401249 = {
+	name = "Jordan Gough"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1949.5.1 = { rank = 0 }
+	}
+}
+3401244 = {
+	name = "Kevin Hope"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1946.1.1 = { rank = 1 }
+		1949.10.1 = { rank = 0 }
+	}
+}
+3401259 = {
+	name = "Shane Bates"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1948.6.1 = { rank = 1 }
+		1950.10.1 = { rank = 0 }
+	}
+}
+3401246 = {
+	name = "Andrew Allan"
+	type = sea
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1951.12.1 = { rank = 0 }
+	}
+}
+3401236 = {
+	name = "John Rees"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1946.1.1 = { rank = 1 }
+		1951.10.1 = { rank = 0 }
+	}
+}
+3401234 = {
+	name = "Robert Shaw"
+	type = sea
+	country = ENG
+	skill = 9
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1951.7.1 = { rank = 0 }
+	}
+}
+3401238 = {
+	name = "Bradley Gibbons"
+	type = sea
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1946.1.1 = { rank = 1 }
+		1952.10.1 = { rank = 0 }
+	}
+}
+3401232 = {
+	name = "Phillip Leonard"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1952.11.1 = { rank = 0 }
+	}
+}
+3401251 = {
+	name = "Brian Houghton"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1952.11.1 = { rank = 0 }
+	}
+}
+3401258 = {
+	name = "Brian Donnelly"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1948.12.1 = { rank = 1 }
+		1952.6.1 = { rank = 0 }
+	}
+}
+3401257 = {
+	name = "James Lawson"
+	type = sea
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 4 }
+		1952.9.1 = { rank = 0 }
+	}
+}
+3401261 = {
+	name = "Kevin Morrison"
+	type = sea
+	country = ENG
+	skill = 9
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = spotter
+	add_trait = blockade_runner
+	history = {
+		1949.5.1 = { rank = 1 }
+		1953.11.1 = { rank = 0 }
+	}
+}
+3401242 = {
+	name = "Gregory Watson"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = spotter
+	history = {
+		1946.1.1 = { rank = 1 }
+		1953.5.1 = { rank = 0 }
+	}
+}
+3401271 = {
+	name = "Francisco Bishop"
+	type = sea
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = superior_tactician
+	history = {
+		1952.9.1 = { rank = 1 }
+		1953.2.1 = { rank = 0 }
+	}
+}
+3401247 = {
+	name = "Chad Kelly"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = superior_tactician
+	history = {
+		1946.1.1 = { rank = 1 }
+		1953.10.1 = { rank = 0 }
+	}
+}
+3401256 = {
+	name = "Gabriel Stevens"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = spotter
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1952.9.1 = { rank = 4 }
+		1954.1.1 = { rank = 0 }
+	}
+}
+3401268 = {
+	name = "Kenneth Marsh"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1952.11.1 = { rank = 1 }
+		1954.11.1 = { rank = 0 }
+	}
+}
+3401254 = {
+	name = "Richard Gordon"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1954.5.1 = { rank = 0 }
+	}
+}
+3401275 = {
+	name = "Nathan Whitehouse"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1953.10.1 = { rank = 1 }
+		1956.6.1 = { rank = 0 }
+	}
+}
+3401248 = {
+	name = "Robert Gibbons"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1957.3.1 = { rank = 0 }
+	}
+}
+3401277 = {
+	name = "Scott Marsden"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1954.11.1 = { rank = 1 }
+		1957.9.1 = { rank = 0 }
+	}
+}
+3401260 = {
+	name = "Patrick Farmer"
+	type = sea
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1948.11.1 = { rank = 1 }
+		1954.5.1 = { rank = 2 }
+		1957.4.1 = { rank = 0 }
+	}
+}
+3401241 = {
+	name = "Ian Cooke"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = seawolf
+	history = {
+		1946.1.1 = { rank = 1 }
+		1957.11.1 = { rank = 0 }
+	}
+}
+3401255 = {
+	name = "Marcus Howells"
+	type = sea
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = seawolf
+	add_trait = superior_tactician
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1954.1.1 = { rank = 4 }
+		1958.12.1 = { rank = 0 }
+	}
+}
+3401250 = {
+	name = "Corey Houghton"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1958.3.1 = { rank = 0 }
+	}
+}
+3401269 = {
+	name = "Dustin Wilkinson"
+	type = sea
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1952.11.1 = { rank = 1 }
+		1958.1.1 = { rank = 0 }
+	}
+}
+3401266 = {
+	name = "Vincent Baker"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1951.7.1 = { rank = 1 }
+		1952.11.1 = { rank = 2 }
+		1952.11.1 = { rank = 3 }
+		1959.5.1 = { rank = 0 }
+	}
+}
+3401274 = {
+	name = "Zachary Carroll"
+	type = sea
+	country = ENG
+	skill = 9
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = seawolf
+	add_trait = superior_tactician
+	history = {
+		1953.2.1 = { rank = 1 }
+		1959.4.1 = { rank = 0 }
+	}
+}
+3401272 = {
+	name = "Joseph Wright"
+	type = sea
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1953.11.1 = { rank = 1 }
+		1959.8.1 = { rank = 0 }
+	}
+}
+3401240 = {
+	name = "Joshua Bevan"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1959.9.1 = { rank = 0 }
+	}
+}
+3401284 = {
+	name = "Ryan Kemp"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1958.12.1 = { rank = 1 }
+		1960.1.1 = { rank = 0 }
+	}
+}
+3401280 = {
+	name = "Daniel Baxter"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1957.3.1 = { rank = 1 }
+		1958.12.1 = { rank = 2 }
+		1960.7.1 = { rank = 0 }
+	}
+}
+3401262 = {
+	name = "Peter Lynch"
+	type = sea
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1949.10.1 = { rank = 1 }
+		1961.5.1 = { rank = 0 }
+	}
+}
+3401289 = {
+	name = "Dustin Powell"
+	type = sea
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = spotter
+	history = {
+		1959.8.1 = { rank = 1 }
+		1963.4.1 = { rank = 0 }
+	}
+}
+3401281 = {
+	name = "Zachary Mann"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1957.9.1 = { rank = 1 }
+		1960.7.1 = { rank = 2 }
+		1963.4.1 = { rank = 0 }
+	}
+}
+3401283 = {
+	name = "George Pollard"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = seawolf
+	history = {
+		1957.11.1 = { rank = 1 }
+		1963.5.1 = { rank = 0 }
+	}
+}
+3401253 = {
+	name = "Edward Russell"
+	type = sea
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = superior_tactician
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1963.11.1 = { rank = 0 }
+	}
+}
+3401278 = {
+	name = "Andrew Bevan"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1954.5.1 = { rank = 1 }
+		1957.4.1 = { rank = 2 }
+		1963.12.1 = { rank = 0 }
+	}
+}
+3401265 = {
+	name = "Zachary Joyce"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = seawolf
+	add_trait = blockade_runner
+	history = {
+		1951.10.1 = { rank = 1 }
+		1963.8.1 = { rank = 0 }
+	}
+}
+3401264 = {
+	name = "Bryan Hooper"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1951.12.1 = { rank = 1 }
+		1963.4.1 = { rank = 0 }
+	}
+}
+3401239 = {
+	name = "Samuel Stevens"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1963.11.1 = { rank = 2 }
+		1964.2.1 = { rank = 0 }
+	}
+}
+3401296 = {
+	name = "Raymond Flynn"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1963.5.1 = { rank = 1 }
+		1964.2.1 = { rank = 0 }
+	}
+}
+3401287 = {
+	name = "Charles Fleming"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1959.5.1 = { rank = 1 }
+		1964.1.1 = { rank = 0 }
+	}
+}
+3401270 = {
+	name = "Evan Middleton"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1952.6.1 = { rank = 1 }
+		1964.4.1 = { rank = 0 }
+	}
+}
+3401263 = {
+	name = "Shawn Chan"
+	type = sea
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1950.10.1 = { rank = 1 }
+		1964.2.1 = { rank = 2 }
+		1965.11.1 = { rank = 0 }
+	}
+}
+3401273 = {
+	name = "Kevin Hill"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = spotter
+	history = {
+		1953.5.1 = { rank = 1 }
+		1958.3.1 = { rank = 2 }
+		1959.5.1 = { rank = 3 }
+		1966.1.1 = { rank = 0 }
+	}
+}
+3401292 = {
+	name = "Jesse Barton"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1960.7.1 = { rank = 1 }
+		1963.4.1 = { rank = 2 }
+		1966.4.1 = { rank = 0 }
+	}
+}
+3401302 = {
+	name = "John Yates"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = spotter
+	add_trait = seawolf
+	history = {
+		1964.2.1 = { rank = 1 }
+		1966.9.1 = { rank = 0 }
+	}
+}
+3401295 = {
+	name = "Bradley Rose"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = spotter
+	history = {
+		1963.4.1 = { rank = 1 }
+		1966.12.1 = { rank = 0 }
+	}
+}
+3401291 = {
+	name = "William Anderson"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1960.1.1 = { rank = 1 }
+		1967.1.1 = { rank = 0 }
+	}
+}
+3401308 = {
+	name = "Martin Harrison"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = spotter
+	add_trait = seawolf
+	history = {
+		1966.9.1 = { rank = 1 }
+		1967.8.1 = { rank = 0 }
+	}
+}
+3401307 = {
+	name = "Austin Finch"
+	type = sea
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = seawolf
+	history = {
+		1966.4.1 = { rank = 1 }
+		1967.4.1 = { rank = 0 }
+	}
+}
+3401235 = {
+	name = "Vincent Weston"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1946.1.1 = { rank = 1 }
+		1949.5.1 = { rank = 2 }
+		1967.8.1 = { rank = 0 }
+	}
+}
+3401300 = {
+	name = "Jordan Todd"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1963.4.1 = { rank = 1 }
+		1967.5.1 = { rank = 0 }
+	}
+}
+3401293 = {
+	name = "Jacob Knowles"
+	type = sea
+	country = ENG
+	skill = 9
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1961.5.1 = { rank = 1 }
+		1966.1.1 = { rank = 2 }
+		1967.10.1 = { rank = 0 }
+	}
+}
+3401311 = {
+	name = "Charles Holloway"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1967.8.1 = { rank = 1 }
+		1968.8.1 = { rank = 0 }
+	}
+}
+3401313 = {
+	name = "Austin Hooper"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1967.8.1 = { rank = 1 }
+		1967.10.1 = { rank = 2 }
+		1968.6.1 = { rank = 0 }
+	}
+}
+3401306 = {
+	name = "Christopher Knowles"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1966.1.1 = { rank = 1 }
+		1966.4.1 = { rank = 2 }
+		1968.8.1 = { rank = 0 }
+	}
+}
+3401314 = {
+	name = "Shawn Mann"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1967.5.1 = { rank = 1 }
+		1968.7.1 = { rank = 0 }
+	}
+}
+3401288 = {
+	name = "Mark Brady"
+	type = sea
+	country = ENG
+	skill = 17
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1959.4.1 = { rank = 1 }
+		1969.6.1 = { rank = 0 }
+	}
+}
+3401301 = {
+	name = "Matthew Andrews"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = spotter
+	add_trait = superior_tactician
+	history = {
+		1964.2.1 = { rank = 1 }
+		1969.12.1 = { rank = 0 }
+	}
+}
+3401231 = {
+	name = "Joseph Webb"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = seawolf
+	history = {
+		1946.1.1 = { rank = 1 }
+		1954.1.1 = { rank = 2 }
+		1958.12.1 = { rank = 3 }
+		1971.8.1 = { rank = 0 }
+	}
+}
+3401267 = {
+	name = "Tyler O'Brien"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1952.10.1 = { rank = 1 }
+		1971.3.1 = { rank = 0 }
+	}
+}
+3401320 = {
+	name = "Alexander Walton"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = seawolf
+	history = {
+		1969.6.1 = { rank = 1 }
+		1971.1.1 = { rank = 0 }
+	}
+}
+3401282 = {
+	name = "Evan Payne"
+	type = sea
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = spotter
+	history = {
+		1957.4.1 = { rank = 1 }
+		1959.5.1 = { rank = 2 }
+		1966.1.1 = { rank = 3 }
+		1972.9.1 = { rank = 0 }
+	}
+}
+3401318 = {
+	name = "Ian Stevens"
+	type = sea
+	country = ENG
+	skill = 9
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1968.8.1 = { rank = 1 }
+		1973.10.1 = { rank = 0 }
+	}
+}
+3401299 = {
+	name = "Kyle Matthews"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1963.8.1 = { rank = 1 }
+		1973.10.1 = { rank = 0 }
+	}
+}
+3401322 = {
+	name = "Jason Clarke"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1971.8.1 = { rank = 1 }
+		1973.6.1 = { rank = 0 }
+	}
+}
+3401305 = {
+	name = "Timothy Bryan"
+	type = sea
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = spotter
+	add_trait = blockade_runner
+	history = {
+		1965.11.1 = { rank = 1 }
+		1973.1.1 = { rank = 0 }
+	}
+}
+3401327 = {
+	name = "Kenneth Bolton"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = seawolf
+	history = {
+		1973.10.1 = { rank = 1 }
+		1974.6.1 = { rank = 0 }
+	}
+}
+3401279 = {
+	name = "Victor Burgess"
+	type = sea
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1956.6.1 = { rank = 1 }
+		1974.6.1 = { rank = 0 }
+	}
+}
+3401330 = {
+	name = "Corey Talbot"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1974.6.1 = { rank = 1 }
+		1975.12.1 = { rank = 0 }
+	}
+}
+3401252 = {
+	name = "Patrick Cook"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = spotter
+	add_trait = seawolf
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1976.11.1 = { rank = 0 }
+	}
+}
+3401317 = {
+	name = "Victor Humphreys"
+	type = sea
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1968.6.1 = { rank = 1 }
+		1976.5.1 = { rank = 0 }
+	}
+}
+3401332 = {
+	name = "Shawn Johnson"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1975.12.1 = { rank = 1 }
+		1976.5.1 = { rank = 0 }
+	}
+}
+3401324 = {
+	name = "Brian Vincent"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1971.1.1 = { rank = 1 }
+		1976.10.1 = { rank = 0 }
+	}
+}
+3401328 = {
+	name = "Tyler Blackburn"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1973.6.1 = { rank = 1 }
+		1976.3.1 = { rank = 0 }
+	}
+}
+3401290 = {
+	name = "Jeffrey Power"
+	type = sea
+	country = ENG
+	skill = 0
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1959.9.1 = { rank = 1 }
+		1971.8.1 = { rank = 2 }
+		1976.2.1 = { rank = 0 }
+	}
+}
+3401276 = {
+	name = "Scott Gardner"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = seawolf
+	history = {
+		1954.1.1 = { rank = 1 }
+		1972.9.1 = { rank = 2 }
+		1977.3.1 = { rank = 0 }
+	}
+}
+3401334 = {
+	name = "Robert Talbot"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1976.5.1 = { rank = 1 }
+		1977.7.1 = { rank = 0 }
+	}
+}
+3401309 = {
+	name = "Jeffrey Hunt"
+	type = sea
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1966.12.1 = { rank = 1 }
+		1978.4.1 = { rank = 0 }
+	}
+}
+3401316 = {
+	name = "Joshua Donnelly"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1968.8.1 = { rank = 1 }
+		1976.2.1 = { rank = 2 }
+		1978.1.1 = { rank = 0 }
+	}
+}
+3401329 = {
+	name = "Patrick North"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1973.1.1 = { rank = 1 }
+		1978.3.1 = { rank = 0 }
+	}
+}
+3401338 = {
+	name = "Zachary Ford"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = spotter
+	history = {
+		1976.2.1 = { rank = 1 }
+		1979.7.1 = { rank = 0 }
+	}
+}
+3401298 = {
+	name = "Jonathan Ali"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1963.12.1 = { rank = 1 }
+		1968.6.1 = { rank = 2 }
+		1979.7.1 = { rank = 0 }
+	}
+}
+3401342 = {
+	name = "Derek Hill"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1978.1.1 = { rank = 1 }
+		1980.4.1 = { rank = 0 }
+	}
+}
+3401315 = {
+	name = "Richard Bell"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1967.10.1 = { rank = 1 }
+		1977.3.1 = { rank = 2 }
+		1980.6.1 = { rank = 0 }
+	}
+}
+3401340 = {
+	name = "Brian Schofield"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1977.7.1 = { rank = 1 }
+		1980.6.1 = { rank = 0 }
+	}
+}
+3401303 = {
+	name = "Aaron Carter"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1964.1.1 = { rank = 1 }
+		1968.8.1 = { rank = 2 }
+		1981.7.1 = { rank = 0 }
+	}
+}
+3401344 = {
+	name = "Charles Duncan"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1979.7.1 = { rank = 1 }
+		1981.12.1 = { rank = 0 }
+	}
+}
+3401304 = {
+	name = "Jason Cook"
+	type = sea
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1964.4.1 = { rank = 1 }
+		1980.6.1 = { rank = 2 }
+		1981.11.1 = { rank = 0 }
+	}
+}
+3401325 = {
+	name = "George King"
+	type = sea
+	country = ENG
+	skill = 13
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1972.9.1 = { rank = 1 }
+		1982.7.1 = { rank = 0 }
+	}
+}
+3401337 = {
+	name = "Joshua Read"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1976.3.1 = { rank = 1 }
+		1979.7.1 = { rank = 2 }
+		1982.11.1 = { rank = 0 }
+	}
+}
+3401335 = {
+	name = "Sean Pritchard"
+	type = sea
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1976.5.1 = { rank = 1 }
+		1982.10.1 = { rank = 0 }
+	}
+}
+3401345 = {
+	name = "Bradley Davey"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1979.7.1 = { rank = 1 }
+		1983.10.1 = { rank = 0 }
+	}
+}
+3401347 = {
+	name = "Kenneth Byrne"
+	type = sea
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = spotter
+	history = {
+		1980.6.1 = { rank = 1 }
+		1982.11.1 = { rank = 2 }
+		1983.1.1 = { rank = 0 }
+	}
+}
+3401341 = {
+	name = "Erik Burgess"
+	type = sea
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1978.4.1 = { rank = 1 }
+		1983.2.1 = { rank = 0 }
+	}
+}
+3401323 = {
+	name = "Peter Parsons"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1971.3.1 = { rank = 1 }
+		1983.12.1 = { rank = 0 }
+	}
+}
+3401349 = {
+	name = "Jeffrey Gough"
+	type = sea
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1981.7.1 = { rank = 1 }
+		1984.6.1 = { rank = 0 }
+	}
+}
+3401353 = {
+	name = "Daniel Hughes"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = seawolf
+	add_trait = superior_tactician
+	history = {
+		1982.11.1 = { rank = 1 }
+		1985.4.1 = { rank = 0 }
+	}
+}
+3401357 = {
+	name = "Miguel Hodgson"
+	type = sea
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1983.2.1 = { rank = 1 }
+		1985.7.1 = { rank = 0 }
+	}
+}
+3401326 = {
+	name = "Steven Brooks"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = superior_tactician
+	add_trait = blockade_runner
+	history = {
+		1973.10.1 = { rank = 1 }
+		1976.11.1 = { rank = 2 }
+		1986.10.1 = { rank = 0 }
+	}
+}
+3401346 = {
+	name = "Alexander Cooper"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1980.4.1 = { rank = 1 }
+		1987.9.1 = { rank = 0 }
+	}
+}
+3401350 = {
+	name = "Spencer Wilkins"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = superior_tactician
+	history = {
+		1981.12.1 = { rank = 1 }
+		1987.12.1 = { rank = 0 }
+	}
+}
+3401355 = {
+	name = "Jared Sims"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1983.10.1 = { rank = 1 }
+		1988.10.1 = { rank = 0 }
+	}
+}
+3401321 = {
+	name = "Cory Gough"
+	type = sea
+	country = ENG
+	skill = 9
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1969.12.1 = { rank = 1 }
+		1988.3.1 = { rank = 0 }
+	}
+}
+3401361 = {
+	name = "Derek Alexander"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = superior_tactician
+	add_trait = spotter
+	history = {
+		1985.7.1 = { rank = 1 }
+		1989.1.1 = { rank = 0 }
+	}
+}
+3401360 = {
+	name = "George Turnbull"
+	type = sea
+	country = ENG
+	skill = 10
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1985.4.1 = { rank = 1 }
+		1989.6.1 = { rank = 0 }
+	}
+}
+3401286 = {
+	name = "Casey Vincent"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = spotter
+	history = {
+		1958.1.1 = { rank = 1 }
+		1965.11.1 = { rank = 2 }
+		1971.8.1 = { rank = 3 }
+		1989.7.1 = { rank = 0 }
+	}
+}
+3401362 = {
+	name = "Alexander Stevenson"
+	type = sea
+	country = ENG
+	skill = 10
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = seawolf
+	history = {
+		1986.10.1 = { rank = 1 }
+		1989.4.1 = { rank = 0 }
+	}
+}
+3401294 = {
+	name = "Robert Allen"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1963.4.1 = { rank = 1 }
+		1963.12.1 = { rank = 2 }
+		1972.9.1 = { rank = 3 }
+		1990.7.1 = { rank = 0 }
+	}
+}
+3401343 = {
+	name = "Edward Newman"
+	type = sea
+	country = ENG
+	skill = 9
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1978.3.1 = { rank = 1 }
+		1990.6.1 = { rank = 0 }
+	}
+}
+3401237 = {
+	name = "Aaron McCarthy"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1952.9.1 = { rank = 2 }
+		1954.1.1 = { rank = 3 }
+		1958.12.1 = { rank = 4 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401285 = {
+	name = "Ryan Davidson"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1958.3.1 = { rank = 1 }
+		1967.8.1 = { rank = 2 }
+		1989.7.1 = { rank = 3 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401297 = {
+	name = "Miguel Wilson"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1963.11.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401310 = {
+	name = "Edgar Turner"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1967.1.1 = { rank = 1 }
+		1981.11.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401312 = {
+	name = "Christian Summers"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1967.4.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401319 = {
+	name = "Alex Ellis"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = spotter
+	history = {
+		1968.7.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401331 = {
+	name = "William Brennan"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = spotter
+	history = {
+		1974.6.1 = { rank = 1 }
+		1978.1.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401333 = {
+	name = "Austin Mason"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1976.11.1 = { rank = 1 }
+		1981.7.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401336 = {
+	name = "Gabriel Crawford"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1976.10.1 = { rank = 1 }
+		1983.1.1 = { rank = 2 }
+		1990.7.1 = { rank = 3 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401339 = {
+	name = "Nathan Ellis"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1977.3.1 = { rank = 1 }
+		1986.10.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401348 = {
+	name = "Cameron Myers"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = seawolf
+	history = {
+		1980.6.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401351 = {
+	name = "Mark Howe"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1981.11.1 = { rank = 1 }
+		1989.7.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401352 = {
+	name = "Phillip Ali"
+	type = sea
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1982.7.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401354 = {
+	name = "Cameron Lewis"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1982.10.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401356 = {
+	name = "Casey Bird"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1983.1.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401358 = {
+	name = "Raymond Fleming"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = seawolf
+	add_trait = superior_tactician
+	history = {
+		1983.12.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401359 = {
+	name = "Scott Finch"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1984.6.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401363 = {
+	name = "Vincent Daly"
+	type = sea
+	country = ENG
+	skill = 9
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1987.9.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401364 = {
+	name = "Travis Cole"
+	type = sea
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = spotter
+	history = {
+		1987.12.1 = { rank = 1 }
+		1990.7.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401365 = {
+	name = "Alexander Wade"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1988.10.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401366 = {
+	name = "Edward Baker"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = seawolf
+	history = {
+		1988.3.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401367 = {
+	name = "Charles Goddard"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	add_trait = superior_tactician
+	history = {
+		1989.1.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401368 = {
+	name = "Zachary Cook"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = blockade_runner
+	history = {
+		1989.6.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401369 = {
+	name = "Richard Richards"
+	type = sea
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = superior_tactician
+	history = {
+		1989.7.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401370 = {
+	name = "Nicholas Barrett"
+	type = sea
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1989.4.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401371 = {
+	name = "Christopher Read"
+	type = sea
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = spotter
+	add_trait = blockade_runner
+	history = {
+		1990.7.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401372 = {
+	name = "Carlos O'Connor"
+	type = sea
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1990.6.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401374 = {
+	name = "Sean Gregory"
+	type = air
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	add_trait = superior_air_tactician
+	add_trait = tank_buster
+	history = {
+		1946.1.1 = { rank = 1 }
+		1949.5.1 = { rank = 0 }
+	}
+}
+3401377 = {
+	name = "Andrew Goodwin"
+	type = air
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	add_trait = tank_buster
+	history = {
+		1946.1.1 = { rank = 1 }
+		1949.7.1 = { rank = 0 }
+	}
+}
+3401387 = {
+	name = "James Robertson"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1949.1.1 = { rank = 0 }
+	}
+}
+3401381 = {
+	name = "Scott Parry"
+	type = air
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1950.10.1 = { rank = 0 }
+	}
+}
+3401383 = {
+	name = "Sean Stevens"
+	type = air
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1952.1.1 = { rank = 0 }
+	}
+}
+3401379 = {
+	name = "Justin Watkins"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	history = {
+		1946.1.1 = { rank = 1 }
+		1952.1.1 = { rank = 0 }
+	}
+}
+3401373 = {
+	name = "Bryan Reed"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1953.4.1 = { rank = 0 }
+	}
+}
+3401390 = {
+	name = "Francisco Stewart"
+	type = air
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1949.7.1 = { rank = 1 }
+		1953.7.1 = { rank = 0 }
+	}
+}
+3401385 = {
+	name = "Miguel Collier"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1953.9.1 = { rank = 0 }
+	}
+}
+3401384 = {
+	name = "Chad Lee"
+	type = air
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1949.1.1 = { rank = 3 }
+		1953.12.1 = { rank = 0 }
+	}
+}
+3401376 = {
+	name = "Jason Butler"
+	type = air
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1953.9.1 = { rank = 2 }
+		1953.12.1 = { rank = 3 }
+		1955.9.1 = { rank = 0 }
+	}
+}
+3401393 = {
+	name = "Gregory Howarth"
+	type = air
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1952.1.1 = { rank = 1 }
+		1955.1.1 = { rank = 0 }
+	}
+}
+3401397 = {
+	name = "Jordan Norton"
+	type = air
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1953.9.1 = { rank = 1 }
+		1957.1.1 = { rank = 0 }
+	}
+}
+3401388 = {
+	name = "Mark Morris"
+	type = air
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = night_flyer
+	add_trait = carpet_bomber
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 4 }
+		1958.11.1 = { rank = 0 }
+	}
+}
+3401375 = {
+	name = "Matthew Skinner"
+	type = air
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1960.6.1 = { rank = 0 }
+	}
+}
+3401395 = {
+	name = "John Hodgson"
+	type = air
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1953.4.1 = { rank = 1 }
+		1961.12.1 = { rank = 0 }
+	}
+}
+3401378 = {
+	name = "Sean Brennan"
+	type = air
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = night_flyer
+	history = {
+		1946.1.1 = { rank = 1 }
+		1949.1.1 = { rank = 2 }
+		1958.11.1 = { rank = 3 }
+		1963.5.1 = { rank = 0 }
+	}
+}
+3401380 = {
+	name = "Luis Reid"
+	type = air
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = tank_buster
+	history = {
+		1946.1.1 = { rank = 1 }
+		1963.5.1 = { rank = 2 }
+		1964.5.1 = { rank = 0 }
+	}
+}
+3401389 = {
+	name = "Shane Donnelly"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = night_flyer
+	history = {
+		1949.5.1 = { rank = 1 }
+		1953.12.1 = { rank = 2 }
+		1964.10.1 = { rank = 0 }
+	}
+}
+3403404 = {
+	name = "Edgar North"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	history = {
+		1961.12.1 = { rank = 1 }
+		1966.5.1 = { rank = 0 }
+	}
+}
+3403405 = {
+	name = "Adrian Gibbons"
+	type = air
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1963.5.1 = { rank = 1 }
+		1967.10.1 = { rank = 0 }
+	}
+}
+3403407 = {
+	name = "Patrick Singh"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1964.10.1 = { rank = 1 }
+		1967.11.1 = { rank = 0 }
+	}
+}
+3403400 = {
+	name = "Sean Barton"
+	type = air
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	history = {
+		1955.1.1 = { rank = 1 }
+		1964.5.1 = { rank = 2 }
+		1967.7.1 = { rank = 0 }
+	}
+}
+3403406 = {
+	name = "Justin Mills"
+	type = air
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	add_trait = night_flyer
+	history = {
+		1964.5.1 = { rank = 1 }
+		1968.7.1 = { rank = 0 }
+	}
+}
+3401410 = {
+	name = "Timothy Davidson"
+	type = air
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1967.11.1 = { rank = 1 }
+		1968.6.1 = { rank = 0 }
+	}
+}
+3403402 = {
+	name = "Mark Wright"
+	type = air
+	country = ENG
+	skill = 8
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1958.11.1 = { rank = 1 }
+		1968.6.1 = { rank = 0 }
+	}
+}
+3403409 = {
+	name = "Kenneth Brennan"
+	type = air
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1967.10.1 = { rank = 1 }
+		1969.6.1 = { rank = 0 }
+	}
+}
+3401398 = {
+	name = "Nathan Rice"
+	type = air
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = superior_air_tactician
+	history = {
+		1953.12.1 = { rank = 1 }
+		1958.11.1 = { rank = 2 }
+		1969.3.1 = { rank = 0 }
+	}
+}
+3403403 = {
+	name = "Travis Martin"
+	type = air
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1960.6.1 = { rank = 1 }
+		1969.11.1 = { rank = 0 }
+	}
+}
+3401392 = {
+	name = "Phillip Powell"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1950.10.1 = { rank = 1 }
+		1952.1.1 = { rank = 2 }
+		1971.1.1 = { rank = 0 }
+	}
+}
+3401414 = {
+	name = "Aaron Evans"
+	type = air
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1968.6.1 = { rank = 1 }
+		1969.3.1 = { rank = 2 }
+		1971.10.1 = { rank = 0 }
+	}
+}
+3401394 = {
+	name = "Bryan Johnson"
+	type = air
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	add_trait = superior_air_tactician
+	history = {
+		1952.1.1 = { rank = 1 }
+		1955.9.1 = { rank = 2 }
+		1963.5.1 = { rank = 3 }
+		1972.7.1 = { rank = 0 }
+	}
+}
+3403401 = {
+	name = "Jonathan Brown"
+	type = air
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	history = {
+		1957.1.1 = { rank = 1 }
+		1972.2.1 = { rank = 0 }
+	}
+}
+3401419 = {
+	name = "Timothy Morrison"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1971.10.1 = { rank = 1 }
+		1976.9.1 = { rank = 0 }
+	}
+}
+3401413 = {
+	name = "Kyle Kent"
+	type = air
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = fleet_destroyer
+	history = {
+		1968.6.1 = { rank = 1 }
+		1976.2.1 = { rank = 0 }
+	}
+}
+3401396 = {
+	name = "Cameron Moore"
+	type = air
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = superior_air_tactician
+	history = {
+		1953.7.1 = { rank = 1 }
+		1979.6.1 = { rank = 0 }
+	}
+}
+3401412 = {
+	name = "Bradley Burton"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1968.7.1 = { rank = 1 }
+		1979.11.1 = { rank = 0 }
+	}
+}
+3401382 = {
+	name = "Robert Dyer"
+	type = air
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1955.9.1 = { rank = 3 }
+		1958.11.1 = { rank = 4 }
+		1979.8.1 = { rank = 0 }
+	}
+}
+3401417 = {
+	name = "Luis Tyler"
+	type = air
+	country = ENG
+	skill = 0
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1969.11.1 = { rank = 1 }
+		1971.10.1 = { rank = 2 }
+		1980.4.1 = { rank = 0 }
+	}
+}
+3401423 = {
+	name = "Stephen Stevens"
+	type = air
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1976.2.1 = { rank = 1 }
+		1983.9.1 = { rank = 0 }
+	}
+}
+3401426 = {
+	name = "Adrian Webb"
+	type = air
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1979.8.1 = { rank = 1 }
+		1985.3.1 = { rank = 0 }
+	}
+}
+3401416 = {
+	name = "Luis Nicholls"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1969.3.1 = { rank = 1 }
+		1985.5.1 = { rank = 0 }
+	}
+}
+3401422 = {
+	name = "Luis Shaw"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1976.9.1 = { rank = 1 }
+		1987.1.1 = { rank = 0 }
+	}
+}
+3401399 = {
+	name = "William Sharpe"
+	type = air
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = night_flyer
+	history = {
+		1955.9.1 = { rank = 1 }
+		1967.7.1 = { rank = 2 }
+		1987.7.1 = { rank = 0 }
+	}
+}
+3401386 = {
+	name = "Gabriel Myers"
+	type = air
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1946.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1979.8.1 = { rank = 4 }
+		1988.9.1 = { rank = 0 }
+	}
+}
+3401427 = {
+	name = "Kyle Pollard"
+	type = air
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = tank_buster
+	history = {
+		1980.4.1 = { rank = 1 }
+		1989.11.1 = { rank = 0 }
+	}
+}
+3401411 = {
+	name = "Matthew Williams"
+	type = air
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = superior_air_tactician
+	add_trait = carpet_bomber
+	history = {
+		1967.7.1 = { rank = 1 }
+		1972.7.1 = { rank = 2 }
+		1989.1.1 = { rank = 0 }
+	}
+}
+3401418 = {
+	name = "Shawn Freeman"
+	type = air
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1971.1.1 = { rank = 1 }
+		1980.4.1 = { rank = 2 }
+		1990.9.1 = { rank = 0 }
+	}
+}
+3401391 = {
+	name = "Michael Sanderson"
+	type = air
+	country = ENG
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1949.1.1 = { rank = 1 }
+		1964.10.1 = { rank = 2 }
+		1972.7.1 = { rank = 3 }
+		1988.9.1 = { rank = 4 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3403408 = {
+	name = "Luis Briggs"
+	type = air
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	history = {
+		1966.5.1 = { rank = 1 }
+		1971.1.1 = { rank = 2 }
+		1979.8.1 = { rank = 3 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401415 = {
+	name = "Jeremy Palmer"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	history = {
+		1969.6.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401420 = {
+	name = "Erik Anderson"
+	type = air
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1972.7.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401421 = {
+	name = "Samuel Mellor"
+	type = air
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = superior_air_tactician
+	history = {
+		1972.2.1 = { rank = 1 }
+		1987.7.1 = { rank = 2 }
+		1988.9.1 = { rank = 3 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401424 = {
+	name = "Nathan Goddard"
+	type = air
+	country = ENG
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1979.6.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401425 = {
+	name = "Austin Hardy"
+	type = air
+	country = ENG
+	skill = 9
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = night_flyer
+	history = {
+		1979.11.1 = { rank = 1 }
+		1979.11.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401428 = {
+	name = "Raymond Chandler"
+	type = air
+	country = ENG
+	skill = 6
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = night_flyer
+	history = {
+		1983.9.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401429 = {
+	name = "Timothy Bentley"
+	type = air
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	history = {
+		1985.3.1 = { rank = 1 }
+		1990.9.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401430 = {
+	name = "Andrew Stokes"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	history = {
+		1985.5.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401431 = {
+	name = "Trevor Pritchard"
+	type = air
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1987.1.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401432 = {
+	name = "Brandon Lees"
+	type = air
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	add_trait = tank_buster
+	history = {
+		1987.7.1 = { rank = 1 }
+		1988.9.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401433 = {
+	name = "Michael Wood"
+	type = air
+	country = ENG
+	skill = 1
+	max_skill = 9
+	loyalty = 1.00
+	history = {
+		1988.9.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401434 = {
+	name = "Steven Middleton"
+	type = air
+	country = ENG
+	skill = 2
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	history = {
+		1989.11.1 = { rank = 1 }
+		1989.11.1 = { rank = 2 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401435 = {
+	name = "Evan Forster"
+	type = air
+	country = ENG
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	add_trait = superior_air_tactician
+	history = {
+		1989.1.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}
+3401436 = {
+	name = "Dustin Forster"
+	type = air
+	country = ENG
+	skill = 7
+	max_skill = 9
+	loyalty = 1.00
+	add_trait = carpet_bomber
+	history = {
+		1990.9.1 = { rank = 1 }
+		1991.12.31 = { rank = 0 }
+	}
+}

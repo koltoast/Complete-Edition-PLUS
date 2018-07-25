@@ -6,6 +6,11 @@
 ### CONTROL DE ECONOMIA - CRISIS ALEATORIAS ###
 country_event = {
 	id = 670003
+
+	title = "EVTNAME670003"
+	desc = "EVTDESC670003"
+	picture = "xxxx"
+	
 	trigger = {
 			ai = yes
 			has_global_flag = CONTROLECONTIEX
@@ -429,6 +434,10 @@ country_event = {
 country_event = {
 	id = 670001
 
+	title = "EVTNAME670001"
+	desc = "EVTDESC670001"
+	picture = "xxxx"
+
 	trigger = {
 			ai = yes
 			not = { has_global_flag = CONTROLECONOMIATIEMPO }
@@ -444,6 +453,11 @@ country_event = {
 
 country_event = {
 	id = 670002
+
+	title = "EVTNAME670002"
+	desc = "EVTDESC670002"
+	picture = "xxxx"
+	
 	trigger = {
 			ai = yes
 			has_global_flag = CONTROLECONOMIATIEMPO

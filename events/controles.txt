@@ -4,12 +4,16 @@
 
 country_event = {
 
+	id = 700062
+
+	title = "EVTNAME700062"
+	desc = "EVTDESC700062"
+	picture = "xxxx"
+
 	trigger = {
 		ai = yes
 		has_global_flag = DESTROZONACIONAL
 	}
-
-	id = 700062
 	
 	mean_time_to_happen = {  months = 1 }
 
@@ -21,12 +25,16 @@ country_event = {
  
 country_event = {
 
+	id = 700063
+
+	title = "EVTNAME700063"
+	desc = "EVTDESC700063"
+	picture = "xxxx"
+
 	trigger = {
 		ai = yes
 		has_global_flag = DESTROZONACIONAL3
 	}
-
-	id = 700063
 	
 	mean_time_to_happen = {  months = 1 }
 
@@ -43,12 +51,16 @@ country_event = {
 
 country_event = {
 
+	id = 5555020
+
+	title = "EVTNAME5555020"
+	desc = "EVTDESC5555020"
+	picture = "xxxx"
+
 	trigger = {
 		ai = yes
 		has_global_flag = CRISISNACIONAL
 	}
-
-	id = 5555020
 	
 	mean_time_to_happen = {  months = -1 }
 

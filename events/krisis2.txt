@@ -196,6 +196,10 @@ country_event = {
 country_event = {
 	id = 700203
 
+	title = "EVTNAME700203"
+	desc = "EVTDESC700203"
+	picture = "xxxx"
+
 	trigger = {
 			ai = yes
 			not = { has_global_flag = CONTROLTIEMPO }
@@ -211,6 +215,11 @@ country_event = {
 
 country_event = {
 	id = 700204
+
+	title = "EVTNAME700204"
+	desc = "EVTDESC700204"
+	picture = "xxxx"
+	
 	trigger = {
 			ai = yes
 			has_global_flag = CONTROLTIEMPO

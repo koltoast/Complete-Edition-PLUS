@@ -8,6 +8,8 @@
 
 country_event = {
 
+	id = 700024
+
 	trigger = {
 		not = {  has_global_flag = DESTROZONACIONAL }
 		OR = {
@@ -16,11 +18,9 @@ country_event = {
 		}
 		not = { revolt_percentage = 0.8 }
 	}
-
-	id = 700024
 	
 	title = "Que la historia nos juzgue con benevolencia"
-	desc = ""
+	desc = "EVTDESC700024"
 	picture = "ANARKIA-2"
 
 	mean_time_to_happen = {  months = 4 }
@@ -128,7 +128,7 @@ country_event = {
 	id = 700026
 	
 	title = "Que la historia nos juzgue con benevolencia"
-	desc = ""
+	desc = "EVTDESC700026"
 	picture = "ANARKIA-2"
 
 	is_triggered_only = yes
@@ -227,7 +227,7 @@ country_event = {
 	id = 700029
 	
 	title = "Que la historia nos juzgue con benevolencia"
-	desc = ""
+	desc = "EVTDESC700029"
 	picture = "ANARKIA-2"
 
 	is_triggered_only = yes
@@ -323,7 +323,7 @@ country_event = {
 	id = 700030
 	
 	title = "Que la historia nos juzgue con benevolencia"
-	desc = ""
+	desc = "EVTDESC700030"
 	picture = "ANARKIA-2"
 
 	is_triggered_only = yes
@@ -421,7 +421,7 @@ country_event = {
 	id = 700031
 	
 	title = "Que la historia nos juzgue con benevolencia"
-	desc = ""
+	desc = "EVTDESC700031"
 	picture = "ANARKIA-2"
 
 	is_triggered_only = yes
@@ -517,7 +517,7 @@ country_event = {
 	id = 700027
 	
 	title = "Que la historia nos juzgue con benevolencia"
-	desc = ""
+	desc = "EVTDESC700027"
 	picture = "ANARKIA-2"
 
 	is_triggered_only = yes
@@ -615,7 +615,7 @@ country_event = {
 	id = 700028
 	
 	title = "Que la historia nos juzgue con benevolencia"
-	desc = ""
+	desc = "EVTDESC700028"
 	picture = "ANARKIA-2"
 
 	is_triggered_only = yes
@@ -712,7 +712,7 @@ country_event = {
 	id = 700032
 	
 	title = "Que la historia nos juzgue con benevolencia"
-	desc = ""
+	desc = "EVTDESC700032"
 	picture = "ANARKIA-2"
 
 	is_triggered_only = yes
@@ -810,7 +810,7 @@ country_event = {
 	id = 700033
 	
 	title = "Que la historia nos juzgue con benevolencia"
-	desc = ""
+	desc = "EVTDESC700033"
 	picture = "ANARKIA-2"
 
 	is_triggered_only = yes
@@ -908,7 +908,7 @@ country_event = {
 	id = 700034
 	
 	title = "Que la historia nos juzgue con benevolencia"
-	desc = ""
+	desc = "EVTDESC700034"
 	picture = "ANARKIA-2"
 
 	is_triggered_only = yes
@@ -1008,7 +1008,7 @@ country_event = {
 	id = 700077
 	
 	title = "Que la historia nos juzgue con benevolencia"
-	desc = ""
+	desc = "EVTDESC700077"
 	picture = "ANARKIA-2"
 
 	is_triggered_only = yes
@@ -1106,7 +1106,7 @@ country_event = {
 	id = 700078
 	
 	title = "Que la historia nos juzgue con benevolencia"
-	desc = ""
+	desc = "EVTDESC700078"
 	picture = "ANARKIA-2"
 
 	is_triggered_only = yes
@@ -1204,7 +1204,7 @@ country_event = {
 	id = 700079
 	
 	title = "Que la historia nos juzgue con benevolencia"
-	desc = ""
+	desc = "EVTDESC700079"
 	picture = "ANARKIA-2"
 
 	is_triggered_only = yes
@@ -1302,7 +1302,7 @@ country_event = {
 	id = 700080
 	
 	title = "Que la historia nos juzgue con benevolencia"
-	desc = ""
+	desc = "EVTDESC700080"
 	picture = "ANARKIA-2"
 
 	is_triggered_only = yes

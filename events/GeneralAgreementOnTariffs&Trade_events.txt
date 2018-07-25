@@ -28,26 +28,30 @@
 		title = "EVTNAME15000"
 		desc = "EVTDESC15000"
 		picture = "xxxx"
+		
 
 		option = {
 			name = "EVTOPTA15000" 					#Large diplomatic investment
 			
+			#How to treat organisations? not like countries apparently
 			trigger = {
-				XUN = { prestige = 40 }
+				#XUN = { prestige = 40 }
 			}
-			XUN  = { prestige_change = -40 }
+			
+			#XUN  = { prestige_change = -40 }
 			
 			set_global_flag = gflag_UN_large_diplomatic_investment
 			country_event = 15001
 		}
-
+			
 		option = {
 			name = "EVTOPTB15000" 					#Small diplomatic investment
 			
 			trigger = {
-				XUN = { prestige = 15 }
+				#XUN = { prestige = 15 }
 			}
-			XUN  = { prestige_change = -15 }
+			
+			#XUN  = { prestige_change = -15 }
 			
 			set_global_flag = gflag_UN_small_diplomatic_investment
 			country_event = 15001

@@ -16,9 +16,7 @@ diplomatic_decisions = {
 			NOT = { is_org_member = XUE }
 			NOT = { is_org_member = XWP }
 			NOT = { has_country_flag = UE_membership_process }						
-			not = {
-				tag = SVI
-			}
+			not = { tag = SVI }
 		}
 		
 		allow = {
@@ -66,8 +64,12 @@ diplomatic_decisions = {
 			}
 			modifier = {
 				factor = 0
-				any_core  = { limit = { not = { tag = TUK } }				                 
-								NOT = { continent = europe }							}
+				any_core  = {
+					limit = {
+						not = { tag = TUK }
+					}
+					NOT = { continent = europe }
+				}
 			}
 			modifier = {
 				factor = 50
@@ -109,9 +111,7 @@ diplomatic_decisions = {
 			   value = 90
 		     }			
 			NOT = { has_country_flag = UE_membership_process }
-			NOT = {
-				tag = SVI
-			}
+			NOT = { tag = SVI }
 		}
 		
 		allow = {
@@ -154,8 +154,12 @@ diplomatic_decisions = {
 			}
 			modifier = {
 				factor = 0
-				any_core  = { limit = { not = { tag = TUK } }				                 
-								NOT = { continent = europe }							}
+				any_core  = {
+					limit = {
+						not = { tag = TUK }
+					}				                 
+					NOT = { continent = europe }
+				}
 			}			
 			modifier = {
 				factor = 50

@@ -4,6 +4,10 @@
 country_event = {               ###
 	id = 700250
 
+	title = "EVTNAME700250"
+	desc = "EVTDESC700250"
+	picture = "xxxx"
+
 	trigger = {	
 	        ai = yes
             has_global_flag = ANTICONTROLAL					
@@ -46,10 +50,6 @@ country_event = {               ###
 				has_country_modifier = no_mod_Global_SP_funding  
 			}
 		}
-
-	title = ""
-	desc = ""
-	picture = ""
 
 	option = {
 			name = " "
@@ -308,6 +308,10 @@ country_event = {               ###
 country_event = {
 	id = 700251
 
+	title = "EVTNAME700251"
+	desc = "EVTDESC700251"
+	picture = "xxxx"
+
 	trigger = {
 			ai = yes
 			not = { has_global_flag = ANTCONTROLALIANZA }
@@ -323,6 +327,11 @@ country_event = {
 
 country_event = {
 	id = 700252
+
+	title = "EVTNAME700252"
+	desc = "EVTDESC700252"
+	picture = "xxxx"
+	
 	trigger = {
 			ai = yes
 			has_global_flag = ANTCONTROLALIANZA

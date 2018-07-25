@@ -1,0 +1,43 @@
+military_government = {
+	allow = {
+		
+	}
+	local_partisan_support = 7
+	local_manpower_modifier = -0.70
+	local_leadership_modifier = -0.80
+	local_ic = -0.80
+	local_resources = -0.5
+}
+
+full_occupation = {
+	allow = {
+		OR = {
+			#civil_law = repression						#Meant civil_liberties?
+			#civil_law = totalitarian_system
+			civil_liberties = martial_law
+			civil_liberties = suspended_indefinitely
+		}
+	}
+	local_partisan_support = 11
+	local_manpower_modifier = -0.85
+	local_leadership_modifier = -0.90
+	local_ic = -0.60
+	local_resources = -0.35
+}
+
+total_exploitation = {
+	allow = {
+		#civil_law = totalitarian_system
+		civil_liberties = suspended_indefinitely
+	}
+	local_partisan_support = 19
+	local_manpower_modifier = -0.95
+	local_leadership_modifier = -0.99
+	local_ic = -0.40
+	local_resources = -0.25
+}
+
+
+civil_war = {
+	allow = {}
+}

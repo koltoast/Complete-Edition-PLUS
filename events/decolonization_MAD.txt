@@ -312,9 +312,9 @@ country_event = {
 		release = MAD
 		recognize = MAD
 		relation = { who = MAD value = 100 }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
 	}
 		
 	option = {											#auto release puppet and declare war
@@ -462,9 +462,9 @@ country_event = {
 		release = MAD
 		recognize = MAD
 		dissent = -5								#People are happy because the war ended
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
 		clr_country_flag = colonial_war_MAD
 	}
 	
@@ -599,9 +599,9 @@ country_event = {
 		THIS = { end_war = MAD }
 		recognize = MAD
 		dissent = -5								#People are happy because the war ended
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
 		clr_country_flag = colonial_war_MAD
 	}
 	

@@ -1,445 +1,547 @@
-
 country_event = {
+
 	id = 700125
 
-	trigger = {
-      	    tag = USA
-		    exists = SOV
-            exists = USA	
-			not = { has_global_flag = iniIIIWW }		
-            not = { has_global_flag = crDFRUS }
-			not = { has_global_flag = crDFR }
-			not = { war_with = sov }
-			not = { war_with = ENG }
-			not = { war_with = FRA }			
-			not = { war_with = JAP }
-			not = { war_with = ITA }			
-			not = { exists = FRG }
-			year = 1946
-			not = { year = 1960 }
-			is_subject = no 
-	}
-	mean_time_to_happen = { months = 6 }
-
 	title = "The Allies are considering the creation of German state"
 	desc = "creacion_DFR_desc"
 	picture = "ONU"
 
-	option = {
-			name = "Sí"
-	    ai_chance = { factor = 70 }
-            set_global_flag = crDFRUS
-
-
+	trigger = {
+		tag = USA
+		exists = SOV
+		exists = USA	
+		not = { has_global_flag = iniIIIWW }
+		not = { has_global_flag = crDFRUS }
+		not = { has_global_flag = crDFR }
+		not = { war_with = SOV }
+		not = { war_with = ENG }
+		not = { war_with = FRA }
+		not = { war_with = JAP }
+		not = { war_with = ITA }
+		not = { exists = FRG }
+		year = 1946
+		not = { year = 1960 }
+		is_subject = no 
 	}
-	option = {
-			name = "NO"
-		  ai_chance = { factor = 30 }
-		  			random = {
-				chance = 5			
-		SOV = { war_with = USA }
-		SOV = { war_with = FRA }
-		SOV = { war_with = ENG } 
-        set_global_flag = iniIIIWW		
-		}
-		
-		       
-                   clr_global_flag = CRDFRFR 
-				   clr_global_flag = crDFRUS 
-				   clr_global_flag = CRDFREN 				
+	
+	mean_time_to_happen = { months = 6 }
 
-  }
+	option = {
+		name = "Sí"
+	    ai_chance = { factor = 70 }
+		set_global_flag = crDFRUS
+	}
+	
+	option = {																#Look at TheFutureOfPooland.txt - Danzig or War for proper event was start
+		name = "NO"
+		ai_chance = { factor = 30 }
+		random = {
+			chance = 5
+			USA = { country_event = 7001252 }
+			FRA = { country_event = 7001253 }
+			ENG = { country_event = 7001254 }
+			set_global_flag = iniIIIWW
+		}
+		clr_global_flag = CRDFRFR
+		clr_global_flag = crDFRUS
+		clr_global_flag = CRDFREN
+	}
 }
 
 country_event = {
+
 	id = 700126
 
-	trigger = {
-      	    tag = ENG
-		    exists = SOV
-            exists = ENG
-			not = { has_global_flag = iniIIIWW }			
-		    not = { has_global_flag = CRDFREN }
-			not = { has_global_flag = crDFR }
-			not = { war_with = USA }
-			not = { war_with = ENG }
-			not = { war_with = FRA }
-			not = { war_with = JAP }
-			not = { war_with = ITA }
-			not = { exists = FRG }
-			year = 1946
-			not = { year = 1960 }
-			is_subject = no 
-	}
-	mean_time_to_happen = { months = 6 }
-
 	title = "The Allies are considering the creation of German state"
 	desc = "creacion_DFR_desc"
 	picture = "ONU"
 
-	option = {
-			name = "Sí"
-	    ai_chance = { factor = 70 }
-            set_global_flag = CRDFREN
-
-
+	trigger = {
+		tag = ENG
+		exists = SOV
+		exists = ENG
+		not = { has_global_flag = iniIIIWW }
+		not = { has_global_flag = CRDFREN }
+		not = { has_global_flag = crDFR }
+		not = { war_with = USA }
+		not = { war_with = ENG }
+		not = { war_with = FRA }
+		not = { war_with = JAP }
+		not = { war_with = ITA }
+		not = { exists = FRG }
+		year = 1946
+		not = { year = 1960 }
+		is_subject = no 
 	}
-	option = {
-			name = "NO"
-		  ai_chance = { factor = 30 }
-		  			random = {
-				chance = 5			
-		SOV = { war_with = USA }
-		SOV = { war_with = FRA }
-		SOV = { war_with = ENG } 
-        set_global_flag = iniIIIWW		
-		}
+	
+	mean_time_to_happen = { months = 6 }
 
-                   clr_global_flag = CRDFRFR 
-				   clr_global_flag = crDFRUS 
-				   clr_global_flag = CRDFREN 				
-  }
+	option = {
+		name = "Sí"
+	    ai_chance = { factor = 70 }
+		set_global_flag = CRDFREN
+	}
+	
+	option = {
+		name = "NO"
+		ai_chance = { factor = 30 }
+		random = {
+			chance = 5
+			USA = { country_event = 7001252 }
+			FRA = { country_event = 7001253 }
+			ENG = { country_event = 7001254 }
+			set_global_flag = iniIIIWW
+		}
+		clr_global_flag = CRDFRFR 
+		clr_global_flag = crDFRUS 
+		clr_global_flag = CRDFREN 
+	}
 }
 
 country_event = {
+
 	id = 700127
 
-	trigger = {
-      	    tag = FRA
-		    exists = SOV
-            exists = FRA			
-			not = { has_global_flag = iniIIIWW }
-            not = { has_global_flag = CRDFRFR }
-			not = { has_global_flag = crDFR }
-			not = { war_with = USA }
-			not = { war_with = ENG }
-			not = { war_with = SOV }			
-			not = { war_with = JAP }
-			not = { war_with = ITA }
-			not = { exists = FRG }
-			year = 1946
-			not = { year = 1960 }
-			is_subject = no 
-	}
-	mean_time_to_happen = { months = 6 }
-
 	title = "The Allies are considering the creation of German state"
 	desc = "creacion_DFR_desc"
 	picture = "ONU"
 
-	option = {
-			name = "Sí"
-	    ai_chance = { factor = 70 }
-            set_global_flag = CRDFRFR
-
-
+	trigger = {
+		tag = FRA
+		exists = SOV
+		exists = FRA			
+		not = { has_global_flag = iniIIIWW }
+		not = { has_global_flag = CRDFRFR }
+		not = { has_global_flag = crDFR }
+		not = { war_with = USA }
+		not = { war_with = ENG }
+		not = { war_with = SOV }
+		not = { war_with = JAP }
+		not = { war_with = ITA }
+		not = { exists = FRG }
+		year = 1946
+		not = { year = 1960 }
+		is_subject = no 
 	}
-	option = {
-			name = "NO"
-		  ai_chance = { factor = 30 }
-	random = {
-		  chance = 5			
-		SOV = { war_with = USA }
-		SOV = { war_with = FRA }
-		SOV = { war_with = ENG } 
-        set_global_flag = iniIIIWW		
-		}
+	
+	mean_time_to_happen = { months = 6 }
 
-                   clr_global_flag = CRDFRFR 
-				   clr_global_flag = crDFRUS 
-				   clr_global_flag = CRDFREN 				
-  }
+	option = {
+		name = "Sí"
+	    ai_chance = { factor = 70 }
+		set_global_flag = CRDFRFR
+	}
+	
+	option = {
+		name = "NO"
+		ai_chance = { factor = 30 }
+		random = {
+			chance = 5
+			USA = { country_event = 7001252 }
+			FRA = { country_event = 7001253 }
+			ENG = { country_event = 7001254 }
+			set_global_flag = iniIIIWW
+		}
+		clr_global_flag = CRDFRFR
+		clr_global_flag = crDFRUS
+		clr_global_flag = CRDFREN
+	}
 }
 
 country_event = {
-	id = 700128
 
-	trigger = {
-				   not = { has_global_flag = crDFR }	
-	        or = { and = {
-                   has_global_flag = CRDFRFR 
-				   has_global_flag = crDFRUS 
-				   has_global_flag = CRDFREN  
-				   }
-				   exists = DDR
-				 }
-				   
-	}
-	mean_time_to_happen = { months = 3 }
+	id = 700128
 
 	title = "The Allies accepted the creation of a German State"
 	desc = "creacion_DFR_desc"
 	picture = "ONU"
 
-	option = {
-			name = "ok"
-            USA = { release_vassal = FRG }
-            USA = { any_owned = { limit = { is_core = FRG } secede_province = FRG } }			
-			FRA = { any_owned = { limit = { is_core = FRG } secede_province = FRG } }
-		    ENG = { any_owned = { limit = { is_core = FRG } secede_province = FRG } }
-			set_global_flag = crDFR
+	trigger = {
+		not = { has_global_flag = crDFR }	
+		or = {
+			and = {
+				has_global_flag = CRDFRFR 
+				has_global_flag = crDFRUS 
+				has_global_flag = CRDFREN  
+			}
+			exists = DDR
+		}	   
+	}
+	
+	mean_time_to_happen = { months = 3 }
 
+	option = {
+		name = "ok"
+		USA = { release_vassal = FRG }
+		USA = { any_owned = { limit = { is_core = FRG } secede_province = FRG } }			
+		FRA = { any_owned = { limit = { is_core = FRG } secede_province = FRG } }
+		ENG = { any_owned = { limit = { is_core = FRG } secede_province = FRG } }
+		set_global_flag = crDFR
 	}
 }
 
 country_event = {
+
 	id = 700129
 
-	trigger = {
-      	    tag = SOV
-		    exists = SOV
-            exists = USA
-            not = { exists = DDR }
-			not = { exists = FRG }			
-            not = { has_global_flag = crDDR }
-			not = { war_with = ENG }
-			not = { war_with = FRA }			
-			not = { war_with = JAP }
-			not = { war_with = ITA }			
-			year = 1948
-			not = { year = 1960 }
-			is_subject = no 
-	}
-	mean_time_to_happen = { months = 6 }
-
 	title = "The URSS are considering the creation of German state"
 	desc = "creacion_DFR_desc"
 	picture = "ONU"
 
-	option = {
-			name = "Sí"
-	        ai_chance = { factor = 70 }
-            set_global_flag = crDDR
-			SOV = { release_vassal = DDR }
-        
-
+	trigger = {
+		tag = SOV
+		exists = SOV
+		exists = USA
+		not = { exists = DDR }
+		not = { exists = FRG }			
+		not = { has_global_flag = crDDR }
+		not = { war_with = ENG }
+		not = { war_with = FRA }			
+		not = { war_with = JAP }
+		not = { war_with = ITA }			
+		year = 1948
+		not = { year = 1960 }
+		is_subject = no 
 	}
-	option = {
-			name = "NO"
-		  ai_chance = { factor = 30 }
-		  			random = {
-				chance = 5			
-		SOV = { war_with = USA }
-		SOV = { war_with = FRA }
-		SOV = { war_with = ENG } 
-        set_global_flag = iniIIIWW		
-		}				
+	
+	mean_time_to_happen = { months = 6 }
 
-  }
+	option = {
+		name = "Sí"
+		ai_chance = { factor = 70 }
+		set_global_flag = crDDR
+		SOV = { release_vassal = DDR }
+	}
+	
+	option = {
+		name = "NO"
+		ai_chance = { factor = 30 }
+		random = {
+			chance = 5
+			SOV = { country_event = 7001251 }
+			set_global_flag = iniIIIWW		
+		}
+	}
 }
 
 country_event = {
+
 	id = 700131
 
-	trigger = {
-      	    tag = SOV
-		    exists = SOV
-            exists = USA
-            not = { exists = DDR }
-            not = { has_global_flag = crDDR }			
-			exists = FRG			
-			not = { year = 1960 }
-			is_subject = no 
-	}
-	mean_time_to_happen = { months = -3 }
-
 	title = "The URSS are considering the creation of German state"
 	desc = "creacion_DFR_desc"
 	picture = "ONU"
 
-	option = {
-			name = "Sí"
-	        ai_chance = { factor = 100 }
-			SOV = { release_vassal = DDR }
-            set_global_flag = crDDR
-        
-
+	trigger = {
+		tag = SOV
+		exists = SOV
+		exists = USA
+		not = { exists = DDR }
+		not = { has_global_flag = crDDR }			
+		exists = FRG			
+		not = { year = 1960 }
+		is_subject = no 
 	}
+	
+	mean_time_to_happen = { months = -3 }
 
+	option = {
+		name = "Sí"
+		ai_chance = { factor = 100 }
+		SOV = { release_vassal = DDR }
+		set_global_flag = crDDR
+	}
 }
 
 
 country_event = {
+
 	id = 700132
 
-	trigger = {
-      	    tag = USA
-		    exists = SOV
-            exists = USA		
-			not = { has_global_flag = iniIIIWW }		
-            not = { has_global_flag = crAUSUS }
-			not = { has_global_flag = crAUS }
-			not = { war_with = sov }
-			not = { war_with = ENG }
-			not = { war_with = FRA }			
-			not = { war_with = JAP }
-			not = { war_with = ITA }			
-			exists = FRG
-			year = 1946
-			not = { year = 1960 }
-			is_subject = no 
-	}
-	mean_time_to_happen = { months = 6 }
-
 	title = "The Allies are considering the creation of Austria"
 	desc = "creacion_DFR_desc"
 	picture = "ONU"
 
-	option = {
-			name = "Sí"
-	    ai_chance = { factor = 70 }
-            set_global_flag = crAUSUS
-
-
+	trigger = {
+		tag = USA
+		exists = SOV
+		exists = USA		
+		not = { has_global_flag = iniIIIWW }		
+		not = { has_global_flag = crAUSUS }
+		not = { has_global_flag = crAUS }
+		not = { war_with = sov }
+		not = { war_with = ENG }
+		not = { war_with = FRA }			
+		not = { war_with = JAP }
+		not = { war_with = ITA }			
+		exists = FRG
+		year = 1946
+		not = { year = 1960 }
+		is_subject = no 
 	}
-	option = {
-			name = "NO"
-		  ai_chance = { factor = 30 }
-		  			random = {
-				chance = 5			
-		SOV = { war_with = USA }
-		SOV = { war_with = FRA }
-		SOV = { war_with = ENG } 
-        set_global_flag = iniIIIWW		
-		}
-		
-		       
-                   clr_global_flag = crAUSFR 
-				   clr_global_flag = crAUSUS 
-				   clr_global_flag = crAUSEN 				
+	
+	mean_time_to_happen = { months = 6 }
 
-  }
+	option = {
+		name = "Sí"
+	    ai_chance = { factor = 70 }
+		set_global_flag = crAUSUS
+	}
+	
+	option = {
+		name = "NO"
+		ai_chance = { factor = 30 }
+		random = {
+			chance = 5
+			USA = { country_event = 7001252 }
+			FRA = { country_event = 7001253 }
+			ENG = { country_event = 7001254 }
+			set_global_flag = iniIIIWW
+		}
+		clr_global_flag = crAUSFR 
+		clr_global_flag = crAUSUS 
+		clr_global_flag = crAUSEN 
+	}
 }
 
 country_event = {
+
 	id = 700133
 
-	trigger = {
-      	    tag = ENG
-		    exists = SOV
-            exists = ENG
-			not = { has_global_flag = iniIIIWW }			
-		    not = { has_global_flag = crAUSEN }
-			not = { has_global_flag = crAUS }
-			not = { war_with = USA }
-			not = { war_with = ENG }
-			not = { war_with = FRA }
-			not = { war_with = JAP }
-			not = { war_with = ITA }
-			exists = FRG
-			year = 1946
-			not = { year = 1960 }
-			is_subject = no 
-	}
-	mean_time_to_happen = { months = 6 }
-
 	title = "The Allies are considering the creation of Austria"
 	desc = "creacion_DFR_desc"
 	picture = "ONU"
 
-	option = {
-			name = "Sí"
-	    ai_chance = { factor = 70 }
-            set_global_flag = crAUSEN
-
-
+	trigger = {
+		tag = ENG
+		exists = SOV
+		exists = ENG
+		not = { has_global_flag = iniIIIWW }			
+		not = { has_global_flag = crAUSEN }
+		not = { has_global_flag = crAUS }
+		not = { war_with = USA }
+		not = { war_with = ENG }
+		not = { war_with = FRA }
+		not = { war_with = JAP }
+		not = { war_with = ITA }
+		exists = FRG
+		year = 1946
+		not = { year = 1960 }
+		is_subject = no 
 	}
-	option = {
-			name = "NO"
-		  ai_chance = { factor = 30 }
-		  			random = {
-				chance = 5			
-		SOV = { war_with = USA }
-		SOV = { war_with = FRA }
-		SOV = { war_with = ENG } 
-        set_global_flag = iniIIIWW		
-		}
+	
+	mean_time_to_happen = { months = 6 }
 
-                   clr_global_flag = crAUSFR 
-				   clr_global_flag = crAUSUS 
-				   clr_global_flag = crAUSEN 				
-  }
+	option = {
+		name = "Sí"
+	    ai_chance = { factor = 70 }
+		set_global_flag = crAUSEN
+	}
+	
+	option = {
+		name = "NO"
+		ai_chance = { factor = 30 }
+		random = {
+			chance = 5
+			USA = { country_event = 7001252 }
+			FRA = { country_event = 7001253 }
+			ENG = { country_event = 7001254 }
+			set_global_flag = iniIIIWW		
+		}
+		clr_global_flag = crAUSFR 
+		clr_global_flag = crAUSUS 
+		clr_global_flag = crAUSEN 				
+	}
 }
 
 country_event = {
+
 	id = 700134
 
-	trigger = {
-      	    tag = FRA
-		    exists = SOV
-            exists = FRA			
-			not = { has_global_flag = iniIIIWW }
-            not = { has_global_flag = crAUSFR }
-			not = { has_global_flag = crAUS }
-			not = { war_with = USA }
-			not = { war_with = ENG }
-			not = { war_with = SOV }			
-			not = { war_with = JAP }
-			not = { war_with = ITA }
-			exists = FRG
-			year = 1946
-			not = { year = 1960 }
-			is_subject = no 
-	}
-	mean_time_to_happen = { months = 6 }
-
 	title = "The Allies are considering the creation of Austria"
 	desc = "creacion_DFR_desc"
 	picture = "ONU"
 
+	trigger = {
+		tag = FRA
+		exists = SOV
+		exists = FRA			
+		not = { has_global_flag = iniIIIWW }
+		not = { has_global_flag = crAUSFR }
+		not = { has_global_flag = crAUS }
+		not = { war_with = USA }
+		not = { war_with = ENG }
+		not = { war_with = SOV }			
+		not = { war_with = JAP }
+		not = { war_with = ITA }
+		exists = FRG
+		year = 1946
+		not = { year = 1960 }
+		is_subject = no 
+	}
+	
+	mean_time_to_happen = { months = 6 }
+
 	option = {
-			name = "Sí"
+		name = "Sí"
 	    ai_chance = { factor = 70 }
-            set_global_flag = crAUSFR
+		set_global_flag = crAUSFR
 
 
 	}
+	
 	option = {
-			name = "NO"
-		  ai_chance = { factor = 30 }
-	random = {
-		  chance = 5			
-		SOV = { war_with = USA }
-		SOV = { war_with = FRA }
-		SOV = { war_with = ENG } 
-        set_global_flag = iniIIIWW		
+		name = "NO"
+		ai_chance = { factor = 30 }
+		random = {
+			chance = 5
+			USA = { country_event = 7001252 }
+			FRA = { country_event = 7001253 }
+			ENG = { country_event = 7001254 }
+			set_global_flag = iniIIIWW		
 		}
-
-                   clr_global_flag = crAUSFR 
-				   clr_global_flag = crAUSUS 
-				   clr_global_flag = crAUSEN 				
-  }
+		clr_global_flag = crAUSFR 
+		clr_global_flag = crAUSUS 
+		clr_global_flag = crAUSEN 				
+	}
 }
 
 country_event = {
-	id = 700135
 
-	trigger = {
-				   not = { has_global_flag = crAUS }	
-	        or = { and = {
-                   has_global_flag = crAUSFR 
-				   has_global_flag = crAUSUS 
-				   has_global_flag = crAUSEN  
-				   }
-				   exists = DDR
-				   exists = FRG
-				 }
-				   
-	}
-	mean_time_to_happen = { months = 3 }
+	id = 700135
 
 	title = "The Allies accepted the creation of Austria"
 	desc = "creacion_DFR_desc"
 	picture = "ONU"
 
-	option = {
-			name = "ok"
-            USA = { release_vassal = AUS }
-            USA = { any_owned = { limit = { is_core = AUS } secede_province = AUS } }			
-			FRA = { any_owned = { limit = { is_core = AUS } secede_province = AUS } }
-		    ENG = { any_owned = { limit = { is_core = AUS } secede_province = AUS } }
-			SOV = { any_owned = { limit = { is_core = AUS } secede_province = AUS } }
-			set_global_flag = crAUS
+	trigger = {
+		not = { has_global_flag = crAUS }	
+		or = {
+			and = {
+				has_global_flag = crAUSFR 
+				has_global_flag = crAUSUS 
+				has_global_flag = crAUSEN  
+			}
+			exists = DDR
+			exists = FRG
+		}
+	}
+	
+	mean_time_to_happen = { months = 3 }
 
+	option = {
+		name = "ok"
+		USA = { release_vassal = AUS }
+		USA = { any_owned = { limit = { is_core = AUS } secede_province = AUS } }			
+		FRA = { any_owned = { limit = { is_core = AUS } secede_province = AUS } }
+		ENG = { any_owned = { limit = { is_core = AUS } secede_province = AUS } }
+		SOV = { any_owned = { limit = { is_core = AUS } secede_province = AUS } }
+		set_global_flag = crAUS
+	}
+}
+
+# WW3 started by SOV
+country_event = {
+
+	id = 7001251
+
+	is_triggered_only = yes
+
+	title = "EVTNAME7001251"
+	desc = "EVTDESC7001251"
+	picture = "ONU"
+
+	option = {
+		name = "EVTOPTA7001251"
+		ai_chance = { factor = 100 }
+		SOV = {
+			limited_war = USA								#wargoal system not implemented apparently, seeBushWar_events.txt, line 925
+			limited_war = FRA
+			limited_war = ENG
+			#war = {	
+			#	target = USA
+			#	attacker_goal = { casus_belli = conquer }
+			#} 
+			#war = {	
+			#	target = FRA
+			#	attacker_goal = { casus_belli = conquer }
+			#} 
+			#war = {	
+			#	target = ENG
+			#	attacker_goal = { casus_belli = conquer }
+			#} 
+		}
+	}
+}
+
+# WW3 started by Allies - USA
+country_event = {
+
+	id = 7001252
+
+	is_triggered_only = yes
+
+	title = "EVTNAME7001252"
+	desc = "EVTDESC7001252"
+	picture = "ONU"
+
+	option = {
+		name = "EVTOPTA7001252"
+		ai_chance = { factor = 100 }
+		USA = {
+			limited_war = SOV
+			#war = {	
+			#	target = SOV
+			#	attacker_goal = { casus_belli = conquer }			#Should find or create a more appropriate CB
+			#} 
+		}
+	}
+}
+
+# WW3 started by Allies - FRA
+country_event = {
+
+	id = 7001253
+
+	is_triggered_only = yes
+
+	title = "EVTNAME7001253"
+	desc = "EVTDESC7001253"
+	picture = "ONU"
+
+	option = {
+		name = "EVTOPTA7001253"
+		ai_chance = { factor = 100 }
+		FRA = {
+			limited_war = SOV
+			#war = {	
+			#	target = SOV
+			#	attacker_goal = { casus_belli = conquer }
+			#} 
+		}
+	}
+}
+
+# WW3 started by Allies - ENG
+country_event = {
+
+	id = 7001254
+
+	is_triggered_only = yes
+
+	title = "EVTNAME7001254"
+	desc = "EVTDESC7001254"
+	picture = "ONU"
+
+	option = {
+		name = "EVTOPTA7001254"
+		ai_chance = { factor = 100 }
+		ENG = {
+			limited_war = SOV
+			#war = {	
+			#	target = SOV
+			#	attacker_goal = { casus_belli = conquer }
+			#} 
+		}
 	}
 }

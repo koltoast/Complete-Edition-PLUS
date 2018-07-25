@@ -5,184 +5,164 @@ diplomatic_decisions = {
 	new_air_base = {
 		category = national
 		potential = {	
-		       ai = yes
-               ##NOT = { has_country_modifier = NABAI }
-			   fuel = 100
-			   supplies = 100	
-               money = 1000			
-		}
-		allow = {
+		   ai = yes
+		   ##NOT = { has_country_modifier = NABAI }
+		   fuel = 100
+		   supplies = 100	
+		   money = 1000			
 		}
 		
+		allow = {
+		}
 		
 		ai_will_do = { 
             factor = 1			
 		}
 		
- effect = {
-				
+		effect = {
 			random_owned = {
-             air_base = 1
-			 this = { money = -200 }
-			 ##add_country_modifier = { name = "NABAI"	duration = 180 }
-							 
+				air_base = 1
+				this = { money = -200 }
+				##add_country_modifier = { name = "NABAI"	duration = 180 }
 			}
-		}			
-			
-
-  }	
+		}
+	}
   
 	new_nuclear_silo = {
 		category = national
 		potential = {	
-		       ai =  yes
-			   fuel = 100
-			   supplies = 100	
-               money = 10000
-               uranium = 20			   
-		}
-		allow = {
+		   ai =  yes
+		   fuel = 100
+		   supplies = 100	
+		   money = 10000
+		   #uranium = 20										#TODO
 		}
 		
+		allow = {
+		}
 		
 		ai_will_do = { 
             factor = 1			
 		}
 		
- effect = {
-				
+		effect = {	
 			random_owned = { 
-             nuclear_silo = 1
-			 this = { money = -2000 }
-			 uranium = -20
-							 
+			nuclear_silo = 1
+			this = { money = -2000 }
+			#uranium = -20										#TODO
 			}
-		}			
-			
-
-  }  
+		}
+	}  
   
- new_air_base = {
+	new_air_base = {
 		category = national
 		potential = {
-               ai = no		
-               ##NOT = { has_country_modifier = NAB }
-			   fuel = 100
-			   supplies = 100	
-               money = 10000			
-		}
-		allow = {
+		   ai = no		
+		   ##NOT = { has_country_modifier = NAB }
+		   fuel = 100
+		   supplies = 100	
+		   money = 10000			
 		}
 		
+		allow = {
+		}
 		
 		ai_will_do = { 
             factor = 100			
 		}
 		
- effect = {
-				
+		effect = {
 			random_owned = { 
 				limit = { 
                     not = { has_building = air_base }					
 				}
-             air_base = 1
-			 this = { money = -200 }
-			 ##add_country_modifier = { name = "NAB"	duration = 30 }
-							 
+            air_base = 1
+			this = { money = -200 }
+			##add_country_modifier = { name = "NAB"	duration = 30 }
 			}
-		}			
-			
-
-  }	  
+		}
+	}	  
 
 	increasing_air_base = {
-	category = national
+		category = national
 		potential = {	
-		        ai = no
-                ##NOT = { has_country_modifier = NAB }
-				money = 10000			
-		}
-		allow = {
+			ai = no
+			##NOT = { has_country_modifier = NAB }
+			money = 10000			
 		}
 		
+		allow = {
+		}
 		
 		ai_will_do = { 
             factor = 100			
 		}
 		
-      effect = {
-				
+		effect = {
 			random_owned = { 
-             air_base = 1
-			 this = { money = -200 }
-			 ##add_country_modifier = { name = "NAB"	duration = 180 }
-							 
+            air_base = 1
+			this = { money = -200 }
+			##add_country_modifier = { name = "NAB"	duration = 180 }
 			}
-		}			
-			
-
-  }	
+		}
+	}	
 
 	fuel = {
 		category = national
 		potential = {	
-          ai = yes
-          		  
-		}
-		allow = {
+			ai = yes
 		}
 		
+		allow = {
+		}
 		
 		ai_will_do = { 
             factor = 100			
 		}
 		
-   effect = {
-				
-		random_country = { 
-			limit = { 
-                NOT = { has_country_modifier = fuel3 }	
-			        not = { has_country_modifier = WP_armsembargo }
+		effect = {
+			random_country = { 
+				limit = { 
+					NOT = { has_country_modifier = fuel3 }	
+					not = { has_country_modifier = WP_armsembargo }
 					not = { has_country_modifier = WP_Nuclear_Embargo }
 					not = { has_country_modifier = NATO_Nuclear_Embargo }
 					not = { has_country_modifier = NATO_armsembargo }					
-                    not = { has_country_modifier = UN_EMBARGO }
+					not = { has_country_modifier = UN_EMBARGO }
 					not = { has_country_modifier = UN_ARMSEMBARGO }
 					not = { has_country_modifier = UN_NUCLEAREMBARGO }
-					not = { has_country_modifier = UN_EMBARGO_DELAY }								  
-			  				
-	            not = { fuel = 1 }
-				money = 10000					
+					not = { has_country_modifier = UN_EMBARGO_DELAY }
+					not = { fuel = 1 }
+					money = 10000					
 				}
-		    fuel = 10000
-            money = -1000	
-			add_country_modifier = {
-				name = "fuel3"				
-				duration = 15							 
-			    }
-		}			
-	}		
-
-  }	  
+				fuel = 10000
+				money = -1000	
+				add_country_modifier = {
+					name = "fuel3"				
+					duration = 15							 
+				}
+			}			
+		}
+	}	  
  
 	fuel2 = {
 		category = national
 		potential = {	
-          ai = yes			
-		}
-		allow = {
+			ai = yes			
 		}
 		
+		allow = {
+		}
 		
 		ai_will_do = { 
            factor = 100			
 		}
 		
-    effect = {
+		effect = {
 				
-		random_country = { 
-			limit = { 
-                NOT = { has_country_modifier = fuel4 }
+			random_country = { 
+				limit = { 
+					NOT = { has_country_modifier = fuel4 }
 			        not = { has_country_modifier = WP_armsembargo }
 					not = { has_country_modifier = WP_Nuclear_Embargo }
 					not = { has_country_modifier = NATO_Nuclear_Embargo }
@@ -191,40 +171,37 @@ diplomatic_decisions = {
 					not = { has_country_modifier = UN_ARMSEMBARGO }
 					not = { has_country_modifier = UN_NUCLEAREMBARGO }
 					not = { has_country_modifier = UN_EMBARGO_DELAY }
-			  				            				
-	            not = { fuel = 1 }
-				money = 1000
-                not = { money = 10000 }				
+					not = { fuel = 1 }
+					money = 1000
+					not = { money = 10000 }				
 				}
-		    fuel = 1000
-            money = -100
-			add_country_modifier = {
-				name = "fuel4"				
-				duration = 15
-			}
-		}			
+				fuel = 1000
+				money = -100
+				add_country_modifier = {
+					name = "fuel4"				
+					duration = 15
+				}
+			}			
+		}
 	}
- }
 
 	supplies = {
 		category = national
 		potential = {	
-          ai = yes			
-		}
-		allow = {
+			ai = yes			
 		}
 		
+		allow = {
+		}
 		
 		ai_will_do = { 
             factor = 100			
 		}
 		
- effect = {
-				
-		random_country = { 
-			limit = { 
-
-               NOT = { has_country_modifier = supplies3 }
+		effect = {
+			random_country = { 
+				limit = { 
+					NOT = { has_country_modifier = supplies3 }
 			        not = { has_country_modifier = WP_armsembargo }
 					not = { has_country_modifier = WP_Nuclear_Embargo }
 					not = { has_country_modifier = NATO_Nuclear_Embargo }
@@ -232,27 +209,27 @@ diplomatic_decisions = {
                     not = { has_country_modifier = UN_EMBARGO }
 					not = { has_country_modifier = UN_ARMSEMBARGO }
 					not = { has_country_modifier = UN_NUCLEAREMBARGO }
-					not = { has_country_modifier = UN_EMBARGO_DELAY }							  
-			  						   
-	            not = { supplies = 1 }
-				money = 10000					
+					not = { has_country_modifier = UN_EMBARGO_DELAY }
+					not = { supplies = 1 }
+					money = 10000					
 				}
-		    supplies = 10000
-            money = -1000	
-			add_country_modifier = {
-				name = "supplies3"				
-				duration = 15							 
+				supplies = 10000
+				money = -1000	
+				add_country_modifier = {
+					name = "supplies3"				
+					duration = 15							 
 			    }
-		}			
-	}		
+			}			
+		}		
 
-  }	  
+	}	  
  
 	supplies2 = {
 		category = national
 		potential = {	
-          ai = yes			
+			ai = yes			
 		}
+		
 		allow = {
 		}
 		
@@ -261,10 +238,9 @@ diplomatic_decisions = {
             factor = 100			
 		}
 		
- effect = {
-				
-		random_country = { 
-			limit = { 
+		effect = {
+			random_country = { 
+				limit = { 
                     NOT = { has_country_modifier = supplies4 }	 
 			        not = { has_country_modifier = WP_armsembargo }
 					not = { has_country_modifier = WP_Nuclear_Embargo }
@@ -274,20 +250,17 @@ diplomatic_decisions = {
 					not = { has_country_modifier = UN_ARMSEMBARGO }
 					not = { has_country_modifier = UN_NUCLEAREMBARGO }
 					not = { has_country_modifier = UN_EMBARGO_DELAY }								  								
-	            not = { supplies = 1 }
-				money = 1000
-                not = { money = 10000 }				
+					not = { supplies = 1 }
+					money = 1000
+					not = { money = 10000 }				
 				}
-		    supplies = 1000
-            money = -100
-			add_country_modifier = {
-				name = "supplies4"				
-				duration = 15
-			}
-		}			
+				supplies = 1000
+				money = -100
+				add_country_modifier = {
+					name = "supplies4"				
+					duration = 15
+				}
+			}			
+		}
 	}
- }
- 
-	
-
 }

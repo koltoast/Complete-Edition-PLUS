@@ -1,74 +1,88 @@
 country_event = {
+
 	id = 700076
-	trigger = {
-			tag = ARG			
-			war = no
-			exists = ARG
-			exists = ENG
-			is_subject = no
-			year = 1981
-			not = { year = 1990 }
-			ENG = { controls = 3383 }
-			ENG = { controls = 14911 }
-			not = { has_global_flag = Guerra_de_las_Malvinas }
-            not = { has_global_flag = arranging }				   
-		}
+
+	title = "EVTNAME700076"
+	desc = "EVTDESC700076"
+	picture = "ONU"
 
 	mean_time_to_happen = { months = 4 }
+	
+	trigger = {
+		tag = ARG			
+		war = no
+		exists = ARG
+		exists = ENG
+		is_subject = no
+		year = 1981
+		not = { year = 1990 }
+		ENG = { controls = 3383 }
+		ENG = { controls = 14911 }
+		not = { has_global_flag = Guerra_de_las_Malvinas }
+		not = { has_global_flag = arranging }				   
+	}
+		
 	option = {
-              name = "OK"
-			  ai_chance = { factor = 100 }
-			  set_global_flag = arranging
-			  ENG = { 3383 = { secede_province = ARG } }
-			  ENG = { 14911 = { secede_province = ARG } }
-			  ENG = { 4087 = { secede_province = ARG } }
-			  not = { ARG =  { military_access = ENG } }
-
+		name = "OK"
+		ai_chance = { factor = 100 }
+		set_global_flag = arranging
+		ENG = { 3383 = { secede_province = ARG } }
+		ENG = { 14911 = { secede_province = ARG } }
+		ENG = { 4087 = { secede_province = ARG } }
+		not = { ARG =  { military_access = ENG } }
 	}
 }
 
 country_event = {
+
 	id = 700065
-	trigger = {
-			tag = ARG			
-			war = no
-			exists = ARG
-			exists = ENG
-			is_subject = no
-			year = 1981
-            not = { has_global_flag = Guerra_de_las_Malvinas }	
-            has_global_flag = arranging	
-		}
+
+	title = "EVTNAME700065"
+	desc = "EVTDESC700065"
+	picture = "ONU"
 
 	mean_time_to_happen = { months = 3 }
+	
+	trigger = {
+		tag = ARG			
+		war = no
+		exists = ARG
+		exists = ENG
+		is_subject = no
+		year = 1981
+		not = { has_global_flag = Guerra_de_las_Malvinas }	
+		has_global_flag = arranging	
+	}
+		
 	option = {
-              name = "OK"
-			  ai_chance = { factor = 100 }
-			ARG = { limited_war = ENG }  
-			set_country_flag = falklands_war
-			set_global_flag = Guerra_de_las_Malvinas
-			load_oob = "zDD-MALVINAS.txt"
-			ARG = {
-				random_list={
-					20 = { 
-						country_event = 700072
-					}
-					20 = { 
-						country_event = 700073
-					}
-					20 = { 
-						country_event = 700074
-					}
-					40 = { 
-						country_event = 700075
-					}
+		name = "OK"
+		ai_chance = { factor = 100 }
+		ARG = { limited_war = ENG }  
+		set_country_flag = falklands_war
+		set_global_flag = Guerra_de_las_Malvinas
+		load_oob = "zDD-MALVINAS.txt"
+		ARG = {
+			random_list={
+				20 = { 
+					country_event = 700072
 				}
-		    }
+				20 = { 
+					country_event = 700073
+				}
+				20 = { 
+					country_event = 700074
+				}
+				40 = { 
+					country_event = 700075
+				}
+			}
+		}
 	}
 }
 
 ##### invasion-1 ####
 country_event = {
+
 	id = 700072
 
 	title = "ARGENTINA LOGRA RECUPERAR PORT STEPHENS "
@@ -87,6 +101,7 @@ country_event = {
 
 ##### invasion-2 ####
 country_event = {
+
 	id = 700073
 
 	title = "ARGENTINA LOGRA RECUPERAR STANLEY "
@@ -105,6 +120,7 @@ country_event = {
 
 ##### invasion-3 ####
 country_event = {
+
 	id = 700074
 
 	title = "ARGENTINA LOGRA RECUPERAR GEORGIA DEL SUR"
@@ -123,6 +139,7 @@ country_event = {
 
 ##### FRACASO DE LA invasion ####
 country_event = {
+
 	id = 700075
 
 	title = "ARGENTINA fracasa en su intento por recuperar las islas"
@@ -154,46 +171,56 @@ country_event = {
 
 
 country_event = {
+
 	id = 700057
-	trigger = {
-	        tag = ENG
-			has_global_flag = Guerra_de_las_Malvinas
-		    not = { has_global_flag = FIN-Guerra_de_las_Malvinas-1 }
-			not = { has_global_flag = FIN-Guerra_de_las_Malvinas-2 }
-			not = { has_global_flag = FIN-Guerra_de_las_Malvinas-3 }
-			not = { has_global_flag = invasion_anfibia_ENG }
-			or = { and = { not = { 14911 = { controlled_by = ENG } } 
-			               not = { 3383 = { controlled_by = ENG } }
-						   }
-                   not = { 4087 = { controlled_by = ENG } }	
-                 }				   
-		}
+
+	title = "EVTNAME700057"
+	desc = "EVTDESC700057"
+	picture = "ONU"
 
 	mean_time_to_happen = { months = -2 }
+	
+	trigger = {
+		tag = ENG
+		has_global_flag = Guerra_de_las_Malvinas
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-1 }
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-2 }
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-3 }
+		not = { has_global_flag = invasion_anfibia_ENG }
+		or = {
+			and = {
+				not = { 14911 = { controlled_by = ENG } }
+				not = { 3383 = { controlled_by = ENG } }
+		   }
+		   not = { 4087 = { controlled_by = ENG } }	
+		}				   
+	}
+		
 	option = {
-              name = "OK"
-			  ai_chance = { factor = 100 }
-		    ENG = {
-				random_list={
-					20 = { 
-						country_event = 700058
-					}
-					20 = { 
-						country_event = 700059
-					}
-					20 = { 
-						country_event = 700060
-					}
-					40 = { 
-						country_event = 700061
-					}
+		name = "OK"
+		ai_chance = { factor = 100 }
+		ENG = {
+			random_list={
+				20 = { 
+					country_event = 700058
 				}
-		    }
-	          }
+				20 = { 
+					country_event = 700059
+				}
+				20 = { 
+					country_event = 700060
+				}
+				40 = { 
+					country_event = 700061
+				}
+			}
+		}
+	}
  }
 
 ##### invasion-1 ####
 country_event = {
+
 	id = 700058
 
 	title = "REINO UNIDO LOGRA RECUPERAR PORT STEPHENS "
@@ -212,6 +239,7 @@ country_event = {
 
 ##### invasion-2 ####
 country_event = {
+
 	id = 700059
 
 	title = "REINO UNIDO LOGRA RECUPERAR STANLEY "
@@ -230,6 +258,7 @@ country_event = {
 
 ##### invasion-3 ####
 country_event = {
+
 	id = 700060
 
 	title = "REINO UNIDO LOGRA RECUPERAR GEORGIA DEL SUR"
@@ -248,6 +277,7 @@ country_event = {
 
 ##### FRACASO DE LA invasion ####
 country_event = {
+
 	id = 700061
 
 	title = "REINO UNIDO fracas en su intento por recuperar las islas"
@@ -279,124 +309,149 @@ country_event = {
 
 
 country_event = {
+
 	id = 700067
-	trigger = {
-			ai = yes			
-			ARG = { not = { controls = 3383 } }
-			ARG = { not = { controls = 14911 } }
-		    has_global_flag = Guerra_de_las_Malvinas
-			has_global_flag = invasion_anfibia_ARG
-			has_global_flag = invasion_anfibia_ENG
-			not = { has_global_flag = FIN-Guerra_de_las_Malvinas-1 }
-			not = { has_global_flag = FIN-Guerra_de_las_Malvinas-2 }
-			not = { has_global_flag = FIN-Guerra_de_las_Malvinas-3 }			   
-		}
+
+	title = "EVTNAME700067"
+	desc = "EVTDESC700067"
+	picture = "ONU"
 
 	mean_time_to_happen = { months = 4 }
+	
+	trigger = {
+		ai = yes			
+		ARG = { not = { controls = 3383 } }
+		ARG = { not = { controls = 14911 } }
+		has_global_flag = Guerra_de_las_Malvinas
+		has_global_flag = invasion_anfibia_ARG
+		has_global_flag = invasion_anfibia_ENG
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-1 }
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-2 }
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-3 }			   
+	}
+		
 	option = {
-              name = "OK"
-			  ai_chance = { factor = 100 }
-			set_global_flag = FIN-Guerra_de_las_Malvinas-1
-			ENG = { end_war = ARG }
-			ARG = {
-				dissent = 20
-				national_unity = -10
-				organisation = -30
-				popularity = -30
-	        }
-           clr_country_flag = falklands_war			
+		name = "OK"
+		ai_chance = { factor = 100 }
+		set_global_flag = FIN-Guerra_de_las_Malvinas-1
+		ENG = { end_war = ARG }
+		ARG = {
+			dissent = 20
+			national_unity = -10
+			organisation = -30
+			popularity = -30
+		}
+		clr_country_flag = falklands_war			
     }
 }
 
 country_event = {
+
 	id = 700068
-	trigger = {
-			ai = yes
-			
-			ARG = { controls = 3383 }
-			ARG = { controls = 14911 }
-			ENG = { controls = 4087 }
-			has_global_flag = Guerra_de_las_Malvinas
-			not = { has_global_flag = FIN-Guerra_de_las_Malvinas-1 }
-			not = { has_global_flag = FIN-Guerra_de_las_Malvinas-2 }
-			not = { has_global_flag = FIN-Guerra_de_las_Malvinas-3 }			   
-		}
+
+	title = "EVTNAME700068"
+	desc = "EVTDESC700068"
+	picture = "ONU"
 
 	mean_time_to_happen = { months = 4 }
+	
+	trigger = {
+		ai = yes
+		ARG = { controls = 3383 }
+		ARG = { controls = 14911 }
+		ENG = { controls = 4087 }
+		has_global_flag = Guerra_de_las_Malvinas
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-1 }
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-2 }
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-3 }			   
+	}
+		
 	option = {
-              name = "OK"
-			  ai_chance = { factor = 100 }
-			set_global_flag = FIN-Guerra_de_las_Malvinas-2
-			ARG = { end_war = ENG }
-			ENG = {
-				dissent = 10
-				national_unity = -5
-				organisation = -15
-				popularity = -15
-			}
-			ENG = { 3383 = { secede_province = ARG } }
-			ENG = { 14911 = { secede_province = ARG } }
-			ARG = { 4087 = { secede_province = ENG } }
-           clr_country_flag = falklands_war				
-	        }
-    }
+		name = "OK"
+		ai_chance = { factor = 100 }
+		set_global_flag = FIN-Guerra_de_las_Malvinas-2
+		ARG = { end_war = ENG }
+		ENG = {
+			dissent = 10
+			national_unity = -5
+			organisation = -15
+			popularity = -15
+		}
+		ENG = { 3383 = { secede_province = ARG } }
+		ENG = { 14911 = { secede_province = ARG } }
+		ARG = { 4087 = { secede_province = ENG } }
+		clr_country_flag = falklands_war				
+	}
+}
 	
 country_event = {
+
 	id = 700069
-	trigger = {
-			ai = yes
-			
-			ARG = { controls = 3383 }
-			ARG = { controls = 14911 }
-			ARG = { controls = 4087 }
-			has_global_flag = Guerra_de_las_Malvinas
-			not = { has_global_flag = FIN-Guerra_de_las_Malvinas-1 }
-			not = { has_global_flag = FIN-Guerra_de_las_Malvinas-2 }
-			not = { has_global_flag = FIN-Guerra_de_las_Malvinas-3 }			   
-		}
+
+	title = "EVTNAME700069"
+	desc = "EVTDESC700069"
+	picture = "ONU"
 
 	mean_time_to_happen = { months = 4 }
+	
+	trigger = {
+		ai = yes
+		ARG = { controls = 3383 }
+		ARG = { controls = 14911 }
+		ARG = { controls = 4087 }
+		has_global_flag = Guerra_de_las_Malvinas
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-1 }
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-2 }
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-3 }			   
+	}
+		
 	option = {
-			set_global_flag = FIN-Guerra_de_las_Malvinas-3
-			ARG = { end_war = ENG }
-			ENG = {
-				dissent = 20
-				national_unity = -10
-				organisation = -30
-				popularity = -30
-			}
-			ENG = { 3383 = { secede_province = ARG } }
-			ENG = { 14911 = { secede_province = ARG } }
-			ENG = { 4087 = { secede_province = ARG } }
-           clr_country_flag = falklands_war				
+		set_global_flag = FIN-Guerra_de_las_Malvinas-3
+		ARG = { end_war = ENG }
+		ENG = {
+			dissent = 20
+			national_unity = -10
+			organisation = -30
+			popularity = -30
+		}
+		ENG = { 3383 = { secede_province = ARG } }
+		ENG = { 14911 = { secede_province = ARG } }
+		ENG = { 4087 = { secede_province = ARG } }
+		clr_country_flag = falklands_war				
     }
 }
 
 country_event = {
+
 	id = 700141
-	trigger = {
-			ai = yes			
-			ENG = { controls = 3383 }
-			ENG = { controls = 14911 }
-			ENG = { controls = 4087 }
-			has_global_flag = Guerra_de_las_Malvinas
-			not = { has_global_flag = FIN-Guerra_de_las_Malvinas-1 }
-			not = { has_global_flag = FIN-Guerra_de_las_Malvinas-2 }
-			not = { has_global_flag = FIN-Guerra_de_las_Malvinas-3 }	
-            not = { has_global_flag = FIN-Guerra_de_las_Malvinas-4 }			
-		}
+
+	title = "EVTNAME700141"
+	desc = "EVTDESC700141"
+	picture = "ONU"
 
 	mean_time_to_happen = { months = 4 }
+	
+	trigger = {
+		ai = yes			
+		ENG = { controls = 3383 }
+		ENG = { controls = 14911 }
+		ENG = { controls = 4087 }
+		has_global_flag = Guerra_de_las_Malvinas
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-1 }
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-2 }
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-3 }	
+		not = { has_global_flag = FIN-Guerra_de_las_Malvinas-4 }			
+	}
+		
 	option = {
-			set_global_flag = FIN-Guerra_de_las_Malvinas-4
-			ARG = { end_war = ENG }
-			ARG = {
-				dissent = 20
-				national_unity = -10
-				organisation = -30
-				popularity = -30
-			}
-           clr_country_flag = falklands_war				
-
+		set_global_flag = FIN-Guerra_de_las_Malvinas-4
+		ARG = { end_war = ENG }
+		ARG = {
+			dissent = 20
+			national_unity = -10
+			organisation = -30
+			popularity = -30
+		}
+		clr_country_flag = falklands_war
     }
 }

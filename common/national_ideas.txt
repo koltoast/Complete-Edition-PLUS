@@ -45,20 +45,21 @@ national_religion = {
 		war_exhaustion = -0.05
 		max_war_exhaustion 0.005
 		land_organisation = 0.005
-
 	}
 	confucianism = {
-		daoism
+		#daoism
 		supply_consumption = -0.005
 		peace_consumer_goods_demand = -0.005
 		war_exhaustion = -0.05
 		max_war_exhaustion 0.005
 		land_organisation = 0.005		
 	}
+	
 	buddhism = {
 		supply_consumption = -0.005
 		peace_consumer_goods_demand = -0.005
 	}
+	
 	shintoism = {
 		supply_consumption = -0.005
 		peace_consumer_goods_demand = -0.005
@@ -69,8 +70,8 @@ national_religion = {
 		national_unity = 0.02
 		territorial_pride = 0.005
 		research_efficiency = 0.002
-
 	}
+	
 	judaism = {
 		dissent_decrease = 0.004
 		territorial_pride = 0.005
@@ -81,8 +82,8 @@ national_religion = {
         national_unity = 0.02
 		prestige = 0.01
 		unit_recruitment_time = -0.001
-
 	}
+	
 	christianity = {
 		dissent_decrease = 0.004
 		global_revolt_risk = -0.2
@@ -90,8 +91,8 @@ national_religion = {
 		suseptibility = 0.001
 		neutrality_change = 0.02
 		prestige = 0.01
-
 	}
+	
 	islam = {
 		supply_consumption = -0.005
 		peace_consumer_goods_demand = -0.005
@@ -99,24 +100,20 @@ national_religion = {
 		max_war_exhaustion 0.005
 		territorial_pride = 0.005
 		land_organisation = 0.005
-	
-
 	}
+	
 	folk_religions = {
 		supply_consumption = -0.005
 		peace_consumer_goods_demand = -0.005
 		war_exhaustion = -0.05
 		max_war_exhaustion 0.005
 		land_organisation = 0.005
-
-		}
+	}
 		
-	#atheism_religion = {
+	atheism_religion = {
 		dissent_decrease = 0.05
 		max_war_exhaustion 0.005
-		territorial_pride = 0.005	
-	}	
-		
+		territorial_pride = 0.005
 	}
 
 #end of religion
@@ -160,7 +157,7 @@ national_identity = {
         }
 
 		dissent_decrease = 0.04
-		factory building cost decreased = 0.01
+		factory_building_cost_decreased = 0.01
 		research_efficiency = 0.02
 		supply_consumption = -0.05
 
@@ -172,10 +169,10 @@ national_identity = {
 			
         }
 
-		factory building cost decreased = 0.01
+		factory_building_cost_decreased = 0.01
 		global_resources = 0.01
 		research_efficiency = 0.01
-		diplomatic points increase = 0.01
+		diplomatic_points_increase = 0.01
 		
     }
 	civic_focus = {
@@ -186,8 +183,8 @@ national_identity = {
         }
 
 		dissent_decrease = 0.04
-		factory building cost decreased = 0.01
-		diplomatic points increase = 0.01
+		factory_building_cost_decreased = 0.01
+		diplomatic_points_increase = 0.01
 		global_revolt_risk = -0.02
 		
     }
@@ -264,7 +261,7 @@ national_attitude = {
 			
         }
 
-		diplomatic points increase = 0.01
+		diplomatic_points_increase = 0.01
 
     }
 	defensive = {

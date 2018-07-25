@@ -1,0 +1,86 @@
+owner = IDC
+controller = IDC
+add_core = IDC
+add_core = SVI
+grain = 110.760
+infra = 3.000
+naval_base = 1.000
+controller = DRV
+1946.1.1.0 = {
+	air_base = 1.000
+}
+1946.1.1.0 = {
+	population_total = {
+		amount = 375193
+		template = 28
+	}
+}
+1948.1.1.0 = {
+	population_total = {
+		amount = 382918
+		template = 28
+	}
+}
+1949.6.14.0 = {
+	owner = SVI
+}
+1949.6.14.0 = {
+	controller = SVI
+}
+1949.6.14.0 = {
+	remove_core = IDC
+}
+1950.1.1.0 = {
+	air_base = 3.000
+}
+1950.1.1.0 = {
+	population_total = {
+		amount = 390802
+		template = 28
+	}
+}
+1955.4.26.0 = {
+	economy_building = {
+		name = military_academy
+		size = 1
+	}
+}
+1961.1.1.0 = {
+	air_base = 4.000
+}
+1961.12.30.0 = {
+	population_total = {
+		amount = 511254
+		template = 128
+	}
+}
+1976.7.2.0 = {
+	owner = VIE
+}
+1976.7.2.0 = {
+	controller = VIE
+}
+1976.7.2.0 = {
+	add_core = VIE
+}
+1979.1.1.0 = {
+	air_base = 5.000
+}
+1979.1.1.0 = {
+	naval_base = 8.000
+}
+1979.1.1.0 = {
+	population_total = {
+		amount = 733876
+		template = 228
+	}
+}
+1991.1.1.0 = {
+	naval_base = 8.000
+}
+1991.1.1.0 = {
+	population_total = {
+		amount = 947619
+		template = 328
+	}
+}

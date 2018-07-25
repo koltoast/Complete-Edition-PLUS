@@ -1,0 +1,512 @@
+guiTypes = {
+	windowType = {
+		name = "fe_small_flag"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=32 y=32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		iconType = {
+			name ="flag_icon"
+			spriteType = "GFX_topbar_small_shield"
+			position = { x=0 y=0 }
+		}
+	}
+	
+	windowType = {
+		name ="lobby"
+		position = { x=0 y=0 }	
+		size = { x=420 y=500 }
+		moveable = 0
+		fullscreen=yes
+
+		instantTextBoxType = {
+			name = "checksum"
+			position = { x=-510 y=-221 }
+			font = "Arial12"
+			borderSize = { x=0 y=4 }
+			maxWidth = 180
+			maxHeight = 24	
+			format = left
+			orientation = "CENTER_DOWN"
+		}
+		
+		iconType = {
+			name ="frontend_chat_bg"
+			position = { x=-524 y=-209 }
+			spriteType = "GFX_frontend_bottom_bg"
+			orientation = "CENTER_DOWN"
+		}
+		
+		editBoxType = {
+			position = { x=-510 y=-45 }
+			name = "lobby_chat_edit"
+			textureFile = "gfx\\interface\\small_tiles_dialog.dds"
+			font = "Jockey_14"
+			borderSize = { x=8 y=4 }	
+			size = { x=730 y=32 }
+			orientation = "CENTER_DOWN"
+		}
+		#### tabs
+		iconType = {
+			name ="frontend_tabs_bg"
+			position = { x=-2 y=0 }
+			spriteType = "GFX_frontend_tabs_bg"
+		}
+		#guiButtonType = {
+		#	name = "game_tabs"
+		#	position = { x = 7 y = 7 }
+		#	quadTextureSprite ="GFX_frontend_tab_button"
+		#}
+		### Historical Start ###
+		guiButtonType = {
+			name = "newgame_tab"
+			position = { x=9 y=10 }
+			quadTextureSprite ="GFX_frontend_tab_button"	
+			buttonText = ""
+			buttonFont = "Jockey_14_dark"
+		}
+		
+
+		instantTextBoxType = {
+			name = "bookmarks_label"
+			position = { x=-34 y=15 }
+			font = "Jockey_16_dark"
+			text = "FE_HISTORICAL_START"	
+			borderSize = { x=0 y=4 }
+			maxWidth = 200
+			maxHeight = 300	
+			format = centre
+		}
+
+		### Saved Games ###
+		guiButtonType = {
+			name = "savedgame_tab"
+			position = { x=136 y=10 }
+			quadTextureSprite ="GFX_frontend_tab_button"	
+			buttonFont = "Jockey_14_dark"
+			
+		}
+		instantTextBoxType = {
+			name = "savedgames_label"
+			position = { x=93 y=15 }
+			font = "Jockey_16_dark"
+			text = "FE_SAVED_GAMES"	
+			borderSize = { x=0 y=4 }
+			maxWidth = 200
+			maxHeight = 30	
+			format = centre
+		}
+	
+		
+		### SELECTED SCENARIO LABEL
+		iconType = {
+			name ="front_doomsday_clock"
+			spriteType = "GFX_frontend_doomsday_clock"
+			position = { x=-45 y=70 }
+			orientation = "CENTER_UP"
+		}
+		iconType = {
+			name ="frontend_selected_scenario_bg"
+			position = { x=-220 y=-2 }
+			spriteType = "GFX_frontend_selected_scenario_bg"
+			orientation = "CENTER_UP"
+		}
+
+		textBoxType = {
+			name = "year_label"
+			position = { x=-288 y=19 }
+			textureFile = ""
+			font = "Jockey_18_black"
+			borderSize = { x=4 y=4 }
+			text = "FE_SELECTED_SCENARIO"	
+			maxWidth = 600
+			maxHeight = 30
+			orientation = "CENTER_UP"
+			format = centre
+		}
+
+		textBoxType = {
+			name = "select_label"
+			position = { x=-145 y=50 }
+			font = "Arial12_black"
+			borderSize = { x=4 y=4 }
+			text = "FE_SELECT_NATION"	
+			maxWidth = 300
+			maxHeight = 30	
+			orientation = "CENTER_UP"
+			format = centre
+		}
+		### MULTI PLAYER
+		windowType = {
+			name ="multiplayer"
+			backGround=""
+			position = { x=10 y =320 }	
+			size = { x=200 y=300 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			upsound = ""
+			downsound = ""
+			fullscreen=no
+			
+			iconType = {
+				name ="frontend_players_bg"
+				position = { x=-12 y=47 }
+				spriteType = "GFX_frontend_players_bg"
+			}
+			listboxType = {
+				name ="multiplayer_list"
+				position = { x=-10 y =84 }
+				size = { x=264 y =162 }
+				spacing = 0
+				scrollbartype = "scrollbar_vertical_short_2"
+			}
+			instantTextBoxType = {
+				name = "num_players"
+				position = { x=-2 y=57 }
+				font = "Jockey_14_cyan"
+				borderSize = { x=0 y=4 }	
+				maxWidth = 180
+				maxHeight = 24	
+				format = left
+			}
+		}
+		#### SELECTED COUNTRY UPPER RIGHT
+		windowType = {
+			name ="singleplayer"
+			backGround=""
+			position = { x=-300 y =-10}	
+			size = { x=200 y =340}
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			upsound = ""
+			downsound = ""
+			fullscreen=no
+			orientation = "UPPER_RIGHT"
+			
+			iconType = {
+				name ="frontend_selected_bg"
+				position = { x=15 y=10 }
+				spriteType = "GFX_frontend_selected_bg"
+			}
+			guiButtonType = {
+				position = { x=18 y=55 }
+				name = "player_shield"	
+				quadTextureSprite = "GFX_topbarflag"
+			}
+			instantTextBoxType = {
+				name = "selected_nation_label"
+				position = { x=41 y=25 }
+				textureFile = ""
+				font = "Jockey_24"
+				borderSize = { x=1 y=1 }
+				maxWidth = 230
+				maxHeight = 20	
+				format = centre
+			}
+			instantTextBoxType = {
+				name = "selected_fog"
+				position = { x=66 y=62 }
+				font = "Jockey_14_dark"
+				borderSize = { x=0 y=4 }
+				maxWidth = 200
+				maxHeight = 160	
+				format = right
+			}
+			## Faction Icon ###
+
+			
+			iconType = {
+				name ="icon_factions"
+				position = { x=0 y=87 }
+				spriteType = "GFX_icon_factions"
+			}
+			#iconType = {
+			#	name ="factions_overlay"
+			#	position = { x=10 y=91}
+			#	spriteType = "GFX_diplomacy_shield_bg"
+			#}
+			instantTextBoxType = {
+				name = "population_label"
+				position = { x=117 y=89 }
+				font = "Jockey_14"
+				borderSize = { x=0 y=4 }
+				text = "FE_POPULATION"	
+				maxWidth = 200
+				maxHeight = 600	
+				format = left
+			}
+			
+			instantTextBoxType = {
+				name = "population_value_label"
+				position = { x = 120 y = 90 }
+				font = "Jockey_14"
+				borderSize = {x = 0 y = 4}
+				text = "DYNAMIC_TEXT"	
+				maxWidth = 150
+				maxHeight = 600	
+				format = right
+			}
+			### HoS ###
+			instantTextBoxType = {
+				name = "head_of_state_label"
+				position = { x=112 y=130 }
+				textureFile = ""
+				font = "Jockey_14_dark"
+				borderSize = { x=0 y=4 }
+				text = "FE_HEAD_OF_STATE"	
+				maxWidth = 160
+				maxHeight = 32	
+				format = center
+			}
+			instantTextBoxType = {
+				name = "head_of_state"
+				position = { x=116 y=151 }
+				textureFile = ""
+				font = "Jockey_14_cyan"
+				borderSize = {x = 0 y = 4}
+				text = ""	
+				maxWidth = 160
+				maxHeight = 32	
+				format = center
+			}
+			iconType = {
+				name = "photo_head_of_state"
+				spriteType = "GFX_empty_position"
+				position = { x=21 y=133 }
+			}
+			iconType = {
+				name = "photo_head_of_state_overlay"
+				spriteType = "GFX_tv_photo_overlay"
+				position = { x=23 y=135 }
+			}
+			### Political color ###
+			iconType = {
+				name = "legend_color"
+				spriteType = "GFX_politics_ideology_light"
+				position = { x= 101 y=135 }
+			}
+			iconType = {
+				name = "legend_color_overlay"
+				spriteType = "GFX_politics_ideology_light_overlay"
+				position = { x= 101 y=135 }
+			}
+			### War/Allies ###
+			instantTextBoxType = {
+				name = "war_label"
+				position = { x = 117 y = 171 }
+				font = "Jockey_14"
+				borderSize = {x = 0 y = 4}
+				maxWidth = 200
+				maxHeight = 160
+				format = left
+				text = "FE_WAR"
+			}
+			OverlappingElementsBoxType = {
+				name = "wars_box"
+				position = { x = 128 y = 175 }
+				size = { x=182 y= 32 }
+				format = right
+				spacing = -15
+			}
+			instantTextBoxType = {
+				name = "ally_label"
+				position = { x = 117 y = 188 }
+				font = "Jockey_14"
+				borderSize = {x = 0 y = 4}
+				maxWidth = 200
+				maxHeight = 160	
+				format = left
+				text = "FE_ALLIES"
+			}
+			OverlappingElementsBoxType = {
+				name = "allies_box"
+				position = { x = 128 y = 193 }
+				size = { x=182 y= 32 }
+				format = right
+				spacing = -15
+			}
+		}
+
+		### SAVE GAMES ####
+		
+		windowType = {
+			name ="save_games"
+			backGround=""
+			position = { x=0 y =0 }	
+			size = { x=273 y =768}
+			moveable = 0
+			fullscreen=no
+
+			listboxType = {
+				name ="save_games_list"
+				position = { x = 3 y = 48 }
+				size = { x=271 y =276}
+				spacing = 1
+				scrollbartype = "scrollbar_vertical_short_2"
+			}
+			
+		}
+		
+		### BOOKMARKS
+
+		windowType = {
+			name ="bookmarks"
+			backGround=""
+			position = { x=0 y =1 }	
+			size = { x=280 y =768}
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			upsound = ""
+			downsound = ""
+			fullscreen=no
+		
+
+			listboxType = {
+				name ="bookmarks_list"
+				position = { x = 4 y = 45 }
+				backGround=""
+				size = { x=270 y =268}
+				spacing = 2
+				scrollbartype = "scrollbar_vertical_short_2"
+				borderSize = {x = 0 y =0 }
+			}
+		}
+			
+
+			### BUTTONS
+		
+			guiButtonType = {
+				name = "back_button"
+				position = { x = 304 y = -53 }
+				quadTextureSprite ="GFX_frontend_gen_button"	
+				buttonFont = "Jockey_14_dark"
+				orientation = "CENTER_DOWN"
+			}
+
+			instantTextBoxType = {
+				name = "back_label"
+				position = { x = 314 y = -51 }
+				font = "Jockey_16_dark"
+				borderSize = { x = 0 y = 7 }
+				maxWidth = 148
+				maxHeight = 35	
+				format = centre
+				orientation = "CENTER_DOWN"
+				text = "FE_BACK"
+			}
+
+			guiButtonType = {
+				name = "play_button"
+				position = { x = 281 y = -177 }
+				quadTextureSprite ="GFX_frontend_play_button"	
+				buttonFont = "Jockey_24_glow_blue"
+				orientation = "CENTER_DOWN"
+				clicksound = click
+			}
+
+			instantTextBoxType = {
+				name = "play_label"
+				position = { x = 300 y = -177 }
+				font = "Jockey_24_glow_blue"
+				borderSize = {x = 0 y = 28}
+				maxWidth = 190
+				maxHeight = 26	
+				orientation = "CENTER_DOWN"
+				format = centre
+				text = "PLAY"
+			}
+			
+			############
+
+			listboxType = 
+			{
+				name ="chatlog"
+				position = { x = -506 y = -163}
+				size = { x= 722 y =120 }
+				orientation = "CENTER_DOWN"
+				spacing = 0
+				scrollbartype = "scrollbar_vertical_standard_2"
+				borderSize = {x = 0 y = 0}
+			}
+		}
+		
+	guiButtonType = {
+		name ="shield"
+		position = { x = 0 y = 0 }
+		quadTextureSprite = "GFX_popup_shield"
+		tooltip = ""
+		tooltipText =""
+		delayedTooltipText = ""
+		buttonText = ""
+		buttonFont = "Main_14_black"
+		
+		#rotation = -1.5708
+	}
+	
+	################
+
+
+	positionType = {
+		# Should be relative to lower center of screen
+		name = "shield_position"
+		position = { x = 0 y = -280 }
+	}
+
+	positionType = {
+		name = "shield_offset"
+		position = { x = 66 y = 0 }
+	}
+
+	scrollbarType = {
+		name = "frontend_slider"	
+		slider = "evw_slider_trackbutton"
+		track= "evw_slider"
+		leftbutton = "evw_slider_up"
+		rightbutton = "evw_slider_down"
+		size = {x =8 y =8 }
+		position = {x= 0 y =0}
+		priority = 100			
+		borderSize = {x = 12 y = 12}	
+		maxValue =1
+		minValue =0
+		stepSize =0.01
+		startValue = 0
+		horizontal = no
+
+		guiButtonType = {
+			name = "evw_slider"	
+			quadTextureSprite = "techslider_background"
+			position = { x=0 y =0}
+		}
+		guiButtonType = {
+			name = "evw_slider_trackbutton"
+			quadTextureSprite = "slider_slider_eco_reg"
+			position = { x=-8 y =0}	
+		}	
+
+		guiButtonType = {
+			parent = "evw_slider"
+			name = "evw_slider_up"
+			quadTextureSprite = "GFX_scroller_vertical_btn"
+			position = { x=10 y =0}	
+		}
+		
+		guiButtonType = {
+			parent = "evw_slider"
+			name = "evw_slider_down"
+			quadTextureSprite = "GFX_scroller_vertical_btn"
+			position = { x=10 y =24}	
+		}
+	}
+}

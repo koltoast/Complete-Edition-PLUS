@@ -8,6 +8,10 @@ country_event = {
 	
 	id = 6230										#Colony is owned
 	
+	title = "EVTNAME6230"
+	desc = "EVTDESC6230"
+	picture = "1974_Mozambique_Lusaka_Accord"
+	
 	trigger = {
 		owns = 4311
 		controls = 4311
@@ -53,10 +57,6 @@ country_event = {
 	}
 
 	is_triggered_only = no
-	
-	title = "EVTNAME6230"
-	desc = "EVTDESC6230"
-	picture = "1974_Mozambique_Lusaka_Accord"
 	
 	option = {											#chance to release immediatly
 		name = "EVTOPTA6230"
@@ -204,10 +204,14 @@ country_event = {
 	
 	id = 6231										#Colony is a puppet
 	
+	title = "EVTNAME6231"
+	desc = "EVTDESC6231"
+	picture = "1974_Mozambique_Lusaka_Accord"
+	
 	trigger = {
 		NOT = { national_unity = 69 }
 		exists = GUI
-		GUI = { vassal_of = THIS }
+		GUI = { vassal_of = THIS }												#change GUI tag, conflict probably, GUE maybe
 		NOT = { national_culture = cul_sub_saharan_africa }
 	}
 	
@@ -247,10 +251,6 @@ country_event = {
 	}
 
 	is_triggered_only = no
-	
-	title = "EVTNAME6231"
-	desc = "EVTDESC6231"
-	picture = "1974_Mozambique_Lusaka_Accord"
 	
 	option = {											#chance to release immediatly
 		name = "EVTOPTA6231"
@@ -355,6 +355,10 @@ country_event = {
 	
 	id = 6232										#War continues - rebel reinforcements - if GUI does not exist
 	
+	title = "EVTNAME6232"
+	desc = "EVTDESC6232"
+	picture = "1974_Mozambique_Lusaka_Accord"
+	
 	trigger = {
 		owns = 4311
 		NOT = { national_unity = 69 }
@@ -391,10 +395,6 @@ country_event = {
 	}
 
 	is_triggered_only = no
-	
-	title = "EVTNAME6232"
-	desc = "EVTDESC6232"
-	picture = "1974_Mozambique_Lusaka_Accord"
 
 	option = {
 		name = "EVTOPTA6232"
@@ -487,6 +487,10 @@ country_event = {
 	
 	id = 6233										#War continues - rebel reinforcements - if GUI exists
 	
+	title = "EVTNAME6233"
+	desc = "EVTDESC6233"
+	picture = "1974_Mozambique_Lusaka_Accord"
+	
 	trigger = {
 		owns = 4311
 		NOT = { national_unity = 69 }
@@ -524,10 +528,6 @@ country_event = {
 	}
 
 	is_triggered_only = no
-	
-	title = "EVTNAME6233"
-	desc = "EVTDESC6233"
-	picture = "1974_Mozambique_Lusaka_Accord"
 
 	option = {
 		name = "EVTOPTA6233"

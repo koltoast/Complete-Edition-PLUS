@@ -1,0 +1,804 @@
+guiTypes = {
+
+	windowType = {
+		name = "outliner"
+		position = { x=-231 y=100 }	
+		size = { x=228 y=79 }
+		moveable = 0
+		fullScreen = no
+		orientation = "UPPER_RIGHT"	
+
+		iconType =
+		{
+			name ="outliner_top"
+			spriteType = "GFX_outliner_top"
+			position = { x= 0 y = 10 }
+		}
+					
+		checkboxType = {
+			name = "outliner_view_landunits"	
+			position = {x = 6 y = 14 }
+			quadTextureSprite ="GFX_outliner_view_landunits"
+		}
+				
+		checkboxType = {
+			name = "outliner_view_airunits"	
+			position = {x = 28 y = 14 }
+			quadTextureSprite ="GFX_outliner_view_airunits"
+		}
+				
+		checkboxType = {
+			name = "outliner_view_navalunits"	
+			position = {x = 51 y = 14 }
+			quadTextureSprite ="GFX_outliner_view_navalunits"
+		}
+				
+		checkboxType = {
+			name = "outliner_view_landcombat"	
+			position = {x = 69 y = 14 }
+			quadTextureSprite ="GFX_outliner_view_landcombat"
+		}
+				
+		checkboxType = {
+			name = "outliner_view_aircombat"	
+			position = {x = 90 y = 14 }
+			quadTextureSprite ="GFX_outliner_view_aircombat"
+		}
+				
+		checkboxType = {
+			name = "outliner_view_navalcombat"	
+			position = {x = 111 y = 14 }
+			quadTextureSprite ="GFX_outliner_view_navalcombat"
+		}
+				
+		checkboxType = {
+			name = "outliner_view_bombonus"	
+			position = {x = 133 y = 14 }
+			quadTextureSprite ="GFX_outliner_view_bombus"
+		}
+			
+		checkboxType = {
+			name = "outliner_view_bombonthem"	
+			position = {x = 155 y = 14 }
+			quadTextureSprite ="GFX_outliner_view_bombthem"
+		}
+		
+		checkboxType = {
+			name = "outliner_view_ao"	
+			position = {x = 176 y = 14 }
+			quadTextureSprite ="GFX_outliner_view_objectives"
+		}
+		
+		checkboxType = {
+			name = "outliner_view_spy"
+			position = {x = 6 y = 28 }
+			quadTextureSprite = "GFX_outliner_view_spy"
+		}
+		
+		checkboxType = {
+			name = "outliner_view_revolts"
+			position = {x = 28 y = 28 }
+			quadTextureSprite = "GFX_outliner_view_revolts"
+		}
+				
+		checkboxType = {
+			name = "outliner_view_theatre"
+			position = { x = 51 y = 28 }
+			quadTextureSprite = "GFX_outliner_view_theatre"
+		}
+				
+		checkboxType = {
+			name = "outliner_view_deployment"
+			position = { x = 69 y = 28 }
+			quadTextureSprite = "GFX_outliner_view_deployment"
+		}
+				
+		checkboxType = {
+			name = "outliner_view_building"
+			position = { x = 90 y = 28 }
+			quadTextureSprite = "GFX_outliner_view_building"
+		}
+				
+		############################
+			
+			
+		listboxType = 
+		{
+			name ="outliner_list"
+			position = { x = 0 y = 77 }
+			size = { x= 230 y = 216}
+			Orientation = "UPPER_LEFT"
+			scrollbartype = "outliner_slider"
+			offset = { x=-16 y=0 }
+		}
+	}
+
+	iconType =
+	{
+		name ="outliner_bottom"
+		spriteType = "GFX_outliner_bottom"
+		position = { x= 0 y = 0 }
+	}
+
+
+	windowType = {
+		name = "outliner_configuration"
+		backGround="Background"
+		position = { x=-202 y=40 }	
+		size = { x=192 y=274 }
+		moveable = 0
+		fullScreen = no
+		orientation = "UPPER_RIGHT"
+
+		guiButtonType = {
+			name = "Background"	
+			quadTextureSprite ="opaque_blue"
+		}	
+
+		listboxType = 
+		{
+			name ="outliner_configuration_list"
+			position = { x = 30 y = 40 }
+			size = { x= 170 y = 234}
+			Orientation = "UPPER_LEFT"
+			scrollbartype = "outliner_slider"
+		}
+		
+		guiButtonType = {
+			name = "close_button"	
+			position = {x = 60 y = 265 }
+			quadTextureSprite ="button_type_2"
+			buttonText = "CLOSE"
+			buttonFont = "Arial12"
+			clicksound = click
+		}
+	}
+
+	windowType = 
+	{
+		name = "outliner_configuration_entry"
+		position = { x=0 y=0 }	
+		size = { x=218 y=18 }
+		moveable = 0
+		fullScreen = no	
+
+
+		checkboxType = {
+			name = "outliner_checkbox"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_checkbox_small"	
+			buttonFont = "Arial12"
+		}
+
+		instantTextBoxType={
+			name = "outliner_list_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 195
+			maxHeight = 32
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+	}
+
+
+	windowType = 
+	{
+		name = "outliner_header_entry"
+		position = { x=0 y=0 }	
+		size = { x=218 y=18 }
+		moveable = 0
+		fullScreen = no	
+		
+		iconType =
+		{
+			name ="outliner_header"
+			spriteType = "GFX_outliner_header"
+			position = { x= 0 y = 0 }
+		}
+
+		instantTextBoxType = {
+				name = "entry_text"
+				position = { x = 0 y = 1 }
+				font = "Arial12_bold"
+				borderSize = {x = 4 y = 0}
+				maxWidth = 195
+				maxHeight = 32
+				format = right
+		}
+
+	}
+
+
+	windowType = 
+	{
+		name = "outliner_province_entry"
+		position = { x=0 y=0 }	
+		size = { x=218 y=18 }
+		moveable = 0
+		fullScreen = no	
+		
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"	
+			buttonFont = "Arial12"
+		}
+
+		instantTextBoxType = {
+			name = "entry_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 165
+			maxHeight = 32
+			format = right
+		}
+
+		instantTextBoxType = {
+			name = "occupied"
+			position = { x = 19 y = 0 }
+			font = "Arial12"
+			borderSize = {x = 4 y = 0}
+			maxWidth = 52
+			maxHeight = 32
+			format = right
+		}
+
+		iconType =
+		{
+			name ="siege"
+			spriteType = "GFX_outliner_siege"
+			position = { x= 4 y = -14 }
+			Orientation = "LOWER_LEFT"
+		}
+	}
+	
+	
+	windowType = 
+	{
+		name = "outliner_combat_entry"
+		position = { x=0 y=0 }	
+		size = { x=218 y=18 }
+		moveable = 0
+		fullScreen = no	
+
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"	
+			buttonFont = "Arial12"
+		}
+
+		instantTextBoxType = {
+			name = "info_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 195
+			maxHeight = 32
+			format = left
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "entry_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 195
+			maxHeight = 32
+			format = right
+			fixedsize = yes
+		}
+
+	}
+	
+	
+	windowType = 
+	{
+		name = "outliner_standard_entry"
+		position = { x=0 y=0 }	
+		size = { x=218 y=18 }
+		moveable = 0
+		fullScreen = no	
+
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"	
+			buttonFont = "Arial12"
+		}
+
+		instantTextBoxType = {
+			name = "entry_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 195
+			maxHeight = 32
+			format = right
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "info_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 195
+			maxHeight = 32
+			format = left
+		}
+
+	}
+	
+	
+	
+	windowType = 
+	{
+		name = "outliner_top_unit_entry"
+		position = { x=0 y=0 }	
+		size = { x=218 y=18 }
+		moveable = 0
+		fullScreen = no	
+	
+		guiButtonType = {
+			name = "expand_button"
+			quadTextureSprite = "GFX_outliner_expand_button"
+			position = { x=7 y =0}	
+		}
+		
+		instantTextBoxType = {
+			name = "entry_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 160
+			maxHeight = 32
+			format = right
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "entry_text_hq"
+			position = { x = 30 y = 0 }
+			font = "Arial12_bold"
+			maxWidth = 160
+			maxHeight = 32
+			format = right
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "info_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 160
+			maxHeight = 32
+			format = left
+		}
+		
+		iconType = 
+		{
+			name = "no_leader"
+			spriteType = "GFX_outliner_no_leader"
+			position = { x=203 y=-21 }
+			Orientation = "LOWER_LEFT"
+		}
+		
+		iconType =
+		{
+			name ="movment"
+			spriteType = "GFX_outliner_move_arrow"
+			position = { x= 206 y = -10 }
+			Orientation = "LOWER_LEFT"
+		}
+			
+		iconType = 
+		{
+			name = "scorched_icon"
+			spriteType = "GFX_outliner_scorched"
+			position = { x = 193 y = -20 }
+			Orientation = "LOWER_LEFT"
+		}
+			
+		iconType = 
+		{
+			name = "prioritized_icon"
+			spriteType = "GFX_outliner_prioritized"
+			position = { x = 193 y = -10 }
+			Orientation = "LOWER_LEFT"
+		}
+			
+		iconType = 
+		{
+			name = "valhalla_icon"
+			spriteType = "GFX_outliner_valhalla"
+			position = { x = 193 y = -15 }
+			Orientation = "LOWER_LEFT"
+		}
+				
+	}
+	
+	windowType = 
+	{
+		name = "outliner_unit_entry_bg"
+		position = { x=0 y=0 }	
+		size = { x=218 y=18 }
+		moveable = 0
+		fullScreen = no	
+	
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"	
+			buttonFont = "Arial12"
+		}
+	}
+	
+	windowType = 
+	{
+		name = "outliner_unit_entry"
+		position = { x=0 y=0 }	
+		size = { x=218 y=18 }
+		moveable = 0
+		fullScreen = no	
+		
+		instantTextBoxType = {
+				name = "entry_text"
+				position = { x = 30 y = 0 }
+				font = "Arial12"
+				maxWidth = 165
+				maxHeight = 32
+				format = right
+				fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+				name = "entry_text_hq"
+				position = { x = 30 y = 0 }
+				font = "Arial12_bold"
+				maxWidth = 165
+				maxHeight = 32
+				format = right
+				fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+				name = "info_text"
+				position = { x = 30 y = 0 }
+				font = "Arial12"
+				maxWidth = 165
+				maxHeight = 32
+				format = left
+		}
+		
+		iconType = 
+		{
+			name = "no_leader"
+			spriteType = "GFX_outliner_no_leader"
+			position = { x=100 y=-12 }
+			Orientation = "LOWER_LEFT"
+		}
+		
+		iconType =
+		{
+			name ="movment"
+			spriteType = "GFX_outliner_move_arrow"
+			position = { x= 105 y = -12 }
+			Orientation = "LOWER_LEFT"
+		}
+	}
+	
+	windowType =
+	{
+		name = "outliner_top_spy_entry_bg"
+		position = {x=0 y=0}
+		size = {x=200 y=18}
+		moveable=0
+		fullScreen = no
+		
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y=0 }
+			quadTextureSprite = "GFX_outliner_standard"
+			buttonFont = "Arial12"
+		}
+	}
+	
+	windowType = 
+	{
+		name = "outliner_top_spy_entry"
+		backGround = ""
+		position = { x=0 y=0 }
+		size = { x=218 y=18 }
+		moveable = 0
+		fullScreen = no
+		
+		instantTextBoxType = {
+			name = "entry_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 195
+			maxHeight = 32
+			format = right
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "info_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 195
+			maxHeight = 32
+			format = left
+		}
+	}
+	
+	windowType =
+	{
+		name = "outliner_top_revolts_entry_bg"
+		position = {x=0 y=0}
+		size = {x=200 y=18}
+		moveable=0
+		fullScreen = no
+		
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y=0 }
+			quadTextureSprite = "GFX_outliner_standard"
+			buttonFont = "Arial12"
+		}
+	}
+	
+	windowType = 
+	{
+		name = "outliner_top_revolts_entry"
+		position = { x=0 y=0 }
+		size = { x=218 y=18 }
+		moveable = 0
+		fullScreen = no
+		
+		instantTextBoxType = {
+			name = "entry_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 195
+			maxHeight = 32
+			format = right
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "info_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 195
+			maxHeight = 32
+			format = left
+		}
+	}
+	
+	windowType =
+	{
+		name = "outliner_top_deployment_entry_bg"
+		backGround = ""
+		position = {x=0 y=0}
+		size = {x=200 y=18}
+		moveable=0
+		fullScreen = no
+		
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y=0 }
+			quadTextureSprite = "GFX_outliner_standard"
+			buttonFont = "Arial12"
+		}
+	}
+	
+	windowType = 
+	{
+		name = "outliner_top_deployment_entry"
+		position = { x=0 y=0 }
+		size = { x=218 y=18 }
+		moveable = 0
+		fullScreen = no
+		
+		instantTextBoxType = {
+			name = "entry_text"
+			position = { x = 50 y = 0 }
+			font = "Arial12"
+			maxWidth = 125
+			maxHeight = 32
+			format = right
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "info_icon"
+			position = { x = 180 y = 0 }
+			font = "Arial12"
+			maxWidth = 35
+			maxHeight = 32
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "info_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 185
+			maxHeight = 32
+			format = left
+		}
+	}
+	
+	windowType =
+	{
+		name = "outliner_top_theatre_entry_bg"
+		position = {x=0 y=0}
+		size = {x=200 y=18}
+		moveable=0
+		fullScreen = no
+		
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y=0 }
+			quadTextureSprite = "GFX_outliner_standard"
+			buttonFont = "Arial12"
+		}
+	}
+	
+	windowType = 
+	{
+		name = "outliner_top_theatre_entry"
+		position = { x=0 y=0 }
+		size = { x=218 y=18 }
+		moveable = 0
+		fullScreen = no
+		
+		instantTextBoxType = {
+			name = "entry_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 175
+			maxHeight = 32
+			format = right
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "info_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 175
+			maxHeight = 32
+			format = left
+		}
+	}
+	
+	windowType =
+	{
+		name = "outliner_top_construction_entry_bg"
+		position = {x=0 y=0}
+		size = {x=200 y=18}
+		moveable=0
+		fullScreen = no
+		
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y=0 }
+			quadTextureSprite = "GFX_outliner_standard"
+			buttonFont = "Arial12"
+		}
+	}
+	
+	windowType = 
+	{
+		name = "outliner_top_construction_entry"
+		position = { x=0 y=0 }
+		size = { x=218 y=18 }
+		moveable = 0
+		fullScreen = no
+		
+		instantTextBoxType = {
+			name = "entry_text"
+			position = { x = 2230 y = 0 }
+			font = "Arial12"
+			maxWidth = 195
+			maxHeight = 32
+			format = right
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "info_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 195
+			maxHeight = 32
+			format = left
+		}
+	}
+
+	windowType = 
+	{
+		name = "outliner_allied_objective_entry"
+		position = { x=0 y=0 }	
+		size = { x=218 y=18 }
+		moveable = 0
+		fullScreen = no	
+	
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"	
+			buttonFont = "Arial12"
+		}
+		instantTextBoxType = {
+			name = "entry_text"
+			position = { x = 30 y = 0 }
+			font = "Arial12"
+			maxWidth = 195
+			maxHeight = 32
+			format = right
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "entry_text_hq"
+			position = { x = 30 y = 0 }
+			font = "Arial12_bold"
+			maxWidth = 195
+			maxHeight = 32
+			format = right
+			fixedsize = yes
+		}
+	
+	}
+	positionType = {
+		name = "outliner_browser_offset"
+		position = { x = 10 y = 0 }
+	}
+
+	
+	
+	
+	scrollbarType = {
+		name = "outliner_slider"	
+		slider = "outliner_slider_button"
+		track= "outliner_track_button"
+		leftbutton = "outliner_up_button"
+		rightbutton = "outliner_down_button"
+		size = {x =11 y =12 }
+		position = {x= 0 y =0}
+		priority = 100			
+		borderSize = {x = 11 y = 12}	
+		maxValue =1
+		minValue =0
+		stepSize =0.01
+		startValue = 0
+		horizontal = no
+
+
+		guiButtonType = {
+			name = "outliner_slider_button"	
+			quadTextureSprite = "GFX_outliner_slider_slider"
+			position = { x=0 y =0}
+		}
+
+		guiButtonType = {
+			name = "outliner_track_button"
+			quadTextureSprite = "GFX_outliner_slider_background"
+			position = { x=11 y = 12}	
+		}	
+
+		guiButtonType = {
+			parent = "outliner_slider_button"
+			name = "outliner_up_button"
+			quadTextureSprite = "GFX_outliner_slider_up_down"
+			position = { x=0 y =0}	
+		}
+		
+		guiButtonType = {
+			parent = "outliner_slider_button"
+			name = "outliner_down_button"
+			quadTextureSprite = "GFX_outliner_slider_up_down"
+			position = { x=0 y =120}	
+		}
+	}
+}

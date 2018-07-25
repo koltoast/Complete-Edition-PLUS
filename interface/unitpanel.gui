@@ -1,0 +1,841 @@
+guiTypes = {
+##########################
+#### LEADER SELECTION ####
+##########################
+	windowType = {
+		name = "leader_selection_panel"
+		backGround="select_leader_bg"
+		position = { x=400 y=132 }	
+		size = { x=400 y=100 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		
+		guiButtonType = {
+			name ="select_leader_bg"
+			quadTextureSprite = "GFX_select_leader_bg"
+		}
+		iconType = {
+			name ="selected_leader_plate"
+			spriteType = "GFX_selected_leader_plate"
+			position = { x=-5 y=12 }
+		}
+		iconType =	{
+			name ="selected_photo"
+			spriteType = "GFX_empty_position"
+			position = { x=20 y=21 }
+			scale = 0.8
+		}
+		iconType =	{
+			name ="selected_leader_main_pic_overlay"
+			spriteType = "GFX_leader_main_pic_overlay"
+			position = { x=19 y=20 }
+		}
+		instantTextBoxType = {
+			name = "selected_leader_name"
+			position = { x=49 y=18 }
+			textureFile = ""
+			font = "Jockey_14_cyan"
+			format = left
+			borderSize = { x=4 y=4 }
+			text = ""	
+			maxWidth = 147
+			maxHeight = 10	
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "selected_leader_skill"
+			position = { x=186 y=18 }
+			textureFile = ""
+			font = "Jockey_14"
+			borderSize = { x=4 y=4 }
+			text = ""	
+			maxWidth = 50
+			maxHeight = 10	
+			format = centre
+			fixedsize = yes
+		}
+		iconType = {
+			name ="selected_leader_rank"
+			spriteType = "GFX_unit_stars"
+			position = { x=255 y=22 }
+		}
+		OverlappingElementsBoxType = {
+			name = "selected_leader_traits"
+			position = { x=300 y=13}
+			size = { x=340 y=32 }
+			format = left
+			spacing = 1.0
+		}
+		guiButtonType = {
+			name = "promote"
+			position = { x=480 y=20}
+			quadTextureSprite ="GFX_leader_promote"	
+		}
+		guiButtonType = {
+			name = "demote"
+			position = { x=480 y=39}
+			quadTextureSprite ="GFX_leader_demote"	
+		}
+		iconType = {
+			name ="icon_land_leader"
+			spriteType = "GFX_icon_land_commander"
+			position = { x=495 y=15 }
+		}
+		iconType = {
+			name ="icon_naval_leader"
+			spriteType = "GFX_icon_naval_commander"
+			position = { x=495 y=15 }
+		}
+		iconType = {
+			name ="icon_air_leader"
+			spriteType = "GFX_icon_air_commander"
+			position = { x=495 y=15 }
+		}
+		guiButtonType = {
+			name = "sort_name"
+			position = { x=11 y=70}
+			quadTextureSprite ="GFX_sort_btn_name"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "NAME"
+			buttonFont = "Arial12_bold_black"
+		}
+		guiButtonType = {
+			name = "sort_skill"
+			position = { x=197 y=71}
+			quadTextureSprite ="GFX_sort_btn_skill"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "SKILL"
+			buttonFont = "Arial12_bold_black"
+		}
+		guiButtonType = {
+			name = "sort_rank"
+			position = { x=248 y=71}
+			quadTextureSprite ="GFX_sort_btn_rank"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "RANK"
+			buttonFont = "Arial12_bold_black"
+		}
+		guiButtonType = {
+			name = "sort_traits"
+			position = { x=312 y=71}
+			quadTextureSprite ="GFX_sort_btn_traits"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "TRAITS"
+			buttonFont = "Arial12_bold_black"
+		}
+		guiButtonType = {
+			name = "back_button"
+			position = { x=338 y=473}
+			quadTextureSprite ="GFX_leader_btn_cancel"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			buttonFont = "Jockey_16_glow_red"
+		}
+
+		instantTextBoxType = {
+			name = "back_label"
+			position = { x=387 y=484 }
+			textureFile = ""
+			font = "Jockey_16_glow_red"
+			borderSize = {x = 4 y = 0}
+			text = "CANCEL"
+			maxWidth = 300
+			maxHeight = 32
+		}
+
+		guiButtonType = {
+			name = "noleader_button"
+			position = { x=54 y=473}
+			quadTextureSprite ="GFX_no_leader_btn"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			buttonFont = "Jockey_16_glow_blue"
+		}
+
+		instantTextBoxType = {
+			name = "bnoleader_label"
+			position = { x=92 y=484 }
+			textureFile = ""
+			font = "Jockey_16_glow_blue"
+			borderSize = {x = 4 y = 0}
+			text = "NO_LEADER"
+			maxWidth = 300
+			maxHeight = 32
+		}
+		checkboxType = {
+			name = "auto_assign"
+			position = { x=222 y=477 }
+			quadTextureSprite ="GFX_frontend_checkbutton"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+		}
+		instantTextBoxType = {
+			name = "assign_label"
+			position = { x=247 y=480 }
+			textureFile = ""
+			font = "Jockey_14_dark"
+			borderSize = {x = 4 y = 0}
+			text = "UW_AASSIGN"	
+			maxWidth = 300
+			maxHeight = 32
+		}
+		listboxType = {
+			name ="leaderlist"
+			position = { x=8 y=104 }
+			backGround=""
+			size = { x=505 y=364}
+			spacing = 2
+			scrollbartype = "scrollbar_vertical_intel"
+			borderSize = {x = 0 y = 0}
+		}
+	}
+	#### Land leaders ####
+	windowType = {
+		name = "leader_entry_land"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=360 y=52 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		guiButtonType = {
+			name = "leader_button"
+			position = { x=7 y=-2}
+			quadTextureSprite ="GFX_leader_list_plate"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			buttonFont = "Arial12"
+		}
+		iconType =	{
+			name ="photo"
+			spriteType = "GFX_empty_position"
+			position = { x=16 y=7 }
+			scale = 0.8
+		}
+		iconType =	{
+			name ="leader_paper_clip"
+			spriteType = "GFX_leader_paper_clip"
+			position = { x=11 y=3 }
+		}
+		instantTextBoxType = {
+			name = "leader_name"
+			position = { x=43 y=14 }
+			textureFile = ""
+			font = "Danger_14"
+			borderSize = { x=4 y=4 }
+			text = ""	
+			maxWidth = 140
+			maxHeight = 10	
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "leader_skill"
+			position = { x=180 y=14 }
+			textureFile = ""
+			font = "Danger_14"
+			borderSize = { x=4 y=4 }
+			text = ""	
+			maxWidth = 50
+			maxHeight = 10	
+			format = centre
+			fixedsize = yes
+		}
+		iconType = {
+			name ="leader_rank"
+			spriteType = "GFX_unit_stars"
+			position = { x=250 y=19 }
+		}
+		OverlappingElementsBoxType = {
+			name = "leader_traits"
+			position = { x=301 y=-1 }
+			size = { x=340 y=32 }
+			format = left
+			spacing = 1.0
+		}
+		guiButtonType = {
+			name = "promote"
+			position = { x=470 y=7 }
+			quadTextureSprite ="GFX_leader_list_promote"	
+		}
+		guiButtonType = {
+			name = "demote"
+			position = { x=470 y=26 }
+			quadTextureSprite ="GFX_leader_list_demote"	
+		}
+	}
+	# Naval leaders #
+	windowType = {
+		name = "leader_entry_naval"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=360 y=52 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		guiButtonType = {
+			name = "leader_button"
+			position = { x=7 y=-2}
+			quadTextureSprite ="GFX_leader_list_plate"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			buttonFont = "Arial12"
+		}
+		iconType =	{
+			name ="photo"
+			spriteType = "GFX_empty_position"
+			position = { x=16 y=7 }
+			scale = 0.8
+		}
+		iconType =	{
+			name ="leader_paper_clip"
+			spriteType = "GFX_leader_paper_clip"
+			position = { x=11 y=3 }
+		}
+		instantTextBoxType = {
+			name = "leader_name"
+			position = { x=43 y=14 }
+			textureFile = ""
+			font = "Danger_14"
+			borderSize = { x=4 y=4 }
+			text = ""	
+			maxWidth = 140
+			maxHeight = 10	
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "leader_skill"
+			position = { x=180 y=14 }
+			textureFile = ""
+			font = "Danger_14"
+			borderSize = { x=4 y=4 }
+			text = ""	
+			maxWidth = 50
+			maxHeight = 10	
+			format = centre
+			fixedsize = yes
+		}
+		iconType = {
+			name ="leader_rank"
+			spriteType = "GFX_unit_stars"
+			position = { x=250 y=19 }
+		}
+		OverlappingElementsBoxType = {
+			name = "leader_traits"
+			position = { x=301 y=-1 }
+			size = { x=340 y=32 }
+			format = left
+			spacing = 1.0
+		}
+		guiButtonType = {
+			name = "promote"
+			position = { x=470 y=7 }
+			quadTextureSprite ="GFX_leader_list_promote"	
+		}
+		guiButtonType = {
+			name = "demote"
+			position = { x=470 y=26 }
+			quadTextureSprite ="GFX_leader_list_demote"	
+		}
+	}
+	# Air leaders #
+	windowType = {
+		name = "leader_entry_air"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=360 y=52 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		guiButtonType = {
+			name = "leader_button"
+			position = { x=7 y=-2}
+			quadTextureSprite ="GFX_leader_list_plate"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			buttonFont = "Arial12"
+		}
+		iconType =	{
+			name ="photo"
+			spriteType = "GFX_empty_position"
+			position = { x=16 y=7 }
+			scale = 0.8
+		}
+		iconType =	{
+			name ="leader_paper_clip"
+			spriteType = "GFX_leader_paper_clip"
+			position = { x=11 y=3 }
+		}
+		instantTextBoxType = {
+			name = "leader_name"
+			position = { x=43 y=14 }
+			textureFile = ""
+			font = "Danger_14"
+			borderSize = { x=4 y=4 }
+			text = ""	
+			maxWidth = 140
+			maxHeight = 10	
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "leader_skill"
+			position = { x=180 y=14 }
+			textureFile = ""
+			font = "Danger_14"
+			borderSize = { x=4 y=4 }
+			text = ""	
+			maxWidth = 50
+			maxHeight = 10	
+			format = centre
+			fixedsize = yes
+		}
+		iconType = {
+			name ="leader_rank"
+			spriteType = "GFX_unit_stars"
+			position = { x=250 y=19 }
+		}
+		OverlappingElementsBoxType = {
+			name = "leader_traits"
+			position = { x=301 y=-1 }
+			size = { x=340 y=32 }
+			format = left
+			spacing = 1.0
+		}
+		guiButtonType = {
+			name = "promote"
+			position = { x=470 y=7 }
+			quadTextureSprite ="GFX_leader_list_promote"	
+		}
+		guiButtonType = {
+			name = "demote"
+			position = { x=470 y=26 }
+			quadTextureSprite ="GFX_leader_list_demote"	
+		}
+	}
+##################################################
+# Trait entry
+##################################################	
+	windowType = {
+		name = "trait_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=20 y= 20 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		
+		iconType = {
+			name ="trait_icon"
+			spriteType = "GFX_unit_supplies_icon"
+			position = { x= 18 y = 16}
+		}
+	}
+##################################################
+# Reorganisation window
+##################################################
+	windowType = {
+		name = "reorg_window"
+		backGround=""
+		position = { x=418 y=120 }
+		size = { x=400 y=100 }
+		moveable = 0
+		fullScreen = no	
+		
+		iconType =
+		{
+			name ="reorg_bg"
+			spriteType = "GFX_reorg_bg"
+			position = { x= -99  y = -2 }
+		}
+
+		instantTextBoxType = {
+			name = "reorg_label"
+			position = { x = 0 y =14 }
+			format = centre
+			font = "Arial12_bold_black"
+			borderSize = {x = 4 y = 0}
+			text = "UNIT_PANEL"	
+			maxWidth = 512
+			maxHeight = 24
+		}
+
+		instantTextBoxType = {
+			name = "unitname_1"
+			position = { x = -60 y =43 }
+			format = right
+			font = "Arial12_bold"
+			borderSize = {x = 4 y = 0}
+			maxWidth = 240
+			maxHeight = 24	
+		}
+
+		instantTextBoxType = {
+			name = "unitname_2"
+			position = { x = 296 y =43 }
+			format = left
+			font = "Arial12_bold"
+			borderSize = {x = 4 y = 0}
+			maxWidth = 240
+			maxHeight = 24	
+		}
+
+		guiButtonType = {
+			name = "closebutton"
+			position = { x=-10 y=354}
+			quadTextureSprite ="GFX_button_128wide"	
+			buttonText = "CLOSE"
+			buttonFont = "Arial12_bold_black"
+			Orientation = "CENTER"
+			clicksound = click
+		}
+
+		listboxType = 
+		{
+			name ="left_list"
+			position = { x = -88 y = 75 }
+			size = { x=275  y =258 }
+			spacing = 2
+			scrollbartype = "scrollbar_vertical_standard"
+		}
+
+		listboxType = 
+		{
+			name ="right_list"
+			position = { x = 265 y = 75 }
+			size = { x=275  y =258 }
+			spacing = 2
+			scrollbartype = "scrollbar_vertical_standard"
+		}
+	}
+	
+	#####Reorg entry   LEFT
+
+	windowType = {
+		name = "reorg_entry"
+		size = { x=256 y= 42 }
+		moveable = 0
+		fullScreen = no		
+
+		iconType =
+		{
+			name ="band_reorg_regiment"
+			spriteType = "GFX_brigade_band"
+		}
+		
+		iconType = {
+			name ="counter_type"
+			spriteType = "GFX_temp_unit_icon"
+			position = { x= -3 y = 0 }
+		}
+		
+		iconType = {
+			name ="counter_size"
+			spriteType = "GFX_counter_size"
+			position = { x= -3 y = 0 }
+		}
+
+		instantTextBoxType = {
+			name = "subunit_name"
+			position = { x = 59 y =8 }
+			font = "Arial12_bold_black"
+			maxWidth = 134
+			maxHeight = 18	
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "subunit_type"
+			position = { x = 88 y =26 }
+			format = left
+			font = "Arial12_black"
+			maxWidth = 103
+			maxHeight = 18	
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "subunit_level"
+			position = { x = 59 y =26 }
+			format = centre
+			font = "Arial12_black"
+			maxWidth = 20
+			maxHeight = 18	
+		}
+
+		instantTextBoxType = {
+			name = "subunit_strength"
+			position = { x = 207 y =8 }
+			font = "Arial14_black"
+			maxWidth = 40
+			maxHeight = 18	
+		}
+		
+		iconType =
+		{
+			name ="eqp_bar"
+			spriteType = "eqp_progressbar_small"
+			position = { x= 257 y = 33 }
+			rotation = 1.57
+		}
+		
+		iconType =
+		{
+			name ="man_bar"
+			spriteType = "manpower_progressbar_small"
+			position = { x= 257 y = 33 }
+			rotation = 1.57
+		}
+		
+		iconType =
+		{
+			name ="org_bar"
+			position = { x= 265 y = 33 }
+			spriteType = "org_progressbar_small"
+			rotation = 1.57
+		}
+
+		guiButtonType = {
+			name = "transferbutton"
+			position = { x = 300 y = 0 }
+			quadTextureSprite ="GFX_reorg_right"
+		}
+	}
+	
+	
+	####### RIGHT ENTRY
+	#######
+
+	windowType = {
+		name = "reorg_entry_right"
+		size = { x=256 y= 42 }
+		moveable = 0
+		fullScreen = no
+		
+		iconType =
+		{
+			name ="band_reorg_regiment"
+			spriteType = "GFX_brigade_band"
+		}
+		
+		iconType = {
+			name ="counter_type"
+			spriteType = "GFX_temp_unit_icon"
+			position = { x= -3 y = 0 }
+		}
+		
+		iconType = {
+			name ="counter_size"
+			spriteType = "GFX_counter_size"
+			position = { x= -3 y = 0 }
+		}
+
+		instantTextBoxType = {
+			name = "subunit_name"
+			position = { x = 59 y =8 }
+			font = "Arial12_bold_black"
+			maxWidth = 134
+			maxHeight = 18	
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "subunit_type"
+			position = { x = 88 y =26 }
+			format = left
+			font = "Arial12_black"
+			maxWidth = 103
+			maxHeight = 18	
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "subunit_level"
+			position = { x = 59 y =26 }
+			format = centre
+			font = "Arial12_black"
+			maxWidth = 20
+			maxHeight = 18	
+		}
+
+		instantTextBoxType = {
+			name = "subunit_strength"
+			position = { x = 207 y =8 }
+			font = "Arial14_black"
+			maxWidth = 40
+			maxHeight = 18	
+		}
+		
+		iconType =
+		{
+			name ="eqp_bar"
+			spriteType = "eqp_progressbar_small"
+			position = { x= 257 y = 33 }
+			rotation = 1.57
+		}
+		
+		iconType =
+		{
+			name ="man_bar"
+			spriteType = "manpower_progressbar_small"
+			position = { x= 257 y = 33 }
+			rotation = 1.57
+		}
+		
+		iconType =
+		{
+			name ="org_bar"
+			position = { x= 265 y = 33 }
+			spriteType = "org_progressbar_small"
+			rotation = 1.57
+		}
+		
+		guiButtonType = {
+			name = "transferbutton"
+			position = { x = -27 y = 0 }
+			quadTextureSprite ="GFX_reorg_left"
+		}
+	}
+	
+##### ATTACHMENT SELECTION PANEL ##############
+
+	windowType = {
+		name = "attachment_selection_panel"
+		position = { x=500 y=150 }	
+		size = { x=400 y=100 }
+		moveable = 0
+		fullScreen = no	
+	
+		iconType =
+		{
+			name ="attach_bg"
+			spriteType = "GFX_attach_bg"
+			position = { x= 0 y = -14 }
+			
+		}
+
+
+		instantTextBoxType = {
+			name = "label"
+			position = { x = 20 y = -2 }
+			font = "Jockey_18_cyan"
+			text = "attach_label"	
+			maxWidth = 260
+			maxHeight = 20
+			format = centre
+			
+			fixedsize = yes
+		}
+		
+
+		guiButtonType = {
+			name = "back_button"
+			position = { x=65 y=310}
+			quadTextureSprite ="GFX_sidebar_view_deploy_deploy"	
+			buttonText = "CLOSE"
+			buttonFont = "Jockey_14_glow_blue"
+		}
+
+		listboxType = 
+		{
+			name ="list"
+			position = { x = 15 y = 30 }
+			size = { x=240  y =258}
+			
+			spacing = 2
+			scrollbartype = "scrollbar_vertical_standard"
+		}
+
+
+	}
+
+	######    Attachment  entry
+
+	windowType = {
+		name = "unit_assignment_entry"
+		position = { x=0 y=0 }	
+		size = { x=237 y= 41 }
+		moveable = 0
+		fullScreen = no
+
+		guiButtonType = {
+			name = "assign"
+			position = { x=-2 y=-2}
+			quadTextureSprite ="GFX_attach_banner"	
+			buttonFont = "Arial12"
+		}
+
+		iconType = {
+			name ="counter_type"
+			spriteType = "GFX_temp_unit_icon"
+			position = { x= -4 y = 0 }
+			
+		}
+		
+		iconType = {
+			name ="counter_size"
+			spriteType = "GFX_counter_size"
+			position = { x= -4 y = 0 }
+			
+		}	
+		
+		iconType = {
+			name ="unit_pride_star"
+			spriteType = "GFX_unit_stars"
+			position = {  x= 188 y = 24 }
+			
+		}
+
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 55 y = 1 }
+			font = "Arial12_bold_cyan"
+			borderSize = {x = 4 y = 4}
+			maxWidth = 130
+			maxHeight = 10	
+			
+			fixedsize = yes
+		}
+	
+		guiButtonType = {
+			name = "location"
+			position = { x = 55 y = 21 }
+			quadTextureSprite ="GFX_attach_transbutton"	
+			buttonFont = "Arial12"
+		}
+	}
+}

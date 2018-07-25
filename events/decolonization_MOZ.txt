@@ -110,9 +110,9 @@ country_event = {
 		release = MOZ
 		recognize = MOZ
 		relation = { who = MOZ value = 100 }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
 	}
 		
 	option = {											#chance to puppet
@@ -342,9 +342,9 @@ country_event = {
 		release = MOZ
 		recognize = MOZ
 		relation = { who = MOZ value = 100 }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
 	}
 		
 	option = {											#auto release puppet and declare war
@@ -504,9 +504,9 @@ country_event = {
 		release = MOZ
 		recognize = MOZ
 		dissent = -5								#People are happy because the war ended
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
 		clr_country_flag = colonial_war_MOZ
 	}
 	
@@ -656,9 +656,9 @@ country_event = {
 		THIS = { end_war = MOZ }
 		recognize = MOZ
 		dissent = -5								#People are happy because the war ended
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
 		clr_country_flag = colonial_war_MOZ
 	}
 	

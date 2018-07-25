@@ -2,6 +2,10 @@
 country_event = {
 
 	id = 700234
+
+	title = "EVTNAME700234"
+	desc = "EVTDESC700234"
+	picture = "xxxx"
 	
 	trigger = {
 	ai = yes
@@ -195,6 +199,10 @@ country_event = {
 country_event = {
 
 	id = 700236
+
+	title = "EVTNAME700236"
+	desc = "EVTDESC700236"
+	picture = "xxxx"
 	
 	trigger = {
 	  NOT = { has_global_flag = add_cores2 }
@@ -236,6 +244,10 @@ country_event = {
 country_event = {
 
 	id = 700237
+
+	title = "EVTNAME700237"
+	desc = "EVTDESC700237"
+	picture = "xxxx"
 	
 	trigger = {
 	  NOT = { has_global_flag = add_cores3 }

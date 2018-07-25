@@ -8,6 +8,10 @@ country_event = {
 	
 	id = 6000										#Colony is owned
 	
+	title = "EVTNAME6000"
+	desc = "EVTDESC6000"
+	picture = "1974_Mozambique_Lusaka_Accord"
+	
 	trigger = {
 		owns = 5773
 		controls = 5773
@@ -70,10 +74,6 @@ country_event = {
 
 	is_triggered_only = no
 	
-	title = "EVTNAME6000"
-	desc = "EVTDESC6000"
-	picture = "1974_Mozambique_Lusaka_Accord"
-	
 	option = {											#chance to release immediatly
 		name = "EVTOPTA6000"
 		trigger = {
@@ -116,9 +116,9 @@ country_event = {
 		release = ANG
 		recognize = ANG
 		relation = { who = ANG value = 100 }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
 	}
 		
 	option = {											#chance to puppet
@@ -263,6 +263,10 @@ country_event = {
 	
 	id = 6001										#Colony is a puppet
 	
+	title = "EVTNAME6001"
+	desc = "EVTDESC6001"
+	picture = "1974_Mozambique_Lusaka_Accord"
+	
 	trigger = {
 		NOT = { national_unity = 69 }
 		exists = ANG
@@ -323,10 +327,6 @@ country_event = {
 
 	is_triggered_only = no
 	
-	title = "EVTNAME6001"
-	desc = "EVTDESC6001"
-	picture = "1974_Mozambique_Lusaka_Accord"
-	
 	option = {											#chance to release immediatly
 		name = "EVTOPTA6001"
 		trigger = {
@@ -369,9 +369,9 @@ country_event = {
 		release = ANG
 		recognize = ANG
 		relation = { who = ANG value = 100 }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
 	}
 		
 	option = {											#auto release puppet and declare war
@@ -543,9 +543,9 @@ country_event = {
 		release = ANG
 		recognize = ANG
 		dissent = -5								#People are happy because the war ended
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
 		clr_country_flag = colonial_war_ANG
 	}
 	
@@ -710,9 +710,9 @@ country_event = {
 		THIS = { end_war = ANG }
 		recognize = ANG
 		dissent = -5								#People are happy because the war ended
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
-		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 5} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
+		random_owned = { limit = { region = europe } population_change = {age_from = 0 age_to = 85 percent = 0.05} }
 		clr_country_flag = colonial_war_ANG
 	}
 	

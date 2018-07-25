@@ -106,7 +106,7 @@ revolutionary_movements = {
 }
 
 resistance_movement = {
-	#global_ic = -0.05
+	global_ic = -0.05										#TODO
 }
 
 resistance_movement_laid_open = {
@@ -184,7 +184,7 @@ riots = {
 ##
 
 economic_boost = {
-	global_ic = 0.05
+	global_ic = 0.05										#TODO
 }
 
 volunteer_surge = {
@@ -241,7 +241,7 @@ IDC_communist_rebellion_modifier = {
 veteran_ISR_troops_delay = {
 	dissent_increase = 0.02
 	supply_consumption = 0.25
-	fuel_consumption = 0.25
+	fuel_consumption = 0.25										#TODO
 }
 
 koreanwar_start = {
@@ -1004,7 +1004,7 @@ graduate_officers = {
 military_training_readjustment = {
 	dissent_increase = 0.02
 	supply_consumption = 0.25
-	#fuel_consumption = 0.25
+	fuel_consumption = 0.25										#TODO
 }
 
 military_training_results = {
@@ -2248,11 +2248,11 @@ mod_UN_mercenary_convention_ratified = {
 			value = -0.02
 		}
 	}
-	 militia_brigade = {
-		 default_organisation = -5
-		 unit_money_cost = 0.5
-		 build_time = 30
-	 }
+	militia_brigade = {
+		default_organisation = -5
+		unit_money_cost = 0.5
+		build_time = 30
+	}
 }
 mod_UN_mercenary_convention_voting_delay = {
 	prestige = -0.05
@@ -3548,11 +3548,11 @@ mod_UN_mercenary_convention_ratified = {
 			value = -0.02
 		}
 	}
-	 militia_brigade = {
-		 default_organisation = -5
-		 unit_money_cost = 0.5
-		 build_time = 30
-	 }
+	militia_brigade = {
+		default_organisation = -5
+		unit_money_cost = 0.5
+		build_time = 30
+	}
 }
 mod_UN_mercenary_convention_voting_delay = {
 	prestige = -0.05
@@ -4288,8 +4288,8 @@ war = {
 
 peace = {
 	max_war_exhaustion = 100			#base max at peace.
-#	supply_consumption = -0.75
-#	fuel_consumption = -0.75
+	supply_consumption = -0.75										#TODO
+	fuel_consumption = -0.75										#TODO
 }
 
 war_exhaustion = {
@@ -4319,7 +4319,7 @@ dissent = {
 	ruling_party_support = -0.001
 }
 dissent_nonlinear = {
-	global_ic = -0.01
+	global_ic = -0.01										#TODO
 	global_revolt_risk = 0.1
 }
 national_unity = {
@@ -5016,7 +5016,7 @@ mod_Global_operation_paperclip_scientist_industrial_bonus_1 = {
 veteran_ISR_troops_delay = {
 	dissent_increase = 0.02
 	supply_consumption = 0.25
-	fuel_consumption = 0.25
+	fuel_consumption = 0.25										#TODO
 }
 
 mod_Global_operation_paperclip_large = {
@@ -5287,7 +5287,7 @@ graduate_officers = {
 military_training_readjustment = {
 	dissent_increase = 0.02
 	supply_consumption = 0.25
-	fuel_consumption = 0.25
+	fuel_consumption = 0.25										#TODO
 }
 
 military_training_results = {

@@ -252,7 +252,7 @@ country_event = {
 			create_revolt = 5
 		}
 		random_owned = {
-			limit = { region_Ethiopia_Addis_Ababa }
+			limit = { region = region_Ethiopia_Addis_Ababa }
 			add_province_modifier = { name = nationalist_revolt duration = 800 } 
 			create_revolt = 5
 		}
@@ -262,7 +262,7 @@ country_event = {
 			create_revolt = 5
 		}
 		random_owned = {
-			limit = { region_Ethiopia_Ethiopian_Southern_Nations }
+			limit = { region = region_Ethiopia_Ethiopian_Southern_Nations }
 			add_province_modifier = { name = nationalist_revolt duration = 800 } 
 			create_revolt = 5
 		}
@@ -273,6 +273,10 @@ country_event = {
 country_event = {
 	
 	id = 6171										#Colony is a puppet
+	
+	title = "EVTNAME6171"
+	desc = "EVTDESC6171"
+	picture = "1974_Mozambique_Lusaka_Accord"
 	
 	trigger = {
 		NOT = { national_unity = 79 }
@@ -337,10 +341,6 @@ country_event = {
 	}
 
 	is_triggered_only = no
-	
-	title = "EVTNAME6171"
-	desc = "EVTDESC6171"
-	picture = "1974_Mozambique_Lusaka_Accord"
 	
 	option = {											#chance to release immediatly
 		name = "EVTOPTA6171"
@@ -804,7 +804,7 @@ country_event = {
 				militia_brigade = current
 			}
 			random_owned = {
-				limit = { region_Ethiopia_Addis_Ababa }
+				limit = { region = region_Ethiopia_Addis_Ababa }
 				militia_brigade = current
 			}
 			random_owned = {

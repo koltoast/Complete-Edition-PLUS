@@ -56,6 +56,11 @@
 		}
 
 	mean_time_to_happen = { months = -1 }
+	
+	title = "EVTNAME700121"
+	desc = "EVTDESC700121"
+	picture = "destabilization"
+
 	option = {
 		set_global_flag = cap
 		ai_chance = { factor = 100 }
@@ -86,7 +91,7 @@
 
 	title = "EVTNAME700122"
 	desc = "EVTDESC700122"
-	picture = "destabilization"
+	picture = "destabilization"	#temp
 
 	option = {
 			name = "OK"
@@ -117,6 +122,11 @@
 		}
 
 	mean_time_to_happen = { months = -1 }
+	
+	title = "EVTNAME700123"
+	desc = "EVTDESC700123"
+	picture = "destabilization"	#temp
+
 	option = {
 		set_global_flag = cap2
 		ai_chance = { factor = 100 }

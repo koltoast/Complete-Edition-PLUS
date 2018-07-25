@@ -334,6 +334,7 @@ diplomatic_decisions = {
 				name = state_atheism
 				duration = -1
 			}
+			national_religion = atheism_religion
 		}
 	}
 	unban_religion = {
@@ -366,6 +367,7 @@ diplomatic_decisions = {
 		
 		effect = {
 			remove_country_modifier = state_atheism
+			national_religion = christianity
 		}
 	}
 	ban_contraceptives = { #Ban Contraceptives/Abortion
