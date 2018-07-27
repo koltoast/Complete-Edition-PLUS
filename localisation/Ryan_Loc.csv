@@ -1,7 +1,7 @@
 #CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x;;
-##################################################;;;;;;;;;;;;;;x,
-# RYAN'S NEW CODE ;;;;;;;;;;;;;;x,
-##################################################;;;;;;;;;;;;;;x,
+##################################################;;;;;;;;;;;;;;x
+# RYAN'S NEW CODE ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
 ORGANISATION_NAME_OAS;Organization of American States;;;;;;;;;;;;;x;;
 ORGANISATION_NAME_OAS_short;OAS;;;;;;;;;;;;;x;;
 ORGANISATION_NAME_ARAB_LEAGUE;League of Arab States;;;;;;;;;;;;;x;;
@@ -12,42 +12,22 @@ ORGANISATION_NAME_COMMONWEALTH;Commonwealth of Nations;;;;;;;;;;;;;x;;
 ORGANISATION_NAME_COMMONWEALTH_short;The Commonwealth;;;;;;;;;;;;;x;;
 ORGANISATION_NAME_UE;Benelux Union;;;;;;;;;;;;;x;;
 ORGANISATION_NAME_UE_short;UE;;;;;;;;;;;;;x;;
-dec_war_games_title;Begin War Games;;;;;;;;;;;;;x;;
-dec_war_games_desc;To better keep our military ready for any issues that may arise today, or in the future, we must begin a series of war games, using all resources available to us. This will allow us to remain ready for any threat.;;;;;;;;;;;;;x;;
-war_games_delay_20;Delays in the War Games!;;;;;;;;;;;;;x;;
-war_games_delay_17;Delays in the War Games!;;;;;;;;;;;;;x;;
-conscripts_industrial_setback;Setback on Industrial Output;;;;;;;;;;;;;x;;
-dec_join_NATO_2_title;Request to join NATO;;;;;;;;;;;;;x;;
-dec_join_NATO_2_desc;We should ask the Americans to allow us to join the North Atlantic Treaty Organization.;;;;;;;;;;;;;x;;
-NATO_EMBARGO;Nato has embargo'd us!;;;;;;;;;;;;;x;;
-prepare_ground_for2_title;Default;;;;;;;;;;;;;x;;
-prepare_ground_for2_desc;Default;;;;;;;;;;;;;x;;
-prepare_ground_for_an_invasion_title;Default;;;;;;;;;;;;;x;;
-prepare_ground_for_an_invasion_desc;Default;;;;;;;;;;;;;x;;
-NATO_memberD;Attempting to join NATO;;;;;;;;;;;;;x;;
-banned_contraceptives;Ban Contraceptives;;;;;;;;;;;;;x;;
-
-hardliner_type;Hardliner;;;;;;;;;;;;;x;;
-#one_child_law;One Child Policy;;;;;;;;;;;;;x;;
-#atheism_religion;State Atheism;;;;;;;;;;;;;x;;
-#atheism_religion_desc;This state is one where no religion is taken into consideration in government.;;;;;;;;;;;;;x;;
-
-#######################################;;;;;;;;;;;;;;x,
-# COUNTRIES ;;;;;;;;;;;;;;x,
-#######################################;;;;;;;;;;;;;;x,
-CHC;People's Republic of China;;;;;;;;;;;;;x
-DDR;German Democratic Republic;RDA;DDR;;RDA;;;;;;;;;x
-DRC;Democratic Republic of the Congo;;;;;;;;;;;;;x
-FRG;Federal Republic of Germany;RFA;BRD;;RFA;;;;;;;;;x
-KOR;Republic of Korea;;;;;;;;;;;;;x
-PRK;Democratic People's Republic of Korea;;;;;;;;;;;;;x
-SDR;Sahrawi Arab Democratic Republic;;;;;;;;;;;;;x
-
-
-
-
-
-
-
-
-
+##################################################;;;;;;;;;;;;;;x
+# DECISION LOC ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+dec_war_games_title;Declare War Games;;;;;;;;;;;;;x;;
+dec_war_games_desc;DESCRIPTION WILL GO HERE;;;;;;;;;;;;;x;;
+increasing_air_base_title;Increase Airbase;;;;;;;;;;;;;x;;
+increasing_air_base_desc;DESCRIPTION WILL GO HERE;;;;;;;;;;;;;x;;
+new_air_base_title;Build an Airbase;;;;;;;;;;;;;x;;
+new_air_base_desc;DESCRIPTION WILL GO HERE;;;;;;;;;;;;;x;;
+##################################################;;;;;;;;;;;;;;x
+# RELIGION LOC;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+atheism_religion;State Atheism;;;;;;;;;;;;;x;;
+atheism_religion_desc;State Atheism;;;;;;;;;;;;;x;;
+##################################################;;;;;;;;;;;;;;x
+# ATTITUDE LOC;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+permanent_revolution;Permenant Revolution;;;;;;;;;;;;;x;;
+permanent_revolution_desc;Permanent Revolution Description will go here;;;;;;;;;;;;;x;;

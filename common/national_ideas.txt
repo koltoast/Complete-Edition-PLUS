@@ -111,7 +111,8 @@ national_religion = {
 	}
 		
 	atheism_religion = {
-		dissent_decrease = 0.05
+		dissent_increase = 0.005
+		global_revolt_risk = 0.05
 		max_war_exhaustion 0.005
 		territorial_pride = 0.005
 	}
@@ -220,6 +221,17 @@ national_identity = {
 
 
 national_attitude = {
+
+	permanent_revolution = {
+	
+		cost = 0.5
+		allow = {
+			ideology = maoist_idolg
+		}
+		neutrality_change = -0.10
+		threat_impact = 0.05
+		
+		}
 
 	imperialism = {
     	cost = 0.5
