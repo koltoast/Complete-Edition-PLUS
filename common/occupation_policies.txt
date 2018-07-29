@@ -4,8 +4,8 @@ military_government = {
 	}
 	local_partisan_support = 7
 	local_manpower_modifier = -0.70
-	local_leadership_modifier = -0.80
-	local_ic = -0.80
+	#local_leadership_modifier = -0.80										#obsolete?
+	#local_ic = -0.80										#obsolete?
 	local_resources = -0.5
 }
 
@@ -20,8 +20,8 @@ full_occupation = {
 	}
 	local_partisan_support = 11
 	local_manpower_modifier = -0.85
-	local_leadership_modifier = -0.90
-	local_ic = -0.60
+	#local_leadership_modifier = -0.90										#obsolete?
+	#local_ic = -0.60										#obsolete?
 	local_resources = -0.35
 }
 
@@ -32,8 +32,8 @@ total_exploitation = {
 	}
 	local_partisan_support = 19
 	local_manpower_modifier = -0.95
-	local_leadership_modifier = -0.99
-	local_ic = -0.40
+	#local_leadership_modifier = -0.99										#obsolete?
+	#local_ic = -0.40										#obsolete?
 	local_resources = -0.25
 }
 

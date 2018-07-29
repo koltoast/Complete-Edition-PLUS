@@ -2,16 +2,22 @@ diplomatic_decisions = {
 
 	#Seek admission to the United Nations
 	dec_join_UE = {
+	
 		category = international
 		picture = "1945_UN_charter"
+		
 		potential = {
+		
 		    ai = yes
+			
 			not = { neutrality = 25 }
+			
 			##NOT = { has_country_modifier = waiting_WP }   ## esto pone un tope cronológico  para nuevas incorporaciones de paises a las organizaciones
+			
 			alignment = {
 			   faction = allies
 			   value = 90
-		     }
+		    }
 			 
 			NOT = { is_org_member = XUE }
 			NOT = { is_org_member = XWP }
@@ -65,9 +71,7 @@ diplomatic_decisions = {
 			modifier = {
 				factor = 0
 				any_core  = {
-					limit = {
-						not = { tag = TUK }
-					}
+					not = { tag = TUK }
 					NOT = { continent = europe }
 				}
 			}
@@ -97,19 +101,26 @@ diplomatic_decisions = {
 	
 	#Seek admission to the United Nations
 	dec_join_UE_2 = {
+	
 		category = international
 		picture = "1945_UN_charter"
+		
 		potential = {
+		
 		    ai = no
-			is_major = yes
-			NOT = { is_org_member = XNA }
-			NOT = { is_org_member = XWP }
-            NOT = { is_org_member = XUE }			
+			
 			not = { neutrality = 25 }
+			
+			is_major = yes
+			
 			alignment = {
 			   faction = allies
 			   value = 90
-		     }			
+		    }
+			
+			NOT = { is_org_member = XNA }
+			NOT = { is_org_member = XWP }
+            NOT = { is_org_member = XUE }			
 			NOT = { has_country_flag = UE_membership_process }
 			NOT = { tag = SVI }
 		}
@@ -155,9 +166,7 @@ diplomatic_decisions = {
 			modifier = {
 				factor = 0
 				any_core  = {
-					limit = {
-						not = { tag = TUK }
-					}				                 
+					not = { tag = TUK }			                 
 					NOT = { continent = europe }
 				}
 			}			
@@ -169,7 +178,7 @@ diplomatic_decisions = {
 		}		
 		
 		effect = {
-			set_country_flag = WP_membership_process
+			set_country_flag = UE_membership_process
 			country_event = 700238
 			
 			hidden_effects = {
@@ -182,6 +191,5 @@ diplomatic_decisions = {
 			}
 		}
 	}
-	
- }
+}
 	

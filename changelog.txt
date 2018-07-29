@@ -1,11 +1,110 @@
-v1 by koltoast:
+v1 by koltoast:		------------------------------------------------------------------------------------------------------------------
 added ROM, BUL, HUN, POL, CZE, DDR, MON to comintern
 renamed some romanian units for more accuracy, but only for 1946
 added missing localisation for INTERFACE_DIPLO_FACTIONS_DISABLED
 
-v1.1 by Roshindow
+v1.1 by Roshindow	------------------------------------------------------------------------------------------------------------------
+ERROR FIXES
+common/graphicalculturetype							fixed Us graphical culture type
+common/national_ideas								fixed religion formatting
+common/occupation_policies							switched to correct variable names
+events/Allianzas2									added title, desc, picture to events
+events/capital										"
+events/Malvinas										"
+events/add_cores									"
+events/anti_Alian									"
+events/antikrisis									"
+events/controles									"
+events/krisis2										"
+events/GeneralAgreementOnTariffs&Trade_events		temporary commented 'XUN ='..., not the proper syntax
+events/NATO_war										fixed XAN to XNA and added '= where' when missing
+events/NuevosEstadosIA5								added desc ID
+events/NuevosEstadosIA6								"
+events/NuevosEstadosIA7								"
+events/decolonization_ANG							fixed percentage use
+events/decolonization_KEN							"
+events/decolonization_MAD							"
+events/decolonization_MAL							"
+events/decolonization_MOZ							"
+events/decolonization_ETH							added 'region =' where missing
+events/germanies									fixed event war declaration syntax, temporary solution using limited_war
+gfx/editor/null_slot_small							added due to reference
+interface/combat									changed some sounds from close_window to click
+interface/outliner									"
+interface/unitpanel									"
+interface/lobby										changed sound from start_game to click
+localisation/2IranIraqWar_loc						added slash before dollar sign
+common/minister_types								moved ' =' to the right place
+---changed multiple duplicated IDs
+common/countries/Wales								changed 2181218 to 2181118
+history/leaders/EGD									changed 2401240 to 2401140
+history/leaders/GPF									changed 4383438 to 4383138
+													changed 4384438 to 4384138
+history/leaders/NEA									changed 3384338 to 3383138
+													changed 3384338 to 3384138
+history/leaders/PAC									changed 2383238 to 2383138
+													changed 2384238 to 2384138
+history/leaders/TEX									changed 5383538 to 5383138
+													changed 5384538 to 5384138
+history/leaders/WLS									changed 3401340 to 3401140
+history/provinces/Laos/12081						fixed building syntax
+history/provinces/Laos/12153						"
+history/provinces/Vietnam/12415						"
+history/provinces/Libya/[province ID]				fixed 'inENG' to 'infra' in all Libya provinces
 
+OTHER CHANGES
+decisions/religious_decisions						added atheism_religion to ban religion decision
+													added christianity to unban religion, need more detailed solution
+history/countries/SOV - Soviet Union				changed religion to state atheism
 
-v1.2 by Ryan404000
+v1.2 by Ryan404000	------------------------------------------------------------------------------------------------------------------
 Added LOC for a bit of stuff
 Changed effects of state atheism
+
+v1.3 by Roshindow	------------------------------------------------------------------------------------------------------------------
+ERROR FIXES
+decisions/GermanReunification_decisions								second dec_DDR_form_germany -> dec_DDR_demand_west_german_integration
+events/IndochinaWar_events											populariy -> popularity
+decisions/UEMembership_Decisions									removed limit inside any_core, unnecessary
+decisions/DCapital													changed some has_country_modifier to has_country_flag
+																	RmoneyONU -> GmoneyONU
+																	RmoneyONU2 -> GmoneyONU2
+decisions/Edificios													changed some has_country_modifier to has_country_flag
+decisions/DFuel														Gpfuel -> Gwfuel
+common/event_modifiers												added LUX_memberD
+																	added UE_vetoed_delay, possibly temporary to be changed to flag
+																	added a missing bracket for pmod_tibetan_local_customs
+events/ONU1															changed encoding
+events/WP_war														changed encoding
+events/NATO_war														changed encoding
+																	changed chance structure
+																	changed chance structure
+																	WP_country_modifier -> add_country_modifier
+events/antikrisis													ramdom_owned -> random_owned
+events/krisis2														ramdom_owned -> random_owned
+events/anti_Alian													changed chance structure
+
+TEMPORARY FIXES
+common/static_modifiers												commented global_ic
+common/event_modifiers												commented global_ic
+																	commented global_leadership_modifier
+common/occupation_policies											commented local_leadership_modifier
+																	commented local_ic
+common/triggered_modifiers											commented global_leadership_modifier
+events/NuevosEstadosIA1												commneted do_elections, TODO
+events/NuevosEstadosIA2												commneted do_elections, TODO
+events/NuevosEstadosIA3												commneted do_elections, TODO
+events/NuevosEstadosIA4												commneted do_elections, TODO
+events/NuevosEstadosIA5												commneted do_elections, TODO
+events/NuevosEstadosIA6												commneted do_elections, TODO
+events/NuevosEstadosIA7												commneted do_elections, TODO
+																	commented units stat changes in modifiers, possibly support not implemented
+events/LawOfTreatiesConvention_events								commented hidden_effects, seems to be not working in events
+events/GeneralAgreementOnTariffs&Trade_events						commented hidden_effects, seems to be not working in events
+events/EnvironmentalModificationConvention_events					commented hidden_effects, seems to be not working in events
+events/MonarchyGovernment_events									commented hidden_effects, seems to be not working in events
+events/IncendiaryWeaponsConvention_events							commented hidden_effects, seems to be not working in events
+
+OTHER CHANGES
+localisation/SuspendedElections_loc									changed some variable names
+decisions/SuspendedElections_decisions								changed some variable names

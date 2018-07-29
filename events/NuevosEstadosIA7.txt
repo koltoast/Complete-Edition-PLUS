@@ -174,7 +174,7 @@ country_event = {
 				popularity = -20
 			}
 			government = totalitarian_gov			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 
 			random = {
@@ -264,7 +264,7 @@ country_event = {
 				popularity = -20
 			}
 			government = totalitarian_gov		
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 
 			random = {
@@ -353,7 +353,7 @@ country_event = {
 				popularity = -20
 			}
 			government = totalitarian_gov			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 
 			random = {
@@ -444,7 +444,7 @@ country_event = {
 				popularity = -20
 			}
 			government = republic_gov			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 
 			random = {
@@ -533,7 +533,7 @@ country_event = {
 				popularity = -20
 			}
 			government = authoritarian_gov			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 
 			random = {
@@ -624,7 +624,7 @@ country_event = {
 				popularity = -20
 			}
 			government = totalitarian_gov			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 
 			random = {
@@ -714,7 +714,7 @@ country_event = {
 				popularity = -20
 			}
 			government = republic_gov			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 			
 			random = {
@@ -806,7 +806,7 @@ country_event = {
 				popularity = -20
 			}
 			government = republic_gov		
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 
 			random = {
@@ -897,7 +897,7 @@ country_event = {
 				popularity = 40
 			}
 			government = republic_gov			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 
 			random = {
@@ -990,7 +990,7 @@ country_event = {
 				popularity = -20
 			}
 			government = theocracy_gov			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 
 			random = {
@@ -1083,7 +1083,7 @@ country_event = {
 				popularity = -20
 			}
 			government = absolute_monarchy_gov			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 
 			random = {
@@ -1176,7 +1176,7 @@ country_event = {
 				popularity = -20
 			}
 			government = constitutional_monarchy_gov			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 
 			random = {
@@ -1269,7 +1269,7 @@ country_event = {
 				popularity = -20
 			}
 			government = constitutional_republic_gov			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 
 			random = {

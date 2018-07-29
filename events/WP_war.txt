@@ -1,4 +1,4 @@
-﻿#################################################################
+#################################################################
 ##################  COnstitución de la ONU  #####################
 #################################################################
 
@@ -14,12 +14,11 @@ country_event = {
 	mean_time_to_happen = { months = 6 }
 
 	trigger = {
-	   not = { has_global_flag = CSJSE }
-	   year = 1946
-	   exists = ENG
-	   exists = FRA
-	   exists = USA
-		
+		not = { has_global_flag = CSJSE }
+		year = 1946
+		exists = ENG
+		exists = FRA
+		exists = USA
 	}
 
 	option = {
@@ -35,59 +34,53 @@ country_event = {
 ########################################################################
 
 country_event = {               ###intervencion del PActo de Varsovia
+	
 	id = 700165
-
-	trigger = {
-		not = { has_global_flag = INTCSJSE }
-		not = { has_country_flag = INTMI }		
-		NOT = { is_org_member = XWP }		
-		not = { has_global_flag = WP_war }
-	or= { 
-        not = { has_country_modifier = WP_armsembargo }	
-		not = { has_country_modifier = WP_Nuclear_Embargo }		
-		}		
-		or = { not = { alignment = {
-			   faction = comintern
-			   value = 30 }
-		        }
-		       and = { war = yes		
-                       not = { alignment = {
-			                   faction = comintern
-			                   value = 30 }
-		                     }
-				     }
-		       and = { revolt_percentage = 0.5		
-                       not = { alignment = {
-			                   faction = comintern
-			                   value = 30 }
-		                     }
-                }				 
-			}
-	   
-	   }
-	   
-	mean_time_to_happen = { months = 12 }
 
 	title = "EVTNAME700165"
 	desc = "EVTDESC700165"
 	picture = "ONU"
 
+	mean_time_to_happen = { months = 12 }
+	
+	trigger = {
+		not = { has_global_flag = INTCSJSE }
+		not = { has_country_flag = INTMI }		
+		NOT = { is_org_member = XWP }		
+		not = { has_global_flag = WP_war }
+		or = { 
+			not = { has_country_modifier = WP_armsembargo }	
+			not = { has_country_modifier = WP_Nuclear_Embargo }		
+		}		
+		or = {
+			not = { alignment = { faction = comintern value = 30 } }
+			and = {
+				war = yes		
+				not = { alignment = { faction = comintern value = 30 } }
+			}
+			and = {
+				revolt_percentage = 0.5		
+				not = { alignment = { faction = comintern value = 30 } }
+			}				 
+		}
+	}
+
 	option = {
-			name = "EVTOPTA700165"
+		name = "EVTOPTA700165"
 	    ai_chance = { factor = 50 }
-         any_country = { end_war = THIS }
+		any_country = { end_war = THIS }
 		this = {
-				add_country_modifier = {
+			add_country_modifier = {
 				name = WP_armsembargo
 				duration = 180
-					}
-				} 
+			}
+		} 
 		this = {
-				WP_country_modifier = {
+			add_country_modifier = {
 				name = WP_Nuclear_Embargo
 				duration = 180
-					}
-				}				
+			}
+		}				
 		any_org_member = {
 			orgtag = XWP
 			trade_embargo = yes
@@ -95,209 +88,143 @@ country_event = {               ###intervencion del PActo de Varsovia
         set_country_flag = armsembwp		 
 
 	}
+	
 	option = {
 			name = "EVTOPTB700165"
-		    ai_chance = { factor = 50 
-			modifier = {
-				factor = 0.2							#10% chance
-				this = { is_org_member = XNA }
-
-			 }	
-			modifier = {
-				factor = 0.1
-				this = { is_major = yes }
-			 }			 
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 3
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 7
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 11
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 15
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 19
-			}
-			modifier = {
-				factor = 0.5
-				num_of_centrifuges_greater = 39
-			}			
-          }		
+		    ai_chance = {
+				factor = 50 
+				modifier = {
+					factor = 0.2							#10% chance
+					this = { is_org_member = XNA }
+				}	
+				modifier = {
+					factor = 0.1
+					this = { is_major = yes }
+				}			 
+				modifier = {
+					factor = 0.75
+					num_of_centrifuges_greater = 3
+				}
+				modifier = {
+					factor = 0.75
+					num_of_centrifuges_greater = 7
+				}
+				modifier = {
+					factor = 0.75
+					num_of_centrifuges_greater = 11
+				}
+				modifier = {
+					factor = 0.75
+					num_of_centrifuges_greater = 15
+				}
+				modifier = {
+					factor = 0.75
+					num_of_centrifuges_greater = 19
+				}
+				modifier = {
+					factor = 0.5
+					num_of_centrifuges_greater = 39
+				}			
+			}		
 		random = {
-				chance = 50
-			modifier = {
-				factor = 0.2							#10% chance
-				this = { is_org_member = XNA }
-
-			 }	
-			modifier = {
-				factor = 0.1
-				this = { is_major = yes }
-			 }			 
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 3
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 7
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 11
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 15
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 19
-			}
-			modifier = {
-				factor = 0.5
-				num_of_centrifuges_greater = 39
-			}				
-		    any_country = { limit = { is_org_member = XWP } limited_war = THIS set_country_flag = WP_intervention }		
+			chance = 50			
+		    any_country = {
+				limit = {
+					is_org_member = XWP
+				}
+				limited_war = THIS
+				set_country_flag = WP_intervention
+			}		
 			set_global_flag = WP_war
 			set_country_flag = declar_warwp
-			}
- 		random = {
-				chance = 50
-			modifier = {
-				factor = 0.2							#10% chance
-				this = { is_org_member = XAN }
-
-			 }	
-			modifier = {
-				factor = 0.2
-				this = { is_major = yes }
-			 }			 
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 3
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 7
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 11
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 15
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 19
-			}
-			modifier = {
-				factor = 0.5
-				num_of_centrifuges_greater = 39
-			}				
-		this = {
-				add_country_modifier = {
-				name = WP_armsembargo
-				duration = 180
-					}
-				} 
-		this = {
-				add_country_modifier = {
-				name = WP_Nuclear_Embargo
-				duration = 180
-					}
-				}				
-		any_org_member = {
-			orgtag = XWP
-			trade_embargo = yes
 		}
-		set_country_flag = armsembwp
-	 } 			
-			
-		  
-			this = { relation = { who = XWP value = -50 } }
-			this = { relation = { who = XNA value = 50 } }
-			
-        }
-    }
+ 		random = {
+			chance = 50			
+			this = {
+				add_country_modifier = {
+					name = WP_armsembargo
+					duration = 180
+				}
+			} 
+			this = {
+				add_country_modifier = {
+					name = WP_Nuclear_Embargo
+					duration = 180
+				}
+			}				
+			any_org_member = {
+				orgtag = XWP
+				trade_embargo = yes
+			}
+			set_country_flag = armsembwp
+		}
+		this = { relation = { who = XWP value = -50 } }
+		this = { relation = { who = XNA value = 50 } }
+	}
+}
 
 country_event = {               ### las hostilidades por amenaza o en defensa de un aliado han terminado
-	id = 700166
 
-	trigger = {
-        has_country_flag = WP_intervention 
-        war = no		
-	   }
-	   
-	mean_time_to_happen = { months = 1 }
+	id = 700166
 
 	title = "EVTNAME700166"
 	desc = "EVTDESC700166"
 	picture = "ONU"
+	
+	mean_time_to_happen = { months = 1 }
 
+	trigger = {
+        has_country_flag = WP_intervention 
+        war = no		
+	}
+	   
 	option = {
-			name = "EVTOPTA700166"
+		name = "EVTOPTA700166"
 	    ai_chance = { factor = 100 }
         ##any_country = { limit = { is_org_member = XWP has_country_flag = WP_intervention war = no } clr_country_flag = WP_intervention }
 		clr_country_flag = WP_intervention ##marcar si se desmarca el anterior
 		clr_global_flag = WP_war
-
 	}
 }
 
 
 country_event = {               ### se comprueba si algún miembreo de la alianza "ha sido atacado"
+	
 	id = 700167
-
-	trigger = {
-       war = yes 
-       not = { is_org_member = XWP }
-       not = { has_global_flag = WP_war }
-	   not = { alignment = {
-			faction = comintern
-			value = 30 }
-			 }
-	or= { 
-        not = { has_country_modifier = WP_armsembargo }	
-		not = { has_country_modifier = WP_Nuclear_Embargo }		
-		}			 
-	  
-          		
-	}
-	   
-	mean_time_to_happen = { months = 6 }
 
 	title = "EVTNAME700167"
 	desc = "EVTDESC700167"
 	picture = "ONU"
+	   
+	mean_time_to_happen = { months = 6 }
+
+	trigger = {
+		war = yes 
+		not = { is_org_member = XWP }
+		not = { has_global_flag = WP_war }
+		not = { alignment = { faction = comintern value = 30 } }
+		or= { 
+			not = { has_country_modifier = WP_armsembargo }	
+			not = { has_country_modifier = WP_Nuclear_Embargo }		
+		}
+	}
 	
 	option = {
-			name = "EVTOPTA700167"
+		name = "EVTOPTA700167"
 	    ai_chance = { factor = 50 }
-         any_country = { end_war = THIS }
+		any_country = { end_war = THIS }
 		this = {
-				add_country_modifier = {
+			add_country_modifier = {
 				name = WP_armsembargo
 				duration = 180
-					}
-				} 
+			}
+		} 
 		this = {
-				WP_country_modifier = {
+			add_country_modifier = {
 				name = WP_Nuclear_Embargo
 				duration = 180
-					}
-				}				
+			}
+		}				
 		any_org_member = {
 			orgtag = XWP
 			trade_embargo = yes
@@ -307,17 +234,17 @@ country_event = {               ### se comprueba si algún miembreo de la alianz
 	}
 
 	option = {
-			name = "EVTOPTB700167"
-	    ai_chance = { factor = 50
+		name = "EVTOPTB700167"
+	    ai_chance = {
+			factor = 50
 			modifier = {
 				factor = 0.2							#10% chance
 				this = { is_org_member = XNA }
-
-			 }	
+			}	
 			modifier = {
 				factor = 0.1
 				this = { is_major = yes }
-			 }			 
+			}			 
 			modifier = {
 				factor = 0.75
 				num_of_centrifuges_greater = 3
@@ -344,129 +271,65 @@ country_event = {               ### se comprueba si algún miembreo de la alianz
 			}
 
 		}
-			random = {
-				chance = 50
-			modifier = {
-				factor = 0.2							#10% chance
-				this = { is_org_member = XNA }
-
-			 }	
-			modifier = {
-				factor = 0.1
-				this = { is_major = yes }
-			 }			 
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 3
+		random = {
+			chance = 50			
+			random_country = {
+				limit = {
+					alignment = { faction = comintern value = 80 }
+					war_with = this
+				}
+				country_event  700168
 			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 7
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 11
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 15
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 19
-			}
-			modifier = {
-				factor = 0.5
-				num_of_centrifuges_greater = 39
-			}				
-		  random_country = { limit = { alignment = { faction = comintern value = 80 } war_with = this } country_event  700168 }
-		  set_country_flag = declar_war_allywp
+			set_country_flag = declar_war_allywp
 		}
  		random = {
-				chance = 50
-			modifier = {
-				factor = 0.2							#10% chance
-				this = { is_org_member = XAN }
-
-			 }	
-			modifier = {
-				factor = 0.2
-				this = { is_major = yes }
-			 }			 
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 3
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 7
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 11
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 15
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 19
-			}
-			modifier = {
-				factor = 0.5
-				num_of_centrifuges_greater = 39
+			chance = 50			
+			this = {
+				add_country_modifier = {
+					name = WP_armsembargo
+					duration = 180
+				}
+			} 
+			this = {
+				add_country_modifier = {
+					name = WP_Nuclear_Embargo
+					duration = 180
+				}
 			}				
-		this = {
-				add_country_modifier = {
-				name = WP_armsembargo
-				duration = 180
-					}
-				} 
-		this = {
-				add_country_modifier = {
-				name = WP_Nuclear_Embargo
-				duration = 180
-					}
-				}				
-		any_org_member = {
-			orgtag = XWP
-			trade_embargo = yes
-		}
-        set_country_flag = armsembwp
-	 }		
-			this = { relation = { who = XWP value = -50 } }
-			this = { relation = { who = XNA value = 50 } }		
-
-
-
+			any_org_member = {
+				orgtag = XWP
+				trade_embargo = yes
+			}
+			set_country_flag = armsembwp
+		}		
+		this = { relation = { who = XWP value = -50 } }
+		this = { relation = { who = XNA value = 50 } }
 	}
 }
 		
-	country_event = {
-		
-		id = 700168
+country_event = {
+	
+	id = 700168
 
-		is_triggered_only = yes
+	is_triggered_only = yes
 
-		title = "EVTNAME700168"
-		desc = "EVTDESC700168"
-		picture = "1945_UN_charter"
+	title = "EVTNAME700168"
+	desc = "EVTDESC700168"
+	picture = "1945_UN_charter"
 
-		option = {
+	option = {
 		name = "EVTOPTA700168"
-	    ai_chance = { factor = 100 }
-			random = {
-				chance = 50
+	
+		ai_chance = {
+			factor = 50
 			modifier = {
 				factor = 0.2							#10% chance
 				this = { is_org_member = XNA }
-
-			 }	
+			}	
 			modifier = {
 				factor = 0.1
 				this = { is_major = yes }
-			 }			 
+			}			 
 			modifier = {
 				factor = 0.75
 				num_of_centrifuges_greater = 3
@@ -490,21 +353,27 @@ country_event = {               ### se comprueba si algún miembreo de la alianz
 			modifier = {
 				factor = 0.5
 				num_of_centrifuges_greater = 39
-			}				
-		any_country = { limit = { is_org_member = XWP } limited_war = this set_country_flag = WP_intervention }  ####hay que vigilar si es "this" o "from"
-		set_country_flag = WP_intervention
-		set_global_flag = WP_war
-		any_country = { country_event 700175 }		
-			}		
-
-	}
-  }
-
-	country_event = {
+			}
+		}
 		
-		id = 700169
+		random = {
+			chance = 100				
+			any_country = { limit = { is_org_member = XWP } limited_war = this set_country_flag = WP_intervention }  ####hay que vigilar si es "this" o "from"
+			set_country_flag = WP_intervention
+			set_global_flag = WP_war
+			any_country = { country_event 700175 }		
+		}
+	}
+	
+	option = {
+	}
+}
 
-		is_triggered_only = yes
+country_event = {
+		
+	id = 700169
+
+	is_triggered_only = yes
 
 	title = "EVTNAME700169"
 	desc = "EVTDESC700169"
@@ -514,13 +383,13 @@ country_event = {               ### se comprueba si algún miembreo de la alianz
         name = "EVTOPTA700169"	
 	    ai_chance = { factor = 100 }
 	}
- }
+}
 
-	country_event = {
+country_event = {
 		
-		id = 700174
+	id = 700174
 
-		is_triggered_only = yes
+	is_triggered_only = yes
 
 	title = "EVTNAME700174"
 	desc = "EVTDESC700174"
@@ -530,13 +399,13 @@ country_event = {               ### se comprueba si algún miembreo de la alianz
         name = "EVTOPTA700174"	
 	    ai_chance = { factor = 100 }
 	}
- }
+}
 	
-	country_event = {
+country_event = {
 		
-		id = 700175
+	id = 700175
 
-		is_triggered_only = yes
+	is_triggered_only = yes
 
 	title = "EVTNAME700175"
 	desc = "EVTDESC700175"
@@ -546,17 +415,17 @@ country_event = {               ### se comprueba si algún miembreo de la alianz
         name = "EVTOPTA700175"	
 	    ai_chance = { factor = 100 }
 	}	
-  }
+}
 	
-country_event = {               ### 
+country_event = {               ###
+
 	id = 700181
 
 	trigger = {
         has_country_flag = WP_armsembargo
         not = { has_country_modifier = WP_armsembargo }
-        not = { has_country_modifier = WP_Nuclear_Embargo }		
-        		
-	   }
+        not = { has_country_modifier = WP_Nuclear_Embargo }
+	}
 	   
 	mean_time_to_happen = { months = 1 }
 
@@ -565,18 +434,18 @@ country_event = {               ###
 	picture = "ONU"
 
 	option = {
-			name = "EVTOPTA700181"
+		name = "EVTOPTA700181"
 	    ai_chance = { factor = 100 }
         clr_country_flag = WP_armsembargo
 		any_org_member = {
 			orgtag = XWP
 			arms_embargo_cancel = yes
-		}		
-
+		}
 	}
- }
+}
 
-country_event = {               ### 
+country_event = {               ###
+
 	id = 700183
 
 	is_triggered_only = yes
@@ -586,10 +455,9 @@ country_event = {               ###
 	picture = "ONU"
 
 	option = {
-			name = "EVTOPTA700183"
+		name = "EVTOPTA700183"
 	    ai_chance = { factor = 100 }
-		}
-
- }
+	}
+}
    
   

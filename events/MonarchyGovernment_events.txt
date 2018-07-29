@@ -106,12 +106,12 @@
 			ai_chance = { factor = 50 }
 			money = -15
 			prestige_change = 5
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalMarriage_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 
 		option = {
@@ -135,12 +135,12 @@
 					}
 				}
 			}
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalMarriage_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 	}
 
@@ -203,7 +203,7 @@
 		picture = "1960_Dutch_royal_state_visit_Belgium"
 		
 		immediate = {
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				any_neighbor_country = {
 					limit = {
 						NOT = { tag = THIS }
@@ -237,7 +237,7 @@
 					}
 					set_country_flag = flag_monarchyGovernment_royalBonds_immediate
 				}
-			}
+			#}
 		}
 
 		option = {
@@ -249,12 +249,12 @@
 				relation = { who = THIS value = 25 }
 			}
 			prestige_change = 2
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalBonds_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 	}
 
@@ -306,36 +306,36 @@
 		name = "EVTOPTA53003"		#We should stay out of party political dealings
 			ai_chance = { factor = 40 }
 			national_unity = 1
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalNegotiation_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 		
 		option = {
 		name = "EVTOPTB53003"		#The government is in the right
 			ai_chance = { factor = 35 }
 			popularity = 3
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalNegotiation_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 		
 		option = {
 		name = "EVTOPTC53003"		#The opposition is in the right
 			ai_chance = { factor = 25 }
 			popularity = -3
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalNegotiation_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 	}
 
@@ -380,12 +380,12 @@
 		name = "EVTOPTA53004"		#Good news
 			national_unity = 3
 			popularity = 1
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalStability_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 	}
 
@@ -431,12 +431,12 @@
 		name = "EVTOPTA53005"		#Great
 			dissent = -2
 			prestige_change = 5
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalCelebration_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 	}
 
@@ -622,12 +622,12 @@
 		option = {
 		name = "EVTOPTA53008"		#Good news
 			national_unity = 3
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalStrategy_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 	}
 
@@ -673,12 +673,12 @@
 			popularity = -2
 			prestige_change = -5
 			national_unity = 1
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalEditorial_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 		
 		option = {
@@ -686,12 +686,12 @@
 			ai_chance = { factor = 50 }
 			popularity = -1
 			national_unity = -1
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalEditorial_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 		
 		option = {
@@ -699,12 +699,12 @@
 			ai_chance = { factor = 25 }
 			popularity = 1
 			dissent = 2
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalEditorial_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 
 	}
@@ -763,12 +763,12 @@
 			ai_chance = { factor = 40 }
 			national_unity = -1
 			popularity = -2
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalNepotism_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 		
 		option = {
@@ -776,12 +776,12 @@
 			ai_chance = { factor = 60 }
 			national_unity = -1
 			money = -30
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalNepotism_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 
 	}
@@ -818,24 +818,24 @@
 				name = mod_monarchyGovernment_royalTitles
 				duration = 365
 			}
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalTitles_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 		
 		option = {
 		name = "EVTOPTB53022"		#Crack down on such activities
 			ai_chance = { factor = 60 }
 			money = -15
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalTitles_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 
 	}
@@ -893,12 +893,12 @@
 				name = mod_monarchyGovernment_royalTax
 				duration = 365
 			}
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalTax_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 		
 		option = {
@@ -937,12 +937,12 @@
 		name = "EVTOPTA53024"		#Unfortunate
 			national_unity = -2
 			prestige_change = -5
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalEmbarressment_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 
 	}
@@ -972,12 +972,12 @@
 		name = "EVTOPTA53025"		#Unfortunate
 			popularity = -1
 			prestige_change = -10
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalGaffe_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 
 	}
@@ -1008,12 +1008,12 @@
 			national_unity = -1
 			popularity = -2
 			prestige_change = -10
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalDivorce_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 
 	}
@@ -1056,23 +1056,23 @@
 					national_unity = -1
 				}
 			}
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalWealth_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 		
 		option = {
 		name = "EVTOPTB53027"		#They are merely envious
 			popularity = -2
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalWealth_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 
 	}
@@ -1102,18 +1102,18 @@
 		name = "EVTOPTA53028"		#Pay them off
 			ai_chance = { factor = 60 }
 			money = -100
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalBlackmail_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 		
 		option = {
 		name = "EVTOPTB53028"		#Call their bluff
 			ai_chance = { factor = 40 }
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				random = {
 					chance = 50
 					set_country_flag = flag_monarchyGovernment_royalBlackmail
@@ -1123,7 +1123,7 @@
 					name = mod_monarchyGovernment_royalBlackmail_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 
 	}
@@ -1240,12 +1240,12 @@
 				33 = {
 				}
 			}
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalHealth_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 		
 		option = {
@@ -1255,12 +1255,12 @@
 				name = mod_monarchyGovernment_royalHealth
 				duration = 183
 			}
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalHealth_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 
 	}
@@ -1302,12 +1302,12 @@
 			ai_chance = { factor = 50 }
 			popularity = -2
 			national_unity = -1
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalCharity_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 
 	}
@@ -1391,12 +1391,12 @@
 					}
 				}
 			}
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalCharity_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 		
 		option = {
@@ -1406,12 +1406,12 @@
 			popularity = -3
 			national_unity = -2
 			prestige_change = -15
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalCharity_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 
 	}
@@ -1438,12 +1438,12 @@
 			clr_country_flag = flag_monarchyGovernment_royalCharity
 			popularity = -1
 			prestige_change = -5
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalCharity_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 
 	}
@@ -1470,12 +1470,12 @@
 			clr_country_flag = flag_monarchyGovernment_royalCharity
 			popularity = 1
 			prestige_change = 5
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_monarchyGovernment_royalCharity_delay
 					duration = 365
 				}
-			}
+			#}
 		}
 
 	}

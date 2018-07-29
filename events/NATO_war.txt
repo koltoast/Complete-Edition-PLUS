@@ -1,4 +1,4 @@
-﻿#################################################################
+#################################################################
 ##################  COnstitución de la ONU  #####################
 #################################################################
 
@@ -108,7 +108,8 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPTB700159"
-		ai_chance = { factor = 50 
+		ai_chance = {
+			factor = 50 
 			modifier = {
 				factor = 0.1							#10% chance
 				this = { is_org_member = XWP }
@@ -143,87 +144,23 @@ country_event = {
 			}			
 		}
  		random = {
-			chance = 50
-			modifier = {
-				factor = 0.1							#10% chance
-				this = { is_org_member = XWP }
-			}	
-			modifier = {
-				factor = 0.1
-				this = { is_major = yes }
-			}			 
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 3
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 7
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 11
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 15
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 19
-			}
-			modifier = {
-				factor = 0.5
-				num_of_centrifuges_greater = 39
-			}				
+			chance = 50				
 		    any_country = { limit = { is_org_member = XNA } limited_war = THIS set_country_flag = NATO_intervention }
 			set_country_flag = declar_warnato
 			set_global_flag = NATO_war
 		}    		  
  		random = {
-			chance = 50
-			modifier = {
-				factor = 0.2							#10% chance
-				this = { is_org_member = XWP }
-			}	
-			modifier = {
-				factor = 0.2
-				this = { is_major = yes }
-			}			 
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 3
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 7
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 11
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 15
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 19
-			}
-			modifier = {
-				factor = 0.5
-				num_of_centrifuges_greater = 39
-			}				
+			chance = 50			
 			this = {
 				add_country_modifier = {
-				name = NATO_armsembargo
-				duration = 180
+					name = NATO_armsembargo
+					duration = 180
 				}
 			} 
 			this = {
 				add_country_modifier = {
-				name = NATO_Nuclear_Embargo
-				duration = 180
+					name = NATO_Nuclear_Embargo
+					duration = 180
 				}
 			}
 			any_org_member = {
@@ -316,7 +253,8 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB700161"
-	    ai_chance = { factor = 50
+	    ai_chance = {
+			factor = 50
 			modifier = {
 				factor = 0.2							#10% chance
 				this = { is_org_member = XWP }
@@ -353,75 +291,11 @@ country_event = {
 		
  		random = {
 			chance = 50
-			modifier = {
-				factor = 0.1							#10% chance
-				this = { is_org_member = XWP }
-			}	
-			modifier = {
-				factor = 0.1
-				this = { is_major = yes }
-			}			 
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 3
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 7
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 11
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 15
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 19
-			}
-			modifier = {
-				factor = 0.5
-				num_of_centrifuges_greater = 39
-			}
 			random_country = { limit = { alignment = { faction = allies value = 80 } war_with = this } country_event = 700162 }
 			set_country_flag = declar_war_allynato
 		}    		  
  		random = {
-			chance = 50
-			modifier = {
-				factor = 0.2							#10% chance
-				this = { is_org_member = XWP }
-			}	
-			modifier = {
-				factor = 0.2
-				this = { is_major = yes }
-			}			 
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 3
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 7
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 11
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 15
-			}
-			modifier = {
-				factor = 0.75
-				num_of_centrifuges_greater = 19
-			}
-			modifier = {
-				factor = 0.5
-				num_of_centrifuges_greater = 39
-			}				
+			chance = 50				
 			this = {
 				add_country_modifier = {
 					name = NATO_armsembargo
@@ -457,9 +331,8 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA700162"
-		ai_chance = { factor = 100 }
-		random = {
-			chance = 50
+		ai_chance = {
+			factor = 100
 			modifier = {
 				factor = 0.2							#10% chance
 				this = { is_org_member = XWP }
@@ -491,7 +364,10 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				num_of_centrifuges_greater = 39
-			}				
+			}
+		}
+		random = {
+			chance = 50				
 			any_country = { limit = { is_org_member = XNA } limited_war = this set_country_flag = NATO_intervention }  ####hay que vigilar si es "this" o "from"
 			set_country_flag = NATO_intervention
 			set_global_flag = NATO_war

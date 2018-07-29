@@ -1,14 +1,15 @@
-
-
-
 country_event = {               ###Principios de desestabilización por crisis interna
+
 	id = 700231
+	
+	title = "EVTNAME700212"
+	desc = "EVTDESC700212"
+	picture = " "
 
 	trigger = {	
 	    ai = yes
         has_global_flag = CONTROLAL			
 		money = 1000
-           			            			               		
 	}
 	
 	mean_time_to_happen = {
@@ -47,22 +48,16 @@ country_event = {               ###Principios de desestabilización por crisis i
 		}
 	}
 	
-	title = "EVTNAME700212"
-	desc = "EVTDESC700212"
-	picture = " "
-	
 	option = {
 		name = "EVTOPTA700212"
-		ai_chance = { factor = 30 }
-			
-		random = {
-			chance = 30
+		ai_chance = {
+			factor = 30
 			modifier = {
 				factor = 1.2							#
 				this = { is_org_member = XNA }
 				economy_rating_greater = 4
 				not = { money = 10000 }
-			}	
+			}
 			 modifier = {
 				factor = 1.2							#
 				this = { is_org_member = XNA }
@@ -224,116 +219,132 @@ country_event = {               ###Principios de desestabilización por crisis i
 				factor = 0.1
 				relation = { who = this value = 150 }
 			}
-		    random_country = { limit = { relation = { who = this value = 100 } money = 1000 }
-		        random_list = {
-					10 = { 
-						create_alliance = this
-						
+		}
+		
+		random_list = {
+			50 = {
+				random_country = {
+					limit = {
+						relation = {
+							who = this
+							value = 100
+						}
+						money = 1000
 					}
-					20 = { 
-						relation = { who = this value = 10 }
-						
-					}
-					20 = { 
-						relation = { who = this value = -10 }
-						
-					}
-					10 = { 
-						guarantee = this
-						
-					}
-					10 = { military_access = this
-						
-					}
-					10 = { non_aggression_pact = this
-						
-					}
-					
-					10 = { recognize = this
-						
-					}
-					10 = { 
-						
-					}
-		        }
+					random_list = {
+						10 = { 
+							create_alliance = this
+						}
+						20 = { 
+							relation = { who = this value = 10 }
+						}
+						20 = { 
+							relation = { who = this value = -10 }
+						}
+						10 = { 
+							guarantee = this
+						}
+						10 = {
+							military_access = this
+						}
+						10 = {
+							non_aggression_pact = this
+						}
+						10 = {
+							recognize = this
+						}
+						10 = { 
 							
+						}
+					}
+				}
 			}
-			
-		    any_neighbor_country = { limit = { relation = { who = this value = 100 } money = 1000 }
-		        random_list = {
-					10 = { 
-						create_alliance = this
-						
+			50 = {
+				random_country = {
+					limit = {
+						relation = {
+							who = this
+							value = 100
+						}
+						money = 1000
+						neighbour = this
 					}
-					20 = { 
-						relation = { who = this value = 10 }
-						
+					random_list = {
+						10 = { 
+							create_alliance = this
+						}
+						20 = { 
+							relation = { who = this value = 10 }
+						}
+						20 = { 
+							relation = { who = this value = -10 }
+						}
+						10 = { 
+							guarantee = this
+						}
+						10 = {
+							military_access = this
+						}
+						10 = {
+							non_aggression_pact = this
+						}
+						10 = {
+							recognize = this
+						}
+						10 = { 
+							
+						}					
 					}
-					20 = { 
-						relation = { who = this value = -10 }
-						
-					}
-					10 = { 
-						guarantee = this
-						
-					}
-					10 = { military_access = this
-						
-					}
-					10 = { non_aggression_pact = this
-						
-					}
-					
-					10 = { recognize = this
-						
-					}
-					10 = { 
-						
-					}					
-		        }
-			} 
+				}
+			}
 		}
 	    clr_global_flag = CONTROLAL					
     }
-}				
+	option = {
+		clr_global_flag = CONTROLAL
+	}
+}
     
 
 country_event = {
+
 	id = 700232
-
-	trigger = {
-			ai = yes
-			not = { has_global_flag = CONTROLALIANZA }
-			not = { has_global_flag = CONTROLAL }			
-		}
-
-	mean_time_to_happen = { months = -1 }
 	
 	title = "EVTNAME700232"
 	desc = "EVTDESC700232"
 	picture = " "
+
+	trigger = {
+		ai = yes
+		not = { has_global_flag = CONTROLALIANZA }
+		not = { has_global_flag = CONTROLAL }			
+	}
+
+	mean_time_to_happen = { months = -1 }
 	
 	option = {
-		set_global_flag = CONTROLALIANZA
 		ai_chance = { factor = 100 }
+		set_global_flag = CONTROLALIANZA
 	}
 }
 
 country_event = {
-	id = 700233
-	trigger = {
-			ai = yes
-			has_global_flag = CONTROLALIANZA
-		}
 
-	mean_time_to_happen = { months = -1 }
+	id = 700233
 	
 	title = "EVTNAME700232"
 	desc = "EVTDESC700232"
 	picture = " "
 	
+	trigger = {
+		ai = yes
+		has_global_flag = CONTROLALIANZA
+	}
+
+	mean_time_to_happen = { months = -1 }
+	
 	option = {
-	ai_chance = { factor = 100 }
+		ai_chance = { factor = 100 }
 		clr_global_flag = CONTROLALIANZA
 		set_global_flag = CONTROLAL		
 	}

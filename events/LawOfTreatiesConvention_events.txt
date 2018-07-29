@@ -73,13 +73,13 @@
 			prestige_change = 8
 			relation = { who = AUS value = 5 }
 			relation = { who = XUN value = 20 }
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				AUS = {
 					add_country_modifier = {
 						name = law_of_treaties_convention_delay
 						duration = 30
 					}
 				}
-			}
+			#}
 		}
 	}

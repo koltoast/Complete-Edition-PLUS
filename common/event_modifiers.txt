@@ -39,7 +39,7 @@ nationalization_of_private_sector = {
 }
 
 rogue_politician = {
-    global_leadership_modifier = -0.05
+    #global_leadership_modifier = -0.05										#obsolete?
 }
 
 secret_police_force = {
@@ -106,7 +106,7 @@ revolutionary_movements = {
 }
 
 resistance_movement = {
-	global_ic = -0.05										#TODO
+	#global_ic = -0.05										#obsolete?
 }
 
 resistance_movement_laid_open = {
@@ -184,7 +184,7 @@ riots = {
 ##
 
 economic_boost = {
-	global_ic = 0.05										#TODO
+	#global_ic = 0.05										#obsolete?
 }
 
 volunteer_surge = {
@@ -2248,11 +2248,11 @@ mod_UN_mercenary_convention_ratified = {
 			value = -0.02
 		}
 	}
-	militia_brigade = {
-		default_organisation = -5
-		unit_money_cost = 0.5
-		build_time = 30
-	}
+	#militia_brigade = {
+		#default_organisation = -5
+		#unit_money_cost = 0.5
+		#build_time = 30
+	#}
 }
 mod_UN_mercenary_convention_voting_delay = {
 	prestige = -0.05
@@ -2502,289 +2502,289 @@ mod_UN_civil_and_political_rights_convention_voting_delay = {
 	national_unity = -0.1
 }
 
-mod_UN_mines_and_booby_traps_convention_failure_delay = {
+mod_UN_mines_and_booby_traps_convention_failure_delay = {										#TODO
 	#Negative
 	prestige = -0.06
 	neutrality = -0.03
 	#Positive(effects # in event file)
-	 air_cav_brigade = { soft_attack = 0.05 }
-	 cavalry_brigade = { soft_attack = 0.02 }
-	 engineer_brigade = { soft_attack = 0.01 }
-	 hq_brigade = { soft_attack = 0.02 }
-	 infantry_brigade = { soft_attack = 0.01 }
-	 light_mechanized_brigade = { soft_attack = 0.03 }
-	 marine_brigade = { soft_attack = 0.02 }
-	 militia_brigade = { soft_attack = 0.01 }
-	 partisan_brigade = { soft_attack = 0.01 }	
-	 motorized_brigade = { soft_attack = 0.02 }	
-	 bergsjaeger_brigade = { soft_attack = 0.02 }
+	 #air_cav_brigade = { soft_attack = 0.05 }
+	 #cavalry_brigade = { soft_attack = 0.02 }
+	 #engineer_brigade = { soft_attack = 0.01 }
+	 #hq_brigade = { soft_attack = 0.02 }
+	 #infantry_brigade = { soft_attack = 0.01 }
+	 #light_mechanized_brigade = { soft_attack = 0.03 }
+	 #marine_brigade = { soft_attack = 0.02 }
+	 #militia_brigade = { soft_attack = 0.01 }
+	 #partisan_brigade = { soft_attack = 0.01 }	
+	 #motorized_brigade = { soft_attack = 0.02 }	
+	 #bergsjaeger_brigade = { soft_attack = 0.02 }
 }
-mod_UN_mines_and_booby_traps_convention_ratifier_delay = {
+mod_UN_mines_and_booby_traps_convention_ratifier_delay = {										#TODO
 	#Negative
 	prestige = -0.05
 	neutrality = -0.02
 	#Positive(effects # in event file)
-	 air_cav_brigade = { soft_attack = 0.05 }
-	 cavalry_brigade = { soft_attack = 0.02 }
-	 engineer_brigade = { soft_attack = 0.01 }
-	 hq_brigade = { soft_attack = 0.02 }
-	 infantry_brigade = { soft_attack = 0.01 }
-	 light_mechanized_brigade = { soft_attack = 0.03 }
-	 marine_brigade = { soft_attack = 0.02 }
-	 militia_brigade = { soft_attack = 0.01 }
-	 partisan_brigade = { soft_attack = 0.01 }	
-	 motorized_brigade = { soft_attack = 0.02 }	
-	 bergsjaeger_brigade = { soft_attack = 0.02 }
+	 #air_cav_brigade = { soft_attack = 0.05 }
+	 #cavalry_brigade = { soft_attack = 0.02 }
+	 #engineer_brigade = { soft_attack = 0.01 }
+	 #hq_brigade = { soft_attack = 0.02 }
+	 #infantry_brigade = { soft_attack = 0.01 }
+	 #light_mechanized_brigade = { soft_attack = 0.03 }
+	 #marine_brigade = { soft_attack = 0.02 }
+	 #militia_brigade = { soft_attack = 0.01 }
+	 #partisan_brigade = { soft_attack = 0.01 }	
+	 #motorized_brigade = { soft_attack = 0.02 }	
+	 #bergsjaeger_brigade = { soft_attack = 0.02 }
 }
-mod_UN_mines_and_booby_traps_convention_revoked_recently = {
+mod_UN_mines_and_booby_traps_convention_revoked_recently = {										#TODO
 	#Negative
 	prestige = -0.06
 	neutrality = -0.03
 	#Positive(effects # in event file)
-	 air_cav_brigade = { soft_attack = 0.05 }
-	 cavalry_brigade = { soft_attack = 0.02 }
-	 engineer_brigade = { soft_attack = 0.01 }
-	 hq_brigade = { soft_attack = 0.02 }
-	 infantry_brigade = { soft_attack = 0.01 }
-	 light_mechanized_brigade = { soft_attack = 0.03 }
-	 marine_brigade = { soft_attack = 0.02 }
-	 militia_brigade = { soft_attack = 0.01 }
-	 partisan_brigade = { soft_attack = 0.01 }	
-	 motorized_brigade = { soft_attack = 0.02 }	
-	 bergsjaeger_brigade = { soft_attack = 0.02 }
+	 #air_cav_brigade = { soft_attack = 0.05 }
+	 #cavalry_brigade = { soft_attack = 0.02 }
+	 #engineer_brigade = { soft_attack = 0.01 }
+	 #hq_brigade = { soft_attack = 0.02 }
+	 #infantry_brigade = { soft_attack = 0.01 }
+	 #light_mechanized_brigade = { soft_attack = 0.03 }
+	 #marine_brigade = { soft_attack = 0.02 }
+	 #militia_brigade = { soft_attack = 0.01 }
+	 #partisan_brigade = { soft_attack = 0.01 }	
+	 #motorized_brigade = { soft_attack = 0.02 }	
+	 #bergsjaeger_brigade = { soft_attack = 0.02 }
 }
-mod_UN_mines_and_booby_traps_convention_ratified_recently = {
+mod_UN_mines_and_booby_traps_convention_ratified_recently = {										#TODO
 	#Positive
 	prestige = 0.06
 	neutrality = 0.03
 	#Negative (effects # in event file)
-	 air_cav_brigade = { soft_attack = -0.05 }
-	 cavalry_brigade = { soft_attack = -0.02 }
-	 engineer_brigade = { soft_attack = -0.01 }
-	 hq_brigade = { soft_attack = -0.02 }
-	 infantry_brigade = { soft_attack = -0.01 }
-	 light_mechanized_brigade = { soft_attack = -0.03 }
-	 marine_brigade = { soft_attack = -0.02 }
-	 militia_brigade = { soft_attack = -0.01 }
-	 partisan_brigade = { soft_attack = -0.01 }	
-	 motorized_brigade = { soft_attack = -0.02 }	
-	 bergsjaeger_brigade = { soft_attack = -0.02 }
+	 #air_cav_brigade = { soft_attack = -0.05 }
+	 #cavalry_brigade = { soft_attack = -0.02 }
+	 #engineer_brigade = { soft_attack = -0.01 }
+	 #hq_brigade = { soft_attack = -0.02 }
+	 #infantry_brigade = { soft_attack = -0.01 }
+	 #light_mechanized_brigade = { soft_attack = -0.03 }
+	 #marine_brigade = { soft_attack = -0.02 }
+	 #militia_brigade = { soft_attack = -0.01 }
+	 #partisan_brigade = { soft_attack = -0.01 }	
+	 #motorized_brigade = { soft_attack = -0.02 }	
+	 #bergsjaeger_brigade = { soft_attack = -0.02 }
 }
-mod_UN_mines_and_booby_traps_convention_ratified = {
+mod_UN_mines_and_booby_traps_convention_ratified = {										#TODO
 	#Positive
 	prestige = 0.05
 	neutrality = 0.02
 	#Negative (effects # in event file)
-	 air_cav_brigade = { soft_attack = -0.05 }
-	 cavalry_brigade = { soft_attack = -0.02 }
-	 engineer_brigade = { soft_attack = -0.01 }
-	 hq_brigade = { soft_attack = -0.02 }
-	 infantry_brigade = { soft_attack = -0.01 }
-	 light_mechanized_brigade = { soft_attack = -0.03 }
-	 marine_brigade = { soft_attack = -0.02 }
-	 militia_brigade = { soft_attack = -0.01 }
-	 partisan_brigade = { soft_attack = -0.01 }	
-	 motorized_brigade = { soft_attack = -0.02 }	
-	 bergsjaeger_brigade = { soft_attack = -0.02 }
+	 #air_cav_brigade = { soft_attack = -0.05 }
+	 #cavalry_brigade = { soft_attack = -0.02 }
+	 #engineer_brigade = { soft_attack = -0.01 }
+	 #hq_brigade = { soft_attack = -0.02 }
+	 #infantry_brigade = { soft_attack = -0.01 }
+	 #light_mechanized_brigade = { soft_attack = -0.03 }
+	 #marine_brigade = { soft_attack = -0.02 }
+	 #militia_brigade = { soft_attack = -0.01 }
+	 #partisan_brigade = { soft_attack = -0.01 }	
+	 #motorized_brigade = { soft_attack = -0.02 }	
+	 #bergsjaeger_brigade = { soft_attack = -0.02 }
 }
-mod_UN_mines_and_booby_traps_convention_voting_delay = {
+mod_UN_mines_and_booby_traps_convention_voting_delay = {										#TODO
 	#Negative
 	prestige = -0.05
 	neutrality = -0.02
 	#Positive(effects # in event file)
-	 air_cav_brigade = { soft_attack = 0.05 }
-	 cavalry_brigade = { soft_attack = 0.02 }
-	 engineer_brigade = { soft_attack = 0.01 }
-	 hq_brigade = { soft_attack = 0.02 }
-	 infantry_brigade = { soft_attack = 0.01 }
-	 light_mechanized_brigade = { soft_attack = 0.03 }
-	 marine_brigade = { soft_attack = 0.02 }
-	 militia_brigade = { soft_attack = 0.01 }
-	 partisan_brigade = { soft_attack = 0.01 }	
-	 motorized_brigade = { soft_attack = 0.02 }	
-	 bergsjaeger_brigade = { soft_attack = 0.02 }
+	 #air_cav_brigade = { soft_attack = 0.05 }
+	 #cavalry_brigade = { soft_attack = 0.02 }
+	 #engineer_brigade = { soft_attack = 0.01 }
+	 #hq_brigade = { soft_attack = 0.02 }
+	 #infantry_brigade = { soft_attack = 0.01 }
+	 #light_mechanized_brigade = { soft_attack = 0.03 }
+	 #marine_brigade = { soft_attack = 0.02 }
+	 #militia_brigade = { soft_attack = 0.01 }
+	 #partisan_brigade = { soft_attack = 0.01 }	
+	 #motorized_brigade = { soft_attack = 0.02 }	
+	 #bergsjaeger_brigade = { soft_attack = 0.02 }
 }
 
-mod_UN_incendiary_weapons_convention_failure_delay = {
+mod_UN_incendiary_weapons_convention_failure_delay = {										#TODO
 	#Negative
 	prestige = -0.07
 	neutrality = -0.04
 	#Positive (effects # in event file)
-	 bomber_strike = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.2
-	 }
-	 cas = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_attack = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_vtol = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
+	 #bomber_strike = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.2
+	 #}
+	 #cas = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_attack = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_vtol = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
 }
-mod_UN_incendiary_weapons_convention_ratifier_delay = {
+mod_UN_incendiary_weapons_convention_ratifier_delay = {										#TODO
 	#Negative
 	prestige = -0.06
 	neutrality = -0.03
 	#Positive (effects # in event file)
-	 bomber_strike = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.2
-	 }
-	 cas = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_attack = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_vtol = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
- }
+	 #bomber_strike = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.2
+	 #}
+	 #cas = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_attack = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_vtol = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+}
 
-mod_UN_incendiary_weapons_convention_revoked_recently = {
+mod_UN_incendiary_weapons_convention_revoked_recently = {										#TODO
 	#Negative
 	prestige = -0.07
 	neutrality = -0.04
 	#Positive (effects # in event file)
-	 bomber_strike = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.2
-	 }
-	 cas = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_attack = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_vtol = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
+	 #bomber_strike = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.2
+	 #}
+	 #cas = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_attack = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_vtol = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
 }
-mod_UN_incendiary_weapons_convention_ratified_recently = {
+mod_UN_incendiary_weapons_convention_ratified_recently = {										#TODO
 	#Positive
 	prestige = 0.06
 	neutrality = 0.03
 	#Negative (effects # in event file)
-	 bomber_strike = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.2
-	 }
-	 cas = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.1
-	 }
-	 cag_attack = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.1
-	 }
-	 cag_vtol = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.1
-	 }
+	 #bomber_strike = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.2
+	 #}
+	 #cas = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.1
+	 #}
+	 #cag_attack = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.1
+	 #}
+	 #cag_vtol = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.1
+	 #}
 }
-mod_UN_incendiary_weapons_convention_ratified = {
+mod_UN_incendiary_weapons_convention_ratified = {										#TODO
 	#Positive
 	prestige = 0.05
 	neutrality = 0.02
 	#Negative (effects # in event file)
-	 bomber_strike = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.2
-	 }
-	 cas = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.1
-	 }
-	 cag_attack = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.1
-	 }
-	 cag_vtol = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.1
-	 }
+	 #bomber_strike = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.2
+	 #}
+	 #cas = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.1
+	 #}
+	 #cag_attack = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.1
+	 #}
+	 #cag_vtol = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.1
+	 #}
 }
-mod_UN_incendiary_weapons_convention_voting_delay = {
+mod_UN_incendiary_weapons_convention_voting_delay = {										#TODO
 	#Negative
 	prestige = -0.06
 	neutrality = -0.03
 	#Positive (effects # in event file)
-	 bomber_strike = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.2
-	 }
-	 cas = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_attack = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_vtol = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
+	 #bomber_strike = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.2
+	 #}
+	 #cas = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_attack = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_vtol = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
 }
 
 
@@ -3142,186 +3142,185 @@ Iran_oilrig_losses  = {
 # scriptable and usable for event-system below.
 ##################################################################################################
 
-mod_UN_incendiary_weapons_convention_failure_delay = {
+mod_UN_incendiary_weapons_convention_failure_delay = {										#TODO
 	#Negative
 	prestige = -0.07
 	neutrality = -0.04
 	#Positive (effects # in event file)
-	 bomber_strike = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.2
-	 }
-	 cas = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_attack = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_vtol = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
+	 #bomber_strike = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.2
+	 #}
+	 #cas = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_attack = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_vtol = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
 }
-mod_UN_incendiary_weapons_convention_ratifier_delay = {
+mod_UN_incendiary_weapons_convention_ratifier_delay = {										#TODO
 	#Negative
 	prestige = -0.06
 	neutrality = -0.03
 	#Positive (effects # in event file)
-	 bomber_strike = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.2
-	 }
-	 cas = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_attack = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_vtol = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
- }
-
-mod_UN_incendiary_weapons_convention_revoked_recently = {
+	 #bomber_strike = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.2
+	 #}
+	 #cas = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_attack = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_vtol = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+}
+mod_UN_incendiary_weapons_convention_revoked_recently = {										#TODO
 	#Negative
 	prestige = -0.07
 	neutrality = -0.04
 	#Positive (effects # in event file)
-	 bomber_strike = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.2
-	 }
-	 cas = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_attack = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_vtol = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
+	 #bomber_strike = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.2
+	 #}
+	 #cas = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_attack = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_vtol = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
 }
-mod_UN_incendiary_weapons_convention_ratified_recently = {
+mod_UN_incendiary_weapons_convention_ratified_recently = {										#TODO
 	#Positive
 	prestige = 0.06
 	neutrality = 0.03
 	#Negative (effects # in event file)
-	 bomber_strike = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.2
-	 }
-	 cas = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.1
-	 }
-	 cag_attack = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.1
-	 }
-	 cag_vtol = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.1
-	 }
+	 #bomber_strike = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.2
+	 #}
+	 #cas = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.1
+	 #}
+	 #cag_attack = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.1
+	 #}
+	 #cag_vtol = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.1
+	 #}
 }
-mod_UN_incendiary_weapons_convention_ratified = {
+mod_UN_incendiary_weapons_convention_ratified = {										#TODO
 	#Positive
 	prestige = 0.05
 	neutrality = 0.02
 	#Negative (effects # in event file)
-	 bomber_strike = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.2
-	 }
-	 cas = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.1
-	 }
-	 cag_attack = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.1
-	 }
-	 cag_vtol = {
-		 woods = { attack = -0.1 }
-		 forest = { attack = -0.2 }
-		 jungle = { attack = -0.2 }
-		 supply_consumption = 0.1
-	 }
+	 #bomber_strike = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.2
+	 #}
+	 #cas = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.1
+	 #}
+	 #cag_attack = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.1
+	 #}
+	 #cag_vtol = {
+		 #woods = { attack = -0.1 }
+		 #forest = { attack = -0.2 }
+		 #jungle = { attack = -0.2 }
+		 #supply_consumption = 0.1
+	 #}
 }
-mod_UN_incendiary_weapons_convention_voting_delay = {
+mod_UN_incendiary_weapons_convention_voting_delay = {										#TODO
 	#Negative
 	prestige = -0.06
 	neutrality = -0.03
 	#Positive (effects # in event file)
-	 bomber_strike = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.2
-	 }
-	 cas = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_attack = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
-	 cag_vtol = {
-		 woods = { attack = 0.1 }
-		 forest = { attack = 0.2 }
-		 jungle = { attack = 0.2 }
-		 supply_consumption = -0.1
-	 }
+	 #bomber_strike = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.2
+	 #}
+	 #cas = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_attack = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
+	 #cag_vtol = {
+		 #woods = { attack = 0.1 }
+		 #forest = { attack = 0.2 }
+		 #jungle = { attack = 0.2 }
+		 #supply_consumption = -0.1
+	 #}
 }
 
 ##################################################################################################
@@ -3548,11 +3547,11 @@ mod_UN_mercenary_convention_ratified = {
 			value = -0.02
 		}
 	}
-	militia_brigade = {
-		default_organisation = -5
-		unit_money_cost = 0.5
-		build_time = 30
-	}
+	#militia_brigade = {
+		#default_organisation = -5
+		#unit_money_cost = 0.5
+		#build_time = 30
+	#}
 }
 mod_UN_mercenary_convention_voting_delay = {
 	prestige = -0.05
@@ -3565,113 +3564,113 @@ mod_UN_mercenary_convention_voting_delay = {
 # scriptable and usable for event-system below.
 ##################################################################################################
 
-mod_UN_mines_and_booby_traps_convention_failure_delay = {
+mod_UN_mines_and_booby_traps_convention_failure_delay = {										#TODO
 	#Negative
 	prestige = -0.06
 	neutrality = -0.03
 	#Positive(effects # in event file)
-	 air_cav_brigade = { soft_attack = 0.05 }
-	 cavalry_brigade = { soft_attack = 0.02 }
-	 engineer_brigade = { soft_attack = 0.01 }
-	 hq_brigade = { soft_attack = 0.02 }
-	 infantry_brigade = { soft_attack = 0.01 }
-	 light_mechanized_brigade = { soft_attack = 0.03 }
-	 marine_brigade = { soft_attack = 0.02 }
-	 militia_brigade = { soft_attack = 0.01 }
-	 partisan_brigade = { soft_attack = 0.01 }	
-	 motorized_brigade = { soft_attack = 0.02 }	
-	 bergsjaeger_brigade = { soft_attack = 0.02 }
+	 #air_cav_brigade = { soft_attack = 0.05 }
+	 #cavalry_brigade = { soft_attack = 0.02 }
+	 #engineer_brigade = { soft_attack = 0.01 }
+	 #hq_brigade = { soft_attack = 0.02 }
+	 #infantry_brigade = { soft_attack = 0.01 }
+	 #light_mechanized_brigade = { soft_attack = 0.03 }
+	 #marine_brigade = { soft_attack = 0.02 }
+	 #militia_brigade = { soft_attack = 0.01 }
+	 #partisan_brigade = { soft_attack = 0.01 }	
+	 #motorized_brigade = { soft_attack = 0.02 }	
+	 #bergsjaeger_brigade = { soft_attack = 0.02 }
 }
 
-mod_UN_mines_and_booby_traps_convention_ratifier_delay = {
+mod_UN_mines_and_booby_traps_convention_ratifier_delay = {										#TODO
 	#Negative
 	prestige = -0.05
 	neutrality = -0.02
 	#Positive(effects # in event file)
-	 air_cav_brigade = { soft_attack = 0.05 }
-	 cavalry_brigade = { soft_attack = 0.02 }
-	 engineer_brigade = { soft_attack = 0.01 }
-	 hq_brigade = { soft_attack = 0.02 }
-	 infantry_brigade = { soft_attack = 0.01 }
-	 light_mechanized_brigade = { soft_attack = 0.03 }
-	 marine_brigade = { soft_attack = 0.02 }
-	 militia_brigade = { soft_attack = 0.01 }
-	 partisan_brigade = { soft_attack = 0.01 }	
-	 motorized_brigade = { soft_attack = 0.02 }	
-	 bergsjaeger_brigade = { soft_attack = 0.02 }
+	 #air_cav_brigade = { soft_attack = 0.05 }
+	 #cavalry_brigade = { soft_attack = 0.02 }
+	 #engineer_brigade = { soft_attack = 0.01 }
+	 #hq_brigade = { soft_attack = 0.02 }
+	 #infantry_brigade = { soft_attack = 0.01 }
+	 #light_mechanized_brigade = { soft_attack = 0.03 }
+	 #marine_brigade = { soft_attack = 0.02 }
+	 #militia_brigade = { soft_attack = 0.01 }
+	 #partisan_brigade = { soft_attack = 0.01 }	
+	 #motorized_brigade = { soft_attack = 0.02 }	
+	 #bergsjaeger_brigade = { soft_attack = 0.02 }
 }
 
-mod_UN_mines_and_booby_traps_convention_revoked_recently = {
+mod_UN_mines_and_booby_traps_convention_revoked_recently = {										#TODO
 	#Negative
 	prestige = -0.06
 	neutrality = -0.03
 	#Positive(effects # in event file)
-	 air_cav_brigade = { soft_attack = 0.05 }
-	 cavalry_brigade = { soft_attack = 0.02 }
-	 engineer_brigade = { soft_attack = 0.01 }
-	 hq_brigade = { soft_attack = 0.02 }
-	 infantry_brigade = { soft_attack = 0.01 }
-	 light_mechanized_brigade = { soft_attack = 0.03 }
-	 marine_brigade = { soft_attack = 0.02 }
-	 militia_brigade = { soft_attack = 0.01 }
-	 partisan_brigade = { soft_attack = 0.01 }	
-	 motorized_brigade = { soft_attack = 0.02 }	
-	 bergsjaeger_brigade = { soft_attack = 0.02 }
+	 #air_cav_brigade = { soft_attack = 0.05 }
+	 #cavalry_brigade = { soft_attack = 0.02 }
+	 #engineer_brigade = { soft_attack = 0.01 }
+	 #hq_brigade = { soft_attack = 0.02 }
+	 #infantry_brigade = { soft_attack = 0.01 }
+	 #light_mechanized_brigade = { soft_attack = 0.03 }
+	 #marine_brigade = { soft_attack = 0.02 }
+	 #militia_brigade = { soft_attack = 0.01 }
+	 #partisan_brigade = { soft_attack = 0.01 }	
+	 #motorized_brigade = { soft_attack = 0.02 }	
+	 #bergsjaeger_brigade = { soft_attack = 0.02 }
 }
 
-mod_UN_mines_and_booby_traps_convention_ratified_recently = {
+mod_UN_mines_and_booby_traps_convention_ratified_recently = {										#TODO
 	#Positive
 	prestige = 0.06
 	neutrality = 0.03
 	#Negative (effects # in event file)
-	 air_cav_brigade = { soft_attack = -0.05 }
-	 cavalry_brigade = { soft_attack = -0.02 }
-	 engineer_brigade = { soft_attack = -0.01 }
-	 hq_brigade = { soft_attack = -0.02 }
-	 infantry_brigade = { soft_attack = -0.01 }
-	 light_mechanized_brigade = { soft_attack = -0.03 }
-	 marine_brigade = { soft_attack = -0.02 }
-	 militia_brigade = { soft_attack = -0.01 }
-	 partisan_brigade = { soft_attack = -0.01 }	
-	 motorized_brigade = { soft_attack = -0.02 }	
-	 bergsjaeger_brigade = { soft_attack = -0.02 }
+	 #air_cav_brigade = { soft_attack = -0.05 }
+	 #cavalry_brigade = { soft_attack = -0.02 }
+	 #engineer_brigade = { soft_attack = -0.01 }
+	 #hq_brigade = { soft_attack = -0.02 }
+	 #infantry_brigade = { soft_attack = -0.01 }
+	 #light_mechanized_brigade = { soft_attack = -0.03 }
+	 #marine_brigade = { soft_attack = -0.02 }
+	 #militia_brigade = { soft_attack = -0.01 }
+	 #partisan_brigade = { soft_attack = -0.01 }	
+	 #motorized_brigade = { soft_attack = -0.02 }	
+	 #bergsjaeger_brigade = { soft_attack = -0.02 }
 }
 
-mod_UN_mines_and_booby_traps_convention_ratified = {
+mod_UN_mines_and_booby_traps_convention_ratified = {										#TODO
 	#Positive
 	prestige = 0.05
 	neutrality = 0.02
 	#Negative (effects # in event file)
-	 air_cav_brigade = { soft_attack = -0.05 }
-	 cavalry_brigade = { soft_attack = -0.02 }
-	 engineer_brigade = { soft_attack = -0.01 }
-	 hq_brigade = { soft_attack = -0.02 }
-	 infantry_brigade = { soft_attack = -0.01 }
-	 light_mechanized_brigade = { soft_attack = -0.03 }
-	 marine_brigade = { soft_attack = -0.02 }
-	 militia_brigade = { soft_attack = -0.01 }
-	 partisan_brigade = { soft_attack = -0.01 }	
-	 motorized_brigade = { soft_attack = -0.02 }	
-	 bergsjaeger_brigade = { soft_attack = -0.02 }
+	 #air_cav_brigade = { soft_attack = -0.05 }
+	 #cavalry_brigade = { soft_attack = -0.02 }
+	 #engineer_brigade = { soft_attack = -0.01 }
+	 #hq_brigade = { soft_attack = -0.02 }
+	 #infantry_brigade = { soft_attack = -0.01 }
+	 #light_mechanized_brigade = { soft_attack = -0.03 }
+	 #marine_brigade = { soft_attack = -0.02 }
+	 #militia_brigade = { soft_attack = -0.01 }
+	 #partisan_brigade = { soft_attack = -0.01 }	
+	 #motorized_brigade = { soft_attack = -0.02 }	
+	 #bergsjaeger_brigade = { soft_attack = -0.02 }
 
 }
 
-mod_UN_mines_and_booby_traps_convention_voting_delay = {
+mod_UN_mines_and_booby_traps_convention_voting_delay = {										#TODO
 	#Negative
 	prestige = -0.05
 	neutrality = -0.02
 	#Positive(effects # in event file)
-	 air_cav_brigade = { soft_attack = 0.05 }
-	 cavalry_brigade = { soft_attack = 0.02 }
-	 engineer_brigade = { soft_attack = 0.01 }
-	 hq_brigade = { soft_attack = 0.02 }
-	 infantry_brigade = { soft_attack = 0.01 }
-	 light_mechanized_brigade = { soft_attack = 0.03 }
-	 marine_brigade = { soft_attack = 0.02 }
-	 militia_brigade = { soft_attack = 0.01 }
-	 partisan_brigade = { soft_attack = 0.01 }	
-	 motorized_brigade = { soft_attack = 0.02 }	
-	 bergsjaeger_brigade = { soft_attack = 0.02 }
+	 #air_cav_brigade = { soft_attack = 0.05 }
+	 #cavalry_brigade = { soft_attack = 0.02 }
+	 #engineer_brigade = { soft_attack = 0.01 }
+	 #hq_brigade = { soft_attack = 0.02 }
+	 #infantry_brigade = { soft_attack = 0.01 }
+	 #light_mechanized_brigade = { soft_attack = 0.03 }
+	 #marine_brigade = { soft_attack = 0.02 }
+	 #militia_brigade = { soft_attack = 0.01 }
+	 #partisan_brigade = { soft_attack = 0.01 }	
+	 #motorized_brigade = { soft_attack = 0.02 }	
+	 #bergsjaeger_brigade = { soft_attack = 0.02 }
 }
 
 ##################################################################################################
@@ -4319,7 +4318,7 @@ dissent = {
 	ruling_party_support = -0.001
 }
 dissent_nonlinear = {
-	global_ic = -0.01										#TODO
+	#global_ic = -0.01										#obsolete?
 	global_revolt_risk = 0.1
 }
 national_unity = {
@@ -4783,6 +4782,7 @@ pmod_tibetan_local_customs = {
 			name = pol_province_consumer_goods_modifier_desc
 			value = -0.20
 		}
+	}
 }
 
 mod_UN_membership_vetoed_delay = {
@@ -4831,6 +4831,15 @@ WP_memberD = {
     neutrality = -0.05
 	prestige = -0.05
 	suseptibility = 0.05
+}
+
+LUX_memberD = {
+    neutrality = -0.05
+	prestige = -0.05
+	suseptibility = 0.05
+}
+
+UE_vetoed_delay = {										#TODO change to flag?
 }
 
 war_games_campaign_delay = {
@@ -6618,5 +6627,23 @@ tropas_1979= {
 
 }
 tropas_1991= { 
+
+}
+tropas_1946_a= { 
+
+}
+tropas_1948_a= { 
+
+}
+tropas_1950_a= { 
+
+}
+tropas_1961_a= { 
+
+}
+tropas_1979_a= { 
+
+}
+tropas_1991_a= { 
 
 }

@@ -62,7 +62,7 @@ diplomatic_decisions = {
 	}
 	
 	#dec_DDR_demand_west_german_integration - East Germany demands West German integration
-	dec_DDR_form_germany = {
+	dec_DDR_demand_west_german_integration = {
 		category = international
 	    picture = "1986_Honecker_at_SED_parteitag"
 		
