@@ -845,6 +845,15 @@ social_democrat_idolg_GHN;Democratic Labor Party;;;;;;;;;;;;;x
 left_wing_radical_idolg_GHN;People's Action Party;;;;;;;;;;;;;x
 maoist_idolg_GHN;Workers' Party;;;;;;;;;;;;;x
 communist_idolg_GHN;Communist Party;;;;;;;;;;;;;x
+fascistic_idolg_GIN;Fascist Front;;;;;;;;;;;;;x
+paternal_auto_idolg_GIN;Democratic Republican Party;;;;;;;;;;;;;x
+social_cons_idolg_GIN;Democratic Justice Party;;;;;;;;;;;;;x
+market_liberal_idolg_GIN;Liberal Party;;;;;;;;;;;;;x
+social_liberal_idolg_GIN;Democratic Party;;;;;;;;;;;;;x
+social_democrat_idolg_GIN;Democratic Labor Party;;;;;;;;;;;;;x
+left_wing_radical_idolg_GIN;People's Party;;;;;;;;;;;;;x
+maoist_idolg_GIN;Workers' Party;;;;;;;;;;;;;x
+communist_idolg_GIN;Communist Party;;;;;;;;;;;;;x
 fascistic_idolg_GPF;Silver Legion of America;Légion d'argent américaine;Silver Legion of America;;Legión Plateada de América;;;;;;;;;x
 paternal_auto_idolg_GPF;America First Committee;Premier comité américain;America First Committee;;Primer Comité de América;;;;;;;;;x
 social_cons_idolg_GPF;Republican Party;Parti républicain;Republican Party;;Partido Republicano;;;;;;;;;x
@@ -908,15 +917,6 @@ social_democrat_idolg_GUB;Democratic Labor Party;;;;;;;;;;;;;x
 left_wing_radical_idolg_GUB;People's Party;;;;;;;;;;;;;x
 maoist_idolg_GUB;Workers' Party;;;;;;;;;;;;;x
 communist_idolg_GUB;Communist Party;;;;;;;;;;;;;x
-fascistic_idolg_GUI;Fascist Front;;;;;;;;;;;;;x
-paternal_auto_idolg_GUI;Democratic Republican Party;;;;;;;;;;;;;x
-social_cons_idolg_GUI;Democratic Justice Party;;;;;;;;;;;;;x
-market_liberal_idolg_GUI;Liberal Party;;;;;;;;;;;;;x
-social_liberal_idolg_GUI;Democratic Party;;;;;;;;;;;;;x
-social_democrat_idolg_GUI;Democratic Labor Party;;;;;;;;;;;;;x
-left_wing_radical_idolg_GUI;People's Party;;;;;;;;;;;;;x
-maoist_idolg_GUI;Workers' Party;;;;;;;;;;;;;x
-communist_idolg_GUI;Communist Party;;;;;;;;;;;;;x
 fascistic_idolg_GUM;Fascist Front;;;;;;;;;;;;;x
 paternal_auto_idolg_GUM;Democratic Republican Party;;;;;;;;;;;;;x
 social_cons_idolg_GUM;Democratic Justice Party;;;;;;;;;;;;;x

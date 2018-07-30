@@ -382,7 +382,7 @@ EVTNAME6223;The Bissau-Guinean War;;;;;;;;;;;;;x
 EVTDESC6223;Despite our best efforts, the war rages on. The insurgent government has managed to hold its territory and more armed rebel militias are ready to fight. Through backdoor diplomacy we know the insurgents are willing to negotiate, shall we take the opportunity and cease hostilities or take this war to the bitter end?;;;;;;;;;;;;;x
 EVTOPTA6223;Negotiate while we have the upper hand.;;;;;;;;;;;;;x
 EVTOPTB6223;We don't negotiate with terrorists.;;;;;;;;;;;;;x
-#GUI;Guinea;;;;;;;;;;;;;x
+#GIN;Guinea;;;;;;;;;;;;;x
 EVTNAME6230;The Guinean Independence;;;;;;;;;;;;;x
 EVTDESC6230;From the demands of guinean intellectuals to the recent popular uprisings, the nationalist sentiment in Guinea is now widespread and irreversible. The United Nations recognize the right of self determination of all peoples and the legitimacy of our rule in Guinea is hardly defensible. What shall be our position?;;;;;;;;;;;;;x
 EVTOPTA6230;Grant immediate independence ensuring good diplomatic relations.;;;;;;;;;;;;;x

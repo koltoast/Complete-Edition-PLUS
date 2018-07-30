@@ -108,3 +108,7 @@ events/IncendiaryWeaponsConvention_events							commented hidden_effects, seems 
 OTHER CHANGES
 localisation/SuspendedElections_loc									changed some variable names
 decisions/SuspendedElections_decisions								changed some variable names
+
+v1.3b by Roshindow	------------------------------------------------------------------------------------------------------------------
+ERROR FIXES
+Canged Guinea tag, from GUI to GIN, caused error and didn't follow ISO 3166-1 alpha-3

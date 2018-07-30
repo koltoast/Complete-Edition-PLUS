@@ -837,12 +837,12 @@ diplomatic_decisions = {
 	}		
 
   }
-  	GUI_1991 = {
+  	GIN_1991 = {
 		category = national
 		potential = {	
         ai = yes
           war = yes
-		  tag = GUI
+		  tag = GIN
 		  year = 1991
 		  
 		  not = { has_country_modifier = tropas_1991 }
@@ -858,7 +858,7 @@ diplomatic_decisions = {
 		
    effect = {
 				
-             load_oob = GUI_1991.txt		 		
+             load_oob = GIN_1991.txt		 		
 		     add_country_modifier = {
 				name = "tropas_1991"				
 				duration = 1460
