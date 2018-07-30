@@ -15,8 +15,8 @@ ORGANISATION_NAME_UE_short;UE;;;;;;;;;;;;;x;;
 ##################################################;;;;;;;;;;;;;;x
 # DECISION LOC ;;;;;;;;;;;;;;x
 ##################################################;;;;;;;;;;;;;;x
-dec_war_games_title;Declare War Games;;;;;;;;;;;;;x;;
-dec_war_games_desc;DESCRIPTION WILL GO HERE;;;;;;;;;;;;;x;;
+dec_war_games_title;Begin War Games;;;;;;;;;;;;;x;;
+dec_war_games_desc;To keep our military at the top of their game, we must have frequent war games where our soldiers, and command staff can be tested to ensure they're performing at peak efficiency.;;;;;;;;;;;;;x;;
 increasing_air_base_title;Increase Airbase;;;;;;;;;;;;;x;;
 increasing_air_base_desc;DESCRIPTION WILL GO HERE;;;;;;;;;;;;;x;;
 new_air_base_title;Build an Airbase;;;;;;;;;;;;;x;;
@@ -25,9 +25,9 @@ new_air_base_desc;DESCRIPTION WILL GO HERE;;;;;;;;;;;;;x;;
 # RELIGION LOC;;;;;;;;;;;;;;x
 ##################################################;;;;;;;;;;;;;;x
 atheism_religion;State Atheism;;;;;;;;;;;;;x;;
-atheism_religion_desc;State Atheism;;;;;;;;;;;;;x;;
+atheism_religion_desc;State Atheism is the idea that religion has no place within the political spectrum of a society and is most closely associated with Soviet style societies.;;;;;;;;;;;;;x;;
 ##################################################;;;;;;;;;;;;;;x
 # ATTITUDE LOC;;;;;;;;;;;;;;x
 ##################################################;;;;;;;;;;;;;;x
 permanent_revolution;Permenant Revolution;;;;;;;;;;;;;x;;
-permanent_revolution_desc;Permanent Revolution Description will go here;;;;;;;;;;;;;x;;
+permanent_revolution_desc;Permanent Revolution is a concept started by Marx and Engels but has since become closely associated with Leon Trotsky. The basic idea of Trotsky's theory is that in Russia the bourgeoisie would not carry out a thorough revolution which would institute political democracy and solve the land question. These measures were assumed to be essential to develop Russia economically. Therefore, it was argued the future revolution must be led by the proletariat who would not only carry through the tasks of the Bourgeois Democratic Revolution but would commence a struggle to surpass the bourgeois democratic revolution.;;;;;;;;;;;;;x;;

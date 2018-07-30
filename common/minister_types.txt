@@ -7,6 +7,7 @@ extremist_type = {
 dissent_increase = 0.01	
 neutrality = -0.02 
 global_revolt_risk = 0.01
+
 } 
 
 hardliner_type = {
@@ -17,6 +18,7 @@ threat_impact = 0.02
 
 bureaucrat_type = {
 global_money = 0.01
+
 } 
 
 administrator_type = {

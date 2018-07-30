@@ -125,7 +125,7 @@ national_identity = {
 	territorial_focus = {
     	cost = 0.5
         allow = {
-			ideology_group = allies
+			#ideology_group = allies
 			
         }
 		supply_consumption = -0.05
@@ -139,7 +139,7 @@ national_identity = {
     cultural_bias_focus = {
     	cost = 0.5
         allow = {
-			ideology_group = allies
+			#ideology_group = allies
 			
         }
 		supply_consumption = -0.025
@@ -153,7 +153,7 @@ national_identity = {
 	state_building_focus = {
     	cost = 0.5
         allow = {
-			ideology_group = allies
+			#ideology_group = allies
 			
         }
 
@@ -166,7 +166,7 @@ national_identity = {
 	corporate_focus = {
     	cost = 0.5
         allow = {
-			ideology_group = allies
+			#ideology_group = allies
 			
         }
 
@@ -179,7 +179,7 @@ national_identity = {
 	civic_focus = {
     	cost = 0.5
         allow = {
-			ideology_group = allies
+			#ideology_group = allies
 			
         }
 
@@ -192,7 +192,7 @@ national_identity = {
 	equality_focus = {
     	cost = 0.5
         allow = {
-			ideology_group = allies
+			#ideology_group = allies
 			
         }
 
@@ -205,7 +205,7 @@ national_identity = {
 	humanitarian_focus = {
     	cost = 0.5
         allow = {
-			ideology_group = allies
+			#ideology_group = allies
 			
         }
 
