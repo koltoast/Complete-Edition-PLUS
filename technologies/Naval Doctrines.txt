@@ -109,6 +109,9 @@ battlegroup_systemcoordination = {
     change = no
     doctrine = yes
 	
+	multilevel = yes
+	level = 3
+	
     allow = {}
 	traits = {}
 	battleship = { 
