@@ -1,0 +1,2032 @@
+### Nationalist China Transit Rights ###
+
+military_access = {
+	first = CHI
+	second = CGX
+	start_date = 1946.1.1
+	end_date = 1950.6.25
+}
+
+military_access = {
+	first = CHI
+	second = CSX
+	start_date = 1946.1.1
+	end_date = 1950.6.25
+}
+
+military_access = {
+	first = CGX
+	second = CHI
+	start_date = 1946.1.1
+	end_date = 1950.6.25
+}
+
+military_access = {
+	first = CSX
+	second = CHI
+	start_date = 1946.1.1
+	end_date = 1950.6.25
+}
+
+
+### Soviet Union Warsaw Transit Rights ###
+
+military_access = {
+	first = SOV
+	second = ALB
+	start_date = 1946.1.1
+	end_date = 1961.12.1
+}
+
+military_access = {
+	first = SOV
+	second = BUL
+	start_date = 1946.1.1
+	end_date = 1991.2.25
+}
+
+military_access = {
+	first = SOV
+	second = CZE
+	start_date = 1946.1.1
+	end_date = 1991.2.25
+}
+
+military_access = {
+	first = SOV
+	second = DDR
+	start_date = 1946.1.1
+	end_date = 1990.9.25
+}
+
+military_access = {
+	first = SOV
+	second = HUN
+	start_date = 1946.1.1
+	end_date = 1990.3.12
+}
+
+military_access = {
+	first = SOV
+	second = POL
+	start_date = 1946.1.1
+	end_date = 1990.1.1
+}
+
+military_access = {
+	first = SOV
+	second = ROM
+	start_date = 1946.1.1
+	end_date = 1989.12.22
+}
+
+military_access = {
+	first = SOV
+	second = AFG
+	start_date = 1979.12.24
+	end_date = 1991.12.31
+}
+
+#### West Berlin Transit Rights through SOV / DDR / FRG ####
+
+military_access = {
+	first = WBR
+	second = SOV
+	start_date = 1946.1.1
+	end_date = 1948.6.24
+}
+
+military_access = {
+	first = WBR
+	second = DDR
+	start_date = 1949.5.12
+	end_date = 1990.10.3
+}
+
+military_access = {
+	first = WBR
+	second = FRG
+	start_date = 1949.5.12
+	end_date = 1990.10.3
+}
+
+#### Soviet Union Transit Rights Abroad ####
+
+military_access = {
+	first = SOV
+	second = PRK
+	start_date = 1950.6.25
+	end_date = 1979.12.24
+}
+
+military_access = {
+	first = SOV
+	second = VIE
+	start_date = 1979.12.24
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = SOV
+	second = SYR
+	start_date = 1979.12.24
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = SOV
+	second = ETH
+	start_date = 1979.12.24
+	end_date = 1989.9.1
+}
+
+military_access = {
+	first = SOV
+	second = ANG
+	start_date = 1979.12.24
+	end_date = 1989.1.1
+}
+
+military_access = {
+	first = SOV
+	second = GIN
+	start_date = 1979.12.24
+	end_date = 1989.1.1
+}
+
+military_access = {
+	first = SOV
+	second = LBY
+	start_date = 1979.12.24
+	end_date = 1989.1.1
+}
+
+### USA / NATO Transit Rights ###
+
+military_access = {
+	first = USA
+	second = WBR
+	start_date = 1946.1.1
+	end_date = 1990.10.3
+}
+
+military_access = {
+	first = WBR
+	second = USA
+	start_date = 1946.1.1
+	end_date = 1990.10.3
+}
+
+military_access = {
+	first = WBR
+	second = ENG
+	start_date = 1946.1.1
+	end_date = 1990.10.3
+}
+
+military_access = {
+	first = WBR
+	second = FRA
+	start_date = 1946.1.1
+	end_date = 1990.10.3
+}
+
+military_access = {
+	first = USA
+	second = ENG
+	start_date = 1946.1.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = USA
+	start_date = 1946.1.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = CAN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = USA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = ITA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = DEN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = HOL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = LUX
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = FRA
+	start_date = 1946.1.1
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = USA
+	second = BEL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = BEL
+	second = FRA
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = HOL
+	second = FRA
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = DEN
+	second = FRA
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = ITA
+	second = FRA
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = CAN
+	second = FRA
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = LUX
+	second = FRA
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = ENG
+	second = FRA
+	start_date = 1946.1.1
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = FRA
+	second = USA
+	start_date = 1946.1.1
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = FRA
+	second = CAN
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = FRA
+	second = ITA
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = FRA
+	second = DEN
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = FRA
+	second = BEL
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = FRA
+	second = ENG
+	start_date = 1946.1.1
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = FRA
+	second = HOL
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = FRA
+	second = LUX
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = BEL
+	second = USA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = BEL
+	second = ENG
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = BEL
+	second = HOL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = BEL
+	second = LUX
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = BEL
+	second = CAN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = BEL
+	second = ITA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = BEL
+	second = DEN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = HOL
+	second = USA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = HOL
+	second = ENG
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = HOL
+	second = CAN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = HOL
+	second = ITA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = HOL
+	second = DEN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = HOL
+	second = BEL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = HOL
+	second = LUX
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = NOR
+	second = USA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = NOR
+	second = ENG
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = NOR
+	second = LUX
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = NOR
+	second = FRA
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = NOR
+	second = BEL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = BEL
+	second = NOR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = NOR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = NOR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRA
+	second = NOR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = HOL
+	second = NOR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = LUX
+	second = NOR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = LUX
+	second = ENG
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = LUX
+	second = USA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = LUX
+	second = BEL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = LUX
+	second = HOL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = LUX
+	second = CAN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = LUX
+	second = ITA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = LUX
+	second = DEN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = NOR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = ITA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = DEN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = BEL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = HOL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = LUX
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = ENG
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = USA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ITA
+	second = USA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ITA
+	second = ENG
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ITA
+	second = CAN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ITA
+	second = DEN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ITA
+	second = BEL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ITA
+	second = HOL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ITA
+	second = LUX
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = DEN
+	second = LUX
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = DEN
+	second = HOL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = DEN
+	second = BEL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = DEN
+	second = ITA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = DEN
+	second = CAN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = DEN
+	second = ENG
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = DEN
+	second = USA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = HOL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = ITA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = BEL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = CAN
+	start_date = 1946.1.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = DEN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = LUX
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = POR
+	second = ICL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = POR
+	second = USA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = POR
+	second = ENG
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = POR
+	second = CAN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = POR
+	second = ITA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = POR
+	second = NOR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = POR
+	second = DEN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = POR
+	second = BEL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = POR
+	second = HOL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = POR
+	second = LUX
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ICL
+	second = POR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ICL
+	second = USA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ICL
+	second = ENG
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ICL
+	second = CAN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ICL
+	second = ITA
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ICL
+	second = NOR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ICL
+	second = DEN
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ICL
+	second = BEL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ICL
+	second = HOL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ICL
+	second = LUX
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = POR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = ICL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = POR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = ICL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = POR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = ICL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ITA
+	second = POR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ITA
+	second = ICL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = NOR
+	second = POR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = NOR
+	second = ICL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = DEN
+	second = POR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = DEN
+	second = ICL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = BEL
+	second = POR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = BEL
+	second = ICL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = HOL
+	second = POR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = HOL
+	second = ICL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = LUX
+	second = POR
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = LUX
+	second = ICL
+	start_date = 1949.4.4
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRG
+	second = POR
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRG
+	second = USA
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRG
+	second = ENG
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRG
+	second = CAN
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRG
+	second = ITA
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRG
+	second = NOR
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRG
+	second = DEN
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRG
+	second = BEL
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRG
+	second = HOL
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRG
+	second = LUX
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = FRG
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = FRG
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = FRG
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ITA
+	second = FRG
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = NOR
+	second = FRG
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = DEN
+	second = FRG
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = BEL
+	second = FRG
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = HOL
+	second = FRG
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = LUX
+	second = FRG
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = GRE
+	second = POR
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = GRE
+	second = USA
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = GRE
+	second = ENG
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = GRE
+	second = CAN
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = GRE
+	second = ITA
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = GRE
+	second = NOR
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = GRE
+	second = DEN
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = GRE
+	second = BEL
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = GRE
+	second = HOL
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = GRE
+	second = LUX
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = GRE
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = GRE
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = GRE
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ITA
+	second = GRE
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = NOR
+	second = GRE
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = DEN
+	second = GRE
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = BEL
+	second = GRE
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = HOL
+	second = GRE
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = LUX
+	second = GRE
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = TUR
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = GRE
+	second = TUR
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = TUR
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = TUR
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ITA
+	second = TUR
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = NOR
+	second = TUR
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = DEN
+	second = TUR
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = BEL
+	second = TUR
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = HOL
+	second = TUR
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = LUX
+	second = TUR
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = TUR
+	second = GRE
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+military_access = {
+	first = TUR
+	second = USA
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = TUR
+	second = ENG
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = TUR
+	second = CAN
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = TUR
+	second = ITA
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = TUR
+	second = NOR
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = TUR
+	second = DEN
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = TUR
+	second = BEL
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = TUR
+	second = HOL
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = TUR
+	second = LUX
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = SPA
+	second = GRE
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = SPA
+	second = USA
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = SPA
+	second = ENG
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = SPA
+	second = CAN
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = SPA
+	second = ITA
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = SPA
+	second = NOR
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = SPA
+	second = DEN
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = SPA
+	second = BEL
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = SPA
+	second = HOL
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = SPA
+	second = LUX
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = SPA
+	second = TUR
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = SPA
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = GRE
+	second = SPA
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = SPA
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = CAN
+	second = SPA
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ITA
+	second = SPA
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = NOR
+	second = SPA
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = DEN
+	second = SPA
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = BEL
+	second = SPA
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = HOL
+	second = SPA
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = LUX
+	second = SPA
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRA
+	second = GRE
+	start_date = 1952.2.18
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = GRE
+	second = FRA
+	start_date = 1952.2.18
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = FRA
+	second = SPA
+	start_date = 1982.5.30
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = SPA
+	second = FRA
+	start_date = 1982.5.30
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = FRA
+	second = TUR
+	start_date = 1952.2.18
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = TUR
+	second = FRA
+	start_date = 1952.2.18
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = FRA
+	second = ICL
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = ICL
+	second = FRA
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = FRA
+	second = POR
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = POR
+	second = FRA
+	start_date = 1949.4.4
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = FRA
+	second = FRG
+	start_date = 1949.5.1
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = FRG
+	second = FRA
+	start_date = 1949.5.1
+	end_date = 1967.10.16
+}
+
+military_access = {
+	first = POR
+	second = FRG
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ICL
+	second = FRG
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRG
+	second = ICL
+	start_date = 1949.5.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = GRE
+	second = FRG
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRG
+	second = GRE
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = TUR
+	second = FRG
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRG
+	second = TUR
+	start_date = 1952.2.18
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = SPA
+	second = FRG
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = FRG
+	second = SPA
+	start_date = 1982.5.30
+	end_date = 1991.12.31
+}
+
+#### Rhodesia Transit Rights ####
+
+military_access = {
+    first = ENG
+    second = RHO
+    start_date = 1953.8.1
+    end_date = 1965.11.11
+}
+
+military_access = {
+    first = RHO
+    second = ENG
+    start_date = 1953.8.1
+    end_date = 1965.11.11
+}
+
+military_access = {
+    first = ENG
+    second = MLW
+    start_date = 1963.12.31
+    end_date = 1964.7.6
+}
+
+military_access = {
+    first = MLW
+    second = ENG
+    start_date = 1963.12.31
+    end_date = 1964.7.6
+}
+
+military_access = {
+    first = RHO
+    second = MLW
+    start_date = 1963.2.1
+    end_date = 1963.12.31
+}
+
+military_access = {
+    first = MLW
+    second = RHO
+    start_date = 1963.2.1
+    end_date = 1963.12.31
+}
+
+military_access = {
+    first = RHO
+    second = ZMB
+    start_date = 1963.2.1
+    end_date = 1964.10.24
+}
+
+military_access = {
+    first = ZMB
+    second = RHO
+    start_date = 1963.2.1
+    end_date = 1964.10.24
+}
+
+#military_access = { ##Suspended 
+#        first = ENG
+#        second = HNK
+#        start_date = 1946.1.1
+#        end_date = 1991.12.31
+#}
+
+#military_access = { ##Suspended
+#        first = HNK
+#        second = ENG
+#        start_date = 1946.1.1
+#        end_date = 1991.12.31
+#}
+
+#### USA Transit Rights Abroad ####
+
+military_access = {
+	first = USA
+	second = JAP
+	start_date = 1946.1.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = AST
+	start_date = 1951.9.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = USA
+	second = NZL
+	start_date = 1951.9.1
+	end_date = 1985.8.6
+}
+
+military_access = {
+    first = USA
+    second = PHI
+    start_date = 1946.1.1
+    end_date = 1991.12.31
+}
+
+military_access = {
+    first = USA
+    second = KOR
+    start_date = 1950.6.25
+    end_date = 1991.12.31
+}
+
+military_access = {
+    first = USA
+    second = SVI
+    start_date = 1950.6.25
+    end_date = 1979.12.24
+}
+
+military_access = {
+    first = USA
+    second = CUB
+    start_date = 1946.1.1
+    end_date = 1959.1.1
+}
+
+military_access = {
+    first = USA
+    second = AUS
+    start_date = 1946.1.1
+    end_date = 1961.12.11
+}
+
+military_access = {
+    first = USA
+    second = ISR
+    start_date = 1950.6.25
+    end_date = 1991.12.31
+}
+
+military_access = {
+    first = USA
+    second = MOR
+    start_date = 1950.6.25
+    end_date = 1979.12.24
+}
+
+military_access = {
+    first = USA
+    second = CHI
+    start_date = 1946.1.1
+    end_date = 1950.6.25
+}
+
+military_access = {
+    first = USA
+    second = SIA
+    start_date = 1946.1.1
+    end_date = 1979.12.24
+}
+
+military_access = {
+    first = USA
+    second = PER 
+    start_date = 1953.8.15
+    end_date = 1979.12.24
+}
+
+military_access = {
+    first = USA
+    second = SAU
+    start_date = 1946.1.1
+    end_date = 1991.12.31
+}
+
+military_access = {
+    first = USA
+    second = IND
+    start_date = 1946.1.1
+    end_date = 1950.6.25
+}
+
+military_access = {
+	first = USA
+	second = PAN
+	start_date = 1946.1.1
+	end_date = 1977.9.7
+}
+
+#### United Kingdom Transit Rights Abroad ####
+
+military_access = {
+    first = ENG
+    second = AST
+    start_date = 1946.1.1
+    end_date = 1991.12.31
+}
+
+military_access = {
+    first = ENG
+    second = NZL
+    start_date = 1946.1.1
+    end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = JAP
+	start_date = 1946.1.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = ENG
+	second = CYP
+	start_date = 1960.1.1
+	end_date = 1991.12.31
+}
+
+#### France Transit Rights Abroad ####
+
+military_access = {
+    first = FRA
+    second = IDC
+    start_date = 1946.1.1
+    end_date = 1991.12.31
+}
+
+#### Indochina - South Vietnam Transit Rights ####
+
+military_access = {
+    first = SVI
+    second = IDC
+    start_date = 1946.1.1
+    end_date = 1954.7.20
+}
+
+military_access = {
+    first = IDC
+    second = SVI
+    start_date = 1946.1.1
+    end_date = 1954.7.20
+}
+
+#### ANZUS Transit Rights ###
+
+military_access = {
+	first = AST
+	second = USA
+	start_date = 1951.9.1
+	end_date = 1991.12.31
+}
+
+military_access = {
+	first = NZL
+	second = USA
+	start_date = 1951.9.1
+	end_date = 1985.8.6
+}
+
+military_access = {
+    first = AST
+    second = NZL
+    start_date = 1951.9.1
+    end_date = 1991.12.31
+}
+
+military_access = {
+    first = NZL
+    second = AST
+    start_date = 1951.9.1
+    end_date = 1991.12.31
+}
+
+#### Yugoslavia - Albania Transit Rights ###
+
+military_access = {
+	first = YUG
+	second = ALB
+	start_date = 1946.1.1
+	end_date = 1948.6.28
+}

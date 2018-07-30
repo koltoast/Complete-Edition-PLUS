@@ -13,20 +13,20 @@ event_opposition_rallies;Opposition Rallies;;;;;;;;;;;;;x
 ##################################################;;;;;;;;;;;;;;x
 ## Global ##;;;;;;;;;;;;;;x
 #Player;;;;;;;;;;;;;;x
-dec_suspend_elections_title;Suspend Elections;;;;;;;;;;;;;x
-dec_suspend_elections_desc;Attempt to suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. This action might heavily destabilize our nation because we lack the two thirds party popularity majority required for our party to unilaterally make such a decision.;;;;;;;;;;;;;x
-dec_suspend_elections_majority_title;Suspend Elections;;;;;;;;;;;;;x
-dec_suspend_elections_majority_desc;Attempt to suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. The legitimacy of our decision is bolstered by our two thirds majority in the legislature, and consequently we do not expect to face a great deal of resistance or dissent.;;;;;;;;;;;;;x
+dec_suspend_elections_player_title;Suspend Elections;;;;;;;;;;;;;x
+dec_suspend_elections_player_desc;Attempt to suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. This action might heavily destabilize our nation because we lack the two thirds party popularity majority required for our party to unilaterally make such a decision.;;;;;;;;;;;;;x
+dec_suspend_elections_majority_player_title;Suspend Elections;;;;;;;;;;;;;x
+dec_suspend_elections_majority_player_desc;Attempt to suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. The legitimacy of our decision is bolstered by our two thirds majority in the legislature, and consequently we do not expect to face a great deal of resistance or dissent.;;;;;;;;;;;;;x
 ;;;;;;;;;;;;;;x
 #AI;;;;;;;;;;;;;;x
-ai_dec_suspend_elections_title;Suspend Elections;;;;;;;;;;;;;x
-ai_dec_suspend_elections_desc;Attempt to suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. This action might heavily destabilize our nation because we lack the two thirds party popularity majority required for our party to unilaterally make such a decision.;;;;;;;;;;;;;x
-ai_dec_suspend_elections_majority_title;Suspend Elections;;;;;;;;;;;;;x
-ai_dec_suspend_elections_majority_desc;Attempt to suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. The legitimacy of our decision is bolstered by our two thirds majority in the legislature, and consequently we do not expect to face a great deal of resistance or dissent.;;;;;;;;;;;;;x
-ai_dec_suspend_elections_authoritarian_title;Suspend Elections;;;;;;;;;;;;;x
-ai_dec_suspend_elections_authoritarian_desc;Suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. This action might heavily destabilize our nation because we lack the two thirds party popularity majority required for our party to unilaterally make such a decision.;;;;;;;;;;;;;x
-ai_dec_suspend_elections_majority_authoritarian_title;Suspend Elections;;;;;;;;;;;;;x
-ai_dec_suspend_elections_majority_authoritarian_desc;Suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. The legitimacy of our decision is bolstered by our two thirds majority in the legislature, and consequently we do not expect to face a great deal of resistance or dissent.;;;;;;;;;;;;;x
+dec_suspend_elections_ai_title;Suspend Elections;;;;;;;;;;;;;x
+dec_suspend_elections_ai_desc;Attempt to suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. This action might heavily destabilize our nation because we lack the two thirds party popularity majority required for our party to unilaterally make such a decision.;;;;;;;;;;;;;x
+dec_suspend_elections_majority_ai_title;Suspend Elections;;;;;;;;;;;;;x
+dec_suspend_elections_majority_ai_desc;Attempt to suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. The legitimacy of our decision is bolstered by our two thirds majority in the legislature, and consequently we do not expect to face a great deal of resistance or dissent.;;;;;;;;;;;;;x
+dec_suspend_elections_authoritarian_ai_title;Suspend Elections;;;;;;;;;;;;;x
+dec_suspend_elections_authoritarian_ai_desc;Suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. This action might heavily destabilize our nation because we lack the two thirds party popularity majority required for our party to unilaterally make such a decision.;;;;;;;;;;;;;x
+dec_suspend_elections_majority_authoritarian_ai_title;Suspend Elections;;;;;;;;;;;;;x
+dec_suspend_elections_majority_authoritarian_ai_desc;Suspend elections with a piece of legislation transferring all authority and legitimacy to our ruling party alone. The legitimacy of our decision is bolstered by our two thirds majority in the legislature, and consequently we do not expect to face a great deal of resistance or dissent.;;;;;;;;;;;;;x
 ;;;;;;;;;;;;;;x
 ##################################################;;;;;;;;;;;;;;x
 # Events ;;;;;;;;;;;;;;x

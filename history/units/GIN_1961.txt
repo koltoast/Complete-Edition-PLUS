@@ -1,0 +1,47 @@
+theatre =
+{
+	name = "Home Theatre"
+	location = 4311
+	regiment = { type = hq_brigade name = "Theatre HQ" historical_model = 0 }
+
+	army =
+	{
+		name = "1st Army"
+		location = 4311
+		regiment = { type = hq_brigade name = "Army HQ" historical_model = 0 }
+
+		division =
+		{
+			name = "1st Division"
+			location = 4311
+			regiment = { type = infantry_brigade name = "1st Infantry Brigade" historical_model = 1 strength = 40 experience = 4 }
+			regiment = { type = militia_brigade name = "1st Militia Brigade" historical_model = 1 strength = 40 experience = 4 }
+			regiment = { type = infantry_brigade name = "2nd Infantry Brigade" historical_model = 1 strength = 40 experience = 4 }
+		}
+		division =
+		{
+			name = "2nd Division"
+			location = 4405
+			regiment = { type = infantry_brigade name = "3rd Infantry Brigade" historical_model = 1 strength = 40 experience = 5 }
+			regiment = { type = infantry_brigade name = "4th Infantry Brigade" historical_model = 0 strength = 40 experience = 5 }
+			regiment = { type = militia_brigade name = "2nd Militia Brigade" historical_model = 0 strength = 39 experience = 4 }
+		}
+		division =
+		{
+			name = "3rd Division"
+			location = 4310
+			regiment = { type = infantry_brigade name = "5th Infantry Brigade" historical_model = 1 strength = 39 experience = 5 }
+			regiment = { type = militia_brigade name = "3rd Militia Brigade" historical_model = 0 strength = 39 experience = 5 }
+			regiment = { type = militia_brigade name = "4th Militia Brigade" historical_model = 1 strength = 39 experience = 5 }
+		}
+	}
+}
+division =
+{
+	name = "4th Division"
+	location = 9999
+	pool = yes
+	regiment = { type = militia_brigade name = "5th Militia Brigade" historical_model = 1 strength = 39 experience = 5 }
+	regiment = { type = militia_brigade name = "6th Militia Brigade" historical_model = 1 strength = 39 experience = 5 }
+	regiment = { type = infantry_brigade name = "6th Infantry Brigade" historical_model = 1 strength = 39 experience = 5 }
+}

@@ -8,7 +8,7 @@ diplomatic_decisions = {
 				this = { is_org_member = XUN }
 			    is_major = yes
 			    economy_rating_greater = 4				
-				NOT = { has_country_modifier = UN_ARMSEMBARGO }
+				NOT = { has_country_flag = UN_ARMSEMBARGO }
 				not = { money = 10000 }
                  				
 		}
@@ -22,7 +22,7 @@ diplomatic_decisions = {
 		
 		effect = {
             random_country = { 
-			limit = { not = { tag = this } not = { war_with = this } relation = { who = this value = 100 } NOT = { has_country_modifier = RmoneyONU }
+			limit = { not = { tag = this } not = { war_with = this } relation = { who = this value = 100 } NOT = { has_country_modifier = GmoneyONU }
 		    money = 100000 } 
 			money = -10000 this = { money = 10000 } 					
 			  add_country_modifier = {
@@ -42,7 +42,7 @@ diplomatic_decisions = {
 		potential = {	
 				this = { is_org_member = XUN }
 				is_major = no
-				NOT = { has_country_modifier = UN_ARMSEMBARGO }
+				NOT = { has_country_flag = UN_ARMSEMBARGO }
 				not = { money = 1000 }
                 				
 		}
@@ -56,7 +56,7 @@ diplomatic_decisions = {
 		
 		effect = {
             random_country = { 
-			limit = { not = { tag = this } not = { war_with = this } relation = { who = this value = 100 } NOT = { has_country_modifier = RmoneyONU2 } 
+			limit = { not = { tag = this } not = { war_with = this } relation = { who = this value = 100 } NOT = { has_country_modifier = GmoneyONU2 } 
 		    money = 10000 } 
 			money = -1000 this = { money = 1000 } 					
 			 add_country_modifier = {
@@ -89,7 +89,7 @@ diplomatic_decisions = {
 		
 		effect = {
             random_country = { 
-			limit = { not = { tag = this } not = { war_with = this } relation = { who = this value = 150 } NOT = { has_country_modifier = RmoneyONU }
+			limit = { not = { tag = this } not = { war_with = this } relation = { who = this value = 150 } NOT = { has_country_modifier = GmoneyONU }
 		    money = 100000 }
 			money = -10000 this = { money = 10000 } 					
 			 add_country_modifier = {
@@ -121,7 +121,7 @@ diplomatic_decisions = {
 		
 		effect = {
             random_country = { 
-			limit = { not = { tag = this } not = { war_with = this } relation = { who = this value = 150 } NOT = { has_country_modifier = RmoneyONU2 } 
+			limit = { not = { tag = this } not = { war_with = this } relation = { who = this value = 150 } NOT = { has_country_modifier = GmoneyONU2 } 
 		    money = 10000 } 
 			money = -1000 this = { money = 1000 } 					
 			 add_country_modifier = {

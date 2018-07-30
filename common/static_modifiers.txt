@@ -1,0 +1,561 @@
+# All global modifiers are here.  They are applied from certain game-features.
+#
+# Effects are fully scriptable here.
+
+
+#these names can NOT be removed or changes, as the code uses them....
+
+##########################################################################
+# Difficulty Modifiers
+##########################################################################
+
+very_easy_player = {
+
+	global_revolt_risk = -3
+	global_resources = 0.5
+	supply_consumption = -0.25
+	
+	supply_throughput = 1.0
+	naval_base_efficiency = 1.0
+	recon_satellite_level = 0.5
+}
+
+easy_player = {
+	global_revolt_risk = -1
+	global_resources = 0.25
+	supply_throughput = 0.25
+	naval_base_efficiency = 0.25
+	recon_satellite_level = 0.25
+}
+
+hard_player = {
+	global_resources = -0.1
+	supply_throughput = -0.25
+	naval_base_efficiency = -0.25
+	recon_satellite_level = -0.1
+}
+
+very_hard_player = {
+	global_resources = -0.25
+	supply_throughput = -0.5
+	naval_base_efficiency = -0.5
+	recon_satellite_level = -0.25
+}
+
+
+
+very_easy_ai = {
+	global_resources = -0.25
+
+}
+
+easy_ai = {
+}
+
+hard_ai = {
+	global_resources = 0.25
+	supply_consumption = -0.25
+	supply_throughput = 0.25
+	naval_base_efficiency = 0.25
+}
+
+very_hard_ai = {
+	global_resources = 1.0
+	supply_consumption = -0.5
+	supply_throughput = 0.5
+	naval_base_efficiency = 0.5
+
+}
+
+##########################################################################
+# Provincial Static Modifiers
+##########################################################################
+
+overseas = {
+	local_manpower_modifier = -0.75		#75% penalty on manpower.
+	local_resources = -0.50
+	local_counter_espionage = -0.3
+}
+
+coastal = {
+	local_counter_espionage = 0.3
+}
+
+non_coastal = {
+}
+
+coastal_sea = {
+}
+
+sea_zone = {
+}
+
+land_province = {
+	attrition = 1
+}
+
+
+blockaded = 
+{
+}
+
+no_adjacent_controlled = {
+}
+
+
+non_core = {
+	local_manpower_modifier = -0.75
+	local_resources = -0.5
+	local_counter_espionage = -0.5
+}
+
+occupied = {
+	local_revolt_risk = 2			#2% revolt risk!
+}
+
+revolt_risk = {
+	local_manpower_modifier = -0.02
+	local_resources = -0.02
+}
+
+nationalism = {
+	local_revolt_risk = 0.3			#0.3% for each year revolt risk!
+	minimum_revolt_risk = 0.3		#0.3% for each year revolt risk!
+}
+
+manpower = {
+}
+
+guerrillas_support = {
+	local_revolt_risk_percentage = 1
+}
+
+guerrillas_conquer = {
+	local_revolt_risk = 10
+}
+
+##########################################################################
+# Event Country Static Modifiers
+##########################################################################
+nato_doctrines_improved = {
+	flexible_modifier = { 
+		nato_doctrine1_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05
+		}
+	}
+}	
+
+warsaw_doctrines_improved = {
+	flexible_modifier = { 
+		warsaw_doctrine1_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05			
+		}
+	}
+}
+
+land_technology_improved = {
+	flexible_modifier = { 
+		land_doctrine1_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05			
+		}
+		land_doctrine2_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05			
+		}	
+		land_tech1_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05			
+		}
+		land_tech2_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05			
+		}		
+	}
+}
+
+naval_technology_improved = {
+	flexible_modifier = { 
+		naval_doctrine1_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05			
+		}
+		naval_doctrine2_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05			
+		}	
+		naval_tech1_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05			
+		}
+		naval_tech2_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05			
+		}	
+		naval_tech3_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05			
+		}		
+	}
+}
+
+air_technology_improved = {
+	flexible_modifier = { 
+		air_doctrine1_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05			
+		}
+		air_doctrine2_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05			
+		}	
+		air_tech1_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05			
+		}
+		air_tech2_folder_time = {
+			name = nato_doctrine1_folder_time
+			value = 0.05			
+		}			
+	}
+}
+
+##########################################################################
+# Rebellion province modifiers 
+##########################################################################
+
+algerian_fln_revolt = {
+	local_revolt_risk = 10
+}
+
+phatet_lao_revolt = {
+	local_revolt_risk = 10
+}
+
+tibetan_revolt = {
+	local_revolt_risk = 10
+}
+
+viet_cong_revolt = {
+	local_revolt_risk = 10
+}
+
+hukbalahap_revolt = {
+
+	local_revolt_risk = 10
+}
+
+indian_revolt = {
+	local_revolt_risk = 10
+}
+
+pakistani_revolt = {
+	local_revolt_risk = 10
+}
+
+
+
+##########################################################################
+# Global Static Modifiers
+##########################################################################
+
+base_values = {
+	party_size_bonus = 0 # how much the smaller get weaker
+	party_populatity_time = 12 #in months
+	party_popularity_bonus = 0.10 #% per change
+	party_max_size = 50 #% nominal size
+	population_growth = 0.02
+	global_revolt_risk = -0.1
+	spy_daily = 3.0
+	flexible_modifier = {
+			services_workers_percent = {
+				name = services_workers_percent
+				value = 0.1
+			}
+			dvi_services_modifier = {
+				name = dvi_services_modifier
+				value = 2.5
+			}
+		}
+}
+
+war = {
+	max_war_exhaustion = 100			#base max at war.
+	war_exhaustion = 0.041			#about 1/24 increase each month
+}
+
+peace = {
+	max_war_exhaustion = 100			#base max at peace.
+	war_exhaustion = -0.041
+}
+
+war_exhaustion = {
+  national_unity = -0.04
+  ruling_party_support = -0.01
+  dissent_increase = 0.01
+  global_revolt_risk = 0.1
+  neutrality_change = 0.1
+}
+
+luck = {
+}
+
+badboy = {
+}
+
+prestige = {
+	ruling_party_support = 0.001
+}
+
+land_maintenance = {
+}
+
+naval_maintenance = {
+}
+
+initial_mobilization = {
+	reinforcement_bonus = 1.0	# each reinforcement produced also produces one bonus reinforcement
+}
+dissent = {
+	ruling_party_support = -0.001
+}
+dissent_nonlinear = {
+	#global_ic = -0.01										#obsolete?
+	global_revolt_risk = 0.1
+}
+national_unity = {
+	dissent_increase = 0.001
+	partisan_efficiency = 0.1
+	ruling_party_support = 1.0
+}
+
+neutrality = {
+	drift_speed = 0.05
+	suseptibility = 1
+}
+
+doomsday_clock = {
+	suseptibility = 0.01
+	prestige = 0.5
+	neutrality_change = -0.003
+}
+
+defcon_5 = {
+	supply_consumption = -0.75
+	fuel_consumption = -0.75										#TODO
+}
+
+defcon_4 = {
+	supply_consumption = -0.55
+	fuel_consumption = -0.55										#TODO
+}
+
+defcon_3 = {
+	supply_consumption = -0.25
+	fuel_consumption = -0.25										#TODO
+}
+
+defcon_2 = {
+	
+}
+
+defcon_1 = {
+	
+}
+
+major_nation = {
+  war_exhaustion = 0.0205			#about 1/24 increase each month
+}
+##########################################################################
+# Diplomacy Static Modifiers
+##########################################################################
+
+align_towards_allies = {
+	align_towards = 1.0
+}
+
+align_towards_comintern = {
+	align_towards = 1.0
+}
+
+##########################################################################
+# Espionage Modifiers
+##########################################################################
+
+spy_lower_national_unity = {
+	national_unity = -0.02
+}
+
+spy_raise_national_unity = {
+	national_unity = 0.05
+}
+
+disrupt_production = {
+	unit_repair = -0.20
+}
+disrupt_mobilization = {
+	unit_repair = -0.20
+}
+disrupt_repair = {
+	unit_repair = -0.20
+}
+disrupt_research = {
+	research_efficiency = -0.15
+}
+
+spy_lower_neutrality = {
+	neutrality_change = -0.003
+}
+
+spy_support_resistance = {
+	partisan_efficiency = 5
+}
+
+# Spycard modifiers 
+
+spycard_dissent = {
+	dissent_increase = 0.03
+}
+spycard_decrease_ruling_party_support = {
+	ruling_party_support = -2.5
+}
+spycard_increase_ruling_party_support= {
+	ruling_party_support = 2.5
+}
+
+spycard_offensive_test = {
+	prestige = -2
+}
+
+false_flag_operation = {
+	prestige = -2
+}
+
+spycard_increase_spy_visiblity = {
+  spy_visibility = 0.5
+}
+
+spyaction_threaten_diplomat = {
+   threaten_diplomat = 60
+}
+
+spycard_faction_alignment_WARSAW = {
+		flexible_modifier = {
+			drifting_speed_allies = {
+				name = drifting_speed_comintern
+				value = 4
+			}
+		}
+}
+
+spycard_faction_alignment_NATO = {
+		flexible_modifier = {
+			drifting_speed_allies = {
+				name = drifting_speed_allies
+				value = 4
+			}
+		}
+}
+
+spycard_faction_alignment_NEUTRAL = {
+		flexible_modifier = {
+			drifting_speed_allies = {
+				name = drifting_speed_allies
+				value = -4
+			}
+		}
+		flexible_modifier = {
+			drifting_speed_comintern = {
+				name = drifting_speed_comintern
+				value = -4
+			}
+		}
+}
+
+spycard_military_deception = {
+	military_deception_modifier = 0.5
+}
+
+spycard_military_disinformation = {
+	flexible_modifier = {
+		military_disinformation = {
+			name = military_disinformation
+			value = 1
+		}
+	}
+}
+
+
+Nuclear_Sabotage = {
+	flexible_modifier = {
+		factory_centrifuges_modifier= {
+			name = factory_centrifuges_modifier
+			value = -0.33
+			type = economy_building
+		}
+	}
+}
+
+Nuclear_Embargo = {
+	flexible_modifier = {
+		factory_centrifuges_modifier= {
+			name = factory_centrifuges_modifier
+			value = -0.66
+			type = economy_building
+		}
+	}
+	flexible_modifier = {
+		nuclear_tech1_time = {
+			name = nuclear_tech1_time
+			value = 0.66
+			type = folder
+		}
+	}
+}
+
+
+spyaction_counter_espionage = {
+	local_counter_espionage = 0.75
+}
+
+spyaction_infiltrate_counter_espionage = {
+	local_counter_espionage = -0.33
+}
+
+spyaction_increase_revolt_risk = {
+	local_revolt_risk = 2
+}
+
+spyaction_disturb_logistics = {
+	local_infrastructure = -0.5
+}
+
+
+##########################################################################
+# Unit Modifiers
+##########################################################################
+
+momentum_temporary_trait = {
+	land_organisation 	= 0.05
+	org_regain		= 0.2
+}
+
+momentum_first_time = 	   {
+	org_regain		= 0.1
+}
+
+superior_leader =	   {
+	org_regain    		= 0.1
+}
+
+momentum_country_unity =   {
+	national_unity		= 0.01
+}
+
+##########################################################################
+
+tutorial_modifier =   {
+	national_unity		= 0.01
+}

@@ -181,7 +181,7 @@ country_event = {
 			this = { leave_faction = comintern }
 			any_country = { leave_alliance = THIS }
 			any_country = { end_war = THIS }			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 			random = {
 				chance = 25
@@ -280,7 +280,7 @@ country_event = {
 			this = { leave_faction = comintern }
 			any_country = { leave_alliance = THIS }
 			any_country = { end_war = THIS }			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 			random = {
 				chance = 25
@@ -376,7 +376,7 @@ country_event = {
 			this = { leave_faction = comintern }
 			any_country = { leave_alliance = THIS }
 			any_country = { end_war = THIS }			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 			random = {
 				chance = 25
@@ -474,7 +474,7 @@ country_event = {
 			this = { leave_faction = comintern }
 			any_country = { leave_alliance = THIS }
 			any_country = { end_war = THIS }			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 			random = {
 				chance = 25
@@ -570,7 +570,7 @@ country_event = {
 			this = { leave_faction = comintern }
 			any_country = { leave_alliance = THIS }
 			any_country = { end_war = THIS }
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 			random = {
 				chance = 25
@@ -668,7 +668,7 @@ country_event = {
 			this = { leave_faction = comintern }
 			any_country = { leave_alliance = THIS }
 			any_country = { end_war = THIS }
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 			random = {
 				chance = 25
@@ -765,7 +765,7 @@ country_event = {
 			this = { leave_faction = comintern }
 			any_country = { leave_alliance = THIS }
 			any_country = { end_war = THIS }
-			do_election = THIS	
+			#do_election = THIS										#TODO	
             start_election = this			
 			random = {
 				chance = 25
@@ -863,7 +863,7 @@ country_event = {
 			this = { leave_faction = comintern }
 			any_country = { leave_alliance = THIS }
 			any_country = { end_war = THIS }
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 			random = {
 				chance = 25
@@ -961,7 +961,7 @@ country_event = {
 			this = { leave_faction = comintern }
 			any_country = { leave_alliance = THIS }
 			any_country = { end_war = THIS }			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 			random = {
 				chance = 25
@@ -1061,7 +1061,7 @@ country_event = {
 			this = { leave_faction = comintern }
 			any_country = { leave_alliance = THIS }
 			any_country = { end_war = THIS }			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 			random = {
 				chance = 25
@@ -1159,7 +1159,7 @@ country_event = {
 			this = { leave_faction = comintern }
 			any_country = { leave_alliance = THIS }
 			any_country = { end_war = THIS }			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 			random = {
 				chance = 25
@@ -1257,7 +1257,7 @@ country_event = {
 			this = { leave_faction = comintern }
 			any_country = { leave_alliance = THIS }
 			any_country = { end_war = THIS }			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 			random = {
 				chance = 25
@@ -1355,7 +1355,7 @@ country_event = {
 			this = { leave_faction = comintern }
 			any_country = { leave_alliance = THIS }
 			any_country = { end_war = THIS }			
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
 			random = {
 				chance = 25

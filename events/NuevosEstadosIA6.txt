@@ -21,150 +21,149 @@ country_event = {
 	mean_time_to_happen = { months = 1 }
 
 	option = {
-	name = "OK"
-	ai_chance = { factor = 100 }
-    	    any_core = { 
-			    limit = { 					
-					controlled_by = REB
-					not = { owned_by = this }
-                }
-             change_controller  = this				
-			}		
-			any_owned = { 
-				limit = {
-					controlled_by = REB
-					owned_by = THIS
-				}
-				change_controller = THIS
-			}				
-            supplies = 1000000
-			fuel = 1000000			
-			this = { leave_faction = allies }
-			this = { leave_faction = comintern }
-			any_country = { leave_alliance = THIS }
-			any_country = { end_war = THIS }
-        random_list={
-		85 = { 
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-				}
-		10 = { 
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-				}
-		5 = { 
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-					release_vassal = random
-				}
+		name = "OK"
+		ai_chance = { factor = 100 }
+		any_core = {
+			limit = {
+				controlled_by = REB
+				not = { owned_by = this }
+			}
+			change_controller  = this				
+		}		
+		any_owned = { 
+			limit = {
+				controlled_by = REB
+				owned_by = THIS
+			}
+			change_controller = THIS
+		}				
+		supplies = 1000000
+		fuel = 1000000			
+		this = { leave_faction = allies }
+		this = { leave_faction = comintern }
+		any_country = { leave_alliance = THIS }
+		any_country = { end_war = THIS }
+		random_list={
+			85 = { 
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+			}
+			10 = { 
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+			}
+			5 = { 
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+				release_vassal = random
+			}
 		}
 		
 		any_owned = { 
-				limit = { 
-					controlled_by = REB
-					is_core = THIS
-				}
-				militia_brigade = current
-				militia_brigade = current
-				militia_brigade = current
-				militia_brigade = current
+			limit = { 
+				controlled_by = REB
+				is_core = THIS
 			}
-			any_owned = { 
-				limit = { 
-					controlled_by = REB
-					is_core = THIS
-					
-				}
-				militia_brigade = current
-				militia_brigade = current
+			militia_brigade = current
+			militia_brigade = current
+			militia_brigade = current
+			militia_brigade = current
+		}
+		any_owned = { 
+			limit = { 
+				controlled_by = REB
+				is_core = THIS
+				
 			}
-			any_owned = { 
-				limit = { 
-					controlled_by = REB
-					is_core = THIS
-					
-				}
-				militia_brigade = current
+			militia_brigade = current
+			militia_brigade = current
+		}
+		any_owned = { 
+			limit = { 
+				controlled_by = REB
+				is_core = THIS
+				
 			}
-			any_owned = { 
-				limit = { 
-					controlled_by = REB
-					is_core = THIS
-					
-				}
-				militia_brigade = current
-			}			
-			any_owned = {  
-				limit = {
-					owned_by = THIS
-				}				
-			    add_province_modifier = {
-				    name = del_risk
-				    duration = 365
-			    }
-		                }
-            
+			militia_brigade = current
+		}
+		any_owned = { 
+			limit = { 
+				controlled_by = REB
+				is_core = THIS
+				
+			}
+			militia_brigade = current
+		}			
+		any_owned = {  
+			limit = {
+				owned_by = THIS
+			}				
+			add_province_modifier = {
+				name = del_risk
+				duration = 365
+			}
+		}
+			
 		
 		random_list = {
 
-					5 = { 
-						country_event = 700046
-					}
-					5 = { 
-						country_event = 700047
-					}
-					10 = { 
-						country_event = 700048
-					}
-					10 = { 
-						country_event = 700049
-					}
-					10 = { 
-						country_event = 700050
-					}
-					10 = { 
-						country_event = 700051
-					}
-					10 = { 
-						country_event = 700052
-					}
-					10 = { 
-						country_event = 700053
-					}
-					10 = { 
-						country_event = 700054
-					}
-					5 = { 
-						country_event = 700081
-					}
-					5 = { 
-						country_event = 700082
-					}
-					5 = { 
-						country_event = 700083
-					}
-					5 = { 
-						country_event = 700084
-					}
-				}
-		 
+			5 = { 
+				country_event = 700046
+			}
+			5 = { 
+				country_event = 700047
+			}
+			10 = { 
+				country_event = 700048
+			}
+			10 = { 
+				country_event = 700049
+			}
+			10 = { 
+				country_event = 700050
+			}
+			10 = { 
+				country_event = 700051
+			}
+			10 = { 
+				country_event = 700052
+			}
+			10 = { 
+				country_event = 700053
+			}
+			10 = { 
+				country_event = 700054
+			}
+			5 = { 
+				country_event = 700081
+			}
+			5 = { 
+				country_event = 700082
+			}
+			5 = { 
+				country_event = 700083
+			}
+			5 = { 
+				country_event = 700084
+			}
+		}
 	}
  }
  
@@ -226,7 +225,7 @@ country_event = {
 				popularity = -20
 			}
 			government = totalitarian_gov			
-			do_election = THIS
+			#do_election										#TODO = THIS
 			start_election = this
 			random = {
 				chance = 25
@@ -322,7 +321,7 @@ country_event = {
 				popularity = -20
 			}
 			government = totalitarian_gov		
-			do_election = THIS
+			#do_election										#TODO = THIS
 			start_election = this
 
 			random = {
@@ -418,7 +417,7 @@ country_event = {
 				popularity = -20
 			}
 			government = totalitarian_gov			
-			do_election = THIS
+			#do_election										#TODO = THIS
 			start_election = this
 
 			random = {
@@ -516,7 +515,7 @@ country_event = {
 				popularity = -20
 			}
 			government = republic_gov			
-			do_election = THIS
+			#do_election										#TODO = THIS
 			start_election = this
 
 			random = {
@@ -613,7 +612,7 @@ country_event = {
 				popularity = -20
 			}
 			government = authoritarian_gov			
-			do_election = THIS
+			#do_election										#TODO = THIS
 			start_election = this
 
 			random = {
@@ -711,7 +710,7 @@ country_event = {
 				popularity = -20
 			}
 			government = totalitarian_gov			
-			do_election = THIS
+			#do_election										#TODO = THIS
 			start_election = this
 
 			random = {
@@ -808,7 +807,7 @@ country_event = {
 				popularity = -20
 			}
 			government = republic_gov			
-			do_election = THIS
+			#do_election										#TODO = THIS
 			start_election = this
 			
 			random = {
@@ -907,7 +906,7 @@ country_event = {
 				popularity = -20
 			}
 			government = republic_gov		
-			do_election = THIS
+			#do_election										#TODO = THIS
 			start_election = this
 
 			random = {
@@ -1005,7 +1004,7 @@ country_event = {
 				popularity = 40
 			}
 			government = republic_gov			
-			do_election = THIS
+			#do_election										#TODO = THIS
 			start_election = this
 
 			random = {
@@ -1105,7 +1104,7 @@ country_event = {
 				popularity = -20
 			}
 			government = theocracy_gov			
-			do_election = THIS
+			#do_election										#TODO = THIS
 			start_election = this
 
 			random = {
@@ -1205,7 +1204,7 @@ country_event = {
 				popularity = -20
 			}
 			government = absolute_monarchy_gov			
-			do_election = THIS
+			#do_election										#TODO = THIS
 			start_election = this
 
 			random = {
@@ -1305,7 +1304,7 @@ country_event = {
 				popularity = -20
 			}
 			government = constitutional_monarchy_gov			
-			do_election = THIS
+			#do_election										#TODO = THIS
 			start_election = this
 
 			random = {
@@ -1405,7 +1404,7 @@ country_event = {
 				popularity = -20
 			}
 			government = constitutional_republic_gov			
-			do_election = THIS
+			#do_election										#TODO = THIS
 			start_election = this
 
 			random = {

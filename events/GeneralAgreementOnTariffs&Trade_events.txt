@@ -38,7 +38,7 @@
 				#XUN = { prestige = 40 }
 			}
 			
-			#XUN  = { prestige_change = -40 }
+			XUN  = { prestige_change = -40 }
 			
 			set_global_flag = gflag_UN_large_diplomatic_investment
 			country_event = 15001
@@ -51,7 +51,7 @@
 				#XUN = { prestige = 15 }
 			}
 			
-			#XUN  = { prestige_change = -15 }
+			XUN  = { prestige_change = -15 }
 			
 			set_global_flag = gflag_UN_small_diplomatic_investment
 			country_event = 15001
@@ -210,14 +210,14 @@
 			
 			XUN  = { prestige_change = -50 }
 			
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				USA = {
 					add_country_modifier = {
 						name = mod_UN_general_agreement_on_tariffs_and_trade_failure_delay
 						duration = 1460
 					}
 				}
-			}
+			#}
 			clr_global_flag = gflag_UN_general_agreement_on_tariffs_and_trade_raised
 			clr_global_flag = gflag_UN_no_diplomatic_investment
 			clr_global_flag = gflag_UN_small_diplomatic_investment
@@ -572,12 +572,12 @@
 				value = 1
 			}
 			clr_country_flag = flag_UN_general_agreement_on_tariffs_and_trade_supporter
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_UN_general_agreement_on_tariffs_and_trade_revoked_recently
 					duration = 60
 				}
-			}
+			#}
 			
 			relation = { who = XUN value = -5 }
 		}
@@ -870,12 +870,12 @@
 				name = var_UN_votes_Against
 				value = 1
 			}
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_UN_general_agreement_on_tariffs_and_trade_revoked_recently
 					duration = 60
 				}
-			}
+			#}
 			
 			relation = { who = XUN value = -5 }
 		}
@@ -899,7 +899,7 @@
 				name = mod_UN_general_agreement_on_tariffs_and_trade_ratified
 				duration = -1
 			}
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_UN_general_agreement_on_tariffs_and_trade_ratified_recently
 					duration = 60
@@ -910,7 +910,7 @@
 						duration = 15
 					}
 				}
-			}
+			#}
 			
 			chg_global_var = {
 				name = var_UN_GATT_ratified_num
@@ -1150,7 +1150,7 @@
 				name = mod_UN_general_agreement_on_tariffs_and_trade_ratified
 				duration = -1
 			}
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_UN_general_agreement_on_tariffs_and_trade_ratified_recently
 					duration = 60
@@ -1161,7 +1161,7 @@
 						duration = 15
 					}
 				}
-			}
+			#}
 			
 			chg_global_var = {
 				name = var_UN_GATT_ratified_num
@@ -1213,12 +1213,12 @@
 			name = "EVTOPTA15014"					#Good riddance
 			prestige_change = -8
 			remove_country_modifier = mod_UN_general_agreement_on_tariffs_and_trade_ratified
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_UN_general_agreement_on_tariffs_and_trade_revoked_recently
 					duration = 365
 				}
-			}
+			#}
 			
 			XUN = { prestige_change = -3 }
 			

@@ -154,6 +154,12 @@
 	country_event = {
 	
 		id = 11902
+		
+		major = yes
+
+		title = "EVTNAME11902"
+		desc = "EVTDESC11902"
+		picture = "xxxx"
 
 		trigger = {
 			is_org_leader = XUN
@@ -176,12 +182,6 @@
 			days = 7
 		}
 		
-		major = yes
-
-		title = "EVTNAME11902"
-		desc = "EVTDESC11902"
-		picture = "xxxx"
-		
 		immediate = {
 			clr_global_flag = gflag_UN_environmental_modification_convention_voting
 			clr_global_flag = gflag_UN_voting_notifications
@@ -198,14 +198,14 @@
 			
 			XUN  = { prestige_change = -50 }
 			
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				USA = {
 					add_country_modifier = {
 						name = mod_UN_environmental_modification_convention_failure_delay
 						duration = 1460
 					}
 				}
-			}
+			#}
 			clr_global_flag = gflag_UN_environmental_modification_convention_raised
 			clr_global_flag = gflag_UN_no_diplomatic_investment
 			clr_global_flag = gflag_UN_small_diplomatic_investment
@@ -448,12 +448,12 @@
 				value = 1
 			}
 			clr_country_flag = flag_UN_environmental_modification_convention_supporter
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_UN_environmental_modification_convention_revoked_recently
 					duration = 60
 				}
-			}
+			#}
 			
 			relation = { who = XUN value = -5 }
 		}
@@ -634,12 +634,12 @@
 				name = var_UN_votes_Against
 				value = 1
 			}
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_UN_environmental_modification_convention_revoked_recently
 					duration = 60
 				}
-			}
+			#}
 			
 			relation = { who = XUN value = -5 }
 		}
@@ -663,7 +663,7 @@
 				name = mod_UN_environmental_modification_convention_ratified
 				duration = -1
 			}
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_UN_environmental_modification_convention_ratified_recently
 					duration = 60
@@ -674,7 +674,7 @@
 						duration = 15
 					}
 				}
-			}
+			#}
 			
 			XUN = { prestige_change = 2 }
 		}
@@ -788,7 +788,7 @@
 				name = mod_UN_environmental_modification_convention_ratified
 				duration = -1
 			}
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_UN_environmental_modification_convention_ratified_recently
 					duration = 60
@@ -799,7 +799,7 @@
 						duration = 15
 					}
 				}
-			}
+			#}
 			
 			XUN = { prestige_change = 2 }
 		}
@@ -847,12 +847,12 @@
 			name = "EVTOPTA11914"					#Good riddance
 			prestige_change = -8
 			remove_country_modifier = mod_UN_environmental_modification_convention_ratified
-			hidden_effects = {
+			#hidden_effects = {										#TODO
 				add_country_modifier = {
 					name = mod_UN_environmental_modification_convention_revoked_recently
 					duration = 365
 				}
-			}
+			#}
 			
 			XUN = { prestige_change = -3 }
 		}

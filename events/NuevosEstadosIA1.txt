@@ -58,7 +58,7 @@ country_event = {
 		15 = {organisation = -5}
 		}
 
-		do_election = THIS
+		#do_election = THIS										#TODO
 		start_election = this
 
 	}
@@ -186,7 +186,7 @@ country_event = {
 		15 = {organisation = -5}
 		}
 
-		do_election = THIS
+		#do_election = THIS										#TODO
 		start_election = this
 		
 	}
@@ -320,7 +320,7 @@ country_event = {
 		15 = {organisation = -5}
 		}
 
-		do_election = THIS
+		#do_election = THIS										#TODO
 		start_election = this
 		
 	}

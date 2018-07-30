@@ -1,6 +1,6 @@
 diplomatic_decisions = {
 	
-	dec_suspend_elections = {
+	dec_suspend_elections_player = {
 		category = national
 		picture = "1960_Turkish_coup"
 		potential = {
@@ -30,34 +30,31 @@ diplomatic_decisions = {
 		}
 		
 		effect = {	
-				random_list = {
-					20 = { 
-						election = no 
-						elections_and_voting = single_party_system
-						dissent = 5
-						set_country_flag = signed_suspended_elections
-					}					
-					50 = { 	
-						country_event = 1970
-						dissent = 5
-					}
-					20 = { 
-						country_event = 1970
-						dissent = 7 					
-					}
-					10 = { 
-						country_event = 1970
-						dissent = 10 					
-					}	
+			random_list = {
+				20 = { 
+					election = no 
+					elections_and_voting = single_party_system
+					dissent = 5
+					set_country_flag = signed_suspended_elections
+				}					
+				50 = { 	
+					country_event = 1970
+					dissent = 5
+				}
+				20 = { 
+					country_event = 1970
+					dissent = 7 					
+				}
+				10 = { 
+					country_event = 1970
+					dissent = 10 					
 				}	
-			}			
-			
-		}
-}
-
-diplomatic_decisions = {
+			}	
+		}			
+		
+	}
 	
-	dec_suspend_elections_majority = {
+	dec_suspend_elections_majority_player = {
 		category = national
 		picture = "1960_Turkish_coup"
 		potential = {
@@ -97,13 +94,9 @@ diplomatic_decisions = {
 			}
 			set_country_flag = signed_suspended_elections
 		}
-	}	
+	}
 	
-}
-
-diplomatic_decisions = {
-	
-	ai_dec_suspend_elections = {
+	dec_suspend_elections_ai = {
 		category = national
 		picture = "1960_Turkish_coup"
 		potential = {
@@ -137,11 +130,8 @@ diplomatic_decisions = {
 		}					
 			
 	}
-}
-
-diplomatic_decisions = {
 	
-	ai_dec_suspend_elections_majority = {
+	dec_suspend_elections_majority_ai = {
 		category = national
 		picture = "1960_Turkish_coup"
 		potential = {
@@ -172,13 +162,9 @@ diplomatic_decisions = {
 			civil_liberties = suspended_indefinitely			
 			set_country_flag = signed_suspended_elections
 		}
-	}	
+	}
 	
-}
-
-diplomatic_decisions = {
-	
-	ai_dec_suspend_elections_authoritarian = {
+	dec_suspend_elections_authoritarian_ai = {
 		category = national
 		picture = "1960_Turkish_coup"
 		potential = {
@@ -210,11 +196,8 @@ diplomatic_decisions = {
 		}					
 			
 	}
-}
-
-diplomatic_decisions = {
 	
-	ai_dec_suspend_elections_majority_authoritarian = {
+	dec_suspend_elections_majority_authoritarian_ai = {
 		category = national
 		picture = "1960_Turkish_coup"
 		potential = {

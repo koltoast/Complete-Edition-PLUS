@@ -1,0 +1,51 @@
+owner = FRA
+controller = FRA
+add_core = FRA
+add_core = GIN
+grain = 7.97
+infra = 4
+1946.1.1 = {
+  naval_base = 1
+  population_total = {
+   amount = 61001
+   template = 5
+  }
+}
+1958.10.02 = {
+  owner = GIN
+  controller = GIN
+  remove_core = FRA
+}
+1991.1.1 = {
+  naval_base = 2
+}
+1948.1.1 = {
+population_total = {
+   amount = 61789
+   template = 5
+}
+}
+1950.1.1 = {
+population_total = {
+   amount = 62588
+   template = 5
+}
+}
+1961.12.30 = {
+population_total = {
+   amount = 73760
+   template = 105
+}
+}
+1979.1.1 = {
+population_total = {
+   amount = 88190
+   template = 205
+}
+}
+1991.1.1 = {
+population_total = {
+   amount = 123082
+   template = 305
+}
+}

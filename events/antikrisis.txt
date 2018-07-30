@@ -278,7 +278,7 @@ country_event = {
 			10 = { supplies = 19000 }
 			10 = { supplies = 23000 }
 		}
-		ramdom_owned = { 
+		random_owned = { 
 			limit = {
 				controlled_by = THIS
 				owned_by = THIS

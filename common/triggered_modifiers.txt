@@ -1,0 +1,455 @@
+###################################################################
+# Triggered modifiers are here.
+# these are checked for each countries once/month and then applied.
+#
+# Effects are fully scriptable here.
+###################################################################
+
+# Naval Supremacy in North America
+naval_supremacy_in_north_america = {
+
+	potential = {
+		is_in_any_faction = yes
+	}
+	
+	trigger = { #2028 Miami, 2184 Norfolk, 2336 NY, 2464 Boston, 1373 Corpus Cristi, 15959 Mississippi Sound, 600 San Diego, 534 LA, 438 San Francisco, 426 Seattle, 398 Vancouver, 59 Anchorage, 95 Honolulu, 14429 Guam, 2061 Colon, 3325 Reykjavik, 14798 Wake Island
+	3325 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	2028 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	2184 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	2336 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	2464 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	1373 = {
+			controller = {
+				faction = THIS
+			}
+		}		
+	15959 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	2069 = {
+			controller = {
+				faction = THIS
+			}
+		}		
+	600 = {
+			controller = {
+				faction = THIS
+			}
+		}		
+	534 = {
+			controller = {
+				faction = THIS
+			}
+		}		
+	438 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	426 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	398 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	59 = { 
+			controller = {
+				faction = THIS
+			}
+		}
+	14429 = {
+			controller = {
+				faction = THIS
+			}
+		}		
+	14798 = {
+			controller = {
+				faction = THIS
+			}
+		}																	
+	}
+	#global_leadership_modifier = 0.15											#obsolete?
+	icon = 1
+}
+
+# Naval Supremacy in the East
+naval_supremacy_in_the_east = {
+
+	potential = {
+		is_in_any_faction = yes
+		OR = {
+			TAG = USA
+			TAG = ENG
+			TAG = GER
+			TAG = JAP
+			TAG = SOV
+		}
+	}
+
+	trigger = {
+	6875 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	8468 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	8470 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	7009 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	7238 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	5341 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	4390 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	3466 = {
+			controller = {
+				faction = THIS
+			}
+		}
+	
+	OR = {
+		controls = 6875
+		controls = 8468
+		controls = 8470
+		controls = 7009
+		controls = 7238
+		controls = 5341
+		controls = 4390
+		controls = 3466
+		}
+	}
+	
+	
+	#global_leadership_modifier = 0.15										#obsolete?
+	icon = 2
+}
+
+
+###################################################################
+# STRAITS
+###################################################################
+
+control_suez_canal = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = africa}
+	}
+	
+	trigger = {
+		controls = 7515
+	}
+
+	#TODO add bonus for controlling the strait
+	global_supplies = 0.06
+	#global_leadership_modifier = 0.12										#obsolete?
+	icon = 16
+}
+
+control_panama_canal = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = north_america}
+	}
+	
+	trigger = {
+		controls = 2061
+	}
+
+	#TODO add bonus for controlling the strait
+	supply_throughput = 0.1
+	global_resources = 0.1	
+	icon = 16
+}
+
+control_kiel_canal = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = europe}
+	}
+	
+	trigger = {
+		controls = 5416
+	}
+
+	#TODO add bonus for controlling the strait
+	supply_throughput = 0.1
+	global_resources = 0.1		
+	icon = 16
+}
+
+control_foveaux_strait = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = oceania}
+	}
+	
+	trigger = {
+		controls = 14824
+	}
+
+	#TODO add bonus for controlling the strait
+	supply_throughput = 0.1
+	global_resources = 0.1		
+	icon = 16
+}
+
+control_gibraltar_strait = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = europe}
+	}
+	
+	trigger = {
+		controls = 4575
+	}
+
+	#TODO add bonus for controlling the strait
+	global_supplies = 0.05
+	supply_consumption = -0.05	
+	icon = 16
+}
+
+control_malacca_strait = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = oceania}
+	}
+	
+	trigger = {
+		controls = 12020
+	}
+
+	#TODO add bonus for controlling the strait
+	
+	icon = 16
+}
+
+control_blacksea_strait = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = europe}
+	}
+	
+	trigger = {
+		controls = 14924
+	}
+
+	#TODO add bonus for controlling the strait
+	supply_throughput = 0.15
+	#global_leadership_modifier = 0.1										#obsolete?
+	icon = 16
+}
+
+control_azov_strait = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = europe}
+	}
+	
+	trigger = {
+		controls = 8050
+	}
+
+	#TODO add bonus for controlling the strait
+	
+	icon = 16
+}
+
+control_babelmandeb_strait = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = asia}
+	}
+	
+	trigger = {
+		controls = 8486
+	}
+
+	#TODO add bonus for controlling the strait
+	
+	icon = 16
+}
+
+control_odense_strait = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = europe}
+	}
+	
+	trigger = {
+		controls = 5488
+	}
+
+	#TODO add bonus for controlling the strait
+	
+	icon = 16
+}
+
+control_viborg_strait = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = europe}
+	}
+	
+	trigger = {
+		controls = 5413
+	}
+
+	#TODO add bonus for controlling the strait
+	
+	icon = 16
+}
+
+control_magellan_strait = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = south_america}
+	}
+	
+	trigger = {
+		controls = 2629
+	}
+
+	#TODO add bonus for controlling the strait
+	
+	icon = 16
+}
+
+control_bass_strait = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = oceania}
+	}
+	
+	trigger = {
+		controls = 14495
+	}
+
+	#TODO add bonus for controlling the strait
+	
+	icon = 16
+}
+
+control_tsugaru_strait = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = asia}
+	}
+	
+	trigger = {
+		controls = 14237
+	}
+
+	#TODO add bonus for controlling the strait
+	
+	icon = 16
+}
+
+control_tartary_strait = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = asia}
+	}
+	
+	trigger = {
+		controls = 14230
+	}
+
+	#TODO add bonus for controlling the strait
+	
+	icon = 16
+}
+
+control_qiongzhou_strait = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = asia}
+	}
+	
+	trigger = {
+		controls = 12473
+	}
+
+	#TODO add bonus for controlling the strait
+	
+	icon = 16
+}
+
+control_sunda_strait = {
+	
+	potential = {
+		total_amount_of_ships = 5
+		any_owned_province = {continent = oceania}
+	}
+	
+	trigger = {
+		controls = 12232
+	}
+
+	#TODO add bonus for controlling the strait
+	
+	icon = 16
+}

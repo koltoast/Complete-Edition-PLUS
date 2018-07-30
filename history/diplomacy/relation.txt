@@ -1,0 +1,7042 @@
+#### 1940s
+
+
+
+relation = {
+first = USA
+second = SOV
+value = 25
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = SOV
+second = USA
+value = 25
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = CHC
+second = SOV
+value = 150
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = SOV
+second = CHC
+value = 150
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = USA
+second = JAP
+value = 150
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = JAP
+second = USA
+value = 150
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = USA
+second = ISR
+value = 125
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = ISR
+second = USA
+value = 125
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = USA
+second = CHI
+value = 60
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = CHI
+second = USA
+value = 60
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = USA
+second = PHI
+value = 95
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = PHI
+second = USA
+value = 90
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = USA
+second = AST
+value = 150
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = AST
+second = USA
+value = 150
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = USA
+second = NZL
+value = 150
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = NZL
+second = USA
+value = 150
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = USA
+second = SIA
+value = 75
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = SIA
+second = USA
+value = 75
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = USA
+second = CUB
+value = 75
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = CUB
+second = USA
+value = 95
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = SOV
+second = YUG
+value = 100
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = YUG
+second = SOV
+value = 100
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = CHI
+second = CHC
+value = -125
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+relation = {
+first = CHC
+second = CHI
+value = -125
+start_date = 1946.1.1
+end_date = 1949.12.31
+}
+
+
+#### 1950s
+
+
+
+relation = {
+first = USA
+second = SOV
+value = 10
+start_date = 1950.6.25
+end_date = 1959.12.31
+}
+
+relation = {
+first = SOV
+second = USA
+value = 10
+start_date = 1950.6.25
+end_date = 1959.12.31
+}
+
+relation = {
+first = CHC
+second = SOV
+value = 125
+start_date = 1950.6.25
+end_date = 1959.12.31
+}
+
+relation = {
+first = USA
+second = ROK
+value = 150
+start_date = 1950.6.25
+end_date = 1959.12.31
+}
+
+relation = {
+first = ROK
+second = USA
+value = 150
+start_date = 1950.6.25
+end_date = 1959.12.31
+}
+
+relation = {
+first = USA
+second = PHI
+value = 115
+start_date = 1950.6.25
+end_date = 1959.12.31
+}
+
+relation = {
+first = PHI
+second = USA
+value = 110
+start_date = 1950.6.25
+end_date = 1959.12.31
+}
+
+relation = {
+first = USA
+second = PAK
+value = 110
+start_date = 1950.6.25
+end_date = 1959.12.31
+}
+
+relation = {
+first = PAK
+second = USA
+value = 110
+start_date = 1950.6.25
+end_date = 1959.12.31
+}
+
+relation = {
+first = USA
+second = CUB
+value = 85
+start_date = 1950.6.25
+end_date = 1959.12.31
+}
+
+relation = {
+first = CUB
+second = USA
+value = 100
+start_date = 1950.6.25
+end_date = 1959.12.31
+}
+
+relation = {
+first = SOV
+second = CHC
+value = 125
+start_date = 1950.6.25
+end_date = 1959.12.31
+}
+
+relation = {
+first = SOV
+second = YUG
+value = 10
+start_date = 1950.6.25
+end_date = 1959.12.31
+}
+
+relation = {
+first = YUG
+second = SOV
+value = 10
+start_date = 1950.6.25
+end_date = 1959.12.31
+}
+
+
+
+#### 1960s
+
+
+
+relation = {
+first = USA
+second = SOV
+value = -25
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = SOV
+second = USA
+value = -25
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = USA
+second = CUB
+value = -125
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = CUB
+second = USA
+value = -100
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = CHC
+second = SOV
+value = -10
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = USA
+second = PHI
+value = 100
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = PHI
+second = USA
+value = 100
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = SOV
+second = CHC
+value = -10
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = SOV
+second = CUB
+value = 125
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = CUB
+second = SOV
+value = 125
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = SOV
+second = YUG
+value = -50
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = YUG
+second = SOV
+value = -50
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = SOV
+second = EGY
+value = 125
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = EGY
+second = SOV
+value = 125
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = SOV
+second = SYR
+value = 120
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = SYR
+second = SOV
+value = 120
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = SOV
+second = IRQ
+value = 110
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = IRQ
+second = SOV
+value = 110
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = SOV
+second = GIN
+value = 70
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = GIN
+second = SOV
+value = 70
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = SOV
+second = SOM
+value = 90
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = SOM
+second = SOV
+value = 90
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = SOV
+second = GHN
+value = 25
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+relation = {
+first = GHN
+second = SOV
+value = 25
+start_date = 1959.12.31
+end_date = 1969.12.31
+}
+
+
+#### 1970s
+
+
+
+relation = {
+first = USA
+second = SOV
+value = 25
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = USA
+value = 25
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = CHC
+second = SOV
+value = -5
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = CHC
+value = -5
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = SYR
+value = 130
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SYR
+second = SOV
+value = 130
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = IRQ
+value = 120
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = IRQ
+second = SOV
+value = 120
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = GIN
+value = 75
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = GIN
+second = SOV
+value = 75
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = LBY
+value = 85
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = LBY
+second = SOV
+value = 85
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = CNG
+value = 95
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = CNG
+second = SOV
+value = 95
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = SYA
+value = 125
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SYA
+second = SOV
+value = 125
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = MAD
+value = 75
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = MAD
+second = SOV
+value = 75
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = ETH
+value = 95
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = ETH
+second = SOV
+value = 95
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = LAO
+value = 75
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = LAO
+second = SOV
+value = 75
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = BEN
+value = 10
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = BEN
+second = SOV
+value = 10
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = MOZ
+value = 70
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = MOZ
+second = SOV
+value = 70
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = ANG
+value = 75
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = ANG
+second = SOV
+value = 75
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = GRN
+value = 35
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = GRN
+second = SOV
+value = 35
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = NIC
+value = 55
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = NIC
+second = SOV
+value = 55
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = SOV
+second = CMB
+value = 75
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+relation = {
+first = CMB
+second = SOV
+value = 75
+start_date = 1969.12.31
+end_date = 1979.12.31
+}
+
+
+
+#### 1980s
+
+
+
+relation = {
+first = USA
+second = SOV
+value = -5
+start_date = 1979.12.24
+end_date = 1991.1.16
+}
+
+relation = {
+first = SOV
+second = USA
+value = -5
+start_date = 1979.12.24
+end_date = 1991.1.16
+}
+
+relation = {
+first = CHC
+second = SOV
+value = 5
+start_date = 1979.12.24
+end_date = 1991.1.16
+}
+
+relation = {
+first = SOV
+second = CHC
+value = 5
+start_date = 1979.12.24
+end_date = 1991.1.16
+}
+
+relation = {
+first = SOV
+second = SYR
+value = 135
+start_date = 1979.12.24
+end_date = 1991.1.16
+}
+
+relation = {
+first = SYR
+second = SOV
+value = 135
+start_date = 1979.12.24
+end_date = 1991.1.16
+}
+
+relation = {
+first = SOV
+second = IRQ
+value = 130
+start_date = 1979.12.24
+end_date = 1991.1.16
+}
+
+relation = {
+first = IRQ
+second = SOV
+value = 130
+start_date = 1979.12.24
+end_date = 1991.1.16
+}
+
+
+
+#Nationalist China - Xinjiang Relations
+
+
+relation = {
+first = CHI
+second = SIK
+value = -200
+start_date = 1946.1.1
+end_date = 1950.1.1
+}
+
+relation = {
+first = CHC
+second = SIK
+value = 50
+start_date = 1946.1.1
+end_date = 1950.1.1
+}
+
+relation = {
+first = SOV
+second = SIK
+value = 130
+start_date = 1946.1.1
+end_date = 1950.1.1
+}
+
+
+
+#NATO
+
+
+relation = {
+first = USA
+second = ENG
+value = 200
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = USA
+value = 200
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = CAN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = USA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = FRA
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = USA
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = FRG
+value = 190
+start_date = 1946.1.1
+end_date = 1990.3.18
+}
+
+relation = {
+first = FRG
+second = USA
+value = 195
+start_date = 1946.1.1
+end_date = 1990.3.18
+}
+
+relation = {
+first = USA
+second = WBR
+value = 195
+start_date = 1946.1.1
+end_date = 1990.3.18
+}
+
+relation = {
+first = WBR
+second = USA
+value = 195
+start_date = 1946.1.1
+end_date = 1990.3.18
+}
+
+relation = {
+first = USA
+second = GER
+value = 195
+start_date = 1990.3.18
+end_date = 1991.12.31
+}
+
+relation = {
+first = GER
+second = USA
+value = 195
+start_date = 1990.3.18
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = USA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = ICL
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ICL
+second = USA
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = DEN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = USA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = USA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = USA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = HOL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = USA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = NOR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR
+second = USA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = POR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = USA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = GRE
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = USA
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = TUR
+value = 170
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = USA
+value = 170
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = SPA
+value = 150
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = SPA
+second = USA
+value = 150
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+
+
+relation = {
+first = ENG
+second = FRA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = ENG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = CAN
+value = 195
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = ENG
+value = 195
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = ENG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = HOL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = ENG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = ENG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = ENG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = FRG
+value = 195
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRG
+second = ENG
+value = 195
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = WBR
+value = 195
+start_date = 1946.1.1
+end_date = 1990.3.18
+}
+
+relation = {
+first = WBR
+second = ENG
+value = 195
+start_date = 1946.1.1
+end_date = 1990.3.18
+}
+
+relation = {
+first = ENG
+second = GER
+value = 195
+start_date = 1990.3.18
+end_date = 1991.12.30
+}
+
+relation = {
+first = GER
+second = ENG
+value = 195
+start_date = 1990.3.18
+end_date = 1991.12.30
+}
+
+relation = {
+first = ENG
+second = DEN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = ENG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = NOR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR
+second = ENG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = POR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = ENG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = GRE
+value = 180
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = ENG
+value = 180
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = TUR
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = ENG
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = SPA
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = SPA
+second = ENG
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+
+relation = {
+first = FRA
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = FRA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = CAN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = FRA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = DEN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = FRA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = FRA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = ICL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ICL
+second = FRA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = FRA	
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = FRA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = HOL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = FRA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = NOR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR
+second = FRA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = POR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = FRA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = GRE
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = FRA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = TUR
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = FRA
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = FRG
+value = 195
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRG
+second = FRA
+value = 195
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA 
+second = WBR
+value = 195
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = WBR
+second = FRA
+value = 195
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = SPA
+value = 180
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = SPA
+second = FRA
+value = 180
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+
+relation = {
+first = BEL
+second = CAN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = DEN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = ICL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ICL
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = HOL	
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = NOR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR 
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = POR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = GRE
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = TUR
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = BEL
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = FRG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRG
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = WBR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = WBR
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BEL
+second = SPA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = SPA
+second = BEL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+
+relation = {
+first = CAN
+second = DEN	
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = CAN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = ICL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ICL
+second = CAN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = CAN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = CAN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = HOL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = CAN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN 
+second = NOR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR
+second = CAN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = POR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = CAN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = GRE
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = CAN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = TUR
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = CAN
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = FRG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRG
+second = CAN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = WBR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = WBR
+second = CAN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = SPA
+value = 180
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = SPA
+second = CAN
+value = 180
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+
+relation = {
+first = DEN
+second = ICL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ICL
+second = DEN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = DEN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = DEN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = HOL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = DEN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = NOR
+value = 180
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR
+second = DEN
+value = 180
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = POR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = DEN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = GRE
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = DEN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = TUR
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = DEN
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = FRG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRG
+second = DEN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = WBR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = WBR
+second = DEN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DEN
+second = SPA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = SPA
+second = DEN
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+
+relation = {
+first = ICL
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = ICL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ICL
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = ICL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ICL
+second = HOL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = ICL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ICL
+second = NOR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR
+second = ICL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ICL
+second = POR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = ICL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ICL
+second = GRE
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = ICL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ICL
+second = TUR
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = ICL
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ICL
+second = FRG
+value = 190
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = FRG
+second = ICL
+value = 190
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = ICL
+second = WBR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = WBR
+second = ICL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ICL
+second = SPA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = SPA
+second = ICL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+
+relation = {
+first = ITA
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = HOL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = NOR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = POR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = GRE
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = TUR
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = ITA
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = FRG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRG
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = WBR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = WBR
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ITA
+second = SPA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = SPA
+second = ITA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+
+relation = {
+first = LUX
+second = HOL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = NOR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = POR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = GRE
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = TUR
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = LUX
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = FRG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRG
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = WBR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = WBR
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = LUX
+second = SPA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = SPA
+second = LUX
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+
+relation = {
+first = HOL
+second = NOR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR
+second = HOL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = POR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = HOL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = GRE
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = HOL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = TUR
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = HOL
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = FRG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRG
+second = HOL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = WBR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = WBR
+second = HOL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HOL
+second = SPA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = SPA
+second = HOL
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+
+relation = {
+first = NOR
+second = POR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = NOR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR
+second = GRE
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = NOR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR
+second = TUR
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = NOR
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR
+second = FRG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRG
+second = NOR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR
+second = WBR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = WBR
+second = NOR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = NOR
+second = SPA
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = SPA
+second = NOR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = GRE
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = POR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = TUR
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = POR
+value = 185
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = FRG
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRG
+second = POR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = WBR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = WBR
+second = POR
+value = 190
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POR
+second = SPA
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = SPA
+second = POR
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = TUR
+value = 60
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = GRE
+value = 70
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = FRG
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRG
+second = GRE
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = WBR
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = WBR
+second = GRE
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = SPA
+value = 150
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = SPA
+second = GRE
+value = 150
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = FRG
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRG
+second = TUR
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = WBR
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = WBR
+second = TUR
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = SPA
+value = 150
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = SPA
+second = TUR
+value = 150
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+
+
+#Warsaw
+
+
+relation = {
+first = SOV
+second = ALB
+value = 150
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = ALB
+second = SOV
+value = 150
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = SOV
+second = ALB
+value = 25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = ALB
+second = SOV
+value = 25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = SOV
+second = BUL
+value = 175
+start_date = 1946.1.1
+end_date = 1991.7.1
+}
+
+relation = {
+first = BUL
+second = SOV
+value = 175
+start_date = 1946.1.1
+end_date = 1991.7.1
+}
+
+relation = {
+first = SOV
+second = CZE
+value = 175
+start_date = 1946.1.1
+end_date = 1991.7.1
+}
+
+relation = {
+first = CZE
+second = SOV
+value = 175
+start_date = 1946.1.1
+end_date = 1991.7.1
+}
+
+relation = {
+first = SOV
+second = DDR
+value = 175
+start_date = 1946.1.1
+end_date = 1990.9.1
+}
+
+relation = {
+first = DDR
+second = SOV
+value = 175
+start_date = 1946.1.1
+end_date = 1990.9.1
+}
+
+relation = {
+first = SOV
+second = HUN
+value = 175
+start_date = 1946.1.1
+end_date = 1991.7.1
+}
+
+relation = {
+first = HUN
+second = SOV
+value = 175
+start_date = 1946.1.1
+end_date = 1991.7.1
+}
+
+relation = {
+first = SOV
+second = POL
+value = 175
+start_date = 1946.1.1
+end_date = 1990.1.1
+}
+
+relation = {
+first = POL
+second = SOV
+value = 175
+start_date = 1946.1.1
+end_date = 1990.1.1
+}
+
+relation = {
+first = SOV
+second = ROM
+value = 175
+start_date = 1946.1.1
+end_date = 1991.7.1
+}
+
+relation = {
+first = ROM
+second = SOV
+value = 175
+start_date = 1946.1.1
+end_date = 1991.7.1
+}
+
+
+
+relation = {
+first = ALB
+second = BUL
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BUL
+second = ALB
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ALB
+second = CZE
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CZE
+second = ALB
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ALB
+second = DDR
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DDR
+second = ALB
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ALB
+second = HUN
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HUN
+second = ALB
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ALB
+second = POL
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POL
+second = ALB
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ALB
+second = ROM 	
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ROM
+second = ALB
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BUL
+second = CZE
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CZE
+second = BUL
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BUL
+second = DDR
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DDR
+second = BUL
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BUL
+second = HUN	
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HUN
+second = BUL	
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BUL
+second = POL
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POL
+second = BUL
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = BUL 
+second = ROM
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ROM
+second = BUL
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CZE
+second = DDR
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DDR
+second = CZE
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CZE
+second = HUN
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HUN
+second = CZE
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CZE
+second = POL
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POL
+second = CZE
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ROM
+second = CZE
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = CZE
+second = ROM
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DDR
+second = HUN
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HUN
+second = DDR
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DDR
+second = POL
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POL
+second = DDR
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = DDR
+second = ROM
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ROM
+second = DDR
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HUN
+second = POL
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POL
+second = HUN
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = HUN
+second = ROM
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ROM
+second = HUN
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = POL
+second = ROM
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = ROM
+second = POL
+value = 175
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+
+#Nordic Country Relations
+
+
+relation = {
+first = SWE
+second = FIN
+value = 150
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+relation = {
+first = FIN
+second = SWE
+value = 150
+start_date = 1946.1.1
+end_date = 1991.12.31
+}
+
+
+relation = {
+first = DEN
+second = FIN
+value = 140
+start_date = 1946.1.1
+end_date = 1948.5.14
+}
+
+relation = {
+first = FIN
+second = DEN
+value = 140
+start_date = 1946.1.1
+end_date = 1948.5.14
+}
+
+relation = {
+first = DEN
+second = FIN
+value = 135
+start_date = 1948.5.14
+end_date = 1950.6.25
+}
+
+relation = {
+first = FIN
+second = DEN
+value = 135
+start_date = 1948.5.14
+end_date = 1950.6.25
+}
+
+relation = {
+first = DEN
+second = FIN
+value = 130
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = FIN
+second = DEN
+value = 130
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = DEN
+second = FIN
+value = 125
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = FIN
+second = DEN
+value = 125
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = DEN
+second = FIN
+value = 135
+start_date = 1979.12.24
+end_date = 1991.1.16
+}
+
+relation = {
+first = FIN
+second = DEN
+value = 135
+start_date = 1979.12.24
+end_date = 1991.1.16
+}
+
+
+relation = {
+first = SWE
+second = DEN
+value = 130
+start_date = 1946.1.1
+end_date = 1948.5.14
+}
+
+relation = {
+first = DEN
+second = SWE
+value = 130
+start_date = 1946.1.1
+end_date = 1948.5.14
+}
+
+relation = {
+first = SWE
+second = DEN
+value = 135
+start_date = 1948.5.14
+end_date = 1950.6.25
+}
+
+relation = {
+first = DEN
+second = SWE
+value = 135
+start_date = 1948.5.14
+end_date = 1950.6.25
+}
+
+relation = {
+first = SWE
+second = DEN
+value = 140
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = DEN
+second = SWE
+value = 140
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = SWE
+second = DEN
+value = 150
+start_date = 1961.12.11
+end_date = 1991.1.16
+}
+
+relation = {
+first = DEN
+second = SWE
+value = 150
+start_date = 1961.12.11
+end_date = 1991.1.16
+}
+
+
+#Indochina War
+
+
+relation = {
+first = IDC
+second = FRA
+value = 200
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = FRA
+second = IDC
+value = 200
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = IDC
+second = DRV
+value = -200
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = DRV
+second = IDC
+value = -200
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = FRA
+second = DRV
+value = -200
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = DRV
+second = FRA
+value = -200
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = FRA
+second = DRV
+value = -25
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = DRV
+second = FRA
+value = -25
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = USA
+second = SVI
+value = 75
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = SVI
+second = USA
+value = 75
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = SVI
+second = FRA
+value = 175
+start_date = 1948.5.14
+end_date = 1961.12.11
+}
+
+relation = {
+first = FRA
+second = SVI
+value = 175
+start_date = 1948.5.14
+end_date = 1961.12.11
+}
+
+relation = {
+first = SVI
+second = FRA
+value = 75
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = FRA
+second = SVI
+value = 75
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = SVI
+second = DRV
+value = -200
+start_date = 1946.1.1
+end_date = 1979.12.24
+}
+
+relation = {
+first = DRV
+second = SVI
+value = -200
+start_date = 1946.1.1
+end_date = 1979.12.24
+}
+
+relation = {
+first = IDC
+second = LAO
+value = 175
+start_date = 1948.5.14
+end_date = 1950.6.25
+}
+
+relation = {
+first = LAO
+second = IDC
+value = 175
+start_date = 1948.5.14
+end_date = 1950.6.25
+}
+
+relation = {
+first = FRA
+second = LAO
+value = 175
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = LAO
+second = FRA
+value = 175
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = FRA
+second = LAO
+value = 50
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = LAO
+second = FRA
+value = 50
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = FRA
+second = LAO
+value = -25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = LAO
+second = FRA
+value = -25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = CMB
+value = 75
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = CMB
+second = FRA
+value = 75
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = FRA
+second = CMB
+value = -25
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = CMB
+second = FRA
+value = -25
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = VIE
+value = 25
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = VIE
+second = FRA
+value = 25
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = LAO
+second = CMB
+value = 100
+start_date = 1950.6.25
+end_date = 1991.12.31
+}
+
+relation = {
+first = CMB
+second = LAO
+value = 100
+start_date = 1950.6.25
+end_date = 1991.12.31
+}
+
+relation = {
+first = SOV
+second = DRV
+value = 100
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = DRV
+second = SOV
+value = 100
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = CHC
+second = DRV
+value = 75
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = DRV
+second = CHC
+value = 75
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+
+
+#First Kashmir War
+
+
+relation = {
+first = IND
+second = PAK
+value = -150
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = PAK
+second = IND
+value = -150
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = IND
+second = PAK
+value = -75
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = PAK
+second = IND
+value = -75
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+
+
+#Arab Israeli War
+
+
+relation = {
+first = ISR
+second = PAL
+value = -200
+start_date = 1946.1.1
+end_date = 1991.12.30
+}
+
+relation = {
+first = PAL
+second = ISR
+value = -200
+start_date = 1946.1.1
+end_date = 1991.12.30
+}
+
+relation = {
+first = ISR
+second = LEB
+value = -115
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = LEB
+second = ISR
+value = -135
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = ISR
+second = JOR
+value = -125
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = JOR
+second = ISR
+value = -145
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = ISR
+second = EGY
+value = -100
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = EGY
+second = ISR
+value = -130
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = ISR
+second = SYR
+value = -100
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = SYR
+second = ISR
+value = -125
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = IRQ
+second = ISR
+value = -125
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = ISR
+second = IRQ
+value = -125
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = SAU
+second = ISR
+value = -90
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = ISR
+second = SAU
+value = -75
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+
+
+#Korean War
+
+
+relation = {
+first = USA
+second = KOR
+value = 200
+start_date = 1948.5.14
+end_date = 1961.12.11
+}
+
+relation = {
+first = KOR
+second = USA
+value = 200
+start_date = 1948.5.14
+end_date = 1961.12.11
+}
+
+relation = {
+first = ENG
+second = KOR
+value = 175
+start_date = 1948.5.14
+end_date = 1961.12.11
+}
+
+relation = {
+first = KOR
+second = ENG
+value = 175
+start_date = 1948.5.14
+end_date = 1961.12.11
+}
+
+relation = {
+first = USA
+second = PRK
+value = -100
+start_date = 1948.5.14
+end_date = 1950.6.25
+}
+
+relation = {
+first = PRK
+second = USA
+value = -100
+start_date = 1948.5.14
+end_date = 1950.6.25
+}
+
+relation = {
+first = USA
+second = PRK
+value = -200
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = PRK
+second = USA
+value = -200
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = ENG
+second = PRK
+value = -75
+start_date = 1948.5.14
+end_date = 1950.6.25
+}
+
+relation = {
+first = PRK
+second = ENG
+value = -75
+start_date = 1948.5.14
+end_date = 1950.6.25
+}
+
+relation = {
+first = ENG
+second = PRK
+value = -175
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = PRK
+second = ENG
+value = -175
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = CHC
+second = PRK
+value = 200
+start_date = 1948.5.14
+end_date = 1961.12.11
+}
+
+relation = {
+first = PRK
+second = CHC
+value = 200
+start_date = 1948.5.14
+end_date = 1961.12.11
+}
+
+relation = {
+first = SOV
+second = PRK
+value = 190
+start_date = 1948.5.14
+end_date = 1961.12.11
+}
+
+relation = {
+first = PRK
+second = SOV
+value = 190
+start_date = 1948.5.14
+end_date = 1961.12.11
+}
+
+relation = {
+first = PRK
+second = KOR
+value = -175
+start_date = 1948.5.14
+end_date = 1950.6.25
+}
+
+relation = {
+first = KOR
+second = PRK
+value = -150
+start_date = 1948.5.14
+end_date = 1950.6.25
+}
+
+relation = {
+first = PRK
+second = KOR
+value = -200
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = KOR
+second = PRK
+value = -200
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = USA
+second = PRK
+value = -100
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = PRK
+second = USA
+value = -100
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = PRK
+second = KOR
+value = -150
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = KOR
+second = PRK
+value = -150
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = CHC
+second = PRK
+value = 180
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = PRK
+second = CHC
+value = 180
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = SOV
+second = PRK
+value = 175
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = PRK
+second = SOV
+value = 175
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+
+
+#Invasion of Tibet
+
+
+relation = {
+first = TIB
+second = CHC
+value = -125
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = CHC
+second = TIB
+value = -125
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = TIB
+second = CHC
+value = -75
+start_date = 1950.6.25
+end_date = 1991.12.31
+}
+
+relation = {
+first = CHC
+second = TIB
+value = -75
+start_date = 1950.6.25
+end_date = 1991.12.31
+}
+
+
+
+#Algerian War
+
+
+relation = {
+first = FRA
+second = ALG
+value = -25 
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = ALG
+second = FRA
+value = -25
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = FRA
+second = ALG
+value = -125
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = ALG
+second = FRA
+value = -125
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = FRA
+second = ALG
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ALG
+second = FRA
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = FRA
+second = ALG
+value = 25
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = ALG
+second = FRA
+value = 25
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+
+
+#Ifni War
+
+
+relation = {
+first = MOR
+second = SPA
+value = -25
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = SPA
+second = MOR
+value = -25
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = MOR
+second = SPA
+value = -100
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = SPA
+second = MOR
+value = -100
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = FRA
+second = MOR
+value = -25
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = MOR
+second = FRA
+value = -25
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = FRA
+second = MOR
+value = -100
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = MOR
+second = FRA
+value = -100
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+
+
+#First Cod War
+
+
+relation = {
+first = ICL
+second = ENG
+value = 50
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = ENG
+second = ICL
+value = 50
+start_date = 1946.1.1
+end_date = 1950.6.25
+}
+
+relation = {
+first = ICL
+second = ENG
+value = -100
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+relation = {
+first = ENG
+second = ICL
+value = -100
+start_date = 1950.6.25
+end_date = 1961.12.11
+}
+
+
+
+#Eritrean War of Independence
+
+
+relation = {
+first = ETH
+second = ERI
+value = -25
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = ERI
+second = ETH
+value = -25
+start_date = 1946.1.1
+end_date = 1961.12.11
+}
+
+relation = {
+first = ETH
+second = ERI
+value = -200
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = ERI
+second = ETH
+value = -200
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+
+
+#Vietnam War
+
+
+relation = {
+first = USA
+second = DRV
+value = -200
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = DRV
+second = USA
+value = -200
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = USA
+second = SVI
+value = 200
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = SVI
+second = USA
+value = 200
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = LAO
+second = CMB
+value = 125
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = CMB
+second = LAO
+value = 125
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = LAO
+second = DRV
+value = -100
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = DRV
+second = LAO
+value = -100
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = CMB
+second = DRV
+value = -100
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = DRV
+second = CMB
+value = -100
+start_date = 1950.6.25
+end_date = 1979.12.24
+}
+
+relation = {
+first = USA
+second = VIE
+value = -75
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = VIE
+second = USA
+value = -75
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = LAO
+second = VIE
+value = 100
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = VIE
+second = LAO
+value = 100
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = CMB
+second = VIE
+value = 100
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = VIE
+second = CMB
+value = 100
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+
+
+#Indonesia moves into West Irian
+
+
+relation = {
+first = INO
+second = WPA
+value = -125
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = WPA
+second = INO
+value = -125
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = INO
+second = WPA
+value = -100
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = WPA
+second = INO
+value = -100
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+
+
+#Sino-Indian War
+
+
+relation = {
+first = IND
+second = CHC
+value = -125
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = CHC
+second = IND
+value = -125
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+
+
+#Rhodesian Bush War
+
+
+relation = {
+first = RHO
+second = ZMB
+value = -100
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ZMB
+second = RHO
+value = -100
+start_date = 1961.12.11
+end_date = 1979.12.24 
+}
+
+relation = {
+first = RHO
+second = MOZ
+value = -100
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = MOZ
+second = RHO
+value = -100
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = RHO
+second = ANG
+value = -50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ANG
+second = RHO
+value = -50
+start_date = 1961.12.11
+end_date = 1979.12.24 
+}
+
+relation = {
+first = RHO
+second = TNZ
+value = -50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = TNZ
+second = RHO
+value = -50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = RHO
+second = SAF
+value = 75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = SAF
+second = RHO
+value = 75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = RHO
+second = POR
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = POR
+second = RHO
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ZMB
+second = MOZ
+value = 75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = MOZ
+second = ZMB
+value = 75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ANG
+second = TNZ
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = TNZ	
+second = ANG
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ZMB
+second = TNZ
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = TNZ
+second = ZMB
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = MOZ
+second = TNZ
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = TNZ
+second = MOZ
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = MOZ
+second = CHC
+value = 75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = CHC
+second = MOZ
+value = 75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = MOZ
+second = LBY
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = LBY
+second = MOZ
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ZMB
+second = SOV
+value = 75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = SOV
+second = ZMB
+value = 75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ZMB
+second = CUB
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = CUB
+second = ZMB
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ZMB
+second = DDR
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = DDR
+second = ZMB
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+
+
+#South African Border War
+
+
+relation = {
+first = CUB
+second = SAF
+value = -75
+start_date = 1961.12.11
+end_date = 1991.1.16
+}
+
+relation = {
+first = SAF
+second = CUB
+value = -75
+start_date = 1961.12.11
+end_date = 1991.1.16
+}
+
+relation = {
+first = CUB
+second = ANG
+value = 100
+start_date = 1961.12.11
+end_date = 1991.1.16
+}
+
+relation = {
+first = ANG
+second = CUB
+value = 100
+start_date = 1961.12.11
+end_date = 1991.1.16
+}
+
+relation = {
+first = MOZ
+second = ANG
+value = 125
+start_date = 1961.12.11
+end_date = 1991.1.16
+}
+
+relation = {
+first = ANG
+second = MOZ
+value = 125
+start_date = 1961.12.11
+end_date = 1991.1.16
+}
+
+relation = {
+first = MOZ
+second = CUB
+value = 75
+start_date = 1961.12.11
+end_date = 1991.1.16
+}
+
+relation = {
+first = CUB
+second = MOZ
+value = 75
+start_date = 1961.12.11
+end_date = 1991.1.16
+}
+
+relation = {
+first = ANG
+second = SAF
+value = -125
+start_date = 1961.12.11
+end_date = 1991.1.16
+}
+
+relation = {
+first = SAF
+second = ANG
+value = -125
+start_date = 1961.12.11
+end_date = 1991.1.16
+}
+
+relation = {
+first = ANG
+second = POR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = POR
+second = ANG
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ANG
+second = KON
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = KON
+second = ANG
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = CUB
+second = POR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = POR
+second = CUB
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = MOZ
+second = POR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = POR
+second = MOZ
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = CUB
+second = KON
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = KON
+second = CUB
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = MOZ
+second = KON
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = KON
+second = MOZ
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+
+
+#Six-Day War
+
+
+relation = {
+first = ISR
+second = EGY
+value = -125
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = EGY
+second = ISR
+value = -125
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = SYR
+value = -100
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = SYR
+second = ISR
+value = -100
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = JOR
+value = -100
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = JOR
+second = ISR
+value = -100
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = IRQ
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = IRQ
+second = ISR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = SAU
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = SAU
+second = ISR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = PAK
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = PAK
+second = ISR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = MOR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = MOR
+second = ISR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = ALG
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ALG
+second = ISR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = LBY
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = LBY
+second = ISR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = KWT
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = KWT
+second = ISR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = TUN
+second = ISR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = TUN
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = SUD
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = SUD
+second = ISR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = PAL
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = PAL
+second = ISR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+
+
+#Nigerian-Biafran War
+
+
+relation = {
+first = NIG
+second = BIF
+value = -100
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = BIF
+second = NIG
+value = -100
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = UAR
+second = BIF
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = BIF
+second = UAR
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = NIG
+second = UAR
+value = 75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = UAR
+second = NIG
+value = 75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ENG
+second = NIG
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = NIG
+second = ENG
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = SOV
+second = NIG
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = NIG
+second = SOV
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = SUD
+second = NIG
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = NIG
+second = SUD
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = CHA
+second = NIG
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = NIG
+second = CHA
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = NGR
+second = NIG
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = NIG
+second = NGR
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ALG
+second = NIG
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = NIG
+second = ALG
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = SYR
+second = NIG
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = NIG
+second = SYR
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = SAU
+second = NIG
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = NIG
+second = SAU
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = SAF
+second = BIF
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = BIF
+second = SAF
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = RHO
+second = BIF
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = BIF
+second = RHO
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = BIF
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = BIF
+second = ISR
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = FRA
+second = BIF
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = BIF
+second = FRA
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = POR
+second = BIF
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = BIF
+second = POR
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = CHC
+second = BIF
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = BIF
+second = CHC
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+
+
+#Football War
+
+
+relation = {
+first = SAL
+second = HON
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = HON
+second = SAL
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+
+
+#Indo-Pakistani War of 1971
+
+
+relation = {
+first = IND
+second = PAK
+value = -100
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = PAK
+second = IND
+value = -100
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = IND
+second = SAU
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = SAU
+second = IND
+value = -75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = IND
+second = USA
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = USA
+second = IND
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = IND
+second = CHC
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = CHC
+second = IND
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = IND
+second = BGL
+value = 75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = BGL
+second = IND
+value = 75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = IND
+second = SOV
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = SOV
+second = IND
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = PAK
+second = SAU
+value = 75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = SAU
+second = PAK
+value = 75
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = PAK
+second = USA
+value = 125
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = USA
+second = PAK
+value = 125
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = PAK
+second = CHC
+value = 25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = CHC
+second = PAK
+value = 25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+
+
+#Second and Third Cod War
+
+
+relation = {
+first = ICL
+second = ENG
+value = -125
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ENG
+second = ICL
+value = -125
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ICL
+second = FRG
+value = -50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = FRG
+second = ICL
+value = -50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+
+
+#Yom Kippur War
+
+
+relation = {
+first = ISR
+second = SOV
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = SOV
+second = ISR
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = CUB
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = CUB
+second = ISR
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = LEB
+value = -100
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = LEB
+second = ISR
+value = -100
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = PRK
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = PRK
+second = ISR
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = ISR
+second = USA
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = USA
+second = ISR
+value = 50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+
+
+#Turkish Invasion of Cyprus
+
+
+relation = {
+first = TUR
+second = CYP
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = CYP
+second = TUR
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = TUR
+second = GRE
+value = -50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = GRE
+second = TUR
+value = -50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+
+#1979-1999 relations
+
+
+relation = {
+first = TUR
+second = CYP
+value = -150
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = CYP
+second = TUR
+value = -150
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = GRE
+value = -100
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = TUR
+value = -100
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+
+
+#Indonesian invasion of East Timor
+
+
+relation = {
+first = INO
+second = TIL
+value = -50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = TIL
+second = INO
+value = -50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+
+
+#Syrian occupation of Lebanon
+
+
+relation = {
+first = SYR
+second = LEB
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = LEB
+second = SYR
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+
+
+#Cambodian-Vietnamese War
+
+
+relation = {
+first = DRV
+second = KHM
+value = -25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = KHM
+second = DRV
+value = -25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = VIE
+second = KHM
+value = -50
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = KHM
+second = VIE
+value = -50
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = VIE
+second = SOV
+value = 50
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = SOV
+second = VIE
+value = 50
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = VIE
+second = LAO
+value = 50
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = LAO
+second = VIE
+value = 50
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = VIE
+second = CMB
+value = 25
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = CMB
+second = VIE
+value = 25
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = KHM
+second = CHC
+value = 75
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = CHC
+second = KHM
+value = 75
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = KHM
+second = USA
+value = 75
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = KHM
+value = 75
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = KHM
+second = ENG
+value = 50
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = KHM
+value = 50
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+
+
+#Sino-Vietnamese War
+
+
+relation = {
+first = DRV
+second = CHC
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = CHC
+second = DRV
+value = -25
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = VIE
+second = CHC
+value = -75
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = CHC
+second = VIE
+value = -75
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = VIE
+second = CHC
+value = -150
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = CHC
+second = VIE
+value = -150
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = CHC
+second = USA
+value = 50
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = CHC
+value = 50
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = CHC
+second = ENG
+value = 25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = CHC
+value = 25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = CHC
+second = SIA
+value = 25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = SIA
+second = CHC 
+value = 25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+
+
+#Chad-Libyan Conflict
+
+
+relation = {
+first = LBY
+second = CHA
+value = -50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = CHA
+second = LBY
+value = -50
+start_date = 1961.12.11
+end_date = 1979.12.24
+}
+
+relation = {
+first = LBY
+second = CHA
+value = -200
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = CHA
+second = LBY
+value = -200
+start_date = 1979.12.24
+end_date = 1979.12.24
+}
+
+relation = {
+first = CHA
+second = FRA
+value = 50
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = CHA
+value = 50
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = CHA
+second = USA
+value = 25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = CHA
+value = 25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = CHA
+second = EGY
+value = 25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = EGY
+second = CHA
+value = 25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = CHA
+second = SUD
+value = 25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+relation = {
+first = SUD
+second = CHA
+value = 25
+start_date = 1961.12.11
+end_date = 1991.12.31
+}
+
+
+
+#Afghanistan War
+
+
+relation = {
+first = SOV
+second = AFG
+value = 200
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = AFG
+second = SOV
+value = 200
+start_date = 1976.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = PAK
+second = AFG
+value = -125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = AFG
+second = PAK
+value = -125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = SAU
+second = AFG
+value = -125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = AFG
+second = SAU
+value = -125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+
+
+#Iran-Iraq War
+
+
+relation = {
+first = IRQ
+second = PER
+value = -150
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = PER
+second = IRQ
+value = -125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = IRQ
+second = USA
+value = 75
+start_date = 1979.12.24
+end_date = 1988.8.20
+}
+
+relation = {
+first = USA
+second = IRQ
+value = 75
+start_date = 1979.12.24
+end_date = 1988.8.20
+}
+
+
+
+#Falklands War
+
+
+relation = {
+first = ARG
+second = ENG
+value = -125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = ARG
+value = -125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+
+
+#1982 Lebanon War
+
+
+relation = {
+first = ISR
+second = SYR
+value = -150
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = SYR
+second = ISR
+value = -125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = ISR
+second = PAL
+value = -150
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = PAL
+second = ISR
+value = -150
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+
+
+#1983 Invasion of Grenada
+
+
+relation = {
+first = USA
+second = GRN
+value = -125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRN
+second = USA
+value = -125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = CUB
+value = -110
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = CUB
+second = USA
+value = -110
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+
+
+#Siachen Conflict
+
+
+relation = {
+first = IND
+second = PAK
+value = -125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = PAK
+second = IND
+value = -125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+
+
+#Nagorno-Karabakh War
+
+
+relation = {
+first = ARM
+second = AZB
+value = -200
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = AZB
+second = ARM
+value = -175
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = ARM
+second = SOV
+value = -175
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = SOV
+second = ARM
+value = -175
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = ARM
+second = NGK
+value = 150
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = NGK
+second = ARM
+value = 150
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = ARM
+second = RUS
+value = 75
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = RUS
+second = ARM
+value = 75
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = ARM
+second = GRE
+value = 75
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = GRE
+second = ARM
+value = 75
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = AZB
+second = TUR
+value = 125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = TUR
+second = AZB
+value = 125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = AZB
+second = ISR
+value = 50
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = ISR
+second = AZB
+value = 50
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = AZB
+second = PAK
+value = 50
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = PAK
+second = AZB
+value = 50
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = AZB
+second = RUS
+value = 50
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = RUS
+second = AZB
+value = 50
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = AZB
+second = AFG
+value = 75
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = AFG
+second = AZB
+value = 75
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+
+
+#United States Invasion of Panama
+
+
+relation = {
+first = USA
+second = PAN
+value = -125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+relation = {
+first = PAN
+second = USA
+value = -125
+start_date = 1979.12.24
+end_date = 1991.12.31
+}
+
+
+
+#Gulf War
+
+
+relation = {
+first = IRQ
+second = KWT
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = KWT
+second = IRQ
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = IRQ
+second = USA
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = USA
+second = IRQ
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = IRQ
+second = ENG
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = ENG
+second = IRQ
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = IRQ
+second = SAU
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = SAU
+second = IRQ
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = IRQ
+second = FRA
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = FRA
+second = IRQ
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = IRQ
+second = CAN
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = CAN
+second = IRQ
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = IRQ
+second = EGY
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = EGY
+second = IRQ
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = IRQ
+second = SYR
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = SYR
+second = IRQ
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = IRQ
+second = QTR
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = QTR
+second = IRQ
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = IRQ
+second = UAE
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+relation = {
+first = UAE
+second = IRQ
+value = -200
+start_date = 1990.7.2
+end_date = 1991.12.31
+}
+
+
+
+#Ten-Day War
+
+
+relation = {
+first = YUG
+second = SLV
+value = -175
+start_date = 1991.1.16
+end_date = 1991.12.31
+}
+
+relation = {
+first = SLV
+second = YUG
+value = -175
+start_date = 1991.1.16
+end_date = 1991.12.31
+}

@@ -128,9 +128,9 @@ diplomatic_decisions = {
 					not = { has_country_modifier = WP_Nuclear_Embargo }
 					not = { has_country_modifier = NATO_Nuclear_Embargo }
 					not = { has_country_modifier = NATO_armsembargo }					
-					not = { has_country_modifier = UN_EMBARGO }
-					not = { has_country_modifier = UN_ARMSEMBARGO }
-					not = { has_country_modifier = UN_NUCLEAREMBARGO }
+					not = { has_country_flag = UN_EMBARGO }
+					not = { has_country_flag = UN_ARMSEMBARGO }
+					not = { has_country_flag = UN_NUCLEAREMBARGO }
 					not = { has_country_modifier = UN_EMBARGO_DELAY }
 					not = { fuel = 1 }
 					money = 10000					
@@ -167,9 +167,9 @@ diplomatic_decisions = {
 					not = { has_country_modifier = WP_Nuclear_Embargo }
 					not = { has_country_modifier = NATO_Nuclear_Embargo }
 					not = { has_country_modifier = NATO_armsembargo }					
-                    not = { has_country_modifier = UN_EMBARGO }
-					not = { has_country_modifier = UN_ARMSEMBARGO }
-					not = { has_country_modifier = UN_NUCLEAREMBARGO }
+                    not = { has_country_flag = UN_EMBARGO }
+					not = { has_country_flag = UN_ARMSEMBARGO }
+					not = { has_country_flag = UN_NUCLEAREMBARGO }
 					not = { has_country_modifier = UN_EMBARGO_DELAY }
 					not = { fuel = 1 }
 					money = 1000
@@ -206,9 +206,9 @@ diplomatic_decisions = {
 					not = { has_country_modifier = WP_Nuclear_Embargo }
 					not = { has_country_modifier = NATO_Nuclear_Embargo }
 					not = { has_country_modifier = NATO_armsembargo }					
-                    not = { has_country_modifier = UN_EMBARGO }
-					not = { has_country_modifier = UN_ARMSEMBARGO }
-					not = { has_country_modifier = UN_NUCLEAREMBARGO }
+                    not = { has_country_flag = UN_EMBARGO }
+					not = { has_country_flag = UN_ARMSEMBARGO }
+					not = { has_country_flag = UN_NUCLEAREMBARGO }
 					not = { has_country_modifier = UN_EMBARGO_DELAY }
 					not = { supplies = 1 }
 					money = 10000					
@@ -246,9 +246,9 @@ diplomatic_decisions = {
 					not = { has_country_modifier = WP_Nuclear_Embargo }
 					not = { has_country_modifier = NATO_Nuclear_Embargo }
 					not = { has_country_modifier = NATO_armsembargo }					
-                    not = { has_country_modifier = UN_EMBARGO }
-					not = { has_country_modifier = UN_ARMSEMBARGO }
-					not = { has_country_modifier = UN_NUCLEAREMBARGO }
+                    not = { has_country_flag = UN_EMBARGO }
+					not = { has_country_flag = UN_ARMSEMBARGO }
+					not = { has_country_flag = UN_NUCLEAREMBARGO }
 					not = { has_country_modifier = UN_EMBARGO_DELAY }								  								
 					not = { supplies = 1 }
 					money = 1000

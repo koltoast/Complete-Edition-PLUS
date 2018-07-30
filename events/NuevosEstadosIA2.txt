@@ -437,7 +437,7 @@ country_event = {
 			}
 
 
-			do_election = THIS
+			#do_election = THIS										#TODO
 			start_election = this
             
 	}

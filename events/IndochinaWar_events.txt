@@ -596,7 +596,7 @@ country_event = {
 		name = "EVTOPTA194007"			    			#OK
 		dissent = 3
 		national_unity = -2
-		populariy = -2
+		popularity = -2
 	}
 }
 

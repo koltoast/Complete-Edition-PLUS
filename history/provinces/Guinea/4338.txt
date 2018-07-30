@@ -1,0 +1,47 @@
+owner = FRA
+controller = FRA
+add_core = FRA
+add_core = GIN
+grain = 16.32
+infra = 4
+1946.1.1 = {
+  population_total = {
+   amount = 107220
+   template = 5
+  }
+}
+1958.10.02 = {
+  owner = GIN
+  controller = GIN
+  remove_core = FRA
+}
+1948.1.1 = {
+population_total = {
+   amount = 108606
+   template = 5
+}
+}
+1950.1.1 = {
+population_total = {
+   amount = 110011
+   template = 5
+}
+}
+1961.12.30 = {
+population_total = {
+   amount = 129648
+   template = 105
+}
+}
+1979.1.1 = {
+population_total = {
+   amount = 155011
+   template = 205
+}
+}
+1991.1.1 = {
+population_total = {
+   amount = 216341
+   template = 305
+}
+}

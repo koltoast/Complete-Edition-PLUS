@@ -1,8 +1,8 @@
 #Index:
 	#6230 - colony is owned		- 3 options
 	#6231 - colony is a puppet	- 2 options
-	#6232 – rebel reinforcements - if GUI exists			- 2 options
-	#6233 – rebel reinforcements - if GUI does not exist	- 2 options
+	#6232 – rebel reinforcements - if GIN exists			- 2 options
+	#6233 – rebel reinforcements - if GIN does not exist	- 2 options
 
 country_event = {
 	
@@ -16,8 +16,8 @@ country_event = {
 		owns = 4311
 		controls = 4311
 		NOT = { national_unity = 69 }
-		NOT = { exists = GUI }
-		NOT = { has_country_flag = colonial_war_GUI }
+		NOT = { exists = GIN }
+		NOT = { has_country_flag = colonial_war_GIN }
 		NOT = { national_culture = cul_sub_saharan_africa }
 	}
 	
@@ -97,9 +97,9 @@ country_event = {
 				ideology = communist_idolg
 			}
 		}
-		release = GUI
-		recognize = GUI
-		relation = { who = GUI value = 100 }
+		release = GIN
+		recognize = GIN
+		relation = { who = GIN value = 100 }
 	}
 		
 	option = {											#chance to puppet
@@ -143,8 +143,8 @@ country_event = {
 				ideology = communist_idolg
 			}
 		}
-		release_vassal = GUI
-		recognize = GUI
+		release_vassal = GIN
+		recognize = GIN
 	}
 	
 	option = {											#chance to start a colonial war
@@ -196,7 +196,7 @@ country_event = {
 			add_province_modifier = { name = nationalist_revolt duration = 800 }
 			create_revolt = 5
 		}
-		set_country_flag = colonial_war_GUI
+		set_country_flag = colonial_war_GIN
 	}
 }
 
@@ -210,8 +210,8 @@ country_event = {
 	
 	trigger = {
 		NOT = { national_unity = 69 }
-		exists = GUI
-		GUI = { vassal_of = THIS }												#change GUI tag, conflict probably, GUE maybe
+		exists = GIN
+		GIN = { vassal_of = THIS }
 		NOT = { national_culture = cul_sub_saharan_africa }
 	}
 	
@@ -291,9 +291,9 @@ country_event = {
 				ideology = communist_idolg
 			}
 		}
-		release = GUI
-		recognize = GUI
-		relation = { who = GUI value = 100 }
+		release = GIN
+		recognize = GIN
+		relation = { who = GIN value = 100 }
 	}
 		
 	option = {											#auto release puppet and declare war
@@ -335,9 +335,9 @@ country_event = {
 				ideology = left_wing_radical_idolg
 			}
 		}
-		liberate_puppet = GUI
-		war = GUI
-		GUI = {
+		liberate_puppet = GIN
+		war = GIN
+		GIN = {
 			supplies = 500
 			random_owned = {
 				limit = { region = region_Guinea_West_Guinea }
@@ -353,7 +353,7 @@ country_event = {
 
 country_event = {
 	
-	id = 6232										#War continues - rebel reinforcements - if GUI does not exist
+	id = 6232										#War continues - rebel reinforcements - if GIN does not exist
 	
 	title = "EVTNAME6232"
 	desc = "EVTDESC6232"
@@ -362,8 +362,8 @@ country_event = {
 	trigger = {
 		owns = 4311
 		NOT = { national_unity = 69 }
-		NOT = { exists = GUI }
-		has_country_flag = colonial_war_GUI
+		NOT = { exists = GIN }
+		has_country_flag = colonial_war_GIN
 	}
 	
 	mean_time_to_happen = {
@@ -430,10 +430,10 @@ country_event = {
 				dissent = 50
 			}
 		}
-		release = GUI
-		recognize = GUI
+		release = GIN
+		recognize = GIN
 		dissent = -5								#People are happy because the war ended
-		clr_country_flag = colonial_war_GUI
+		clr_country_flag = colonial_war_GIN
 	}
 	
 	option = {
@@ -485,7 +485,7 @@ country_event = {
 
 country_event = {
 	
-	id = 6233										#War continues - rebel reinforcements - if GUI exists
+	id = 6233										#War continues - rebel reinforcements - if GIN exists
 	
 	title = "EVTNAME6233"
 	desc = "EVTDESC6233"
@@ -494,9 +494,9 @@ country_event = {
 	trigger = {
 		owns = 4311
 		NOT = { national_unity = 69 }
-		exists = GUI
-		has_country_flag = colonial_war_GUI
-		war_with = GUI
+		exists = GIN
+		has_country_flag = colonial_war_GIN
+		war_with = GIN
 	}
 	
 	mean_time_to_happen = {
@@ -554,10 +554,10 @@ country_event = {
 				dissent = 50
 			}
 		}
-		THIS = { end_war = GUI }
-		recognize = GUI
+		THIS = { end_war = GIN }
+		recognize = GIN
 		dissent = -5								#People are happy because the war ended
-		clr_country_flag = colonial_war_GUI
+		clr_country_flag = colonial_war_GIN
 	}
 	
 	option = {
@@ -585,7 +585,7 @@ country_event = {
 				not = { dissent = 50 }
 			}
 		}
-		GUI = {
+		GIN = {
 			supplies = 500
 			random_owned = {
 				limit = { region = region_Guinea_West_Guinea  }
