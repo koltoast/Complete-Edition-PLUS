@@ -4,7 +4,6 @@ ideology = social_cons_idolg
 alignment = { x = 110 y = 0 }
 neutrality = 40
 national_unity = 100
-join_faction = comintern
 
 #########
 #CULTURE#
@@ -68,7 +67,6 @@ oob = "HUN_1946.txt"
         neutrality = 40
 	head_of_state = 1215000
 	head_of_government = 1215000	
-	join_faction = comintern
 }
 1947.8.31 = {
 	head_of_state = 1215000
@@ -84,7 +82,6 @@ oob = "HUN_1946.txt"
 		maoist_idolg = 0
 		communist_idolg = 23
 	}
-	join_faction = comintern
 }
 1948.1.1 = {
 	government = authoritarian_gov
@@ -99,7 +96,6 @@ oob = "HUN_1946.txt"
 	rule_of_law = moderately_defined
 	human_rights = not_recognized
 	public_oversight = moral_code_of_conduct
-	join_faction = comintern
 }
 1948.5.14 = {
 	oob = "HUN_1948.txt"
@@ -108,7 +104,10 @@ oob = "HUN_1946.txt"
 	head_of_state = 1215001	
 	head_of_government = 1215012
         	
-	join_faction = comintern
+}
+1949.1.5 = 
+{
+	join_organisation = XCM
 }
 1950.6.25 = {
 	oob = "HUN_1950.txt"
@@ -116,19 +115,17 @@ oob = "HUN_1946.txt"
         neutrality = 25
 	head_of_state = 1215001	
 	head_of_government = 1215012	
-	join_faction = comintern
 }
 1954.08.03 = {
 	add_country_modifier = {
 		name = signed_the_geneva_convention
 		duration = -1
 	}
-	join_faction = comintern
 }
 
 1955.5.14 =
 {
-	join_faction = comintern
+	join_organisation = XWP
 	alignment = { x = 200 y = 0 }
 	head_of_state = 1215001	
 	head_of_government = 1215014	
@@ -139,14 +136,12 @@ oob = "HUN_1946.txt"
 		name = mod_united_nations_member_state
 		duration = -1
 	}
-	join_faction = comintern
 }
 1961.12.11 = {
 	oob = "HUN_1961.txt"
         neutrality = 0
 	head_of_state = 1215003	
 	head_of_government = 1215003	
-	join_faction = comintern
 }
 1969.01.01 = {
   minister_image_change = 1215003
@@ -156,8 +151,7 @@ oob = "HUN_1946.txt"
         alignment = { x = 190 y = 0 }
         neutrality = 0
 	head_of_state = 1215003	
-	head_of_government = 1215022
-	join_faction = comintern
+	head_of_government = 1215022		
 }
 1980.01.01 = {
   minister_image_change = 1215003
@@ -165,8 +159,7 @@ oob = "HUN_1946.txt"
 1982.1.1 = {
 oob = "HUN_1982_test.txt"
 	head_of_state = 1215003
-	head_of_government = 1215022	
-	join_faction = comintern
+	head_of_government = 1215022			
 }
 1991.1.16 = {
 	oob = "HUN_1991.txt"

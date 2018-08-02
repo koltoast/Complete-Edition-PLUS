@@ -1,0 +1,249 @@
+##################################################################################################################
+# Events meant for early starts wen organisations didn-t exist yet ###############################################
+##################################################################################################################
+
+###################################
+#   NATO #
+###################################
+country_event = {
+
+	id = 800001
+	
+	title = "EVTNAME800001"
+	desc = "EVTDESC800001"
+	picture = ""
+
+	trigger = {
+		AND = {
+			OR = {
+				tag = BEL
+				tag = CAN
+				tag = DEN
+				tag = FRA
+				tag = ICL
+				tag = ITA
+				tag = LUX
+				tag = HOL
+				tag = NOR
+				tag = POR
+				tag = ENG
+				tag = USA
+			}
+			year = 1949
+			month = 3
+			NOT = { has_global_flag = "NATO_created" }
+		}
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "EVTOPTA800001"
+		ai_chance = { factor = 100 }
+		set_global_flag = "NATO_created"
+		BEL = {
+			country_event = 800002
+		}
+		CAN = {
+			country_event = 800002
+		}
+		DEN = {
+			country_event = 800002
+		}
+		FRA = {
+			country_event = 800002
+		}
+		ICL = {
+			country_event = 800002
+		}
+		ITA = {
+			country_event = 800002
+		}
+		LUX = {
+			country_event = 800002
+		}
+		HOL = {
+			country_event = 800002
+		}
+		NOR = {
+			country_event = 800002
+		}
+		POR = {
+			country_event = 800002
+		}
+		ENG = {
+			country_event = 800002
+		}
+		USA = {
+			country_event = 800002
+		}
+	}
+}
+
+country_event = {
+
+	id = 800002
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME800002"
+	desc = "EVTDESC800002"
+	picture = ""
+
+	option = {
+		name = "EVTOPTA800002"
+		join_faction = allies
+	}
+}
+
+###################################
+#   Warsaw Pact #
+###################################
+country_event = {
+
+	id = 800011
+
+	trigger = {
+		AND = {
+			OR = {
+				tag = ALB
+				tag = BUL
+				tag = CZE
+				tag = DDR
+				tag = HUN
+				tag = POL
+				tag = ROM
+				tag = SOV
+			}
+			year = 1955
+			month = 4
+			NOT = { has_global_flag = "WP_created" }
+		}
+	}
+	
+	title = "EVTNAME800011"
+	desc = "EVTDESC800011"
+	picture = ""
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "EVTOPTA800011"
+		ai_chance = { factor = 100 }
+		set_global_flag = "WP_created"
+		ALB = {
+			country_event = 800012
+		}
+		BUL = {
+			country_event = 800012
+		}
+		CZE = {
+			country_event = 800012
+		}
+		DDR = {
+			country_event = 800012
+		}
+		HUN = {
+			country_event = 800012
+		}
+		POL = {
+			country_event = 800012
+		}
+		ROM = {
+			country_event = 800012
+		}
+		SOV = {
+			country_event = 800012
+		}
+	}
+}
+
+country_event = {
+
+	id = 800012
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME800012"
+	desc = "EVTDESC800012"
+	picture = ""
+
+	option = {
+		name = "EVTOPTA800012"
+		join_faction = comintern
+	}
+}
+
+###################################
+#   Warsaw Pact #
+###################################
+country_event = {
+
+	id = 800021
+
+	trigger = {
+		AND = {
+			OR = {
+				tag = BEL
+				tag = FRA
+				tag = FRG
+				tag = ITA
+				tag = LUX
+				tag = HOL
+				tag = ENG
+			}
+			year = 1954
+			month = 9
+			NOT = { has_global_flag = "WEU_created" }
+		}
+	}
+	
+	title = "EVTNAME800021"
+	desc = "EVTDESC800021"
+	picture = ""
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "EVTOPTA800021"
+		ai_chance = { factor = 100 }
+		set_global_flag = "WEU_created"
+		BEL = {
+			country_event = 800022
+		}
+		FRA = {
+			country_event = 800022
+		}
+		FRG = {
+			country_event = 800022
+		}
+		ITA = {
+			country_event = 800022
+		}
+		LUX = {
+			country_event = 800022
+		}
+		HOL = {
+			country_event = 800022
+		}
+		ENG = {
+			country_event = 800022
+		}
+	}
+}
+
+country_event = {
+
+	id = 800022
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME800022"
+	desc = "EVTDESC800022"
+	picture = ""
+
+	option = {
+		name = "EVTOPTA800022"
+		join_organisation = XUE
+	}
+}

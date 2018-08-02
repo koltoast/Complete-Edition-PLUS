@@ -4,7 +4,6 @@ ideology = communist_idolg
 alignment = { x = 0 y = 0 }
 neutrality = 70
 national_unity = 100
-join_faction = comintern
 
 #########
 #CULTURE#
@@ -96,6 +95,10 @@ oob = "MON_1946.txt"
 	alignment = { x = 100 y = 0 }
 	head_of_state = 1261002
 	head_of_government = 1261005
+}
+1962.1.5 = 
+{
+	join_organisation = XCM
 }
 1979.12.24 = {
 	oob = "MON_1979.txt"

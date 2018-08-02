@@ -6,7 +6,6 @@ head_of_government = 1298003
 alignment = { x = 110 y = 0 }
 neutrality = 40
 national_unity = 100
-join_faction = comintern
 
 #########
 #CULTURE#
@@ -68,8 +67,7 @@ oob = "ROM_1946.txt"
         oob = "ROM_1946.txt"
         neutrality = 40
 	head_of_state = 1298001
-	head_of_government = 1298003
-	join_faction = comintern
+	head_of_government = 1298003	
 }
 1948.5.14 = {
 	oob = "ROM_1948.txt"
@@ -77,13 +75,15 @@ oob = "ROM_1946.txt"
 	head_of_state = 1298002
 	head_of_government = 1298003
         alignment = { x = 130 y = 0 }
-	join_faction = comintern
+}
+1949.1.5 = 
+{
+	join_organisation = XCM
 }
 1949.4.4 =
 {
 	head_of_state = 1298002
 	head_of_government = 1298003
-	join_faction = comintern
 }
 1950.6.25 = {
 	oob = "ROM_1950.txt"
@@ -91,13 +91,11 @@ oob = "ROM_1946.txt"
 	head_of_state = 1298002
 	head_of_government = 1298003
         alignment = { x = 150 y = 0 }
-	join_faction = comintern
 }
 1954.06.01 = {
 	add_country_modifier = {
 		name = signed_the_geneva_convention
 		duration = -1
-	join_faction = comintern
 	}
 }
 1955.5.14 =
@@ -105,14 +103,13 @@ oob = "ROM_1946.txt"
         alignment = { x = 200 y = 0 }
 	head_of_state = 1298004
 	head_of_government = 1298005
-	join_faction = comintern
+	join_organisation = XWP
 }
 1955.12.14 = {
 	join_organisation = XUN
 	add_country_modifier = {
 		name = mod_united_nations_member_state
 		duration = -1
-	join_faction = comintern
 	}
 }
 1961.12.11 = {
@@ -120,7 +117,6 @@ oob = "ROM_1946.txt"
         neutrality = 0
 	head_of_state = 1298005
 	head_of_government = 1298004
-	join_faction = comintern
 }
 1979.12.24 = {
 	oob = "ROM_1979.txt"
@@ -128,14 +124,12 @@ oob = "ROM_1946.txt"
 	head_of_state = 1298007
 	head_of_government = 1298016
         alignment = { x = 190 y = 0 }
-	join_faction = comintern
 }
 1982.1.1 = {
 	head_of_state = 1298007
 	head_of_government = 1298016
 	oob = "empty.txt"
         alignment = { x = 180 y = 0 }
-	join_faction = comintern
 }
 1991.1.16 = {
 	oob = "ROM_1991.txt"

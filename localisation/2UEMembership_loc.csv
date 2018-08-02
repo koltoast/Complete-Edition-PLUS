@@ -1,7 +1,7 @@
 #CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
 dec_join_WP;We have begun the process of joining UE;;;;;;;;;;;;;x
 EVTNAME700238;Joining the  European Union;;;;;;;;;;;;;x
-EVTDESC700238;We have begun the process of joining the Warsaw pact as a member state. Whether we are permitted into the organisation at this time or not will depend on the opinions held by the UE's Permanent Members.\nThrough the UE we hope to gain a voice on the international diplomatic stage, shape the creation of new international law, and benefit from the collective security the organisation provides.\n;;;;;;;;;;;;;x
+EVTDESC700238;We have begun the process of joining the UE as a member state. Whether we are permitted into the organisation at this time or not will depend on the opinions held by the UE's Permanent Members.\nThrough the UE we hope to gain a voice on the international diplomatic stage, shape the creation of new international law, and benefit from the collective security the organisation provides.\n;;;;;;;;;;;;;x
 EVTOPTA700238;Okay;;;;;;;;;;;;;x
 EVTNAME700239;A New UE Member?;;;;;;;;;;;;;x
 EVTDESC700239;$FROMCOUNTRY$ has begun the process of joining the European Union as a member state. As a UE Permanent Member we have the option of vetoing this application but doing so would come at the cost of some of our international prestige.;;;;;;;;;;;;;x

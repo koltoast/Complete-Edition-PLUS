@@ -4,7 +4,6 @@ ideology = communist_idolg
 alignment = { x = 110 y = 0 }
 neutrality = 40
 national_unity = 100
-join_faction = comintern
 
 #########
 #CULTURE#
@@ -65,8 +64,7 @@ oob = "BUL_1946.txt"
 	oob = "BUL_1946.txt"
 	neutrality = 40
 	head_of_state = 1139000
-	head_of_government = 1139007
-	join_faction = comintern
+	head_of_government = 1139007	
 }
 1948.5.14 = {
 	oob = "BUL_1948.txt"
@@ -74,29 +72,30 @@ oob = "BUL_1946.txt"
 	alignment = { x = 130 y = 0 }
 	head_of_state = 1139002
 	head_of_government = 1139002 	
-	join_faction = comintern
+}
+1949.1.5 = 
+{
+	join_organisation = XCM
 }
 1950.6.25 = {
 	oob = "BUL_1950.txt"
 	neutrality = 25
 	alignment = { x = 150 y = 0 }
 	head_of_state = 1139003
-	head_of_government = 1139003
-	join_faction = comintern
+	head_of_government = 1139003	
 }
 1954.07.22 = {
 	add_country_modifier = {
 		name = signed_the_geneva_convention
 		duration = -1
 	}
-	join_faction = comintern
 }
 1955.5.14 = 
 {
 	alignment = { x = 200 y = 0 }
 	head_of_state = 1139004	
-	head_of_government = 1139003	
-	join_faction = comintern
+	head_of_government = 1139003
+	join_organisation = XWP
 }
 1955.12.14 = {
 	join_organisation = XUN
@@ -104,27 +103,23 @@ oob = "BUL_1946.txt"
 		name = mod_united_nations_member_state
 		duration = -1
 	}
-	join_faction = comintern
 }
 1961.12.11 = {
 	oob = "BUL_1961.txt"
 	neutrality = 0
 	head_of_state = 1139004
-	head_of_government = 1139010
-	join_faction = comintern
+	head_of_government = 1139010	
 }
 1979.12.24 = {
 	oob = "BUL_1979.txt"
 	neutrality = 0
 	alignment = { x = 190 y = 0 }
 	head_of_state = 1139004
-	head_of_government = 1139011
-	join_faction = comintern
+	head_of_government = 1139011	
 }
 1982.1.1 = {
 	head_of_state = 1139004
 	head_of_government = 1139012	
-	join_faction = comintern
 }
 1991.1.16 = {
 	oob = "BUL_1991.txt"

@@ -1,0 +1,75 @@
+#CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
+##################################################;;;;;;;;;;;;;;x
+# Organisations and actions ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+ORGANISATION_NAME_UN;United Nations;;;;;;;;;;;;;x;;
+ORGANISATION_NAME_UN_short;UN;;;;;;;;;;;;;x;;
+ORGANISATION_NAME_NATO;NATO;;;;;;;;;;;;;x;;
+ORGANISATION_NAME_NATO_short;NATO;;;;;;;;;;;;;x;;
+ORGANISATION_NAME_WP;Warsaw Pact;;;;;;;;;;;;;x;;
+ORGANISATION_NAME_WP_short;WP;;;;;;;;;;;;;x;;
+ORGANISATION_NAME_COMECON;Council for Mutual Economic Assistance;;;;;;;;;;;;;x;;
+ORGANISATION_NAME_COMECON_short;COMECON;;;;;;;;;;;;;x;;
+ORGANISATION_NAME_UE;Western European Union;;;;;;;;;;;;;x;;
+ORGANISATION_NAME_UE_short;WEU;;;;;;;;;;;;;x;;
+ORGANISATION_COOLDOWN;Cooldown Counter: ;;;;;;;;;;;;;x;;
+DIPLO_COST;Cost in diplomatic points: ;;;;;;;;;;;;;x;;
+ORGACTION_DIPLO_NOT_ENOUGH;You have not enough diplomatic points to call this action;;;;;;;;;;;;;x;;
+ORGACTION_SELECT_COUNTRY;Select a country to see action effects.;;;;;;;;;;;;;x;;
+ORGACTION_ALLOW;Action call conditions: ;;;;;;;;;;;;;x
+ORGACTION_EFFECT;Action effects: ;;;;;;;;;;;;;x
+ORG_VOTING_ACTIVE;There is currently an action awaiting vote. You cannot start a new vote before the previous vote is finished.;;;;;;;;;;;;;x;;
+ORG_ALL_ACTION;Members of §Y$ORG$§W will do:  ;;;;;;;;;;;;;x
+#######Voting########;;;;;;;;;;;;;;x;;
+VT_YES;Yes;;;;;;;;;;;;;x;;
+VT_NO;No;;;;;;;;;;;;;x;;
+VT_ABSTAIN;Abstain;;;;;;;;;;;;;x;;
+VT_VETO;Veto;;;;;;;;;;;;;x;;
+VT_VOTING_LABEL;Current voting;;;;;;;;;;;;;x;;
+NO_VOTING;No voting.;;;;;;;;;;;;;x;;
+NO_VOTING_DESC;Currently organization isn't voting on anything. To change this, select an action from the actions menu and start a new vote.;;;;;;;;;;;;;x;;
+#######UN Diplomatic Actions########;;;;;;;;;;;;;;x;;
+EMBARGO_ACTION_UN;Embargo;;;;;;;;;;;;;x;;
+EMBARGO_ACTION_UN_DESC;UN imposes an arms embargo on target.;;;;;;;;;;;;;x;;
+CANCEL_EMBARGO_ACTION_UN;Cancel Embargo;;;;;;;;;;;;;x;;
+CANCEL_EMBARGO_ACTION_UN_DESC;UN cancels the arms embargo on target.;;;;;;;;;;;;;x;;
+NUCLEAR_ACTION_UN;Nuclear Arms Embargo;;;;;;;;;;;;;x;;
+NUCLEAR_ACTION_UN_DESC;Embargo a nation that has aspirations of gaining nuclear weapons and thus threatens the nuclear balance of the world.;;;;;;;;;;;;;x;;
+CANCEL_NUCLEAR_ACTION_UN;Cancel Nuclear Arms Embargo;;;;;;;;;;;;;x;;
+CANCEL_NUCLEAR_ACTION_UN_DESC; Cancels the nuclear embargo.;;;;;;;;;;;;;x;;
+WEAPON_EMBARGO_ACTION_UN;Arms Embargo;;;;;;;;;;;;;x;;
+WEAPON_EMBARGO_ACTION_UN_DESC;UN imposes an arms embargo on target.;;;;;;;;;;;;;x;;
+CANCEL_WEAPON_EMBARGO_ACTION_UN;Cancel Arms Embargo;;;;;;;;;;;;;x;;
+CANCEL_WEAPON_EMBARGO_ACTION_UN_DESC;UN cancels the arms embargo on target.;;;;;;;;;;;;;x;;
+SANCTIONS_ACTION_UN;Sanctions;;;;;;;;;;;;;x;;
+SANCTIONS_ACTION_UN_DESC;The United Nations Security Council can implement sanctions against leaders or governments.;;;;;;;;;;;;;x;;
+CANCEL_SANCTIONS_ACTION_UN;Cancel Sanctions;;;;;;;;;;;;;x;;
+CANCEL_SANCTIONS_ACTION_UN_DESC;Clears the sanctions.;;;;;;;;;;;;;x;;
+EMBARGO_ACTION_NATO;Embargo;;;;;;;;;;;;;x;;
+EMBARGO_ACTION_NATO_DESC;Issue a NATO wide embargo.;;;;;;;;;;;;;x;;
+EMBARGO_ACTION_WP;Embargo;;;;;;;;;;;;;x;;
+EMBARGO_ACTION_WP_DESC;Issue a Warsaw Pact wide embargo.;;;;;;;;;;;;;x;;
+EMBARGO_ACTION_COMMUNITY;Embargo;;;;;;;;;;;;;x;;
+EMBARGO_ACTION_COMMUNITY_DESC;Issue a Community wide embargo.;;;;;;;;;;;;;x;;
+INTERVENTION_ACTION_UN;Intervention;;;;;;;;;;;;;x;;
+INTERVENTION_ACTION_UN_DESC;UN members declare defensive war on target.;;;;;;;;;;;;;x;;
+CANCEL_INTERVENTION_ACTION_UN;Cancel Intervention;;;;;;;;;;;;;x;;
+CANCEL_INTERVENTION_ACTION_UN_DESC;UN members cancel the defensive war to protect the target.;;;;;;;;;;;;;x;;
+INVITE_ACTION_WP;Invite to faction;;;;;;;;;;;;;x;;
+INVITE_ACTION_WP_DESC;Invite the selected nation to join the Warsaw Pact.;;;;;;;;;;;;;x;;
+INVITE_ACTION_NATO;Invite to faction;;;;;;;;;;;;;x;;
+INVITE_ACTION_NATO_DESC;Invite the selected nation to join Nato.;;;;;;;;;;;;;x;;
+INFLUENCE_ACTION_NATO;Influence Nation;;;;;;;;;;;;;x;;
+INFLUENCE_ACTION_NATO_DESC;By actively influencing the target nation to our faction we use the skill of diplomacy to drift their diplomatic standings closer to us. The more aligned a state is towards our faction the better the possibility of them joining.;;;;;;;;;;;;;x;;
+STOP_INFLUENCE_ACTION_NATO;Stop Influence;;;;;;;;;;;;;x;;
+STOP_INFLUENCE_ACTION_NATO_DESC;XXXXXXXXXXXXX;;;;;;;;;;;;;x;;
+INFLUENCE_ACTION_WP;Influence Nation;;;;;;;;;;;;;x;;
+INFLUENCE_ACTION_WP_DESC;By actively influencing the target nation to our faction we use the skill of diplomacy to drift their diplomatic standings closer to us. The more aligned a state is towards our faction the better the possibility of them joining.;;;;;;;;;;;;;x;;
+STOP_INFLUENCE_ACTION_WP;Stop Influence;;;;;;;;;;;;;x;;
+STOP_INFLUENCE_ACTION_WP_DESC;XXXXXXXXXXXXXX;;;;;;;;;;;;;x;;
+##################################################;;;;;;;;;;;;;;x
+# Events related to organisations ;;;;;;;;;;;;;;x
+##################################################;;;;;;;;;;;;;;x
+EVTNAME1001;UN Nuclear Embargo;;;;;;;;;;;;;x
+EVTDESC1001;We are informed about that UN inspectors revealed that we started to use centrifuges for fission material used in nuclear weapons. UN will call a voting about a nuclear embargo against us.;;;;;;;;;;;;;x
+EVTOPTA1001;OK;;;;;;;;;;;;;x

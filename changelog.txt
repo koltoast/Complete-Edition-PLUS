@@ -113,6 +113,14 @@ v1.3b by Roshindow	-------------------------------------------------------------
 ERROR FIXES
 Canged Guinea tag, from GUI to GIN, caused error and didn't follow ISO 3166-1 alpha-3
 
-v1.3b by Ryan404000	------------------------------------------------------------------------------------------------------------------
+v1.4 by Ryan404000	------------------------------------------------------------------------------------------------------------------
 Adjusted some minor localization for parties in SOV
 Modified Battlegroup_Systemcoordination to have multiple levels to allow other tech that required level 2.
+
+v1.5 by Roshindow	------------------------------------------------------------------------------------------------------------------
+Added various missing organization flags
+Changed OAS tag to XAS otherwise flag wouldn't load
+Added COMECON as organization to include Mongolia in some organization with WP
+Moved WP flag to COMECON and added new flag for WP
+Began fixing UE events
+First draft for NATO, WP, WEU creation events (for games that start before their historical creation date)

@@ -7,7 +7,6 @@ alignment = { x = 200 y = 0 }
 neutrality = 0
 national_unity = 100
 default_population_template = 2
-join_faction = comintern
 
 
 #########
@@ -107,6 +106,11 @@ oob = "empty.txt"
 	head_of_government = 1326001
 }
 
+1949.1.5 = 
+{
+	join_organisation = XCM
+}
+
 1949.4.4 =
 {
 	head_of_state = 1326001
@@ -130,8 +134,8 @@ oob = "empty.txt"
 1955.5.14 =
 {
 	head_of_state = 1326004
-	head_of_government = 1326003	
-	join_faction = comintern
+	head_of_government = 1326003
+	join_organisation = XWP
 }
 
 1959.1.1 = {

@@ -6,7 +6,6 @@ head_of_government = 1168002
 alignment = { x = 110 y = 0 }
 neutrality = 40
 national_unity = 100
-join_faction = comintern
 
 #########
 #CULTURE#
@@ -67,8 +66,7 @@ oob = "CZE_1946.txt"
         neutrality = 40
 	head_of_state = 1168001
 	head_of_government = 1168002
-	oob = "CZE_1946.txt"    
-	join_faction = comintern
+	oob = "CZE_1946.txt"        
 }
 1948.5.14 = {
 	oob = "CZE_1948.txt"
@@ -76,13 +74,15 @@ oob = "CZE_1946.txt"
 	head_of_state = 1168001
 	head_of_government = 1168003
         alignment = { x = 130 y = 0 }
-	join_faction = comintern
+}
+1949.1.5 = 
+{
+	join_organisation = XCM
 }
 1949.4.4 =
 {
 	head_of_state = 1168004
 	head_of_government = 1168005
-	join_faction = comintern
 }
 1950.6.25 = {
 	oob = "CZE_1950.txt"
@@ -90,13 +90,12 @@ oob = "CZE_1946.txt"
 	head_of_state = 1168004
 	head_of_government = 1168005
         alignment = { x = 150 y = 0 }
-	join_faction = comintern
 }
 1955.5.14 =
 {
 	head_of_state = 1168005
 	head_of_government = 1168007
-	join_faction = comintern
+	join_organisation = XWP
 	alignment = { x = 200 y = 0 }
 }
 1961.12.11 = {
@@ -104,7 +103,6 @@ oob = "CZE_1946.txt"
         neutrality = 0
 	head_of_state = 1168008
 	head_of_government = 1168007
-	join_faction = comintern
 }
 1979.12.24 = {
 	oob = "CZE_1979.txt"
@@ -112,14 +110,12 @@ oob = "CZE_1946.txt"
         neutrality = 0
 	head_of_state = 1168012
 	head_of_government = 1168013
-	join_faction = comintern
 }
 1982.1.1 = {
         alignment = { x = 180 y = 0 }
 	head_of_state = 1168012
 	head_of_government = 1168013
 	oob = "empty.txt"
-	join_faction = comintern
 }
 1991.1.16 = {
 	oob = "CZE_1991.txt"

@@ -1,0 +1,190 @@
+organisation = {
+	name = ORGANISATION_NAME_UN
+	id = 1
+	members = { ARG BRA CHL CHI CUB DEN DOM EGY SAL FRA HAI PER LEB LUX NZL NIC PAR PHI POL SOV SAU SYR TUR ENG USA GRE IND PRU AUS COS LIB COL MEX SAF CAN ETH PAN BOL VEN GUA NOR HOL HON URU IRQ ECU BEL }
+	orgtag = xun
+	leader_years = 4
+	election_type = relation
+	voting_days = 10
+	cooldown = 10
+	voting_itself = {
+		factor = 10
+		modifier = {
+			factor = 5
+			is_major = yes
+			percent = no
+		}
+	}
+	modifier = {
+		prestige = 0.01
+		diplomatic_point = 0.2
+	}
+	bias_evaluation = {		
+		factor = 1
+		modifier = {
+			factor = 0.1
+			value = relation_value
+			percent = no
+		}
+		modifier = {
+			factor = 2
+			is_major = yes
+			percent = no
+		}
+		modifier = {
+			factor = 1.5
+			same_faction = this
+			percent = no
+		}
+		modifier = {
+			factor = 1.5
+			same_culture = this
+			percent = no
+		}
+	}
+}
+
+organisation = {
+	name = ORGANISATION_NAME_NATO
+	id = 2
+	faction = allies
+	orgtag = xna
+	voting_days = 10
+	election_type = military
+	voting_itself = {
+		factor = 20
+		modifier = {
+			factor = 5
+			is_major = yes
+			percent = no
+		}
+	}
+	bias_evaluation = {		
+		factor = 1
+		modifier = {
+			factor = 0.1
+			value = relation_value
+		}
+		modifier = {
+			factor = 1.5
+			is_major = yes
+			percent = no
+		}
+		modifier = {
+			factor = 1.6
+			same_culture = this
+			percent = no
+		}
+	}
+}
+
+organisation = {
+	name = ORGANISATION_NAME_WP
+	id = 3
+	faction = comintern
+	orgtag = xwp
+	election_type = military
+}
+
+ organisation = {
+    name = ORGANISATION_NAME_COMMONWEALTH
+	id = 4
+	community = yes
+	members = { AST CAN NZL SAF ENG IRE }
+	orgtag = xcw
+}
+
+organisation = {
+    name = ORGANISATION_NAME_FRENCHUNION
+	id = 5
+	community = yes
+	members = { ALG COM GUY FPO FRA SLL NEW CAR CHA CNG GAB CDI MAD MRA NGR SEN FSU }
+	orgtag = xfu
+}
+
+organisation = { 
+	name = ORGANISATION_NAME_ARAB_LEAGUE
+	id = 6
+	community = yes
+	members = { EGY IRQ JOR LEB SAU SYR YEM }
+	orgtag = xal
+}
+
+organisation = {
+	name = ORGANISATION_NAME_COMECON
+	id = 7
+	orgtag = xcm
+	election_type = military
+}
+
+#organisation = {								#G8 flag
+	#name = TEST_COMMUNITY
+	#id = 4
+	#community = yes
+	#members = { GER USA FRA SOV }
+	#orgtag = xts
+	#election_type = economy
+	#modifier = {
+		#prestige = 0.02
+		#dissent_decrease = 0.01
+		#diplomatic_point = 0.4
+#	}
+#}
+
+organisation = {
+	name = ORGANISATION_NAME_XAS
+	id = 8
+	community = yes
+	members = { CAN USA MEX ARG BOL DMN NIC ECU PAN BRA SAL PAR CHL GUA PRU COL HAI COS HON URU CUB VEN BAR SUR BHM TRI SLC BAR JMC BLZ GRN GUY }
+	orgtag = xas
+	modifier = {
+		prestige = 0.02
+		dissent_decrease = 0.01
+		diplomatic_point = 0.4
+	}
+}
+
+organisation = {
+	name = ORGANISATION_NAME_UE
+	id = 9
+	orgtag = xue
+	leader_years = 4
+	election_type = relation
+	voting_days = 10
+	cooldown = 10
+	voting_itself = {
+		factor = 10
+		modifier = {
+			factor = 5
+			is_major = yes
+			percent = no
+		}
+	}
+	modifier = {
+		prestige = 0.01
+		diplomatic_point = 0.2
+	}
+	bias_evaluation = {		
+		factor = 1
+		modifier = {
+			factor = 0.1
+			value = relation_value
+			percent = no
+		}
+		modifier = {
+			factor = 2
+			is_major = yes
+			percent = no
+		}
+		modifier = {
+			factor = 1.5
+			same_faction = this
+			percent = no
+		}
+		modifier = {
+			factor = 1.5
+			same_culture = this
+			percent = no
+		}
+	}
+}

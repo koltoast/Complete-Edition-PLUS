@@ -1,23 +1,23 @@
 #CODE;ENGLISH;FRENCH;GERMAN;POLSKI;SPANISH;ITALIAN;SWEDISH;CZECH;HUNGARIAN;DUTCH;PORTUGESE;RUSSIAN;FINNISH;x
 dec_join_WP;We have begun the process of joining WP;;;;;;;;;;;;;x
-EVTNAME700151;Joining the  Warsaw pact;;;;;;;;;;;;;x
-EVTDESC700151;We have begun the process of joining the Warsaw pact as a member state. Whether we are permitted into the organisation at this time or not will depend on the opinions held by the WP's Permanent Members.\nThrough the WP we hope to gain a voice on the international diplomatic stage, shape the creation of new international law, and benefit from the collective security the organisation provides.\n;;;;;;;;;;;;;x
+EVTNAME700151;Joining the  Warsaw Pact;;;;;;;;;;;;;x
+EVTDESC700151;We have begun the process of joining the Warsaw Pact as a member state. Whether we are permitted into the organisation at this time or not will depend on the opinions held by the WP's Permanent Members.\nThrough the WP we hope to gain a voice on the international diplomatic stage, shape the creation of new international law, and benefit from the collective security the organisation provides.\n;;;;;;;;;;;;;x
 EVTOPTA700151;Okay;;;;;;;;;;;;;x
 EVTNAME700152;A New WP Member?;;;;;;;;;;;;;x
-EVTDESC700152;$FROMCOUNTRY$ has begun the process of joining the Warsaw pact as a member state. As a WP Permanent Member we have the option of vetoing this application but doing so would come at the cost of some of our international prestige.;;;;;;;;;;;;;x
+EVTDESC700152;$FROMCOUNTRY$ has begun the process of joining the Warsaw Pact as a member state. As a WP Permanent Member we have the option of vetoing this application but doing so would come at the cost of some of our international prestige.;;;;;;;;;;;;;x
 EVTOPTA700152;Veto;;;;;;;;;;;;;x
 EVTOPTB700152;Don't Veto;;;;;;;;;;;;;x
 EVTNAME700153;WP Application Vetoed;;;;;;;;;;;;;x
-EVTDESC700153;$FROMCOUNTRY$, that is a WP Permanent Member state has chosen to veto our current application to the  Warsaw pact. We will be able to attempt this process again in two years time.;;;;;;;;;;;;;x
+EVTDESC700153;$FROMCOUNTRY$, that is a WP Permanent Member state has chosen to veto our current application to the  Warsaw Pact. We will be able to attempt this process again in two years time.;;;;;;;;;;;;;x
 EVTOPTA700153;Unfortunate;;;;;;;;;;;;;x
 EVTNAME700154;WP Application Progresses;;;;;;;;;;;;;x
-EVTDESC700154;None of the WP Permanent Member states have chosen to veto our application to the  Warsaw pact and thus our membership application will now move forward through the WP's legal processes by being forwarded to the Secretary General.;;;;;;;;;;;;;x
+EVTDESC700154;None of the WP Permanent Member states have chosen to veto our application to the  Warsaw Pact and thus our membership application will now move forward through the WP's legal processes by being forwarded to the Secretary General.;;;;;;;;;;;;;x
 EVTOPTA700154;Good things take time.;;;;;;;;;;;;;x
-EVTNAME700155;Admitted to the  Warsaw pact;;;;;;;;;;;;;x
-EVTDESC700155;We have recieved word that the  Warsaw pact Security Council has formally accepted our application to join the WP as a member state. We can now fully participate in the organisation.;;;;;;;;;;;;;x
+EVTNAME700155;Admitted to the  Warsaw Pact;;;;;;;;;;;;;x
+EVTDESC700155;We have recieved word that the  Warsaw Pact Security Council has formally accepted our application to join the WP as a member state. We can now fully participate in the organisation.;;;;;;;;;;;;;x
 EVTOPTA700155;Good news;;;;;;;;;;;;;x
-EVTNAME700156; Warsaw pact Membership Application;;;;;;;;;;;;;x
-EVTDESC700156;$FROMCOUNTRY$ has begun the process of joining the  Warsaw pact, and has not had its application vetoed by any of the WP's Permanent Members.\nAs the current Secretary General of the  Warsaw pact we will now progress this application through the relevant legal processes, although we may have the option of fast-tracking it.;;;;;;;;;;;;;x
+EVTNAME700156; Warsaw Pact Membership Application;;;;;;;;;;;;;x
+EVTDESC700156;$FROMCOUNTRY$ has begun the process of joining the  Warsaw Pact, and has not had its application vetoed by any of the WP's Permanent Members.\nAs the current Secretary General of the  Warsaw Pact we will now progress this application through the relevant legal processes, although we may have the option of fast-tracking it.;;;;;;;;;;;;;x
 EVTOPTA700156;Fast track the process;;;;;;;;;;;;;x
 EVTOPTB700156;Let the process run its course;;;;;;;;;;;;;x
 EVTNAME700165;Intervencion de el Pacto de Varsovia contra un pais hostil al equilibrio mundial;;;;;;;;;;;;;x
