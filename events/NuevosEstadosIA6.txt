@@ -23,13 +23,16 @@ country_event = {
 	option = {
 		name = "OK"
 		ai_chance = { factor = 100 }
-		any_core = {
-			limit = {
-				controlled_by = REB
-				not = { owned_by = this }
+		any_country = {
+			any_owned = {
+				limit = {
+					is_core = this
+					controlled_by = REB
+					NOT = { owned_by = this }
+				}
+				change_controller = this
 			}
-			change_controller  = this				
-		}		
+		}
 		any_owned = { 
 			limit = {
 				controlled_by = REB

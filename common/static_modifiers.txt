@@ -344,17 +344,17 @@ doomsday_clock = {
 
 defcon_5 = {
 	supply_consumption = -0.75
-	fuel_consumption = -0.75										#TODO
+	#fuel_consumption = -0.75										#HIDDEN
 }
 
 defcon_4 = {
 	supply_consumption = -0.55
-	fuel_consumption = -0.55										#TODO
+	#fuel_consumption = -0.55										#HIDDEN
 }
 
 defcon_3 = {
 	supply_consumption = -0.25
-	fuel_consumption = -0.25										#TODO
+	#fuel_consumption = -0.25										#HIDDEN
 }
 
 defcon_2 = {

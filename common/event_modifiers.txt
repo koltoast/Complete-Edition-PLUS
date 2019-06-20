@@ -241,7 +241,7 @@ IDC_communist_rebellion_modifier = {
 veteran_ISR_troops_delay = {
 	dissent_increase = 0.02
 	supply_consumption = 0.25
-	fuel_consumption = 0.25										#TODO
+	#fuel_consumption = 0.25										#HIDDEN
 }
 
 koreanwar_start = {
@@ -1004,7 +1004,7 @@ graduate_officers = {
 military_training_readjustment = {
 	dissent_increase = 0.02
 	supply_consumption = 0.25
-	fuel_consumption = 0.25										#TODO
+	#fuel_consumption = 0.25										#HIDDEN
 }
 
 military_training_results = {
@@ -4287,8 +4287,8 @@ war = {
 
 peace = {
 	max_war_exhaustion = 100			#base max at peace.
-	supply_consumption = -0.75										#TODO
-	fuel_consumption = -0.75										#TODO
+	supply_consumption = -0.75
+	#fuel_consumption = -0.75										#HIDDEN
 }
 
 war_exhaustion = {
@@ -5025,7 +5025,7 @@ mod_Global_operation_paperclip_scientist_industrial_bonus_1 = {
 veteran_ISR_troops_delay = {
 	dissent_increase = 0.02
 	supply_consumption = 0.25
-	fuel_consumption = 0.25										#TODO
+	#fuel_consumption = 0.25										#HIDDEN
 }
 
 mod_Global_operation_paperclip_large = {
@@ -5296,7 +5296,7 @@ graduate_officers = {
 military_training_readjustment = {
 	dissent_increase = 0.02
 	supply_consumption = 0.25
-	fuel_consumption = 0.25										#TODO
+	#fuel_consumption = 0.25										#HIDDEN
 }
 
 military_training_results = {

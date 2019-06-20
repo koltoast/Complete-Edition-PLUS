@@ -124,3 +124,12 @@ Added COMECON as organization to include Mongolia in some organization with WP
 Moved WP flag to COMECON and added new flag for WP
 Began fixing UE events
 First draft for NATO, WP, WEU creation events (for games that start before their historical creation date)
+
+v1.6 by Roshindow	------------------------------------------------------------------------------------------------------------------
+Commented fuel_consumption in modifiers as it doesn't seem to be recognized
+factory_building_cost_decreased
+diplomatic_points_increase
+social_pension
+
+events/NuevosEstadosIA6.txt										Changed event structure to working one
+events/ONU1.txt													Changed event structure to partially working one

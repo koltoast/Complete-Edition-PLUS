@@ -83,65 +83,66 @@ country_event = {               ###intervencion deL Consejo de Seguridad (USA,GE
 			factor = 80	
 		}
 		
-		random = {
-			chance = 10
-			modifier = {
-				factor = 0 
-				not = { USA = { is_org_member = XUN } }
-			}	
-			modifier = {
-				factor = 0 
-				not = { USA = { is_major = yes } } 
-			}		
-			USA = { limited_war = THIS }
-			country_event = 700170 
-			set_global_flag = INTCSJSE
-			set_global_flag = ONU_contra
-		}
-		random = {
-			chance = 10
-			modifier = {
-				factor = 0 
-				not = { SOV = { is_org_member = XUN } }
-			}	
-			modifier = {
-				factor = 0 
-				not = { SOV = { is_major = yes } } 
-			}				
-			SOV = { limited_war = THIS }
-			country_event = 700170
-			set_global_flag = INTCSJSE
-			set_global_flag = ONU_contra
-		} 
-		random = {
-			chance = 10
-			modifier = {
-				factor = 0 
-				not = { ENG = { is_org_member = XUN } }
-			}	
-			modifier = {
-				factor = 0 
-				not = { ENG = { is_major = yes } } 
+		random_list = {
+			10 = {
+				limit = {
+					any_country = {
+						is_org_member = XUN
+						is_major = yes
+						tag = USA
+					}
+				}
+				USA = { limited_war = THIS }
+				country_event = 700170 
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
 			}
-			ENG = { limited_war = THIS }
-			country_event = 700170
-			set_global_flag = INTCSJSE
-			set_global_flag = ONU_contra
+			90 = {}
 		}
-		random = {
-			chance = 10
-			modifier = {
-				factor = 0 
-				not = { FRA = { is_org_member = XUN } }
-			}	
-			modifier = {
-				factor = 0 
-				not = { FRA = { is_major = yes } } 
-			}				
-			FRA = { limited_war = THIS }
-			country_event = 700170
-			set_global_flag = INTCSJSE
-			set_global_flag = ONU_contra
+		random_list = {
+			10 = {
+				limit = {
+					SOV = { is_org_member = XUN }
+				}
+				limit = {
+					SOV = { is_major = yes }
+				}				
+				SOV = { limited_war = THIS }
+				country_event = 700170
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			90 = {}
+		} 
+		random_list = {
+			10 = {
+				limit = {
+					ENG = { is_org_member = XUN }
+				}
+				limit = {
+					ENG = { is_major = yes }
+				}
+				ENG = { limited_war = THIS }
+				country_event = 700170
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			90 = {}
+		}
+		random_list = {
+			10 = {
+				limit = {
+					FRA = { is_org_member = XUN }
+				}
+				limit = {
+					FRA = { is_major = yes }
+				}		
+				FRA = { limited_war = THIS }
+				country_event = 700170
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			90 = {}
 		}
 		this = { relation = { who = USA value = -50 } }
 		this = { relation = { who = SOV value = -50 } }
@@ -195,35 +196,35 @@ country_event = {               ###intervención de USA y/o SOV
 			factor = 80
 		}
 		
-		random = {
-			chance = 10
-			modifier = {
-				factor = 0 
-				not = { USA = { is_org_member = XUN } }
-			}	
-			modifier = {
-				factor = 0 
-				not = { USA = { is_major = yes } } 
-			}				
-			USA = { limited_war = THIS }
-			country_event = 700170
-			set_global_flag = INTCSJSE
-			set_global_flag = ONU_contra
+		random_list = {
+			10 = {
+				limit = {
+					USA = { is_org_member = XUN }
+				}
+				limit = {
+					USA = { is_major = yes }
+				}			
+				USA = { limited_war = THIS }
+				country_event = 700170
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			90 = {}
 		}
-		random = {
-			chance = 10
-			modifier = {
-				factor = 0 
-				not = { SOV = { is_org_member = XUN } }
-			}	
-			modifier = {
-				factor = 0 
-				not = { SOV = { is_major = yes } } 
-			}				
-			SOV = { limited_war = THIS }
-			country_event = 700170				
-			set_global_flag = INTCSJSE
-			set_global_flag = ONU_contra
+		random_list = {
+			10 = {
+				limit = {
+					SOV = { is_org_member = XUN }
+				}
+				limit = {
+					SOV = { is_major = yes }
+				}
+				SOV = { limited_war = THIS }
+				country_event = 700170				
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			90 = {}
 		}
 		this = { relation = { who = USA value = -50 }}
 		this = { relation = { who = SOV value = -50 }}
@@ -276,20 +277,20 @@ country_event = {               ###intervención de USA
 			factor = 80
 		}
 		
-		random = {
-			chance = 10
-			modifier = {
-				factor = 0 
-				not = { USA = { is_org_member = XUN } }
-			}	
-			modifier = {
-				factor = 0 
-				not = { USA = { is_major = yes } } 
-			}				
-			USA = { limited_war = THIS }
-			country_event = 700170				
-			set_global_flag = INTCSJSE
-			set_global_flag = ONU_contra
+		random_list = {
+			10 = {
+				limit = {
+					USA = { is_org_member = XUN }
+				}
+				limit = {
+					USA = { is_major = yes }
+				}
+				USA = { limited_war = THIS }
+				country_event = 700170				
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			90 = {}
 		}
 		
 		this = { relation = { who = USA value = -50 } }
@@ -340,20 +341,20 @@ country_event = {               ###intervención de SOV
 			factor = 80
 		}
 		
-		random = {
-			chance = 10
-			modifier = {
-				factor = 0 
-				not = { SOV = { is_org_member = XUN } }
-			}	
-			modifier = {
-				factor = 0 
-				not = { SOV = { is_major = yes } } 
-			}				
-			SOV = { limited_war = THIS }
-			country_event = 700170				
-			set_global_flag = INTCSJSE
-			set_global_flag = ONU_contra
+		random_list = {
+			10 = {
+				limit = {
+					SOV = { is_org_member = XUN }
+				}
+				limit = {
+					SOV = { is_major = yes }
+				}				
+				SOV = { limited_war = THIS }
+				country_event = 700170				
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			90 = {}
 		}
 		
 		this = { relation = { who = SOV value = -50 } }
@@ -408,35 +409,35 @@ country_event = {               ###intervención de ENG y/o FRA
 			factor = 80
 		}
 		
-		random = {
-			chance = 10
-			modifier = {
-				factor = 0 
-				not = { ENG = { is_org_member = XUN } }
-			}	
-			modifier = {
-				factor = 0 
-				not = { ENG = { is_major = yes } } 
-			}				
-			ENG = { limited_war = THIS }
-			country_event = 700170				
-			set_global_flag = INTCSJSE
-			set_global_flag = ONU_contra
+		random_list = {
+			10 = {
+				limit = {
+					ENG = { is_org_member = XUN }
+				}
+				limit = {
+					ENG = { is_major = yes }
+				}
+				ENG = { limited_war = THIS }
+				country_event = 700170				
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			90 = {}
 		}
-		random = {
-			chance = 10
-			modifier = {
-				factor = 0 
-				not = { FRA = { is_org_member = XUN } }
-			}	
-			modifier = {
-				factor = 0 
-				not = { FRA = { is_major = yes } } 
-			}				
-			FRA = { limited_war = THIS }
-			country_event = 700170				
-			set_global_flag = INTCSJSE
-			set_global_flag = ONU_contra
+		random_list = {
+			10 = {
+				limit = {
+					FRA = { is_org_member = XUN }
+				}
+				limit = {
+					FRA = { is_major = yes }
+				}
+				FRA = { limited_war = THIS }
+				country_event = 700170				
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			90 = {}
 		}
 		
 		this = { relation = { who = ENG value = -50 } }
@@ -491,20 +492,20 @@ country_event = {               ###intervención de ENG
 			factor = 80
 		}
 		
-		random = {
-			chance = 10
-			modifier = {
-				factor = 0 
-				not = { ENG = { is_org_member = XUN } }
-			}	
-			modifier = {
-				factor = 0 
-				not = { ENG = { is_major = yes } } 
-			}				
-			ENG = { limited_war = THIS }
-			country_event = 700170					
-			set_global_flag = INTCSJSE
-			set_global_flag = ONU_contra
+		random_list = {
+			10 = {
+				limit = {
+					ENG = { is_org_member = XUN }
+				}
+				limit = {
+					ENG = { is_major = yes }
+				}
+				ENG = { limited_war = THIS }
+				country_event = 700170					
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			90 = {}
 		}
 		
 		this = { relation = { who = ENG value = -50 } }
@@ -558,20 +559,20 @@ country_event = {               ###intervención de ENG
 			factor = 80
 		}
 		
-		random = {
-			chance = 10
-			modifier = {
-				factor = 0 
-				not = { FRA = { is_org_member = XUN } }
-			}	
-			modifier = {
-				factor = 0 
-				not = { FRA = { is_major = yes } } 
-			}				
-			FRA = { limited_war = THIS }
-			country_event 700170 					
-			set_global_flag = INTCSJSE
-			set_global_flag = ONU_contra
+		random_list = {
+			10 = {
+				limit = {
+					FRA = { is_org_member = XUN }
+				}
+				limit = {
+					FRA = { is_major = yes }
+				}
+				FRA = { limited_war = THIS }
+				country_event 700170 					
+				set_global_flag = INTCSJSE
+				set_global_flag = ONU_contra
+			}
+			90 = {}
 		}
 		
 		this = { relation = { who = FRA value = -50 } }
@@ -623,44 +624,48 @@ country_event = {               ###intervención deL RESTO DE PAISES MIEMBROS DE
 		name = "EVTOPTB700016"
 		ai_chance = { factor = 80 }
 		
-		random = {
-			chance = 10
-			random_country = {
-				limit = {
-					is_org_member = XUN
-					is_major = yes
-					money = 10000
-					fuel = 1000
-					supplies = 1000
-					war = no
-					not = { has_country_flag = INTMI }
-					not = { relation = { who = this value = 100 } }
-				} 
-				limited_war = THIS
-				set_country_flag = INTMI
-				set_global_flag = INTCSJSE
+		random_list = {
+			10 = {
+				random_country = {
+					limit = {
+						is_org_member = XUN
+						is_major = yes
+						money = 10000
+						fuel = 1000
+						supplies = 1000
+						war = no
+						not = { has_country_flag = INTMI }
+						not = { relation = { who = this value = 100 } }
+					} 
+					limited_war = THIS
+					set_country_flag = INTMI
+					set_global_flag = INTCSJSE
+				}
+				country_event = 700170	
+				set_country_flag = ONU_contra
 			}
-			country_event = 700170	
-			set_country_flag = ONU_contra
+			90 = {}
 		}			
 		
-		random = {
-			chance = 10
-			random_country = {
-				limit = {
-					is_org_member = XUN
-					money = 1000
-					fuel = 100
-					supplies = 100
-					war = no 
-					not = { has_country_flag = INTMI }
-					not = { relation = { who = this value = 100 } }
-				} 
-				limited_war = THIS
-				set_country_flag = INTMI
-				set_global_flag = INTCSJSE
+		random_list = {
+			10 = {
+				random_country = {
+					limit = {
+						is_org_member = XUN
+						money = 1000
+						fuel = 100
+						supplies = 100
+						war = no 
+						not = { has_country_flag = INTMI }
+						not = { relation = { who = this value = 100 } }
+					} 
+					limited_war = THIS
+					set_country_flag = INTMI
+					set_global_flag = INTCSJSE
+				}
+				country_event = 700170
 			}
-			country_event = 700170
+			90 = {}
 		}
     }
  }

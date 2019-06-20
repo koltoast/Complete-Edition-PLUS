@@ -125,7 +125,7 @@ national_identity = {
 	territorial_focus = {
     	cost = 0.5
         allow = {
-			#ideology_group = allies
+			ideology_group = allies
 			
         }
 		supply_consumption = -0.05
@@ -139,7 +139,7 @@ national_identity = {
     cultural_bias_focus = {
     	cost = 0.5
         allow = {
-			#ideology_group = allies
+			ideology_group = allies
 			
         }
 		supply_consumption = -0.025
@@ -153,12 +153,12 @@ national_identity = {
 	state_building_focus = {
     	cost = 0.5
         allow = {
-			#ideology_group = allies
+			ideology_group = allies
 			
         }
 
 		dissent_decrease = 0.04
-		factory_building_cost_decreased = 0.01
+		#factory_building_cost_decreased = 0.01					#HIDDEN
 		research_efficiency = 0.02
 		supply_consumption = -0.05
 
@@ -166,33 +166,33 @@ national_identity = {
 	corporate_focus = {
     	cost = 0.5
         allow = {
-			#ideology_group = allies
+			ideology_group = allies
 			
         }
 
-		factory_building_cost_decreased = 0.01
+		#factory_building_cost_decreased = 0.01					#HIDDEN
 		global_resources = 0.01
 		research_efficiency = 0.01
-		diplomatic_points_increase = 0.01
+		#diplomatic_points_increase = 0.01						#HIDDEN
 		
     }
 	civic_focus = {
     	cost = 0.5
         allow = {
-			#ideology_group = allies
+			ideology_group = allies
 			
         }
 
 		dissent_decrease = 0.04
-		factory_building_cost_decreased = 0.01
-		diplomatic_points_increase = 0.01
+		#factory_building_cost_decreased = 0.01					#HIDDEN
+		#diplomatic_points_increase = 0.01						#HIDDEN
 		global_revolt_risk = -0.02
 		
     }
 	equality_focus = {
     	cost = 0.5
         allow = {
-			#ideology_group = allies
+			ideology_group = allies
 			
         }
 
@@ -205,12 +205,12 @@ national_identity = {
 	humanitarian_focus = {
     	cost = 0.5
         allow = {
-			#ideology_group = allies
+			ideology_group = allies
 			
         }
 
 		spy_daily = 0.01
-		social_pension = -0.01
+		#social_pension = -0.01									#HIDDEN
 		national_unity = 0.3
 		prestige = 0.03
 		
@@ -273,7 +273,7 @@ national_attitude = {
 			
         }
 
-		diplomatic_points_increase = 0.01
+		#diplomatic_points_increase = 0.01						#HIDDEN
 
     }
 	defensive = {
